@@ -1,0 +1,32 @@
+=>PYTHONTEX#py#default#default#0#i#####155#
+sp.latex(sp.integrate(sp.sin(x)/x, x))
+=>PYTHONTEX#py#default#default#1#code#####156#
+import sympy as sp
+x = sp.symbols('x')
+expr = sp.integrate(sp.sin(x)/x, x)
+print(expr)
+=>PYTHONTEX:SETTINGS#
+version=0.18
+outputdir=pythontex-files-Maj_25
+workingdir=.
+workingdirset=false
+gobble=none
+rerun=default
+hashdependencies=default
+makestderr=false
+stderrfilename=full
+keeptemps=none
+pyfuture=default
+pyconfuture=none
+pygments=true
+pygglobal=:GLOBAL||
+fvextfile=-1
+pyconbanner=none
+pyconfilename=stdin
+depythontex=false
+pygfamily=py|python3|
+pygfamily=pycon|pycon|
+pygfamily=sympy|python3|
+pygfamily=sympycon|pycon|
+pygfamily=pylab|python3|
+pygfamily=pylabcon|pycon|

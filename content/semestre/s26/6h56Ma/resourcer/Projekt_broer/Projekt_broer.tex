@@ -1,0 +1,267 @@
+\documentclass[10pt,a4paper,table]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	\usepackage{transparent}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usetikzlibrary{calc}
+	\usepackage{placeins}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	\usepackage{chngcntr}
+	
+	\renewcommand\thesection{\arabic{section}}
+
+	\titleformat{\section}[block] 
+  		{\flushleft\overp\Large\color{frbgreen}}    % format for whole title
+  		{}                           % no separate label (empty)
+  		{0pt}                        % spacing between label and title
+		{\hspace{-6em}\begin{minipage}[t]{0.2\textwidth}\raggedleft DEL \thesection\\\footnotesize\vest}       % prepend "Delprøve <number>"
+		[\end{minipage}\vspace{-2.9em}]
+	
+	\counterwithout{subsection}{section}
+	\renewcommand\thesubsection{Øvelse \arabic{subsection}}
+	\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{frbblue}\hrule width \hsize \kern 1mm
+			\end{minipage}}
+		}
+		\fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
+		\fancyhead[R]{\overp\color{frbgreen}\footnotesize Efterår 2025}
+		\fancyhead[C]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\Large\color{frbgreen}\vestb Projekt\\\normalsize\overp Cirkler og polynomier}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{frbgreen}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\overp\color{frbgreen}\footnotesize Mat C-B}
+	\rhead{\overp\color{frbgreen}\footnotesize Efterår 2025}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  % a light grey/green like in your screenshot
+  \definecolor{bgline}{RGB}{205,214,208}
+
+  % center for the circles (placed a bit *outside* the page to the left)
+  \coordinate (C) at ($(current page.north)+(25mm,35mm)$);
+
+  % two thin concentric circles
+  \draw[frbblue, line width=0.4pt, opacity=0.3] (C) circle (95mm);
+\end{tikzpicture}
+
+\vspace{1em}
+
+
+\section{Badebro i Århus}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{bro1}
+\end{figure}
+\qm{Uendelighedsbroen} i Århusbugten er starten på et større kunstværk. Kunstværket skal til slut bestå af fem forbundne cirkelformede broer.
+
+\begin{wrapfigure}[6]{r}{0.3\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.5\textwidth]{bro2}
+\end{wrapfigure}
+Den endelige udformning af kunstværket ses på skitsen til højre, hvor kunstværket er indlagt i et koordinatsystem. Vi kigger blot på den yderste rand af broerne i modellen og den midterste cirkel er indlagt med centrum i $(0,0)$ i koordinatsystemet.
+
+Det oplyses, at den midterste bro (den der ses på øverste billede) har en diameter på 60 m. 
+\begin{enumerate}
+\item Opskriv en ligning for den cirkel $C_1$ (uden at der er skåret i den – altså den på øverste billede), der beskriver den midterste badebro.
+\item Hvor lang er broen (ydre rand)?
+\end{enumerate}
+
+Broen er 2m bred.
+\begin{enumerate}[resume]
+\item Hvad er radius af den inderste cirkulære del af broen?
+\item Hvor stort er trædækket af denne bro? 
+\end{enumerate}
+
+For en af naboplatformene til den midterste platform følger randen en del af cirklen $C_2$ med ligningen
+$$(x+16{,}75)^2+(y-18{,}5)^2=225$$
+Cirklerne $C_1$ og $C_2$ skærer hinanden i to punkter $A$ og $B$, som markerer åbningen de to platforme – se figuren.
+\begin{enumerate}
+\item Find koordinatsættet for hhv. $A$ og $B$.
+\item Bestem bredden af åbningen mellem de to platforme (direkte afstand).
+\end{enumerate}
+
+\clearpage
+\section{Buebro}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{buebro1.png}
+\end{figure}
+
+\begin{wrapfigure}[5]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{buebro2.png}
+\end{wrapfigure}
+Her ses et billede af en buebro samt en skitse af buen. Koordinatsystemets x-akse flugter med vandoverfladen, og buen er symmetrisk omkring koordinatsystemets $y$-akse.
+
+I en model beskrives vejbanen på broen med funktionen
+$$f\left(x\right)=42-0{,}00016\cdot x^2$$
+\begin{enumerate}
+\item Tegn grafen for vejbanen. Hvor højt kommer vejbanen over havoverfladen?
+\end{enumerate}
+
+Buen som bærer vejbanen kan beskrives ved et andengradspolynomium. Broens øverste punkt er 55 m over vandoverfladen og buens bredde ved vandoverfladen er 250 meter.
+\begin{enumerate}[resume]
+\item Bestem en forskrift for buen og tegn parablen i et koordinatsystem
+\item Bestem skæringspunkterne mellem buen og vejbanen
+\item Bestem en tilnærmet værdi for længden af kørebanen mellem skæringspunkterne.
+\end{enumerate}
+
+En bedre model for vejbanen fås ved at dele den op i tre stykker: et midterstykke mellem de to skæringspunkter, samt et stykke på hver side af skæringerne. Den vandrette længde af det viste billede er 500 meter. I enderne er vejbanen ca. 34 meter over havets overflade.
+\begin{enumerate}[resume]
+\item Bestem en forskrift for den stykkevist definerede funktion
+\end{enumerate}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Forklaringsopgaver
+\begin{align*}
+&&	&						&&\underset{\rule{0.8\linewidth}{0pt}}{\textbf{Forklaring:}}\\[1em]
+&&	&\frac{(x+2)^2 - 4}{x} 		&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{Udtrykket skrives op.}}\\[2em]
+&&	=&\ \frac{x^2 + 4 + 4x - 4}{x}	&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ \frac{x^2 + 4x}{x}			&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ x + 4					&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+\end{align*}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+
+
+

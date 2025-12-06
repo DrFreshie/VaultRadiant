@@ -1,0 +1,28 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\begin{document}
+
+\section*{Bevis for Deskriminantformlen}
+
+I det følgende vil vi bevise løsningsformlen for andengradsligninger:
+\begin{align*}
+&&ax^2+bx+c&=0&&\Leftrightarrow\\
+&&x&=\frac{-b\pm\sqrt{b^2-4ac}}{2a},&&
+\end{align*}
+i 4 skridt. Svaret på hver delopgave er givet som begyndelsen på næste opgave, og din opgave er så at komme med forklaringer og mellemregninger.
+\begin{enumerate}
+\item Gang ligningen med $4a$, og forklar hvad formålet med det er:
+$$4a\cdot(ax^2+bx+c)=0\cdot 4a$$
+\item Omskriv og tilføj led til ligningen så udtrykket på venstre side af lighedstegnet har formen $a^2+2ab+b^2$:
+$$4a^2x^2+4abx+4ac=0$$
+\item Anvend kvadratsætningen på udtrykket på venstre side af lighedstegnet:
+$$(2ax)^2+2\cdot 2ax\cdot b+b^2=b^2-4ac$$
+\item Isolér $x$ i ligningen:
+$$(2ax+b)^2=b^2-4ac$$
+\end{enumerate}
+\end{document}

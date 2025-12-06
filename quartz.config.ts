@@ -1,5 +1,7 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import LessonLayout from "./quartz/components/LessonLayout"
+
 
 /**
  * Quartz 4 Configuration
@@ -24,7 +26,7 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        body: "Nunito",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -55,6 +57,12 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+          {
+      name: "lesson-layout",
+      filter: (data) => data.frontmatter?.type === "lesson",
+      component: LessonLayout,
+      },
+
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],

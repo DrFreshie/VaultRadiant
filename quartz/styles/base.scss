@@ -74,7 +74,7 @@ strong {
 }
 
 a {
-  font-weight: $semiBoldWeight;
+  font-weight: 400;
   text-decoration: none;
   transition: color 0.2s ease;
   color: var(--secondary);
@@ -86,7 +86,7 @@ a {
   &.internal {
     text-decoration: none;
     background-color: var(--highlight);
-    padding: 0 0.1rem;
+    padding: 0;
     border-radius: 5px;
     line-height: 1.4rem;
 
@@ -345,7 +345,21 @@ blockquote {
   transition: border-color 0.2s ease;
 }
 
-h1,
+h1 {
+  text-align: center !important;
+  font-size: 4rem !important;
+  font-family: "Jersey 10", monospace !important;
+  font-weight: 600;
+}
+
+html[saved-theme="light"] h1 {
+  color: #8839ef;
+}
+
+html[saved-theme="dark"] h1 {
+  color: #CBA9F7;
+}
+
 h2,
 h3,
 h4,

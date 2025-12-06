@@ -150,6 +150,26 @@ function createFolderNode(
   return li
 }
 
+function findFolderNode(root: FileTrieNode, folderSlug: FullSlug): FileTrieNode | null {
+  const segments = simplifySlug(folderSlug).split("/")
+
+  let node: FileTrieNode | null = root
+  for (const seg of segments) {
+    if (!seg || !node) continue
+
+    const next = node.children.find(
+      (child) => child.isFolder && child.slugSegment === seg,
+    )
+
+    if (!next) {
+      return null
+    }
+    node = next
+  }
+
+  return node
+}
+
 async function setupExplorer(currentSlug: FullSlug) {
   const allExplorers = document.querySelectorAll("div.explorer") as NodeListOf<HTMLElement>
 
@@ -190,6 +210,17 @@ async function setupExplorer(currentSlug: FullSlug) {
           break
       }
     }
+    // 🔽 NEW: pick the current directory as root
+    const simpleCurrent = simplifySlug(currentSlug)
+    const parentSlug = simpleCurrent.split("/").slice(0, -1).join("/") as FullSlug
+
+    let rootNode: FileTrieNode = trie
+    if (parentSlug) {
+      const maybeFolder = findFolderNode(trie, parentSlug)
+      if (maybeFolder) {
+        rootNode = maybeFolder
+      }
+    }
 
     // Get folder paths for state management
     const folderPaths = trie.getFolderPaths()
@@ -207,7 +238,7 @@ async function setupExplorer(currentSlug: FullSlug) {
 
     // Create and insert new content
     const fragment = document.createDocumentFragment()
-    for (const child of trie.children) {
+    for (const child of rootNode.children) {
       const node = child.isFolder
         ? createFolderNode(currentSlug, child, opts)
         : createFileNode(currentSlug, child)

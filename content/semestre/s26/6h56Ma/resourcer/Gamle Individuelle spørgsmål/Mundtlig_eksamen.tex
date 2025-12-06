@@ -1,0 +1,318 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	\usepackage{fontawesome}
+	\newcommand{\hint}[3][]{%
+  		\marginpar{%
+   			 \vspace{-#3pt}%	
+			 \faBook \ \klavl\scriptsize#2%
+			 \ifx\relax#1\relax\else\\[5pt]\faYoutube \ \klavl\scriptsize\color{hgblue}\href{#1}{Videobevis}\fi%
+			 	}%
+			}
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	%\setcounter{secnumdepth}{0}
+	\usepackage{remreset} % continued subsection numbering
+		\makeatletter
+			\@removefromreset{subsection}{section}\renewcommand\thesubsection{\arabic{subsection}}
+		\makeatother
+	\renewcommand\thesection{\klavl\huge Del \arabic{section}}
+	\titleformat{\section}[display]{\centering\klavl}{\thesection}{-10pt}{\scshape\footnotesize}[\vspace{20pt}]
+	\renewcommand\thesubsection{}
+	\titleformat{\subsection}{\color{hgred}\large\klavl}{}{}{}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{hgred}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+			\end{minipage}}
+		}
+		\fancyhead[L]{\klav\color{hgblue} HELSINGØR\\\klavl GYMNASIUM}
+		\fancyhead[R]{\klavl\color{hgblue}\footnotesize Sommer 2024}
+		\fancyhead[C]{\klav\color{hgblue}\normalsize \klavl 2s Ma: mundtlig eksamen\\\Large Individuelle spørgsmål}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{hgred}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\klavl\color{hgblue}\footnotesize 2g Ma}
+	\rhead{\klavl\color{hgblue}\footnotesize Sommer 2024}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-39pt,xshift=-132pt]%
+        at (current page.north west)
+        {\includegraphics[scale=0.3]{HG_logo.PNG}};
+    \end{tikzpicture}
+
+Her følger de spørgsmål I vil kunne trække til den mundtlige eksamen i matematik. I vil således kunne forberede en præsentation af en besvarelse af hvert spørgsmål inden selve prøven. Herefter er prøveformen sådan at I trækker ét af spørgsmålene, og skal, efter 24 minutters forberedelse, eksamineres i dette, ligeledes i 24 minutter. God fornøjelse med læsningen.
+
+\clearpage
+\subsection*{Vækst}
+\noindent
+\begin{enumerate}
+\item Gør, for en lineær funktion $f(x)=ax+b$, rede for formlerne til beregning af $a$ og $b$, når grafen går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$:
+\begin{align*}
+a&=\frac{y_2-y_1}{x_2-x_1}\\
+b&=y_1-a\cdot x_1
+\end{align*}
+Giv eksempler på lineære funktioner og forklar hvad $a$ og $b$ betyder i de konkrete eksempler. \hint[https://youtu.be/dzidekuK7DM]{G: Sætning 5\\Eksempel 127}{95}
+\end{enumerate}
+\clearpage
+\subsection*{Vækst}
+
+\begin{enumerate}[resume]
+\item Gør, for en eksponentiel funktion $f(x)=b\cdot a^x$, rede for formlerne til beregning af $a$ og $b$ når grafen går gennem punkterne $(x_1, y_1)$ og $(x_2, y_2)$:
+\begin{align*}
+a&=\sqrt[x_2-x_1]{\frac{y_2}{y_1}}\\
+b&=\frac{y_1}{a^{x_1}}
+\end{align*}
+Giv eksempler på eksponentielle funktioner og forklar hvad $a$ og $b$ betyder i de konkrete eksempler. \hint[https://youtu.be/5Rm0jLpzack]{B1: Sætning 1.3\\Eksempel 130}{105}
+\end{enumerate}
+\clearpage
+\subsection*{Vækst}
+
+\begin{enumerate}[resume]
+\item Gør, for en eksponentiel funktion $f(x)=b\cdot a^x$, rede for formlen til beregning af fordoblingskonstanten:
+$$T_2=\frac{\log{2}}{\log{a}}$$
+Giv eksempler på eksponentielle funktioner og forklar hvad fordoblings- og halveringskonstanten betyder i de konkrete eksempler.\hint[https://youtu.be/e1k5ZrpcYr4]{B1: Sætning 1.5\\Eksempel 142}{65}
+\end{enumerate}
+\clearpage
+\subsection*{Vækst}
+
+\begin{enumerate}[resume]
+\item Gør, for en potens funktion $f(x)=b\cdot x^a$, rede for formlerne til beregning af $a$ og $b$ når grafen går gennem punkterne $(x_1,y_1)$ og $(x_2,y_2)$:
+\begin{align*}
+a&=\frac{\log{\frac{y_2}{y_1}}}{\log{\frac{x_2}{x_1}}}\\
+b&=\frac{y_1}{x_1^a}
+\end{align*}
+Giv eksempler på potenssammenhænge fra videnskaben. \hint[https://youtu.be/opwOct5Oufw]{B1: Sætning 1.7\\Eksempel 156}{90}
+\end{enumerate}
+\clearpage
+\subsection*{Vækst}
+
+\begin{enumerate}[resume]
+\item Definer lineær vækst, eksponentiel vækst og potensvækst. Bevis for hver af de tre væksttyper hvad der sker med $y$-værdien når: \hint{G: Sætning 3\\B1: Sætning 1.4\\B1: Sætning 1.8}{20}
+\begin{description}%[\alpha)]
+\item[Lineær vækst:] $x$-værdien øges med 1 \quad (Udregn $f(x+1)$)
+\item[Eksponentiel vækst:] $x$-værdien øges med 1 \quad (Udregn $f(x+1)$)
+\item[Potensvækst:] $x$-værdien ganges med $k$ \quad (Udregn $f(x\cdot k)$)
+\end{description}
+\end{enumerate}
+
+\subsection*{Polynomier}
+\begin{enumerate}[resume]%\vspace{-25pt}
+\item Gør, for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlerne til udregning af polynomiets rødder:
+$$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a},$$
+\hint[https://youtu.be/ZuI1ZyKr0Yg]{B1: Sætning 2.2}{65}
+og forklar hvordan grafen for andengradspolynomiet afhænger af $a$ og diskriminanten $d$. 
+\item Gør, for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlerne til udregning af polynomiets toppunkt:
+$$T=\left(\frac{-b}{2a},\frac{-d}{4a}\right),$$
+og forklar, hvordan grafen for andengradspolynomiet afhænger af $a$, $b$ og $c$.\hint[https://youtu.be/R10bPzbuP2Y?si=Lcs7802DJc1o4Lrw]{B1: Sætning 2.5}{65}
+\end{enumerate}
+
+
+\subsection*{Geometri}
+\begin{enumerate}[resume]%\vspace{-25pt}
+\item Gør, for en ret linje i et koordinatsystem der går gennem punktet $(x_0,y_0)$ og har $\vec{n}=\twvect{a}{b}$ som normalvektor, rede for ligningen:
+$$a(x-x_0)+b(y-y_0)=0$$
+og forklar, med et eksempel, sammenhængen mellem denne og forskriften for en lineær funktion. \hint{B2: Sætning 4.2}{80}
+
+\item Gør, for en ret linje i et koordinatsystem der går gennem punktet $(x_0,y_0)$ og har $\vec{r}=\twvect{r_1}{r_2}$ som retningsvektor, rede for denne linjes parameterfremstilling:
+$$\twvect{x}{y}=\twvect{x_0}{y_0}+t\cdot\twvect{r_1}{r_2}$$
+og forklar, med et eksempel, hvordan man kan finde et skæringspunkt mellem to linjer.\hint{B2: Sætning 4.1\\Eksempel 413}{90}
+
+\item Gør, for en cirkel i et koordinatsystem med centrum i $(x_0,y_0)$ og radius $r$, rede for cirklens ligning
+$$(x-x_0)^2+(y-y_0)^2=r^2$$
+og forklar, med et eksempel, hvordan man kan afgøre om en linje er tangent til en cirkel. \hint{B2: Sætning 4.7\\Eksempel 438}{50}
+
+\item Gør rede for definitionen af cosinus og sinus, og udled formlerne til beregning af vinkler og sider i retvinklede trekanter:
+\begin{align*}
+\cos(v)&=\frac{\text{hosliggende katete}}{\text{hypotenuse}}\\
+\sin(v)&=\frac{\text{modstående katete}}{\text{hypotenuse}}
+\end{align*}
+\hint[https://youtu.be/3dqk5zOMA_Y]{B1: Sætning 4.14\\Eksempel 432\\Eksempel 435}{85}
+\item Gør rede for formlerne til beregning af areal i vilkårlige trekanter:
+\begin{align*}
+T&=\frac{1}{2} \cdot a\cdot b\cdot \sin(C)\\
+T&=\frac{1}{2} \cdot b\cdot c\cdot \sin(A)\\
+T&=\frac{1}{2} \cdot c\cdot a\cdot \sin(B)
+\end{align*}
+og udled på baggrund heraf sinusrelationerne:
+$$\frac{\sin{A}}{a}=\frac{\sin{B}}{b}=\frac{\sin{C}}{c}$$
+\hint{B1: Sætning 4.17 - 4.19\\Eksempel 451}{125}
+\end{enumerate}
+
+\subsection*{Differentialregning}
+\begin{enumerate}[resume]
+\item Gør, for funktionen $f(x)=x^2$, rede for formlen for dennes afledte i $x_0$:
+$$f'(x_0)=2\cdot x_0$$
+og forklar hvordan differentialregning kan bruges til at løse et geometrisk optimeringsproblem. \hint[https://youtu.be/ENGoqNTmCOQ]{B2: Sætning 5.1}{55}
+
+\item Gør, for funktionen $f(x)=g(x)+h(x)$, rede for formlen for dennes afledte i $x_0$:
+$$f'(x_0)=g'(x_0)+h'(x_0)$$
+og forklar hvordan differentialregning kan bruges til at løse et geometrisk optimeringsproblem. \hint{B2: Sætning 5.7}{58}
+\end{enumerate}
+
+\subsection*{Sandsynlighedsregning}
+\begin{enumerate}[resume]
+\item Gør, for en binomialfordelt stokastisk variabel $X$, rede for formlen til udregning af sandsynligheden:
+$$P(X=r)=K(n,r)\cdot p^r\cdot (1-p)^{n-r}$$
+og forklar hvordan man med en såkaldt binomialtest kan afprøve en statistisk hypotese. \hint{B2: Sætning 3.6\\Eksempel 433}{75}
+
+\item Gør, for en binomialfordelt stokastisk variabel $X$, rede for formlen til udregning af sandsynligheden:
+$$P(X=r)=K(n,r)\cdot p^r\cdot (1-p)^{n-r}$$
+og forklar, med et eksempel, hvordan man med et såkaldt konfidensinterval kan undersøge parametre i hele populationer ud fra stikprøver. \hint{B2: Sætning 3.6\\Eksempel 332}{63}
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+
+
+

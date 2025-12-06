@@ -1,0 +1,245 @@
+\documentclass[10pt,a4paper,table]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Extra Bold}
+	\newfontfamily\overp{Overpass}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	%\setcounter{secnumdepth}{0}
+	\usepackage{remreset} % continued subsection numbering
+		\makeatletter
+			\@removefromreset{subsection}{section}\renewcommand\thesubsection{\arabic{subsection}}
+		\makeatother
+	\renewcommand\thesection{\klavl\huge Del \arabic{section}}
+	\titleformat{\section}[display]{\centering\klavl}{\thesection}{-10pt}{\scshape\footnotesize}[\vspace{20pt}]
+	\renewcommand\thesubsection{Opgave \arabic{subsection}}
+	\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{hgred}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+			\end{minipage}}
+		}
+		\fancyhead[L]{\vest\color{hgblue} FRBVUC}
+		\fancyhead[R]{\overp\color{hgblue}\footnotesize Efterår 2025}
+		\fancyhead[C]{\overp\color{hgblue}\normalsize \overp Mat C-B\\\Large Vækstprojekt}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{hgred}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\overp\color{hgblue}\footnotesize Mat C-B}
+	\rhead{\overp\color{hgblue}\footnotesize Efterår 2025}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+{\scriptsize (Projekt taget fra bogen \href{https://lru.praxis.dk/Lru/microsites/hvadermatematik/hem1download/kap5_Projekt_5.3_Kropsvaegt_og_andre_biologiske_stoerrelser_hos_pattedyr.pdf}{\emph{Hvad er Matematik?}} af Bjørn Grøn et. al.)}
+
+\vspace{1cm}
+{\Large Stofskifte og kropsvægt hos pattedyr}
+
+I følgende skema er angivet typiske værdier af kropsvægt (i kg) og stofskifte (som måles som det antal liter ilt, der forbrændes i timen) for forskellige pattedyr.
+
+\begin{figure}[h!]
+\footnotesize\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Dyr & Vampyrflagermus & Ørkenræv & Næse-bjørn & Hyæne & Kænguru & Jordsvin\\\hline
+	\cellcolor{hggreen} Kropsvægt (kg) & 0.029 & 1.1 & 3.9 & 7.0 & 33 & 48\\\hline
+	\cellcolor{hggreen} Stofskifte (l. ilt pr. time) & 0.027 & 0.4 & 1.0 & 2.2 & 5.8 & 6.0\\\hline
+\end{tabularx}
+\end{figure}
+
+\begin{enumerate}
+\item En god måde at få overblik over et datasæt er ved at arbejde med dem i Geogebra. Gør dette med målingerne af stofskifte og kropsvægt i det følgende ved at indtaste værdierne i to kolonner.
+\item Afsæt målingerne i et koordinatsystem ved at bruge regressionanalyse funktionen og kopiér til grafikvinduet. Sørg for at kropsvægten er ud ad første-aksen og stofskiftet ud ad andenaksen. Ser det ud til, at stofskiftet er proportionalt med kropsvægten, dvs. at der “hører et fast stofskifte til hvert kg kropsvægt”?
+\item En anden måde, hvorpå man kan undersøge, om der er proportionalitet, består i at udregne forholdet mellem stofskifte og kropsvægt for hvert dyr. Hvis der er proportionalitet, så skulle dette forhold være nogenlunde konstant. Udregn for hvert dyr forholdet mellem stofskifte og kropsvægt, og angiv disse tal i nederste række i et skema som nedenstående.
+
+\begin{figure}[h!]
+\footnotesize\centering\renewcommand{\arraystretch}{2}
+\begin{tabularx}{\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Dyr & Vampyrflagermus & Ørkenræv & Næse-bjørn & Hyæne & Kænguru & Jordsvin\\\hline
+	\cellcolor{hggreen} Kropsvægt (kg) & 0.029 & 1.1 & 3.9 & 7.0 & 33 & 48\\\hline
+	\cellcolor{hggreen} Stofskifte (l. ilt pr. time) & 0.027 & 0.4 & 1.0 & 2.2 & 5.8 & 6.0\\\hline
+	\cellcolor{hggreen} $\frac{\text{Stofskifte}}{\text{Kropsvægt}}$ &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+Ser dette forhold ud til at være nogenlunde konstant? Hvis ikke, vokser eller aftager forholdet, når kropsvægten vokser?
+\item Lad $K$ betegne kropsvægten målt i kg og $S$ stofskiftet målt i liter ilt pr. time. Udregn for hvert dyr størrelsen:
+$$\frac{S}{K^{0.75}}$$
+og angiv disse tal i nederste række i et skema som nedenstående.
+
+\begin{figure}[h!]
+\footnotesize\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Dyr & Vampyrflagermus & Ørkenræv & Næse-bjørn & Hyæne & Kænguru & Jordsvin\\\hline
+	\cellcolor{hggreen} \centering Kropsvægt (kg) & 0.029 & 1.1 & 3.9 & 7.0 & 33 & 48\\\hline
+	\cellcolor{hggreen} Stofskifte (l. ilt pr. time) & 0.027 & 0.4 & 1.0 & 2.2 & 5.8 & 6.0\\\hline
+	\cellcolor{hggreen} $\dfrac{S}{K^{0.75}}$ &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+\FloatBarrier
+Ser dette forhold ud til at være nogenlunde konstant?
+
+\item Tag gennemsnittet af tallene i nederste række i skemaet i d), og lad $b$ være lig med dette gennemsnit. Indsæt den fundne værdi af $b$ i udtrykket:
+$$S=b\cdot K^{0.75}$$
+og tegn grafen for denne funktion i det koordinatsystem, hvor du har afsat målingerne. Er der god overensstemmelse mellem grafen og målepunkterne? Brug under alle omstændigheder modellen for S i det følgende.
+\item Hvis et dyr er dobbelt så tungt som et andet, hvor mange gange større er dets stofskifte så?
+\item Hvilket stofskifte vil man forvente for et menneske på $K=70$ kg?
+\item Det oplyses, at et dyrs stofskifte er 3.4 liter ilt pr. time. Hvilken kropsvægt vil du forvente for dyret?
+\item Kan du se, hvordan følgende sætning afspejler konklusionerne i denne øvelse?
+\iquote{Hvis stofskiftet var proportionalt med kropsvægten, så ville en ko være kogende på overfladen eller en mus være nødt til at have en 20 cm tyk pels for at holde sig varm}
+\item Hvor kom værdien $0.75$ fra? Benyt potensregression i geogebra og se hvilke værdier for $a$ og $b$ man får her. Vurdér til sidst om målingerne stemmer overens med potensvækst.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+
+
+

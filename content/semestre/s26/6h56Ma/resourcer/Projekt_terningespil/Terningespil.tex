@@ -1,0 +1,279 @@
+\documentclass[10pt,a4paper,table]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	\usepackage{transparent}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usetikzlibrary{calc}
+	\usepackage{placeins}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	\usepackage{chngcntr}
+	
+	\renewcommand\thesection{\arabic{section}}
+
+	\titleformat{\section}[block] 
+  		{\flushleft\overp\Large\color{frbgreen}}    % format for whole title
+  		{}                           % no separate label (empty)
+  		{0pt}                        % spacing between label and title
+		{\hspace{-6em}\begin{minipage}[t]{0.2\textwidth}\raggedleft DEL \thesection\\\footnotesize\vest}       % prepend "Delprøve <number>"
+		[\end{minipage}\vspace{-2.9em}]
+	
+	\counterwithout{subsection}{section}
+	\renewcommand\thesubsection{Øvelse \arabic{subsection}}
+	\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{frbblue}\hrule width \hsize \kern 1mm
+			\end{minipage}}
+		}
+		\fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
+		\fancyhead[R]{\overp\color{frbgreen}\footnotesize Efterår 2025}
+		\fancyhead[C]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\Large\color{frbgreen}\vestb Projekt\\\normalsize\overp Held i spil}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{frbgreen}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\overp\color{frbgreen}\footnotesize Mat C-B}
+	\rhead{\overp\color{frbgreen}\footnotesize Efterår 2025}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  % a light grey/green like in your screenshot
+  \definecolor{bgline}{RGB}{205,214,208}
+
+  % center for the circles (placed a bit *outside* the page to the left)
+  \coordinate (C) at ($(current page.north)+(25mm,35mm)$);
+
+  % two thin concentric circles
+  \draw[frbblue, line width=0.4pt, opacity=0.3] (C) circle (95mm);
+\end{tikzpicture}
+
+\vspace{1em}
+
+
+\section{Terningekast}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.25\textwidth]{terning}
+\includegraphics[width=0.25\textwidth]{terning_grøn.jpg}
+\end{figure}
+
+Der kastes med to 4-sidede terninger. I et spil betragtes summen af de to terningers udfald.
+
+\begin{enumerate}
+    \item Udfyld denne tabel, der beskriver udfaldsrummet:
+\end{enumerate}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.65\textwidth]{Terningetabel.png}
+\end{figure}
+
+\begin{enumerate}
+    \item Udregn sandsynlighederne for de forskellige udfald.
+    
+    \item Hvad er sandsynligheden for at få en sum på 5 eller større?
+    
+    \item Hvad er sandsynligheden for, at man slår 1 med den grønne terning og et lige tal med den blå terning?
+\end{enumerate}
+
+\clearpage
+\section{Gevinster}
+
+I et bestemt hasardspil spiller du om penge. Du begynder med 100 kr og vinder i gennemsnit 2,50 kr pr spil.
+
+\begin{enumerate}
+    \item[a)] Opstil en funktion $f(x)$, hvor $x$ er antallet af afviklede spil og $f(x)$ er de penge, som du har efter $x$ spil.
+    \item[b)] Hvor mange spil skal der spilles før du har 180 kr?
+\end{enumerate}
+
+Formuen for en spiller af et bestemt spil kan beskrives med funktionen:
+$$
+g(x) = -x^4 + 12x^3 + 10x^2 - 60x + 100, \qquad 0 \le x \le 12
+$$
+hvor $x$ er antallet af minutters spil og $g(x)$ er spillerens formue.
+
+\begin{enumerate}
+    \item[c)] Tegn grafen for $g(x)$ i GeoGebra.
+    \item[d)] Til hvilke tidspunkter under spillet er formuen for spilleren præcis 2000 kr?
+    \item[e)] Efter hvor mange minutters spil har spilleren den største formue?
+    \item[f)] Udregn $g'(5)$ og forklar, hvad dette tal fortæller om spillerens formue.
+    \item[g)] Udregn $g(6) - g(5)$ og sammenlign dette resultat med svaret i 2f).
+    \item[h)] På hvilket tidspunkt i spillet vokser spillerens formue hurtigst?
+\end{enumerate}
+
+
+\clearpage
+\section{Ærlige mønter?}
+\begin{wrapfigure}[11]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.4\textwidth]{cointoss.jpeg}
+\end{wrapfigure}
+
+En special mønt er lavet, så sandsynligheden for plat er 0,4 og sandsynligheden for krone er 0,6.  
+I et eksperiment kastes mønten 25 gange.
+
+\begin{enumerate}
+    \item[a)] Gør rede for, at det er et binomialfordelt eksperiment.
+    \item[b)] Beregn sandsynligheden for, at der kastes krone netop 15 gange.
+    \item[c)] Beregn sandsynligheden for, at der kastes plat højst 12 gange.
+\end{enumerate}
+
+Den specielle mønt blandes op i en skål med en masse almindelige (ærlige) mønter.  
+Der tages en tilfældig mønt op af skålen. Mønten kastes 25 gange.  
+15 af de 25 kast bliver plat.
+
+\begin{enumerate}
+    \item[d)] Undersøg, om mønten er den specielle mønt.
+\end{enumerate}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Forklaringsopgaver
+\begin{align*}
+&&	&						&&\underset{\rule{0.8\linewidth}{0pt}}{\textbf{Forklaring:}}\\[1em]
+&&	&\frac{(x+2)^2 - 4}{x} 		&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{Udtrykket skrives op.}}\\[2em]
+&&	=&\ \frac{x^2 + 4 + 4x - 4}{x}	&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ \frac{x^2 + 4x}{x}			&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ x + 4					&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+\end{align*}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+
+
+

@@ -1,0 +1,277 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{frbred}{RGB}{159, 37, 37}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+  \usepackage{fontawesome5}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	\newcommand{\hint}[3][]{%
+  		\marginpar{%
+   			 \vspace{-#3pt}%	
+			 \faBook \ \klavl\scriptsize#2%
+			 \ifx\relax#1\relax\else\\[5pt]\faYoutube \ \klavl\scriptsize\color{frbblue}\href{#1}{Videobevis}\fi%
+			 	}%
+			}
+
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	%\setcounter{secnumdepth}{0}
+	\usepackage{remreset} % continued subsection numbering
+		\makeatletter
+			\@removefromreset{subsection}{section}\renewcommand\thesubsection{\arabic{subsection}}
+		\makeatother
+	\renewcommand\thesection{\klavl\huge Del \arabic{section}}
+	\titleformat{\section}[display]{\centering\overp}{\thesection}{-10pt}{\scshape\footnotesize}[\vspace{20pt}]
+	\renewcommand\thesubsection{}
+	\titleformat{\subsection}{\color{frbred}\large\overp}{}{}{}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%s%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt 
+			\end{minipage}}
+		}
+		\fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
+		\fancyhead[R]{\overp\color{frbgreen}\footnotesize Efterår 2025}
+		\fancyhead[C]{\overp\color{frbblue}\normalsize 6H55 Ma: mundtlig eksamen\\\Large\vestb\color{frbgreen} Individuelle spørgsmål}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{frbblue}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\klavl\color{frbgreen}\footnotesize 6H55 2508 Ma}
+	\rhead{\klavl\color{frbgreen}\footnotesize Efterår 2025}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+
+\thispagestyle{plain}
+\
+
+\subsection*{Andengradspolynomier}
+\noindent
+\begin{enumerate}
+  \item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQDRWcKjWS1rQ6hwW-sGPBWxAbnUHmcCgFnwIDXYUZQg62k?e=32jXMg}{\overp\color{frbblue}\faFile\ Vejledning}} for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlen til udregning af polynomiets rødder:
+  $$x=\frac{-b\pm \sqrt{b^2-4ac}}{2a},$$
+og forklar hvordan grafen for andengradspolynomiet afhænger af $a$ og diskriminanten $d$.
+\item Gør, for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlen til udregning af polynomiets rødder:
+$$x=\frac{-b\pm \sqrt{b^2-4ac}}{2a},$$
+og forklar hvordan koefficienterne $a$, $b$, og $c$ kan bestemmes ved hjælp af polynomiel regression.
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQCjvSBESnymTorfKMhkLsOHAWhxwlPZegIo6aKts-a4d0Q?e=4CqbN}{\overp\color{frbblue}\faFile\ Vejledning}} for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlen til udregning af polynomiets toppunkt:
+$$T=\left(\frac{-b}{2a},\frac{-d}{4a}\right),$$
+og forklar hvordan grafen for andengradspolynomiet afhænger af $a$, $b$, og $c$.
+\item Gør, for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlen til udregning af polynomiets toppunkt:
+$$T=\left(\frac{-b}{2a},\frac{-d}{4a}\right),$$
+og forklar hvordan koefficienterne $a$, $b$, og $c$ kan bestemmes ved hjælp af polynomiel regression.
+\end{enumerate}
+
+\subsection*{Geometri}
+\begin{enumerate}[resume]
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQAkmYK066VfSKFW5hUWetGoARolvZXpg04is2YxBlTs_HA?e=uYq1Dv}{\overp\color{frbblue}\faFile\ Vejledning}} for to ortogonale linjer $y=ax+b$ og $y=cx+d$, rede for formlen for produktet af deres hældninger:
+$$a\cdot c=-1,$$
+og forklar med et eksempel, hvordan man kan finde et skæringspunkt mellem to linjer.
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/r/personal/art_frbvuc_dk/Documents/Matematik/Beviser/Bevis_49.pdf?csf=1&web=1&e=apdJFt}{\overp\color{frbblue}\faFile\ Vejledning}} for to punkter i et koordinatsystem, rede for formlen for afstanden mellem dem:
+$$|AB| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.$$
+Gør\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQCfYaEBxPpdTpfDnPdv_R4-Af2nsMHNJifpl-SXce6omxQ?e=JRreSp}{\overp\color{frbblue}\faFile\ Vejledning}} desuden, for en cirkel i et koordinatsystem med centrum i $C(a,b)$ og radius $r$, rede for cirklens ligning
+$$(x-a)^2+(y-b)^2=r^2,$$
+og forklar, hvordan man kan finde en ligning for tangenten til en cirkel.
+\end{enumerate}
+
+\subsection*{Funktioner}
+\begin{enumerate}[resume]
+\item Gør\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQAJZlvzMCfRSI3fkWkfq9LuAXgyWIuyN2E_4m_Hsz66PC8?e=6ZUs77}{\overp\color{frbblue}\faFile\ Vejledning}} rede for definitionen af logaritme funktionerne $\log(x)$ og $\ln(x)$, og udled logaritme-regnereglen:
+$$\log(ab)=\log(a)+\log(b).$$
+Forklar desuden funktionernes definitions- og værdimængde, samt hvordan man kan udregne deres monotoniforhold.
+\item Gør\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQBuIwI1c05lQKnqL6ENCu_QAeGEixVPO3dHhv4RSdt8E2M?e=lynohg}{\overp\color{frbblue}\faFile\ Vejledning}} rede for definitionen af logaritme funktionerne $\log(x)$ og $\ln(x)$, og udled logaritme-regnereglen:
+$$\log(a^x)=x\cdot \log(a).$$
+Forklar desuden funktionernes definitions- og værdimængde, samt hvordan man kan udregne deres monotoniforhold.
+\end{enumerate}
+
+\subsection*{Differentialregning}
+\begin{enumerate}[resume]
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQC0qePjWk79Q40aSrTwf-wYAesPSA37M9DUe8rSxlaZu1g?e=26cgE0}{\overp\color{frbblue}\faFile\ Vejledning}} for to funktioner $f(x)$ og $g(x)$, rede for formlen for den afledte af deres sum:
+$$\left(f(x)+g(x)\right)'=f'(x)+g'(x),$$
+og forklar hvordan man kan differentiere deres produkt.
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQAsywrJlTrCQ7f9tCQQ4KHiAb3W3KQB6iFKpY3cl646jeE?e=0DPRwq}{\overp\color{frbblue}\faFile\ Vejledning}} for funktionen $f(x)=x^2$, rede for formlen for dennes afledte:
+$$f'(x)=2x,$$
+og forklar hvordan man ved hjælp af differentialregning kan udregne en funktions monotoniforhold.
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQAC8mBw9Qh2RbXlky6NCXWeAWoz4zTtSdcC-3k6MUKFGto?e=J99dW5}{\overp\color{frbblue}\faFile\ Vejledning}} for funktionen $f(x)=\sqrt{x}$, rede for formlen for dennes afledte:
+$$f'(x)=\frac{1}{2\sqrt{x}},$$
+og forklar hvad en sammensat funktion er, og hvordan man kan differentiere en sådan.
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQBFj2WhWKeUQbO2QLd8uyDAAdnvsjTvXtgQfFUp_a3zg0E?e=s1jdhz}{\overp\color{frbblue}\faFile\ Vejledning}} for funktionen $f(x)=\frac{1}{x}$, rede for formlen for dennes afledte:
+$$f'(x)=-\frac{1}{x^2},$$
+og forklar hvordan differentialregning kan bruges til løse et optimeringsproblem.
+\end{enumerate}
+
+\subsection*{Sandsynlighedsregning}
+\begin{enumerate}[resume]
+\item Gør,\marginpar{\href{https://o365itcfyn-my.sharepoint.com/:b:/g/personal/art_frbvuc_dk/IQDayIov9mjkTobsSzbl4egXAS57DUSAOFh51LhN5pr3VJg?e=JmGdWP}{\overp\color{frbblue}\faFile\ Vejledning}} for en binomialfordelt stokastisk variabel $X$, rede for formlen til udregning af sandsynligheden:
+$$P(X=r)=K(n,r)\cdot p^r\cdot (1-p)^{n-r},$$
+og forklar hvordan man med en såkaldt binomialtest kan afprøve en statistisk hypotese.
+\item Gør, for en binomialfordelt stokastisk variabel $X$, rede for formlen til udregning af sandsynligheden:
+$$P(X=r)=K(n,r)\cdot p^r\cdot (1-p)^{n-r},$$
+og forklar, med et eksempel, hvordan man med et såkaldt konfidensinterval kan undersøge størrelser i hele populationer ud fra stikprøver.
+\item Gør, for en binomialfordelt stokastisk variabel $X$, rede for formlen til udregning af sandsynligheden:
+$$P(X=r)=K(n,r)\cdot p^r\cdot (1-p)^{n-r},$$
+og forklar, med et eksempel, hvordan deskriptorerne middelværdi og spredning kan bruges til at vurdere om et udfald er normalt eller exceptionelt.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ubrugte spørgsmål
+
+\item Definer lineær vækst, eksponentiel vækst og potensvækst. Bevis for hver af de tre væksttyper hvad der sker med $y$-værdien når:
+\begin{description}%[\alpha)]
+\item[Lineær vækst:] $x$-værdien øges med 1
+\item[Eksponentiel vækst:] $x$-værdien øges med 1
+\item[Potensvækst:] $x$-værdien ganges med $k$
+\end{description}
+
+\item Gør rede for definitionen af cosinus, sinus, og tangens, og udled på baggrund heraf formlen for hældningsvinklen for en ret linje $f(x)=ax+b$:
+$$\tan(v)=a,$$
+og forklar med et eksempel, hvordan man kan finde vinklen mellem to linjer.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{frbgreenl} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{frbgreenl} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+

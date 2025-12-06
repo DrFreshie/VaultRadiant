@@ -23,9 +23,16 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
-
+import LessonLayout from "./LessonLayout"
+import ConditionalContent from "./ConditionalContent.tsx"
+import Lavat from "./Lavat.tsx"
+import Logo from "./Logo.tsx"
 export {
+  LessonLayout,
+  ConditionalContent,
   ArticleTitle,
+  Lavat,
+  Logo,
   Content,
   TagContent,
   FolderContent,
