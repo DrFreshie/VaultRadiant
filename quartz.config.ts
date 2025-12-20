@@ -100,6 +100,9 @@ const config: QuartzConfig = {
       Plugin.CustomOgImages(),
     ],
   },
+  git : {
+    branch: "main",
+  },
 }
 
 export default config
