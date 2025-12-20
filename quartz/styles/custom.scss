@@ -95,24 +95,33 @@ body[data-slug="index"] .page > #quartz-body {
     background 0.18s ease;
 }
 
+.page-introduction {
+  font-family: "Nunito", sans-serif;
+  text-align: justify;
+  text-align-last: center;
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
 .home-class__tag {
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #94e2d5; /* teal */
+  text-align: center;
+  padding: 1rem;
 }
 
-.home-class__title {
-  font-size: 1.4rem;
+.home-classes__title {
+  font-size: 3rem;
   font-weight: 700;
   color: #f2cdcd; /* rosy */
+  text-align: center;
+  margin-top: 7rem;
 }
 
-.home-class__desc {
-  font-size: 0.9rem;
-  color: var(--secondary);
-  opacity: 0.9;
+.home-classes {
+  margin-bottom: 12rem;
 }
 
 /* Hover state */

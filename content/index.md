@@ -26,21 +26,17 @@ layout: home
           </figcaption>
         </figure>
   </div>
-    <p>
-      Velkommen til min digitale have med det beskedne navn Vault Radiant, opkaldt, naturligvis, efter Hari Seldons samlede noter om psychohistory i romanen <emph>Foundation</emph> af Isaac Asimov. Ikke fordi du her vil kunne finde konturerne af fremtiden på matematiske formler - selvom formler man nok ikke vil have svært ved at finde - men fordi det netop er en samling af noter, mestendels lektionsplaner, som man kan blive klog af at kigge på enkeltvis, særligt (læs: kun) hvis man er så heldig at følge min undervisning på Frederiksberg VUC & STX hvor disse planer løbende bliver virkeliggjort, men som  først rigtig stråler og inspirere når man for lov at se den i sin helhed. Og sådan er det jo med undervisning, læring, og videnskab; at studere delelementer er da brugbart visse steder, men den sande værdi må da ligge i den samlede fortælling om verden, samt vores forståelse af denne, der kommer frem. Derfor kan du her spacejumpe igennem alle lektioner, og hvem ved, måske finde en sammenhæng der kan inspirerer dig.</p>
+    <p class="page-introduction">
+      Velkommen til min digitale have med det beskedne navn Vault Radiant, opkaldt, naturligvis, efter Hari Seldons samlede noter om psychohistory i romanen <emph>Foundation</emph> af Isaac Asimov. Ikke fordi du her vil kunne finde konturerne af fremtiden på matematiske formler - selvom formler man nok ikke vil have svært ved at finde - men fordi det netop er en samling af noter, mesten digdels lektionsplaner, som man kan blive klog af at kigge på enkeltvis, særligt (læs: kun) hvis man er så heldig at følge min undervisning på Frederiksberg VUC & STX hvor disse planer løbende bliver virkeliggjort, men som  først rigtig stråler og inspirere når man for lov at se den i sin helhed. Sådan er det nemlig med the Prime Radiant - og sådan er det jo med undervisning, læring, og videnskab; at studere delelementer er da brugbart visse steder, men den sande værdi må da ligge i den samlede fortælling om verden, samt vores forståelse af denne, der kommer frem. Derfor kan du her spacejumpe igennem alle lektioner, og hvem ved, måske finde en sammenhæng der kan inspirerer.</p>
 </div>
+  <h2 class="home-classes__title">Klasser - Forår 2026</h2>
 <div class="home-classes">
-  <!-- Example cards – adjust hrefs + labels to your real folders -->
-  <a class="home-class" href="/semestre/s26/6h56Ma/">
-    <span class="home-class__tag">Matematik B</span>
-    <h2 class="home-class__title">6h56Ma</h2>
-    <p class="home-class__desc">Lektioner, opgaver og prøver.</p>
+  <a class="home-class" href="/semestre/s26/6h56Ma/lektioner">
+    <span class="home-class__tag">Matematik C-B</span>
   </a>
 
-  <a class="home-class" href="/semestre/s26/6L26En/">
+  <a class="home-class" href="/semestre/s26/6l26en/lektioner">
     <span class="home-class__tag">Engelsk C</span>
-    <h2 class="home-class__title">6L26En</h2>
-    <p class="home-class__desc">Tekster, opgaver og eksamensforberedelse.</p>
   </a>
 
   <!-- Add more cards as needed -->
