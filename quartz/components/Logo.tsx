@@ -15,7 +15,7 @@ export default (() => {
         {/* Image */}
         <div class="prime-radiant__image-wrapper">
           <img
-            src="/static/logov1.png"
+            src="/static/logo.png"
             alt="Prime Radiant"
             class="prime-radiant__image"
           />
