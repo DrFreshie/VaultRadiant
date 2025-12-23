@@ -24,7 +24,7 @@ export default (() => {
         {/* Quote */}
         <figure class="prime-radiant__quote">
           <blockquote>
-            “SSSStudying the Prime Radiant, acre by acre, has its uses – but observing it as a continent is inspirational."
+            “Studying the Prime Radiant, acre by acre, has its uses – but observing it as a continent is inspirational."
           </blockquote>
           <figcaption>
             – Isaac Asimov, <em>Foundation</em>
