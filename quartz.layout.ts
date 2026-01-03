@@ -41,7 +41,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
   ],
   afterBody: [
-    Component.Lavat(),
   ],
 }
 
