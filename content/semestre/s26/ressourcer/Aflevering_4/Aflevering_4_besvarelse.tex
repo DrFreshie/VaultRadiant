@@ -1,0 +1,428 @@
+\documentclass[10pt,a4paper,table]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage{subcaption}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\color{red}{#1}\color{black}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	\usepackage{chngcntr}
+	
+	\renewcommand\thesection{\arabic{section}}
+
+	\titleformat{\section}[block] 
+  		{\flushright\overp\Large\color{frbgreen}}    % format for whole title
+  		{}                           % no separate label (empty)
+  		{0pt}                        % spacing between label and title
+		{DELPRØVE \thesection}       % prepend "Delprøve <number>"
+		[{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+	
+	\counterwithout{subsection}{section}
+	\renewcommand\thesubsection{Opgave \arabic{subsection}}
+	\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt \vspace{4em}
+			\end{minipage}}
+		}
+		\fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
+		\fancyhead[R]{\overp\color{frbgreen}\footnotesize Efterår 2025}
+		\fancyhead[C]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\Large\color{frbgreen}\vestb Aflevering 4\\\footnotesize\color{red}Besvarelse}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{frbgreen}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\overp\color{frbgreen}\footnotesize Mat C-B}
+	\rhead{\overp\color{frbgreen}\footnotesize Efterår 2025}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+
+\section{}
+\subsection{}
+En cirkel har ligningen
+$$(x-1)^2 + (y-4)^2 = 9.$$
+
+\begin{enumerate}
+    \item Bestem centrum og radius for cirklen.
+\end{enumerate}
+\svar{
+	Den generelle cirklens ligning for en cirkel med centrum $C(a,b)$ og radius $r$ er givet ved:
+	$$(x-a)^2+(y-b)^2=r^2.$$
+	Derfor centrum i denne cirkel $C(1,4)$ og radius $r=\sqrt{9}=3$.
+}
+
+\begin{enumerate}[resume]
+    \item Undersøg, om punktet $P(5,6)$ ligger på cirklen.
+\end{enumerate}
+\svar{
+	Vi indsætter $P(5,6)$ i cirklens ligning:
+	$$(5-1)^2+(6-4)^2 = 4^2+2^2=16+4=20.$$
+	Da $20 \neq 9$, ligger $P(5,6)$ ikke på cirklen.
+}
+
+\subsection{}
+Der er givet to punkter $A(1,4)$ og $B(9,10)$.
+\begin{enumerate}
+    \item Bestem afstanden $|AB|$ mellem de to punkter.
+\end{enumerate}
+\svar{
+	Afstandsformlen mellem to punkter er:
+	$$|AB|=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.$$
+	Her:
+	$$|AB|=\sqrt{(9-1)^2+(10-4)^2}=\sqrt{8^2+6^2}=\sqrt{64+36}=\sqrt{100}=10.$$
+	Altså er afstanden $|AB|=10$.
+}
+
+\subsection{}
+En cirkel har centrum i punktet $C(5,-3)$ og har radius $r=4$.
+\begin{enumerate}
+    \item Bestem en ligning for cirklen.
+\end{enumerate}
+\svar{
+	Den generelle form er:
+	$$(x-a)^2+(y-b)^2=r^2.$$
+	Her $a=5,\;b=-3,\;r=4$, altså
+	$$(x-5)^2+(y+3)^2=16.$$
+}
+
+\section{}
+\subsection{}
+En cirkel er givet ved ligningen
+\[
+    (x-5)^2 + (y+1)^2 = 13 .
+\]
+
+\begin{enumerate}
+    \item Bestem en ligning for tangenten $t_1$ til cirklen i punktet $P(2,1)$.
+\end{enumerate}
+\svar{
+    Centrum er $C(5,-1)$ og $P(2,1)$ ligger på cirklen: $(2-5)^2+(1+1)^2=9+4=13$.
+
+    Hældningen på radius $\overline{CP}$ er
+    $$a_{CP}=\frac{1-(-1)}{2-5}=\frac{2}{-3}=-\tfrac{2}{3}.$$
+    Tangenten er vinkelret på radius, så
+    $$a_{t_1}=-\frac{1}{a_{CP}}=\tfrac{3}{2}.$$
+    Gennem $P(2,1)$ fås $b$-værdien:
+    $$b=y_1-a\cdot x_1=1-\tfrac32\cdot 2=-2$$
+    Altså $t_1:\; y=\tfrac{3}{2}x-2$.
+}
+
+Cirklen har en anden tangent $t_2$, der er parallel med $t_1$.
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item Bestem en ligning for tangenten $t_2$.
+\end{enumerate}
+\svar{
+    Parallel med $t_1$ betyder samme hældning $a=\tfrac{3}{2}$, så vi søger en linje
+    $$y=\tfrac{3}{2}x+c,$$
+    der er tangent til cirklen. Afstanden fra centrum $C(5,-1)$ til linjen skal være cirklens radius $r=\sqrt{13}$.
+    Brug formlen for afstand til $y=ax+b$:
+    $$d=\frac{|a x_1+b-y_1|}{\sqrt{a^2+1}}.$$
+    Her fås
+    $$\frac{\left|\tfrac{3}{2}\cdot 5 + c - (-1)\right|}{\sqrt{\left(\tfrac{3}{2}\right)^2+1}}
+      =\sqrt{13}.$$
+    Løser man denne ligning i Geogebra får man desværre kun den ene løsning, nemlig vores $b$-værdi fra før:
+
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.3\textwidth]{geog}
+	\end{figure}
+	\FloatBarrier
+
+	Man kan dog tvinge den anden løsning frem ved at gøre tælleren til minus:
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.3\textwidth]{geog2}
+	\end{figure}
+	
+	Eller løse opgaven grafisk i geogebra.
+	Hældningen er derfor $c=-15$.
+    Ligningen for den paralelle tangent er derfor:
+    $$t_2:\; y=\tfrac{3}{2}x-15.$$
+}
+
+\subsection{}
+En linje $l$ er givet ved ligningen
+\[
+    y = 2x + 3 .
+\]
+Desuden er der givet punktet $P(4,1)$.
+
+\begin{enumerate}
+    \item Benyt en formel til at bestemme afstanden fra punktet $P$ til linjen $l$.
+\end{enumerate}
+\svar{
+    Brug afstanden til $y=ax+b$:
+    $$d=\frac{|a x_1+b-y_1|}{\sqrt{a^2+1}},\quad a=2,\;b=3,\;(x_1,y_1)=(4,1).$$
+    $$d=\frac{|2\cdot 4+3-1|}{\sqrt{2^2+1}}
+        =\frac{10}{\sqrt{5}}
+        =2\sqrt{5}\approx 4{,}47.$$
+}
+
+En cirkel har centrum i $P$ og har radius $5$.
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item Bestem koordinatsættet til hvert af skæringspunkterne mellem cirklen og linjen $l$.
+\end{enumerate}
+\svar{
+    Cirklen har ligningen $(x-4)^2+(y-1)^2=25$ og linjen $y=2x+3$.
+    Indsæt $y$ i cirklen:
+    $$(x-4)^2+(2x+3-1)^2=25
+      \;\Rightarrow\;
+      (x-4)^2+(2x+2)^2=25.$$
+    $$x^2-8x+16+4x^2+8x+4=25
+      \;\Rightarrow\;
+      5x^2+20=25
+      \;\Rightarrow\;
+      x^2=1.$$
+    Altså $x=\pm 1$, og dermed $y=2x+3$ giver punkterne
+    $$(-1,1)\quad \text{og}\quad (1,5).$$
+}
+
+\subsection{}
+En cirkel $C_1$ har centrum i punktet $(4{,}2\ , 0)$ og har radius $10{,}3$.
+\begin{enumerate}
+	\item Tegn cirklen $C_1$ i et koordinatsystem.
+\end{enumerate}
+\svar{
+	Vi indtaster cirklens liging i et algebra-vindue i geogebra og får:
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{cirkel}
+	\end{figure}	
+}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{vinduesramme}
+\caption*{\footnotesize \textit{Billedkilde: 1stdibs.com}}
+\end{figure}
+
+På figuren ses en vinduesramme, der er lagt ind i et koordinatsystem. Enheden i koordinatsystemet er decimeter.
+
+I en model afgrænses vinduesrammen af førsteaksen samt cirklen $C_1$ og cirklen $C_2$.
+
+Det oplyses, at cirklen $C_2$ har ligningen
+\[
+    (x+4{,}2)^2 + y^2 = 10{,}3^2 .
+\]
+
+\begin{enumerate}[resume]
+    \item Bestem vinduesrammens bredde og højde.
+\end{enumerate}
+\svar{
+	Vi kan få cirklernes skæring med $x$-aksen med Geogebras skæringsværktøj:
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.3\textwidth]{skæring}
+	\end{figure}
+	
+	Denne skæring sker i $x=6.1$, Bredden må derfor $6.1\cdot 2=12.2$ decimeter. Samme skæringsværktøj kan jeg også bruge til at finde cirklernes skæring med hinanden (eller $y$-aksen).
+	Gør man det får man $y=9.4$. Højden må derfor være $9.4$ decimeter.
+}
+
+\subsection{}
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{politigaard_foto}
+    \caption*{\footnotesize Figur 1}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{politigaard_plan}
+    \caption*{\footnotesize Figur 2}
+\end{subfigure}
+\end{figure}
+
+Figur 1 viser Københavns Politigård.
+
+På figur 2 er politigårdens grundplan lagt ind i et koordinatsystem, hvor enheden på begge akser er meter. To af de runde bygningsdele er markeret på figuren.
+
+Den store runde gård kan beskrives med cirkel 1, der har ligningen
+\[
+    (x-54)^2 + (y-34)^2 = 515{,}29 .
+\]
+
+\begin{enumerate}
+    \item Bestem centrum $C_1$ og radius $r_1$ for cirkel 1.
+\end{enumerate}
+\svar{
+	Centrum er $C_1(54,34)$ og radius $r_1=\sqrt{515.29}=22,7$.
+}
+
+Et rundt trappetårn kan beskrives med cirkel 2, der har centrum $C_2(109,106)$ og radius $r_2=5$.
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item Bestem den mindste distance mellem de to cirkler.
+\end{enumerate}
+\svar{
+	Den mindste distance må kunne fås ved at finde afstanden mellem de centrummer $C_1$ og $C_2$ og trække deres radier fra denne afstand.
+	
+	Afstand mellem to punkter:
+	$$|C_1C_2|=\sqrt{(109-54)^2+(106-34)^2}\approx90,6$$
+
+	Den mindste afstand:
+	$$|C_1C_2|-(r_1+r_2)=90,6-(22,7+5)=62,9$$
+	\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{cirkler}
+\end{figure}
+}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Forklaringsopgaver
+\begin{align*}
+&&	&						&&\underset{\rule{0.8\linewidth}{0pt}}{\textbf{Forklaring:}}\\[1em]
+&&	&\frac{(x+2)^2 - 4}{x} 		&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{Udtrykket skrives op.}}\\[2em]
+&&	=&\ \frac{x^2 + 4 + 4x - 4}{x}	&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ \frac{x^2 + 4x}{x}			&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ x + 4					&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+\end{align*}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+
+
+
