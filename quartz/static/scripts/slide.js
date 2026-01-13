@@ -27474,7 +27474,7 @@ function createSlides (slideshowSource, options) {
   slides.byName = {};
   slides.byNumber = {};
 
-  var slideNumber = 0;
+  var slideNumber = -1;
   parsedSlides.forEach(function (slide, i) {
     var template, slideViewModel;
 
@@ -27533,6 +27533,25 @@ function createSlides (slideshowSource, options) {
     }
 
   });
+
+        // --- quartz-slide patch: remove cover/empty first slide ---
+  if (slides.length > 0) {
+    var first = slides[0];
+
+    // `first.slide` is the raw parsed slide object, `first.slide.content` is the markdown for it.
+    var firstProps = (first.slide && first.slide.properties) ? first.slide.properties : {};
+    var firstContent = "";
+
+    if (first.slide && first.slide.content != null) {
+      firstContent = String(first.slide.content).trim();
+    }
+
+    // 1) If it's marked as a layout slide, drop it
+    // 2) If it has no content (or would become undefined), drop it
+    if (firstProps.layout === "true" || firstContent === "") {
+      slides.shift();
+    }
+  }
 
   return slides;
 }
