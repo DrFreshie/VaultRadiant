@@ -21,6 +21,7 @@ export const defaultContentPageLayout: PageLayout = {
       }
       return null
     },
+    Component.ArticleTitle(),
   ],
   left: [
         Component.Logo(),

@@ -134,6 +134,17 @@ body[data-slug="index"] .page > #quartz-body {
     0 0 22px rgba(148, 226, 213, 0.25);
 }
 
+/* Hide the Quartz-rendered page title block */
+.article-title {
+  display: none !important;
+}
+
+/* …but show it in slide mode (remark adds .remark-container on the <body>/<html>) */
+body.remark-container .article-title,
+html.remark-container .article-title {
+  display: revert !important; /* fallback below if revert isn't supported */
+}
+
 /* Slides */
 .remark-slide-scaler {
   // -webkit-font-smoothing: antialiased;

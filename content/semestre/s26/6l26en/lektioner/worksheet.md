@@ -1,21 +1,15 @@
 ---
 title: worksheet
 ---
-***
 
-# worksheet
+## Slide title number 1
+Something about slide 1.
 
-***
+## Slide title number 2
+Something about slide 1.
 
-# Slide 2
-And here is the task
+## Slide title number 3
+Something about slide 1.
 
----
-
-# Slide 3
-And some content
-
----
-
-# Slide 4
-But let's see?
+## Slide title number 4
+Something about slide 1.
