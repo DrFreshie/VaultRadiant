@@ -27,6 +27,7 @@ import LessonLayout from "./LessonLayout"
 import ConditionalContent from "./ConditionalContent.tsx"
 import Lavat from "./Lavat.tsx"
 import Logo from "./Logo.tsx"
+import Slide from "./Slide"
 export {
   LessonLayout,
   ConditionalContent,
@@ -57,4 +58,5 @@ export {
   Comments,
   Flex,
   ConditionalRender,
+  Slide,
 }
