@@ -62,7 +62,6 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
 
-        Component.Explorer({ title: "Lektioner" }),
   ],
   right: [],
 }
