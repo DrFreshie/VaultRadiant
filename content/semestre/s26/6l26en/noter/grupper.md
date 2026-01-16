@@ -6,9 +6,9 @@ title: "Grupper"
 type: note
 ---
 
-Group 1|Group 2|Group 3|Group 4|Group 5|Group 6
----|---|---|---|---|---
-Emil|Aida|Ali|Ameli|Amina|Benjamin
-Ella|Filippa|Gabriella|Hussain|Isabella|Jamie
-Jyadaee|Lucas|Mariam|Melina|Melissa|Monisa
-Nisa|Sara|Simon|Teyfik
+Group 1|Group 2|Group 3|Group 4
+---|---|---|---
+Emmi|Aida|Ameli|Benjamin
+Ella|Gabriella|Hussain|Isabella
+Lucas|Mariam|Melina|Melissa
+Nisa|Sara|Simon|Monisa
