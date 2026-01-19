@@ -1,0 +1,245 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont{Times New Roman}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+	\usepackage{transparent}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usetikzlibrary{calc}
+	\usepackage{placeins}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	\usepackage{titlesec}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{``#1''}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	\usepackage{chngcntr}
+	
+	\renewcommand\thesection{\arabic{section}}
+
+	\titleformat{\section}[block] 
+  		{\flushleft\overp\Large\color{frbgreen}}    % format for whole title
+  		{}                           % no separate label (empty)
+  		{0pt}                        % spacing between label and title
+		{\hspace{-6em}\begin{minipage}[t]{0.2\textwidth}\raggedleft DEL \thesection\\\footnotesize\vest}       % prepend "Delprøve <number>"
+		[\end{minipage}\vspace{-2.9em}]
+	
+	\counterwithout{subsection}{section}
+	\renewcommand\thesubsection{Øvelse \arabic{subsection}}
+	\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\MakePerPage{footnotes}
+	
+		\usepackage{fancyhdr}
+	\fancypagestyle{plain}{%
+		\setlength{\headheight}{60pt}%
+		\setlength{\headsep}{0pt}
+		\fancyhf{}% No header/footer
+		\renewcommand{\footrulewidth}{0pt}% No footer rule
+		\renewcommand\headrule{
+			\centerline{\begin{minipage}{1\textwidth}
+				\color{frbblue}\hrule width \hsize \kern 1mm
+			\end{minipage}}
+		}
+		\fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
+		\fancyhead[R]{\overp\color{frbgreen}\footnotesize Forår 2026}
+		\fancyhead[C]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\Large\color{frbgreen}\vestb Projekt\\\normalsize\overp Funktioner}
+		\cfoot{\thepage}
+	}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\renewcommand\headrule{
+			\centerline{\begin{minipage}{\textwidth}
+				\color{frbgreen}\hrule width \hsize \kern 1mm
+			\end{minipage}}}
+	\lhead{\overp\color{frbgreen}\footnotesize Mat C-B}
+	\rhead{\overp\color{frbgreen}\footnotesize Forår 2026}
+	\cfoot{\thepage}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  % a light grey/green like in your screenshot
+  \definecolor{bgline}{RGB}{205,214,208}
+
+  % center for the circles (placed a bit *outside* the page to the left)
+  \coordinate (C) at ($(current page.north)+(25mm,35mm)$);
+
+  % two thin concentric circles
+  \draw[frbblue, line width=0.4pt, opacity=0.3] (C) circle (95mm);
+\end{tikzpicture}
+
+\vspace{1em}
+
+
+\section{Lineær funktioner}
+\vspace{-0.7em}
+Forklar hvad en lineær sammenhæng er. Se gerne i \href{https://plusstxa1.systime.dk/?id=1227}{C-bogen}. I skal bl.a. komme ind på regneforskrift, graf og vækstegenskab for en lineær funktion.
+
+Udled formlen til bestemmelse af en linjes hældningskoefficient ud fra to punkter på linjen. Giv også et par eksempler på, hvordan formlen bruges.
+
+Udfør eksperimentet Raflebægeret og/eller Papirhøjde som beskrevet nedenfor. Analyser jeres måleresultater på grundlag af lineær regression: 
+\begin{itemize}
+  \item Hvad siger forklaringsgraden fra den lineære regression om de variable, I har målt?
+  \item Hvad fortæller $a$- og $b$-værdien i den lineære model om eksperimentet?
+  \item Beregn en forudsigelse ud fra den fundne lineære model, dvs. beregn en værdi af den ene variabel ud fra en selvvalgt værdi af den anden variabel.
+  \item Kommenter modellens begrænsninger - kan modellen fx bruges ved små eller store værdier af den uafhængige variabel?
+\end{itemize}
+
+\emph{Raflebægeret}:
+Vej et raflebæger med et kendt antal terninger på en vægt. Put nu gentagne gange flere terninger i bægeret. Noter hver gang det samlede antal terninger i bægeret og den samlede masse som vægten viser.
+
+\emph{Papirhøjde}:
+Læg 10 ark ovenpå hinanden og mål højden (med lineal). Gentag med 20, 30, 40 ark.
+
+\section{Eksponentielle funktioner}
+\vspace{-0.7em}
+Forklar hvad en eksponentiel sammenhæng er. Se gerne i \href{https://plusstxa1.systime.dk/?id=1227}{C-bogen}. I skal bl.a. komme ind på regneforskrift, graf og vækstegenskab for en eksponentiel funktion.
+
+Forklar hvad man forstår ved fordoblingskonstant og halveringskonstant og udled de formler, der knytter dem sammen med fremskrivningsfaktoren.
+
+Udfør eksperimentet Bordtennisbolden og/eller Terningekast som beskrevet nedenfor. Analyser jeres måleresultater på grundlag af eksponentiel regression:
+
+\begin{itemize}
+  \item Hvad siger forklaringsgraden fra den eksponentielle regression om de variable, I har målt?
+  \item Hvad fortæller a- og b-værdien i den eksponentielle model om eksperimentet? Hvad er vækstraten?
+  \item Beregn en forudsigelse ud fra modellen, dvs. beregn en værdi af den ene variabel ud fra en selvvalgt værdi af den anden variabel.
+  \item Kommenter modellens begrænsninger - kan modellen fx bruges ved små eller store værdier af den uafhængige variabel?
+\end{itemize}
+
+\emph{Terningekast}:
+Et kendt antal terninger kastes. Brug mange terninger, gerne over 150. De terninger der viser 6 tages væk, og de resterende terninger optælles og kastes igen. Dette gentages indtil der er mindre end 20 terninger tilbage. Sammenhørende værdier af antallet af kast og antallet af tilbageværende terninger noteres løbende. Inden terningerne kastes første gang er antal kast = 0.
+
+\emph{Bordtennisbolden}:
+Se optagelsen af \href{https://plusstxa1.systime.dk/?id=1098#c8122}{bordtennisbolden}, der hopper lodret op og ned. Filmen kan stoppes og startes ved hjælp af afspilningsmenuen nederst. Bestem den højde bolden opnår efter hver kontakt med underlaget, idet højden måles fra underlaget til det nederste af bolden. Noter det tilhørende antal hop. Bolden slippes fra højden 100 cm. Denne højde hører sammen med et hoppeantal på 0.
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+	\hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+	\cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Forklaringsopgaver
+\begin{align*}
+&&	&						&&\underset{\rule{0.8\linewidth}{0pt}}{\textbf{Forklaring:}}\\[1em]
+&&	&\frac{(x+2)^2 - 4}{x} 		&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{Udtrykket skrives op.}}\\[2em]
+&&	=&\ \frac{x^2 + 4 + 4x - 4}{x}	&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ \frac{x^2 + 4x}{x}			&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&	=&\ x + 4					&&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+\end{align*}
+
+% Sørg for at figur er placeret før et vidst sted
+\FloatBarrier
+
+
+
+
+
