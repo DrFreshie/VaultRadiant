@@ -10,5 +10,5 @@ type: note
 |---|---|---|---|---|---|---|---|
 |Emma|Andy|Salah|Omid|Aisha|Mathias|Huda|
 |Raghad|Bjarke|Soleil|Blerona|Selma|Daniela|
-|Nadia|Cecilie|Jakob|Evren|Siv|Amman|Emil|
-|Claudia|Venus|Maryam|Taha|Thea|
+|Nadia|Cecilie|Jakob|Evren|Siv|Amman|
+|Claudia|Venus|Maryam|Taha|Thea|Emil|
