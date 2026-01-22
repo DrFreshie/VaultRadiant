@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1768927660.2991 "ligninger.tex" "ligninger.pdf" "ligninger" 1768927665.77513 0
+["lualatex"] 1768999335.73559 "ligninger.tex" "ligninger.pdf" "ligninger" 1768999340.72117 0
   "../img/frbvuc_logo.png" 1766349620.056 124323 45fc343b9a23ded1717243603c6e123f ""
   "/etc/texmf/tex/generic/config/language.dat" 1765447581.72922 3619 3cd2aa409dc607b94ffa00170aec3fa3 ""
   "/home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf" 1765451234.17579 315752 87c915a06b3d1930c9b48cd950f570f5 ""
@@ -32,7 +32,7 @@
   "/home/art/.texlive/texmf-var/luatex-cache/generic/fonts/otl/tryvesterbro-regular.luc" 1765452146.42822 198340 6a2c922de864d30aec9e2efa234fa608 ""
   "/home/art/.texlive/texmf-var/luatex-cache/generic/fonts/otl/walbaumcom-roman.luc" 1765451675.45021 48500 3f433f51caab495c278a38d46c3d4d43 ""
   "/home/art/.texlive/texmf-var/luatex-cache/generic/fonts/streams/overpassvariablefontwghtttf-1.luc" 1765452567.5464 141960 1f1ca4c79654083006cd863781168166 ""
-  "/home/art/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1768759490.22766 10125 8a6e6e11eac9b394c1c5a765c859cbce ""
+  "/home/art/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1768998965.23935 10205 83b4f1f46f58474e3a165984cb6b7c63 ""
   "/home/art/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1765750634.1299 575065 ae568bff298a722266f77f45b002889e ""
   "/usr/share/fonts/TTF/Times.TTF" 1765451482 330412 4f97f4d6ba74767259ccfb242ce0e3f7 ""
   "/usr/share/fonts/TTF/Timesbd.TTF" 1765451482 333900 ed6e29caf3843142d739232aa8642158 ""
@@ -285,9 +285,9 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1755987285 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765452539 5309918 8a91d27f2b4306f65b5292f3d1087946 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1765452487 5586309 0d6ed67cd1e08bd66c6278ddf99ae067 ""
-  "ligninger.aux" 1768927665.24657 876 c2b9305f7df94be463e4ef0afa6a41e0 "lualatex"
-  "ligninger.out" 1768927665.24757 160 8edf721e3885dcaf797317c519ef4347 "lualatex"
-  "ligninger.tex" 1768927652.9497 9580 ed43de3604a5f6d2a4390ddc4dc3627c ""
+  "ligninger.aux" 1768999340.23331 1199 55e79d1fb656500f06a1749405cfe36b "lualatex"
+  "ligninger.out" 1768999340.23531 293 8f56661f542b5eb8f88c7c3d8f76defb "lualatex"
+  "ligninger.tex" 1768999329.8893 12179 7cd4356baad192bcb59d500b1e69f628 ""
   (generated)
   "ligninger.aux"
   "ligninger.log"
