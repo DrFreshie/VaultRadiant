@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1768999335.73559 "ligninger.tex" "ligninger.pdf" "ligninger" 1768999340.72117 0
+["lualatex"] 1769071815.17953 "ligninger.tex" "ligninger.pdf" "ligninger" 1769071820.35883 0
   "../img/frbvuc_logo.png" 1766349620.056 124323 45fc343b9a23ded1717243603c6e123f ""
   "/etc/texmf/tex/generic/config/language.dat" 1765447581.72922 3619 3cd2aa409dc607b94ffa00170aec3fa3 ""
   "/home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf" 1765451234.17579 315752 87c915a06b3d1930c9b48cd950f570f5 ""
@@ -285,9 +285,9 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1755987285 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1765452539 5309918 8a91d27f2b4306f65b5292f3d1087946 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1765452487 5586309 0d6ed67cd1e08bd66c6278ddf99ae067 ""
-  "ligninger.aux" 1768999340.23331 1199 55e79d1fb656500f06a1749405cfe36b "lualatex"
-  "ligninger.out" 1768999340.23531 293 8f56661f542b5eb8f88c7c3d8f76defb "lualatex"
-  "ligninger.tex" 1768999329.8893 12179 7cd4356baad192bcb59d500b1e69f628 ""
+  "ligninger.aux" 1769071819.84592 1312 56cd5be7d69b07b0dcc7efb2308a3a4e "lualatex"
+  "ligninger.out" 1769071819.84692 333 06fced98b5827835f96343f2a6444aaf "lualatex"
+  "ligninger.tex" 1769071813.69828 12480 47f3cb8a14834ebf1cdf273737604b3a ""
   (generated)
   "ligninger.aux"
   "ligninger.log"
