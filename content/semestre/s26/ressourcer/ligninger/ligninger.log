@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.12.11)  22 JAN 2026 09:50
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.12.11)  22 JAN 2026 13:04
  restricted system commands enabled.
  file:line:error style messages enabled.
 **ligninger.tex
@@ -1301,19 +1301,19 @@ Package rerunfilecheck Info: File `ligninger.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33371 strings out of 475506
+ 33386 strings out of 475506
  125129,1373583 words of node,token memory allocated
- 738 words of node memory still in use:
-   7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 16 attribute, 84 glue_spec, 10 attribute_list, 2 write nodes
-   avail lists: 1:3,2:1499,3:828,4:206,5:182,6:111,7:3774,8:16,9:705,10:3,11:117
- 55457 multiletter control sequences out of 65536+600000
- 114 fonts using 18507279 bytes
+ 2853 words of node memory still in use:
+   51 hlist, 27 vlist, 6 rule, 7 mark, 10 local_par, 20 math, 61 glue, 12 kern, 21 penalty, 62 glyph, 132 attribute, 84 glue_spec, 68 attribute_list, 2 write nodes
+   avail lists: 1:3,2:1390,3:808,4:206,5:174,6:103,7:3774,8:16,9:633,10:3,11:117
+ 55472 multiletter control sequences out of 65536+600000
+ 129 fonts using 19566951 bytes
  84i,12n,115p,545b,1274s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/TTF/Times.TTF></usr/share/fonts/TTF/Timesbd.TTF></home/art/.local/share/fonts/macos/TRYVesterbro-Poster.otf></home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ligninger.pdf (6 pages, 260371 bytes).
+</usr/share/fonts/TTF/Times.TTF></usr/share/fonts/TTF/Timesbd.TTF></home/art/.local/share/fonts/macos/TRYVesterbro-Poster.otf></home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on ligninger.pdf (6 pages, 291036 bytes).
 
-PDF statistics: 266 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
+PDF statistics: 282 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
  155 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
