@@ -1,0 +1,238 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+  \setlist[itemize]{leftmargin=*}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+	
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{The New Jim Crow}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{March 9, 2010}
+\author{Michelle Alexander}
+
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+    
+\noindent\linenumbers Ever since Barack Obama lifted his right hand and took his oath of office, pledging to serve the United States as its forty-fourth president, ordinary people and their leaders around the globe have been celebrating our nation’s “triumph over race.” Obama’s election has been touted as the final nail in the coffin of Jim Crow, the bookend placed on the history of racial caste in America.
+
+Obama’s mere presence in the Oval Office is offered as proof that “the land of the free” has finally made good on its promise of equality. There’s an implicit yet undeniable message embedded in his appearance on the world stage: this is what freedom looks like; this is what democracy can do for you. If you are poor, marginalized, or relegated to an inferior caste, there is hope for you. Trust us. Trust our rules, laws, customs, and wars. You, too, can get to the promised land.
+
+Perhaps greater lies have been told in the past century, but they can be counted on one hand. Racial caste is alive and well in America.
+
+Most people don’t like it when I say this. It makes them angry. In the “era of colorblindness” there’s a nearly fanatical desire to cling to the myth that we as a nation have “moved beyond” race. Here are a few facts that run counter to that triumphant racial narrative:
+
+\begin{itemize}
+\item There are more African-Americans under correctional control today–in prison or jail, on probation or parole–than were enslaved in 1850, a decade before the Civil War began.
+\item As of 2004, more African-American men were disenfranchised (due to felon disenfranchisement laws) than in 1870, the year the Fifteenth Amendment was ratified, prohibiting laws that explicitly deny the right to vote on the basis of race.
+\item A black child born today is less likely to be raised by both parents than a black child born during slavery. The recent disintegration of the African-American family is due in large part to the mass imprisonment of black fathers.
+\item If you take into account prisoners, a large majority of African-American men in some urban areas have been labeled felons for life. (In the Chicago area, the figure is nearly 80 percent.) These men are part of a growing undercaste–not class, caste–permanently relegated, by law, to a second-class status. They can be denied the right to vote, automatically excluded from juries, and legally discriminated against in employment, housing, access to education, and public benefits, much as their grandparents and great-grandparents were during the Jim Crow era.
+\end{itemize}
+
+\subsection{Excuses for the Lockdown}
+There is, of course, a colorblind explanation for all this: crime rates. Our prison population has exploded from about 300,000 to more than 2 million in a few short decades, it is said, because of rampant crime. We’re told that the reason so many black and brown men find themselves behind bars and ushered into a permanent, second-class status is because they happen to be the bad guys.
+
+The uncomfortable truth, however, is that crime rates do not explain the sudden and dramatic mass incarceration of African-Americans during the past thirty years. Crime rates have fluctuated over the last few decades–they are currently at historical lows–but imprisonment rates have consistently soared. Quintupled, in fact. And the vast majority of that increase is due to the War on Drugs. Drug offenses alone account for about two-thirds of the increase in the federal inmate population, and more than half of the increase in the state prison population.
+
+The drug war has been brutal–complete with SWAT teams, tanks, bazookas, grenade launchers and sweeps of entire neighborhoods–but those who live in white communities have little clue to the devastation wrought. This war has been waged almost exclusively in poor communities of color, even though studies consistently show that people of all colors use and sell illegal drugs at remarkably similar rates. In fact, some studies indicate that white youth are significantly more likely to engage in illegal drug dealing than black youth. Any notion that drug use among African-Americans is more severe or dangerous is belied by the data. White youth, for example, have about three times the number of drug-related visits to the emergency room as their African-American counterparts.
+
+That is not what you would guess, though, when entering our nation’s prisons and jails, overflowing as they are with black and brown drug offenders. In some states, African-Americans comprise 80 percent-90 percent of all drug offenders sent to prison.
+
+This is the point at which I am typically interrupted and reminded that black men have higher rates of violent crime. That’s why the drug war is waged in poor communities of color and not middle-class suburbs. Drug warriors are trying to get rid of those drug kingpins and violent offenders who make ghetto communities a living hell. It has nothing to do with race; it’s all about violent crime.
+
+Again, not so. President Ronald Reagan officially declared the current drug war in 1982, when drug crime was declining, not rising. From the outset, the war had little to do with drug crime and nearly everything to do with racial politics. The drug war was part of a grand and highly successful Republican Party strategy of using racially coded political appeals on issues of crime and welfare to attract poor and working class white voters who were resentful of, and threatened by, desegregation, busing, and affirmative action. In the words of H.R. Haldeman, President Richard Nixon’s White House chief of staff: “[T]he whole problem is really the blacks. The key is to devise a system that recognizes this while not appearing to.”
+
+A few years after the drug war was announced, crack cocaine hit the streets of inner-city communities. The Reagan administration seized on this development with glee, hiring staff who were to be responsible for publicizing inner-city crack babies, crack mothers, crack whores and drug-related violence. The goal was to make inner-city crack abuse and violence a media sensation, bolstering public support for the drug war which, it was hoped, would lead Congress to devote millions of dollars in additional funding to it.
+
+The plan worked like a charm. For more than a decade, black drug dealers and users would be regulars in newspaper stories and would saturate the evening TV news. Congress and state legislatures nationwide would devote billions of dollars to the drug war and pass harsh mandatory minimum sentences for drug crimes–sentences longer than murderers receive in many countries.
+
+Democrats began competing with Republicans to prove that they could be even tougher on the dark-skinned pariahs. In President Bill Clinton’s boastful words, “I can be nicked a lot, but no one can say I’m soft on crime.” The facts bear him out. Clinton’s “tough on crime” policies resulted in the largest increase in federal and state prison inmates of any president in American history. But Clinton was not satisfied with exploding prison populations. He and the “New Democrats” championed legislation banning drug felons from public housing (no matter how minor the offense) and denying them basic public benefits, including food stamps, for life. Discrimination in virtually every aspect of political, economic and social life is now perfectly legal, if you’ve been labeled a felon.
+
+\subsection{Facing Facts}
+But what about all those violent criminals and drug kingpins? Isn’t the drug war waged in ghetto communities because that’s where the violent offenders can be found? The answer is yes… in made-for-TV movies. In real life, the answer is no.
+
+The drug war has never been focused on rooting out drug kingpins or violent offenders. Federal funding flows to those agencies that increase dramatically the volume of drug arrests, not the agencies most successful in bringing down the bosses. What gets rewarded in this war is sheer numbers of drug arrests. To make matters worse, federal drug forfeiture laws allow state and local law enforcement agencies to keep for their own use 80 percent of the cash, cars and homes seized from drug suspects, thus granting law enforcement a direct monetary interest in the profitability of the drug market.
+
+The results have been predictable: people of color rounded up en masse for relatively minor, nonviolent drug offenses. In 2005, four out of five drug arrests were for possession, only one out of five for sales. Most people in state prison have no history of violence or even of significant selling activity. In fact, during the 1990s–the period of the most dramatic expansion of the drug war–nearly 80 percent of the increase in drug arrests was for marijuana possession, a drug generally considered less harmful than alcohol or tobacco and at least as prevalent in middle-class white communities as in the inner city.
+
+In this way, a new racial undercaste has been created in an astonishingly short period of time–a new Jim Crow system. Millions of people of color are now saddled with criminal records and legally denied the very rights that their parents and grandparents fought for and, in some cases, died for.
+
+Affirmative action, though, has put a happy face on this racial reality. Seeing black people graduate from Harvard and Yale and become CEOs or corporate lawyers–not to mention president of the United States–causes us all to marvel at what a long way we’ve come.
+
+Recent data shows, though, that much of black progress is a myth. In many respects, African-Americans are doing no better than they were when Martin Luther King Jr. was assassinated and uprisings swept inner cities across America. Nearly a quarter of African-Americans live below the poverty line today, approximately the same percentage as in 1968. The black child poverty rate is actually higher now than it was then. Unemployment rates in black communities rival those in Third World countries. And that’s with affirmative action!
+
+When we pull back the curtain and take a look at what our “colorblind” society creates without affirmative action, we see a familiar social, political, and economic structure–the structure of racial caste. The entrance into this new caste system can be found at the prison gate.
+
+This is not Martin Luther King Jr.’s dream. This is not the promised land. The cyclical rebirth of caste in America is a recurring racial nightmare.\source{https://www.thenation.com/article/archive/new-jim-crow/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

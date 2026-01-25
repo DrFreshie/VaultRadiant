@@ -1,0 +1,289 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+	
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Houston Acceptance Speech}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{August 11, 1948}
+\author{Strom Thurmond, governor of South Carolina}
+
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+    
+\noindent\linenumbers My fellow Americans:
+
+Destiny brings us to the great State of Texas, on this battleground for freedom, we sound a call for a return to constitutional government in America.
+
+The Democratic Convention in Philadelphia rejected a resolution, offered by a distinguished Texan, to rededicate the Democratic Party to its time-honored and traditional principles of States Rights, home rule and local self-government. That convention rejected that resolution and adopted in its place a program of mis-named Civil Rights, calling for a police state in this country.
+
+The Democratic convention repudiated the principles of the Democratic Party and followed a pattern fashioned by the nominee of the Republican Convention held in the same city, and a blue-print prepared by the nominee of the communistic Progressive Party, for lifting the face of America and giving us the "new Russian look."
+
+How beautiful it is for such brethren — Dewey, Truman and Wallace — to dwell together in unity!
+
+The mis-named Civil Rights Program, which inevitably leads to a police state, is embraced by the nominee of the Republican Convention, advocated by the nominee of the Democratic Convention, and championed by the nominee of the communistic Progressive Convention.
+
+All are committed to make a shambles of constitutional government in America in exchange for a block of disgruntled votes. We hold that it is reprehensible for those who influenced the three Philadelphia Conventions to offer to trade constitutional and fundamental rights for political power.
+
+If America is to remain free, her people must never submit to any candidate undertaking to barter away any part of our constitution for political gain.
+
+States Rights Americans resist this shameful betrayal of our national charter. States Rights Americans stand beside the constitution of the United States with drawn sword. States Rights Americans are ready to stand, even at the expense of life itself, as Crockett, Bowie and Houston stood in Texas, for individual liberty and freedom, and for the right of the people to govern themselves. States Rights and local self-government are older than the constitution. They existed before the Union was formed and were recognized and protected by Thomas Jefferson and the other founding Fathers when they wrote the constitution itself.
+
+The preservation of the prerogatives of the people of a sovereign state, their right to deal exclusively with domestic problems, and the absolute and unqualified denial of a totalitarian state in the United States, these principles are just as vital as, and more intimately affect the welfare of every man, woman and child in America than, even such important questions as foreign policy, labor-management relations, public housing, European relief, price control, and all other serious questions which we face today, important as those issues are. All of these questions can be solved with justice to the nations of the world and to our people at home, if constitutional government is maintained and preserved in America. But if the right to rule and govern ourselves in such domestic matters as voting and qualifications for voting, segregation, law enforcement and private employment are to be bartered away for a political price, no man can visualize the chaos, the confusion, the disaster and the ruin which will follow in the wake of such a cowardly surrender of blood-bought rights and such a brazen betrayal of the liberty of a free people. A federal police state, directed from Washington, would force life in each hamlet in America to conform to a Washington pattern. Russia is ruled from Moscow. May God forbid that your state and my state, your county and my county, your city and my city, your farm and my farm, shall ever be subjected to Washington Bureaucratic police rule.
+
+We may develop the best foreign policy a nation ever enjoyed. We may create labor-management relations that will be the envy of the world. We may build a mansion for every man and bind up the wounds of Europe and make that war-torn, devastated land a "garden of Eden." We may control prices until the profiteer and black-marketeer disappear from the face of the earth. But if we lose States Rights, which safeguard the most precious of all human rights — the right to control and govern ourselves at home, the right of life, liberty and the pursuit of happiness — then may we ask: "For what is a man profited if he shall gain the whole world and lose his own soul?"
+
+No, my friends, if this nation, the nation to which the world is looking for leadership, abandons the principles of government that have given us the capacity to lead; if we jettison or throw overboard the compass that has guided us to the port of greatness; then we are headed for the rocks of totalitarianism and the persecution and cruelties of a totalitarian state.
+
+This is no sectional or regional matter. It is as important to the people of Arizona as it is to the people of Alabama; as important to the people of California as it is to the people of Connecticut; as important to the people of Montana as it is to the people of Maine; as important to the people of the world as it is to the people of Texas; as important to people yet unborn as it is today to you and to me.
+
+No citizen of any state is safe, if any political party is allowed to go unchallenged when it undertakes to barter away this sacred constitutional right for political advantage.
+
+Our American way of constitutional government, and its guarantees of liberty and the right of local government, is a heritage handed down to us by our forefathers. Our men marched beneath the burning sun in Africa; swam ashore at Salerno; stormed the rocky beach at Normandy; and planted the Stars and Stripes on the highest peak of Iwo Jima, to uphold and defend the constitution of the United States, which is the only protection that human rights have in a world menaced by dictators and almost wrecked by politicians' greed for power. The platforms and programs adopted by the three Philadelphia conventions repudiate the essential right of local self-government and treat as a scrap of paper our constitution which millions of our American boys fought to uphold and defend. This is a pronounced step toward the police state.
+
+We must establish to the satisfaction of the world, as well as to politicians of little faith at home, that the basic fundamental rights of the people of the several sovereign states are not for sale and cannot be sold or exchanged, even for the Presidency itself.
+
+Every section of this nation—your section and my section—favors human rights. Everybody favors human rights. But it is a fraud on the American people to pretend that human rights can long endure without constitutional restraint on the power of government.
+
+Millions of people living today have seen this truth written in blood in recent human history. Hitler offered the people of Germany a shortcut to human progress. He gained power by advocating human rights for minority groups. Under his plan, the constitutional rights of the people were destroyed. We oppose these disciples of political expediency who, today, emulate Hitler and who offer the ill-fated European experiment, as a shortcut to human progress, which ended in tears, blood, disillusionment and tragedy.
+
+Mussolini also tried this shortcut to human progress without regard to constitutional government. In the end, the people of Italy were brought to despair and destruction.
+
+Stalin today is one of the greatest advocates of his conception of human rights, and the one man in the world who least respects constitutional government. Can you say that the people of Russia enjoy human rights? Shall we be so blind as to follow those who today would lead our people down that gloomy road of disillusionment along which Hitler led the people of Germany; Mussolini led the people of Italy; and along which Stalin is leading the people of Russia? Each of them was supported by a federal police force, and each of them made of his country a police state. God forbid that we permit our America so to degenerate.
+
+The proposal to take from you your right to deal with your local problems in a way that is satisfactory to you, and to invest the right to deal with those problems in Washington in a way that is wholly unsatisfactory to you, is so antagonistic to our form of government, and so contrary to everything that we have stood for since 1776, that it is obliged to be communistic in concept, un-American in principle, and un-Democratic in execution.
+
+Now let us examine this so-called Civil Rights program which is so heartily supported by the three nominees of the Philadelphia conventions.
+
+First is the Federal Anti-Poll Tax Bill. By this bill, Congress invades the power of the states to elect their own officials and would control elections within the states by taking this power from the people.
+
+It is fundamental in the whole American system thatx if liberty is to be retained in this country, the control of our elections must remain at home. There can be no tyrant, there can be no dictator, in America, if the people in the communities of the nation control their elections, fix voting qualifications, and say who can and who cannot vote. This is historic Americanism.
+
+Next is the Federal anti-lynching bill.
+
+There is pending in the Congress an Anti-lynching Bill, of course. Everyone is against lynching. But, the Reds, the Pinks and the subversives are making use of the horror which The American people hold for this form of murder to try to change our system of government.
+
+If the Anti-lynching Bill were enacted, the Congress would seize the power to punish for crimes committed within a state.
+
+When one reads the notes of the Constitutional Convention of 1787, he realizes that it was fundamental that the police power must be controlled at home. Local control of the police power was conceived by the founders of the country as the basic safeguard of human liberty in the United States. They deliberately and intentionally denied to the federal government any police powers, because they realized that centralization of police power is the certain road to dictatorship, to tyranny, and to oppression. Without exception, every country which the communists have taken over from "within," and every country which has come under control of a dictator, has lost its freedom through central control of the police powers and the creation of a centralized police system.
+
+In the anti-lynching bill the federal government, under the guise of preventing lynching, is trying to take their police power from the states. We have President Truman's word that he is now training federal police to enforce it, Federal police to go in each hamlet of the country and impose the will of a strong federal government upon the people! Federal police! What could be more un-American? When this occurs, the last vestige of local control of the police and local exercise of the police power—so essential if we are to remain a free people,—will have been destroyed.
+
+Next is Separation of the two Races.
+
+The people in a local community have the right to use the means and the methods that will best promote harmoni racial relations. Some may determine that separation of the two races is the way to accomplish this their purpose.
+
+This is a method employed to establish and maintain better race relations. In some states segregation is provided by law. In other states segregation is prohibited by law. In still other states there is no law treating with the subject. The will of the people is reflected in the laws enacted by their own legislative bodies. Each state has the right — a right that should not be denied by any power — to avail itself of the best method of promoting harmony between the people of different races within its boundaries.
+
+Every right-thinking American wants good racial relations. If the interests of the people of New York are better served under laws prohibiting segregation, then they should have the right to prohibit segregation. If the people of Georgia are better governed under segregation laws, then they should have the right to enact segregation legislation. If a state does not need legislation for or against segregation, then federal laws on the subject should not be imposed on that state. The states which have segregation laws are not seeking to impose segregation on the states that have no segregation laws. Neither is there any clamor in states that prohibit segregation for abolishing segregation in other jurisdictions. The clamor comes from agitators and socially maladjusted persons who do not care about or understand the conditions existing in the many communities in the United States where people of different races work and live together. Even in states where there are anti-segregation laws, the people voluntarily establish segregation; otherwise, there would be no Harlem in New York City, no Chinatown in San Francisco, no South Side in Chicago, and no similar segregated communities in Philadelphia, Detroit and other densely populated cities.
+
+The tragedy that lies in the willingness of the professional politician, seeking office, to usurp power, is well illustrated by the striking example given lately by the nominees of the Republican, Democratic and Progressive Parties, Dewey, Truman and Wallace -- all willing to break down the separation of the races in the armed forces, even at the sacrifice of the morale of the soldiers and the safety of the country itself, against the advice of the military leaders charged with the defense of the nation. Our boys in service should not be subjected to any unnecessary hazard. The American people do not want their sons placed in such a position, when the military leaders say it is unsafe, simply to allow politicians of this country to appeal to bloc votes.
+
+The next is the FEPC bill.
+
+The proposed federal Fair Employment Practices act, calling for a federal Fair Employment Practices Commission, generally known as the FEPC, was introduced in the United States Senate by Senator Ives as Senate Bill 984. This proposed law would make it unlawful to discriminate in matters of employment on account of "race, religion, color, national origin or ancestry." The proposed American FEPC was patterned after a Russian law written by Joseph Stalin about 1920, referred to in Russia as Stalin's "All-Races Law." It outlaws discrimination in matters of employment on account of "race, color or national origin." The Russian law does not include the word "religion" because Stalin did not want to admit the existence of religion in Russia at the time he wrote the law. The proposed American law, to that extent, is broader than the Russian law in that it outlaws discrimination in the matter of employment on the ground of "race, religion, color, national origin or ancestry."
+
+Stalin was commissar of Nationalities at the time that he wrote this law, and he used it as a means of advancing himself to supreme dictator of Soviet Russia. The administrative and judicial provisions in the proposed FEPC faithfully follow the Russian pattern in Stalin's "All-Races Law."
+
+With this history and background, it would have been natural for the American people to have expected the nominees of the Philadelphia conventions to oppose this proposed collection of communistic ideas, dished up to the American people as a Fair Employment Practices act, instead of calling for its enactment. States Rights Democrats oppose this American edition of the Russian FEPC, because it violates every concept of the right of employers and employees under the constitution of the United States. This illustrates the extent to which communistic ideas and, the advocates of such ideas, have infiltrated into the United States. If the records of certain government officials, demanded by Congress, were made available by the President, as requested, it may be that we wuld have a better idea of just how much American legislation is influenced by the Soviet Republic. The Executive Department of our government should not shield the communistic connections or the activities of any person connected with our government. The Chief Executive, of all men, should fearlessly expose all available information of that nature.
+
+The FEPC is admirably suited to the Russian form of government, where the thoughts, activities and ambitions of the people are controlled from Moscow, and they live and move at the whim and caprice of a dictator. It will not work in free America or in any free country where the dignity and worth and liberty of the individual is respected.
+
+We have recently learned of the infiltration of communist spies into our government and our critical industries. You may rest assured that the communists will use the FEPC law to serve their purposes. It will afford them a way of forcing their agents and saboteurs into every tool and die room, every maching shop and every industrial plant and laboratory, atomic or otherwise, in America. The FEPC was made to order for communist use in their designs upon our national security. The FEPC might well be entitled "a law to aid sabotage in America."
+
+The FEPC contains a fundamental threat to our American way of life. This proposal calls for an army of federal police agents, empowered to spy into the affairs of each business enterprise in the United States, to control the hiring and firing of employees, promotion and demotion of employees, and to enforce rules and regulations which govern the relations between employer and employee.
+
+From the point of view of the employee, he or she will no longer have the right to choose his or her associates, either on the job or in the labor organizations. The employer is deprived of his right to employ people who will best serve his business. He cannot promote and demote as his judgment demands. From the point of view of all of us, whether employer or employee or other private citizen, the net effect of FEPC will be to force all business and business relationships in this country into a Washington pattern, guided and enforced by a federal Gestapo, with dangerous powers over the lives of all our people.
+
+The Civil Rights Section of the Department of Justice is to be re-organized to enforce this so-called Civil Rights program. Its agents would circulate throughout the land, meddling with private business, policing elections, intervening in private lawsuits, breeding litigation, and keeping our people in a constant state of apprehension and harrassment. Liberty quickly perishes under such a setup, as we have seen in Europe in our own time. The people do not want the Federal government to usurp the police power, local law enforcement, and thereby sow the seeds of a Gestapo in America.
+
+I assure you that the danger is deadly in its seriousness. There is no question but that this follows in detail the pattern used in Germany and Italy by the dictators to destroy the liberties of those people. There is no question but that this method was used first to capture the labor unions, then to destroy them, in those unfortunate lands.
+
+There are millions of Americans who subscribe to the principles we are fighting for. There are millions of Americans who want both parties returned to fundamental principles. There are millions of Americans who put loyalty to the constitution above any obligation to a politician or a political party. There are millions of Americans who recognize that the preservation of the principles and rights we have discussed is indispensible to the Democracy and our democratic way of life. The voice of these people must be heard.
+
+We want them heard through the Democratic organizations in each state, if those organizations will make it possible for them to be heard.
+
+If any organization is boss-ridden or boss-controlled, to the extent that it will not allow the people in that state to express themselves, then we call on States Rights Americans everywhere to take the steps necessary under the laws of the state in which they live to make their voices heard. Dewey offers no hope to a voter who believes in States Rights and constitutional government. Truman offers you no hope. Wallace has destroyed any hope of his doing anything but following the communist party line.
+
+For 45 years our country elected presidents and vice-presidents without a national party convention. Washington, Jefferson, Madison, Monroe and Jackson were all elected without conventions, because the people in each state spoke and made themselves heard. All of them were great presidents, and all of them championed states rights and stood immovable for constitutional government.
+
+Conventions that repudiate the people, and the rights of the people, should be repudiated by the people. States Rights Americans appeal to you to repudiate the radicalism, the rampant disregard of constitutional government advocated and approved at Philadelphia, by all three of the conventions, and to join with us in the defense of the American way of life.
+
+To me has come a great honor and a great responsibility. The people of Alabama, Mississippi and South Carolina, through their organized Democracies, have asked Governor Wright, with whom it is my particular privilege to be associated, and me, to lead in this fight to preserve the freedom secured by our forefathers—the freedom without which there can be no peace, no happiness, no future in this republic, for us or for our children—the heritage beyond price, which is the American way of life.
+
+With humility, with the knowledge that the greatness of the cause must overshadow all its servants, I accept the nomination for president, and promise an utter dedication to the limit of all power that is within me, under God and His mercy, to this cause of freedom in this land of ours.\source{https://open.clemson.edu/cgi/viewcontent.cgi?referer=https://www.google.com/\&httpsredir=1\&article=1597\&context=strom}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
