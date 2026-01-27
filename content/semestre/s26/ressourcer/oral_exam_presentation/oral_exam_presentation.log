@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.12.11)  26 JAN 2026 12:23
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2026/dev/Arch Linux)  (format=lualatex 2025.12.11)  26 JAN 2026 16:44
  restricted system commands enabled.
  file:line:error style messages enabled.
-**Aflevering_2.tex
-(./Aflevering_2.tex
+**oral_exam_presentation.tex
+(./oral_exam_presentation.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -659,7 +659,15 @@ Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \everycr=\toks35
 \minrowclearance=\skip71
 \rownum=\count312
-) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (/usr/share/texmf-dist/tex/latex/transparent/transparent.sty
+Package: transparent 2022-10-27 v1.5 Transparency with color stacks
+ (/usr/share/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
+Package: transparent-nometadata 2022-10-27 v1.5 Transparency via pdfTeX's color stack (HO)
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+))) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen192
 \pgfutil@tempdimb=\dimen193
@@ -671,7 +679,8 @@ Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
- (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks37
 \pgfkeys@temptoks=\toks38
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
@@ -701,8 +710,7 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-luatex.def
-
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
 File: pgfsys-luatex.def 2023-01-15 v3.1.10 (3.1.10)
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
@@ -753,7 +761,8 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@hbox=\box67
 \pgf@layerbox@main=\box68
 \pgf@picture@serial@count=\count322
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen279
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
@@ -761,8 +770,7 @@ File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen280
 \pgf@pt@y=\dimen281
 \pgf@pt@temp=\dimen282
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -838,14 +846,14 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count333
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
+)))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
- (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
-(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -1043,7 +1051,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@ftn=\toks51
 )
 
-Package array Warning: Redefining primitive column b on input line 48.
+Package array Warning: Redefining primitive column b on input line 50.
 
 (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-02-27 v3.4.6 A comprehensive (SI) units package
@@ -1188,29 +1196,29 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip91
 \f@nch@widthR=\skip92
 \@temptokenb=\toks56
-) (./Aflevering_2.aux)
-\openout1 = Aflevering_2.aux
+) (./oral_exam_presentation.aux)
+\openout1 = oral_exam_presentation.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
-LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count388
@@ -1230,107 +1238,54 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 139.
- (./Aflevering_2.out) (./Aflevering_2.out)
+Package hyperref Info: Link coloring OFF on input line 134.
+ (./oral_exam_presentation.out) (./oral_exam_presentation.out)
 \@outlinefile=\write4
 
-\openout4 = Aflevering_2.out
+\openout4 = oral_exam_presentation.out
 
 
 Package siunitx Warning: Tabular column type "S" overwritten with siunitx
 (siunitx)                definition.
 
-Package translations Info: no dictionary file `translations-basic-dictionary-danish.trsl' found. on input line 139.
+Package translations Info: no dictionary file `translations-basic-dictionary-danish.trsl' found. on input line 134.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \FN@cache251=\box136
 \footinsdefault=\insert250
 \FN@cache250=\box137
-
-Overfull \hbox (2.84526pt too wide) in paragraph at lines 142--142
- []| []
- []
-
-<../img/parabel.png, id=35, 540.0175pt x 460.72125pt>
-File: ../img/parabel.png Graphic file (type png)
-<use ../img/parabel.png>
-Package luatex.def Info: ../img/parabel.png  used on input line 148.
-(luatex.def)             Requested size: 120.7521pt x 103.01807pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 151.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 151.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+esvect on input line 151.
- (/usr/share/texmf-dist/tex/latex/esvect/uesvect.fd
-File: uesvect.fd 
-)
-Overfull \hbox (31.26198pt too wide) detected at line 171
-[]
- []
-
-
-
-<../img/frbvuc_logo.png, id=36, 569.4876pt x 362.7954pt>
+<../img/frbvuc_logo.png, id=7, 569.4876pt x 362.7954pt>
 File: ../img/frbvuc_logo.png Graphic file (type png)
 <use ../img/frbvuc_logo.png>
-Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 183.
-(luatex.def)             Requested size: 39.24254pt x 25.0pt.
+Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 139.
+(luatex.def)             Requested size: 142.37155pt x 90.69862pt.
+
+
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-<../img/frbvuc_logo.png><../img/parabel.png>]
-<../img/parabel2.png, id=56, 350.30875pt x 329.23pt>
-File: ../img/parabel2.png Graphic file (type png)
-<use ../img/parabel2.png>
-Package luatex.def Info: ../img/parabel2.png  used on input line 187.
-(luatex.def)             Requested size: 137.9979pt x 129.69527pt.
-
-Overfull \hbox (34.49684pt too wide) in paragraph at lines 187--188
-[][] 
- []
-
-<../img/parabel3.png, id=57, 456.70625pt x 326.21875pt>
-File: ../img/parabel3.png Graphic file (type png)
-<use ../img/parabel3.png>
-Package luatex.def Info: ../img/parabel3.png  used on input line 224.
-(luatex.def)             Requested size: 120.7521pt x 86.24844pt.
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.64996pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.64996pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.64996pt}.
-
-[2
-
-<../img/parabel2.png><../img/parabel3.png>] (./Aflevering_2.aux)
+<../img/frbvuc_logo.png>] (./oral_exam_presentation.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-Package rerunfilecheck Info: File `Aflevering_2.out' has not changed.
-(rerunfilecheck)             Checksum: 11447E3142EDEE4954ED55583CFC9CF1;329.
+Package rerunfilecheck Info: File `oral_exam_presentation.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33044 strings out of 475506
+ 33150 strings out of 475506
  125129,1373583 words of node,token memory allocated
- 762 words of node memory still in use:
-   7 hlist, 3 vlist, 2 rule, 7 mark, 3 glue, 4 kern, 1 penalty, 1 glyph, 29 attribute, 84 glue_spec, 16 attribute_list, 2 write nodes
-   avail lists: 2:1133,3:313,4:81,5:268,6:66,7:2815,8:17,9:1228,10:3,11:170
- 55276 multiletter control sequences out of 65536+600000
- 115 fonts using 18728247 bytes
- 84i,16n,115p,548b,965s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/TTF/Times.TTF></usr/share/fonts/TTF/Timesbd.TTF></home/art/.local/share/fonts/macos/TRYVesterbro-Poster.otf></home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aflevering_2.pdf (2 pages, 314343 bytes).
+ 731 words of node memory still in use:
+   7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 15 attribute, 83 glue_spec, 10 attribute_list, 2 write nodes
+   avail lists: 1:2,2:519,3:254,4:39,5:60,6:42,7:5757,8:2,9:312,10:6,11:519
+ 55404 multiletter control sequences out of 65536+600000
+ 90 fonts using 16593839 bytes
+ 84i,12n,115p,558b,951s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/fonts/TTF/Times.TTF></home/art/.local/share/fonts/macos/TRYVesterbro-Poster.otf></home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf>
+Output written on oral_exam_presentation.pdf (1 page, 195373 bytes).
 
-PDF statistics: 113 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 22 named destinations out of 1000 (max. 131072)
- 72 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 39 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 131072)
+ 16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
