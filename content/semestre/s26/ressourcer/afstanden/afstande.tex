@@ -24,6 +24,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
 	
 	\usepackage{xcolor}
+	\usepackage{transparent}
 	
 	\definecolor{frbblue}{RGB}{47, 88, 109}
 	\definecolor{hgred}{RGB}{140, 10, 10}
@@ -36,6 +37,7 @@
 	\usepackage{graphicx}
 	\graphicspath{{../img/}}
 	\usepackage{tikz}
+	\usetikzlibrary{calc}
 	\usepackage{placeins}
 	
 	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
@@ -93,11 +95,11 @@
   		{\flushright\overp\Large\color{frbgreen}}    % format for whole title
   		{}                           % no separate label (empty)
   		{0pt}                        % spacing between label and title
-		{DELPRØVE \thesection}       % prepend "Delprøve <number>"
+		{\clearpage EKSTRA}       % 
 		[{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
 	
 	\counterwithout{subsection}{section}
-	\renewcommand\thesubsection{Opgave \arabic{subsection}}
+	\renewcommand\thesubsection{Øvelse \arabic{subsection}}
 	\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
@@ -114,105 +116,56 @@
 		\setlength{\headsep}{0pt}
 		\fancyhf{}% No header/footer
 		\renewcommand{\footrulewidth}{0pt}% No footer rule
-		\renewcommand\headrule{
-			\centerline{\begin{minipage}{1\textwidth}
-				\color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt \vspace{4em}
-			\end{minipage}}
-		}
-		\fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
-		\fancyhead[R]{\overp\color{frbgreen}\footnotesize Forår 2026}
-		\fancyhead[C]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\Large\color{frbgreen}\vestb Aflevering 3}
+		\renewcommand\headrule{}% No header rule
+		\fancyhead[L]{}
+		\fancyhead[C]{}
+		\fancyhead[R]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\huge\color{frbgreen}\vestb Afstande}
 		\cfoot{\thepage}
 	}
 	\pagestyle{fancy}
 	\fancyhf{}
-	\renewcommand\headrule{
-			\centerline{\begin{minipage}{\textwidth}
-				\color{frbgreen}\hrule width \hsize \kern 1mm
-			\end{minipage}}}
-	\lhead{\overp\color{frbgreen}\footnotesize Mat C-B}
-	\rhead{\overp\color{frbgreen}\footnotesize Forår 2026}
+	\renewcommand\headrule{}
+	\lhead{}
+	\rhead{}
 	\cfoot{\thepage}
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
 
 \begin{document}
 \thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  % a light grey/green like in your screenshot
+  \definecolor{bgline}{RGB}{205,214,208}
 
-\section{}
+  % center for the circles (placed a bit *outside* the page to the left)
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+
+  % two thin concentric circles
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+
+  % optional vertical hairlines near the page margins
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\vspace{4em}
 \subsection{}
-Bestem skæringspunktet mellem linjerne
-\begin{align*}
-2x + y &= 7 \\
-x - y &= 1
-\end{align*}
-
-\subsection{}
-I et koordinatsystem er der givet et punkt $P(4,1)$ og en linje $l$ med ligningen
-\[
-    y = \frac{3}{4} \cdot x + 2 .
-\]
-
+Bestem afstanden mellem 
 \begin{enumerate}
-    \item Bestem afstanden fra punktet $P$ til linjen $l$.
+  \item Punktet $P(2,3)$ og linjen $l: y=2x+1$.
+  \item Punktet $P(-1,4)$ og linjen $l: y=-x+2$.
+  \item Punktet $P(3,-2)$ og linjen $l: y=3x-5$.
+  \item Punktet $P(0,5)$ og linjen $l: y=-2x+1$.
 \end{enumerate}
 
-\subsection{}
-Bestem skæringspunktet mellem linjen og parablen
-\begin{align*}
-y = 2x + 3 \\
-y = x^2 + x + 1
-\end{align*}
-
-\subsection{}
-En linje $l$ går igennem punkterne $(-4,2)$ og $(6,-3)$.
-
-\begin{enumerate}
-    \item Bestem en ligning for linjen $l$.
-\end{enumerate}
-
-Linjen $m$ er givet ved ligningen
-\[
-    -3x + 4y + 18 = 0 .
-\]
-
-\begin{enumerate}
-    \setcounter{enumi}{1}
-    \item Bestem skæringspunktet mellem de to linjer $l$ og $m$.
-\end{enumerate}
-
-\clearpage
-\section{}
-\subsection{}
-En parabel har ligningen
-\[
-    y = 2x^2 - 20x + 51 .
-\]
-
-\begin{enumerate}
-    \item Benyt en formel til at bestemme koordinatsættet til parablens toppunkt.
-\end{enumerate}
-
-En ret linje har ligningen
-\[
-    y = -0{,}4x + 4{,}6 .
-\]
-
-\begin{enumerate}
-    \setcounter{enumi}{1}
-    \item Benyt en formel til at bestemme afstanden fra parablens toppunkt til linjen.
-\end{enumerate}
-
-\subsection{}
-En linje $l$ er givet ved ligningen
-\[
-    y = 3x + 7 .
-\]
-
-\begin{enumerate}
-    \item Benyt en formel til at bestemme afstanden fra punktet $P(2,4)$ til linjen $l$.
-\end{enumerate}
 \end{document}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
 
@@ -256,6 +209,10 @@ En linje $l$ er givet ved ligningen
 
 % Sørg for at figur er placeret før et vidst sted
 \FloatBarrier
+
+
+
+
 
 
 
