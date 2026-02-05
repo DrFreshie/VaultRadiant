@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1770324869.29527 "Aflevering_3.tex" "Aflevering_3.pdf" "Aflevering_3" 1770324871.03789 0
+["lualatex"] 1770326999.40984 "test2.tex" "test2.pdf" "test2" 1770327001.27321 0
   "../img/frbvuc_logo.png" 1766349620.056 124323 45fc343b9a23ded1717243603c6e123f ""
   "/etc/texmf/tex/generic/config/language.dat" 1769814506.31232 3619 3cd2aa409dc607b94ffa00170aec3fa3 ""
   "/home/art/.local/share/fonts/macos/Overpass-VariableFont_wght.ttf" 1765451234.17579 315752 87c915a06b3d1930c9b48cd950f570f5 ""
@@ -280,12 +280,12 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1767555874 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1769814552 5309918 8a91d27f2b4306f65b5292f3d1087946 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1769814528 5585681 4917ff669c5c10dec87cb733039a36fa ""
-  "Aflevering_3.aux" 1770324870.84847 1615 598aa8627d19e8c3ffd370d0b9ffcfac "lualatex"
-  "Aflevering_3.out" 1770324870.84929 564 629722e844dd40ddf4cfdd3ddeddeb46 "lualatex"
-  "Aflevering_3.tex" 1770324860.91034 9177 88b060be70a789d1cad79855b863fe21 ""
+  "test2.aux" 1770327001.00905 508 253e8c3dd854c6b29b795454e58b584f "lualatex"
+  "test2.out" 1770327001.01068 84 37229119502eb2199a79032d39d66e60 "lualatex"
+  "test2.tex" 1770326994.74497 4351 cdbfd90b040f553eaa6117ab4a4fb1ae ""
   (generated)
-  "Aflevering_3.aux"
-  "Aflevering_3.log"
-  "Aflevering_3.out"
-  "Aflevering_3.pdf"
+  "test2.aux"
+  "test2.log"
+  "test2.out"
+  "test2.pdf"
   (rewritten before read)
