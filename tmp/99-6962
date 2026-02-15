@@ -1,0 +1,23 @@
+\begin{enumerate}
+  \item Bestem hypotenusen i følgende retvinklede trekanter (alle mål i cm):
+  \begin{enumerate}
+    \item Kateterne er $6$ og $8$.
+    \item Kateterne er $9$ og $12$.
+    \item Kateterne er $5$ og $2\sqrt{7}$.
+    \item Kateterne er $13$ og $4$.
+  \end{enumerate}
+  \item Find afstanden mellem hvert punktpar (brug afstandsformlen i koordinatsystemet):
+  \begin{enumerate}
+    \item $A(2,-1)$ og $B(7,3)$.
+    \item $C(-4,5)$ og $D(2,-2)$.
+    \item $E\bigl(-3,\tfrac{1}{2}\bigr)$ og $F(1,-4)$.
+    \item $G(0,0)$ og $H(-6,8)$.
+  \end{enumerate}
+  \item Bestem afstanden fra punkt til linje i hvert tilfælde:
+  \begin{enumerate}
+    \item Punktet $P(2,3)$ til linjen $l: y = -x + 5$.
+    \item Punktet $Q(-1,0)$ til linjen $m: 2x - y = 6$.
+    \item Punktet $R(4,-2)$ til linjen $n: y = 3x - 1$.
+    \item Punktet $S\bigl(-\tfrac{3}{2},4\bigr)$ til linjen $p: x + 2y - 5 = 0$.
+  \end{enumerate}
+\end{enumerate}

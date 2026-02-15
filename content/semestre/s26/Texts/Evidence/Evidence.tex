@@ -1,0 +1,788 @@
+\documentclass[10pt,a5paper,twoside]{book}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[switch,modulo]{lineno}
+	\usepackage{geometry}
+	
+	
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\titlespacing*{\subsubsection}{0pt}{\baselineskip}{-1\baselineskip} % use \subsubsection*{} for a baselineskip with noindent afterwards
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Evidence}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1950}
+\author{Isaac Asimov}
+
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+\thispagestyle{empty}
+
+\chapter*{}    
+ \setcounter{page}{1}\noindent\linenumbers \itshape “But that wasn’t it, either,” said Dr. Calvin thoughtfully . “Oh, eventually, the ship and others like it became government property; the Jump through hyperspace was perfected, and now we actually have human colonies on the planets of some of the nearer stars, but that wasn’t it.”
+
+I had finished eating and watched her through the smoke of my cigarette.
+
+“It’s what has happened to the people here on Earth in the last fifty years that really counts. When I was born, young man, we had just gone through the last World War. It was a low point in history—but it was the end of nationalism. Earth was too small for nations and they began grouping themselves into Regions. It took quite a while. When I was born the United States of America was still a nation and not merely a part of the Northern Region. In fact, the name of the corporation is still ‘United States Robots——.’ And the change from nations to Regions, which has stabilized our economy and brought about what amounts to a Golden Age, when this century is compared with the last, was also brought about by our robots.”
+
+“You mean the Machines,” I said. “The Brain you talked about was the first of the Machines, wasn’t it?”
+
+“Yes, it was, but it’s not the Machines I was thinking of. Rather of a man. He died last year.” Her voice was suddenly deeply sorrowful. “Or at least he arranged to die, because he knew we needed him no longer.—Stephen Byerley.”
+
+“Yes, I guessed that was who you meant.”
+
+“He first entered public office in 2032. You were only a boy then, so you wouldn’t remember the strangeness of it. His campaign for the Mayoralty was certainly the queerest in history——”
+
+\normalfont
+
+\subsubsection*{}
+Francis Quinn was a politician of the new school. That, of course, is a meaningless expression, as are all expressions of the sort. Most of the “new schools” we have were duplicated in the social life of ancient Greece, and perhaps, if we knew more about it, in the social life of ancient Sumeria and in the lake dwellings of prehistoric Switzerland as well.
+
+But, to get out from under what promises to be a dull and complicated beginning, it might be best to state hastily that Quinn neither ran for office nor canvassed for votes, made no speeches and stuffed no ballot boxes. Any more than Napoleon pulled a trigger at Austerlitz.
+
+And since politics makes strange bedfellows, Alfred Lanning sat at the other side of the desk with his ferocious white eyebrows bent far forward over eyes in which chronic impatience had sharpened to acuity. He was not pleased.
+
+The fact, if known to Quinn, would have annoyed him not the least. His voice was friendly, perhaps professionally so.
+
+“I assume you know Stephen Byerley, Dr. Lanning.”
+
+“I have heard of him. So have many people.”
+
+“Yes, so have I. Perhaps you intend voting for him at the next election.”
+
+“I couldn’t say.” There was an unmistakable trace of acidity here. “I have not followed the political currents, so I’m not aware that he is running for office.”
+
+“He may be our next mayor. Of course, he is only a lawyer now, but great oaks —”
+
+“Yes,” interrupted Lanning, “I have heard the phrase before. But I wonder if we can get to the business at hand.”
+
+“We are at the business at hand, Dr. Lanning.” Quinn’s tone was very gentle, “It is to my interest to keep Mr. Byerley a district attorney at the very most, and it is to your interest to help me do so.”“To my interest? Come!” Lanning’s eyebrows hunched low.
+
+“Well, say then to the interest of the U.S. Robot \& Mechanical Men Corporation. I come to you as Director-Emeritus of Research, because I know that your connection to them is that of, shall we say, ‘elder statesman.’ You are listened to with respect and yet your connection with them is no longer so tight but that you cannot possess considerable freedom of action; even if the action is somewhat unorthodox.”
+
+Dr. Lanning was silent a moment, chewing the cud of his thoughts. He said more softly, “I don’t follow you at all, Mr. Quinn.”
+
+“I am not surprised, Dr. Lanning. But it’s all rather simple. Do you mind?” Quinn lit a slender cigarette with a lighter of tasteful simplicity and his big- boned face settled into an expression of quiet amusement. “We have spoken of Mr. Byerley—a strange and colorful character. He was unknown three years ago. He is very well known now. He is a man of force and ability, and certainly the most capable and intelligent prosecutor I have ever known. Unfortunately he is not a friend of mine—”
+
+“I understand,” said Lanning, mechanically. He stared at his fingernails.
+
+“I have had occasion,” continued Quinn, evenly, “in the past year to investigate Mr. Byerley—quite exhaustively. It is always useful, you see, to subject the past life of reform politicians to rather inquisitive research. If you knew how often it helped—” He paused to smile humorlessly at the glowing tip of his cigarette. “But Mr. Byerley’s past is unremarkable. A quiet life in a small town, a college education, a wife who died young, an auto accident with a slow recovery, law school, coming to the metropolis, an attorney.”
+
+Francis Quinn shook his head slowly, then added, “But his present life. Ah, that is remarkable. Our district attorney never eats!”
+
+Lanning’s head snapped up, old eyes surprisingly sharp, “Pardon me?”
+
+“Our district attorney never eats.” The repetition thumped by syllables. “I’ll modify that slightly. He has never been seen to eat or drink. Never! Do you understand the significance of the word? Not rarely, but never!”“I find that quite incredible. Can you trust your investigators?”
+
+“I can trust my investigators, and I don’t find it incredible at all. Further, our district attorney has never been seen to drink—in the aqueous sense as well as the alcoholic—nor to sleep. There are other factors, but I should think I have made my point.”
+
+\subsubsection*{}
+Lanning leaned back in his seat, and there was the rapt silence of challenge and response between them, and then the old roboticist shook his head. “No. There is only one thing you can be trying to imply, if I couple your statements with the fact that you present them to me, and that is impossible.”
+
+“But the man is quite inhuman, Dr. Lanning.”
+
+“If you told me he were Satan in masquerade, there would be a faint chance that I might believe you.”
+
+“I tell you he is a robot, Dr. Lanning.”
+
+“I tell you it is as impossible a conception as I have ever heard, Mr. Quinn.” Again the combative silence.
+
+“Nevertheless,” and Quinn stubbed out his cigarette with elaborate care, “you will have to investigate this impossibility with all the resources of the Corporation.”
+
+“I’m sure that I could undertake no such thing, Mr. Quinn. You don’t seriously suggest that the Corporation take part in local politics.”
+
+“You have no choice. Supposing I were to make my facts public without proof. The evidence is circumstantial enough.”
+
+“Suit yourself in that respect.”
+
+“But it would not suit me. Proof would be much preferable. And it would not suit you, for the publicity would be very damaging to your company. You areperfectly well acquainted, I suppose, with the strict rules against the use of robots on inhabited worlds.”
+
+“Certainly!”—brusquely.
+
+“You know that the U.S. Robot  Mechanical Men Corporation is the only manufacturer of positronic robots in the Solar System, and if Byerley is a robot, he is a positronic robot. You are also aware that all positronic robots are leased, and not sold; that the Corporation remains the owner and manager of each robot, and is therefore responsible for the actions of all.”
+
+“It is an easy matter, Mr. Quinn, to prove the Corporation has never manufactured a robot of a humanoid character.”
+
+“It can be done? To discuss merely possibilities.”
+
+“Yes. It can be done.”
+
+“Secretly, I imagine, as well. Without entering it in your books.”
+
+“Not the positronic brain, sir. Too many factors are involved in that, and there is the tightest possible government supervision.”
+
+“Yes, but robots are worn out, break down, go out of order—and are dismantled.”
+
+“And the positronic brains re-used or destroyed.”
+
+“Really?” Francis Quinn allowed himself a trace of sarcasm. “And if one were, accidentally, of course, not destroyed—and there happened to be a humanoid structure waiting for a brain.”
+
+“Impossible!”
+
+“You would have to prove that to the government and the public, so why not prove it to me now.”
+
+“But what could our purpose be?” demanded Lanning in exasperation. “Where is our motivation? Credit us with a minimum of sense.”“My dear sir, please. The Corporation would be only too glad to have the various Regions permit the use of humanoid positronic robots on inhabited worlds. The profits would be enormous. But the prejudice of the public against such a practice is too great. Suppose you get them used to such robots first—see, we have a skillful lawyer, a good mayor—and he is a robot. Won’t you buy our robot butlers?”
+
+“Thoroughly fantastic. An almost humorous descent to the ridiculous.”
+
+“I imagine so. Why not prove it? Or would you still rather try to prove it to the public?”
+
+The light in the office was dimming, but it was not yet too dim to obscure the flush of frustration on Alfred Lanning’s face. Slowly, the roboticist’s finger touched a knob and the wall illuminators glowed to gentle life.
+
+“Well, then,” he growled, “let us see.”
+
+\subsubsection*{}
+The face of Stephen Byerley is not an easy one to describe. He was forty by birth certificate and forty by appearance—but it was a healthy, well-nourished good-natured appearance of forty; one that automatically drew the teeth of the bromide about “looking one’s age.”
+
+This was particularly true when he laughed, and he was laughing now. It came loudly and continuously, died away for a bit, then began again—
+
+And Alfred Lanning’s face contracted into a rigidly bitter monument of disapproval. He made a half gesture to the woman who sat beside him, but her thin, bloodless lips merely pursed themselves a trifle.
+
+Byerley gasped himself a stage nearer normality.
+
+“Really, Dr. Lanning . . . really—I . . . I . . . a robot?”
+
+Lanning bit his words off with a snap, “It is no statement of mine, sir. I would be quite satisfied to have you a member of humanity. Since our Corporation never manufactured you, I am quite certain that you are—in a legalistic sense, at any rate. But since the contention that you are a robot has been advanced to us seriously by a man of certain standing—”“Don’t mention his name, if it would knock a chip off your granite block of ethics, but let’s pretend it was Frank Quinn, for the sake of argument, and continue.”
+
+Lanning drew in a sharp, cutting snort at the interruption, and paused ferociously before continuing with added frigidity, “—by a man of certain standing, with whose identity I am not interested in playing guessing games, I am bound to ask your cooperation in disproving it. The mere fact that such a contention could be advanced and publicized by the means at this man’s disposal would be a bad blow to the company I represent—even if the charge were never proven. You understand me?”
+
+“Oh, yes, your position is clear to me. The charge itself is ridiculous. The spot you find yourself in is not. I beg your pardon, if my laughter offended you. It was the first I laughed at, not the second. How can I help you?”
+
+“It could be very simple. You have only to sit down to a meal at a restaurant in the presence of witnesses, have your picture taken, and eat.” Lanning sat back in his chair, the worst of the interview over. The woman beside him watched Byerley with an apparently absorbed expression but contributed nothing of her own.
+
+Stephen Byerley met her eyes for an instant, was caught by them, then turned back to the roboticist. For a while his fingers were thoughtful over the bronze paper-weight that was the only ornament on his desk.
+
+He said quietly, “I don’t think I can oblige you.”
+
+He raised his hand, “Now wait, Dr. Lanning. I appreciate the fact that this whole matter is distasteful to you, that you have been forced into it against your will, that you feel you are playing an undignified and even ridiculous part. Still, the matter is even more intimately concerned with myself, so be tolerant.
+
+“First, what makes you think that Quinn—this man of certain standing, you know—wasn’t hoodwinking you, in order to get you to do exactly what you are doing?”
+
+“Why, it seems scarcely likely that a reputable person would endanger himselfin so ridiculous a fashion, if he weren’t convinced he were on safe ground.”
+
+There was little humor in Byerley’s eyes, “You don’t know Quinn. He could manage to make safe ground out of a ledge a mountain sheep could not handle. I suppose he showed the particulars of the investigation he claims to have made of me?”
+
+“Enough to convince me that it would be too troublesome to have our Corporation attempt to disprove them when you could do so more easily.”
+
+“Then you believe him when he says I never eat. You are a scientist, Dr. Lanning. Think of the logic required. I have not been observed to eat, therefore, I never eat Q.E.D. After all!”
+
+“You are using prosecution tactics to confuse what is really a very simple situation.”
+
+“On the contrary, I am trying to clarify what you and Quinn between you are making a very complicated one. You see, I don’t sleep much, that’s true, and I certainly don’t sleep in public. I have never cared to eat with others—an idiosyncrasy which is unusual and probably neurotic in character, but which harms no one. Look, Dr. Lanning, let me present you with a suppositious case. Supposing we had a politician who was interested in defeating a reform candidate at any cost and while investigating his private life came across oddities such as I have just mentioned.
+
+“Suppose further that in order to smear the candidate effectively, he comes to your company as the ideal agent. Do you expect him to say to you, ‘So-and-so is a robot because he hardly ever eats with people, and I have never seen him fall asleep in the middle of a case; and once when I peeped into his window in the middle of the night, there he was, sitting up with a book; and I looked in his frigidaire and there was no food in it.’
+
+“If he told you that, you would send for a strait-jacket. But if he tells you, ‘He never sleeps; he never eats,’ then the shock of the statement blinds you to the fact that such statements are impossible to prove. You play into his hands by contributing to the to-do.”“Regardless, sir,” began Lanning, with a threatening obstinacy, “of whether you consider this matter serious or not, it will require only the meal I mentioned to end it.”
+
+Again Byerley turned to the woman, who still regarded him expressionlessly. “Pardon me. I’ve caught your name correctly, haven’t I? Dr. Susan Calvin?”
+
+“Yes, Mr. Byerley.”
+
+“You’re the U.S. Robots’ psychologist, aren’t you?”
+
+“Robopsychologist, please.”
+
+“Oh, are robots so different from men, mentally?”
+
+“Worlds different.” She allowed herself a frosty smile, “Robots are essentially decent.”
+
+Humor tugged at the corners of the lawyer’s mouth, “Well, that’s a hard blow. But what I wanted to say was this. Since you’re a psycho—a robopsychologist, and a woman, I’ll bet that you’ve done something that Dr. Lanning hasn’t thought of.”
+
+“And what is that?”
+
+“You’ve got something to eat in your purse.”
+
+Something caught in the schooled indifference of Susan Calvin’s eyes. She said, “You surprise me, Mr. Byerley.”
+
+And opening her purse, she produced an apple. Quietly, she handed it to him. Dr. Lanning, after an initial start, followed the slow movement from one hand to the other with sharply alert eyes.
+
+Calmly, Stephen Byerley bit into it, and calmly he swallowed it.
+
+“You see, Dr. Lanning?”
+
+Dr. Lanning smiled in a relief tangible enough to make even his eyebrowsappear benevolent. A relief that survived for one fragile second.
+
+Susan Calvin said, “I was curious to see if you would eat it, but, of course, in the present case, it proves nothing.”
+
+Byerley grinned, “It doesn’t?”
+
+“Of course not. It is obvious, Dr. Lanning, that if this man were a humanoid robot, he would be a perfect imitation. He is almost too human to be credible. After all, we have been seeing and observing human beings all our lives; it would be impossible to palm something merely nearly right off on us. It would have to be all right. Observe the texture of the skin, the quality of the irises, the bone formation of the hand. If he’s a robot, I wish U.S. Robots had made him, because he’s a good job. Do you suppose then, that anyone capable of paying attention to such niceties would neglect a few gadgets to take care of such things as eating, sleeping, elimination? For emergency use only, perhaps; as, for instance, to prevent such situations as are arising here. So a meal won’t really prove anything.”
+
+“Now wait,” snarled Lanning, “I am not quite the fool both of you make me out to be. I am not interested in the problem of Mr. Byerley’s humanity or nonhumanity. I am interested in getting the Corporation out of a hole. A public meal will end the matter and keep it ended no matter what Quinn does. We can leave the finer details to lawyers and robopsychologists.”
+
+“But, Dr. Lanning,” said Byerley, “you forget the politics of the situation. I am as anxious to be elected as Quinn is to stop me. By the way, did you notice that you used his name? It’s a cheap shyster trick of mine; I knew you would, before you were through.”
+
+Lanning flushed, “What has the election to do with it?”
+
+“Publicity works both ways, sir. If Quinn wants to call me a robot, and has the nerve to do so, I have the nerve to play the game his way.”
+
+“You mean you—” Lanning was quite frankly appalled.
+
+“Exactly. I mean that I’m going to let him go ahead, choose his rope, test its strength, cut off the right length, tie the noose, insert his head and grin. I can dowhat little else is required.”
+
+“You are mighty confident.”
+
+Susan Calvin rose to her feet, “Come, Alfred, we won’t change his mind for him.”
+
+“You see.” Byerley smiled gently. “You’re a human psychologist, too.”
+
+\subsubsection*{}
+But perhaps not all the confidence that Dr. Lanning had remarked upon was present that evening when Byerley’s car parked on the automatic treads leading to the sunken garage, and Byerley himself crossed the path to the front door of his house.
+
+The figure in the wheel chair looked up as he entered and smiled. Byerley’s face lit with affection. He crossed over to it.
+
+The cripple’s voice was a hoarse, grating whisper that came out of a mouth forever twisted to one side, leering out of a face that was half scar tissue, “You’re late, Steve.”
+
+“I know, John, I know. But I’ve been up against a peculiar and interesting trouble today.”
+
+“So?” Neither the torn face nor the destroyed voice could carry expression but there was anxiety in the clear eyes. “Nothing you can’t handle?”
+
+“I’m not exactly certain. I may need your help. You’re the brilliant one in the family. Do you want me to take you out into the garden? It’s a beautiful evening.”
+
+Two strong arms lifted John from the wheel chair. Gently, almost caressingly, Byerley’s arms went around the shoulders and under the swathed legs of the cripple. Carefully, and slowly, he walked through the rooms, down the gentle ramp that had been built with a wheel chair in mind, and out the back door into the walled and wired garden behind the house.“Why don’t you let me use the wheel chair, Steve? This is silly.”
+
+“Because I’d rather carry you. Do you object? You know that you’re as glad to get out of that motorized buggy for a while as I am to see you out. How do you feel today?” He deposited John with infinite care upon the cool grass.
+
+“How should I feel? But tell me about your troubles.”
+
+“Quinn’s campaign will be based on the fact that he claims I’m a robot.”
+
+John’s eyes opened wide, “How do you know? It’s impossible. I won’t believe it.”
+
+“Oh, come, I tell you it’s so. He had one of the big-shot scientists of U. S. Robot \& Mechanical Men Corporation over at the office to argue with me.”
+
+Slowly John’s hands tore at the grass. “I see. I see.”
+
+Byerley said, “But we can let him choose his ground. I have an idea. Listen to me and tell me if we can do it—”
+
+\subsubsection*{}
+The scene as it appeared in Alfred Lanning’s office that night was a tableau of stares. Francis Quinn stared meditatively at Alfred Lanning. Lanning’s stare was savagely set upon Susan Calvin, who stared impassively in her turn at Quinn.
+
+Francis Quinn broke it with a heavy attempt at lightness, “Bluff. He’s making it up as he goes along.”
+
+“Are you going to gamble on that, Mr. Quinn?” asked Dr. Calvin, indifferently.
+
+“Well, it’s your gamble, really.”
+
+“Look here,” Lanning covered definite pessimism with bluster, “we’ve done what you asked. We witnessed the man eat. It’s ridiculous to presume him a robot.”
+
+“Do you think so?” Quinn shot toward Calvin. “Lanning said you were theexpert.”
+
+Lanning was almost threatening, “Now, Susan—”
+
+Quinn interrupted smoothly, “Why not let her talk, man? She’s been sitting there imitating a gatepost for half an hour.”
+
+Lanning felt definitely harassed. From what he experienced then to incipient paranoia was but a step. He said, “Very well. Have your say, Susan. We won’t interrupt you.”
+
+Susan Calvin glanced at him humorlessly, then fixed cold eyes on Mr. Quinn. “There are only two ways of definitely proving Byerley to be a robot, sir. So far you are presenting circumstantial evidence, with which you can accuse, but not prove—and I think Mr. Byerley is sufficiently clever to counter that sort of material. You probably think so yourself, or you wouldn’t have come here.
+
+“The two methods of proof are the physical and the psychological. Physically, you can dissect him or use an X-ray. How to do that would be your problem. Psychologically, his behavior can be studied, for if he is a positronic robot, he must conform to the three Rules of Robotics. A positronic brain cannot be constructed without them. You know the Rules, Mr. Quinn?”
+
+She spoke them carefully, clearly, quoting word for word the famous bold print on page one of the “Handbook of Robotics.”
+
+“I’ve heard of them,” said Quinn, carelessly.
+
+“Then the matter is easy to follow,” responded the psychologist, dryly. “If Mr. Byerley breaks any of those three rules, he is not a robot. Unfortunately, this procedure works in only one direction. If he lives up to the rules, it proves nothing one way or the other.”
+
+Quinn raised polite eyebrows, “Why not, doctor?”
+
+“Because, if you stop to think of it, the three Rules of Robotics are the essential guiding principles of a good many of the world’s ethical systems. Of course, every human being is supposed to have the instinct of self-preservation. That’s Rule Three to a robot. Also every ‘good’ human being, with a socialconscience and a sense of responsibility, is supposed to defer to proper authority; to listen to his doctor, his boss, his government, his psychiatrist, his fellow man; to obey laws, to follow rules, to conform to custom—even when they interfere with his comfort or his safety. That’s Rule Two to a robot. Also, every ‘good’ human being is supposed to love others as himself, protect his fellow man, risk his life to save another. That’s Rule One to a robot. To put it simply—if Byerley follows all the Rules of Robotics, he may be a robot, and may simply be a very good man.”
+
+“But,” said Quinn, “you’re telling me that you can never prove him a robot.”
+
+“I may be able to prove him not a robot.”
+
+“That’s not the proof I want.”
+
+“You’ll have such proof as exists. You are the only one responsible for your own wants.”
+
+\subsubsection*{}
+Here Lanning’s mind leaped suddenly to the sting of an idea, “Has it occurred to anyone,” he ground out, “that district attorney is a rather strange occupation for a robot? The prosecution of human beings—sentencing them to death—bringing about their infinite harm—”
+
+Quinn grew suddenly keen, “No, you can’t get out of it that way. Being district attorney doesn’t make him human. Don’t you know his record? Don’t you know that he boasts that he has never prosecuted an innocent man; that there are scores of people left untried because the evidence against them didn’t satisfy him, even though he could probably have argued a jury into atomizing them? That happens to be so.”
+
+Lanning’s thin cheeks quivered, “No, Quinn, no. There is nothing in the Rules of Robotics that makes any allowance for human guilt. A robot may not judge whether a human being deserves death. It is not for him to decide. He may not harm a human—variety skunk, or variety angel.”
+
+Susan Calvin sounded tired. “Alfred,” she said, “don’t talk foolishly. What if arobot came upon a madman about to set fire to a house with people in it. He would stop the madman, wouldn’t he?”
+
+“Of course.”
+
+“And if the only way he could stop him was to kill him—” There was a faint sound in Lanning’s throat. Nothing more.
+
+“The answer to that, Alfred, is that he would do his best not to kill him. If the madman died, the robot would require psychotherapy because he might easily go mad at the conflict presented him—of having broken Rule One to adhere to Rule One in a higher sense. But a man would be dead and a robot would have killed him.”
+
+“Well, is Byerley mad?” demanded Lanning, with all the sarcasm he could muster.
+
+“No, but he has killed no man himself. He has exposed facts which might represent a particular human being to be dangerous to the large mass of other human beings we call society. He protects the greater number and thus adheres to Rule One at maximum potential. That is as far as he goes. It is the judge who then condemns the criminal to death or imprisonment, after the jury decides on his guilt or innocence. It is the jailer who imprisons him, the executioner who kills him. And Mr. Byerley has done nothing but determine truth and aid society.
+
+“As a matter of fact, Mr. Quinn, I have looked into Mr. Byerley’s career since you first brought this matter to our attention. I find that he has never demanded the death sentence in his closing speeches to the jury. I also find that he has spoken on behalf of the abolition of capital punishment and contributed generously to research institutions engaged in criminal neurophysiology. He apparently believes in the cure, rather than the punishment of crime. I find that significant.”
+
+“You do?” Quinn smiled. “Significant of a certain odor of roboticity, perhaps?”
+
+“Perhaps. Why deny it? Actions such as his could come only from a robot, or from a very honorable and decent human being. But you see, you just can’t differentiate between a robot and the very best of humans.”Quinn sat back in his chair. His voice quivered with impatience. “Dr. Lanning, it’s perfectly possible to create a humanoid robot that would perfectly duplicate a human in appearance, isn’t it?”
+
+Lanning harrumphed and considered, “It’s been done experimentally by U.S. Robots,” he said reluctantly, “without the addition of a positronic brain, of course. By using human ova and hormone control, one can grow human flesh and skin over a skeleton of porous silicone plastics that would defy external examination. The eyes, the hair, the skin would be really human, not humanoid. And if you put a positronic brain, and such other gadgets as you might desire inside, you have a humanoid robot.”
+
+Quinn said shortly, “How long would it take to make one?”
+
+Lanning considered, “If you had all your equipment—the brain, the skeleton, the ovum, the proper hormones and radiations—say, two months.”
+
+The politician straightened out of his chair. “Then we shall see what the insides of Mr. Byerley look like. It will mean publicity for U.S. Robots—but I gave you your chance.”
+
+Lanning turned impatiently to Susan Calvin, when they were alone. “Why do you insist—”
+
+And with real feeling, she responded sharply and instantly, “Which do you want—the truth or my resignation? I won’t lie for you. U.S. Robots can take care of itself. Don’t turn coward.”
+
+“What,” said Lanning, “if he opens up Byerley, and wheels and gears fall out. What then?”
+
+“He won’t open Byerley,” said Calvin, disdainfully. “Byerley is as clever as Quinn, at the very least.”
+
+\subsubsection*{}
+The news broke upon the city a week before Byerley was to have beennominated. But “broke” is the wrong word. It staggered upon the city, shambled, crawled. Laughter began, and wit was free. And as the far off hand of Quinn tightened its pressure in easy stages, the laughter grew forced, an element of hollow uncertainty entered, and people broke off to wonder.
+
+The convention itself had the air of a restive stallion. There had been no contest planned. Only Byerley could possibly have been nominated a week earlier. There was no substitute even now. They had to nominate him, but there was complete confusion about it.
+
+It would not have been so bad if the average individual were not torn between the enormity of the charge, if true, and its sensational folly, if false.
+
+The day after Byerley was nominated perfunctorily, hollowly—a newspaper finally published the gist of a long interview with Dr. Susan Calvin, “world famous expert on robopsychology and positronics.”
+
+What broke loose is popularly and succinctly described as hell.
+
+It was what the Fundamentalists were waiting for. They were not a political party; they made pretense to no formal religion. Essentially they were those who had not adapted themselves to what had once been called the Atomic Age, in the days when atoms were a novelty. Actually, they were the Simple-Lifers, hungering after a life, which to those who lived it had probably appeared not so Simple, and who had not been, therefore, Simple-Lifers themselves.
+
+The Fundamentalists required no new reason to detest robots and robot manufacturers; but a new reason such as the Quinn accusation and the Calvin analysis was sufficient to make such detestation audible.
+
+The huge plants of the U.S. Robot \& Mechanical Men Corporation were a hive that spawned armed guards. It prepared for war.
+
+Within the city the house of Stephen Byerley bristled with police.
+
+The political campaign, of course, lost all other issues, and resembled a campaign only in that it was something filling the hiatus between nomination and election.
+
+\subsubsection*{}
+Stephen Byerley did not allow the fussy little man to distract him. He remained comfortably unperturbed by the uniforms in the background. Outside the house, past the line of grim guards, reporters and photographers waited according to the tradition of the caste. One enterprising ’visor station even had a scanner focused on the blank entrance to the prosecutor’s unpretentious home, while a synthetically excited announcer filled in with inflated commentary.
+
+The fussy little man advanced. He held forward a rich, complicated sheet. “This, Mr. Byerley, is a court order authorizing me to search these premises for the presence of illegal . . . uh . . . mechanical men or robots of any description.”
+
+Byerley half rose, and took the paper. He glanced at it indifferently, and smiled as he handed it back. “All in order. Go ahead. Do your job. Mrs. Hoppen”—to his housekeeper, who appeared reluctantly from the next room—“please go with them, and help out if you can.”
+
+The little man, whose name was Harroway, hesitated, produced an unmistakable blush, failed completely to catch Byerley’s eyes, and muttered, “Come on,” to the two policemen.
+
+He was back in ten minutes.
+
+“Through?” questioned Byerley, in just the tone of a person who is not particularly interested in the question, or its answer.
+
+Harroway cleared his throat, made a bad start in falsetto, and began again, angrily, “Look here, Mr. Byerley, our special instructions were to search the house very thoroughly.”
+
+“And haven’t you?”
+
+“We were told exactly what to look for.”
+
+“Yes?”
+
+“In short, Mr. Byerley, and not to put too fine a point on it, we were told tosearch you.”
+
+“Me?” said the prosecutor with a broadening smile. “And how do you intend to do that?”
+
+“We have a Penet-radiation unit—”
+
+“Then I’m to have my X-ray photograph taken, hey? You have the authority?”
+
+“You saw my warrant.”
+
+“May I see it again?”
+
+Harroway, his forehead shining with considerably more than mere enthusiasm, passed it over a second time.
+
+Byerley said evenly, “I read here as the description of what you are to search; I quote: ‘the dwelling place belonging to Stephen Allen Byerley, located at 355 Willow Grove, Evanston, together with any garage, storehouse or other structures or buildings thereto appertaining, together with all grounds thereto appertaining’ . . . um . . . and so on. Quite in order. But, my good man, it doesn’t say anything about searching my interior. I am not part of the premises. You may search my clothes if you think I’ve got a robot hidden in my pocket.”
+
+Harroway had no doubt on the point of to whom he owed his job. He did not propose to be backward, given a chance to earn a much better—i.e., more highly paid—job.
+
+He said, in a faint echo of bluster, “Look here. I’m allowed to search the furniture in your house, and anything else I find in it. You are in it, aren’t you?”
+
+“A remarkable observation. I am in it. But I’m not a piece of furniture. As a citizen of adult responsibility—I have the psychiatric certificate proving that—I have certain rights under the Regional Articles. Searching me would come under the heading of violating my Right of Privacy. That paper isn’t sufficient.”
+
+“Sure, but if you’re a robot, you don’t have Right of Privacy.”
+
+“True enough—but that paper still isn’t sufficient. It recognizes me implicitlyas a human being.”
+
+“Where?” Harroway snatched at it.
+
+“Where it says ‘the dwelling place belonging to’ and so on. A robot cannot own property. And you may tell your employer, Mr. Harroway, that if he tries to issue a similar paper which does not implicitly recognize me as a human being, he will be immediately faced with a restraining injunction and a civil suit which will make it necessary for him to prove me a robot by means of information now in his possession, or else to pay a whopping penalty for an attempt to deprive me unduly of my Rights under the Regional Articles. You’ll tell him that, won’t you?”
+
+Harroway marched to the door. He turned. “You’re a slick lawyer—” His hand was in his pocket. For a short moment, he stood there. Then he left, smiled in the direction of the ’visor scanner, still playing away—waved to the reporters, and shouted, “We’ll have something for you tomorrow, boys. No kidding.”
+
+In his ground car, he settled back, removed the tiny mechanism from his pocket and carefully inspected it. It was the first time he had ever taken a photograph by X-ray reflection. He hoped he had done it correctly.
+
+\subsubsection*{}
+Quinn and Byerley had never met face-to-face alone. But visorphone was pretty close to it. In fact, accepted literally, perhaps the phrase was accurate, even if to each, the other were merely the light and dark pattern of a bank of photo-cells.
+
+It was Quinn who had initiated the call. It was Quinn, who spoke first, and without particular ceremony, “Thought you would like to know, Byerley, that I intend to make public the fact that you’re wearing a protective shield against Penet-radiation.”
+
+“That so? In that case, you’ve probably already made it public. I have a notion our enterprising press representatives have been tapping my various communication lines for quite a while. I know they have my office lines full of holes; which is why I’ve dug in at my home these last weeks.” Byerley was friendly, almost chatty.Quinn’s lips tightened slightly, “This call is shielded—thoroughly. I’m making it at a certain personal risk.”
+
+“So I should imagine. Nobody knows you’re behind this campaign. At least, nobody knows it officially. Nobody doesn’t know it unofficially. I wouldn’t worry. So I wear a protective shield? I suppose you found that out when your puppy dog’s Penet-radiation photograph, the other day, turned out to be overexposed.”
+
+“You realize, Byerley, that it would be pretty obvious to everyone that you don’t dare face X-ray analysis.”
+
+“Also that you, or your men, attempted illegal invasion of my Rights of Privacy.”
+
+“The devil they’ll care for that.”
+
+“They might. It’s rather symbolic of our two campaigns, isn’t it? You have little concern with the rights of the individual citizen. I have great concern. I will not submit to X-ray analysis, because I wish to maintain my Rights on principle. Just as I’ll maintain the rights of others when elected.”
+
+“That will no doubt make a very interesting speech, but no one will believe you. A little too high-sounding to be true. Another thing,” a sudden, crisp change, “the personnel in your home was not complete the other night.”
+
+“In what way?”
+
+“According to the report,” he shuffled papers before him that were just within the range of vision of the visiplate, “there was one person missing—a cripple.”
+
+“As you say,” said Byerley, tonelessly, “a cripple. My old teacher, who lives with me and who is now in the country—and has been for two months. A ‘much- needed rest’ is the usual expression applied in the case. He has your permission?”
+
+“Your teacher? A scientist of sorts?”
+
+“A lawyer once—before he was a cripple. He has a government license as aresearch biophysicist, with a laboratory of his own, and a complete description of the work he’s doing filed with the proper authorities, to whom I can refer you. The work is minor, but is a harmless and engaging hobby for a—poor cripple. I am being as helpful as I can, you see.”
+
+“I see. And what does this . . . teacher . . . know about robot manufacture?”
+
+“I couldn’t judge the extent of his knowledge in a field with which I am unacquainted.”
+
+“He wouldn’t have access to positronic brains?”
+
+“Ask your friends at U.S. Robots. They’d be the ones to know.”
+
+“I’ll put it shortly, Byerley. Your crippled teacher is the real Stephen Byerley. You are his robot creation. We can prove it. It was he who was in the automobile accident, not you. There will be ways of checking the records.”
+
+“Really? Do so, then. My best wishes.”
+
+“And we can search your so-called teacher’s ‘country place,’ and see what we can find there.”
+
+“Well, not quite, Quinn.” Byerley smiled broadly. “Unfortunately for you, my so-called teacher is a sick man. His country place is his place of rest. His Right of Privacy as a citizen of adult responsibility is naturally even stronger, under the circumstances. You won’t be able to obtain a warrant to enter his grounds without showing just cause. However, I’d be the last to prevent you from trying.”
+
+There was a pause of moderate length, and then Quinn leaned forward, so that his imaged face expanded and the fine lines on his forehead were visible, “Byerley, why do you carry on? You can’t be elected.”
+
+“Can’t I?”
+
+“Do you think you can? Do you suppose that your failure to make any attempt to disprove the robot charge—when you could easily, by breaking one of the Three Laws—does anything but convince the people that you are a robot?”“All I see so far is that from being a rather vaguely known, but still largely obscure metropolitan lawyer, I have now become a world figure. You’re a good publicist.”
+
+“But you are a robot.”
+
+“So it’s been said, but not proven.”
+
+“It’s been proven sufficiently for the electorate.”
+
+“Then relax—you’ve won.”
+
+“Good-by,” said Quinn, with his first touch of viciousness, and the visorphone slammed off.
+
+“Good-by,” said Byerley imperturbably, to the blank plate.
+
+\subsubsection*{}
+Byerley brought his “teacher” back the week before election. The air car dropped quickly in an obscure part of the city.
+
+“You’ll stay here till after election,” Byerley told him. “It would be better to have you out of the way if things take a bad turn.”
+
+The hoarse voice that twisted painfully out of John’s crooked mouth might have had accents of concern in it. “There’s danger of violence?”
+
+“The Fundamentalists threaten it, so I suppose there is, in a theoretical sense. But I really don’t expect it. The Fundies have no real power. They’re just the continuous irritant factor that might stir up a riot after a while. You don’t mind staying here? Please. I won’t be myself if I have to worry about you.”
+
+“Oh, I’ll stay. You still think it will go well?”
+
+“I’m sure of it. No one bothered you at the place?” “No one. I’m certain.”“And your part went well?”
+
+“Well enough. There’ll be no trouble there.”
+
+“Then take care of yourself, and watch the televisor tomorrow, John.” Byerley pressed the gnarled hand that rested on his.
+
+\subsubsection*{}
+Lenton’s forehead was a furrowed study in suspense. He had the completely unenviable job of being Byerley’s campaign manager in a campaign that wasn’t a campaign, for a person that refused to reveal his strategy, and refused to accept his manager’s.
+
+“You can’t!” It was his favorite phrase. It had become his only phrase. “I tell you, Steve, you can’t!”
+
+He threw himself in front of the prosecutor, who was spending his time leafing through the typed pages of his speech.
+
+“Put that down, Steve. Look, that mob has been organized by the Fundies. You won’t get a hearing. You’ll be stoned more likely. Why do you have to make a speech before an audience? What’s wrong with a recording, a visual recording?”
+
+“You want me to win the election, don’t you?” asked Byerley, mildly.
+
+“Win the election! You’re not going to win, Steve. I’m trying to save your life.”
+
+“Oh, I’m not in danger.”
+
+“He’s not in danger. He’s not in danger.” Lenton made a queer, rasping sound in his throat. “You mean you’re getting out on that balcony in front of fifty thousand crazy crackpots and try to talk sense to them—on a balcony like a medieval dictator?”
+
+Byerley consulted his watch. “In about five minutes—as soon as the television lines are free.”Lenton’s answering remark was not quite transliterable.
+
+\subsubsection*{}
+The crowd filled a roped off area of the city. Trees and houses seemed to grow out of a mass-human foundation. And by ultra-wave, the rest of the world watched. It was a purely local election, but it had a world audience just the same. Byerley thought of that and smiled.
+
+But there was nothing to smile at in the crowd itself. There were banners and streamers, ringing every possible change on his supposed robotcy. The hostile attitude rose thickly and tangibly into the atmosphere.
+
+From the start the speech was not successful. It competed against the inchoate mob howl and the rhythmic cries of the Fundie claques that formed mob-islands within the mob. Byerley spoke on, slowly, unemotionally—
+
+Inside, Lenton clutched his hair and groaned—and waited for the blood.
+
+There was a writhing in the front ranks. An angular citizen with popping eyes, and clothes too short for the lank length of his limbs, was pulling to the fore. A policeman dived after him, making slow, struggling passage. Byerley waved the latter off, angrily.
+
+The thin man was directly under the balcony. His words tore unheard against the roar.
+
+Byerley leaned forward. “What do you say? If you have a legitimate question, I’ll answer it.” He turned to a flanking guard. “Bring that man up here.”
+
+\subsubsection*{}
+There was a tensing in the crowd. Cries of “Quiet” started in various parts of the mob, and rose to a bedlam, then toned down raggedly. The thin man, red- faced and panting, faced Byerley.
+
+Byerley said, “Have you a question?”The thin man stared, and said in a cracked voice, “Hit me!”
+
+With sudden energy, he thrust out his chin at an angle. “Hit me! You say you’re not a robot. Prove it. You can’t hit a human, you monster.”
+
+There was a queer, flat, dead silence. Byerley’s voice punctured it. “I have no reason to hit you.”
+
+The thin man was laughing wildly. “You can’t hit me. You won’t hit me. You’re not a human. You’re a monster, a make-believe man.”
+
+And Stephen Byerley, tight-lipped, in the face of thousands who watched in person and the millions who watched by screen, drew back his fist and caught the man crackingly upon the chin. The challenger went over backwards in sudden collapse, with nothing on his face but blank, blank surprise.
+
+Byerley said, “I’m sorry. Take him in and see that he’s comfortable. I want to speak to him when I’m through.”
+
+And when Dr. Calvin, from her reserved space, turned her automobile and drove off, only one reporter had recovered sufficiently from the shock to race after her, and shout an unheard question.
+
+Susan Calvin called over her shoulder, “He’s human.”
+
+That was enough. The reporter raced away in his own direction.
+
+The rest of the speech might be described as “Spoken but not heard.”
+
+\subsubsection*{}
+Dr. Calvin and Stephen Byerley met once again—a week before he took the oath of office as mayor. It was late—past midnight.
+
+Dr. Calvin said, “You don’t look tired.”
+
+The mayor-elect smiled. “I may stay up for a while. Don’t tell Quinn.”
+
+“I shan’t. But that was an interesting story of Quinn’s, since you mention him.It’s a shame to have spoiled it. I suppose you knew his theory?”
+
+“Parts of it.”
+
+“It was highly dramatic. Stephen Byerley was a young lawyer, a powerful speaker, a great idealist—and with a certain flair for biophysics. Are you interested in robotics, Mr. Byerley?”
+
+“Only in the legal aspects.”
+
+“This Stephen Byerley was. But there was an accident. Byerley’s wife died; he himself, worse. His legs were gone; his face was gone; his voice was gone. Part of his mind was—bent. He would not submit to plastic surgery. He retired from the world, legal career gone—only his intelligence, and his hands left. Somehow he could obtain positronic brains, even a complex one, one which had the greatest capacity of forming judgments in ethical problems—which is the highest robotic function so far developed.
+
+“He grew a body about it. Trained it to be everything he would have been and was no longer. He sent it out into the world as Stephen Byerley, remaining behind himself as the old, crippled teacher that no one ever saw—”
+
+“Unfortunately,” said the mayor-elect, “I ruined all that by hitting a man. The papers say it was your official verdict on the occasion that I was human.”
+
+“How did that happen? Do you mind telling me? It couldn’t have been accidental.”
+
+“It wasn’t entirely. Quinn did most of the work. My men started quietly spreading the fact that I had never hit a man; that I was unable to hit a man; that to fail to do so under provocation would be sure proof that I was a robot. So I arranged for a silly speech in public, with all sorts of publicity overtones, and almost inevitably, some fool fell for it. In its essence, it was what I call a shyster trick. One in which the artificial atmosphere which has been created does all the work. Of course, the emotional effects made my election certain, as intended.”
+
+The robopsychologist nodded. “I see you intrude on my field—as every politician must, I suppose. But I’m very sorry it turned out this way. I like robots. I like them considerably better than I do human beings. If a robot can becreated capable of being a civil executive, I think he’d make the best one possible. By the Laws of Robotics, he’d be incapable of harming humans, incapable of tyranny, of corruption, of stupidity, of prejudice. And after he had served a decent term, he would leave, even though he were immortal, because it would be impossible for him to hurt humans by letting them know that a robot had ruled them. It would be most ideal.”
+
+“Except that a robot might fail due to the inherent inadequacies of his brain. The positronic brain has never equalled the complexities of the human brain.”
+
+“He would have advisers. Not even a human brain is capable of governing without assistance.”
+
+Byerley considered Susan Calvin with grave interest. “Why do you smile, Dr. Calvin?”
+
+“I smile because Mr. Quinn didn’t think of everything.”
+
+“You mean there could be more to that story of his.”
+
+“Only a little. For the three months before election, this Stephen Byerley that Mr. Quinn spoke about, this broken man, was in the country for some mysterious reason. He returned in time for that famous speech of yours. And after all, what the old cripple did once, he could do a second time, particularly where the second job is very simple in comparison to the first.”
+
+“I don’t quite understand.”
+
+Dr. Calvin rose and smoothed her dress. She was obviously ready to leave. “I mean there is one time when a robot may strike a human being without breaking the First Law. Just one time.”
+
+“And when is that?”
+
+Dr. Calvin was at the door. She said quietly, “When the human to be struck is merely another robot.”
+
+She smiled broadly, her thin face glowing. “Good-by Mr. Byerley. I hope to vote for you five years from now—for co-ordinator.”Stephen Byerley chuckled. “I must reply that that is a somewhat far-fetched idea.”
+
+The door closed behind her.
+
+\subsubsection*{}
+\itshape
+I stared at her with a sort of horror, “Is that true?” “All of it,” she said.
+
+“And the great Byerley was simply a robot.”
+
+“Oh, there’s no way of ever finding out. I think he was. But when he decided to die, he had himself atomized, so that there will never be any legal proof. — Besides, what difference would it make?”
+
+“Well—”
+
+“You share a prejudice against robots which is quite unreasoning. He was a very good mayor; five years later he did become Regional Co-ordinator. And when the Regions of Earth formed their Federation in 2044, he became the first World Co-ordinator. By that time it was the Machines that were running the world anyway.”
+
+“Yes, but—”
+
+“No buts! The Machines are robots, and they are running the world. It was five years ago that I found out all the truth. It was 2052; Byerley was completing his second term as World Co-ordinator—”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

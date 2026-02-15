@@ -1,0 +1,256 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+	
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{‘We Don’t Want to Relive It’: Jeffrey Dahmer Drama on Netflix Draws Anger}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{Oct. 5, 2022}
+\author{Remy Tumin}
+
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+    
+\noindent\linenumbers For years, Eric Wynn was the only Black drag queen at Club 219 in Milwaukee. He performed as Erica Stevens, singing Whitney Houston, Grace Jones and Tina Turner for adoring fans, eventually earning the title of Miss Gay Wisconsin in 1986 and 1987.
+
+“I had this group of Black kids who came in because they were represented,” Wynn, now 58, said of his time at the club in the late 1980s and early ’90s. “I saw them and let them know I saw them, because they finally had representation onstage.”
+
+Among them were Eddie Smith, who was known as “the Sheikh” because he often wore a head scarf, and Anthony Hughes, who was deaf. Hughes was “my absolute favorite fan” and blushed when Wynn winked at him from stage. In return, Hughes taught him the ABCs of sign language.
+
+“He would sit there laughing at me when I was trying to learn sign language with my big, old fake nails on,” Wynn recalled, laughing.
+But then, Wynn said, the group of young Black men began to thin out.
+
+“They were there and then all of the sudden there were less of them,” he said.
+
+Smith and Hughes were two of the 17 young men Jeffrey Dahmer killed, dismembered and cannibalized in a serial murder spree that largely targeted the gay community in Milwaukee between 1978 and 1991. Dahmer was a frequent customer at Club 219. He was sentenced to 15 consecutive life terms in prison but was killed in prison in 1994.
+
+Dahmer’s life has the been the subject of several documentaries and books, but none have received the attention or criticism showered on Netflix’s “Monster: The Jeffrey Dahmer Story,” which dramatizes the killing spree in a 10-part series created by Ryan Murphy. It stars Evan Peters as Dahmer and Niecy Nash as a neighbor who repeatedly tried to warn the police, and aims to explore Dahmer’s gruesome tale through the stories of his victims.
+
+Sign up for the Watching newsletter, for Times subscribers only.  Streaming TV and movie recommendations from critic Margaret Lyons and friends. Get it in your inbox.
+For many critics, that attempt failed immediately when Netflix labeled the series under its L.G.B.T.Q. vertical when it premiered last month. The label was removed after pushback on Twitter. Wynn and families of the victims questioned the need to dramatize and humanize a serial killer at all.
+
+“It couldn’t be more wrong, more ill timed, and it’s a media grab,” Wynn said, adding that he was “disappointed” in Murphy. “I thought he was better than that.”
+
+Murphy, who rose to fame with the high school comedy show “Glee,” has explored true crime before. His mini-series “American Crime Story” tackled the assassination of Gianni Versace, the O.J. Simpson trial and President Bill Clinton’s impeachment. But it was Murphy’s pivot from “The Normal Heart,” based on a play written by the AIDS activist Larry Kramer, and “Pose,” about New York City’s 1980s ballroom scene, to “Monster” that stopped Wynn in his tracks.
+
+Of “Pose,” Wynn said, “I was so impressed, we finally had representation that we were involved in.” He added, “It was such a great homage to all of us. And then he turns around and does this, somebody who is actually attacking the Black gay community.”
+Instead of focusing on the victims, Wynn said, “Monster” focuses on Dahmer. The Netflix label of an L.G.B.T.Q. film and the timing right before Halloween did not help either, Wynn said.
+
+Netflix did not return a request for comment.
+
+In an essay for Insider, Rita Isbell, whose brother Errol Lindsey was murdered by Dahmer, described watching a portrayal of her victim’s statement at Dahmer’s trial in the Netflix series and “reliving it all over again.”
+
+“It brought back all the emotions I was feeling back then,” she wrote. “I was never contacted about the show. I feel like Netflix should’ve asked if we mind or how we felt about making it. They didn’t ask me anything. They just did it.”
+
+Eric Perry, who said he was a relative of the Isbells, wrote that the series was “retraumatizing over and over again, and for what?”
+\iquote{I’m not telling anyone what to watch, I know true crime media is huge rn, but if you’re actually curious about the victims, my family (the Isbell’s) are pissed about this show. It’s retraumatizing over and over again, and for what? How many movies/shows/documentaries do we need? https://t.co/CRQjXWAvjx
+
+— eric. (@ericthulhu) September 22, 2022}
+
+Scott Gunkel, 62, worked at Club 219 as a bartender when Dahmer was a customer. Gunkel watched the first two episodes of “Monster” but could not continue. He said he and his friends “don’t want to relive it.”
+“The first ones really didn’t have any context of the victims, I was taken aback,” he said of the episodes, adding that the bar scenes did not accurately portray the racial mix of the city’s gay bars at the time. It was largely white, not Black, as the show depicts.
+
+Gunkel also remembered Hughes, the deaf man, who he said would come into the bar and wait for it to get busy. Hughes was one of the few victims to receive a full episode dedicated to his story.
+
+“He’d get there early and have a couple sodas and write me notes to keep the conversation going,” Gunkel recalled. “He disappeared, and I didn’t think much of it at the time.”
+
+That’s in part because the Dahmer years also coincided with the AIDS epidemic. There are opaque references to the crisis in the Netflix show, including hesitation by the police to help the victims and a bath house scene in which condom use is discussed. But Gunkel said customers vanishing was not uncommon.
+“We had this saying in the bars — if somebody was not there anymore, either he had AIDS or he got married,” Gunkel recalled.
+
+The AIDS epidemic combined with the transient lifestyle of many gay men in Milwaukee and “institutional homophobia and racism targeting the community” provided a perfect cover for Dahmer, said Michail Takach, a curator for the Wisconsin L.G.B.T.Q. History Project. Takach was 18 when Dahmer was arrested.
+
+“People were always looking for something new and people always disappeared,” Takach, now 50, said. “This was different, because it just got worse and worse.”
+
+Missing person posters climbed “like a tree in Club 219 until they reached the ceiling,” he said.
+
+The show has brought back those memories, Takach said, and has also surfaced people claiming to be associated with the Dahmer years who were not.
+
+“This is the invisible cost of the Dahmer resurgence,” he said, “this dreadful mythology, this unexplainable need to attach to someone else’s horror.”
+Nathaniel Brennan, an adjunct professor of cinema studies at New York University who is teaching a course on true crime this semester, said that it “is by nature an exploitative genre.”
+
+Even with the best intentions, he said, “the victims become the pawn or a game or a symbol.”
+
+Contemporary true crime often falls victim to an unresolvable tension, Brennan said. “We can’t tolerate forgetting it, but the representation of it will never be perfect,” he said. “That balance has become more apparent in the past 25 years.”
+
+Criminals are often portrayed with tragic backgrounds, he said. “There’s an idea that if society had done more, it could have been avoided.”
+
+Much of “Monster” is dedicated to Dahmer’s origins, including a suggestion that a hernia operation at the age of 4 or his mother’s postpartum mental health issues may have impacted his mental development.
+
+Wynn, who lives in San Francisco now, said he did not plan to watch the series and said Murphy owed an apology to the families of the victims and the city of Milwaukee. “That’s a scar on the city,” he said.
+
+Before the series premiered, he had not spoken about the Dahmer years in a long time. But he still thinks about Hughes regularly when he practices his sign language.
+
+“I did it this morning,” he said. “I still do it so I don’t forget.”\source{https://www.nytimes.com/2022/10/05/arts/television/jeffrey-dahmer-netflix-victims.html}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

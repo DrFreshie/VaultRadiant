@@ -1,0 +1,152 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Dracula\\\normalsize\plantin The Morning of 16 May}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1897}
+\author{Bram Stoker}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+When I had written in my diary and had fortunately replaced the book and pen in my pocket I felt sleepy. The Count's warning came into my mind, but I took pleasure in disobeying it. The sense of sleep was upon me, and with it the obstinacy which sleep brings as outrider. The soft moonlight soothed, and the wide expanse without gave a sense of freedom which refreshed me. I determined not to return tonight to the gloom-haunted rooms, but to sleep here, where, of old, ladies had sat and sung and lived sweet lives whilst their gentle breasts were sad for their menfolk away in the midst of remorseless wars. I drew a great couch out of its place near the corner, so that as I lay, I could look at the lovely view to east and south, and unthinking of and uncaring for the dust, composed myself for sleep. I suppose I must have fallen asleep. I hope so, but I fear, for all that followed was startlingly real, so real that now sitting here in the broad, full sunlight of the morning, I cannot in the least believe that it was all sleep.
+
+I was not alone. The room was the same, unchanged in any way since I came into it. I could see along the floor, in the brilliant moonlight, my own footsteps marked where I had disturbed the long accumulation of dust. In the moonlight opposite me were three young women, ladies by their dress and manner. I thought at the time that I must be dreaming when I saw them, they threw no shadow on the floor. They came close to me, and looked at me for some time, and then whispered together. Two were dark, and had high aquiline noses, like the Count, and great dark, piercing eyes, that seemed to be almost red when contrasted with the pale yellow moon. The other was fair, as fair as can be, with great masses of golden hair and eyes like pale sapphires. I seemed somehow to know her face, and to know it in connection with some dreamy fear, but I could not recollect at the moment how or where. All three had brilliant white teeth that shone like pearls against the ruby of their voluptuous lips. There was something about them that made me uneasy, some longing and at the same time some deadly fear. I felt in my heart a wicked, burning desire that they would kiss me with those red lips. It is not good to note this down, lest some day it should meet Mina's eyes and cause her pain, but it is the truth. They whispered together, and then they all three laughed, such a silvery, musical laugh, but as hard as though the sound never could have come through the softness of human lips. It was like the intolerable, tingling sweetness of waterglasses when played on by a cunning hand. The fair girl shook her head coquettishly, and the other two urged her on.
+
+One said, "Go on! You are first, and we shall follow. Yours' is the right to begin."
+
+The other added, "He is young and strong. There are kisses for us all."
+
+I lay quiet, looking out from under my eyelashes in an agony of delightful anticipation. The fair girl advanced and bent over me till I could feel the movement of her breath upon me. Sweet it was in one sense, honey-sweet, and sent the same tingling through the nerves as her voice, but with a bitter underlying the sweet, a bitter offensiveness, as one smells in blood.
+
+I was afraid to raise my eyelids, but looked out and saw perfectly under the lashes. The girl went on her knees, and bent over me, simply gloating. There was a deliberate voluptuousness which was both thrilling and repulsive, and as she arched her neck she actually licked her lips like an animal, till I could see in the moonlight the moisture shining on the scarlet lips and on the red tongue as it lapped the white sharp teeth. Lower and lower went her head as the lips went below the range of my mouth and chin and seemed to fasten on my throat. Then she paused, and I could hear the churning sound of her tongue as it licked her teeth and lips, and I could feel the hot breath on my neck. Then the skin of my throat began to tingle as one's flesh does when the hand that is to tickle it approaches nearer, nearer. I could feel the soft, shivering touch of the lips on the super sensitive skin of my throat, and the hard dents of two sharp teeth, just touching and pausing there. I closed my eyes in languorous ecstasy and waited, waited with beating heart.
+
+But at that instant, another sensation swept through me as quick as lightning. I was conscious of the presence of the Count, and of his being as if lapped in a storm of fury. As my eyes opened involuntarily I saw his strong hand grasp the slender neck of the fair woman and with giant's power draw it back, the blue eyes transformed with fury, the white teeth champing with rage, and the fair cheeks blazing red with passion. But the Count! Never did I imagine such wrath and fury, even to the demons of the pit. His eyes were positively blazing. The red light in them was lurid, as if the flames of hell fire blazed behind them. His face was deathly pale, and the lines of it were hard like drawn wires. The thick eyebrows that met over the nose now seemed like a heaving bar of white-hot metal. With a fierce sweep of his arm, he hurled the woman from him, and then motioned to the others, as though he were beating them back. It was the same imperious gesture that I had seen used to the wolves. In a voice which, though low and almost in a whisper seemed to cut through the air and then ring in the room he said,
+
+"How dare you touch him, any of you? How dare you cast eyes on him when I had forbidden it? Back, I tell you all! This man belongs to me! Beware how you meddle with him, or you'll have to deal with me."
+
+The fair girl, with a laugh of ribald coquetry, turned to answer him. "You yourself never loved. You never love!" On this the other women joined, and such a mirthless, hard, soulless laughter rang through the room that it almost made me faint to hear. It seemed like the pleasure of fiends.
+
+Then the Count turned, after looking at my face attentively, and said in a soft whisper, "Yes, I too can love. You yourselves can tell it from the past. Is it not so? Well, now I promise you that when I am done with him you shall kiss him at your will. Now go! Go! I must awaken him, for there is work to be done."
+
+"Are we to have nothing tonight?" said one of them, with a low laugh, as she pointed to the bag which he had thrown upon the floor, and which moved as though there were some living thing within it. For answer he nodded his head. One of the women jumped forward and opened it. If my ears did not deceive me there was a gasp and a low wail, as of a half smothered child. The women closed round, whilst I was aghast with horror. But as I looked, they disappeared, and with them the dreadful bag. There was no door near them, and they could not have passed me without my noticing. They simply seemed to fade into the rays of the moonlight and pass out through the window, for I could see outside the dim, shadowy forms for a moment before they entirely faded away.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

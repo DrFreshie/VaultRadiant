@@ -1,0 +1,343 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage{geometry}
+	\usepackage{pdfpages}
+	
+	
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	%\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\titlespacing*{\subsubsection}{0pt}{\baselineskip}{-1\baselineskip} % use \subsubsection*{} for a baselineskip with noindent afterwards
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+			
+			
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{The Hollow Men\\\footnotesize Mistah Kurtz - he dead.}
+\date{\vspace{-3em}} % I tilfældet ingen dato
+%\date{1907}
+\author{T.S. Eliot\\\mbox{}\hspace{3cm}}
+\maketitle
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=140pt,xshift=-10pt]%
+        at (current page.north west)
+        {\includegraphics[scale=0.4]{HG_logo.PNG}};
+    \end{tikzpicture}
+
+\begin{multicols}{2}
+\hspace{2cm}\emph{A Penny for the Old Guy}
+
+\hbox{}\hspace{1cm}\linenumbers \textbf{I}
+
+We are the hollow men\\
+We are the stuffed men\\
+Leaning together\\
+Headpiece filled with straw. Alas!\\
+Our dried voices, when\\
+We whisper together\\
+Are quiet and meaningless\\
+As wind in dry grass\\
+Or rats’ feet over broken glass\\
+In our dry cellar\\
+
+Shape without form, shade without colour,\\
+Paralysed force, gesture without motion;\\
+
+Those who have crossed\\
+With direct eyes, to death’s other Kingdom\\
+Remember us—if at all—not as lost\\
+Violent souls, but only\\
+As the hollow men\\
+The stuffed men.\\
+
+\hspace{1cm}\textbf{II}
+
+Eyes I dare not meet in dreams\\
+In death’s dream kingdom\\
+These do not appear:\\
+There, the eyes are\\
+Sunlight on a broken column\\
+There, is a tree swinging\\
+And voices are\\
+In the wind’s singing\\
+More distant and more solemn\\
+Than a fading star.\\
+
+Let me be no nearer\\
+In death’s dream kingdom\\
+Let me also wear\\
+Such deliberate disguises\\
+Rat’s coat, crowskin, crossed staves\\
+In a field\\
+Behaving as the wind behaves\\
+No nearer—\\
+
+Not that final meeting\\
+In the twilight kingdom\\
+
+\hspace{1cm}\textbf{III}
+
+This is the dead land\\
+This is cactus land\\
+Here the stone images\\
+Are raised, here they receive\\
+The supplication of a dead man’s hand\\
+Under the twinkle of a fading star.\\
+
+Is it like this\\
+In death’s other kingdom\\
+Waking alone\\
+At the hour when we are\\
+Trembling with tenderness\\
+Lips that would kiss\\
+Form prayers to broken stone.\\
+
+\hspace{1cm}\textbf{IV}
+
+The eyes are not here\\
+There are no eyes here\\
+In this valley of dying stars\\
+In this hollow valley\\
+This broken jaw of our lost kingdoms\\
+
+In this last of meeting places\\
+We grope together\\
+And avoid speech\\
+Gathered on this beach of the tumid river\\
+
+Sightless, unless\\
+The eyes reappear\\
+As the perpetual star\\
+Multifoliate rose\\
+Of death’s twilight kingdom\\
+The hope only\\
+Of empty men.\\
+
+\hspace{1cm}\textbf{V}
+
+\emph{Here we go round the prickly pear\\
+Prickly pear prickly pear\\
+Here we go round the prickly pear\\
+At five o’clock in the morning.\\}
+
+Between the idea\\
+And the reality\\
+Between the motion\\
+And the act\\
+Falls the Shadow\\
+\mbox{}\hspace{2cm}\emph{For Thine is the Kingdom}
+
+Between the conception\\
+And the creation\\
+Between the emotion\\
+And the response\\
+Falls the Shadow\\
+\mbox{}\hspace{2cm}\emph{Life is very long}
+
+Between the desire\\
+And the spasm\\
+Between the potency\\
+And the existence\\
+Between the essence\\
+And the descent\\
+Falls the Shadow\\
+\mbox{}\hspace{2cm}\emph{For Thine is the Kingdom}
+
+For Thine is\\
+Life is\\
+For Thine is the\\
+
+\emph{This is the way the world ends\\
+This is the way the world ends\\
+This is the way the world ends\\
+Not with a bang but a whimper.}
+	
+\end{multicols}
+
+\clearpage
+
+\subsection{Pre-reading}
+\begin{itemize}
+\item What emotions or images come to mind when you think of the term \qm{hollow}? How might this relate to the poem's themes?
+\item Based on what you know about Modernism, what themes or stylistic features do you expect to find in \qm{The Hollow Men}?
+\item Consider the historical context of post-WWI Europe. How might the social and cultural atmosphere of the time influence the poem's tone and content?
+\item Eliot often uses symbolism and allusion in his work. Keep an eye out for symbols that might represent broader themes of disillusionment, fragmentation, or the search for meaning. As an example, find out who the \qm{Old Guy} is in the epigraph.
+\item How do you think \qm{The Hollow Men} might reflect Eliot's view of humanity and society at the time?
+\end{itemize}
+
+\clearpage
+
+\subsection{Post-reading}
+\begin{itemize}
+\item Why are the figures figures described as \qm{hollow}? What does their emptiness symbolise about society or humanity?
+\item Identify and analyse the imagery of desolation and decay in the poem. How do these images contribute to the overall mood and themes?
+\item "Eyes" are a recurring motif in the poem. Note each occurrence and discuss what they might represent.
+\item Eliot frequently employs contrasts and paradoxes (e.g., between life and death, presence and absence). Find examples of these and analyse how they deepen the poem's exploration of existential themes.
+\item Pay attention to the poem's structure and form, including its division into parts and its use of repetition and variation. How does the fragmented form reflect the themes of fragmentation and disconnection in the poem?
+\item Consider the tone and voice of the poem (funny, sad, optimistic, pessimistic, ironic, sarcastic, factual, etc.). How would you describe the speaker's attitude toward the world he describes? How does the tone contribute to your understanding of the poem's themes?
+\item Reflect on the poem's conclusion. What significance do you find in the way the poem ends? How does this ending encapsulate the themes and emotions of the entire poem?
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

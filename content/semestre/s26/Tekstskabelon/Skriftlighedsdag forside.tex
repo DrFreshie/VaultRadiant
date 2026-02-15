@@ -1,0 +1,134 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\mysectionfont[Numbers=OldStyle]{Klavika light}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{pdfpages}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{“#1”}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{center}\mysectionfont\Huge\color{hgblue}}
+	\posttitle{\end{center}}
+	\preauthor{\begin{center}\mysectionfont\Large\color{hgblue}}
+	\postauthor{\end{center}}
+	\predate{\begin{center}\mysectionfont}
+	\postdate{\end{center}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+
+%\pagecolor{FloralWhite}
+\title{Written Assignment}
+%\date{\vspace{-5em}} % I tilfældet ingen dato
+\date{Spring, 2023}
+\author{Horror}
+\maketitle
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-15pt,xshift=-45pt]%
+       at (current page.north east)
+        {\includegraphics[scale=0.1]{HG_logo_navn.PNG}};
+    \end{tikzpicture}
+
+\thispagestyle{empty}
+
+\vspace{-4em}
+
+\begin{center}
+{\color{hgblue}\rule{1\textwidth}{1pt}}
+\end{center}
+
+\subsection{Assignment – Short Story (Fiction)}
+Write a short horror story (600-800 words) that includes the following elements:
+
+\begin{itemize}
+\item Something \qm{uncanny}.
+\item Foreshadowing.
+\item A character whose personality is both shown (indirect characterisation) and told (direct characterisation).
+\end{itemize}
+
+Additional guidelines:
+\begin{itemize}
+\item Think about the tone of your short story, and try to use descriptive language to match that tone.
+\item Try to add unique elements to your story that will make it stand out from other horror stories.
+\item Think about whether your story is an exploration of one overall theme, and try to include lines that make this theme as clear as possible.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+\subsection{Assignment – Short Story (Fiction)}
+Write an analytical essay on Haruki Murakami’s short story \qm{On Seeing the 100\% Perfect Girl One Beautiful April Morning}.
+
+Part of your essay must focus on the effect of the short story's preoccupation with dream and reality. It should also include:
+\begin{itemize}
+\item A \textit{characterisation} of the main character.
+\item An intepretation of the short story's \textit{theme} and \textit{message}.
+\end{itemize}
+
+Your essay must include references to the short story.
+
+\includepdf[pages=1-]{On Seeing....pdf}

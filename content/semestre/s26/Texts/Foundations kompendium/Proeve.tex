@@ -1,0 +1,35 @@
+\documentclass{book}
+\usepackage{titlesec}
+\usepackage{lipsum} % This package is just for adding example text
+
+\newcommand{\customtitle}[3]{
+    \begin{titlepage}
+        \centering
+        \vspace*{1cm}
+        \Huge\textbf{#1} % Title
+        \vspace{0.5cm}
+        
+        \LARGE #2 % Subtitle or description
+        
+        \vfill
+        
+        \Large #3 % Author or any other text
+        
+        \vspace{0.8cm}
+        
+        \Large \today % Date or you can specify a date
+    \end{titlepage}
+}
+
+\begin{document}
+
+\customtitle{Title of Text One}{Subtitle or Description}{Author Name}
+\chapter{Text One}
+\lipsum[1-3] % Replace this with your actual text content
+
+\customtitle{Title of Text Two}{Another Description}{Another Author}
+\chapter{Text Two}
+\lipsum[4-6] % Replace this with your actual text content
+
+\end{document}
+

@@ -1,0 +1,272 @@
+\documentclass[10pt,a5paper,twoside]{book}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+	
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{World War Z\subtitle{excerpt I}}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2006}
+\author{Max Brooks}
+
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+
+
+\chapter*{}    
+\noindent\linenumbers 
+
+It was just a trickle at first, ones and twos staggering between the abandoned cars that jammed the deserted freeway. At least the refugees had been evacuated. Okay, that was another thing they did right. Picking a choke point and clearing the civilians, great job. Everything else ...
+
+Zack started entering the first kill zone, the one designated for the MLRS. I didn't hear the rockets launch, my hood muffled the noise, but I saw them streak toward the target. I saw them arch on their way down, as their casings broke away to reveal all those little bomblets on plastic streamers. They're about the size of a hand grenade, antipersonnel with a limited antiarmor capacity. They scattered amongst the Gs, detonating once they hit the road or an abandoned car. Their gas tanks went up in like little volcanoes, geysers of fire and debris that added to the "steel rain." I got to be honest, it was a rush, dudes were cheering in their mikes, me too, watching ghouls start to tumble. I'd say there were maybe thirty, maybe forty or fifty, zombies spread out all across this half mile stretch of freeway. The opening bombardment took out at least three-quarters of them.
+
+\textbf{Only three-quarters.}
+
+[Todd finishes his cigarette in one long, angry drag. Immediately, he reaches for another.]
+
+Yep, and that's what should have made us worry right then and there. "Steel rain" hit each and every single one of them, shredded their insides; organs and flesh were scattered all over the damn place, dropping from their bodies as they came toward us ... but head shots ... you're trying to destroy the brain, not the body, and as long as they got a working thinker and some mobility ... some were still walking, others too thrashed to stand were crawling. Yeah, we should have worried, but there wasn't time.
+
+The trickle was now turning into a stream. More Gs, dozens now, thick among the burning cars. Funny thing about Zack ... you always think he's gonna be dressed in his Sunday best. That's how the media portrayed them, right, especially in the beginning ... Gs in business suits and dresses, like, a cross section of everyday America, only dead. That's not what they looked like at all. Most infected, the early infected, the ones who went in that first wave, they either died under treatment or at home in their own beds. Most were either in hospital gowns, or pajamas and nightshirts. Some were in sweats or their undies ... or just naked, a lot of them completely buck bare. You could see their wounds, the dried marks on their bodies, the gouges that made you shiver even inside that sweltering gear.
+
+The second "steel rain" didn't have half the impact of the first, no more gas tanks to catch, and now the more tightly packed Gs just happened to be shielding each other from a possible head wound. I wasn't scared, not yet. Maybe my wood was gone, but I was pretty sure it'd be back when Zack entered the Army's kill zone.
+
+Again, I couldn't hear the Paladins, too far back up the hill, but I sure heard, and saw, their shells land. These were standard HE 155s, a high explosive core with a fragmentation case. They did even less damage than the rockets!
+
+\textbf{Why is that?}
+
+No balloon effect for one. When a bomb goes off close to you, it causes the liquid in your body to burst, literally, like a freakin' balloon. That doesn't happen with Zack, maybe because he carries less bodily fluid than us or because that fluid's more like a gel. I don't know. But it didn't do shit, neither did the SNT effect.
+
+\textbf{What is SNT?}
+
+Sudden Nerve Trauma, I think that's what you call it. It's another effect of close-in high explosives. The trauma is so great sometimes that your sometimes that your organs, your brain, all of it, just shuts down like God flickin' your life switch. Something to do with electrical impulses or whatnot. I don't know, I'm not a fuckin' doctor.
+
+\textbf{But that didn't happen.}
+
+Not once! I mean ... don't get me wrong ... it's not like Zack just skipped through the barrage unscathed. We saw bodies blown to shit, tossed into the air, ripped to pieces, even complete heads, live heads with eyes and jaws still moving, popping sky high like freakin' Cristal corks ... we were taking them down, no doubt, but not as many or as fast as we needed to!
+
+The stream was now like a river, a flood of bodies, slouching, moaning, stepping over their mangled bros as they rolled slowly and steadily toward us like a slow-motion wave.
+
+The next kill zone was direct fire from the heavy arms, the tank's main 120s and Bradleys with their chain guns and FOTT missiles. The Humvees also began to open up, mortars and missiles and the Mark-19s, which are, like, machine guns, but firing grenades. The Comanches came whining in at what felt like inches above our heads with chains and Hellfires and Hydra rocket pods.
+
+It was a fucking meat grinder, a wood chipper, organic matter clouding like sawdust above the horde.
+
+Nothing can survive this, I was thinking, and for a little while, it looked like I was right ... until the fire started to die.
+
+\textbf{Started to die?}
+
+Petering out, withering…
+
+[For a second he is silent, and then, angrily, his eyes refocus.]
+
+No one thought about it, no one! Don't pull my pud with stories about budget cuts and supply problems! The only thing in short supply was common fucking sense! Not one of those West Point, War College, medals-up-the-ass, four-star fart bags said, "Hey, we got plenty of fancy weapons, we got enough shit for them to shoot!?!" No one thought about how many rounds the artillery would need for sustained operations, how many rockets for the MLRS, how many canister shots ... the tanks had these things called canister shots ... basically a giant shotgun shell. They fired these little tungsten balls ... not perfect you know, wasting like a hundred balls for every G, but fuck, dude, at least it was something! Each Abrams only had three, three! Three out of a total loadout of forty! The rest were standard HEAT or SABOT! Do you know what a "Silver Bullet," an armor-piercing, depleted-uranium dart is going to do to a group of walking corpses? Nothing! Do you know what it feels like to see a sixty-something-ton tank fire into a crowd with absolutely ass-all result! Three canister rounds! And what about flechettes? That's the weapon we always hear about these days, flechettes, these little steel spikes that turn any weapon into an instant scattergun. We talk about them like they're a new invention, but we had them as far back as, like, Korea. We had them for the Hydra rockets and the Mark-19s. Just imagine that, just one 19 firing three hundred and fifty rounds a minute, each round holding, like, a hundred spikes! Maybe it wouldn't have turned the tide ... but ... Goddammit!
+
+The fire was dying, Zack was still coming ... and the fear ... everyone was feeling it, in the orders from the squad leaders, in the actions of the men around me ... That little voice in the back of your head that just keeps squeaking "Oh shit, oh shit."
+
+We were the last line of defense, the afterthought when it came to firepower. We were supposed to pick off the random lucky G who happened to slip through the giant bitchslap of our heavier stuff. Maybe one in three of us was expected to fire his weapon, one in every ten was expected to score a kill.
+
+They came by the thousands, spilling out over the freeway guardrails, down the side streets, around the houses, through them ... so many of them, their moans so loud they echoed right through our hoods.
+
+We flipped our safeties off, sighted our targets, the order came to fire ... I was a SAW gunner, a light machine gun that you're supposed to fire in short, controlled bursts about as long as it takes to say "Die motherfucker die.” The initial burst was too low. I caught one square in the chest. I watched him fly backward, hit the asphalt, then get right back up again as if nothing had happened. Dude .. . when they get back up ...
+
+[The cigarette has burned down to his fingers. He drops and crushes it without noticing.]
+
+I did my best to control my fire, and my sphincter. "Just go for the head," I kept telling myself. "Keep it together, just go for the head." And all the time my SAW's chattering "Die motherfucker die."
+
+We could have stopped them, we should have, one guy with a rifle, that's all you need, right? Professional soldiers, trained marksmen ... how could they get through? They still ask that, critics and armchair Pattons who weren't there. You think it's that simple? You think that after being "trained" to aim for the center mass your whole military career you can suddenly make an expert head shot every time? You think in that straitjacket and suffocation hood it's easy to recharge a clip or clear a weapon jam? You think that after watching all the wonders of modern warfare fall flat on their high-tech hyper ass, that after already living through three months of the Great Panic and watching everything you knew as reality be eaten alive by an enemy that wasn't even supposed to exist that you're gonna keep a cool fucking head and a steady fucking trigger finger?
+
+[He stabs that finger at me.]
+
+Well, we did! We still managed to do our job and make Zack pay for every fuckin' inch! Maybe if we'd had more men, more ammo, maybe if we'd just been allowed to focus on our job ...
+
+[His finger curls back into his fist.]
+
+Land Warrior, high-tech, high-priced, high-profile netro-fucking-centric Land Warrior. To see what was in front of our face was bad enough, but spybird uplinks were also showing how truly large the horde was. We might be facing thousands, but behind them were millions! Remember, we were taking on the bulk of New York City's infestation! This was only the head of one really long undead snake stretching all the way back to Times Fuckin' Square! We didn't need to see that. I didn't need to know that! That little scared voice wasn't so little anymore. "Oh shit, OH SHIT!" And suddenly it wasn’t in my head anymore. It was in my earpiece. Every time some jerkoff couldn't control his mouth, Land Warrior made sure the rest of us heard it. "There's too many!" "We gotta get the fuck outta here!" Someone from another platoon, I didn't know his name, started hollering "I hit him in the head and he didn't die! They don't die when you shoot them in the head!" I'm sure he must have missed the brain, it can happen, a round just grazing the inside of the skull ... maybe if he'd been calm and used his own brain, he would have realized that. Panic's even more infectious than the Z Germ and the wonders of Land Warrior allowed that germ to become airborne. “What?" "They don't die?” "Who said that?" "You shot it in the head!" "Holy crap! They're indestructible!" All over the net you could hear this, browning shorts across the info superhighway.
+
+"Everyone pipe down!" someone shouted. "Hold the line! Stay off the net!" an older voice, you could tell, but suddenly it was drowned out in this scream and suddenly my eyepiece, and I'm sure everyone else's, was filled with the sight of blood spurting into a mouth of broken teeth. The sight was from a dude in the yard of a house behind the line. The owners must have left a few reanimated family members locked in when they bugged out. Maybe the shock from the explosions weakened the door or something, because they came bursting out, right into this poor bastard. His gun camera recorded the whole thing, fell right at the perfect angle. There were five of them, a man, a woman, three kids, they had him pinned on his back, the man was on his chest, the kids had him by the arms, trying to bite through his suit. The woman tore his mask off, you could see the terror in his face. I'll never forget his shriek as she bit off his chin and lower lip. "They're behind us!" someone was shouting. "They're coming out of the houses! The line's broken! They're everywhere!" Suddenly the image went dark, cut off from an external source, and the voice, the older voice, was back again ... "Stay off the net!" he ordered, trying real hard to control his voice and then the link went dead.
+
+I'm sure it must have taken more than a few seconds, it had to, even if they'd been hovering above our heads, but, it seemed like right after the communications line blacked out that the sky was suddenly screaming with JSFs. ”I didn't see them release their ordnance. I was at the bottom of my hole cursing the army and God, and my own hands for not digging deeper. That ground shook, the sky went dark. Debris was everywhere, earth and ash and burning whatever flying above my head. I felt this weight slam between my shoulder blades, soft and heavy. l rolled over, it was a head and torso, all charred black and still smoking and still trying to bite! I kicked it away and scrambled out of my hole seconds after the last of the JSOW fell.
+
+I found myself staring into this cloud of black smoke where the horde had been. The freeway, the houses, everything was covered by this midnight cloud. I vaguely remember other guys getting out of their holes, hatches opening on tanks and Bradleys, everyone just staring into the darkness. There was a quiet, a stillness that, in my mind, lasted for hours.
+
+And then they came, right out of the smoke like a freakin' little kid's nightmare! Some were steaming, some were even still burning ... some were walking, some crawling, some just dragging themselves along on their torn bellies ... maybe one in twenty was still able to move, which left ... shit ... a couple thousand? And behind them, mixing with their ranks and pushing steadily toward us, the remaining million that the air strike hadn't even touched!
+
+And that was when the line collapsed. I don't remember it all at once. I see these flashes: people running, grunts, reporters. I remember a newsman with a big Yosemite Sam mustache trying to pull a Beretta from his vest before three burning Gs pulled him down ... I remember a dude forcing open the door of a news van, jumping in, throwing out a pretty blond reporter, and trying to drive away before a tank crushed them both. Two news choppers crashed together, showering us with their own steel rain. One Comanche driver ... brave, beautiful motherfucker ... tried to turn his rotor into the oncoming Gs. The blade diced a path right down their mass before catching on a car and hurling him into the A\&P. Shooting ... crazy random shooting ... I took a round in the sternum, in my armor's center plate. I felt like I'd run into a wall, even though l'd been standing still. It knocked me on my ass, I couldn't breathe, and just then some dumbass lobbed a flash bang right in front of me.
+
+The world was white, my ears were ringing. I froze ... hands were clawing me, grabbing my arms. I kicked and punched, I felt my crotch get warm and wet. I shouted but couldn't hear my own voice. More hands, stronger, were trying to haul me somewhere. Kicking, squirming, cursing, crying ... suddenly a fist clocked me in the jaw. It didn't knock me out, but I was suddenly relaxed. These were my buddies. Zack don't punch. They dragged me into the closest Bradley. My vision cleared just long enough to see the line of light vanish with the closing hatch.
+
+[He reaches for another Q, then abruptly decides against it.]
+
+I know "professional" historians like to talk about how Yonkers represented a "catastrophic failure of the modem military apparatus," how it proved the old adage that armies perfect the art of fighting the last war just in time for the next one. Personally, I think that's a big 'ole sack of it. Sure, we were unprepared, our tools, our training, everything I just talked about, all one class-A, gold-standard clusterfuck, but the weapon that really failed wasn't something that rolled off an assembly line. It's as old as ... I don't know, I guess as old as war. It's fear, dude, just fear and you don't have to be Sun freakin Tzu to know that real fighting isn't about killing or even hurting the other guy, it's about scaring him enough to call it a day. Break their spirit, that's what every successful army goes for, from tribal face paint to the "blitzkrieg" to ... what did we call the first round of Gulf War Two, "Shock and Awe"? Perfect name, "Shock and Awe"! But what if the enemy can't be shocked and awed? Not just won't, hut biologically can't! That's what happened that day outside New York City, that's the failure that almost lost us the whole damn war. The fact that we couldn't shock and awe Zack boomeranged right back in our faces and actually allowed Zack to shock and awe us! They're not afraid. No matter what we do, no matter how many we kill, they will never, ever be afraid!\source{World War Z: An Oral History og the Zombie War, © 2006. Reprinted by kind permission of Max Brooks.}{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

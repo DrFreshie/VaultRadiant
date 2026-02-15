@@ -1,0 +1,170 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\mysectionfont[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	%\usepackage{ulem}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\mysectionfont\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{The Consequences of Texas' Restrictive Abortion Law}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{February 17, 2022}
+\author{{\normalsize Heard on:}\\All Things Considered}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{2}
+\linenumbers
+$\left[\ldots\right]$ NPR's Wade Goodwyn reports, in Texas, a woman's opportunity to get an abortion has already changed. For the tens of thousands of Texas women who seek an abortion every year, access has been cut at least in half.
+
+WADE GOODWYN, BYLINE: Twenty-one-year-old Mady - not her full name - is a junior at a well-known Houston university who accidentally got pregnant last year.
+
+MADY: When I initially found out that I was pregnant, I was like, I cannot have a kid right now. Like, I cannot do that.
+
+GOODWYN: Mady decided to get an abortion, which would have been legal in any state, except one - Texas. Last year, the Republican-dominated legislature passed a new law which gives a woman in Texas not the standard 23 or 24 weeks, but approximately six weeks to get an abortion after conception - and that includes in cases of rape and incest.
+Mady was already past her six-week deadline. And to her dismay, she discovered that the clinics that provide abortions in the state surrounding Texas were, not surprisingly, booked for weeks with Texas women. She had no choice but to wait more than a month.
+
+MADY: So I drove all the way to Mississippi through the night with my father. And then after the initial visit, they're like, you can come in on this day at this time next week. And so right after my appointment, we turned around and drove back to Texas.
+
+GOODWYN: Mady says they were exhausted. So after Mississippi's week-long waiting period, she and her mom flew back to the state for her abortion. The total cost when all was said and done - nearly \$2,000, a sum that could be easily too high for poor and working-class women. Texas doesn't allow public or private insurance companies to cover abortion.
+The new abortion law went into effect on September 1, and thousands of women have been affected. For context, take 2019, for example - more than 56,000 Texas women got an abortion that year.
+
+AMNA DERMISH: What we really don't know at this point is how many of those are actually able to seek care out of state and how many are forced to continue their pregnancy against their will.
+
+GOODWYN: Dr. Amna Dermish is an OB-GYN and a regional medical director at Planned Parenthood in Austin. The new law translates into thousands of Texas women each month unable to get the abortion they want in state. Dermish complains there's often not enough time to get an abortion, even if women confirm they're pregnant two to three weeks after a missed period.
+
+DERMISH: Even then, if she were to have a positive pregnancy test, she barely has a week and a half to find a clinic, undergo a 24-hour waiting period and then have access to an abortion.
+
+GOODWYN: Dermish says Texas has also limited pregnant women's access to abortion pills. This law became active in December, and it bans sending abortion pills through the mail. It limits the opportunity to get pills in Texas to just seven weeks after pregnancy, not the nine to 11 weeks available in other states.
+
+JOHN SEAGO: We are actually, in Texas, getting a glimpse of what a post-Roe world will look like. We are experiencing close to an abortion-free state, and that has never happened since 1973.
+
+GOODWYN: John Seago is the legislative director for the anti-abortion rights organization Texas Right to Life. The Texas Legislature has managed to circumvent Roe v. Wade\footnotes{Roe v. Wade, (1973), was a landmark decision of the U.S. Supreme Court in which the Court ruled that the Constitution of the United States grants the right to have an abortion. The decision struck down many federal and state abortion laws, and caused an ongoing abortion debate in the United States about whether, or to what extent, abortion should be legal. In June 2022, the Supreme Court overruled Roe in Dobbs v. Jackson Women's Health Organization, now holding that the Constitution of the United States does \emph{not} confer a right to abortion.} because its new law takes the state out of it. Instead, it allows any American to sue anyone who, quote, "aids and abets a woman to get an abortion in Texas after her roughly six-week window is up."
+With the 5th Circuit Court of Appeals and the U.S. Supreme Court so far refusing to intervene, abortion in the Lone Star State has dramatically diminished by at least half, according to UT's Texas Policy Evaluation Project study. Texas Right to Life leader John Seago and other anti-abortion rights activists celebrate that Texas will likely be the role model for many other Republican states.
+
+SEAGO: Texas is a lot more prepared to support women and create a pro-life state, not just an abortion-free state. Adoption agencies, pregnancy centers, maternity homes, parenting classes - things to help women succeed rather than just saying her only option is to take the life of her child.
+
+GOODWYN: Texas has a state program called Alternatives to Abortion, which will receive \$100 million over the next two years. The money goes to anti-abortion nonprofits. The program, by far the biggest in any state, doesn't track how many women it convinces not to get an abortion. Texas Democrats have complained about the lack of oversight. After half a century of abortion rights in America, Julie Murray, the senior staff attorney for Planned Parenthood Federation, believes the times - they are a-changing. [\ldots]
+Wade Goodwyn, NPR News, Dallas.\footnote{Source: \href{https://www.npr.org/2022/02/17/1081570852/the-consequences-of-texas-restrictive-abortion-law}{https://www.npr.org/2022/02/17/1081570852/the-consequences-of-texas-restrictive-abortion-law}}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=south east,yshift=10pt,xshift=94pt]%
+       at (current page.south east)
+        {\includegraphics[scale=0.3]{HG_logo.PNG}};
+    \end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

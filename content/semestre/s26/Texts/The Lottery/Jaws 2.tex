@@ -1,0 +1,226 @@
+\documentclass[10pt,a5paper,twoside]{book}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[2]{\footnote{Source: \href{#2}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+	
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Jaws\subtitle{part 1, chapter 1}}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1974}
+\author{Peter Benchley}
+
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+
+
+\chapter*{}    
+\noindent\linenumbers The great fish moved silently through the night water, propelled by short sweeps of its crescent tail. The mouth was open just enough to permit a rush of water over the gills. There was little other motion: an occasional correction of the apparently aimless course by the slight raising or lowering of a pectoral fin - as a bird changes direction by dipping one wing and lifting the other. The eyes were sightless in the black, and the other senses transmitted nothing extraordinary to the small, primitive brain. The fish might have been asleep, save for the movement dictated by countless millions of years of instinctive continuity: lacking the flotation bladder common to other fish and the fluttering flaps to push oxygen-bearing water through its gills, it survived only by moving. Once stopped, it would sink to the bottom and die of anoxia. The land seemed almost as dark as the water, for there was no moon. All that separated sea from shore was a long, straight stretch of beach - so white that it shone. From a house behind the grass-splotched dunes, lights cast yellow glimmers on the sand. The front door to the house opened, and a man and a woman stepped out onto the wooden porch. They stood for a moment staring at the sea, embraced quickly, and scampered down the few steps onto the sand. The man was drunk, and he stumbled on the bottom step. The woman laughed and took his hand, and together they ran to the beach.
+
+"First a swim," said the woman, "to clear your head."
+
+"Forget my head," said the man. Giggling, he fell backward onto the sand, pulling the woman down with him. They fumbled with each other's clothing, twined limbs around limbs, and thrashed with urgent ardor on the cold sand. Afterward, the man lay back and closed his eyes. The woman looked at him and smiled. "Now, how about that swim?" she said.
+
+"You go ahead. I'll wait for you here."
+
+The woman rose and walked to where the gentle surf washed over her ankles. The water was colder than the night air, for it was only mid-June. The woman called back, "You're sure you don't want to come?" But there was no answer from the sleeping man.
+
+She backed up a few steps, then ran at the water. At first her strides were long and graceful, but then a small wave crashed into her knees. She faltered, regained her footing, and flung herself over the next waist-high wave. The water was only up to her hips, so she stood, pushed the hair out of her eyes, and continued walking until the water covered her shoulders. There she began to swim - with the jerky, head-above-water stroke of the untutored.
+
+A hundred yards offshore, the fish sensed a change in the sea's rhythm. It did not see the woman, nor yet did it smell her. Running within the length of its body were a series of thin canals, filled with mucus and dotted with nerve endings, and these nerves detected vibrations and signaled the brain. The fish turned toward shore.
+
+The woman continued to swim away from the beach, stopping now and then to check her position by the lights shining from the house. The tide was slack, so she had not moved up or down the beach. But she was tiring, so she rested for a moment, treading water, and then started for shore.
+
+The vibrations were stronger now, and the fish recognized prey. The sweeps of its tail quickened, thrusting the giant body forward with a speed that agitated the tiny phosphorescent animals in the water and caused them to glow, casting a mantle of sparks over the fish.
+
+The fish closed on the woman and hurtled past, a dozen feet to the side and six feet below the surface. The woman felt only a wave of pressure that seemed to lift her up in the water and ease her down again. She stopped swimming and held her breath.
+
+Feeling nothing further, she resumed her lurching stroke.
+
+The fish smelled her now, and the vibrations - erratic and sharp - signaled distress. The fish began to circle close to the surface. Its dorsal fin broke water, and its tail, thrashing back and forth, cut the glassy surface with a hiss. A series of tremors shook its body.
+
+For the first time, the woman felt fear, though she did not know why. Adrenaline shot through her trunk and her limbs, generating a tingling heat and urging her to swim faster. She guessed that she was fifty yards from shore. She could see the line of white foam where the waves broke on the beach. She saw the lights in the house, and for a comforting moment she thought she saw someone pass by one of the windows.
+
+The fish was about forty feet from the woman, off to the side, when it turned suddenly to the left, dropped entirely below the surface, and, with two quick thrusts of its tail, was upon her.
+
+At first, the woman thought she had snagged her leg on a rock or a piece of floating wood. There was no initial pain, only one violent tug on her right leg. She reached down to touch her foot, treading water with her left leg to keep her head up, feeling in the blackness with her left hand. She could not find her foot. She reached higher on her leg, and then she was overcome by a rush of nausea and dizziness. Her groping fingers had found a hub of bone and tattered flesh. She knew that the warm, pulsing flow over her fingers in the chill water was her own blood.
+
+Pain and panic struck together. The woman threw her head back and screamed a guttural cry of terror.
+
+The fish had moved away. It swallowed the woman's limb without chewing.
+
+Bones and meat passed down the massive gullet in a single spasm. Now the fish turned again, homing on the stream of blood flushing from the woman's femoral artery, a beacon as clear and true as a lighthouse on a cloudless night. This time the fish attacked from below. It hurtled up under the woman, jaws agape. The great conical head struck her like a locomotive, knocking her up out of the water. The jaws snapped shut around her torso, crushing bones and flesh and organs into a jelly. The fish, with the woman's body in its mouth, smashed down on the water with a thunderous splash, spewing foam and blood and phosphorescence in a gaudy shower.
+
+Below the surface, the fish shook its head from side to side, its serrated triangular teeth sawing through what little sinew still resisted. The corpse fell apart. The fish swallowed, then turned to continue feeding. Its brain still registered the signals of nearby prey. The water was laced with blood and shreds of flesh, and the fish could not sort signal from substance. It cut back and forth through the dissipating cloud of blood, opening and closing its mouth, seining for a random morsel. But by now, most of the pieces of the corpse had dispersed. A few sank slowly, coming to rest on the sandy bottom, where they moved lazily in the current. A few drifted away just below the surface, floating in the surge that ended in the surf. The man awoke, shivering in the early morning cold. His mouth was sticky and dry, and his wakening belch tasted of Bourbon and corn. The sun had not yet risen, but a line of pink on the eastern horizon told him that daybreak was near. The stars still hung faintly in the lightening sky. The man stood and began to dress. He was annoyed that the woman had not woken him when she went back to the house, and he found it curious that she had left her clothes on the beach. He picked them up and walked to the house.\source{AWS by Peter Benchley; copyright © 1974, renewed 2002, Benchley IP, LLC. PETER BENCHLEY® is a registered US trademark}{https://horror.systime.dk/}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

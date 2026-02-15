@@ -1,0 +1,796 @@
+\documentclass[10pt,a4paper]{book}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[switch,modulo,pagewise]{lineno}
+	\usepackage{geometry}
+	\usepackage{setspace}
+	\usepackage{verse}
+	\usepackage{scrextend} % For labeling
+	\usepackage{etoolbox} % For hooks and custom commands
+	\usepackage{tcolorbox} % For creating custom boxes
+	
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	% Set the margin widths
+	\setlength{\marginparwidth}{2cm} % Width of the margin notes
+	\setlength{\marginparsep}{1cm} % Separation between the main text and the margin notes
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	\newcommand{\suftitle}[1]{\Large\klavl\textsc{#1} \vspace{10pt}\newline \fontsize{36pt}{44pt}\klav\color{hgblue}}
+	
+	\newtcolorbox{wordstoknowbox}{
+  colback=hggrey,
+  colframe=black,
+  width=0.9\textwidth,
+  boxrule=0.5pt,
+  arc=4pt,
+  auto outer arc,
+  boxsep=5pt,
+  left=5pt,
+  right=5pt,
+  top=5pt,
+  bottom=5pt
+}
+
+\newenvironment{wordstoknow}
+  {
+  \vspace{6em}
+    \begin{center}
+    \begin{wordstoknowbox}
+        \textit{\textbf{Words to Know and Use}}\\
+        \hrule
+        \vspace{0.3cm}
+        \begin{description}[style=nextline]
+  }
+  {
+        \end{description}
+    \end{wordstoknowbox}
+    \end{center}
+  }	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\titlespacing*{\subsubsection}{0pt}{\baselineskip}{-1\baselineskip} % use \subsubsection*{} for a baselineskip with noindent afterwards
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\fontsize{36pt}{44pt}\klav\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\large\klavl}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}
+		\begin{tikzpicture}[remember picture,overlay]
+			\node[opacity=1, anchor=north west,yshift=140pt,xshift=0pt]
+				at (current page.north west)
+			{\includegraphics[scale=0.4]{HG_logo.PNG}};
+		\end{tikzpicture}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\newcommand{\newentry}[3]{
+		\begingroup
+		\chapter*{
+		\nolinenumbers
+		\plantinc\color{hgblue} #1\\\Large\normalfont\color{black} #2\\\normalsize #3
+		}
+		\endgroup
+		%\noindent
+		%\setcounter{linenumber}{0}
+		%\internallinenumbers
+	}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{\suftitle{kompendium til gf i engelsk:}Foundations}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2024}
+\author{HELSINGØR GYMNASIUM}
+
+
+\maketitle
+
+\thispagestyle{empty}
+
+\newentry{English is the lingua franca of Europeans as two thirds speak
+the language which has squeezed out all its rivals
+	\subtitle{
+		\textbullet\ \ Two thirds of Europeans have at least working knowledge of English.\newline
+		\textbullet\ \ Not a single country where French was the preferred second language.\newline
+		\textbullet\ \ The dominance of English is likely to get greater.
+	}
+}{Steve Doughty}{2013}
+\linenumbers \noindent English has squeezed out every other language in the competition to become the common tongue of Europe, an EU report confirmed yesterday.
+
+It found that English is the most popular foreign language in all but five European countries, and all of those are small nations that use the language of their larger neighbours.
+
+Two out of three people across the continent have at least a fair working knowledge of English.
+
+Not one country can be found where the preferred second language is French, once the language of international diplomacy and still the vehicle by which French governments try to promote their influence abroad.
+
+French remains the European common language only in the offices of European institutions. It is one of the three working languages of the European Commission in Brussels, alongside English and German, and the main language of the European Court of Human Rights in Strasbourg, alongside English.
+
+The report published by the EU statistics arm Eurostat suggests that the dominance of English is likely to become even greater in the future.
+
+It found that 94 per cent of secondary school pupils and 83 per cent of primary age pupils across the EU are learning English as their first foreign language, more than four times as many as learn French, German or Spanish. Only in Britain and Ireland is French the top foreign language in schools.
+
+The findings raise a series of questions about the future of languages in the EU. They will deepen criticism of the way the EU spends an estimated £1 billion a year translating all of its documents into the 23 official languages of the bloc.
+
+The popularity of English also opens the prospect of a difficulty if Britain should quit the EU. That would leave Brussels running a union whose real common language would be spoken as a native tongue only by the 4.6 million people of the Irish Republic - fewer than one in 100 of its population.
+
+However, the swing towards English underlines the growing problem of the decline of language teaching in British schools and universities. It suggests the motivation for learning languages among native English speakers weakens when people can speak English wherever in the world they may go.
+
+The report said: ‘The importance of English as a foreign language is confirmed among working age adults. In the EU, English was declared to be the best-known language amongst the population aged 25 to 64.’ Two thirds of adults knew English, with one in five of these saying they were proficient, 35 per cent spoke it well, and 45 per cent reckoned they had a fair command of English.
+
+The findings, taken from the large-scale EU Adult Education Survey conducted in 2011, were published to mark the European Day of Languages, an event ‘to promote the rich linguistic and cultural diversity of Europe’ and to encourage language learning.
+
+English was best known in Denmark, where 94 per cent of people speak it, and least in Italy, where 60 per cent know some English but only one in 10 people consider themselves proficient.
+
+Other languages were more widely spoken only in Estonia, Latvia and Lithuania, neighbours of Russia and where there are many native Russian speakers, in Luxembourg, where German is an official language, and Slovakia, where many speak Czech.
+
+English was the main language taught in schools outside the British Isles everywhere but Luxembourg, where the EU says German is a foreign language.\source{https://www.dailymail.co.uk/news/article-2436051/English-lingua-franca-Europeans-thirds-speak-language-squeezed-rivals.html?printingPage=true}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newentry{Why I Left College, Twice\subtitle{And why I came back.}}{Rachael Seamands}{2017}
+\linenumbers \noindent When I graduated high school, the \glos{assumption}{antagelse}{sb.} was that I would spend the summer vacation preparing to head off to college.
+
+Whether or not I would go to school in the fall wasn’t a conversation. Both of my parents went to college, and my \glos{siblings}{søskende}{sb.} and I are lucky enough to have reaped the benefits of their education. That’s not to say that my parents didn’t support whichever path I chose to follow, but the path needed to include receiving a college education.
+
+My \glos{GPA}{Grade Point Average, karaktergennemsnit}{sb.} in high school wasn’t \glos{remarkable}{bemærkelsesværdig}{sb.}, and without my standardized testing scores I would have had a difficult time being accepted anywhere. Nevertheless, in August, I packed up and headed to Ohio to start working toward my bachelor’s \glos{degree}{universitetseksamen}{sb.}. I thought of it as a new start, and was excited to leave behind an average high school academic experience in favor of a more successful one in college.
+
+For the first couple of semesters, my enthusiasm kept me taking notes and studying for exams with my dorm mates and my eventual sorority sisters. I felt proud of myself, and I was achieving things that I never thought were possible for me. Sophomore year brought a whole new round of challenges; I was out of the wide, grassy meadow of introductory level courses and into the woods of more advanced ones. I felt old \glos{habits}{vane}{sb.} returning and let myself slip, clinging to the false hope that had guided me during high school – that I would figure it out \glos{eventually}{til sidst}{adv.}. Eventually, I had to drop out of college in Ohio and head home to Indiana to figure out whether or not college was right for me.
+
+Once again, I immediately signed up for classes at IUPUI. Come hell or high water, I would get my degree. Consequently, I didn’t work through my academic issues before biting the bullet and starting immediately at a different school. I was drowning again, and I realized I still had no idea how to swim.
+
+I left school after an especially bad semester and started working at a restaurant in my home town. Unsurprisingly, my family wasn’t \glos{thrilled}{begejstret}{adj.}, but they knew, before I did, that there were some lessons that I needed to learn for myself if I was going to return to complete my degree. I had dug myself a hole, and I couldn’t just keep digging. I had to look for another way to move forward.
+
+I hadn’t had a job when I was attending college, so the brand new influx of spending money was making me feel better already. Retail therapy and going out to eat with friends helped me ignore the sinking feeling in my gut about school. I had to pay rent, but I still had enough left over to keep myself busy. I told everyone that I didn’t need to go to school; I would just waitress for the rest of my life. The occasional twenty-five cent \glos{raises}{lønforhøjelse}{sb.} helped as well – who needed an education?
+
+In the food service industry, like it or not, you are treated with a certain level of \glos{degradation}{nedværdigelse}{sb.} by your customers. Some people talk to you like you can’t possibly understand more than the order they rattle off for you. The \glos{stigma}{skamplet}{sb.} associated with being a waiter followed me wherever I went, while my friends were heading off to study \glos{abroad}{udenlands}{adv.} and beginning \glos{internships}{praktik}{sb.} in their fields of study. I began to feel like I wanted something more for myself, and once that feeling set in, I started researching my choices for returning to school.
+
+One year after I had left, I started back at \glos{IUPUI}{Indiana University–Purdue University Indianapolis}{propr.} on academic probation and worked my butt off to raise my GPA as soon as possible. I kept repeating to myself that I was going to do everything it took this time, without taking shortcuts or cutting corners. I worked out a system with my parents wherein I would use the rent money from the past year to pay for my \glos{tuition}{undervisningsgebyr}{sb.}, and if I got good grades that semester, they would continue to pay for school. Now I had financial motivation as well, and it made a world of difference. Instead of wanting to get the degree because I was supposed to, I wanted the degree so badly that I couldn’t remember the mindset of the girl who started college before she was ready.
+
+Not everyone’s path has to include college. I know of several successful people who took different roads, including well-known names like Steve Jobs, Larry Ellison and Bill Gates. I don’t believe that whether or not you attend college defines how successful you will be in life. For me, going back to school and getting my degree hasn’t been about needing school to be successful; it’s been about proving to myself that I can accomplish what I thought I never could, and I am a better person for it.
+
+I’m a second semester junior at IUPUI, and I am in the midst of the most academically \glos{demanding}{krævende}{adj.} semester I’ve had thus far. After this, all of my classes will be in my area of study, creative writing, which I have grown to love and of which I am extremely proud. I have had a wonderful internship experience this semester, and I have opportunities awaiting me in the coming year that far \glos{exceed}{overgå}{vb.} the happiness I got from receiving a quarter raise every couple of months.
+
+I don’t regret the year I took off from school, because it was my first glimpse of what it’s like to live and work in the real world. I was taught the value of hard work and of self worth, which were two things that I hadn’t experienced during high school or my first attempt at college. I am working on my degree for myself, and that is a motivation that far outranks the expectations of others and the general standard by which my small-town society operates. Thinking you know what you are capable of, and then exceeding your own expectations, is a reward that \glos{fuels}{(her) booste}{vb.} your self-confidence and sets up a successful future that is truly worth fighting for.\source{https://studybreaks.com/college/college-6/}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newentry{Button, Button}{Richard Matheson}{1970}
+\linenumbers \noindent The package was lying by the front door-a cube-shaped carton sealed with tape, the name and address printed by hand: \textsc{mr. and mrs. arthur lewis, 217 e. 37th street, new york, new york 10016}. Norma picked it up, unlocked the door, and went into the apartment. It was just getting dark.
+
+After she put the lamb chops in the broiler, she made herself a drink and sat down to open the package.
+
+Inside the carton was a push-button unit fastened to a small wooden box. A glass dome covered the button. Norma tried to lift it off, but it was locked in place. She turned the unit over and saw a folded piece of paper Scotch-taped to the bottom of the box. She pulled it off: "Mr. Steward will call on you at eight p.m."
+
+Norma put the button unit beside her on the couch.
+
+She sipped the drink and reread the typed note, smiling.
+
+A few moments later, she went back into the kitchen to make the salad.
+
+The doorbell rang at eight o'clock. "I'll get it," Norma called from the kitchen. Arthur was in the living room, reading.
+
+There was a small man in the hallway. He removed his hat as Norma opened the door. "Mrs. Lewis?" he inquired politely.
+
+"Yes?"
+
+"I'm Mr. Steward."
+
+"Oh, yes." Norma repressed a smile; She was sure now it ,was a sales pitch.
+
+"May I come in?" asked Mr. Steward.
+
+"I'm rather busy," Norma said. "I'll get you your watchamacallit, though." She' started to turn. "Don't you want to know what it is?"
+
+Norma turned back. Mr; Steward's tone had been \glos{offensive}{fornærmende}{adj.}. "No, I don't think so," she said. "It could prove very valuable," he told her. "\glos{Monetarily}{finansielt}{adv.}?" she challenged.
+
+Mr. Steward nodded. "Monetarily," he said.
+
+Norma frowned. She didn't like his attitude. "What are you trying to sell?" she asked; "I'm not selling anything," he answered.
+
+Arthur came out of the living room. "Something wrong?"
+
+Mr. Steward introduced himself
+
+"Oh, the ... " Arthur pointed toward the living room and smiled. "What is that gadget, anyway?" "It won't take long to explain," replied Mr. Steward.
+
+"May I come in?"
+
+"If you're selling something ... " Arthur said. Mr. Steward shook his head. "I'm not."
+
+Arthur looked at Norma. ·"Up to you," she said. He hesitated. "Well, why not?" he said.
+
+They went into the living room and Mr. Steward sat in Norma's chair. He reached into an inside coat pocket and withdrew a small sealed envelope. "Inside here is a key to the bell-unit dome," he said. He set the envelope on the chairside table. "The bell is connected to our office."
+
+"What's it for?" asked Arthur.
+
+"If you push the button," Mr. Steward told him, "somewhere in the world, someone you don't know will die. In return for which you will receive a payment of fifty thousand dollars."
+
+Norma stared at the small man. He was smiling. "What are you talking about?" Arthur asked him. Mr. Steward looked surprised. "But I've just explained," he said.
+
+"Is this a practical joke?" asked Arthur.
+
+"Not at all. The offer is completely genuine."
+
+"You aren't making sense," Arthur said. "You expect us to believe ... " "Whom do you represent?" demanded Norma.
+
+Mr. Steward looked embarrassed. "I'm afraid I'm not at liberty to tell you that," he said. "However, I assure you the organization is of international scope."
+
+"I think you'd better leave," Arthur said, standing. Mr. Steward rose. "Of course."
+
+"And take your button unit with you."
+
+"Are you sure you wouldn't care to think about it for a day or so?"
+
+Arthur picked up the button unit and the envelope and thrust them into Mr. Steward's hands. He walked into the hall and pulled open the door.
+
+"I'll leave my card," said Mr. Steward. He placed it on the table by the door.
+
+When he was gone, Arthur tore it in half and tossed the pieces onto the table. "God!" he said. Norma was still sitting on the sofa. "What do you think it was?" she asked.
+
+"I don't care to know," he answered.
+
+
+
+She tried to smile but couldn't. "Aren't you curious at all?"
+
+"No." He shook his head.
+
+After Arthur returned to his book, Norma went back to the kitchen and finished washing the dishes. Why won't you talk about it?" Norma asked later.
+
+Arthur's eyes shifted as he brushed his teeth. He looked at her reflection in the bathroom mirror. "Doesn't it \glos{intrigue}{vække interesse eller nysgerrighed hos}{vb.} you?"
+
+"It offends me," Arthur said.
+
+"I know, but-" Norma rolled another curler in her hair "-doesn't it intrigue you, too?"
+
+"You think it's a practical joke?" she asked as they went into the bedroom. "If it is, it's a sick one."
+
+Norma sat on the bed and took off her slippers. "Maybe it's some kind of psychological research." Arthur shrugged. "Could be."
+
+"Maybe some \glos{eccentric}{excentrisk / sær}{adj.} millionaire is doing it." "Maybe."
+
+"Wouldn't you like to know?" Arthur shook his head. "Why?"
+
+"Because it's immoral," he told her.
+
+Norma slid beneath the covers. "Well, I think it's intriguing," she said. Arthur turned off the lamp and leaned over to kiss her.
+
+"Good night," he said.
+
+"Good night." She patted his back.
+
+Norma closed her eyes. Fifty thousand dollars, she thought.
+
+In the morning, as she left the apartment, Norma saw the card halves on the table. Impulsively, she dropped them into her purse. She locked the front door and joined Arthur in the elevator.
+
+While she was on her coffee break, she took the card halves from her purse and held the torn edges together. Only Mr. Steward's name and telephone number were printed on the card.
+
+After lunch, she took the card halves- from her purse again and Scotch-taped the edges together. Why am I doing this? she thought.
+
+
+
+Just before five, she dialed the number. "Good afternoon," said Mr. Steward's voice.
+
+Norma almost hung up but restrained herself She cleared her throat. "This is Mrs. Lewis," she said.
+
+"Yes, Mrs. Lewis." Mr. Steward sounded pleased. "I'm curious."
+
+"That's natural," Mr. Steward said.
+
+"Not that I believe a word of what you told us." "Oh, it's quite authentic," Mr. Steward answered.
+
+"Well, whatever," Norma swallowed. "When you said someone in the world would die, what did you mean?"
+
+"Exactly that," he answered. "It could be anyone. All we guarantee is that you don't know them. And, of course, that you wouldn't have to watch them die."
+
+"For fifty thousand dollars," Norma said.
+
+"That is correct."
+
+She made a scoffing sound. "That's crazy."
+
+"Nonetheless, that is the \glos{proposition}{plan / forslag / tilbud}{sb.}," Mr. Steward said. "Would you like me to return the button unit?"
+
+Norma stiffened. "Certainly not." She hung up angrily.
+
+The package was lying by the front door; Norma saw it as she left the elevator. Well, of all the nerve, she thought. She glared at the carton as she unlocked the door. I just won't take it in, she thought. She went inside and started dinner.
+
+Later, she carried her drink to the front hall. Opening the door, she picked up the package and carried it into the kitchen, leaving it on the table.
+
+She sat in the living room, sipping her drink and looking out the window. After awhile, she went back into the kitchen to turn the cutlets in the broiler: She put the package in a bottom cabinet. She'd throw it out in the morning.
+
+"Maybe some eccentric millionaire is playing games with people," she said. Arthur looked up from his dinner. "I don't understand you."
+
+"What does that mean?"
+
+"Let it go," he told her.
+
+Norma ate in silence. Suddenly, she put her fork down. "Suppose it's a genuine offer," she said.
+
+Arthur stared at her.
+
+"Suppose it's a genuine offer."
+
+
+
+"All right, suppose it is!" He looked incredulous. "What would you like to do? Get the button back and push it? Murder someone?"
+
+Norma looked disgusted. "Murder."
+
+"How would you define it?"
+
+"If you don't even know the person?" Norma asked.
+
+Arthur looked astounded. "Are you saying what I think you are?"
+
+"If it's some old Chinese peasant ten thousand miles away? Some diseased native in the Congo?"
+
+"How about some baby boy in Pennsylvania?" Arthur countered. "Some beautiful little girl on the next block?"
+
+"Now you're loading things."
+
+"The point is, Norma," he continued, "that who you kill makes no difference. It's still murder."
+
+"The point is," Norma broke in, "if it's someone you've never seen in your life and never will see, someone whose death you don't even have to know about, you still wouldn't push the button?"
+
+Arthur stared at her, appalled. "You mean you would?"
+
+"Fifty thousand dollars, Arthur."
+
+"What has the amount-"
+
+"Fifty thousand dollars, Arthur," Norma interrupted.
+
+"A chance to take that trip to Europe we've always talked about." "Norma, no."
+
+"A chance to buy that cottage on the Island."
+
+"Norma, no." His face was white. "For God's sake, no!"
+
+She shuddered. "All right, take it easy," she said. "Why are you getting so upset? It's only talk."
+
+After dinner, Arthur went into the living room. Before he left the table, he said, "I'd rather not discuss it anymore, if you don't mind."
+
+Norma shrugged. "Fine with me."
+
+She got up earlier than usual to make pancakes, eggs, and bacon for Arthur's breakfast. "What's the occasion?" he asked with a smile.
+
+"No occasion." Norma looked offended. "I wanted to do it, that's all."
+
+"Good," he said. "I'm glad you did."
+
+She refIlled his cup. "Wanted to show you I'm not ... "
+
+
+
+She shrugged.
+
+"Not what?"
+
+"Selfish."
+
+"Did I say you were?"
+
+"Well-" She gestured vaguely. "-last night ... " Arthur didn't speak.
+
+"All that talk about the button," Norma said. "I think you-well, misunderstood me." "In what way?" His voice was guarded.
+
+"I think you felt-" She gestured again. "-that I was only thinking of myself." "Oh."
+
+"I wasn't."
+
+"Norma."
+
+"Well, I wasn't. When I talked about Europe, a cottage on the Island ... " "Norma, why are we getting so involved in this?"
+
+"I'm not involved at all." She drew in a shaking breath.
+
+"I'm simply trying to indicate that ... "
+
+"What?"
+
+"That I'd like for us to go to Europe. Like for us to have a nicer apartment, nicer furniture, nicer clothes. Like for us to finally have a baby, for that matter."
+
+"Norma, we will," he said.
+
+"When?"
+
+He stared at her in dismay. "Norma ... "
+
+"When?"
+
+"Are you-" He seemed to draw back slightly. "Are you really saying ... ?"
+
+"I'm saying that they're probably doing it for some research project!" she cut him off "That they want to know what average people would do under such a circumstance! That they're just saying someone would die, in order to study reactions, see if there'd be guilt, anxiety, whatever! You don't really think they'd kill somebody, do you?"
+
+Arthur didn't answer. She saw his hands trembling. After awhile, he got up and left.
+
+
+
+When he'd gone to work, Norma remained at the table, staring into her coffee. I'm going to be late, she thought. She shrugged. What difference did it make? She should be home anyway, not working in an office.
+
+While she was stacking the dishes, she turned abruptly, dried her hands, and took the package from the bottom cabinet. Opening it, she set the button unit on the table. She stared at it for a long time before taking the key from its envelope and removing the glass dome. She stared at the button. How ridiculous, she thought. All this over a meaningless button.
+
+Reaching out, she pressed it down. For us, she thought angrily.
+
+She shuddered. Was it happening? A chill of horror swept across her.
+
+In a moment, it had passed. She made a contemptuous noise. Ridiculous, she thought. To get so worked up over nothing.
+
+She had just turned the supper steaks and was making herself another drink when the telephone rang. She picked it up. "Hello?"
+
+"Mrs. Lewis?"
+
+"Yes?"
+
+"This is the Lenox Hill Hospital."
+
+She felt unreal as the voice informed her of the subway accident, the shoving crowd. Arthur pushed from the platform in front of the train. She was conscious of shaking her head but couldn't stop.
+
+As she hung up, she remembered Arthur's life insurance policy for \$25,000, with double \glos{indemnity}{erstatning}{sb.} for---
+
+"No." She couldn't seem to breathe. She struggled to her feet and walked into the kitchen numbly. Something cold pressed at her skull as she removed the button unit from the wastebasket. There were no nails or screws visible. She couldn't see how it was put together.
+
+Abruptly, she began to smash it on the sink edge, pounding it harder and harder, until the wood split. She pulled the sides apart, cutting her fingers without noticing. There were no transistors in the box, no wires or tubes. The box was empty.
+
+She whirled with a gasp as the telephone rang. Stumbling into the living room, she picked up the receiver.
+
+"Mrs. Lewis?" Mr. Steward asked.
+
+It wasn't her voice shrieking so; it couldn't be. "You said I wouldn't know the one that died!" "My dear lady," Mr. Steward said, "do you really think you knew your husband?"
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newentry{Why You Procrastinate (It Has Nothing to Do With Self-Control)\subtitle{If procrastination isn’t about laziness, then what is it about?}}{Charlotte Lieberman}{March 25, 2019}
+\noindent If you’ve ever put off an important task by, say, alphabetizing your spice drawer, you know it wouldn’t be fair to describe yourself as lazy.
+
+After all, alphabetizing requires focus and effort — and hey, maybe you even went the extra mile to wipe down each bottle before putting it back. And it’s not like you’re hanging out with friends or watching Netflix. You’re cleaning — something your parents would be proud of! This isn’t laziness or bad time management. This is \glos{procrastination}{overspringshandlen}{sb.}.
+
+If procrastination isn’t about laziness, then what is it about?
+
+Etymologically, “procrastination” is derived from the Latin verb procrastinare — to put off until tomorrow. But it’s more than just voluntarily delaying. Procrastination is also derived from the ancient Greek word akrasia — doing something against our better judgment.
+
+“It’s self-harm,” said Dr. Piers Steel, a professor of motivational psychology at the University of Calgary and the author of “The Procrastination Equation: How to Stop Putting Things Off and Start Getting Stuff Done.”
+
+That self-awareness is a key part of why procrastinating makes us feel so rotten. When we procrastinate, we’re not only aware that we’re avoiding the task in question, but also that doing so is probably a bad idea. And yet, we do it anyway.
+
+“This is why we say that procrastination is essentially irrational,” said Dr. Fuschia Sirois, professor of psychology at the University of Sheffield. “It doesn’t make sense to do something you know is going to have negative consequences.”
+
+She added: “People engage in this irrational cycle of chronic procrastination because of an inability to manage negative moods around a task.”
+Wait. We procrastinate because of bad moods?
+
+In short: yes.
+
+Procrastination isn’t a unique character flaw or a mysterious curse on your ability to manage time, but a way of coping with challenging emotions and negative moods induced by certain tasks — boredom, anxiety, insecurity, frustration, resentment, self-doubt and beyond.
+
+“Procrastination is an emotion regulation problem, not a time management problem,” said Dr. Tim Pychyl, professor of psychology and member of the Procrastination Research Group at Carleton University in Ottawa.
+
+In a 2013 study, Dr. Pychyl and Dr. Sirois found that procrastination can be understood as “the \glos{primacy}{forrang}{sb.} of short-term mood repair … over the longer-term pursuit of intended actions.” Put simply, procrastination is about being more focused on “the immediate urgency of managing negative moods” than getting on with the task, Dr. Sirois said.
+
+The particular nature of our \glos{aversion}{uvilje}{sb.} depends on the given task or situation. It may be due to something inherently unpleasant about the task itself — having to clean a dirty bathroom or organizing a long, boring spreadsheet for your boss. But it might also result from deeper feelings related to the task, such as self-doubt, low self-esteem, anxiety or insecurity. Staring at a blank document, you might be thinking, I’m not smart enough to write this. Even if I am, what will people think of it? Writing is so hard. What if I do a bad job?
+
+All of this can lead us to think that putting the document aside and cleaning that spice drawer instead is a pretty good idea.
+
+But, of course, this only compounds the negative associations we have with the task, and those feelings will still be there whenever we come back to it, along with increased stress and anxiety, feelings of low self-esteem and self-blame.
+
+In fact, there’s an entire body of research dedicated to the \glos{ruminative}{grublende}{adj.}, self-blaming thoughts many of us tend to have in the wake of procrastination, which are known as “procrastinatory cognitions.” The thoughts we have about procrastination typically exacerbate our distress and stress, which contribute to further procrastination, Dr. Sirois said.
+
+But the momentary relief we feel when procrastinating is actually what makes the cycle especially vicious. In the immediate present, putting off a task provides relief — “you’ve been rewarded for procrastinating,” Dr. Sirois said. And we know from basic behaviorism that when we’re rewarded for something, we tend to do it again. This is precisely why procrastination tends not to be a one-off behavior, but a cycle, one that easily becomes a chronic habit.
+
+Over time, chronic procrastination has not only productivity costs, but measurably destructive effects on our mental and physical health, including chronic stress, general psychological distress and low life satisfaction, symptoms of depression and anxiety, poor health behaviors, chronic illness and even \glos{hypertension}{forhøjet blodtryk}{sb.} and cardiovascular disease.
+
+But I thought we procrastinate to feel better?
+
+If it seems ironic that we procrastinate to avoid negative feelings, but end up feeling even worse, that’s because it is. And once again, we have evolution to thank.
+Procrastination is a perfect example of present bias, our hard-wired tendency to prioritize short-term needs ahead of long-term ones.
+
+“We really weren’t designed to think ahead into the further future because we needed to focus on providing for ourselves in the here and now,” said psychologist Dr. Hal Hershfield, a professor of marketing at the U.C.L.A. Anderson School of Management.
+
+Dr. Hershfield’s research has shown that, on a neural level, we perceive our “future selves” more like strangers than as parts of ourselves. When we procrastinate, parts of our brains actually think that the tasks we’re putting off — and the accompanying negative feelings that await us on the other side — are somebody else’s problem.
+
+To make things worse, we’re even less able to make thoughtful, future-oriented decisions in the midst of stress. When faced with a task that makes us feel anxious or insecure, the amygdala — the “threat detector” part of the brain — perceives that task as a genuine threat, in this case to our self-esteem or well-being. Even if we intellectually recognize that putting off the task will create more stress for ourselves in the future, our brains are still wired to be more concerned with removing the threat in the present. Researchers call this “amygdala hijack.”
+Unfortunately, we can’t just tell ourselves to stop procrastinating. And despite the \glos{prevalence}{udbredelse}{sb.} of “productivity hacks,” focusing on the question of how to get more work done doesn’t address the root cause of procrastination.
+
+O.K. How do we get to the root cause of procrastination?
+
+We must realize that, at its core, procrastination is about emotions, not productivity. The solution doesn’t involve downloading a time management app or learning new strategies for self-control. It has to do with managing our emotions in a new way.
+
+“Our brains are always looking for relative rewards. If we have a habit loop around procrastination but we haven’t found a better reward, our brain is just going to keep doing it over and over until we give it something better to do,” said psychiatrist and neuroscientist Dr. Judson Brewer, Director of Research and Innovation at Brown University’s Mindfulness Center.
+
+To rewire any habit, we have to give our brains what Dr. Brewer called the “Bigger Better Offer” or “B.B.O.”
+
+In the case of procrastination, we have to find a better reward than avoidance — one that can relieve our challenging feelings in the present moment without causing harm to our future selves. The difficulty with breaking the addiction to procrastination in particular is that there is an infinite number of potential substitute actions that would still be forms of procrastination, Dr. Brewer said. That’s why the solution must therefore be internal, and not dependent on anything but ourselves.
+One option is to forgive yourself in the moments you procrastinate. In a 2010 study, researchers found that students who were able to forgive themselves for procrastinating when studying for a first exam ended up procrastinating less when studying for their next exam. They concluded that self-forgiveness supported productivity by allowing “the individual to move past their maladaptive behavior and focus on the upcoming examination without the burden of past acts.”
+
+Another tactic is the related practice of self-compassion, which is treating ourselves with kindness and understanding in the face of our mistakes and failures. In a 2012 study examining the relationship between stress, self-compassion and procrastination, Dr. Sirois found that procrastinators tend to have high stress and low self-compassion, suggesting that self-compassion provides “a buffer against negative reactions to self-relevant events.”
+
+In fact, several studies show that self-compassion supports motivation and personal growth. Not only does it decrease psychological distress, which we now know is a primary culprit for procrastination, it also actively boosts motivation, enhances feelings of self-worth and fosters positive emotions like optimism, wisdom, curiosity and personal initiative. Best of all, self-compassion doesn’t require anything external — just a commitment to meeting your challenges with greater acceptance and kindness rather than rumination and regret.
+
+That may be easier said than done, but try to reframe the task by considering a positive aspect of it. Perhaps you remind yourself of a time you did something similar and it turned out O.K. Or maybe you think about the beneficial outcome of completing the task. What might your boss or partner say when you show them your finished work? How will you feel about yourself?
+
+What are some other, healthier ways to manage the feelings that typically trigger procrastination?
+
+Cultivate curiosity: If you’re feeling tempted to procrastinate, bring your attention to the sensations arising in your mind and body. What feelings are eliciting your temptation? Where do you feel them in your body? What do they remind you of? What happens to the thought of procrastinating as you observe it? Does it intensify? Dissipate? Cause other emotions to arise? How are the sensations in your body shifting as you continue to rest your awareness on them?
+
+Consider the next action: This is different than the age-old advice to break up a task you’re tempted to avoid into bite-sized chunks. According to Dr. Pychyl, focusing only on the “next action” helps calm our nerves, and it allows for what Dr. Pychyl called “a layer of self-deception.” At the start of a given task, you can consider the next action as a mere possibility, as if you were method acting: “What’s the next action I’d take on this if I were going to do it, even though I’m not?” Maybe you would open your email. Or perhaps you would put the date at the top of your document. Don’t wait to be in the mood to do a certain task. “Motivation follows action. Get started, and you’ll find your motivation follows,” Dr. Pychyl said.
+
+Make your temptations more \glos{inconvenient}{ubelejlig / besværlig}{adj.}: It’s still easier to change our circumstances than ourselves, said Gretchen Rubin, author of “Better Than Before: What I Learned About Making and Breaking Habits.” According to Ms. Rubin, we can take what we know about procrastination and “use it to our advantage” by placing obstacles between ourselves and our temptations to induce a certain degree of frustration or anxiety. If you compulsively check social media, delete those apps from your phone or “give yourself a really complicated password with not just five digits, but 12,” Ms. Rubin said. By doing this, you’re adding friction to the procrastination cycle and making the reward value of your temptation less immediate.
+
+On the other side of the coin, Ms. Rubin also suggested that we make the things we want to do as easy as possible for ourselves. If you want to go to the gym before work but you’re not a morning person, sleep in your exercise clothes. “Try to remove every, every, every roadblock,” Ms. Rubin said.
+
+Still, procrastination is deeply existential, as it raises questions about individual agency and how we want to spend our time as opposed to how we actually do. But it’s also a reminder of our \glos{commonality}{det vi har til fælles}{sb.} — we’re all vulnerable to painful feelings, and most of us just want to be happy with the choices we make.
+
+Now go finish up alphabetizing that spice drawer before it becomes your next procrastination albatross.\source{https://www.nytimes.com/2019/03/25/smarter-living/why-you-procrastinate-it-has-nothing-to-do-with-self-control.html}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newentry{Tweet in response to accusations of sexual assault}{Kevin Spacey}{2017}
+\noindent I have a lot of respect and admiration for Anthony Rapp as an actor. I'm beyond horrified to hear his story. I honestly do not remember the encounter, it would have been over 30 years ago. But if I did behave as he describes, I owe him the sincerest apology for what would have been deeply inappropriate drunken behavior, and I am sorry for the feelings he describes having carried with him all these years.
+
+This story has encouraged me to address other things about my life. I know that there are stories out there about me and that some have been fuelled by the fact that I have been so protective of my privacy. As those closest to me know, in my life I have had relationships with both men and women. I have loved and had romantic encounters with men throughout my life, and I choose now to live as a gay man. I want to deal with this honestly and openly and that starts with examining my own behavior.
+
+-- Kevin Spacey
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newentry{The Shining Mountain}{Alison Fell}{1986}
+\noindent Once there was a Scottish girl with a strange name and a father who was always on television. The girl was called Pangma-La, and of course she was teased about it. At first she cried, but her father \glos{scolded}{skælde ud}{vb.} her.
+
+'Pangma-La,' he said, 'I called you after a shining mountain so that you would stand tall and be proud. Pangma-La,' he said, 'Scotland has enough ordinary Morags and Janets already.'
+And he pinned a picture of the Shining Mountain on her wall, and told her that one day they would climb it together.
+
+For Pangma-La's father was a famous \glos{mountaineer}{bjergbestiger}{sb.}. She would come home from an ordinary school day and there he would be on the BBC news, planting the Union Jack on a far, far mountain peak. She would sit on an ordinary bus, and hear people say, 'Now there's a hard man, there's a hero.'
+
+So Pangma-La dried her tears and vowed never to be ordinary and disappoint him.
+
+As the years passed and Pangma-La grew bigger, her father taught her to balance finely on the high tops of walls, and \glos{shin up}{klatre op}{vb.} sheer rocks by toe- and finger-holds. Her mother shook her head and \glos{fussed}{skælde bekymret ud}{vb.}.
+
+'Pangma-La,' she said, 'you'll tear your good jumper. Pangma-La,' she said, 'you'll fall and hurt yourself.'
+
+But her father only laughed and said. 'Let her be, she's tough and hard as nails,' and Pangma-La was proud.
+
+At last it was time to set out for the Shining Mountain. Pangma-La and her father took off in a white plane. Below them the houses and cars and her mother waving were bright as Smarties. Then the earth disappeared and they were high in the crystal blue sky where the sun hurts your eyes.
+
+Pangma-La fell asleep and dreamt a bad dream. She was a white swan flying high above the Shining Mountain with no father or mother anywhere. She was tired, she wanted to land on the top of the mountain and rest her wings. But the mountain turned its back on her, saying, Pangma-La, you cannot land here and you cannot rest. You must fly on until your white wings freeze and you tumble down to the hard ground.
+
+Pangma-La woke up frightened and wanting her mother, but she said nothing, for she was afraid her father would be disappointed in her.
+
+When the plan landed, Pangma-La and her father set out for the mountains. The villagers, hearing that the young girl was called after their shining mountain, smiled and gave her \glos{sherbet}{frugtsaft}{sb.} and figs. But then Pangma-La and her father came to the last village, where the trees stopped and the snows began. There Sherpa men crowded round, offering to carry their loads at a price.
+
+'My daughter and I do not need porters,’ Pangma-La’s father said proudly. 'We are strong and we will climb the mountain alone.’
+
+The Sherpa men were angry.
+
+'The mountain goddess will send winds to tear at you,' they said, 'and \glos{spindrift}{fygende}{adj.} snow to sting your face, and \glos{avalanche}{lavine}{sb.} to toss and tumble you.’
+
+But Pangma-La's father turned away and laughed. ‘Only weak men believe in old wives' tales,' he said \glos{scornfully}{hånligt}{adv.}.
+
+Above them the mountain rose like a tall white tower. At first Pangma-La climbed happily, smelling the clear air, while up ahead her father's feet made deep blue prints in the snow.
+
+But soon she began to grow weary.
+
+Just then an old Sherpa woman appeared, in a ragged brown cloak.
+
+'Let me carry your heavy sack, daughter,' said the woman, but Pangma-La shook her head, for she was afraid that her father would be disappointed in her. That night under the bright stars she told him about the Sherpa woman, but her father looked at her strangely.
+
+'I saw no woman,' he said. And he made Pangma-La promise that she would speak to no one, no matter what they asked or what help they offered.
+
+On the second day, Pangma-La set out boldly and well. Then a strong wind blew up to tear at her, and the going was hard. She began to feel weak and ill under the weight of the rucksack, but she would not stop, for her father would be disappointed in her.
+
+Just then the Sherpa woman appeared, and pulled a handful of swan's feathers from under her ragged cloak.
+
+'Take out your heavy things from the sack, daughter,' she said, 'and fill it with \glos{swansdown}{svanedun}{sb.}. Then you will get to the top of the mountain, and your father will never tell the difference.'
+
+thunder: tordne; merciless: ubarmhjertig; icicle: istap; dizziness: svimmelhed; pant: gispe; flutter: baske; curse: forbande; the hag: heksen, den grimme gamle kone; cruel: grusom; spell: fortryllelse; peal of thunder: tordenbrag; goddess: gudinde; 
+
+Pangma-La thought of her promise, but she had such a bad sick feeling everywhere in her, that she did what the woman asked. The Sherpa woman carried the heavy things under her ragged cloak, and Pangma-La carried a light rucksack full of swansdown, and her father never told the difference. And at sunset, the woman gave back her heavy things, and Pangma-La lay down to sleep.
+
+On the third day she set off with a weary feeling already in her bones. Spindrift snow blew up to sting her face, and just when she was sure she could go no further, the Sherpa woman appeared.
+
+'Take off your heavy, heavy clothes, daughter, and I will cover you with swan's feathers, and you will get to the top of the mountain.’
+
+And so Pangma-La did, and once again, as the sun went down, the woman gave her back the heavy clothes, and her father never told the difference.
+
+On the fourth day the roar of an avalanche thundered past them, and this time Pangma-La's father walked beside her.
+
+‘Oh, father’, she thought to herself, ‘my boots are too big and I can't fill them, and I want to go home to my mother more than anything in the world.’ And a tear escaped and ran down her nose.
+
+'Pangma-La,' her father scolded, 'Look at the mountain I named you for, is it not beautiful?' Pangma-La felt so ill she could hardly bear to look up at it, so crystal-cold and merciless above her. She hung her head, ashamed.
+
+'Yes father,' she said, and the tear froze to an \glos{icicle}{istap}{sb.} on her face.
+
+Her father climbed on and on, and Pangma-La tried hard to keep up with him. Soon her legs could not go another step, and a dizziness took her, and she fell down in the snow.
+
+Just then the Sherpa woman appeared, kneeling over her.
+
+'Give me your heavy, heavy heart, daughter,' she said, ‘and I will fill you with swansdown. Then you will get to the top of the mountain, and your father will never tell the difference.'
+
+So Pangma-La gave up her heart, and the lungs which \glos{panted}{gispe}{vb.} and hurt, and the bones which weighed like iron, and flew easily to the top of the mountain in all her light swan’s feathers.
+
+But this time when it came to sunset the Sherpa woman did not give back Pangma-La's heavy, heavy heart, and Pangma-La's father stood at the top of the Shining Mountain, calling wildly for his daughter, but she was nowhere to be seen.
+
+Then the Sherpa woman appeared in her ragged cloak.
+
+'Here is your Pangma-La,' she said, pointing to the white swan which \glos{fluttered}{baske}{vb.} beside her, 'But now she is my daughter for ever and always.’
+
+Pangma-La's father cried out in anger and cursed the \glos{hag}{heks}{sb.} for her cruel spell. He raised his ice-axe to strike the woman down, but just then a \glos{peal of thunder}{tordenbrag}{sb.} shook the mountain and threw him to the ground.
+
+And there in front of him stood no hag, but the mountain goddess herself, tall and straight, with skin of darkest gleaming gold, and eyes yellow and far-seeing as a snow leopard. She wore a cloak of swan's feathers, and blue lightning-fire danced at her finger ends.
+
+'You wanted your daughter to get to the top of the mountain,' said the goddess, 'and I have given you your heart's desire. You named your daughter after me, to be strong and light as the gods, and feel no human pain, and weep no human tears. And I have given you your heart's desire.'
+
+Then Pangma-La's father saw that his daughter had given her life away just to please him, and he cursed himself and his heart's desire, and ran to the edge of the mountain to cast himself off.
+
+But the goddess barred his way easily with a bolt of blue lightning.
+
+'Not so hasty to make an end of it, brave hero,' she said. She brought Pangma-La's heavy sack and heavy clothes from under her cloak and gave them to him. 'First you may feel the weight of your heavy, heavy burden,' she said. Then she brought out Pangma-La' s heart, and gave it to him. ' And now you must feel the weight of your heavy, heavy heart,' she said.
+
+At this Pangma-La's father fell on his knees and for the first time wept hot tears like any human.
+
+The mountain goddess, seeing this, was satisfied.
+
+'You have learned your lesson,' she said, and was gone in a \glos{swirl}{hvirvel}{sb.} of swan's feathers.
+
+Pangma-La's father looked down to see his daughter alive and heavy and human in his arms.
+
+Feeling the wet drops on her face, Pangma-La opened her eyes. When she saw that her father the hero was crying, she was no longer ashamed, and a great weight lifted from her. She jumped up and pulled him strongly to his feet. Then, skidding and sliding, Pangma-La and her father ran all the way to the bottom of the Shining Mountain, while the snow flew up behind them like sherbet or swan's feathers, and never again was Pangma-La afraid that her father would be disappointed in her.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newentry{Hard Choices}{Jojoba Mansel}{2012}
+\begin{verse}
+A \glos{path}{sti}{sb.} is laid out ahead,\\
+It \glos{forks}{dele sig}{vb.} before your feet.\\
+A decision filled with \glos{dread}{frygt}{sb.},\\
+Uncertain of what you’ll meet.
+
+A game full of chance, \\
+Of many hidden \glos{pitfalls}{faldgruber}{sb.}. \\
+To find true romance, \\
+\glos{Dare}{vove}{vb.} you risk losing all?
+
+Choices never easy to make, \\
+Fog seems to cloud your way. \\
+You fear making a mistake, \\
+Of gambling and losing the day. 
+
+But life is full of Hard Choices, \\
+And risk is part of the game. \\
+Be brave, ignore \glos{doubting}{tvivlende}{adj.} voices, \\
+Make the choice, life won’t be the same.
+\end{verse}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+tease: drille; scold: skælde ud; mountai’neer: bjergbestiger; peak: top; shin up: klatre op ad; fuss: lave vrøvl; tear [te@]: rive; Smarties: kulørte chokoladepastiller;
+
+
+
+
+villager: landsbyboer; sherbet: frugtsaft; fig: figen; spindrift: fygende; ‘avalanche: lavine; toss: kaste omkuld; tumble: vælte; old wives' tales: ammestuehistorier; scornful: hånlig; ragged: pjaltet; cloak: kappe; bold: dristig; swansdown: svanedun;
+
+
+
+
+
+thunder: tordne; merciless: ubarmhjertig; icicle: istap; dizziness: svimmelhed; pant: gispe; flutter: baske; curse: forbande; the hag: heksen, den grimme gamle kone; cruel: grusom; spell: fortryllelse; peal of thunder: tordenbrag; goddess: gudinde; 
