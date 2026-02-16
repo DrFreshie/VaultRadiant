@@ -1,0 +1,20 @@
+# Image Conversion Failed:
+
+## convert
+
+magick: Not a JPEG file: starts with 0x46 0x69 `/Users/andersthaysen/GitRepos/VaultRadiant/content/semestre/s26/6l26en/slides/images/un-general-assembly-hall.jpg' @ error/jpeg.c/JPEGErrorHandler/378.
+
+- **cwd**: ~/GitRepos/VaultRadiant
+```sh
+magick \ 
+  /Users/andersthaysen/GitRepos/VaultRadiant/content/semestre/s26/6l26en/slides/images/un-general-assembly-hall.jpg[0] \ 
+  -scale 1920x1080> -write \ 
+  /Users/andersthaysen/.cache/nvim/snacks/image/b3692580-un-general-assembly-hall.png \ 
+  -identify -format \ 
+  '%m %[fx:w]x%[fx:h] %xx%y' \ 
+  /Users/andersthaysen/.cache/nvim/snacks/image/b3692580-un-general-assembly-hall.png.info
+```
+
+# Output
+magick: Not a JPEG file: starts with 0x46 0x69 `/Users/andersthaysen/GitRepos/VaultRadiant/content/semestre/s26/6l26en/slides/images/un-general-assembly-hall.jpg' @ error/jpeg.c/JPEGErrorHandler/378.
+
