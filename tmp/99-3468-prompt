@@ -1,0 +1,158 @@
+<DIRECTIONS>
+Lav disse om så alle skal omskrives før svarene kan aflæses. Og der skal være to linjer to andengradspolynomier og resten cirkler
+</DIRECTIONS>
+<Context>
+You receive a selection in neovim that you need to replace with new code.
+The selection's contents may contain notes, incorporate the notes every time if there are some.
+consider the context of the selection and what you are suppose to be implementing
+<SELECTION_LOCATION>
+range(point(104,1),point(115,16))
+</SELECTION_LOCATION>
+<SELECTION_CONTENT>
+\begin{enumerate}[label=\arabic*)]
+  \item Linjen $y = 2x + 3$.
+  \item Linjen $4y - 8x = 12$.
+  \item Linjen $6x + 3y - 9 = 0$.
+  \item Linjen $y - 4 = -\tfrac{3}{2}(x + 2)$.
+  \item Andengradspolynomiet $f(x) = x^2 - 4x + 3$.
+  \item Andengradspolynomiet $g(x) = -2x^2 + \tfrac{3}{2}x - 5$.
+  \item Andengradspolynomiet $h(x)$ givet ved $3x^2 - 7x = 2 - x^2$.
+  \item Cirklen $(x - 2)^2 + (y + 4)^2 = 16$.
+  \item Cirklen $x^2 + y^2 - 4x + 6y - 12 = 0$.
+  \item Cirklen $x^2 + y^2 + 8x - 10y + 9 = 0$.
+\end{enumerate}
+</SELECTION_CONTENT>
+<FILE_CONTAINING_SELECTION>
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+%% Core math & formatting packages
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%% Fonts
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+\newfontfamily\wal{Walbaum Com}
+\newfontfamily\klav{Klavika}
+\newfontfamily\klavl{Klavika light}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%% Colors and graphics
+\usepackage{xcolor}
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usepackage{placeins}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+%% Tables & layout helpers
+\usepackage{multicol}
+\usepackage{cellspace}
+  \setlength\cellspacetoplimit{4pt}
+  \setlength\cellspacebottomlimit{4pt}
+\usepackage{tabularx}
+  \newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+%% Custom commands
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+\usepackage[h]{esvect}
+\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+\newcommand*{\quotesize}{20}
+\newcommand*{\openquote}{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+\newcommand*{\closequote}[1]{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+\newcommand{\qm}[1]{``#1''}
+\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+%% Section formatting
+\usepackage{chngcntr}
+\renewcommand\thesection{\arabic{section}}
+\titleformat{\section}[block]{\flushright\overp\Large\color{frbgreen}}{}{0pt}{DELPRØVE \thesection}[{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Opgave \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+
+%% Header & footer
+\usepackage{bigfoot}
+\DeclareNewFootnote{a}
+  \renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+  \newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+  \MakePerPage{footnotes}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{\centerline{\begin{minipage}{1\textwidth}\color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt \vspace{4em}\end{minipage}}}
+  \fancyhead[L]{\hspace{0em}\includegraphics[height=2.5em]{frbvuc_logo.png}}
+  \fancyhead[R]{\overp\color{frbgreen}\footnotesize Forår \the\year}
+  \fancyhead[C]{\overp\color{frbgreenl}\normalsize \overp Mat C-B\\\Large\color{frbgreen}\vestb Omskriv ligninger}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{\centerline{\begin{minipage}{\textwidth}\color{frbgreen}\hrule width \hsize \kern 1mm\end{minipage}}}
+\lhead{\overp\color{frbgreen}\footnotesize Mat C-B}
+\rhead{\overp\color{frbgreen}\footnotesize Forår \the\year}
+\cfoot{\thepage}
+
+\begin{document}
+\thispagestyle{plain}
+
+\section{}
+\subsection{}
+
+Angiv for hver linje dens h\ae ldning og sk\ae ring med y-aksen, for hvert andengradspolynomium koefficienterne $a$, $b$ og $c$, og for hver cirkel centrum og radius.
+\begin{enumerate}[label=\arabic*)]
+  \item Linjen $y = 2x + 3$.
+  \item Linjen $4y - 8x = 12$.
+  \item Linjen $6x + 3y - 9 = 0$.
+  \item Linjen $y - 4 = -\tfrac{3}{2}(x + 2)$.
+  \item Andengradspolynomiet $f(x) = x^2 - 4x + 3$.
+  \item Andengradspolynomiet $g(x) = -2x^2 + \tfrac{3}{2}x - 5$.
+  \item Andengradspolynomiet $h(x)$ givet ved $3x^2 - 7x = 2 - x^2$.
+  \item Cirklen $(x - 2)^2 + (y + 4)^2 = 16$.
+  \item Cirklen $x^2 + y^2 - 4x + 6y - 12 = 0$.
+  \item Cirklen $x^2 + y^2 + 8x - 10y + 9 = 0$.
+\end{enumerate}
+
+\end{document}
+</FILE_CONTAINING_SELECTION>
+
+</Context>
+
+<MustObey>
+NEVER alter any file other than TEMP_FILE.
+never provide the requested changes as conversational output. Return only the code.
+ONLY provide requested changes by writing the change to TEMP_FILE
+
+never attempt to read TEMP_FILE.
+It is purely for output.
+Previous contents, which may not exist, can be written over without worry
+After writing TEMP_FILE once you should be done.  Be done and end the session.
+
+</MustObey>
+<TEMP_FILE>/Users/andersthaysen/GitRepos/VaultRadiant/tmp/99-3468</TEMP_FILE>

@@ -19,12 +19,13 @@ The goal of the first unit is to become better at deciphering the voice of a tex
 -  New Zealand Prime Minister Adresses UN General Assembly
 
 ## The American South
+
+### Texts
 -  Hunter S. Thompson: 'The Kentucky Derby is Decadent and Depraved'
 -  Wiliam Faulkner: 'A Rose for Emily' + an easier one.
 -  Brian Reed: S-Town, Episode 1
 -  John Lewis: 'March'
 
-## 
 
 #### Notes
 When we talk about becoming better at reading English, what we mean is, we want to be able to read a text and then know what the text is "really" about. Not just the explicit information, but also the implicit. In general there are many ways and many words we can use that can help us talk about that.

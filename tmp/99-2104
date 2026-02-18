@@ -1,0 +1,5 @@
+  \item Cirklen $x^2 + y^2 + 4x - 12y - 7 = 0$. Vi fuldender kvadratet for $y$:
+  \[
+    y^2 - 12y = (y-6)^2 - 36,
+  \]
+  så ligningen omskrives til $(x+2)^2 + (y-6)^2 = 47$ med centrum $(-2,6)$ og radius $\sqrt{47}$.

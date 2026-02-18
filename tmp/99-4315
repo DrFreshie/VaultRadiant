@@ -1,0 +1,16 @@
+\section{Analyse af ligninger}
+\subsection{10 differentierede opgaver}
+
+Opgaverne er ordnet i stigende sv\ae rhedsgrad. Angiv for hver linje dens h\ae ldning og sk\ae ring med y-aksen, for hvert andengradspolynomium koefficienterne $a$, $b$ og $c$, og for hver cirkel centrum og radius.
+\begin{enumerate}[label=\arabic*)]
+  \item Linjen $y = 2x + 3$.
+  \item Linjen $4y - 8x = 12$.
+  \item Linjen $6x + 3y - 9 = 0$.
+  \item Linjen $y - 4 = -\tfrac{3}{2}(x + 2)$.
+  \item Andengradspolynomiet $f(x) = x^2 - 4x + 3$.
+  \item Andengradspolynomiet $g(x) = -2x^2 + \tfrac{3}{2}x - 5$.
+  \item Andengradspolynomiet $h(x)$ givet ved $3x^2 - 7x = 2 - x^2$.
+  \item Cirklen $(x - 2)^2 + (y + 4)^2 = 16$.
+  \item Cirklen $x^2 + y^2 - 4x + 6y - 12 = 0$.
+  \item Cirklen $x^2 + y^2 + 8x - 10y + 9 = 0$.
+\end{enumerate}

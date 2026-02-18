@@ -1,0 +1,115 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Have You Heard of Oscar Wilde?}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2012}
+\author{Stephen Fry}
+\maketitle
+    
+\pagestyle{empty}
+\thispagestyle{empty}
+\linenumbers
+I grew up in the country, deep in the country. The nearest major library was a twelve-mile bicycle ride into the city of Norwich. I was lucky to live in a house filled with books and to have parents who loved to read, but by the time I approached teenage my appetite for reading, combined with my more or less chronic insomnia, meant that I needed more, far more books to consume daily. Every other Thursday, a mobile library (in the form of a large grey pantechnicon that would today look absurdly old-fashioned) would come along and park not five minutes’ walk from our house. This was my lifeline to the outside world. A quaint battleship-grey modem that linked me to the huge past and present that seemed so impossibly far from the lanes of rural Norfolk.
+
+Aged eleven, one Saturday afternoon I sat in front of our little black and white television set (despite the glowering disapproval of my father who thought – quite rightly of course – that television was a vulgar and despicable thing and that no healthy child should watch it, especially during the hours of sunlight) and watched breathless with enthralled disbelief as they screened a film directed by Anthony ‘Puffin’ Asquith. It was called The Importance of Being Earnest and it left me simply boggling with excitement. I had never heard language used in such a way, had never known that the rhythms of a sentence could be so beautiful, that meanings could turn with such wit on the hinge of a ‘but’ or an ‘unless’ – in short I had never known that writing could do more than tell a story, that it could excite in the way that music does. I remembered whole lines of dialogue and repeated them: phrases like ‘I hope, Cecily, I shall not offend you if I state quite frankly and openly that you seem to me to be in every way the visible personification of absolute perfection’ and ‘some aunts are tall, some aunts are not tall. That is a matter that surely an aunt may be allowed to decide for herself’. I hugged these to me as I watched the credits roll by and memorised a name.
+
+The following Thursday I ran to the corner of the lane and threw myself inside the mobile library the moment the door at the rear had opened and the steps been let down. ‘Have you heard of Oscar Wilde?’ I squealed to the cardiganed librarian within who clutched her beads in alarm at the urgency and intensity of my attack. ‘Goodness me, young man …’ ‘Do you have a play he wrote called The Importance of Being Earnest?’ ‘Well now …’ ‘Please, I have to read it!’ After what seemed an age we found a copy which was duly stamped. I ran home and up the stairs and into my bedroom.
+
+I read The Importance of Being Earnest three or four times a day every day for two weeks. Then I returned it. I knew the whole play off by heart and can still distress companions with long quotations from it. ‘What else do you have by Oscar Wilde?’ I wanted to know. It was a different librarian and she found me a copy of the Complete Works.
+
+Two weeks later I was back to have it restamped. I had read it from cover to cover, but I wanted to read it all again and again.
+
+Another Library Thursday came and I reluctantly returned the Complete Works and asked if there was anything else by Oscar Wilde I could read. ‘The Complete Works means the complete works,’ the librarian explained. ‘Oh but there must be something else …’ The librarian gave a sigh and then looked me up and down. ‘I’m not sure … but there is …’ ‘Yes? Yes?’ She walked along the central corridor of the van and stooped low in the biography section … her face was flushed as she straightened and placed a book uncertainly into my hands. ‘I really don’t know if … how old are you, young man?’ ‘Thirteen,’ I lied. It was an age that seemed impossibly mature. ‘Well …’ The book was called The Trials of Oscar Wilde and was written by someone called H. Montgomery Hyde.
+
+I took it home and read it. It was a book that changed my life. The heroic lord of language who had captivated me so entirely turned out to have had a secret life. And the more I read the faster my heart beat. For I knew that I shared the same secret. I had never quite dared tell myself this truth but reading of Wilde’s arrest and trial I could not but know it to be true.
+
+It was shattering, terrible, liberating, stimulating, appalling, wonderful and incredible all at once.
+
+The mobile library a fortnight later had nothing more to offer so the following morning I caught a little motor coach early in the morning and went to Norwich. There in Esperanto Way stood the city’s great library, since burned in a fire and replaced by a fine one complete with cafés and all kinds of modern excitements.
+
+It was here that I discovered how one book could lead one to another. Bibliographies and footnotes suggested new names, new books, new writers, whole new areas to be discovered. It was an analogue card-indexed way of mouse-clicking from one link to another. A little more laborious perhaps, but breathlessly exciting.
+
+Over the next few years the trial and trail of Oscar had led me to read Gide and Genet, Auden and Orton, Norman Douglas and Ronald Firbank. Unforgettable, transformative books for me were that same H. Montgomery Hyde’s The Other Love, Roger Peyrefitte’s The Exile of Capri and Special Friendships, Angus Stewart’s Sandel and Michael Campbell’s Lord Dismiss Us. I read of man-love, boy-love and free love. I clutched to myself the dark secrets of the infamous Book 13 of the Greek Anthology and the Venice letters in Quest for Corvo. I read Cuthbert Worsley’s Flannelled Fool and Robin Maugham’s Escape from the Shadows. From over the Atlantic I encountered Gore Vidal and John Rechy. I discovered the Tangier set, by way of Michael Davies, Paul Bowles, William Burroughs and dozens of others.
+
+For a gay youth growing up in the early ‘70s a library was a way of showing that I was not alone. There was an element of titillation and breath-taking possibility, even the chance of a fumbled encounter, but there was vindication too. Some of the best, finest, truest, cleverest minds that ever held a pen in their hands had been like me.
+
+It was almost a side-effect that this caused me to educate myself to a degree which was beyond anything a school could hope to achieve. My own appetite for knowledge and reading and connection had led me, and that is how education works, not by spoon-feeding, but by stimulating the appetite so that children cannot wait to feed themselves. Between the ages of twelve and fourteen I read hundreds and hundreds of books, but more importantly I became unafraid of reading. Great Writers, I discovered, were not to be bowed down before and worshipped, but embraced and befriended. Their names resounded through history not because they had massive brows and thought deep incomprehensible thoughts, but because they opened windows in the mind, they put their arms round you and showed you things you always knew but never dared to believe. Even if their names were terrifyingly foreign and intellectual-sounding, Dostoevsky, Baudelaire or Cavafy, they turned out to be charming and wonderful and quite unalarming after all. Late Henry James was a struggle, I will confess, and some of the longer sentences in Proust would lose me entirely, but all in all, by the time I was fourteen I knew that being gay was a kind of dark blessing, an awful privilege and I knew that, as Oscar once wrote on a photograph to an admirer, ‘The secret of life is in art.’
+
+Without libraries none of this would have been possible. They are still to me places of incredible glamour, possibility, power, excitement and pleasure. Of course the world wide web and the wonders of the digital age, as well as advances in social understanding, decency and common sense make it less likely that a gay teenager need ever grow up feeling alone, but the downside to that huge advance is that that same teenager may never be led to those magical municipal labyrinths whose shelves contain so much and the existence of which for the better part of two hundred years has so immeasurably improved the quality for so many millions of ordinary lives.
+\end{document}

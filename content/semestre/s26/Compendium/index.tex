@@ -1,0 +1,94 @@
+\documentclass[10pt,a4paper]{book}
+
+\usepackage[english]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{fontspec}
+\setmainfont[Numbers=OldStyle,BoldFont={Plantin MT Pro Semibold}]{EB Garamond}
+\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+\usepackage[svgnames]{xcolor}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+
+\definecolor{hgblue}{RGB}{10, 40, 80}
+\definecolor{hggrey}{RGB}{215, 215, 210}
+
+\fancypagestyle{compendiumpdf}{
+  \fancyhf{}
+  \fancyfoot[C]{\plantin\small\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\title{Engelsk C}
+\author{Anders Thaysen}
+\date{Forår 26}
+
+\begin{document}
+
+\frontmatter
+
+\begin{titlepage}
+  \centering
+  \vspace*{0.18\textheight}
+  {\plantinb\fontsize{42}{46}\selectfont\color{hgblue}Engelsk C\\[0.4em]}
+  {\plantin\Large\color{DarkSlateGray}Collected Texts\\}
+  \vspace{1.5em}
+  {\color{hggrey}\rule{0.45\textwidth}{0.8pt}\\}
+  \vfill
+  {\plantin\Large ved Anders Thaysen\\}
+  {\plantin\large Forår 26}
+\end{titlepage}
+
+\tableofcontents
+
+\mainmatter
+
+\chapter{Voice}
+
+\includepdf[
+  pages=-,
+  pagecommand={\thispagestyle{compendiumpdf}},
+  addtotoc={1,section,1,Have You Heard of Oscar Wilde?,oscar-wilde}
+]{Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf}
+
+\includepdf[
+  pages=-,
+  pagecommand={\thispagestyle{compendiumpdf}},
+  addtotoc={1,section,1,How th'Irth Wint Rong,hapless-joey}
+]{How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf}
+
+\includepdf[
+  pages=-,
+  pagecommand={\thispagestyle{compendiumpdf}},
+  addtotoc={1,section,1,The Doll's House,dolls-house}
+]{The_Dolls_House/The_Dolls_House.pdf}
+
+\includepdf[
+  pages=-,
+  pagecommand={\thispagestyle{compendiumpdf}},
+  addtotoc={1,section,1,New Zealand Prime Minister Addresses United Nations General Assembly,nz-unga}
+]{New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf}
+
+\chapter{The American South}
+
+\includepdf[
+  pages=-,
+  pagecommand={\thispagestyle{compendiumpdf}},
+  addtotoc={1,section,1,The Kentucky Derby is Decadent and Depraved,kentucky-derby}
+]{The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf}
+
+\includepdf[
+  pages=-,
+  addtotoc={1,section,1,{S-Town, Chapter I},stown-ch1},
+]{../ressourcer/S-Town/S-Town.pdf}
+
+\includepdf[
+  pages=-,
+  pagecommand={\thispagestyle{compendiumpdf}},
+  addtotoc={1,section,1,A Rose for Emily,rose}
+]{A_Rose_for_Emily/A_Rose_for_Emily.pdf}
+
+\end{document}
