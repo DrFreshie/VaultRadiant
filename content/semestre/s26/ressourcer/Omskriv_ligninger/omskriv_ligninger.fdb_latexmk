@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1771395985.02352 "omskriv_ligninger.tex" "omskriv_ligninger.pdf" "omskriv_ligninger" 1771395987.43267 0
+["lualatex"] 1771402889.30368 "omskriv_ligninger.tex" "omskriv_ligninger.pdf" "omskriv_ligninger" 1771402892.04533 0
   "../img/frbvuc_logo.png" 1770797701.559 124323 45fc343b9a23ded1717243603c6e123f ""
   "/System/Library/Fonts/Supplemental/Times New Roman Bold.ttf" 1770268403 832472 47e2cfe6c7f2d721956ff54f0ef18585 ""
   "/System/Library/Fonts/Supplemental/Times New Roman.ttf" 1770268403 824920 4aa25ae5255896a14e6982eef8a0ee75 ""
@@ -281,9 +281,9 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1771196379 134220 a2ff24e6a68518653171fd1f852826ae ""
   "/usr/local/texlive/2025basic/texmf-var/tex/generic/config/language.dat" 1771196379.62223 3786 cd38354308350164d4a1fd7b74f29cdc ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1771196452 5657771 f48defe9ade43e07e924caaf90f0acba ""
-  "omskriv_ligninger.aux" 1771395987.19088 537 319a9bc660b34fc53983c25157f9cd9a "lualatex"
-  "omskriv_ligninger.out" 1771395987.19393 40 f033b1e40b8734b8ab3f517f85422c37 "lualatex"
-  "omskriv_ligninger.tex" 1771395979.46433 7422 5ab9851b0da3605c9bdc377a61ab7afb ""
+  "omskriv_ligninger.aux" 1771402891.79277 537 319a9bc660b34fc53983c25157f9cd9a "lualatex"
+  "omskriv_ligninger.out" 1771402891.79425 40 f033b1e40b8734b8ab3f517f85422c37 "lualatex"
+  "omskriv_ligninger.tex" 1771402887.98654 7417 feb91a27ec1312376608fb402e6c6574 ""
   (generated)
   "omskriv_ligninger.aux"
   "omskriv_ligninger.log"

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  18 FEB 2026 07:26
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  18 FEB 2026 09:21
  restricted system commands enabled.
  file:line:error style messages enabled.
 **omskriv_ligninger.tex
@@ -1282,12 +1282,12 @@ Here is how much of LuaTeX's memory you used:
  125129,1144653 words of node,token memory allocated
  742 words of node memory still in use:
    7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 84 glue_spec, 10 attribute_list, 2 write nodes
-   avail lists: 1:2,2:910,3:527,4:99,5:114,6:60,7:2649,8:19,9:459,10:3,11:135
+   avail lists: 1:2,2:910,3:527,4:99,5:111,6:60,7:2640,8:19,9:459,10:3,11:135
  54881 multiletter control sequences out of 65536+600000
  109 fonts using 19972135 bytes
  84i,12n,115p,553b,961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on omskriv_ligninger.pdf (1 page, 245226 bytes).
+Output written on omskriv_ligninger.pdf (1 page, 245222 bytes).
 
 PDF statistics: 77 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
