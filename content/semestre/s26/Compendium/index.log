@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  18 FEB 2026 07:12
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  20 FEB 2026 09:34
  restricted system commands enabled.
  file:line:error style messages enabled.
 **index.tex
@@ -596,12 +596,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 ]
 Chapter 1.
-<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=72, 597.5123pt x 845.04709pt>
+<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=52, 597.5123pt x 845.04709pt>
 File: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf Graphic file (type pdf)
 <use Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf>
 Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf  used on input line 55.
 (luatex.def)             Requested size: 597.51083pt x 845.04503pt.
-<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=74, page=1, 597.5123pt x 845.04709pt>
+<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=54, page=1, 597.5123pt x 845.04709pt>
 File: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf Graphic file (type pdf)
 <use Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, page 1>
 Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf , page1 used on input line 55.
@@ -628,7 +628,7 @@ Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_W
  [2
 
 <./Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf>]
-<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=105, page=2, 597.5123pt x 845.04709pt>
+<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=85, page=2, 597.5123pt x 845.04709pt>
 File: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf Graphic file (type pdf)
 <use Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, page 2>
 Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf , page2 used on input line 55.
@@ -644,7 +644,7 @@ Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_W
  [3
 
 <./Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf>]
-<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=110, page=3, 597.5123pt x 845.04709pt>
+<Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, id=90, page=3, 597.5123pt x 845.04709pt>
 File: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf Graphic file (type pdf)
 <use Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf, page 3>
 Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf , page3 used on input line 55.
@@ -660,12 +660,12 @@ Package luatex.def Info: Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_W
  [4
 
 <./Have_You_Heard_of_Oscar_Wilde/Have_You_Heard_of_Oscar_Wilde.pdf>]
-<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=115, 597.50829pt x 845.04709pt>
+<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=95, 597.50829pt x 845.04709pt>
 File: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf Graphic file (type pdf)
 <use How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf>
 Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf  used on input line 61.
 (luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=117, page=1, 597.50829pt x 845.04709pt>
+<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=97, page=1, 597.50829pt x 845.04709pt>
 File: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf Graphic file (type pdf)
 <use How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, page 1>
 Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf , page1 used on input line 61.
@@ -689,7 +689,7 @@ Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_th
  [5
 
 <./How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf>]
-<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=146, page=2, 597.50829pt x 845.04709pt>
+<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=126, page=2, 597.50829pt x 845.04709pt>
 File: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf Graphic file (type pdf)
 <use How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, page 2>
 Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf , page2 used on input line 61.
@@ -705,7 +705,7 @@ Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_th
  [6
 
 <./How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf>]
-<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=151, page=3, 597.50829pt x 845.04709pt>
+<How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, id=131, page=3, 597.50829pt x 845.04709pt>
 File: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf Graphic file (type pdf)
 <use How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf, page 3>
 Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf , page3 used on input line 61.
@@ -721,12 +721,12 @@ Package luatex.def Info: How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_th
  [7
 
 <./How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv/How_thIrth_Wint_Rong_by_Hapless_Joeyhomeskoolguv.pdf>]
-<The_Dolls_House/The_Dolls_House.pdf, id=157, 597.5123pt x 845.04709pt>
+<The_Dolls_House/The_Dolls_House.pdf, id=137, 597.5123pt x 845.04709pt>
 File: The_Dolls_House/The_Dolls_House.pdf Graphic file (type pdf)
 <use The_Dolls_House/The_Dolls_House.pdf>
 Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf  used on input line 67.
 (luatex.def)             Requested size: 597.51083pt x 845.04503pt.
-<The_Dolls_House/The_Dolls_House.pdf, id=159, page=1, 597.5123pt x 845.04709pt>
+<The_Dolls_House/The_Dolls_House.pdf, id=139, page=1, 597.5123pt x 845.04709pt>
 File: The_Dolls_House/The_Dolls_House.pdf Graphic file (type pdf)
 <use The_Dolls_House/The_Dolls_House.pdf, page 1>
 Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page1 used on input line 67.
@@ -750,7 +750,7 @@ Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page1 used on inp
  [8
 
 <./The_Dolls_House/The_Dolls_House.pdf>]
-<The_Dolls_House/The_Dolls_House.pdf, id=187, page=2, 597.5123pt x 845.04709pt>
+<The_Dolls_House/The_Dolls_House.pdf, id=166, page=2, 597.5123pt x 845.04709pt>
 File: The_Dolls_House/The_Dolls_House.pdf Graphic file (type pdf)
 <use The_Dolls_House/The_Dolls_House.pdf, page 2>
 Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page2 used on input line 67.
@@ -766,7 +766,7 @@ Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page2 used on inp
  [9
 
 <./The_Dolls_House/The_Dolls_House.pdf>]
-<The_Dolls_House/The_Dolls_House.pdf, id=192, page=3, 597.5123pt x 845.04709pt>
+<The_Dolls_House/The_Dolls_House.pdf, id=172, page=3, 597.5123pt x 845.04709pt>
 File: The_Dolls_House/The_Dolls_House.pdf Graphic file (type pdf)
 <use The_Dolls_House/The_Dolls_House.pdf, page 3>
 Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page3 used on input line 67.
@@ -782,7 +782,7 @@ Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page3 used on inp
  [10
 
 <./The_Dolls_House/The_Dolls_House.pdf>]
-<The_Dolls_House/The_Dolls_House.pdf, id=197, page=4, 597.5123pt x 845.04709pt>
+<The_Dolls_House/The_Dolls_House.pdf, id=177, page=4, 597.5123pt x 845.04709pt>
 File: The_Dolls_House/The_Dolls_House.pdf Graphic file (type pdf)
 <use The_Dolls_House/The_Dolls_House.pdf, page 4>
 Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page4 used on input line 67.
@@ -798,7 +798,7 @@ Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page4 used on inp
  [11
 
 <./The_Dolls_House/The_Dolls_House.pdf>]
-<The_Dolls_House/The_Dolls_House.pdf, id=202, page=5, 597.5123pt x 845.04709pt>
+<The_Dolls_House/The_Dolls_House.pdf, id=182, page=5, 597.5123pt x 845.04709pt>
 File: The_Dolls_House/The_Dolls_House.pdf Graphic file (type pdf)
 <use The_Dolls_House/The_Dolls_House.pdf, page 5>
 Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page5 used on input line 67.
@@ -814,12 +814,12 @@ Package luatex.def Info: The_Dolls_House/The_Dolls_House.pdf , page5 used on inp
  [12
 
 <./The_Dolls_House/The_Dolls_House.pdf>]
-<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=207, 597.5123pt x 845.04709pt>
+<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=187, 597.5123pt x 845.04709pt>
 File: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf Graphic file (type pdf)
 <use New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>
 Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf  used on input line 73.
 (luatex.def)             Requested size: 597.51083pt x 845.04503pt.
-<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=209, page=1, 597.5123pt x 845.04709pt>
+<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=189, page=1, 597.5123pt x 845.04709pt>
 File: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf Graphic file (type pdf)
 <use New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, page 1>
 Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf , page1 used on input line 73.
@@ -843,7 +843,7 @@ Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_Gen
  [13
 
 <./New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>]
-<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=236, page=2, 597.5123pt x 845.04709pt>
+<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=216, page=2, 597.5123pt x 845.04709pt>
 File: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf Graphic file (type pdf)
 <use New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, page 2>
 Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf , page2 used on input line 73.
@@ -859,7 +859,7 @@ Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_Gen
  [14
 
 <./New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>]
-<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=241, page=3, 597.5123pt x 845.04709pt>
+<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=221, page=3, 597.5123pt x 845.04709pt>
 File: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf Graphic file (type pdf)
 <use New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, page 3>
 Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf , page3 used on input line 73.
@@ -875,7 +875,7 @@ Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_Gen
  [15
 
 <./New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>]
-<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=246, page=4, 597.5123pt x 845.04709pt>
+<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=226, page=4, 597.5123pt x 845.04709pt>
 File: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf Graphic file (type pdf)
 <use New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, page 4>
 Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf , page4 used on input line 73.
@@ -891,7 +891,7 @@ Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_Gen
  [16
 
 <./New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>]
-<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=251, page=5, 597.5123pt x 845.04709pt>
+<New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, id=231, page=5, 597.5123pt x 845.04709pt>
 File: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf Graphic file (type pdf)
 <use New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf, page 5>
 Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf , page5 used on input line 73.
@@ -906,392 +906,29 @@ Package luatex.def Info: New_Zealand_Prime_Minister_Addresses_United_Nations_Gen
 (luatex.def)             Requested size: 597.53818pt x 845.08371pt.
  [17
 
-<./New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>] [18
-
-]
-Chapter 2.
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=261, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf  used on input line 81.
-(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=263, page=1, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 1>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page1 used on input line 81.
-(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 1>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page1 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-[19]
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 1>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page1 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 1>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page1 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 1>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page1 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [20
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=297, page=2, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 2>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page2 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 2>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page2 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 2>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page2 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [21
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=302, page=3, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 3>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page3 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 3>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page3 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 3>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page3 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [22
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=307, page=4, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 4>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page4 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 4>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page4 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 4>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page4 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [23
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=312, page=5, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 5>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page5 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 5>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page5 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 5>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page5 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [24
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=317, page=6, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 6>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page6 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 6>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page6 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 6>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page6 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [25
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=322, page=7, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 7>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page7 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 7>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page7 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 7>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page7 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [26
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=327, page=8, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 8>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page8 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 8>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page8 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 8>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page8 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [27
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=333, page=9, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 9>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page9 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 9>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page9 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 9>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page9 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [28
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=339, page=10, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 10>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page10 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 10>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page10 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 10>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page10 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [29
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=352, page=11, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 11>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page11 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 11>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page11 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 11>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page11 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [30
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, id=357, page=12, 597.50829pt x 845.04709pt>
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 12>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page12 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 12>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page12 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf Graphic file (type pdf)
-<use The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf, page 12>
-Package luatex.def Info: The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf , page12 used on input line 81.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [31
-
-<./The_Kentucky_Derby_is_Decadent_and_Depraved/The_Kentucky_Derby_is_Decadent_and_Depraved.pdf>]
-<../ressourcer/S-Town/S-Town.pdf, id=362, 597.50829pt x 845.04709pt>
-File: ../ressourcer/S-Town/S-Town.pdf Graphic file (type pdf)
-<use ../ressourcer/S-Town/S-Town.pdf>
-Package luatex.def Info: ../ressourcer/S-Town/S-Town.pdf  used on input line 86.
-(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<../ressourcer/S-Town/S-Town.pdf, id=364, page=1, 597.50829pt x 845.04709pt>
-File: ../ressourcer/S-Town/S-Town.pdf Graphic file (type pdf)
-<use ../ressourcer/S-Town/S-Town.pdf, page 1>
-Package luatex.def Info: ../ressourcer/S-Town/S-Town.pdf , page1 used on input line 86.
-(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-File: ../ressourcer/S-Town/S-Town.pdf Graphic file (type pdf)
-<use ../ressourcer/S-Town/S-Town.pdf, page 1>
-Package luatex.def Info: ../ressourcer/S-Town/S-Town.pdf , page1 used on input line 86.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: ../ressourcer/S-Town/S-Town.pdf Graphic file (type pdf)
-<use ../ressourcer/S-Town/S-Town.pdf, page 1>
-Package luatex.def Info: ../ressourcer/S-Town/S-Town.pdf , page1 used on input line 86.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: ../ressourcer/S-Town/S-Town.pdf Graphic file (type pdf)
-<use ../ressourcer/S-Town/S-Town.pdf, page 1>
-Package luatex.def Info: ../ressourcer/S-Town/S-Town.pdf , page1 used on input line 86.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: ../ressourcer/S-Town/S-Town.pdf Graphic file (type pdf)
-<use ../ressourcer/S-Town/S-Town.pdf, page 1>
-Package luatex.def Info: ../ressourcer/S-Town/S-Town.pdf , page1 used on input line 86.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [32
-
-<../ressourcer/S-Town/S-Town.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=388, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf  used on input line 92.
-(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=390, page=1, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 1>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page1 used on input line 92.
-(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 1>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page1 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 1>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page1 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 1>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page1 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 1>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page1 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [33
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=426, page=2, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 2>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page2 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 2>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page2 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 2>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page2 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [34
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=431, page=3, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 3>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page3 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 3>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page3 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 3>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page3 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [35
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=436, page=4, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 4>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page4 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 4>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page4 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 4>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page4 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [36
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=441, page=5, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 5>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page5 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 5>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page5 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 5>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page5 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [37
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=447, page=6, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 6>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page6 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 6>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page6 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 6>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page6 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [38
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>]
-<A_Rose_for_Emily/A_Rose_for_Emily.pdf, id=452, page=7, 597.50829pt x 845.04709pt>
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 7>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page7 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 7>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page7 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
-File: A_Rose_for_Emily/A_Rose_for_Emily.pdf Graphic file (type pdf)
-<use A_Rose_for_Emily/A_Rose_for_Emily.pdf, page 7>
-Package luatex.def Info: A_Rose_for_Emily/A_Rose_for_Emily.pdf , page7 used on input line 92.
-(luatex.def)             Requested size: 597.53416pt x 845.08371pt.
- [39
-
-<./A_Rose_for_Emily/A_Rose_for_Emily.pdf>] (./index.aux)
+<./New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly/New_Zealand_Prime_Minister_Addresses_United_Nations_General_Assembly.pdf>] (./index.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `index.out' has not changed.
-(rerunfilecheck)             Checksum: A16DE449015BAAF01BAD9030BB6835B3;1727.
+(rerunfilecheck)             Checksum: C4A9607127844E6B37F2FD808D9EF9AB;1013.
 )
 
 Here is how much of LuaTeX's memory you used:
- 15153 strings out of 476076
+ 14826 strings out of 476076
  100000,794899 words of node,token memory allocated
  442 words of node memory still in use:
    3 hlist, 1 vlist, 1 rule, 2 glue, 3 kern, 1 glyph, 7 attribute, 54 glue_spec, 4 attribute_list, 1 write nodes
-   avail lists: 2:376,3:110,4:38,5:171,6:36,7:976,8:1,9:181,10:4,11:37
- 36922 multiletter control sequences out of 65536+600000
+   avail lists: 2:287,3:68,4:33,5:114,6:21,7:632,8:1,9:170,10:4,11:23
+ 36828 multiletter control sequences out of 65536+600000
  55 fonts using 8576527 bytes
  73i,17n,92p,445b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProSmBd.TTF></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on index.pdf (43 pages, 1029527 bytes).
+Output written on index.pdf (21 pages, 231428 bytes).
 
-PDF statistics: 490 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
- 54 named destinations out of 1000 (max. 131072)
- 73 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 267 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 131072)
+ 41 words of extra memory for PDF output out of 10000 (max. 100000000)
 
