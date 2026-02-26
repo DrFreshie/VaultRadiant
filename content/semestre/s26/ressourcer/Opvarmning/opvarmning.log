@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  25 FEB 2026 13:03
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  26 FEB 2026 08:26
  restricted system commands enabled.
  file:line:error style messages enabled.
-**Aflevering_3_besvarelse.tex
-(./Aflevering_3_besvarelse.tex
+**opvarmning.tex
+(./opvarmning.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -656,14 +656,22 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \everycr=\toks35
 \minrowclearance=\skip71
 \rownum=\count325
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025basic/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2025basic/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/transparent/transparent.sty
+Package: transparent 2025-06-23 v1.6 Transparency with color stacks
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
+Package: transparent-nometadata 2025-06-23 v1.6 Transparency via pdfTeX's color stack (HO)
+ (/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+))) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2025basic/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen199
 \pgfutil@tempdimb=\dimen256
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box64
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
 Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
@@ -718,8 +726,8 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmath@toks=\toks43
 \pgfmath@stack@operand=\toks44
 \pgfmath@stack@operation=\toks45
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
-(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count334
 )) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -778,14 +786,14 @@ File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfexternal@startupbox=\box69
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -836,15 +844,16 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@expandcount=\count346
  (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/placeins/placeins.sty
+))) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
@@ -852,8 +861,7 @@ Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
-
-(/usr/local/texlive/2025basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+ (/usr/local/texlive/2025basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -1012,7 +1020,8 @@ Package: cellspace 2026/01/24 v1.9.1a Spacing table cells (JN)
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
- (/usr/local/texlive/2025basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2025basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+ (/usr/local/texlive/2025basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks49
 \XKV@tempa@toks=\toks50
 \XKV@tempb@toks=\toks51
@@ -1035,7 +1044,7 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@ftn=\toks52
 )
 
-Package array Warning: Redefining primitive column b on input line 47.
+Package array Warning: Redefining primitive column b on input line 50.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
@@ -1180,32 +1189,32 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip91
 \f@nch@widthR=\skip92
 \@temptokenb=\toks57
-) (./Aflevering_3_besvarelse.aux
+) (./opvarmning.aux
 Package babel Info: 'danish' activates 'danish' shorthands.
-(babel)             Reported on input line 8.
+(babel)             Reported on input line 9.
 )
-\openout1 = Aflevering_3_besvarelse.aux
+\openout1 = opvarmning.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
  (/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count402
@@ -1225,97 +1234,63 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 138.
- (./Aflevering_3_besvarelse.out) (./Aflevering_3_besvarelse.out)
+Package hyperref Info: Link coloring OFF on input line 134.
+ (./opvarmning.out) (./opvarmning.out)
 \@outlinefile=\write4
 
-\openout4 = Aflevering_3_besvarelse.out
+\openout4 = opvarmning.out
 
 
 Package siunitx Warning: Tabular column type "S" overwritten with siunitx
 (siunitx)                definition.
 
-Package translations Info: no dictionary file `translations-basic-dictionary-danish.trsl' found. on input line 138.
+Package translations Info: no dictionary file `translations-basic-dictionary-danish.trsl' found. on input line 134.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \FN@cache251=\box136
 \footinsdefault=\insert250
 \FN@cache250=\box137
-
-Overfull \hbox (2.84526pt too wide) in paragraph at lines 141--141
- []| []
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 145.
+<../img/frbvuc_logo.png, id=11, 569.4876pt x 362.7954pt>
+File: ../img/frbvuc_logo.png Graphic file (type png)
+<use ../img/frbvuc_logo.png>
+Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 139.
+(luatex.def)             Requested size: 142.37155pt x 90.69862pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 162.
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 145.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 162.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esvect on input line 145.
+LaTeX Font Info:    Trying to load font information for U+esvect on input line 162.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
-)
-<../img/frbvuc_logo.png, id=39, 569.4876pt x 362.7954pt>
-File: ../img/frbvuc_logo.png Graphic file (type png)
-<use ../img/frbvuc_logo.png>
-Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 210.
-(luatex.def)             Requested size: 39.24254pt x 25.0pt.
+) [1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-
-Package fancyhdr Warning: \headheight is too small (60.0pt): 
-(fancyhdr)                Make it at least 64.83264pt, for example:
-(fancyhdr)                \setlength{\headheight}{64.83264pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-4.83264pt}.
-
-[1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-<../img/frbvuc_logo.png>]
-Overfull \hbox (2.84526pt too wide) in paragraph at lines 243--243
- []| []
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.64996pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.64996pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.64996pt}.
-
-[2]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.64996pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.64996pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.64996pt}.
-
-[3] (./Aflevering_3_besvarelse.aux)
+<../img/frbvuc_logo.png>] (./opvarmning.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `Aflevering_3_besvarelse.out' has not changed.
-(rerunfilecheck)             Checksum: 5664FA0D892A1DAB32CBEA902FA9CAC0;364.
+Package rerunfilecheck Info: File `opvarmning.out' has not changed.
+(rerunfilecheck)             Checksum: F033B1E40B8734B8AB3F517F85422C37;40.
 )
 
 Here is how much of LuaTeX's memory you used:
- 32984 strings out of 476076
+ 33220 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 818 words of node memory still in use:
-   7 hlist, 3 vlist, 2 rule, 7 mark, 3 glue, 4 kern, 1 penalty, 1 glyph, 48 attribute, 84 glue_spec, 25 attribute_list, 2 write nodes
-   avail lists: 1:1,2:1078,3:301,4:85,5:361,6:71,7:3908,8:78,9:1231,10:5,11:223
- 54673 multiletter control sequences out of 65536+600000
- 111 fonts using 20286551 bytes
- 84i,15n,115p,559b,1041s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Aflevering_3_besvarelse.pdf (3 pages, 277321 bytes).
+ 742 words of node memory still in use:
+   7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 84 glue_spec, 10 attribute_list, 2 write nodes
+   avail lists: 1:2,2:1282,3:656,4:165,5:99,6:93,7:3741,8:20,9:690,10:3,11:147
+ 54881 multiletter control sequences out of 65536+600000
+ 109 fonts using 19972135 bytes
+ 84i,12n,115p,546b,961s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on opvarmning.pdf (1 page, 261183 bytes).
 
-PDF statistics: 117 PDF objects out of 1000 (max. 8388607)
- 91 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 131072)
- 80 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 96 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 131072)
+ 24 words of extra memory for PDF output out of 10000 (max. 100000000)
 
