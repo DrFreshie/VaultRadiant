@@ -3867,6 +3867,8 @@ body {
 
     & > code {
       overflow-x: auto;
+      background-color: transparent;
+      color: var(--code-normal);
 
       span[style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"] {
         color: var(--code-value) !important;
@@ -3904,9 +3906,6 @@ body {
       span[style="--shiki-light:#D73A49;--shiki-dark:#F97583;"] {
         color: var(--code-keyword) !important;
       }
-
-      background-color: transparent;
-      color: var(--code-normal);
     }
   }
 
