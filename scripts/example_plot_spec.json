@@ -1,0 +1,15 @@
+{
+  "output_dir": "content/semestre/s26/ressourcer/img/example_polynomials",
+  "plots": [
+    {
+      "name": "example1.png",
+      "expr": "2*x**2-3*x-5",
+      "title": "f(x) = 2x^{2} - 3x - 5"
+    },
+    {
+      "name": "example2.png",
+      "expr": "x**3-3*x+2",
+      "title": "f(x) = x^{3} - 3x + 2"
+    }
+  ]
+}
