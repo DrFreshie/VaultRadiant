@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  18 MAR 2026 13:43
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  23 MAR 2026 07:46
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Differentiering_med_sumregel_og_produktregel.tex
@@ -1286,7 +1286,7 @@ Package rerunfilecheck Info: File `Differentiering_med_sumregel_og_produktregel.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33230 strings out of 476076
+ 33240 strings out of 476076
  125129,1144653 words of node,token memory allocated
  742 words of node memory still in use:
    7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 84 glue_spec, 10 attribute_list, 2 write nodes
@@ -1294,11 +1294,11 @@ Here is how much of LuaTeX's memory you used:
  54881 multiletter control sequences out of 65536+600000
  109 fonts using 19972135 bytes
  84i,12n,115p,580b,1121s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Differentiering_med_sumregel_og_produktregel.pdf (2 pages, 269097 bytes).
+</System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on Differentiering_med_sumregel_og_produktregel.pdf (2 pages, 278307 bytes).
 
-PDF statistics: 115 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 34 named destinations out of 1000 (max. 131072)
+PDF statistics: 130 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 131072)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 
