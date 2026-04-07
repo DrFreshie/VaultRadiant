@@ -1,0 +1,568 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{The Boat\subtitle{(abridged)}}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2017}
+\author{John Connell}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\noindent\linenumbers The oars cut through the dark mass of water again and again. A heron stirred at the shoreline and burst into a scurried flight.
+
+‘Grand morning,’ said the first man.
+
+‘It’s that,’ said the second.
+
+They moved steadily towards the middle of the lake. Willie sat in the front of the boat facing the two men. He stared at the boat’s wooden ribs, at the water, at the birds on the shoreline, at anything other than the men.
+
+Only a few hours before he had been sitting down to his supper: the butter, the tea, the potatoes never to be touched now.
+
+The knock had come at the door that night. His mother had answered and screamed at the sight of the volunteers dressed in their long trench coats and Sam Browne belts standing in the doorway. Their faces stoic, strange and full of intent. His father James got up slowly from the kitchen table and made to speak.
+
+‘Come with us aul fella,’ they said to him, and with a quick flick of a shiny revolver, the room moved and swayed to its will. His father touched Mammy’s face and followed the men out the door.
+ 
+\begin{center}*\end{center}
+
+Willie clustered then with his family at the window, looking at the red glow of cigarette embers in the darkness. Tiny lanterns moved this way and that. […]
+
+The embers moved and a torchlight was shone and then Willie could see the path light up for a brief second as the figures became clear. There were seven or more of them. It was the IRA, the flying column, the guerrilla fighters. They looked powerful and dangerous and, yes, heroic too. The light began to bob and it grew closer as whoever was carrying it came back to the house.
+
+‘Oh my Lord,’ his mother cried.
+
+‘Oh my Lord.’
+
+Their father and the two men from before marched stolidly to the front door.
+
+‘Daddy could try and run away, go into the forest,’  Willie’s sister said.
+
+‘No, your father never ran from any man.’
+
+The kitchen door caught on the raised flagstone as it always did. He would remember that in the hours to come, when the film reel would play in his head: the door, the lantern, the shine of the revolver.
+
+The children sat around the kitchen table looking into their untouched dinners.
+
+‘A mistake, a mistake wasn’t it, James?’ she called out and ran towards her husband. ‘I knew right well.’
+
+‘Yes,’ he said, but his face spoke no.
+
+The two men came in behind him and stood under the squat glow of the bare kitchen bulb.
+
+‘William James,’ said the first and turned to look at Willie.
+
+His mother whimpered, but Willie slowly stood up, looking all the while at his father’s face.
+
+‘Is this the lad?’ asked the second, looking now at his father.
+
+‘Yes, but surely there is some mistake. He’s only a boy.’
+
+‘We’re not here to debate that.’
+
+‘Can’t you sit down for a moment?’ his father asked, and gestured his hand meekly across the kitchen table.
+
+‘We can’t.’
+
+‘But surely . . .’
+
+‘We can’t, we have our orders. The prisoner is to come with us.’
+
+‘The prisoner?’ his mother said, and a tear rolled down her cheek. ‘That’s my son.’
+
+So often in conflict it is a problem of language.
+
+[…]
+
+She stood between them. ‘No, no, you cannot take my boy,’
+
+The first moved further into the room and displayed his revolver. ‘I don’t want to have to use this on you but I will.’
+
+‘Willie, you’re to come with us, and if it’s all nothing as your mother and father says then you’ll be back before long,’ said the second, his tone softer. ‘Now, Mrs Routledge, get the boy a coat, it’s a cold night, and you can give him something to take with him if he hasn’t eaten his supper.’
+
+She walked slowly to the pantry and cut half a loaf and placed some sliced ham into greaseproof paper. His father sat down by the edge of the table. His legs had given way as the world collapsed before him. Another world would continue on, the one that said grief was only personal, was only singular, like happiness, like love.
+
+Willie took the bread and his coat from his mother and walked over to the men. […]
+
+\begin{center}*\end{center}
+
+The cold was on his face in an instant. He buttoned his coat, fumbled with the buttons. One, two, three and each now slipped through the hole. He grasped at them and at the fading reality of an evening that had once been peaceful. They walked up the long lane together, the cedars swaying in the breeze.
+
+By the roadside, the rest of the rebels were waiting for him.
+
+‘William James Routledge?’ asked a man, stepping forward.
+
+‘Yes,’ he stammered.
+
+‘Do you know why you are here?’
+
+‘No,’ he said, and in that instant believed his words.
+
+‘I’m putting you under arrest. You’re to come with us,’ said the man who then identified himself as Sergeant McGahern.
+
+The party moved now, walking up the road to the village. The sounds of cattle in the darkness called out over ditches. Willie could see the lights of all the homesteads laid out before him, all those front doors he had never walked into. All those people he had known and never known. ‘I’d know him to see,’ as his father would have said.
+
+[…]
+
+‘Now,’ said Sergeant McGahern and the party stopped by a small cottage.
+
+‘Comrades, keep an eye on the prisoner while I make sure we’re all assembled.’
+
+The sergeant walked into the school hall.
+
+They stood waiting in the dark. Willie’s feet ached.
+
+Sergeant McGahern appeared then at the school doors and beckoned them to him.
+
+Inside, men he did not know sat on fold-out chairs. Up on the stage was a desk with the new flag behind it. Willie was walked to the centre of the room and here his hands were cuffed. The metal felt strange, itched his wrists.
+
+On stage, dressed in green khaki, the judge walked out from behind the crimson curtain.
+
+‘All members please rise.’ The school-hall court took to its feet.
+
+‘Will the prisoner please identify himself?’ said the judge
+
+‘William Routledge,’ he said quietly.
+
+‘Parties may be seated,’ the man said, and walked to his desk.
+
+‘What is the charge?’ said Willie, looking at the judge.
+
+‘I thought that would be clear.’
+
+‘No,’ said Willie, looking at the ground. ‘No, I wasn’t told,’ he added.
+
+‘You stand accused of sedition and conspiracy against the Irish Republic.’
+
+‘But what conspiracy? I conspired against no one.’
+
+‘You’ll be given a defence, William, and a time to be heard,’ said the judge. ‘Can we retrace the events of the night in question, November the fourteenth? One William James Routledge was noted to be in the presence of enemy forces of the Irish Republic at McGrath’s public house from 9 p.m. to approximately 11 p.m. Is that correct, Mr Reilly?’ he added.
+
+A figure stood up from the crowd and walked up to the makeshift bench.
+
+‘That is correct, sir. William Routledge was observed by three separate witnesses in intimate talks with crown forces on the night in question. His conversation was to lead to the arrest of one Corporal Murtagh, who was later taken to Dublin Castle and executed for his role in the fight for Irish freedom. It is our case that Mr Routledge gave vital information to the enemy forces about the whereabouts of Corporal Murtagh on the night in question and thereby leading to his arrest.’
+
+‘November fourteenth? Murtagh? But I didn’t say anything to no one, to anyone,’ gasped Willie.
+
+‘I’ll remind you, William, you will have an opportunity to speak,’ said the judge. ‘Now, Mr Reilly, can you give me evidence to prove that Mr Routledge’s meeting with the crown forces was in fact of a seditious nature?’
+
+‘I can. Mr Routledge was heard by several witnesses to mention the name Murtagh or Dots as the now-fallen comrade was referred to . . .’
+
+Reilly continued with his evidence of lists and names and times and locations. The night in question had been so long ago, thought Willie, and as the words rolled on against him, he rolled further back into himself; his wrists itched, his ankles ached.
+
+\begin{center}*\end{center}
+
+‘Have a drink with us, mate,’ their captain had said. They had been in the pub all right, the Tans had been in the pub all night and not one man to talk to them. They had holed themselves up in the snug and Mrs McGrath had served them drink all night. A furious hospitality. Paper never refused ink. He had come in from foddering the cattle, the smell of hay and shit about him.
+
+‘No, I’m grand.’
+
+‘Have a drink. Stella, get this boy a drink, whatever he’s having,’ the captain had said, standing up from the table.
+
+A bottle of stout was placed before him. He took a sip and raised the bottle in friendly salute.
+
+The soldiers talked among themselves. Talked of Ireland, of home, of the girls waiting for them.
+
+Willie had looked at himself in the mirror behind the bar, he would finish his drink and go home, but with the emptying of that bottle another was bought and no protest could dissuade the captain. Another and another until he was invited to their table.
+
+‘You’re Henry’s son,’ said the captain and made room for him on the wooden bench.
+
+‘I am.’
+
+‘And why aren’t you at home, son?’
+
+‘I finished my work for the day and had a bit of a taste on me,’ he said.
+
+‘Ah well, join the club, chum.’
+
+‘I’ll have to be heading off shortly.’
+
+‘No, stay a while,’ said the captain softly. ‘Stay a while and have a drink.’ And he settled himself, elbows leaning across the round table. ‘I met your father the other day, he’s a decent man. What do you think about us being here?’ he added.
+
+‘It’s necessary, I suppose.’
+
+‘Is it?’ said the captain.
+
+‘Well, you’re here to keep the peace.’
+
+‘Are we? To keep the peace?’ said the captain, mulling over the words, rolling them on his lips. ‘I wonder about that.’ He was silent a moment and sipped his beer. ‘You’ve a brother in the army, don’t you, Willie?’
+
+‘Yes, he was at the Somme but he’s –’
+
+‘He’s in a hospital now,’ said the captain.
+
+‘He is.’
+
+‘And has he been home since the war?’
+
+‘Once,’ said Willie.
+
+‘But he wasn’t the same, was he?’
+
+‘No, he was, he was different,’ said Willie.
+
+‘These men have all been to the front, Willie, myself too. This is our sort of retirement, a bit of a break before we go back home.’ The captain laughed.
+
+‘Quiet village life,’ said Willie with a smile.
+
+‘Exactly, that’s what I thought,’ said the captain. ‘Would you join up?’
+
+‘I’ve thought about it, but after Peter I’m not so sure anymore.’ He emptied the last of his drink to hide the gap in his words. ‘Will you have one, Captain?’ he asked.
+
+‘I will,’ he said, ‘and you can call me John.’
+
+‘All right, John.’
+
+[…]
+
+There was a sadness to the men’s faces. Their eyes spoke of a life he could never understand; a life that had seen the end of other lives.
+
+‘Have they been home?’ Willie asked the captain.
+
+‘No. I think home is only in their minds now. But everything changes into something else. That home won’t be there for them.’
+
+‘Was it there for you?’
+
+‘It was. I had my leave, saw the wife and kiddies but I won’t deny it was different. It’s odd to walk down a street and not have to look out for who’s coming behind you.’
+
+‘I see,’ said Willie.
+
+‘And what does your father think about us being here?’
+
+‘He thinks it’s a good thing,’ said Willie. ‘He’s worried about what might happen to the family if you weren’t here.’
+
+‘And what would happen?’
+
+‘I don’t know, we might be burned out of our house.’
+
+‘But you’re Irish, same as everyone else here?’
+
+‘We are, and we aren’t.’
+
+‘Because you don’t support the volunteers?’
+
+‘Yes and no. We don’t support them, but we can’t go against them either. Because, because, well you know because –’ and he pointed to the sacred heart in the corner. ‘That’s not mine. Do you know what I mean?’
+
+‘I do.’
+
+‘Well, hopefully it all quiets down.’
+
+‘Hopefully . . . Tell me, Willie, do you know a Dots Murphy? I was talking with him the other day.’
+
+‘Dots, the shop boy at Bennets?’
+
+‘Yes.’
+
+‘Ah, yeah, he’s a grand sort.’
+
+‘Is he?’
+
+‘He’s a Sinn Feiner, but I’ve never heard of him doing anything malicious.’
+
+‘And what if I were to tell you he was being malicious. You’d tell me, wouldn’t you? We’re friends, after all.’
+
+‘I would, of course, but I only know him to see.’
+
+‘I see. What if I told you he was involved with the volunteers, what would you think of him then?’
+
+‘I’d think he was smarter than he let on to be.’
+
+And the captain smiled.
+
+‘I suppose, if he was, you’d have to arrest him,’ said Willie after a time.
+
+‘I suppose we would,’ agreed the captain.
+
+And Willie nodded.
+
+‘Will we have another drink, Willie?’
+
+‘One for the road,’ he replied.
+
+They talked for a time of England, and the war and of the captain’s farm. The soldiers who had been loud with the drink began to grow quiet and smoke their cigarettes in silence.
+
+He’d have to go soon, he said. He’d have to go, his mother would begin to wonder. He raised himself from the table and the captain shook his hand.
+
+‘I’ll see you around, Willie.’
+
+‘You will, John.’
+
+‘And we’ll say nothing about Murtagh.’
+
+‘About Murphy?’
+
+‘Exactly.’
+
+‘Nothing to say,’ said Willie.
+
+‘No, nothing,’ said the captain, and smiled.
+
+[…] 
+
+‘Mr Routledge, Mr Routledge,’ came the voice again, returning him to the hall. ‘We have heard the evidence against you. What have you to say in your defence?’
+
+‘I, I met the Tans in the pub, yes, but I did not conspire or give information.’
+
+‘And yet the evidence put forward here suggests otherwise.’
+
+‘I was asked about Murphy, but I said nothing. I barely knew the man.’
+
+‘And yet it was your information that led to his murder,’ said the judge indifferently.
+
+‘I didn’t kill him.’
+
+[…]
+
+When the gavel banged off the wooden table no sound seemed to echo. The court rose to its feet. The men’s eyes were level with Willie’s now, but none would look at him.
+
+[…] 
+
+The boat waited in the shallows, tied by a piece of frayed rope to a fencing post, its oak cracks having seen season after season. It dipped and bobbed as they climbed on board. 
+
+[…]
+
+The middle of the lake grew nearer. Beads of sweat gathered on the men’s faces and arms, and they stopped by times to take off a hat, a coat, a jumper. It was hard work this, thought Willie, and he felt the countryman’s guilt at not digging in, not taking some of the weight.
+
+‘Well, this is as good a spot as any,’ said the first man and took in his oar.
+
+‘I suppose it is,’ said the second.
+
+‘Are you happy with it, William?’
+
+‘Water is water,’ he replied.
+
+Stripped back now to their shirts he thought he recognised their faces, they were no older than him, might perhaps have been friends. He felt a shiver run down his spine and pulled his coat closer, placing his hands inside its pockets. A dark soft mass lay at his fingertips and he smiled to himself.
+
+‘Have you eaten, lads?’ he said, and the words felt so odd in the situation.
+
+‘Ah . . . no,’ said the first man and scratched the back of his head awkwardly.
+
+Willie pulled out the loaf and brown-paper wrapped ham. ‘Do you want a cut?’ he said, and held out the parcel in both hands. ‘It’s hard work this,’ he added, and nodded to the oars.
+
+‘Well, Jesus . . . thanks,’ said the second and took the bread and ham.
+
+‘I’ve nothing to cut it with,’ he said, looking back at Willie.
+
+Willie pulled out his hay knife, all battered and worn, and handed it to the man, who did not think it odd that he had been so armed, as they would have put it. Three slices of bread were cut and three slices of ham placed upon them. The men ate slowly, silently, the batch loaf crumbed and moistened in the mouth. They did not know what words to say to such an act of kindness, in the circumstances.
+
+‘Did you ever play football for the parish?’ the second man asked Willie.
+
+‘A few games, but I was never any good,’ he said as he chewed. ‘Did you?’ he returned.
+
+‘For Dromard, yeah.’
+
+‘I think maybe, maybe once we played alongside one another.’
+
+‘Did we?’ said Willie.
+
+‘I think so, you played corner back?’
+
+‘I did, Jesus. Mind you, you got two points that day.’
+
+‘I had my work cut out with you,’ laughed the man. ‘Couldn’t make a move but you were there.’
+
+‘Jesus, and you mind Pajo the ref? He didn’t know a free from a penalty.’
+
+‘Schoolboys he should be managing.’
+
+‘Just,’ said Willie. ‘What’s this your name was again? Mullen, was it?’
+
+‘Sean Mullen,’ he said, and leaned over to shake Willie’s hand.
+
+‘Sean bloody Mullen,’ said Willie.
+
+‘It was a good game,’ said Mullen. ‘It was a draw in the heel of the hunt.’
+
+‘It was.’
+
+‘Happy days,’ said Mullen.
+
+‘Happy days,’ agreed Willie.
+
+The bread now eaten, the men grew quiet. The other man who had been silent all the while fixed his face and unbuttoned the revolver from his holster.
+
+‘You’ve been found guilty of conspiracy against the Irish Free state,’ he began.
+
+‘That’s enough of that, Peader,’ said Sean. ‘He knows, we all know.’
+
+\begin{center}*\end{center}
+
+The wild ducks rose up across the lake and flew out towards the village where people were beginning to rise for the day. The shop keep would open his shutters and the morning papers would arrive from Dublin with news of more deaths. The headlines seemed to be the same now each morning. The cattle called out from the top fields, their tits sore and aching for the want of milking, and Reverend Jenkins would be back from his cousins’ by ten for Mass.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+Now, it was a treat to see how Belcher got off with the old woman of the house we were staying in. She was a great warrant to scold, and crotchety even with us, but before ever she had a chance of giving our guests, as I may call them, a lick of her tongue, Belcher had made her his friend for life. She was breaking sticks at the time, and Belcher, who hadn't been in the house for more than ten minutes, jumped up out of his seat and went across to her. 
+
+'Allow me, madam,' he says, smiling his queer little smile; 'please allow me', and takes the hatchet from her hand. She was struck too \glos{parlatic}{irsk for af paralytic, lammet}{adj.} to speak, and ever after Belcher would be at her heels carrying a bucket, or basket, or load of turf, as the case might be. As Noble wittily remarked, he got into looking before she leapt, and hot water or any little thing she wanted Belcher would have it ready before her. For such a huge man (and though I am five foot ten myself I had to look up to him) he had an uncommon shortness - or should I say lack - of speech. It took us some time to get used to him walking in and out like a ghost, without a syllable out of him. Especially because 'Awkins talked enough for a platoon, it was strange to hear big Belcher with his toes in the ashes come out with a solitary 'Excuse me, chum,' or 'That's right, chum.' His one and only abiding passion was cards, and I will say for him he was a good card-player. He could have fleeced me and Noble many a time; only if we lost to him, 'Awkins lost to us, and 'Awkins played with the money Belcher gave him.
+
+'Awkins lost to us because he talked too much, and I think now we lost to Belcher for the same reason. 'Awkins and Noble would spit at one another about religion into the early hours of the morning; the little Englishman as you could see worrying the soul out of young Noble (whose brother was a priest) with a string of questions that would puzzle a cardinal. And to make it worse, even in treating of these holy subjects, 'Awkins had a deplorable tongue; I never in all my career struck across a man who could mix such a variety of cursing and bad language into the simplest topic. Oh, a terrible man was little 'Awkins, and a fright to argue! He never did a stroke of work, and when he had no one else to talk to he fixed his claws into the old woman.
+
+I am glad to say that in her he met his match, for one day when he tried to get her to complain profanely of the drought she gave him a great comedown by blaming the drought upon Jupiter Plu- vius (a deity neither 'Awkins nor I had ever even heard of, though Noble said among the pagans he was held to have something to do with rain). And another day the same 'Awkins was swearing at the capitalists for starting the German war, when the old dame laid down her iron, puckered up her little crab's mouth and said, 'Mr 'Awkins, you can say what you please about the war, thinking to deceive me because I'm an ignorant old woman, but I know well what started the war. It was that Italian count that stole the heathen divinity out of the temple in Japan, for believe me, Mr 'Awkins, nothing but sorrow and want follows them that disturbs the hidden powers!' Oh, a queer old dame, as you remark! 
+
+After we had been in bed about an hour he asked me did I think we ought to tell the Englishmen. I having thought of the same thing myself (among many others) said no, because it was more than likely the English wouldn't shoot our men, and anyhow it wasn't to be supposed the Brigade who were always up and down with the second battalion and knew the Englishmen well would be likely to want them bumped off. 'I think so,' says Noble. 'It would be sort of cruelty to put the wind up them now.' 'It was very unforeseen of Jeremiah Donovan anyhow,' says I, and by Noble's silence I realized he took my meaning. 
+
+Anyway, he took little 'Awkins by the arm and dragged him on, but it was impossible to make him understand that we were in earnest. From which you will perceive how difficult it was for me, as I kept feeling my Smith and Wesson and thinking what I would do if they happened to put up a fight or ran for it, and wishing in my heart they would. I knew if only they ran I would never fire on them. 'Was Noble in this?' 'Awkins wanted to know, and we said yes. He laughed. But why should Noble want to shoot him? Why should we want to shoot him? What had he done to us? Weren't we chums (the word lingers painfully in my memory)? Weren't we? Didn't we understand him and didn't he understand us? Did either of us imagine for an instant that he'd shoot us for all the so-and-so brigadiers in the so-and-so British Army? By this time I began to perceive in the dusk the desolate edges of the bog that was to be their last earthly bed, and, so great a sadness overtook my mind, I could not answer him. We walked along the edge of it in the dark- ness, and every now and then 'Awkins would call a halt and begin again, just as if he was wound up, about us being chums, and I was in despair that nothing but the cold and open grave made ready for his presence would convince him that we meant it all. But all the same, if you can understand, I didn't want him to be bumped off. 
+
+I cannot explain it even now, how sad I felt, but I went back to the cottage, a miserable man. When I arrived the discussion was still on, 'Awkins holding forth to all and sundry that there was no next world at all and Noble answering in his best canonical style that there was. But I saw 'Awkins was after having the best of it. 'Do you know what, chum?' he was saying, with his saucy smile, 'I think you're jest as big a bleedin' hunbeliever as I am. You say you believe in the next world and you know jest as much abaout the next world as I do, which is sweet damn-all. What's 'Eaven? You dunno. Where's 'Eaven? You dunno. Who's in 'Eaven? You dunno. You know sweet damn-all! I arsk you again, do they wear wings?' 
+
+'Very well then,' says Noble, 'they do; is that enough for you? They do wear wings.' 'Where do they get them then? Who makes them? 'Ave they a fact'ry for wings? 'Ave they a sort of store where you 'ands in your chit and tikes your bleedin' wings? Answer me that.' 
+
+'Oh, you're an impossible man to argue with,' says Noble. 'Now listen to me — '. And off the pair of them went again. 
+
+The old woman was for having them stay in spite of us, and she did not shut her mouth until Jeremiah Donovan lost his temper and said some nasty things to her. Within the house by this time it was pitch dark, but no one thought of lighting the lamp, and in the darkness the two Englishmen fetched their khaki topcoats and said good-bye to the woman of the house. 'Just as a man mikes a 'ome of a bleedin' place,' mumbles 'Awkins shaking her by the hand, 'some bastard at headquarters thinks you're too cushy and shunts you off.' Belcher shakes her hand very hearty. 'A thousand thanks, madam,' he says, 'a thousand thanks for everything . . . ' as though he'd made it all up. 
+
+I don't remember much about the burying, but that it was worse than all the rest, because we had to carry the warm corpses a few yards before we sunk them in the windy bog. It was all mad lonely, with only a bit of lantern between ourselves and the pitch-blackness, and birds hooting and screeching all round disturbed by the guns. Noble had to search 'Awkins first to get the letter from his mother. Then having smoothed all signs of the grave away, Noble and I collected our tools, said good-bye to the others, and went back along the desolate edge of the treacherous bog without a word. We put the tools in the houseen and went into the house. The kitchen was pitch-black and cold, just as we left it, and the old woman was sitting over the hearth telling her beads. We walked past her into the room, and Noble struck a match to light the lamp. Just then she rose quietly and came to the doorway, being not at all so bold or crabbed as usual. 
+
+'What did ye do with them?' she says in a sort of whisper, and Noble took such a mortal start the match quenched in his trembling hand. 'What's that?' he asks without turning round. 'I heard ye,' she said. 'What did you hear?' asks Noble, but sure he wouldn't deceive a child the way he said it. 'I heard ye. Do you think I wasn't listening to ye putting the things back in the houseen?' Noble struck another match and this time the lamp lit for him. 'Was that what ye did with them?' she said, and Noble said nothing - after all what could he say? 
+
+So then, by God, she fell on her two knees by the door, and began telling her beads, and after a minute or two Noble went on his knees by the fireplace, so I pushed my way out past her, and stood at the door, watching the stars and listening to the damned shrieking of the birds.
+
+We went about the house all day scarcely saying a word. Belcher didn't mind us much; he was stretched into the ashes as usual with his usual look of waiting in quietness for something unforeseen to happen, but little 'Awkins gave us a bad time with his audacious gibing and questioning. He was disgusted at Noble's not answering him back. 'Why can't you tike your beating like a man, chum?' he says. 'You with your Hadam and Heve! I'm a Communist — or an Anarchist. An Anarchist, that's what I am.' And for hours after he went round the house, mumbling when the fit took him, 'Hadam and Heve! Hadam and Heve!' 
+

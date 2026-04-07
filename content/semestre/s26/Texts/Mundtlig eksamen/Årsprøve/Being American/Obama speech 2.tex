@@ -1,0 +1,244 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Democratic National Convention Speech}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2020}
+\author{Barack Obama}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+\noindent Good evening, everybody. As you've seen by now, this isn't a normal convention. It's not a normal time. So tonight, I want to talk as plainly as I can about the stakes in this election. Because what we do these next 76 days will echo through generations to come.
+
+I'm in Philadelphia, where our Constitution was drafted and signed. It wasn't a perfect document. It allowed for the inhumanity of slavery and failed to guarantee women -- and even men who didn't own property -- the right to participate in the political process. But embedded in this document was a North Star that would guide future generations; a system of representative government -- a democracy -- through which we could better realize our highest ideals. Through civil war and bitter struggles, we improved this Constitution to include the voices of those who'd once been left out. And gradually, we made this country more just, more equal, and more free.
+
+The one Constitutional office elected by all of the people is the presidency. So at minimum, we should expect a president to feel a sense of responsibility for the safety and welfare of all 330 million of us -- regardless of what we look like, how we worship, who we love, how much money we have -- or who we voted for.
+
+But we should also expect a president to be the custodian of this democracy. We should expect that regardless of ego, ambition, or political beliefs, the president will preserve, protect, and defend the freedoms and ideals that so many Americans marched for and went to jail for; fought for and died for.
+
+I have sat in the Oval Office with both of the men who are running for president. I never expected that my successor would embrace my vision or continue my policies. I did hope, for the sake of our country, that Donald Trump might show some interest in taking the job seriously; that he might come to feel the weight of the office and discover some reverence for the democracy that had been placed in his care.
+
+But he never did. For close to four years now, he's shown no interest in putting in the work; no interest in finding common ground; no interest in using the awesome power of his office to help anyone but himself and his friends; no interest in treating the presidency as anything but one more reality show that he can use to get the attention he craves.
+
+Donald Trump hasn't grown into the job because he can't. And the consequences of that failure are severe. 170,000 Americans dead. Millions of jobs gone while those at the top take in more than ever. Our worst impulses unleashed, our proud reputation around the world badly diminished, and our democratic institutions threatened like never before.
+
+Now, I know that in times as polarized as these, most of you have already made up your mind. But maybe you're still not sure which candidate you'll vote for -- or whether you'll vote at all. […]
+
+So let me tell you about my friend Joe Biden.
+
+Twelve years ago, when I began my search for a vice president, I didn't know I'd end up finding a brother. Joe and I came from different places and different generations. But what I quickly came to admire about Joe Biden is his resilience, born of too much struggle; his empathy, born of too much grief. [… ] That empathy, that decency, the belief that everybody counts -- that's who Joe is.
+
+When he talks with someone who's lost her job, Joe remembers the night his father sat him down to say that he'd lost his.
+
+When Joe listens to a parent who's trying to hold it all together right now, he does it as the single dad who took the train back to Wilmington each and every night so he could tuck his kids into bed.
+
+When he meets with military families who've lost their hero, he does it as a kindred spirit; the parent of an American soldier; somebody whose faith has endured the hardest loss there is.
+
+For eight years, Joe was the last one in the room whenever I faced a big decision. He made me a better president -- and he's got the character and the experience to make us a better country.
+
+And in my friend Kamala Harris, he's chosen an ideal partner who's more than prepared for the job; someone who knows what it's like to overcome barriers and who's made a career fighting to help others live out their own American dream.
+
+Along with the experience needed to get things done, Joe and Kamala have concrete policies that will turn their vision of a better, fairer, stronger country into reality.
+
+They'll get this pandemic under control, like Joe did when he helped me manage H1N1 and prevent an Ebola outbreak from reaching our shores.
+
+They'll expand health care to more Americans, like Joe and I did ten years ago when he helped craft the Affordable Care Act and nail down the votes to make it the law.
+
+They'll rescue the economy, like Joe helped me do after the Great Recession. […] But more than anything, what I know about Joe, and what I know about Kamala, is that they actually care about every American. And they care deeply about this democracy.
+
+They believe that in a democracy, the right to vote is sacred, and we should be making it easier for people to cast their ballot, not harder.
+
+They believe that no one -- including the president -- is above the law, and that no public official -- including the president -- should use their office to enrich themselves or their supporters.
+
+They understand that in this democracy, the Commander-in-Chief doesn't use the men and women of our military, who are willing to risk everything to protect our nation, as political props to deploy against peaceful protesters on our own soil. They understand that political opponents aren't "un-American" just because they disagree with you; that a free press isn't the "enemy" but the way we hold officials accountable; that our ability to work together to solve big problems like a pandemic depends on a fidelity to facts and science and logic and not just making stuff up.
+
+None of this should be controversial. [...] But at this moment, this president and those who enable him, have shown they don't believe in these things.
+
+Tonight, I am asking you to believe in Joe and Kamala's ability to lead this country out of these dark times and build it back better. But here's the thing: no single American can fix this country alone. Not even a president. […] It requires an active and informed citizenry. So I am also asking you to believe in your own ability -- to embrace your own responsibility as citizens -- to make sure that the basic tenets of our democracy endure. Because that's what at stake right now. Our democracy.
+
+Look, I understand why many Americans are down on government. The way the rules have been set up and abused in Congress make it easy for special interests to stop progress. Believe me, I know it. I understand why a white factory worker who's seen his wages cut or his job shipped overseas might feel like the government no longer looks out for him, and why a Black mom might feel like it never looked out for her at all. I understand why a new immigrant might look around this country and wonder whether there's still a place for him here; why a young person might look at politics right now, the circus of it all, the meanness, and the lies, and crazy conspiracy theories and think, what's the point?
+
+Well, here's the point: this president and those in power -- those who benefit from keeping things the way they are -- they are counting on your cynicism. They know they can't win you over with their policies. So they're hoping to make it as hard as possible for you to vote, and to convince you that your vote doesn't matter. That's how they win. [… ] 
+
+We can't let that happen. Do not let them take away your power. Don't let them take away your democracy. Make a plan right now for how you're going to get involved and vote. […] Do what Americans have done for over two centuries when faced with even tougher times than this -- all those quiet heroes who found the courage to keep marching, keep pushing in the face of hardship and injustice.
+
+Last month, we lost a giant of American democracy in John Lewis. Some years ago, I sat down with John and the few remaining leaders of the early Civil Rights Movement. One of them told me he never imagined he'd walk into the White House and see a president who looked like his grandson. Then he told me that he'd looked it up, and it turned out that on the very day that I was born, he was marching into a jail cell, trying to end Jim Crow segregation in the South.
+
+[…] I've seen that same spirit rising these past few years. Folks of every age and background who packed city centers and airports and rural roads so that families wouldn't be separated. So that another classroom wouldn't get shot up. So that our kids won't grow up on an uninhabitable planet. Americans of all races joining together to declare, in the face of injustice and brutality at the hands of the state, that Black Lives Matter, no more, but no less, so that no child in this country feels the continuing sting of racism.
+
+To the young people who led us this summer, telling us we need to be better -- in so many ways, you are this country's dreams fulfilled. Earlier generations had to be persuaded that everyone has equal worth. For you, it's a given -- a conviction. […] You can give our democracy new meaning. You can take it to a better place. You're the missing ingredient -- the ones who will decide whether or not America becomes the country that fully lives up to its creed.
+
+That work will continue long after this election. But any chance of success depends entirely on the outcome of this election. This administration has shown it will tear our democracy down if that's what it takes for them to win. So we have to get busy building it up -- by pouring all our effort into these 76 days, and by voting like never before -- for Joe and Kamala, and candidates up and down the ticket, so that we leave no doubt about what this country that we love stands for -- today and for all our days to come.
+
+Stay safe. God bless.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,360 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	\usepackage{dramatist}
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	%\usepackage{ulem} % command below for dotuline if ulem doesn't work
+		\newcommand{\dotuline}[1]{%
+    \tikz[baseline=(todotted.base)]{
+        \node[inner sep=0pt, anchor=south west] (todotted) {#1};
+        \draw[line width=0.8pt, dash pattern=on 0.8pt off 1.2pt] (todotted.south west) -- (todotted.south east);
+    }%
+}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Romeo and Juliet\subtitle{Act III, Scene I (excerpt)}}
+\date{\vspace{-3em}} % I tilfældet ingen dato
+%\date{1931}
+\author{William Shakespeare}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+
+\Character[Benvolio - a friend of Romeo]{Benvolio}{ben}
+\Character[Mercutio - a friend of the prince]{Mercutio}{merc}
+\Character[Tybalt - nephew to Lady Capulet]{Tybalt}{tyb}
+\Character[Romeo - son of Montague]{Romeo}{rom}
+\Character[Prince - ruler of Verona]{Prince}{prince}
+\Character[Lady Capulet - mother to Juliet]{Lady Capulet}{ladyc}
+\Character[Montague - father to Romeo]{Montague}{mont}
+\Character[Citizen]{Citizen}{cit}
+
+\linenumbers
+
+\StageDir{Enter MERCUTIO, BENVOLIO, Page, and Servants}
+
+\begin{drama*}
+
+\benspeaks I pray thee, good Mercutio, let's retire:\\
+The day is hot, the Capulets abroad,\\
+And, if we meet, we shall not 'scape a brawl;\\
+For now, these hot days, is the mad blood stirring.
+
+\mercspeaks Thou art like one of those fellows that when he enters the confines of a tavern, \glos{claps me}{banker}{vb.} his sword upon the table and says 'God send me no need of thee!' and by the operation of the second cup draws it on the \glos{drawer}{bartender}{sb.}, when indeed there is no need.
+
+\benspeaks Am I like such a fellow?
+
+\mercspeaks Come, come, thou art as hot a Jack in thy mood as any in Italy, and as soon moved to be moody, and as soon moody to be moved.
+
+[...]
+
+\benspeaks By my head, here come the Capulets.
+
+\mercspeaks By my heel, I care not.
+
+\StageDir{Enter TYBALT and others}
+
+\tybspeaks Follow me close, for I will speak to them. Gentlemen, good e'en'; a word with one of you.
+
+\mercspeaks And but one word with one of us? Couple it with something; make it a word and a blow.
+
+\tybspeaks You shall find me apt enough to that, sir, an you will give me occasion.
+
+\mercspeaks Could you not take some occasion without giving?
+
+\tybspeaks Mercutio, thou \glos{consort'st}{er ven med / spiller sammen med}{vb.} with Romeo,--
+
+\mercspeaks Consort! What, dost thou make us \glos{minstrels}{spillemænd}{sb.}? An thou make minstrels of us, look to hear nothing but discords. Here's my fiddlestick; here's that shall make you dance. \glos{'Zounds}{ved kristi sår, bandeord}{udr.}, consort!
+
+\benspeaks We talk here in the public haunt of men.\\
+Either withdraw unto some private place,\\
+And reason coldly of your grievances,\\
+Or else depart. Here all eyes gaze on us.
+
+\mercspeaks Men's eyes were made to look and let them gaze.\\
+I will not budge for no man's pleasure, I.
+
+\StageDir{Enter ROMEO}
+
+\tybspeaks Well, peace be with you, sir. Here comes my man.
+
+\mercspeaks But I'll be hanged, sir, if he wear \glos{your livery}{den uniform, som dine tjenere går med, dvs. "gør hvad du siger"}{sb.}:\\
+\glos{Marry}{ved jomfru Maria}{udr.}, go before to field, he'll be your follower.\\
+Your worship in that sense may call him 'man.'
+
+\tybspeaks Romeo, the hate I bear thee can afford\\
+No better term than this: thou art a villain.
+
+\romspeaks Tybalt, the reason that I have to love thee\\
+Doth much excuse the appertaining rage\\
+To such a greeting. Villain am I none;\\
+Therefore farewell; I see thou know'st me not.
+
+\tybspeaks Boy, this shall not excuse the injuries\\
+That thou hast done me; therefore turn and draw.
+
+\romspeaks I do protest, I never injured thee,\\
+But love thee better than thou canst devise,\\
+Till thou shalt know the reason of my love.\\
+And so, good Capulet,--which name I tender\\
+As dearly as my own,--be satisfied.
+
+\mercspeaks O calm, dishonourable, vile submission!\\
+\glos{'Alla stoccata'}{italiensk fægteudtryk}{idiom} carries it away.
+\StageDir{Draws}
+
+Tybalt, you rat-catcher, will you walk?
+
+\tybspeaks What wouldst thou have with me?
+
+\mercspeaks Good king of cats, nothing but one of your nine lives; that I mean to make bold withal, and as you shall use me hereafter, drybeat the rest of the eight. Will you pluck your sword out of his \glos{pilcher}{sværdskeden}{sb.} by the ears? Make haste, lest mine be about your ears \glos{ere}{før}{præp.} it be out.
+
+\tybspeaks I am for you.
+
+\StageDir{Drawing}
+
+\romspeaks Gentle Mercutio, put thy rapier up.
+
+\mercspeaks Come, sir, your \glos{passado}{italiensk fægteudtryk}{idiom}.
+
+\StageDir{They fight}
+
+\romspeaks Draw, Benvolio; beat down their weapons.\\
+Gentlemen, for shame, forbear this outrage!\\
+Tybalt, Mercutio, the prince expressly hath\\
+Forbidden bandying in Verona streets:\\
+Hold, Tybalt! good Mercutio!
+
+\StageDir{TYBALT under ROMEO's arm stabs MERCUTIO, and flies with his followers}
+
+\mercspeaks \hspace{11em} I am hurt.\\
+A plague o' both your houses! I am \glos{sped}{færdig}{adj.}.\\
+Is he gone and hath nothing?
+
+\benspeaks \hspace{11em} What, art thou hurt?
+
+\mercspeaks Ay, ay, a scratch, a scratch. Marry, 'tis enough.\\
+Where is my page? Go, villain, fetch a surgeon.
+
+\StageDir{Exit Page}
+
+\romspeaks Courage, man; the hurt cannot be much.
+
+\mercspeaks No, 'tis not so deep as a well, nor so wide as a church-door; but 'tis enough,'twill serve: ask for me to-morrow, and you shall find me a grave man. I am \glos{peppered}{færdig}{adj.}, I warrant, for this world. A plague o' both your houses! 'Zounds, a dog, a rat, a mouse, a cat, to scratch a man to death! a braggart, a rogue, a villain, that fights by the book of arithmetic! Why the devil came you between us? I was hurt under your arm.
+
+\romspeaks I thought all for the best.
+
+\mercspeaks Help me into some house, Benvolio,\\
+Or I shall faint. A plague o' both your houses!\\
+They have made worms' meat of me. I have it,\\
+And soundly too. Your houses!
+
+\StageDir{Exeunt MERCUTIO and BENVOLIO}
+
+\romspeaks This gentleman, the prince's near ally,\\
+My very friend, hath got his mortal hurt\\
+In my behalf; my reputation stain'd\\
+With Tybalt's slander,--Tybalt, that an hour\\
+Hath been my kinsman! O sweet Juliet,\\
+Thy beauty hath made me effeminate\\
+And in my temper soften'd valour's steel!
+
+\StageDir{Re-enter BENVOLIO}
+
+\benspeaks O Romeo, Romeo, brave Mercutio's dead!\\
+That gallant spirit hath aspired the clouds,\\
+Which too untimely here did scorn the earth.
+
+\romspeaks This day's black fate on more days doth depend;\\
+This but begins the woe, others must end.
+
+\StageDir{Re-enter TYBALT}
+
+\benspeaks Here comes the furious Tybalt back again.
+
+\romspeaks Alive, in triumph and Mercutio slain?\\
+Away to heaven, \glos{respective lenity}{nåde}{idiom},\\
+And fire-eyed fury be my conduct now!\\
+Now, Tybalt, take the 'villain' back again,\\
+That late thou gavest me; for Mercutio's soul\\
+Is but a little way above our heads,\\
+Staying for thine to keep him company:\\
+Either thou, or I, or both, must go with him.
+
+\tybspeaks Thou, wretched boy, that didst consort him here,\\
+Shalt with him hence.
+
+\romspeaks \hspace{8em} This shall determine that.
+
+\StageDir{They fight; TYBALT falls and dies}
+
+\benspeaks Romeo, away, be gone!\\
+The citizens are up, and Tybalt slain.\\
+Stand not amazed: the prince will doom thee death,\\
+If thou art taken. Hence, be gone, away!
+
+\romspeaks O, I am fortune's fool!
+
+\benspeaks \hspace{8.5em} Why dost thou stay?
+
+\StageDir{Exit ROMEO}
+
+[...]
+
+\end{drama*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+\benspeaks And what to?
+
+\mercspeaks Nay, \glos{an}{if}{konj.} there were two such, we should have none shortly, for one would kill the other. Thou? Why, thou wilt quarrel with a man that hath a hair more, or a hair less, in his beard, than thou hast. Thou wilt quarrel with a man for cracking nuts, having no other reason but because thou hast hazel eyes. What eye but such an eye would spy out such a quarrel? Thy head is as full of quarrels as an egg is full of \glos{meat}{mad}{sb.}, and yet thy head hath been beaten as addle as an egg for quarrelling. Thou hast quarrelled with a man for coughing in the street, because he hath wakened thy dog that hath lain asleep in the sun. Didst thou not fall out with a tailor for wearing his new doublet before Easter? With another, for tying his new shoes with old riband? And yet thou wilt tutor me from quarrelling!
+
+\benspeaks An I were so apt to quarrel as thou art, any man should buy \glos{the fee-simple}{ejendomsretten}{sb.} of my life for an hour and a quarter.
+
+\mercspeaks The fee-simple? O simple!
+
+
+

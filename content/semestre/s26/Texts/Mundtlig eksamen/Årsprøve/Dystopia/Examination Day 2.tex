@@ -1,0 +1,290 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Examination Day}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1985}
+\author{Henry Slesar}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+\noindent The Jordans never spoke of the exam, not until their son, Dickie, was twelve years old. It was on his birthday that Mrs. Jordan first mentioned the subject in his presence, and the anxious manner of her speech caused her husband to answer sharply.
+
+‘Forget about it,’ he said. ‘He’ll do all right.’
+
+They were at breakfast table, and the boy looked up from his plate curiously. He was an alert-eyed youngster with flat blond hair and a quick, nervous manner. He didn’t understand what the sudden tension was about, but he did know that today was his birthday, and he wanted harmony above all. Somewhere in the little apartment there were wrapped, beribboned packages waiting to be opened, and in the tiny wall-kitchen something warm and sweet was being prepared in the automatic stove. He wanted the day to be happy, and the moistness of his mother’s eyes, the scowl on his father’s face, spoiled the mood of fluttering expectation with which he had greeted the morning.
+
+‘What exam?’ he asked.
+
+His mother looked at the tablecloth. ‘It’s just a sort of Government Intelligence test they give children at the age of twelve. You’ll be taking it next week. It’s nothing to worry about.’
+
+‘You mean a test like in school?’
+
+‘Something like that,’ his father said, getting up from the table. ‘Go and read your comics, Dickie.’ The boy rose and wandered towards that part of the living room which had been ‘his’ corner since infancy. He fingered the topmost comic of the stack, but seemed uninterested in the colorful squares of fast-paced action. He wandered towards the window, and peered gloomily at the veil of mist that shrouded the glass.
+
+‘Why did it have to rain today?’ he said. ‘Why couldn’t it rain tomorrow?’
+
+His father, now slumped into an armchair with the Government newspaper rattled the sheets in vexation. ‘Because it just did, that’s all. Rain makes the grass grow.’
+
+‘Why, Dad?’
+
+‘Because it does, that’s all.’
+
+Dickie puckered his brow. ‘What makes it green, though? The grass?’
+
+‘Nobody knows,’ his father snapped, then immediately regretted his abruptness.
+
+Later in the day, it was birthday time again. His mother beamed as she handed over the gaily- colored packages, and even his father managed a grin and a rumple-of-the-hair. He kissed his mother and shook hands gravely with his father. Then the birthday cake was brought forth, and the ceremonies concluded.
+
+An hour later, seated by the window, he watched the sun force its way between the clouds.
+
+‘Dad,’ he said, ‘how far away is the sun?’
+
+‘Five thousand miles,’ his father said.
+
+Dickie sat at the breakfast table and again saw moisture in his mother’s eyes. He didn’t connect her tears with the exam until his father suddenly brought the subject to light again.
+ 
+‘Well, Dickie,’ he said, with a manly frown, ‘you’ve got an appointment today.’
+
+‘I know Dad. I hope –’
+
+‘Now, it’s nothing to worry about. Thousands of children take this test every day. The Government wants to know how smart you are, Dickie. That’s all there is to it.’
+
+‘I get good marks in school,’ he said hesitantly.
+
+‘This is different. This is a - special kind of test. They give you this stuff to drink, you see, and then you go into a room where there’s a sort of machine –‘
+
+‘What stuff to drink?’ Dickie said.
+
+‘It’s nothing. It tastes like peppermint. It’s just to make sure you answer the questions truthfully. Not that the Government thinks you won’t tell the truth, but it makes sure.’
+
+Dickie’s face showed puzzlement, and a touch of fright. He looked at his mother, and she composed her face into a misty smile.
+
+‘Everything will be all right,’ she said.
+
+‘Of course it will,’ his father agreed. ‘You’re a good boy, Dickie; you’ll make out fine. Then we’ll come home and celebrate. All right?’
+
+‘Yes sir,’ Dickie said.
+
+They entered the Government Educational Building fifteen minutes before the appointed hour. They crossed the marble floors of the great pillared lobby, passed beneath an archway and entered an automatic lift that brought them to the fourth floor. There was a young man wearing an insignia-less tunic, seated at a polished desk in front of Room 404. He held a clipboard in his hand, and he checked the list down to the Js and permitted the Jordans to enter.
+
+The room was as cold and official as a courtroom, with long benches flanking metal tables. There were several fathers and sons already there, and a thin-lipped woman with cropped black hair was passing out sheets of paper.
+
+Mr Jordan filled out the form, and returned it to the clerk. Then he told Dickie: ‘It won’t be long now. When they call your name, you just go through the doorway at the end of the room.’ He indicated the portal with his finger.
+
+A concealed loudspeaker crackled and called off the first name. Dickie saw a boy leave his father’s side reluctantly and walk slowly towards the door.
+
+At five minutes to eleven, they called the name of Jordan.
+
+‘Good luck, son,’ his father said, without looking at him. ‘I’ll call for you when the test is over.’
+
+Dickie walked to the door and turned the knob. The room inside was dim, and he could barely make out the features of the grey-tunicked attendant who greeted him.
+
+‘Sit down,’ the man said softly. He indicated a high stool beside his desk. ‘Your name’s Richard Jordan?’
+
+‘Yes, sir.’
+ 
+‘Your classification number is 600-115. Drink this, Richard.’
+
+He lifted a plastic cup from the desk and handed it to the boy. The liquid inside had the consistency of buttermilk, tasted only vaguely of the promised peppermint. Dickie downed it, and handed the man the empty cup.
+
+He sat in silence, feeling drowsy, while the man wrote busily on a sheet of paper. Then the attendant looked at his watch, and rose to stand only inches from Dickie’s face. He unclipped a penlike object from the pocket of his tunic, and flashed a tiny light into the boy’s eyes.
+
+‘All right,’ he said. ‘Come with me, Richard.’
+
+He led Dickie to the end of the room, where a single wooden armchair faced a multi-dialed computing machine. There was a microphone on the left arm of the chair, and when the boy sat down, he found its pinpoint head conveniently at his mouth.
+
+‘Now just relax, Richard. You’ll be asked some questions, and you think them over carefully. Then give your answers into the microphone. The machine will take care of the rest.’
+
+‘Yes, sir.’
+
+‘I’ll leave you alone now. Whenever you want to start, just say “ready” into the microphone.’ ‘Yes, sir.’
+
+The man squeezed his shoulder, and left. Dickie said, ‘Ready.’
+
+Lights appeared on the machine, and a mechanism whirred. A voice said: ‘Complete this sequence. One, four, seven, ten . .
+
+Mr and Mrs Jordan were in the living room, not speaking, not even speculating.
+
+It was almost four o’clock when the telephone rang. The woman tried to reach it first, but her husband was quicker.
+
+‘Mr Jordan?’
+
+The voice was clipped: a brisk, official voice. ‘Yes, speaking.’
+
+‘This is the Government Educational Service. Your son, Richard M Jordan, Classification 600-115 has completed the Government examination. We regret to inform you that his intelligence quotient is above the Government regulation, according to Rule 84 Section 5 of the New Code.’
+
+Across the room, the woman cried out, knowing nothing except the emotion she read on her husband’s face.
+
+‘You may specify by telephone,’ the voice droned on, ‘whether you wish his body interred by the Government, or would you prefer a private burial place? The fee for Government burial is ten dollars.’
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

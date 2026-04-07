@@ -1,0 +1,335 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	\usepackage{dramatist}
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	%\usepackage{ulem} % command below for dotuline if ulem doesn't work
+		\newcommand{\dotuline}[1]{%
+    \tikz[baseline=(todotted.base)]{
+        \node[inner sep=0pt, anchor=south west] (todotted) {#1};
+        \draw[line width=0.8pt, dash pattern=on 0.8pt off 1.2pt] (todotted.south west) -- (todotted.south east);
+    }%
+}	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Romeo and Juliet\subtitle{Act III, Scene III (excerpt)}}
+\date{\vspace{-3em}} % I tilfældet ingen dato
+%\date{1931}
+\author{William Shakespeare}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+
+\Character[Friar Laurence - a Franciscan friar]{Friar Laurence}{friar}
+\Character[Romeo - son of Montague]{Romeo}{rom}
+\Character[Nurse - Juliet's nurse]{Nurse}{nurse}
+
+\linenumbers
+
+\StageDir{Friar Laurence's \glos{cell}{bolig}{sb.}}
+
+\begin{drama*}
+
+[...]
+
+\romspeaks Father, what news? What is the Prince’s doom?\\
+What sorrow craves acquaintance at my hand\\
+That I yet know not?
+
+\friarspeaks \hspace{8em} Too familiar\\
+Is my dear son with such sour company:\\
+I bring thee tidings of the Prince’s doom.
+
+\romspeaks What less than doomsday is the Prince’s doom?
+
+\friarspeaks A gentler judgment vanished from his lips:\\
+Not body’s death, but body’s banishment.
+
+\romspeaks Ha, banishment? Be merciful, say 'death.'\\
+For exile hath more terror in his look,\\
+Much more, than death; do not say 'banishment'.
+
+\friarspeaks Here from Verona art thou banishèd.\\
+Be patient, for the world is broad and wide.
+
+\romspeaks There is no world without Verona walls,\\
+But purgatory, torture, hell itself.\\
+Hence 'banishèd' is 'banished from the world,'\\
+And world’s exile is death. Then 'banishèd'\\
+Is death mis-termed. Calling death 'banishèd,'\\
+Thou cut’st my head off with a golden axe,\\
+And smilest upon the stroke that murders me.
+
+\friarspeaks O deadly sin! O rude unthankfulness!\\
+Thy fault our law calls death, but the kind Prince,\\
+Taking thy \glos{part}{parti}{sb.}, hath rushed aside the law,\\
+And turned that black word 'death' to 'banishment.'\\
+This is dear mercy, and thou seest it not.
+
+\romspeaks ’T is torture and not mercy. Heaven is here\\
+Where Juliet lives, and every cat and dog\\
+And little mouse, every unworthy thing,\\
+Live here in heaven and may look on her,\\
+But Romeo may not. More validity,\\
+More honorable state, more courtship lives\\
+In carrion flies than Romeo: They may seize\\
+On the white wonder of dear Juliet’s hand\\
+And steal immortal blessing from her lips,\\
+Who even in pure and \glos{vestal}{jomfruelig}{adj.} modesty\\
+Still blush, as thinking their own kisses sin;\\
+But Romeo may not; he is banishèd.\\
+Flies may do this, but I from this must fly;\\
+They are free men, but I am banishèd.\\
+And say’st thou yet that exile is not death?\\
+Hadst thou no poison mixed, no \glos{sharp-ground}{skarpslebet}{adj.} knife,\\
+No sudden \glos{mean of death}{mordvåben}{sb.}, though ne’er so mean,\\
+But 'banishèd' to kill me? 'Banishèd'!\\
+O Friar, the damnèd use that word in hell;\\
+Howling attends it. How hast thou the heart,\\
+Being a divine, a ghostly confessor,\\
+A sin-absolver, and my friend professed,\\
+To \glos{mangle}{mishandle}{vb.} me with that word 'banishèd'?
+
+[...]
+
+\friarspeaks I’ll give thee armor to keep off that word,\\
+Adversity’s sweet milk, philosophy,\\
+To comfort thee, though thou art banishèd.
+
+\romspeaks Yet 'banishèd'? Hang up philosophy.\\
+Unless philosophy can make a Juliet,\\
+Displant a town, reverse a Prince’s doom,\\
+It helps not, it prevails not. Talk no more.
+
+[...]
+
+Thou canst not speak of that thou dost not feel.\\
+\glos{Wert}{were}{vb.} thou as young as I, Juliet thy love,\\
+An hour but married, Tybalt murderèd,\\
+\glos{Doting}{dybt forelsket}{adj.} like me, and like me banishèd,\\
+Then mightst thou speak, then mightst thou tear thy hair,\\
+And fall upon the ground, as I do now,\\
+Taking the measure of an unmade grave.
+
+\StageDir{Knocking within}
+
+\friarspeaks Arise. One knocks. Good Romeo, hide thyself.
+
+[...]
+
+Who knocks so hard? Whence come you? What’s your will?
+
+\nursespeaks[from outside] Let me come in, and you shall know my errand.\\
+I come from Lady Juliet.
+
+\friarspeaks \hspace{9.5em} Welcome, then.
+
+\StageDir{Enter Nurse.}
+
+\nursespeaks O holy Friar, O, tell me, holy Friar,\\
+Where’s my lady’s lord? Where’s Romeo?
+
+\friarspeaks There on the ground, with his own tears made drunk.
+
+\nursespeaks O, he is even in my mistress’ case,\\
+Just in her case. O woeful sympathy!\\
+Piteous predicament! Even so lies she,\\
+Blubbering and weeping, weeping and blubbering.\\
+\ [to Romeo] Stand up, stand up. Stand and you be a man!\\
+For Juliet’s sake; for her sake rise and stand.\\
+Why should you fall into so deep an \glos{O}{klagen}{sb.}?
+
+[...]
+
+\romspeaks \glos{Spak’st}{did you speak}{vb.} thou of Juliet? How is it with her?\\
+Doth not she think me an old murderer,\\
+Now I have stained the childhood of our joy\\
+With blood removed but little from her own?\\
+Where is she? And how doth she? And what says\\
+My concealed lady to our canceled love?
+
+\nursespeaks O, she says nothing, sir, but weeps and weeps,\\
+And now falls on her bed, and then starts up,\\
+And 'Tybalt' calls, and then on Romeo cries,\\
+And then down falls again.
+
+\romspeaks \hspace{10.5em} As if that name,\\
+Shot from the deadly level of a gun,\\
+Did murder her; as that name’s cursèd hand\\
+Murdered her kinsman. O, tell me, Friar, tell me,\\
+In what vile part of this anatomy\\
+Doth my name lodge? Tell me, that I may sack\\
+The hateful mansion.
+
+\StageDir{Drawing his dagger.}
+
+\end{drama*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+Now, it was a treat to see how Belcher got off with the old woman of the house we were staying in. She was a great warrant to scold, and crotchety even with us, but before ever she had a chance of giving our guests, as I may call them, a lick of her tongue, Belcher had made her his friend for life. She was breaking sticks at the time, and Belcher, who hadn't been in the house for more than ten minutes, jumped up out of his seat and went across to her. 
+
+'Allow me, madam,' he says, smiling his queer little smile; 'please allow me', and takes the hatchet from her hand. She was struck too \glos{parlatic}{irsk for af paralytic, lammet}{adj.} to speak, and ever after Belcher would be at her heels carrying a bucket, or basket, or load of turf, as the case might be. As Noble wittily remarked, he got into looking before she leapt, and hot water or any little thing she wanted Belcher would have it ready before her. For such a huge man (and though I am five foot ten myself I had to look up to him) he had an uncommon shortness - or should I say lack - of speech. It took us some time to get used to him walking in and out like a ghost, without a syllable out of him. Especially because 'Awkins talked enough for a platoon, it was strange to hear big Belcher with his toes in the ashes come out with a solitary 'Excuse me, chum,' or 'That's right, chum.' His one and only abiding passion was cards, and I will say for him he was a good card-player. He could have fleeced me and Noble many a time; only if we lost to him, 'Awkins lost to us, and 'Awkins played with the money Belcher gave him.
+
+'Awkins lost to us because he talked too much, and I think now we lost to Belcher for the same reason. 'Awkins and Noble would spit at one another about religion into the early hours of the morning; the little Englishman as you could see worrying the soul out of young Noble (whose brother was a priest) with a string of questions that would puzzle a cardinal. And to make it worse, even in treating of these holy subjects, 'Awkins had a deplorable tongue; I never in all my career struck across a man who could mix such a variety of cursing and bad language into the simplest topic. Oh, a terrible man was little 'Awkins, and a fright to argue! He never did a stroke of work, and when he had no one else to talk to he fixed his claws into the old woman.
+
+I am glad to say that in her he met his match, for one day when he tried to get her to complain profanely of the drought she gave him a great comedown by blaming the drought upon Jupiter Plu- vius (a deity neither 'Awkins nor I had ever even heard of, though Noble said among the pagans he was held to have something to do with rain). And another day the same 'Awkins was swearing at the capitalists for starting the German war, when the old dame laid down her iron, puckered up her little crab's mouth and said, 'Mr 'Awkins, you can say what you please about the war, thinking to deceive me because I'm an ignorant old woman, but I know well what started the war. It was that Italian count that stole the heathen divinity out of the temple in Japan, for believe me, Mr 'Awkins, nothing but sorrow and want follows them that disturbs the hidden powers!' Oh, a queer old dame, as you remark! 
+
+After we had been in bed about an hour he asked me did I think we ought to tell the Englishmen. I having thought of the same thing myself (among many others) said no, because it was more than likely the English wouldn't shoot our men, and anyhow it wasn't to be supposed the Brigade who were always up and down with the second battalion and knew the Englishmen well would be likely to want them bumped off. 'I think so,' says Noble. 'It would be sort of cruelty to put the wind up them now.' 'It was very unforeseen of Jeremiah Donovan anyhow,' says I, and by Noble's silence I realized he took my meaning. 
+
+Anyway, he took little 'Awkins by the arm and dragged him on, but it was impossible to make him understand that we were in earnest. From which you will perceive how difficult it was for me, as I kept feeling my Smith and Wesson and thinking what I would do if they happened to put up a fight or ran for it, and wishing in my heart they would. I knew if only they ran I would never fire on them. 'Was Noble in this?' 'Awkins wanted to know, and we said yes. He laughed. But why should Noble want to shoot him? Why should we want to shoot him? What had he done to us? Weren't we chums (the word lingers painfully in my memory)? Weren't we? Didn't we understand him and didn't he understand us? Did either of us imagine for an instant that he'd shoot us for all the so-and-so brigadiers in the so-and-so British Army? By this time I began to perceive in the dusk the desolate edges of the bog that was to be their last earthly bed, and, so great a sadness overtook my mind, I could not answer him. We walked along the edge of it in the dark- ness, and every now and then 'Awkins would call a halt and begin again, just as if he was wound up, about us being chums, and I was in despair that nothing but the cold and open grave made ready for his presence would convince him that we meant it all. But all the same, if you can understand, I didn't want him to be bumped off. 
+
+I cannot explain it even now, how sad I felt, but I went back to the cottage, a miserable man. When I arrived the discussion was still on, 'Awkins holding forth to all and sundry that there was no next world at all and Noble answering in his best canonical style that there was. But I saw 'Awkins was after having the best of it. 'Do you know what, chum?' he was saying, with his saucy smile, 'I think you're jest as big a bleedin' hunbeliever as I am. You say you believe in the next world and you know jest as much abaout the next world as I do, which is sweet damn-all. What's 'Eaven? You dunno. Where's 'Eaven? You dunno. Who's in 'Eaven? You dunno. You know sweet damn-all! I arsk you again, do they wear wings?' 
+
+'Very well then,' says Noble, 'they do; is that enough for you? They do wear wings.' 'Where do they get them then? Who makes them? 'Ave they a fact'ry for wings? 'Ave they a sort of store where you 'ands in your chit and tikes your bleedin' wings? Answer me that.' 
+
+'Oh, you're an impossible man to argue with,' says Noble. 'Now listen to me — '. And off the pair of them went again. 
+
+The old woman was for having them stay in spite of us, and she did not shut her mouth until Jeremiah Donovan lost his temper and said some nasty things to her. Within the house by this time it was pitch dark, but no one thought of lighting the lamp, and in the darkness the two Englishmen fetched their khaki topcoats and said good-bye to the woman of the house. 'Just as a man mikes a 'ome of a bleedin' place,' mumbles 'Awkins shaking her by the hand, 'some bastard at headquarters thinks you're too cushy and shunts you off.' Belcher shakes her hand very hearty. 'A thousand thanks, madam,' he says, 'a thousand thanks for everything . . . ' as though he'd made it all up. 
+
+I don't remember much about the burying, but that it was worse than all the rest, because we had to carry the warm corpses a few yards before we sunk them in the windy bog. It was all mad lonely, with only a bit of lantern between ourselves and the pitch-blackness, and birds hooting and screeching all round disturbed by the guns. Noble had to search 'Awkins first to get the letter from his mother. Then having smoothed all signs of the grave away, Noble and I collected our tools, said good-bye to the others, and went back along the desolate edge of the treacherous bog without a word. We put the tools in the houseen and went into the house. The kitchen was pitch-black and cold, just as we left it, and the old woman was sitting over the hearth telling her beads. We walked past her into the room, and Noble struck a match to light the lamp. Just then she rose quietly and came to the doorway, being not at all so bold or crabbed as usual. 
+
+'What did ye do with them?' she says in a sort of whisper, and Noble took such a mortal start the match quenched in his trembling hand. 'What's that?' he asks without turning round. 'I heard ye,' she said. 'What did you hear?' asks Noble, but sure he wouldn't deceive a child the way he said it. 'I heard ye. Do you think I wasn't listening to ye putting the things back in the houseen?' Noble struck another match and this time the lamp lit for him. 'Was that what ye did with them?' she said, and Noble said nothing - after all what could he say? 
+
+So then, by God, she fell on her two knees by the door, and began telling her beads, and after a minute or two Noble went on his knees by the fireplace, so I pushed my way out past her, and stood at the door, watching the stars and listening to the damned shrieking of the birds.
+
+We went about the house all day scarcely saying a word. Belcher didn't mind us much; he was stretched into the ashes as usual with his usual look of waiting in quietness for something unforeseen to happen, but little 'Awkins gave us a bad time with his audacious gibing and questioning. He was disgusted at Noble's not answering him back. 'Why can't you tike your beating like a man, chum?' he says. 'You with your Hadam and Heve! I'm a Communist — or an Anarchist. An Anarchist, that's what I am.' And for hours after he went round the house, mumbling when the fit took him, 'Hadam and Heve! Hadam and Heve!' 
+

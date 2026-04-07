@@ -1,0 +1,287 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Auggie Wren's Christmas Story}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1990}
+\author{Paul Auster}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+\noindent I heard this story from Auggie Wren. Since Auggie doesn't come off too well in it, at least not as well as he'd like to, he's asked me not to use his real name. Other than that, the whole business about the lost wallet and the blind woman and the Christmas dinner is just as he told it to me.
+
+Auggie and I have known each other for close to 11 years now. He works behind the counter of a cigar store on Court Street in downtown Brooklyn, and since it's the only store that carries the little Dutch cigars I like to smoke, I go in there fairly often. For a long time, I didn't give much thought to Auggie Wren. He was a strange little man who wore a hooded blue sweatshirt and sold me cigars and magazines, the impish, wisecracking character who always had something funny to say about the weather or the Mets or the politicians in Washington, and that was the extent of it.
+
+But then one day several years ago he happened to be looking through a magazine in the store, and he stumbled across a review of one of my books. He knew it was me because a photograph accompanied the review, and after that things changed between us. I was no longer just another customer to Auggie. I had become a distinguished person. Most people couldn't care less about books and writers, but it turned out that Auggie considered himself an artist. Now that he had cracked the secret of who I was, he embraced me as an ally, a confidant, a brother-in-arms. To tell the truth, I found it rather embarrassing. Then, almost inevitably, a moment came when he asked if I would be willing to look at his photographs. Given his enthusiasm and good will, there didn't seem to be any way I could turn him down.
+
+God knows what I was expecting. At the very least, it wasn't what Auggie showed me the next day. In a small, windowless room at the back of the store, he opened a cardboard box and pulled out 12 identical black photo albums. This was his life's work, he said, and it didn't take him more than 5 minutes a day to do it. Every morning for the past 12 years, he had stood at the corner of Atlantic Avenue and Clinton Street at precisely 7 o'clock and had taken a single color photograph of precisely the same view. The project now ran to more than 4,000 photographs. Each album represented a different year, and all the pictures were laid out in sequence, from January 1 to December 31, with the dates carefully recorded under each one.
+As I flipped through the albums and began to study Auggie's work, I didn't know what to think. My first impression was that it was the oddest, most bewildering thing I had ever seen. All the pictures were the same. The whole project was a numbing onslaught of repetition, the same street and the same buildings over and over again, an unrelenting delirium of redundant images. I couldn't think of anything to say to Auggie, so I continued turning pages, nodding my head in feigned appreciation. Auggie himself seemed unperturbed, watching me with a broad smile on his face, but after I'd been at it for several minutes, he suddenly interrupted me and said, "You're going too fast. You'll never get it if you don't slow down."
+
+He was right, of course. If you don't take the time to look, you'll never manage to see anything. I picked up another album and forced myself to go more deliberately. I paid closer attention to details, took note of shifts in the weather, watched for the changing angles of light as the seasons advanced. Eventually, I was able to detect subtle differences in the traffic flow, to anticipate the rhythm of the different days (the commotion of workday mornings, the relative stillness of weekends, the contrast between Saturdays and Sundays). And then, little by little, I began to recognize the faces of the passersby on their way to work, the same people in the same spot every morning, living an instant of their lives in the field of Auggie's camera.
+
+Once I got to know them, I began to study their postures, the way they carried themselves from one morning to the next, trying to discover their moods from these surface indications, as if I could imagine stories for them, as if I could penetrate invisible dramas locked inside their bodies. I picked up another album. I was no longer bored, no longer puzzled as I had been at first. Auggie was photographing time, I realized, both natural time and human time, and he was doing it by planting himself in one tiny corner of the world and willing it to be his own, by standing guard in the space he had chosen for himself. As he watched me pore over his work, Auggie continued to smile with pleasure. Then, almost as if he had been reading my thoughts, he began to recite a line from Shakespeare. "Tomorrow and tomorrow and tomorrow," he muttered under his breath, "creeps in this petty pace." I understood then that he knew exactly what he was doing.
+
+That was more than two thousand pictures ago. Since that day, Auggie and I have discussed his work many times, but it was only last week that I learned how he acquired his camera and began taking pictures in the first place. That was the subject of the story he told me, and I'm still struggling to make sense of it.
+
+Earlier that same week, a man from The New York Times called me and asked if I would be willing to write a short story that would appear in the paper on Christmas morning. My first impulse was to say no, but the man was very charming and persistent, and by the end of the conversation I told him that I would give it a try. The moment I hung up the phone, however, I fell into a deep panic. What did I know about Christmas? What did I know about writing short stories on commission?
+
+I spent the next several days in despair, warring the ghosts of Dickens, O. Henry, and other masters of the Yuletide spirit. The very phrase, "Christmas story" had unpleasant associations for me, evoking dreadful outpourings of hypocritical mush and treacle. Even at their best, Christmas stories were no more than wish-fulfillment dreams, fairy tales for adults, and I'd be damned if I'd ever allow myself to write something like that. And yet, how could anyone propose to write an unsentimental Christmas story? It was a contradiction in terms, an impossibility, an out-and-out conundrum. One might just as well try to imagine a racehorse without legs, or a sparrow without wings.
+
+I got nowhere. On Thursday I went out for a long walk, hoping the air would clear my head. Just past noon, I stopped in at the cigar store to replenish my supply, and there was Auggie, standing behind the counter, as always. He asked me how I was. Without really meaning to, I found myself unburdening my troubles to him. "A Christmas story?" he said after I had finished. "Is that all? If you buy me lunch, my friend, I'll tell you the best Christmas story you ever heard. And I guarantee that every word of it is true."
+
+We walked down the block to Jack's, a cramped, boisterous delicatessen with good pastrami sandwiches and photographs of old Dodgers teams hanging on the walls. We found a table at the back, ordered our food, and then Auggie launched into his story.
+
+"It was the summer of '72," he said, "A kid came in one morning and started stealing things from the store. He must have been about 19 or 20, and I don't think I've ever seen a more pathetic shoplifter in all my life. He's standing by the rack of paperbacks along the far wall and stuffing books into the pockets of his raincoat. It was crowded around the counter, so I didn't seem him at first. But once I noticed what he was up to, I started to shout. He took off like a jackrabbit, and by the time I managed to get out from behind the counter, he was already tearing down Atlantic Avenue. I chased after him for about half a block, then I gave up. He dropped something along the way, and since I didn't feel like running anymore, I bent down to see what it was."
+
+"It turned out to be his wallet. There wasn't any money inside, but his driver's license was there along with three or four snapshots. I suppose I could have called the cops and had him arrested. I had his name and address from the license, but I felt sorry for him. He was just a measly little punk, and once I looked at those pictures, I couldn't bring myself to feel very angry at him. Robert Goodwin. That was his name. In one of the pictures, I remember, he was standing with his arm around his mother or grandmother. In another one, he was sitting there at age nine or ten dressed up in a baseball uniform with a big smile on his face. I just didn't have the heart. He was probably on dope now, I figured. A poor kid from Brooklyn without much going for him, and who cared about a couple of trashy paperbacks, anyway?
+
+"So I kept the wallet. Every once in a while, I'd get a little urge to send it back to him, but I kept delaying and never did anything about it. Then Christmas rolls around and I'm stuck with nothing to do. The boss usually invites me over to his house to spend the day, but that year he and his family were down in Florida visiting relatives. So I'm sitting in my apartment that morning feeling a little sorry for myself, and then I see Robert Goodwin's wallet lying on a shelf in the kitchen. I figure what the hell, why not do something nice for once, and I put on my coat and go out to return the wallet in person.
+
+"The address was over in Boerum Hill, somewhere in the projects. It was freezing out that day, and I remember getting lost a few times trying to find the right building. Everything looks the same in that place, and you keep going over the same ground thinking you're somewhere else. Anyway, I finally get to the apartment I'm looking for and I ring the bell. Nothing happens. I assume no one's there, but I try again just to make sure. I wait a little longer, and just when I'm about to give up, I hear someone shuffling to the door. An old woman's voice asks who's there, and I say I'm looking for Robert Goodwin. "Is that you, Robert?" the old woman says, and then she undoes about 15 locks and opens the door.
+
+"She has to be at least 80, maybe 90 years old, and the first thing I notice about her is that she's blind. "I knew you'd come, Robert," she says, 'I knew you wouldn't forget your Granny Ethel on Christmas.' And then she opens her arms as if she's about to hug me.
+
+"I didn't have much time to think, you understand. I had to say something real fast, and before I knew what was happening, I could hear the words coming out of my mouth, 'That's right, Granny Ethel,' I said, 'I came back to see you on Christmas.' Don't ask me why I did it. I don't have any idea. Maybe I didn't want to disappoint her or something. I don't know. It just came out that way, and this old woman was suddenly hugging me right there in front of the door, and I was hugging her back.
+
+"I didn't exactly say I was her grandson. Not in so many words at least, but that was the implication. I wasn't trying to trick her, though. It was like a game we'd both decided to play - without having to discuss the rules. I mean, that woman knew I wasn't her grandson Robert. She was old and dotty, but she wasn't so far gone that she could't tell the difference between a stranger and her own flesh and blood. But it made her happy to pretend, and since I had nothing better to do anyway, I was happy to go along with her.
+"So we went into the apartment and spent the day together. The place was a real dump, I might add, but what else can you expect from a blind woman who does her own housekeeping? Every time she asked me a question about how I was I would lie to her. I told her I'd found a good job working in a cigar store, I told her I was about to get married, I told her a hundred pretty stories, and she made like she believed every one of them. "That's fine, Robert,' she would say, nodding her head and smiling. 'I always knew things would work out for you.'
+
+"After a while I started getting pretty hungry. There didn't seem to be much food in the house, so I went out to a store in the neighborhood and brought back a mess of stuff. A precooked chicken, vegetable soup, a bucket of potato salad, a chocolate cake, all kinds of stuff. Ethel had a couple of bottles of wine stashed in her bedroom, and so between us we managed to put together a fairly decent Christmas dinner. We both got a little tipsy from the wine, I remember, and after the meal was over we went to sit in the living room, where the chairs were more comfortable. I had to take a pee, so I excused myself and went to the bathroom down the hall. That's when things took yet another turn. It was ditsy enough my doing a little jig as Ethel's grandson, but what I did next was positively crazy, and I've never forgiven myself for it.
+
+"I go into the bathroom, and stacked up against the wall next to the shower, I see a pile of six or seven cameras. Brand-new, 35-millimeter cameras, still in their boxes, top-quality merchandise. I figure this is the work of the real Robert, a storage-place for one of his recent hauls. I've never taken a picture in my life, and I certainly never stole anything, but the moment I see those cameras sitting in the bathroom, I decide I want one of them for myself. Just like that. And without even stopping to think about it, I tuck one of the boxes under my arm and go back to the living room.
+
+"I could't have been gone for more than three minutes, but in that time Granny Ethel had fallen asleep in her chair. Too much Chianti, I suppose. I went to the kitchen to wash the dishes, and she slept on through the whole racket, snoring like a baby. There didn't seem to be any point in disturbing her, so I decided to leave. I couldn't even write a note to say goodbye, seeing that she was blind and all, so I just left. I put her grandson's wallet on the table, picked up the camera again, and walked out of the apartment. And that's the end of the story."
+
+"Did you ever go back to see her?" I asked.
+
+"Once," he said. "About three or four months later. I felt so bad about stealing the camera, I hadn't even used it yet. I finally made up my mind to return it, but Ethel wasn't there anymore. I don't know what happened to her, but someone else had moved into the apartment and he couldn't tell me where she was."
+"She probably died."
+
+"Yeah, probably."
+
+"Which means that she spent her last Christmas with you."
+
+"I guess so. I never thought of it that way."
+
+"It was a good deed, Auggie. It was a nice thing you did for her."
+
+"I lied to her, and then I stole from her. I don't see how you can call that a good deed."
+
+"You made her happy. And the camera was stolen anyway. It's not as if the person you took it from really owned it."
+
+"Anything for art, eh, Paul?"
+
+"I wouldn't say that. But at least you've put the camera to good use."
+
+"And now you've got your Christmas story, don't you?"
+
+"Yes," I said, "I suppose I do."
+
+I paused for a moment, studying Auggie as a wicked grin spread across his face. I couldn't be sure, but the look in his eyes at the moment was so mysterious, so fraught with the glow of some inner delight, that it suddenly occurred tome that he had made the whole thing up. I was about to ask him if he'd been putting me on, but then I realized that he would never tell. I had been tricked into believing him, and that was the only thing that mattered. As long as there's one person to believe it, there's no story that can't be true.
+"You're an ace, Auggie," I said. "Thanks for being so helpful."
+
+"Any time," he said, still looking at me with that maniacal light in his eyes. "After all, if you can't share your secrets with your friends, what kind of a friend are you?"
+
+"I guess I owe you one."
+
+"No you don't. Just put it down the way I told it to you, and you don't owe me a thing."
+
+"Except the lunch."
+
+"That's right. Except the lunch."
+
+I returned Auggie's smile with a smile of my own, and then I called out to the waiter and asked for the check.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+The villagers kept their distance, leaving a space between themselves and the stool, and when Mr. Summers said, “Some of you fellows want to give me a hand?,” there was a hesitation before two men, Mr. Martin and his oldest son, Baxter, came forward to hold the box steady on the stool while Mr. Summers stirred up the papers inside it.
+
+The original paraphernalia for the lottery had been lost long ago, and the black box now resting on the stool had been put into use even before Old Man Warner, the oldest man in town, was born. Mr. Summers spoke frequently to the villagers about making a new box, but no one liked to upset even as much tradition as was represented by the black box. There was a story that the present box had been made with some pieces of the box that had preceded it, the one that had been constructed when the first people settled down to make a village here. Every year, after the lottery, Mr. Summers began talking again about a new box, but every year the subject was allowed to fade off without anything’s being done. The black box grew shabbier each year; by now it was no longer completely black but splintered badly along one side to show the original wood color, and in some places faded or stained.
+
+Mr. Martin and his oldest son, Baxter, held the black box securely on the stool until Mr. Summers had stirred the papers thoroughly with his hand. Because so much of the ritual had been forgotten or discarded, Mr. Summers had been successful in having slips of paper substituted for the chips of wood that had been used for generations. Chips of wood, Mr. Summers had argued, had been all very well when the village was tiny, but now that the population was more than three hundred and likely to keep on growing, it was necessary to use something that would fit more easily into the black box. The night before the lottery, Mr. Summers and Mr. Graves made up the slips of paper and put them into the box, and it was then taken to the safe of Mr. Summers’ coal company and locked up until Mr. Summers was ready to take it to the square next morning. The rest of the year, the box was put away, sometimes one place, sometimes another; it had spent one year in Mr. Graves’ barn and another year underfoot in the post office, and sometimes it was set on a shelf in the Martin grocery and left there.
+
+
+“Clark. . . . Delacroix.”
+
+“There goes my old man,” Mrs. Delacroix said. She held her breath while her husband went forward.
+
+“Dunbar,” Mr. Summers said, and Mrs. Dunbar went steadily to the box while one of the women said, “Go on, Janey,” and another said, “There she goes.”
+
+“We’re next,” Mrs. Graves said. She watched while Mr. Graves came around from the side of the box, greeted Mr. Summers gravely, and selected a slip of paper from the box. By now, all through the crowd there were men holding the small folded papers in their large hands, turning them over and over nervously. Mrs. Dunbar and her two sons stood together, Mrs. Dunbar holding the slip of paper.
+
+“Harburt. . . . Hutchinson.”
+
+“Get up there, Bill,” Mrs. Hutchinson said, and the people near her laughed.
+
+“Jones.”

@@ -1,0 +1,232 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{World War Z\subtitle{excerpt}}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2006}
+\author{Max Brooks}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+\noindent It was just a trickle at first, ones and twos staggering between the abandoned cars that jammed the deserted freeway. At least the refugees had been evacuated. Okay, that was another thing they did right. Picking a choke point and clearing the civilians, great job. Everything else ...
+
+\glos{Zack}{Zombies}{sb.} started entering the first kill zone, the one designated for the MLRS. I didn't hear the rockets launch, my hood muffled the noise, but I saw them streak toward the target. I saw them arch on their way down, as their casings broke away to reveal all those little bomblets on plastic streamers. They're about the size of a hand grenade, antipersonnel with a limited antiarmor capacity. They scattered amongst the \glos{Gs}{Zombies}{sb.}, detonating once they hit the road or an abandoned car. Their gas tanks went up in like little volcanoes, geysers of fire and debris that added to the "steel rain." I got to be honest, it was a rush, dudes were cheering in their mikes, me too, watching ghouls start to tumble. I'd say there were maybe thirty, maybe forty or fifty, zombies spread out all across this half mile stretch of freeway. The opening bombardment took out at least three-quarters of them.
+
+\textbf{Only three-quarters.}
+
+[Todd finishes his cigarette in one long, angry drag. Immediately, he reaches for another.]
+
+Yep, and that's what should have made us worry right then and there. "Steel rain" hit each and every single one of them, shredded their insides; organs and flesh were scattered all over the damn place, dropping from their bodies as they came toward us ... but head shots ... you're trying to destroy the brain, not the body, and as long as they got a working thinker and some mobility ... some were still walking, others too thrashed to stand were crawling. Yeah, we should have worried, but there wasn't time.
+
+The trickle was now turning into a stream. More Gs, dozens now, thick among the burning cars.
+
+[...]
+
+The stream was now like a river, a flood of bodies, slouching, moaning, stepping over their mangled bros as they rolled slowly and steadily toward us like a slow-motion wave.
+
+The next kill zone was direct fire from the heavy arms, the tank's main 120s and Bradleys with their chain guns and FOTT missiles. The Humvees also began to open up, mortars and missiles and the Mark-19s, which are, like, machine guns, but firing grenades. The Comanches came whining in at what felt like inches above our heads with chains and Hellfires and Hydra rocket pods.
+
+It was a fucking meat grinder, a wood chipper, organic matter clouding like sawdust above the horde.
+
+Nothing can survive this, I was thinking, and for a little while, it looked like I was right ... until the fire started to die.
+
+\textbf{Started to die?}
+
+Petering out, withering…
+
+[For a second he is silent, and then, angrily, his eyes refocus.]
+
+No one thought about it, no one! Don't pull my pud with stories about budget cuts and supply problems! The only thing in short supply was common fucking sense! Not one of those West Point, War College, medals-up-the-ass, four-star fart bags said, "Hey, we got plenty of fancy weapons, we got enough shit for them to shoot!?!" No one thought about how many rounds the artillery would need for sustained operations, how many rockets for the MLRS, how many canister shots ... the tanks had these things called canister shots ... basically a giant shotgun shell. They fired these little tungsten balls ... not perfect you know, wasting like a hundred balls for every G, but fuck, dude, at least it was something! Each Abrams only had three, three! Three out of a total loadout of forty! The rest were standard HEAT or SABOT! Do you know what a "Silver Bullet," an armor-piercing, depleted-uranium dart is going to do to a group of walking corpses? Nothing! Do you know what it feels like to see a sixty-something-ton tank fire into a crowd with absolutely ass-all result! Three canister rounds! And what about flechettes? That's the weapon we always hear about these days, flechettes, these little steel spikes that turn any weapon into an instant scattergun. We talk about them like they're a new invention, but we had them as far back as, like, Korea. We had them for the Hydra rockets and the Mark-19s. Just imagine that, just one 19 firing three hundred and fifty rounds a minute, each round holding, like, a hundred spikes! Maybe it wouldn't have turned the tide ... but ... Goddammit!
+
+The fire was dying, Zack was still coming ... and the fear ... everyone was feeling it, in the orders from the squad leaders, in the actions of the men around me ... That little voice in the back of your head that just keeps squeaking "Oh shit, oh shit."
+
+We were the last line of defense, the afterthought when it came to firepower. We were supposed to pick off the random lucky G who happened to slip through the giant bitchslap of our heavier stuff. Maybe one in three of us was expected to fire his weapon, one in every ten was expected to score a kill.
+
+They came by the thousands, spilling out over the freeway guardrails, down the side streets, around the houses, through them ... so many of them, their moans so loud they echoed right through our hoods.
+
+We flipped our safeties off, sighted our targets, the order came to fire ... I was a SAW gunner, a light machine gun that you're supposed to fire in short, controlled bursts about as long as it takes to say "Die motherfucker die.” The initial burst was too low. I caught one square in the chest. I watched him fly backward, hit the asphalt, then get right back up again as if nothing had happened. Dude .. . when they get back up ...
+
+[The cigarette has burned down to his fingers. He drops and crushes it without noticing.]
+
+I did my best to control my fire, and my sphincter. "Just go for the head," I kept telling myself. "Keep it together, just go for the head." And all the time my SAW's chattering "Die motherfucker die."
+
+We could have stopped them, we should have, one guy with a rifle, that's all you need, right? Professional soldiers, trained marksmen ... how could they get through? They still ask that, critics and armchair Pattons who weren't there. You think it's that simple? You think that after being "trained" to aim for the center mass your whole military career you can suddenly make an expert head shot every time? You think in that straitjacket and suffocation hood it's easy to recharge a clip or clear a weapon jam? You think that after watching all the wonders of modern warfare fall flat on their high-tech hyper ass, that after already living through three months of the Great Panic and watching everything you knew as reality be eaten alive by an enemy that wasn't even supposed to exist that you're gonna keep a cool fucking head and a steady fucking trigger finger?
+
+[He stabs that finger at me.]
+
+Well, we did! We still managed to do our job and make Zack pay for every fuckin' inch! Maybe if we'd had more men, more ammo, maybe if we'd just been allowed to focus on our job ...
+
+[His finger curls back into his fist.]
+
+Land Warrior, high-tech, high-priced, high-profile netro-fucking-centric Land Warrior. To see what was in front of our face was bad enough, but spybird uplinks were also showing how truly large the horde was. We might be facing thousands, but behind them were millions! Remember, we were taking on the bulk of New York City's infestation! This was only the head of one really long undead snake stretching all the way back to Times Fuckin' Square! We didn't need to see that. I didn't need to know that! That little scared voice wasn't so little anymore. "Oh shit, OH SHIT!" And suddenly it wasn’t in my head anymore. It was in my earpiece. Every time some jerkoff couldn't control his mouth, Land Warrior made sure the rest of us heard it. "There's too many!" "We gotta get the fuck outta here!" Someone from another platoon, I didn't know his name, started hollering "I hit him in the head and he didn't die! They don't die when you shoot them in the head!" I'm sure he must have missed the brain, it can happen, a round just grazing the inside of the skull ... maybe if he'd been calm and used his own brain, he would have realized that. Panic's even more infectious than the Z Germ and the wonders of Land Warrior allowed that germ to become airborne. “What?" "They don't die?” "Who said that?" "You shot it in the head!" "Holy crap! They're indestructible!" All over the net you could hear this, browning shorts across the info superhighway.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

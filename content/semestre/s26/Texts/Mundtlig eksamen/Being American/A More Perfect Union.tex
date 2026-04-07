@@ -1,0 +1,307 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{A More Perfect Union\subtitle{(abridged)}}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2008}
+\author{Barack Obama}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+\noindent “We the people, in order to form a more perfect union.” 
+
+Two hundred and twenty one years ago, in a hall that still stands across the street, a group of men gathered and, with these simple words, launched America’s improbable experiment in democracy. Farmers and scholars; statesmen and patriots who had traveled across an ocean to escape tyranny and persecution finally made real their declaration of independence at a Philadelphia convention that lasted through the spring of 1787.  
+
+The document they produced was eventually signed but ultimately unfinished. It was stained by this nation’s original sin of slavery, a question that divided the colonies and brought the convention to a stalemate until the founders chose to allow the slave trade to continue for at least twenty more years, and to leave any final resolution to future generations. 
+
+Of course, the answer to the slavery question was already embedded within our Constitution – a Constitution that had at its very core the ideal of equal citizenship under the law; a Constitution that promised its people liberty, and justice, and a union that could be and should be perfected over time. 
+
+And yet words on a parchment would not be enough to deliver slaves from bondage, or provide men and women of every color and creed their full rights and obligations as citizens of the United States. What would be needed were Americans in successive generations who were willing to do their part – through protests and struggle, on the streets and in the courts, through a civil war and civil disobedience and always at great risk - to narrow that gap between the promise of our ideals and the reality of their time. 
+
+This was one of the tasks we set forth at the beginning of this campaign – to continue the long march of those who came before us, a march for a more just, more equal, more free, more caring and more prosperous America. I chose to run for the presidency at this moment in history because I believe deeply that we cannot solve the challenges of our time unless we solve them together – unless we perfect our union by understanding that we may have different stories, but we hold common hopes; that we may not look the same and we may not have come from the same place, but we all want to move in the same direction – towards a better future for our children and our grandchildren. 
+
+This belief comes from my unyielding faith in the decency and generosity of the American people. But it also comes from my own American story. 
+
+[…]
+
+It’s a story that hasn’t made me the most conventional candidate. But it is a story that has seared into my genetic makeup the idea that this nation is more than the sum of its parts – that out of many, we are truly one. 
+
+Throughout the first year of this campaign, against all predictions to the contrary, we saw how hungry the American people were for this message of unity. Despite the temptation to view my candidacy through a purely racial lens, we won commanding victories in states with some of the whitest populations in the country. In South Carolina, where the Confederate Flag still flies, we built a powerful coalition of African Americans and white Americans. 
+
+This is not to say that race has not been an issue in the campaign. At various stages in the campaign, some commentators have deemed me either “too black” or “not black enough.” We saw racial tensions bubble to the surface during the week before the South Carolina primary. The press has scoured every exit poll for the latest evidence of racial polarization, not just in terms of white and black, but black and brown as well.
+
+And yet, it has only been in the last couple of weeks that the discussion of race in this campaign has taken a particularly divisive turn. 
+
+On one end of the spectrum, we’ve heard the implication that my candidacy is somehow an exercise in affirmative action; that it’s based solely on the desire of wide-eyed liberals to purchase racial reconciliation on the cheap. On the other end, we’ve heard my former pastor, Reverend Jeremiah Wright, use incendiary language to express views that have the potential not only to widen the racial divide, but views that denigrate both the greatness and the goodness of our nation; that rightly offend white and black alike. 
+
+I have already condemned, in unequivocal terms, the statements of Reverend Wright that have caused such controversy. For some, nagging questions remain. Did I know him to be an occasionally fierce critic of American domestic and foreign policy? Of course. Did I ever hear him make remarks that could be considered controversial while I sat in church? Yes. Did I strongly disagree with many of his political views? Absolutely – just as I’m sure many of you have heard remarks from your pastors, priests, or rabbis with which you strongly disagreed. 
+
+[…]
+
+As such, Reverend Wright’s comments were not only wrong but divisive, divisive at a time when we need unity; racially charged at a time when we need to come together to solve a set of monumental problems – two wars, a terrorist threat, a falling economy, a chronic health care crisis and potentially devastating climate change; problems that are neither black or white or Latino or Asian, but rather problems that confront us all.
+
+Given my background, my politics, and my professed values and ideals, there will no doubt be those for whom my statements of condemnation are not enough. Why associate myself with Reverend Wright in the first place, they may ask? Why not join another church? And I confess that if all that I knew of Reverend Wright were the snippets of those sermons that have run in an endless loop on the television and You Tube, or if Trinity United Church of Christ conformed to the caricatures being peddled by some commentators, there is no doubt that I would react in much the same way.
+
+But the truth is, that isn’t all that I know of the man. The man I met more than twenty years ago is a man who helped introduce me to my Christian faith, a man who spoke to me about our obligations to love one another; to care for the sick and lift up the poor. He is a man who served his country as a U.S. Marine; who has studied and lectured at some of the finest universities and seminaries in the country, and who for over thirty years led a church that serves the community by doing God’s work here on Earth – by housing the homeless, ministering to the needy, providing day care services and scholarships and prison ministries, and reaching out to those suffering from HIV/AIDS.
+
+[…]
+
+And this helps explain, perhaps, my relationship with Reverend Wright. As imperfect as he may be, he has been like family to me. He strengthened my faith, officiated my wedding, and baptized my children. Not once in my conversations with him have I heard him talk about any ethnic group in derogatory terms, or treat whites with whom he interacted with anything but courtesy and respect. He contains within him the contradictions – the good and the bad – of the community that he has served diligently for so many years.
+
+I can no more disown him than I can disown the black community. I can no more disown him than I can my white grandmother – a woman who helped raise me, a woman who sacrificed again and again for me, a woman who loves me as much as she loves anything in this world, but a woman who once confessed her fear of black men who passed by her on the street, and who on more than one occasion has uttered racial or ethnic stereotypes that made me cringe.
+
+These people are a part of me. And they are a part of America, this country that I love.
+
+[…]
+
+Understanding this reality requires a reminder of how we arrived at this point. As William Faulkner once wrote, “The past isn’t dead and buried. In fact, it isn’t even past.” We do not need to recite here the history of racial injustice in this country. But we do need to remind ourselves that so many of the disparities that exist in the African-American community today can be directly traced to inequalities passed on from an earlier generation that suffered under the brutal legacy of slavery and Jim Crow.
+
+Segregated schools were, and are, inferior schools; we still haven’t fixed them, fifty years after Brown v. Board of Education, and the inferior education they provided, then and now, helps explain the pervasive achievement gap between today’s black and white students.
+
+Legalized discrimination - where blacks were prevented, often through violence, from owning property, or loans were not granted to African-American business owners, or black homeowners could not access FHA mortgages, or blacks were excluded from unions, or the police force, or fire departments – meant that black families could not amass any meaningful wealth to bequeath to future generations. That history helps explain the wealth and income gap between black and white, and the concentrated pockets of poverty that persists in so many of today’s urban and rural communities.
+
+A lack of economic opportunity among black men, and the shame and frustration that came from not being able to provide for one’s family, contributed to the erosion of black families – a problem that welfare policies for many years may have worsened. And the lack of basic services in so many urban black neighborhoods – parks for kids to play in, police walking the beat, regular garbage pick-up and building code enforcement – all helped create a cycle of violence, blight and neglect that continue to haunt us. 
+
+[…]
+
+This is where we are right now. It’s a racial stalemate we’ve been stuck in for years. Contrary to the claims of some of my critics, black and white, I have never been so naïve as to believe that we can get beyond our racial divisions in a single election cycle, or with a single candidacy – particularly a candidacy as imperfect as my own.
+
+But I have asserted a firm conviction – a conviction rooted in my faith in God and my faith in the American people – that working together we can move beyond some of our old racial wounds, and that in fact we have no choice if we are to continue on the path of a more perfect union. 
+
+[…]
+
+In the end, then, what is called for is nothing more, and nothing less, than what all the world’s great religions demand – that we do unto others as we would have them do unto us. Let us be our brother’s keeper, Scripture tells us. Let us be our sister’s keeper. Let us find that common stake we all have in one another, and let our politics reflect that spirit as well. 
+
+For we have a choice in this country. We can accept a politics that breeds division, and conflict, and cynicism. We can tackle race only as spectacle – as we did in the OJ trial – or in the wake of tragedy, as we did in the aftermath of Katrina - or as fodder for the nightly news. We can play Reverend Wright’s sermons on every channel, every day and talk about them from now until the election, and make the only question in this campaign whether or not the American people think that I somehow believe or sympathize with his most offensive words. We can pounce on some gaffe by a Hillary supporter as evidence that she’s playing the race card, or we can speculate on whether white men will all flock to John McCain in the general election regardless of his policies.
+
+We can do that.
+
+But if we do, I can tell you that in the next election, we’ll be talking about some other distraction. And then another one. And then another one. And nothing will change. 
+
+That is one option. Or, at this moment, in this election, we can come together and say, “Not this time.” This time we want to talk about the crumbling schools that are stealing the future of black children and white children and Asian children and Hispanic children and Native American children. This time we want to reject the cynicism that tells us that these kids can’t learn; that those kids who don’t look like us are somebody else’s problem. The children of America are not those kids, they are our kids, and we will not let them fall behind in a 21st century economy. Not this time. 
+
+This time we want to talk about how the lines in the Emergency Room are filled with whites and blacks and Hispanics who do not have health care; who don’t have the power on their own to overcome the special interests in Washington, but who can take them on if we do it together. 
+
+[…]  This time we want to talk about the fact that the real problem is not that someone who doesn’t look like you might take your job; it’s that the corporation you work for will ship it overseas for nothing more than a profit. 
+
+This time we want to talk about the men and women of every color and creed who serve together, and fight together, and bleed together under the same proud flag. We want to talk about how to bring them home from a war that never should’ve been authorized and never should’ve been waged, and we want to talk about how we’ll show our patriotism by caring for them, and their families, and giving them the benefits they have earned. 
+
+I would not be running for President if I didn’t believe with all my heart that this is what the vast majority of Americans want for this country. This union may never be perfect, but generation after generation has shown that it can always be perfected. And today, whenever I find myself feeling doubtful or cynical about this possibility, what gives me the most hope is the next generation – the young people whose attitudes and beliefs and openness to change have already made history in this election. 
+
+There is one story in particularly that I’d like to leave you with today – a story I told when I had the great honor of speaking on Dr. King’s birthday at his home church, Ebenezer Baptist, in Atlanta. 
+
+There is a young, twenty-three year old white woman named Ashley Baia who organized for our campaign in Florence, South Carolina. She had been working to organize a mostly African-American community since the beginning of this campaign, and one day she was at a roundtable discussion where everyone went around telling their story and why they were there. 
+
+And Ashley said that when she was nine years old, her mother got cancer. And because she had to miss days of work, she was let go and lost her health care. They had to file for bankruptcy, and that’s when Ashley decided that she had to do something to help her mom.
+
+She knew that food was one of their most expensive costs, and so Ashley convinced her mother that what she really liked and really wanted to eat more than anything else was mustard and relish sandwiches. Because that was the cheapest way to eat. 
+
+She did this for a year until her mom got better, and she told everyone at the roundtable that the reason she joined our campaign was so that she could help the millions of other children in the country who want and need to help their parents too.
+
+Now Ashley might have made a different choice. Perhaps somebody told her along the way that the source of her mother’s problems were blacks who were on welfare and too lazy to work, or Hispanics who were coming into the country illegally. But she didn’t. She sought out allies in her fight against injustice.
+
+Anyway, Ashley finishes her story and then goes around the room and asks everyone else why they’re supporting the campaign. They all have different stories and reasons. Many bring up a specific issue. And finally they come to this elderly black man who’s been sitting there quietly the entire time. And Ashley asks him why he’s there. And he does not bring up a specific issue. He does not say health care or the economy. He does not say education or the war. He does not say that he was there because of Barack Obama. He simply says to everyone in the room, “I am here because of Ashley.” 
+
+“I’m here because of Ashley.” By itself, that single moment of recognition between that young white girl and that old black man is not enough. It is not enough to give health care to the sick, or jobs to the jobless, or education to our children.
+
+But it is where we start. It is where our union grows stronger. And as so many generations have come to realize over the course of the two-hundred and twenty one years since a band of patriots signed that document in Philadelphia, that is where the perfection begins.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+The villagers kept their distance, leaving a space between themselves and the stool, and when Mr. Summers said, “Some of you fellows want to give me a hand?,” there was a hesitation before two men, Mr. Martin and his oldest son, Baxter, came forward to hold the box steady on the stool while Mr. Summers stirred up the papers inside it.
+
+The original paraphernalia for the lottery had been lost long ago, and the black box now resting on the stool had been put into use even before Old Man Warner, the oldest man in town, was born. Mr. Summers spoke frequently to the villagers about making a new box, but no one liked to upset even as much tradition as was represented by the black box. There was a story that the present box had been made with some pieces of the box that had preceded it, the one that had been constructed when the first people settled down to make a village here. Every year, after the lottery, Mr. Summers began talking again about a new box, but every year the subject was allowed to fade off without anything’s being done. The black box grew shabbier each year; by now it was no longer completely black but splintered badly along one side to show the original wood color, and in some places faded or stained.
+
+Mr. Martin and his oldest son, Baxter, held the black box securely on the stool until Mr. Summers had stirred the papers thoroughly with his hand. Because so much of the ritual had been forgotten or discarded, Mr. Summers had been successful in having slips of paper substituted for the chips of wood that had been used for generations. Chips of wood, Mr. Summers had argued, had been all very well when the village was tiny, but now that the population was more than three hundred and likely to keep on growing, it was necessary to use something that would fit more easily into the black box. The night before the lottery, Mr. Summers and Mr. Graves made up the slips of paper and put them into the box, and it was then taken to the safe of Mr. Summers’ coal company and locked up until Mr. Summers was ready to take it to the square next morning. The rest of the year, the box was put away, sometimes one place, sometimes another; it had spent one year in Mr. Graves’ barn and another year underfoot in the post office, and sometimes it was set on a shelf in the Martin grocery and left there.
+
+
+“Clark. . . . Delacroix.”
+
+“There goes my old man,” Mrs. Delacroix said. She held her breath while her husband went forward.
+
+“Dunbar,” Mr. Summers said, and Mrs. Dunbar went steadily to the box while one of the women said, “Go on, Janey,” and another said, “There she goes.”
+
+“We’re next,” Mrs. Graves said. She watched while Mr. Graves came around from the side of the box, greeted Mr. Summers gravely, and selected a slip of paper from the box. By now, all through the crowd there were men holding the small folded papers in their large hands, turning them over and over nervously. Mrs. Dunbar and her two sons stood together, Mrs. Dunbar holding the slip of paper.
+
+“Harburt. . . . Hutchinson.”
+
+“Get up there, Bill,” Mrs. Hutchinson said, and the people near her laughed.
+
+“Jones.”

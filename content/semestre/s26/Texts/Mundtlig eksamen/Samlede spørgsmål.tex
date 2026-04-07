@@ -1,0 +1,232 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\mysectionfont[Numbers=OldStyle]{Klavika light}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{pdfpages}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{“#1”}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{center}\mysectionfont\Huge\color{hgblue}}
+	\posttitle{\end{center}}
+	\preauthor{\begin{center}\mysectionfont\Large\color{hgblue}}
+	\postauthor{\end{center}}
+	\predate{\begin{center}\mysectionfont}
+	\postdate{\end{center}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+
+%\pagecolor{FloralWhite}
+\title{Eksamen 3t EN}
+%\date{\vspace{-5em}} % I tilfældet ingen dato
+\date{Sommer, 2024}
+\author{Samlede spørgsmål}
+\maketitle
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-15pt,xshift=-45pt]%
+       at (current page.north east)
+        {\includegraphics[scale=0.1]{HG_logo_navn 2.PNG}};
+    \end{tikzpicture}
+
+\thispagestyle{empty}
+
+\vspace{-4em}
+
+\begin{center}
+{\color{hgblue}\rule{1\textwidth}{1pt}}
+\end{center}
+
+\subsection{Spørgsmål 1}
+\begin{description}
+\item[Theme:] Horror
+\item[Text:] Shirley Jackson, “The Lottery” (1948) (short story) (abridged) (15819~tegn~=~3,7~ns)
+\item[Instruction:] You must analyse and interpret “The Lottery” by Shirley Jackson and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item characterisation of the Mrs. Hutchinson 
+\item identification of suspense
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 2}
+\begin{description}
+\item[Theme:] Horror
+\item[Text:] Edgar Allen Poe, “The Raven” (1845) (narrative poem) (abridged) (96~verselinjer~=~3,2~ns)
+\item[Instruction:] You must analyse and interpret “The Raven” by Edgar Allen Poe and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item characterisation of the narrator
+\item use of symbolism
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 3}
+\begin{description}
+\item[Theme:] Horror
+\item[Text:] Charles Burns, “Black Hole” (2005) (graphic novel) (excerpt)
+\item[Instruction:] You must analyse and interpret the excerpt from “Black Hole” by Charles Burns and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item use of symbolism 
+\item style of writing
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 4}
+\begin{description}
+\item[Theme:] Being American
+\item[Text:] Barack Obama, “A More Perfect Union” (2008) (speech) (abridged) (16138~tegn~=~3,8~ns)
+\item[Instruction:] You must analyse and interpret “A More Perfect Union” by Barack Obama and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item style of writing
+\item use of rhetorical devices
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 5}
+\begin{description}
+\item[Theme:] Being American
+\item[Texts:] John F. Kennedy, “Inaugural Address” (1961) (speech) and Donald J. Trump, "Inaugural Address" (2017) (speech) (15723~tegn~=~3,7~ns)
+\item[Instruction:] You must analyse and interpret “Inaugural Address” by John F. Kennedy and "Inaugural Address” by Donald J. Trump, and make a presentation (roughly 8 minutes) of the texts and relate them to each other and to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item style of writing
+\item intention and message
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 6}
+\begin{description}
+\item[Theme:] The Island of Ireland
+\item[Text:] Frank O'Connor, “Guests of the Nation” (1931) (short story) (abridged) (16737~tegn~=~4~ns)
+\item[Instruction:] You must analyse and interpret “Gusts of the Nation” by Frank O'Connor and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item style of writing
+\item the setting
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 7}
+\begin{description}
+\item[Theme:] The Island of Ireland
+\item[Text:] John Connell, “The Boat” (2017) (short story) (abridged) (16539~tegn~=~3,9ns)
+\item[Instruction:] You must analyse and interpret “The Boat” by John Connell and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item narrative technique
+\item the setting
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 8}
+\begin{description}
+\item[Theme:] Postmodernism
+\item[Text:] Paul Auster, “Auggie Wren's Christmas Story” (1990) (short story) (15821~tegn~=~3,8~ns)
+\item[Instruction:] You must analyse and interpret “Auggie Wren's Christmas Story” by Paul Auster and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item characterisation of Auggie Wren
+\item narrative technique
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 9}
+\begin{description}
+\item[Theme:] Postmodernism
+\item[Texts:] Margaret Atwood, “Happy Endings” (1983) (short story) (6866~tegn~=~1,6~ns) and Jamaica Kincaid, "Girl" (1978) (short story) (51~verse~linjer~=~1,7~ns)
+\item[Instruction:] You must analyse and interpret “Happy Endings” by Margaret Atwood and "Girl" by Jamaica Kincaid and make a presentation (roughly 8 minutes) of the texts and relate them to each other and to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item themes and messages
+\item narrative techniques
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 10}
+\begin{description}
+\item[Theme:] The Shakespearean Drama
+\item[Text:] William Shakespeare, “Romeo and Juliet” (drama) (excerpt) (111~verselinjer~=~3,7~ns)
+\item[Instruction:] You must analyse and interpret the excerpt from act III, scene I of “Romeo and Juliet” by William Shakespeare and make a presentation (roughly 8 minutes) of the text and relate it to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item characterisation of Romeo 
+\item language and poetic devices
+\end{itemize}
+\end{description}
+
+\subsection{Spørgsmål 11}
+\begin{description}
+\item[Theme:] The Shakespearean Drama
+\item[Texts:] William Shakespeare, “Romeo and Juliet” (drama) (95~verselinjer~=~3,1~ns) (excerpt) and "Sonnet 30" (poem) (14~verselinjer~=~0,5~ns)
+\item[Instruction:] You must analyse and interpret the excerpt from act III, scene III of “Romeo and Juliet” as well as "Sonnet 30" by William Shakespeare and make a presentation (roughly 8 minutes) of the texts and relate them to each other and to the theme. Apart from your own points, you must include the following points in your presentation:
+\begin{itemize}
+\item characterisation of Romeo 
+\item comparison of themes
+\end{itemize}
+\end{description}
+
+
+
+
+
+\end{document}
+
+
+\subsection{Assignment – Short Story (Fiction)}
+Write an analytical essay on Haruki Murakami’s short story \qm{On Seeing the 100\% Perfect Girl One Beautiful April Morning}.
+
+Part of your essay must focus on the effect of the short story's preoccupation with dream and reality. It should also include:
+\begin{itemize}
+\item A \textit{characterisation} of the main character.
+\item An intepretation of the short story's \textit{theme} and \textit{message}.
+\end{itemize}
+
+Your essay must include references to the short story.
+
+\includepdf[pages=1-]{On Seeing....pdf}

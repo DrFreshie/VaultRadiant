@@ -1,0 +1,193 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+  \usepackage{transparent}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{The Debutante}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1937}
+\author{Leonora Carrington}
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+    
+\noindent\linenumbers When I was a debutante I often went to the zoological garden. I went so often that I was better acquainted with animals than with the young girls of my age. It was to escape from the world that I found myself each day at the zoo. The beast I knew best was a young hyena. She knew me too. She was extremely intelligent; I taught her French and in return she taught me her language. We spent many pleasant hours in this way.
+
+For the first of May my mother had arranged a ball in my honor. For entire nights I suffered: I had always detested balls, above all those given in my own honor.
+
+On the morning of May first, 1934, very early, I went to visit the hyena. “What a mess of shit,” I told her. “I must go to my ball this evening.”
+
+“You’re lucky,” she said. “I would go happily. I do not know how to dance, but after all, I could engage in conversation.”
+
+“There will be many things to eat,” said I. “I have seen wagons loaded entirely with food coming up to the house.”
+
+“And you complain!” replied the hyena with disgust. “As for me, I eat only once a day, and what rubbish they stick me with!”
+
+I had a bold idea; I almost laughed. “You have only to go in my place.”
+
+“We do not look enough alike, otherwise I would gladly go,” said the hyena, a little sad. “Listen,” said I, “in the evening light one does not see very well. If you were disguised a little, no one would notice in the crowd. Besides, we are almost the same size. You are my only friend; I implore you.”
+
+She reflected upon this sentiment. I knew that she wanted to accept. “It is done,” she said suddenly.
+
+It was very early; not many keepers were about. Quickly I opened the cage and in a moment we were in the street. I took a taxi; at the house, everyone was in bed. In my room, I brought out the gown I was supposed to wear that evening. It was a little long, and the hyena walked with difficulty in my high-heeled shoes. I found some gloves to disguise her hands which were too hairy to resemble mine. When the sunlight entered, she strolled around the room several times – walking more or less correctly. We were so very occupied that my mother, who came to tell me good morning, almost opened the door before the hyena could hide herself under my bed. “There is a bad odor in the room,” said my mother, opening the window. “Before this evening you must take a perfumed bath with my new salts.”
+
+“Agreed,” said I. She did not stay long; I believe the odor was too strong for her. “Do not be late for breakfast,” she said, as she left the room.
+
+The greatest difficulty was to find a disguise for the hyena’s face. For hours and hours we sought an answer: she rejected all of my proposals. At last she said, “I think I know a solution. You have a maid?”
+
+“Yes,” I said, perplexed.
+
+“Well, that’s it. You will ring for the maid and when she enters we will throw ourselves upon her and remove her face. I will wear her face this evening in place of my own.”
+
+“That’s not practical,” I said to her. “She will probably die when she has no more face; someone will surely find the corpse and we will go to prison.”
+
+“I am hungry enough to eat her,” replied the hyena.
+
+“And the bones?”
+
+“Those too,” she said. “Then it’s settled?”
+
+“Only if you agree to kill her before removing her face. It would be too uncomfortable otherwise.”
+
+“Good; it’s all right with me.” I rang for Marie, the maid, with a certain nervousness. I would not have done it if I did not detest dances so much. When Marie entered I turned to the wall so as not to see. I admit that it was done quickly. A brief cry and it was over. While the hyena ate, I looked out the window. A few minutes later, she said: “I cannot eat anymore; the two feet are left, but if you have a little bag I will eat them later in the day.”
+
+“You will find in the wardrobe a bag embroidered with fleurs de lys. Remove the handkerchiefs inside it and take it.” She did as I indicated.
+
+At last she said: “Turn around now and look, because I am beautiful!” Before the mirror, the hyena admired herself in Marie’s face. She had eaten very carefully all around the face so that what was left was just what was needed. “Surely, it’s properly done,” said I.
+
+Toward evening, when the hyena was all dressed, she declared: “I am in a very good mood. I have the impression that I will be a great success this evening.” When the music below had been heard for some time, I said to her: “Go now, and remember not to place yourself at my mother’s side: she will surely know that it is not I. Otherwise I know no one. Good luck.” I embraced her as we parted but she smelled very strong.
+
+Night had fallen. Exhausted by the emotions of the day, I took a book and sat down by the open window. I remember that I was reading Gulliver’s Travels by Jonathan Swift. It was perhaps an hour later that the first sign of misfortune announced itself. A bat entered through the window, emitting little cries. I am terribly afraid of bats, I hid behind a chair, my teeth chattering. Scarcely was I on my knees when the beating of the wings was drowned out by a great commotion at my door. My mother entered, pale with rage. “We were coming to seat ourselves at the table,” she said, “when the thing who was in your place rose and cried: ‘I smell a little strong, eh? Well, as for me, I do not eat cake.’ With these words she removed her face and ate it. A great leap and she disappeared out the window.”\end{document}

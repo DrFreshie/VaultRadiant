@@ -1,0 +1,255 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage[svgnames]{xcolor}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	%\setlength{\parskip}{0.5\baselineskip}
+	%\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Happy Endings}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1983}
+\author{Margaret Atwood}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+\noindent John and Mary meet.
+
+What happens next?
+
+If you want a happy ending, try A. 
+
+\subsection{A.}
+John and Mary fall in love and get married. They both have worthwhile and remunerative jobs which they find stimulating and challenging. They buy a charming house. Real estate values go up. Eventually, when they can afford live-in help, they have two children, to whom they are devoted. The children turn out well. John and Mary have a stimulating and challenging sex life and worthwhile friends. They go on fun vacations together. They retire. They both have hobbies which they find stimulating and challenging. Eventually they die. This is the end of the story. 
+
+\subsection{B.}
+Mary falls in love with John but John doesn't fall in love with Mary. He merely uses her body for selfish pleasure and ego gratification of a tepid kind. He comes to her apartment twice a week and she cooks him dinner, you'll notice that he doesn't even consider her worth the price of a dinner out, and after he's eaten dinner he fucks her and after that he falls asleep, while she does the dishes so he won't think she's untidy, having all those dirty dishes lying around, and puts on fresh lipstick so she'll look good when he wakes up, but when he wakes up he doesn't even notice, he puts on his socks and his shorts and his pants and his shirt and his tie and his shoes, the reverse order from the one in which he took them off. He doesn't take off Mary's clothes, she takes them off herself, she acts as if she's dying for it every time, not because she likes sex exactly, she doesn't, but she wants John to think she does because if they do it often enough surely he'll get used to her, he'll come to depend on her and they will get married, but John goes out the door with hardly so much as a good-night and three days later he turns up at six o'clock and they do the whole thing over again.
+
+Mary gets run-down. Crying is bad for your face, everyone knows that and so does Mary but she can't stop. People at work notice. Her friends tell her John is a rat, a pig, a dog, he isn't good enough for her, but she can't believe it. Inside John, she thinks, is another John, who is much nicer. This other John will emerge like a butterfly from a cocoon, a Jack from a box, a pit from a prune, if the first John is only squeezed enough.
+
+One evening John complains about the food. He has never complained about her food before. Mary is hurt.
+
+Her friends tell her they've seen him in a restaurant with another woman, whose name is Madge. It's not even Madge that finally gets to Mary: it's the restaurant. John has never taken Mary to a restaurant. Mary collects all the sleeping pills and aspirins she can find, and takes them and a half a bottle of sherry. You can see what kind of a woman she is by the fact that it's not even whiskey. She leaves a note for John. She hopes he'll discover her and get her to the hospital in time and repent and then they can get married, but this fails to happen and she dies.
+
+John marries Madge and everything continues as in A.
+
+\subsection{C.}
+John, who is an older man, falls in love with Mary, and Mary, who is only twenty-two, feels sorry for him because he's worried about his hair falling out. She sleeps with him even though she's not in love with him. She met him at work. She's in love with someone called James, who is twenty-two also and not yet ready to settle down. 
+
+John on the contrary settled down long ago: this is what is bothering him. John has a steady, respectable job and is getting ahead in his field, but Mary isn't impressed by him, she's impressed by James, who has a motorcycle and a fabulous record collection. But James is often away on his motorcycle, being free. Freedom isn't the same for girls, so in the meantime Mary spends Thursday evenings with John. Thursdays are the only days John can get away. 
+
+John is married to a woman called Madge and they have two children, a charming house which they bought just before the real estate values went up, and hobbies which they find stimulating and challenging, when they have the time. John tells Mary how important she is to him, but of course he can't leave his wife because a commitment is a commitment. He goes on about this more than is necessary and Mary finds it boring, but older men can keep it up longer so on the whole she has a fairly good time. 
+
+One day James breezes in on his motorcycle with some top-grade California hybrid and James and Mary get higher than you'd believe possible and they climb into bed. Everything becomes very underwater, but along comes John, who has a key to Mary's apartment. He finds them stoned and entwined. He's hardly in any position to be jealous, considering Madge, but nevertheless he's overcome with despair. Finally he's middle-aged, in two years he'll be as bald as an egg and he can't stand it. He purchases a handgun, saying he needs it for target practice-- this is the thin part of the plot, but it can be dealt with later--and shoots the two of them and himself. 
+
+Madge, after a suitable period of mourning, marries an understanding man called Fred and everything continues as in A, but under different names.
+
+\subsection{D.}
+Fred and Madge have no problems. They get along exceptionally well and are good at working out any little difficulties that may arise. But their charming house is by the seashore and one day a giant tidal wave approaches. Real estate values go down. The rest of the story is about what caused the tidal wave and how they escape from it. They do, though thousands drown, but Fred and Madge are virtuous and grateful, and continue as in A.
+
+\subsection{E.}
+Yes, but Fred has a bad heart. The rest of the story is about how kind and understanding they both are until Fred dies. Then Madge devotes herself to charity work until the end of A. If you like, it can be "Madge," "cancer," "guilty and confused," and "bird watching." 
+
+\subsection{F.}
+If you think this is all too bourgeois, make John a revolutionary and Mary a counterespionage agent and see how far that gets you. Remember, this is Canada. You'll still end up with A, though in between you may get a lustful brawling saga of passionate involvement, a chronicle of our times, sort of. 
+
+You'll have to face it, the endings are the same however you slice it. Don't be deluded by any other endings, they're all fake, either deliberately fake, with malicious intent to deceive, or just motivated by excessive optimism if not by downright sentimentality.
+
+The only authentic ending is the one provided here:
+
+John and Mary die. John and Mary die. John and Mary die.
+
+So much for endings. Beginnings are always more fun. True connoisseurs, however, are known to favor the stretch in between, since it's the hardest to do anything with.
+
+That's about all that can be said for plots, which anyway are just one thing after another, a what and a what and a what.
+
+Now try How and Why. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+The villagers kept their distance, leaving a space between themselves and the stool, and when Mr. Summers said, “Some of you fellows want to give me a hand?,” there was a hesitation before two men, Mr. Martin and his oldest son, Baxter, came forward to hold the box steady on the stool while Mr. Summers stirred up the papers inside it.
+
+The original paraphernalia for the lottery had been lost long ago, and the black box now resting on the stool had been put into use even before Old Man Warner, the oldest man in town, was born. Mr. Summers spoke frequently to the villagers about making a new box, but no one liked to upset even as much tradition as was represented by the black box. There was a story that the present box had been made with some pieces of the box that had preceded it, the one that had been constructed when the first people settled down to make a village here. Every year, after the lottery, Mr. Summers began talking again about a new box, but every year the subject was allowed to fade off without anything’s being done. The black box grew shabbier each year; by now it was no longer completely black but splintered badly along one side to show the original wood color, and in some places faded or stained.
+
+Mr. Martin and his oldest son, Baxter, held the black box securely on the stool until Mr. Summers had stirred the papers thoroughly with his hand. Because so much of the ritual had been forgotten or discarded, Mr. Summers had been successful in having slips of paper substituted for the chips of wood that had been used for generations. Chips of wood, Mr. Summers had argued, had been all very well when the village was tiny, but now that the population was more than three hundred and likely to keep on growing, it was necessary to use something that would fit more easily into the black box. The night before the lottery, Mr. Summers and Mr. Graves made up the slips of paper and put them into the box, and it was then taken to the safe of Mr. Summers’ coal company and locked up until Mr. Summers was ready to take it to the square next morning. The rest of the year, the box was put away, sometimes one place, sometimes another; it had spent one year in Mr. Graves’ barn and another year underfoot in the post office, and sometimes it was set on a shelf in the Martin grocery and left there.
+
+
+“Clark. . . . Delacroix.”
+
+“There goes my old man,” Mrs. Delacroix said. She held her breath while her husband went forward.
+
+“Dunbar,” Mr. Summers said, and Mrs. Dunbar went steadily to the box while one of the women said, “Go on, Janey,” and another said, “There she goes.”
+
+“We’re next,” Mrs. Graves said. She watched while Mr. Graves came around from the side of the box, greeted Mr. Summers gravely, and selected a slip of paper from the box. By now, all through the crowd there were men holding the small folded papers in their large hands, turning them over and over nervously. Mrs. Dunbar and her two sons stood together, Mrs. Dunbar holding the slip of paper.
+
+“Harburt. . . . Hutchinson.”
+
+“Get up there, Bill,” Mrs. Hutchinson said, and the people near her laughed.
+
+“Jones.”
