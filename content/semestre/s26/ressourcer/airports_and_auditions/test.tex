@@ -1,0 +1,283 @@
+\documentclass[10pt,a4paper]{article}
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+  \usepackage{transparent}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Typecast as a terrorist\\\normalsize As my acting career developed, I was no longer cast as a radical Muslim – except at the airport}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2016}
+\author{Riz Ahmed}
+
+\maketitle
+\noindent\linenumbers To begin with, auditions taught me to get through airports. In the end, it was the other way around. I’m an actor. Since I was a teenager I have had to play different characters, negotiating the cultural expectations of a Pakistani family, Brit-Asian rudeboy culture, and a scholarship to private school. The fluidity of my own personal identity on any given day was further compounded by the changing labels assigned to Asians in general.
+
+As children in the 1980s, when my brother and I were stopped near our home by a skinhead who decided to put a knife to my brother’s throat, we were black. A decade later, the knife to my throat was held by another “Paki”, a label we wore with swagger in the Brit-Asian youth and gang culture of the 1990s. The next time I found myself as helplessly cornered, it was in a windowless room at Luton airport. My arm was in a painful wrist-lock and my collar pinned to the wall by British intelligence officers. It was “post 9/11”, and I was now labelled a Muslim.
+
+As a minority, no sooner do you learn to polish and cherish one chip on your shoulder than it’s taken off you and swapped for another. The jewellery of your struggles is forever on loan, like the Koh-i-Noor diamond in the crown jewels. You are intermittently handed a necklace of labels to hang around your neck, neither of your choosing nor making, both constricting and decorative.
+
+Part of the reason I became an actor was the promise that I might be able to help stretch these necklaces, and that the teenage version of myself might breathe a little easier as a result.
+
+If the films I re-enacted as a kid could humanise mutants and aliens, maybe there was hope for us. But portrayals of ethnic minorities worked in stages, I realised, so I’d have to strap in for a long ride.
+
+Stage one is the two-dimensional stereotype – the minicab driver/terrorist/cornershop owner. It tightens the necklace.
+
+Stage two is the subversive portrayal, taking place on “ethnic” terrain but aiming to challenge existing stereotypes. It loosens the necklace.
+
+And stage three is the Promised Land, where you play a character whose story is not intrinsically linked to his race. There, I am not a terror suspect, nor a victim of forced marriage. There, my name might even be Dave. In this place, there is no necklace.
+
+I started acting professionally during the post-9/11 boom for stage-one stereotypes, but I avoided them at the behest of my 18-year-old self. Luckily, there was also a tiny speck of stage two stuff taking shape, subverting those same stereotypes, and I managed to get in on the act.
+
+My first film was in this mode, Michael Winterbottom’s The Road to Guantánamo. It told the story of a group of friends from Birmingham who were illegally imprisoned and tortured in the US detainment camp. When it won a prestigious award at the Berlin film festival, we were euphoric. For those who saw it, the inmates went from orange jumpsuits to human beings.
+
+But airport security did not get the memo. Returning to the glamour of Luton Airport after our festival win, ironically named British intelligence officers frogmarched me to an unmarked room where they insulted, threatened, and then attacked me.
+
+“What kinda film you making? Did you become an actor to further the Muslim struggle?” an officer screamed, twisting my arm to the point of snapping.
+
+The question is disturbing not only because it endangers artistic expression, but because it suggests our security services don’t quite grasp the nature of the terror threat we all face. A training presentation outlining Al-Qaida’s penchant for “theatrical” attacks may have been taken a little literally.
+
+It turned out that what those special branch officers did was illegal. I was asked by activist lawyers if I wanted to sue, but instead I wrote an account of the incident and sent it to a few journalists. A story about the illegal detention of the actors from a film about illegal detention turned out to be too good to ignore. I was glad to shed some light on this depressing state of affairs.
+
+I went on to write a song inspired by the incident, titled Post 9/11 Blues. It was full of sage advice, such as: “We’re all suspects so watch your back / I farted and got arrested for a chemical attack.” The song got the attention of Chris Morris, who cast me in Four Lions.
+
+In the end, having my arm nearly torn off by people whose salary I pay led to me exploring loads of stage two work – loosening the necklace. It felt good, but what about stage three, the Promised Land?
+
+It turned out that there was no clear pathway for an actor of colour in the UK to go to stage three – to play “just a bloke”. Producers all said they wanted to work with me, but they had nothing I could feasibly act in. The stories that needed to be told in the multicultural mid-2000s were about the all-white mid-1700s, it seemed. I heard rumours that the Promised Land was not in Britain at all, but in Hollywood.
+
+The reason for this is simple. America uses its stories to export a myth of itself, just like the UK. The reality of Britain is vibrant multiculturalism, but the myth we export is an all-white world of lords and ladies. Conversely, American society is pretty segregated, but the myth it exports is of a racial melting-pot, everyone solving crimes and fighting aliens side by side.
+
+So America was where I headed. But it would not be an easy journey.
+
+You see, the pitfalls of the audition room and the airport interrogation room are the same. They are places where the threat of rejection is real. They are also places where you are reduced to your marketability or threat-level, where the length of your facial hair can be a deal-breaker, where you are seen, and hence see yourself, in reductive labels – never as “just a bloke called Dave”. The post 9/11 Necklace tightens around your neck.
+
+I had so far managed to avoid this in the audition room, but now I faced the same threat at US airports. It didn’t help that The Road to Guantánamo had left my passport stamped with an Axis of Evil world tour – shooting in Pakistan, Afghanistan, and Iran within six months. I spent the flight sweating in defiance of air-conditioning, wondering what would await me.
+
+When I landed, the officer assessing me shared my skin colour. I wondered whether this was a good sign or if he was one of the legendarily patriotic Cuban border officers I had heard about, determined to assess how star-spangled I was with a thumb up the anus.
+
+He looked at my passport, then at me, frowned and drew a big ‘P’ over my immigration card. I immediately thought it stood for Paki.
+
+“Protocol!”
+
+I was led down a long corridor, without explanation, before turning into a side room that felt instantly familiar.
+
+Apart from a Chinese family and a South American pilot battling the indignity with his spotless uniform, the holding pen was filled with 20 slight variations of my own face, all staring at me – kind of like a Bollywood remake of Being John Malkovich. It was a reminder: you are a type, whose face says things before your mouth opens; you are a signifier before you are a person; you are back at stage one.
+
+The holding pen also had that familiar audition room fear. Everyone is nervous, but the prospect of solidarity is undercut by competition. In this situation, you’re all fighting to graduate out of a reductive purgatory and into some recognition of your unique personhood. In one way or another you are all saying: “I’m not like the rest of them.”
+
+The fresh-faced desk officer was no older than 23. By the time I was called up to audition for him, my spiel to explain the passport stamps was ready. I’d show a letter from the film’s producer, I’d say “award-winning film”, and I’d flash a shiny new DVD. But the kid questioning me seemed more nervous than I was. He had clearly been to the same “Beware Bloodthirsty Actors” seminar as the intelligence officers at Luton.
+
+“Step back from the counter!”
+
+I was bounced up the chain for a proper interrogation by a dangerously fat man and his moustache. I sat and waited, rehearsing my lines. When the interrogation came, it was more of a car crash than my Slumdog Millionaire audition.
+\end{document}
+
+“Oh yeah? Afghanistan? What kinda movie were you making there?”
+
+The question shot through me with a shudder. It reminded me of the questions I faced at Luton airport, but also of the question I ask myself all the time. Was I adding to the catalogue of stage one, two, or three? Was it a film my 18-year-old self wanted? Would it make the necklace looser or tighter?
+
+I thought about the right way to answer him. The Road to Guantánamo was a documentary-drama, but maybe saying I was in a documentary about Guantánamo Bay wouldn’t be wise. Drama should do. I said: “Erm, it’s an award-winning drama called The Road to Guantánamo.”
+
+There was a long silence. He raised an eyebrow. I offered up the DVD. It had a photo of me handcuffed in an orange jumpsuit on its cover. I immediately regretted it. Longer silence. Second eyebrow goes up. He leaned in.
+
+“Do you know anyone who wants to do harm to the United States?”
+
+I shook my head and made Hugh Grant noises, venturing a “gosh!” in there somewhere. He absorbed my performance before holding up a book from my luggage. It was Mohsin Hamid’s novel The Reluctant Fundamentalist.
+
+“What’s this book?”
+
+I explained, but he wasn’t really listening. He deployed a state-of-the-art intelligence protocol by Googling me, which returned a news clipping about the Luton airport incident. Fuck. My heart sank. This was it. No Hollywood for me. I was never gonna be Brad Pitt. I wasn’t even gonna be Apu from the fucking Simpsons. What was I thinking?
+
+When, after an agonising three hours, I was waved through, I couldn’t believe it. I felt relieved, grateful, lucky – and then suddenly incensed. On the way out past my lookalikes, I gave a loud, “As-salaam aliekum.” No one leapt to return the greeting. Perhaps they lacked the safety net of a convincing “gosh!”
+
+Ahmed plays the main character Changez in The Reluctant Fundamentalist.
+Ahmed plays the main character Changez in The Reluctant Fundamentalist. Photograph: Alamy Stock Photo
+I joined a friend in Manhattan for dinner, apologising for being three hours late, and zoned out while they discussed astrology. Someone at the dinner turned to me.
+
+“You’re such a terrorist,” she said.
+
+I blinked. What the fuck? My face screwed itself into the expression I wish I’d pulled instead of mewling apologetically at the border officers.
+
+“What the fuck is that supposed to mean?”
+
+My friend put her arm on mine and squeezed.
+
+“Riz, she asked if you’re a Sagittarius.”
+
+I swallowed. Baffled faces pinned me with concern.
+
+“Right. Sorry. Yeah. Yes I am,” I said.
+
+A similar version of the same thing happened again soon after. And again. And again. And again. I grew belligerent.
+
+One officer asked if I had had any military training. My school had a cadet-force programme that I was swiftly ejected from, but I just answered “yes” without expanding. I was asked if I had travelled to Iran, Iraq, or Afghanistan recently.
+
+“All except Iraq, but if it helps I’ve also been to Pakistan and Saudi Arabia,” I smiled.
+
+Childish perhaps, but the situation itself is infantilising. Feigning obliviousness to an officer’s suspicion and refusing to pander to it was my only defence.
+
+But the farce rolled on.
+
+Twice when applying for a US work visa I was subjected to a Section 221G – a lengthy background check against a global database of terrorists – which almost lost me the jobs.
+
+I saw the email correspondence between the state department and my attorney: “Hey Bill, looking at your client Mr Ahmed – pretty British-sounding name, huh? Saw his Post 9/11 Blues song, what’s with the ‘I heart Osama’ routine?”
+
+Fair enough, you might think. Search him. Look at his racial profile and his passport stamps and his dangerously hilarious rap lyrics. But since I had been let into the US and deemed safe just the previous month, another rigmarole this month was obviously fruitless.
+
+In the end, I was always let in, so these airport auditions were technically a success. But they involved the experience of being typecast, and when that happens enough, you internalise the role written for you by others. Now, like an over-eager method actor, I was struggling to break character.
+
+I tried not to ingest all the signs telling me I was a suspect. I tried not to buy into the story world of this “protocol” or its stage-one stereotype of who I was. But when you have always moulded your identity to your environment and had your necklace picked out by others, it’s not easy. I couldn’t see myself as “just a bloke”. I failed at every single audition I went up for.
+
+Rehearsing a scene beds a role into you. But sometimes if you over-rehearse it without unearthing any new meaning in it, you can suddenly forget your lines. You realise that you are on a stage, not in the real world. The scene’s emotional power and your immersion in it disappears.
+
+And so it dawned on me that these searches were a fictional role-play taking place in a bubble, rather than an assessment of my worth. This was the way to see it. And it turns out this is also the way to see auditions. The protocol lost its chokehold on me, and I started getting roles again. One big job secured me a proper US visa, and soon I was getting waved through without the protocol. I began inching towards the Promised Land.
+
+Riz Ahmed in The Night Of
+Riz Ahmed in The Night Of. Photograph: HBO
+Now, both at auditions and airports, I find myself on the right side of the same velvet rope by which I was once clothes-lined. But this isn’t a success story. I see most of my fellow Malkoviches still arched back, spines bent to snapping as they try to limbo under that rope. These days it’s likely that no one resembles me in the waiting room for an acting audition, and the same is true of everyone being waved through with me at US immigration. In both spaces, my exception proves the rule.
+
+Don’t get me wrong: although my US airport experience is smoother, I still get stopped before boarding a plane at Heathrow every time I fly to the US. But now I find it hilarious rather than bruising. Easy for me to laugh with my work visa and strategically deployed “gosh!”, perhaps. But it’s also easy for me to laugh, because the more I travel, the more ridiculous the procedures become.
+
+Heathrow airport draws its staff from the nearby Asian suburbs of Hounslow and Southall. My “random selection” flying to LA was so reliable that as I started travelling more, I went through a six-month stretch of being searched by the same middle-aged Sikh guy. I instinctively started calling him Uncle, as is the custom for Asian elders. He started calling me “beta”, or son, as he went through my luggage apologetically. It was heart-warming, but veered dangerously close to incest every time he had to frisk my crotch.
+
+“How are you, son?”
+
+“I’m er, ooh, er, good. Uncle.”
+
+As I’ve travelled more, I’ve also done more film work, increasing the chances of being recognised by the young Asian staff at Heathrow. I have had my films quoted back at me by someone rifling through my underpants, and been asked for selfies by someone swabbing me for explosives.
+
+The last kid who searched me, a young Muslim boy with an immaculate line-beard and goatee, was particularly apologetic.
+
+“Sorry bro. If it makes you feel any better, they search me before I fly too.”
+
+We laughed, not because he was joking, but because he was deadly serious. It was the perfect encapsulation of the minority’s shifting and divided self, forced to internalise the limitations imposed on us just to get by, on the wrong side of the velvet rope even when (maybe especially when) you’re on the right side of it. We cracked jokes and bumped fists.
+
+As I left, he called after me with a question. “Bro, what kinda film you doing next?”
+
+I looked at the ID badge hanging from a string around his neck. I told him that I hoped it would be one he liked.
+
+This essay is extracted from The Good Immigrant, a book of essays about race and immigration in the UK by 21 British black, Asian and minority ethnic writers, edited by Nikesh Shukla and featuring contributions from Bim Adewunmi, Salena Godden, Musa Okwonga, Coco Khan, Himesh Patel and more.
