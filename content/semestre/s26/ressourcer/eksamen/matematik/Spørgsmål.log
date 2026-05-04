@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  29 APR 2026 10:45
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  29 APR 2026 10:47
  restricted system commands enabled.
  file:line:error style messages enabled.
-**"Individuelle spørgsmål.tex"
-("./Individuelle spørgsmål.tex"
+**Spørgsmål.tex
+(./Spørgsmål.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -1204,11 +1204,11 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip90
 \f@nch@widthR=\skip91
 \@temptokenb=\toks56
-) ("./Individuelle spørgsmål.aux"
+) (./Spørgsmål.aux
 Package babel Info: 'danish' activates 'danish' shorthands.
 (babel)             Reported on input line 8.
 )
-\openout1 = Individuelle spørgsmål.aux
+\openout1 = Spørgsmål.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
 LaTeX Font Info:    ... okay on input line 144.
@@ -1250,10 +1250,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 144.
- ("./Individuelle spørgsmål.out") ("./Individuelle spørgsmål.out")
+ (./Spørgsmål.out) (./Spørgsmål.out)
 \@outlinefile=\write4
 
-\openout4 = Individuelle spørgsmål.out
+\openout4 = Spørgsmål.out
 
 
 Package siunitx Warning: Tabular column type "S" overwritten with siunitx
@@ -1301,26 +1301,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.64996pt}.
 
-[2] ("./Individuelle spørgsmål.aux")
+[2] (./Spørgsmål.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `"Individuelle spørgsmål".out' has not changed.
-(rerunfilecheck)             Checksum: <no file>.
+Package rerunfilecheck Info: File `Spørgsmål.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 36070 strings out of 476076
+ 36068 strings out of 476076
  125129,1373583 words of node,token memory allocated
  4025 words of node memory still in use:
    31 hlist, 27 vlist, 2 rule, 7 mark, 24 disc, 12 local_par, 41 glue, 40 kern, 13 penalty, 157 glyph, 234 attribute, 83 glue_spec, 118 attribute_list, 2 write, 12 pdf_start_link, 12 pdf_end_link, 12 pdf_action, 24 pdf_colorstack nodes
    avail lists: 1:1,2:678,3:378,4:128,5:582,6:84,7:6277,8:26,9:726,10:4,11:577
- 57733 multiletter control sequences out of 65536+600000
+ 57731 multiletter control sequences out of 65536+600000
  105 fonts using 15824103 bytes
- 84i,16n,115p,562b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,16n,115p,547b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/andersthaysen/Library/Fonts/klavika-light.otf></usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Individuelle spørgsmål.pdf (2 pages, 259754 bytes).
+Output written on Spørgsmål.pdf (2 pages, 259754 bytes).
 
 PDF statistics: 110 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream

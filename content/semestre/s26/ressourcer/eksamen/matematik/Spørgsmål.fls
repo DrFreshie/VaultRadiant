@@ -1,7 +1,7 @@
 PWD /Users/andersthaysen/GitRepos/VaultRadiant/content/semestre/s26/ressourcer/eksamen/matematik
 INPUT /usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt
-INPUT ./Individuelle spørgsmål.tex
-OUTPUT Individuelle spørgsmål.log
+INPUT ./Spørgsmål.tex
+OUTPUT Spørgsmål.log
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/tex-ini-files/lualatexquotejobname.lua
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/base/ltluatex.lua
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/luatex/luaotfload/luaotfload-main.lua
@@ -259,15 +259,16 @@ INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/ncctools/nccfoots.sty
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/bigfoot/suffix.sty
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/bigfoot/perpage.sty
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-INPUT ./Individuelle spørgsmål.aux
-OUTPUT Individuelle spørgsmål.aux
+INPUT ./Spørgsmål.aux
+OUTPUT Spørgsmål.aux
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/local/texlive/2025basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT ./Individuelle spørgsmål.out
-INPUT ./Individuelle spørgsmål.out
-OUTPUT Individuelle spørgsmål.out
-OUTPUT Individuelle spørgsmål.pdf
+INPUT ./Spørgsmål.out
+INPUT ./Spørgsmål.out
+INPUT ./Spørgsmål.out
+OUTPUT Spørgsmål.out
+OUTPUT Spørgsmål.pdf
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
@@ -295,7 +296,8 @@ INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/esvect/vect5.tfm
 INPUT ../img/frbvuc_logo.png
 INPUT ../img/frbvuc_logo.png
 INPUT /usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./Individuelle spørgsmål.aux
+INPUT ./Spørgsmål.aux
+INPUT ./Spørgsmål.out
 INPUT /Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc
 INPUT /Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/overpassvariablefontwghtttf-1.luc
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
