@@ -10,10 +10,10 @@ title: Undervisningsbeskrivelse
 # Undervisningsbeskrivelse
 
 ## Voice
-The goal of the first unit is to become better at deciphering the voice of a text as well as finding your own voice in Egnlish. We will read a couple of different fiction and non-ficiton texts without any real theoretical framework. In this introductory unit it's all about gut feeling, and figuring what you think is interesting.
+The goal of the first unit is to become better at deciphering the voice of a text as well as finding your own voice in English. We will read a couple of different fiction and non-ficiton texts without any real theoretical framework. In this introductory unit it's all about gut feeling, and figuring what you think is interesting.
 
 ### Texts
--  Stephen Fry: 'Have You Hear of Oscar Wilde?'
+-  Stephen Fry: 'Have You Heard of Oscar Wilde?'
 -  Gregory Magguire: 'How th'Irth Wint Rong by Hapless Joey@Homeskool.guv'
 -  Katherine Mansfield: 'The Doll´s House'
 -  New Zealand Prime Minister Adresses UN General Assembly
