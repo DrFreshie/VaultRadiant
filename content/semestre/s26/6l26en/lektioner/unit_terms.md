@@ -11,7 +11,7 @@ type: Overview
 
 # Terms for the three units
 
-Use this sheet when you prepare discussions, written assignments, and oral presentations. Try to connect the terms to specific texts, scenes, quotations, or examples.
+Use this sheet when you prepare for the oral exam. Try to connect the terms to specific texts, scenes, quotations, or examples.
 
 ---
 
