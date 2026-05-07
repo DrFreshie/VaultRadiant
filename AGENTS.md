@@ -65,3 +65,46 @@ Example:
 python3 scripts/make_plots.py tmp/polynomial_spec.json
 python3 scripts/make_pdf.py content/semestre/s26/ressourcer/img/polynomier_grad2_3_med_forskrift content/semestre/s26/ressourcer/img/polynomier_grad2_3_med_forskrift_alle_grafer.pdf
 ```
+
+## LaTeX Skabeloner
+
+```latex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skabeloner
+
+% Sidestillet figur
+\begin{wrapfigure}[8]{r}{0.2\textwidth}
+\vspace{-18pt}
+\includegraphics[width=0.3\textwidth]{ovn}
+\end{wrapfigure}
+
+% Midterstillet figur
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{abc}
+\end{figure}
+
+% Førstillet figur
+\begin{figure}[h!]
+\centering
+\vspace{-15pt}
+\includegraphics[width=0.35\textwidth]{stud}
+\end{figure}
+
+% Tabel
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{0.9\textwidth}{|l|b|b|b|b|b|b|}
+    \hline \cellcolor{hggreen} Decimaltal & 7\% & -51\% & 13,7\% & 126\% & 456\% & 0,28\%\\\hline
+    \cellcolor{hggreen} Procenttal &  &  &  &  &  & \\\hline
+\end{tabularx}
+\end{figure}
+
+% Forklaringsopgaver
+\begin{align*}
+&&    &                        &&\underset{\rule{0.8\linewidth}{0pt}}{\textbf{Forklaring:}}\\[1em]
+&&    &\frac{(x+2)^2 - 4}{x}         &&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{Udtrykket skrives op.}}\\[2em]
+&&    =&\ \frac{x^2 + 4 + 4x - 4}{x}    &&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&    =&\ \frac{x^2 + 4x}{x}            &&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+&&    =&\ x + 4                    &&\underset{\rule{0.8\linewidth}{0.4pt}}{\text{}}\\[2em]
+\end{align*}
+```
