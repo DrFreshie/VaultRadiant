@@ -402,7 +402,7 @@ document.addEventListener("nav", async () => {
   }
 
   async function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
-    if (e.key === "s" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
+    if (e.key === "p" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
       e.preventDefault()
       const anySlideOpen = document.querySelector(".remark-container")
       anySlideOpen ? hideSlide() : renderSlide()

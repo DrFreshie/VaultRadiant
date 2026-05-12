@@ -12,7 +12,7 @@ import { concatenateResources } from "../util/resources"
 type OrderEntries = "sort" | "filter" | "map"
 
 export interface Options {
-  title?: string
+  title?: string | ((props: QuartzComponentProps) => string)
   folderDefaultState: "collapsed" | "open"
   folderClickBehavior: "collapse" | "link"
   useSavedState: boolean
@@ -60,8 +60,11 @@ export default ((userOpts?: Partial<Options>) => {
   const opts: Options = { ...defaultOptions, ...userOpts }
   const { OverflowList, overflowListAfterDOMLoaded } = OverflowListFactory()
 
-  const Explorer: QuartzComponent = ({ cfg, displayClass }: QuartzComponentProps) => {
+  const Explorer: QuartzComponent = (props: QuartzComponentProps) => {
+    const { cfg, displayClass } = props
     const id = `explorer-${numExplorers++}`
+    const resolvedTitle =
+      typeof opts.title === "function" ? opts.title(props) : opts.title
 
     return (
       <div
@@ -103,7 +106,7 @@ export default ((userOpts?: Partial<Options>) => {
           data-mobile={false}
           aria-expanded={true}
         >
-          <h2>{opts.title ?? i18n(cfg.locale).components.explorer.title}</h2>
+          <h2>{resolvedTitle ?? i18n(cfg.locale).components.explorer.title}</h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"

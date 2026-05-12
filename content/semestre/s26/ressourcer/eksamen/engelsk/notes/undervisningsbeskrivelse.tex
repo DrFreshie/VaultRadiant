@@ -1,0 +1,131 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+	\usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Layout
+
+	\usepackage{geometry}
+	\geometry{margin=2cm, top=2.5cm, bottom=2.5cm}
+
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{enumitem}
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[itemize]{leftmargin=1.4em, itemsep=1pt, topsep=2pt}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\section}{\vestb\large\color{frbgreen}}{}{0em}{}[\vspace{-4pt}\color{frbgreen}\rule{\textwidth}{0.6pt}]
+	\titleformat{\subsection}{\plantinc\normalsize\color{frbblue}}{}{0em}{}
+	\titlespacing{\section}{0pt}{14pt}{4pt}
+	\titlespacing{\subsection}{0pt}{8pt}{2pt}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titling
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-10ex}
+	\pretitle{\begin{center}\vestb\LARGE\color{frbgreen}}
+	\posttitle{\end{center}\vspace{-0.5em}}
+	\preauthor{\begin{center}\vest\normalsize\color{frbblue}}
+	\postauthor{\end{center}}
+	\predate{\begin{center}\vest\small}
+	\postdate{\end{center}}
+
+	\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\title{Undervisningsbeskrivelse}
+\date{6l26en - Sommer 2026}
+\author{Voice \quad|\quad Belonging \quad|\quad Borders}
+
+\maketitle
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-15pt,xshift=-45pt]%
+       at (current page.north east)
+        {\includegraphics[scale=0.1]{frbvuc_logo.png}};
+\end{tikzpicture}
+
+\vspace{-0.5em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Voice}
+
+The first unit focuses on developing students' ability to identify and interpret the voice of a text, alongside cultivating their own voice in English. Drawing on a selection of fiction and non-fiction texts without a rigid theoretical framework, students are encouraged to engage intuitively and to develop their individual perspectives on the material. A central objective is to distinguish between the \textit{theme} of a fiction text and the \textit{message} of a non-fiction text.
+
+Language production is primarily practised through student-authored texts, while oral activities carry a distinctly performative character.
+
+\subsection*{Texts}
+
+\begin{itemize}
+	\item Stephen Fry: \textit{Have You Heard of Oscar Wilde?}
+	\item Gregory Maguire: \textit{How th'Irth Wint Rong by Hapless Joey@Homeskool.guv}
+	\item Katherine Mansfield: \textit{The Doll's House}
+	\item New Zealand Prime Minister addresses the UN General Assembly
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Belonging}
+
+This unit examines the representation of belonging in literature, introducing core literary analysis tools to support close reading of short stories. Students develop their analytical vocabulary with a particular focus on \textit{characterisation} and \textit{setting} as means of discussing a text's theme with greater precision.
+
+Linguistically, the unit emphasises reading comprehension alongside a systematic exploration of English grammar and vocabulary development. In addition to engagement with written texts, significant attention is given to the spoken word through read-aloud activities and exposure to authentic English via the podcast medium.
+
+\subsection*{Texts}
+
+\begin{itemize}
+	\item Hanif Kureishi: \textit{The Decline of the West}
+	\item Rachel Cusk: \textit{After Caravaggio's Sacrifice of Isaac}
+	\item Brian Reed: \textit{S-Town}, Episode 1
+	\item Carys Bray: \textit{Dancing in the Kitchen}
+	\item Zadie Smith: \textit{Two Men Arrive in a Village}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Borders}
+
+This unit investigates the concept of `borders' in both its metaphorical dimensions and its concrete, real-world implications. Students engage with non-fiction texts with attention to purpose and function, focusing in particular on the longform article and narrative non-fiction as genres. The podcast format is revisited, and students examine the elements that constitute a compelling listening experience before producing their own literary podcast episodes. Accordingly, the unit places emphasis on natural and conversational language, both in terms of comprehension and production.
+
+Extended reading comprehension is further developed through student-selected novels, which are analysed in relation to the overarching theme of borders.
+
+\subsection*{Texts}
+
+\begin{itemize}
+	\item Susan V. Meyers: \textit{Visits to the Border}
+	\item Robert Frost: \textit{Mending Wall}
+	\item Riz Ahmed: \textit{Typecast as a Terrorist}
+\end{itemize}
+
+\end{document}

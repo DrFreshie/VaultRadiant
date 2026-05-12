@@ -1,0 +1,244 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{''#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{\textit{Perfect on Paper}}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2021}
+\author{Sophie Gonzales}
+
+\maketitle
+
+\noindent\textit{Darcy is a bisexual teenage girl who secretly gives anonymous relationship advice from the locker next to hers. The Q\&Q Club (Queer and Questioning Club) is a school support group she helped found. Brougham is a boy she recently had romantic feelings for. Brooke is her ex-girlfriend. Erica is a new student Darcy quietly encouraged to attend the meeting.}
+
+\bigskip
+
+\noindent\linenumbers I was on edge throughout the entire Q\&Q Club that Thursday. And given that this meeting was chaired by Finn, who'd been defusing tension since the day he left the womb, that was saying a lot. But something was becoming clear to me. Something that had started as a niggling in the back of my mind, so vague I hadn't had words for it at first. The thing is, I'd wrecked things with Brougham romantically, but even if he was out of the picture, I still had to figure this fear out. Because that's what it was, I was realizing. Fear of multiple things.
+
+I needed to discuss it with the only group of people who would get it, first. In the one safe place we'd created where anything could be discussed.
+
+Across the room from me was Erica Rodriguez. She'd poked her head in at the start and asked if she could join in, just to see what it was like in here. She hadn't said a word since introducing herself, but I knew why she was here. I'd kind of sent her here myself. I shot her a smile, but I couldn't seem to make it meet my eyes. She offered me a shaky one in return and shook her long box braids off her shoulders.
+
+\ldots
+
+Finn narrowed his eyes at him, then tracked his finger down the clipboard. "Okay... here's a submission from..." He squinted, then pulled back. "Finn Park."
+
+Ray looked very much like she wanted to snatch the clipboard right from his hands.
+
+"I woke up at four a.m. this morning after an inspired dream and realized---alliteration! We should be the Queer and The Questioning Qlub. Qlub with a Q. Triple Q. That'll definitely increase recruitment."
+
+The room fell into silence. Finn looked around, circling his hands in the air to invite feedback.
+
+Ray raised a stiff hand. Finn pointed to her. "Raina, always a pleasure."
+
+"There's one item left and we're running out of time," Ray said.
+
+Finn looked put out. "Fine, but we're revisiting this next week. So, the final topic is... biphobia, with Darcy."
+
+He didn't have to make it sound like a talk show.
+
+Suddenly, all eyes were on me. And I didn't want to do this, but I knew I had to.
+
+"So," I said. "I've been feeling really... confused, lately. The thing is, I'm... really scared to have feelings for a guy, any guy," I spat out. There. Now I'd said the words out loud, I couldn't deny them to myself if I wanted to. "I'm bi. But the last time I liked a guy, I wasn't part of this group, and being bi wasn't a huge part of my identity. But now it is, and, I guess, I feel weird about it?"
+
+"Weird how?" Finn asked.
+
+I swallowed, and scanned the faces staring up at me. No one looked judgy or irritated, even though it felt like such a stupid, trivial thing to bring up. The fear of passing as straight, for god's sake. "I feel like if I'm with a guy, I won't belong here properly anymore. What if I got a boyfriend? I'd feel weird bringing him to Pride events, or even telling queer people I have a boyfriend. I'd feel judged."
+
+"Oh my god, Darcy," Jaz said. "We wouldn't judge you."
+
+"You belong," Finn said simply. Brooke nodded, and my breath caught in my throat. It was the first time she'd acknowledged me in person in weeks.
+
+Alexei folded their arms and leaned across the table. "That's all in your head," they said. "You're the only one thinking that, I promise."
+
+"No," Ray said sharply, and I turned to look at her. She didn't look angry, but her tone was firm. My stomach dropped. This was what I'd been so terrified of. That I'd open up, and my fears would be reinforced. But then she went on. "Don't gaslight her. What she's describing is internalized biphobia, and bi's didn't invent this shit. Society sends us that message. We're made to feel like we're not queer enough to hang with queer groups all the time."
+
+Well. Stunned was an understatement for how I felt at that moment. All at once I felt a rush of warmth and gratitude toward her. Gratitude that was instantly tempered by something that felt a lot like guilt. I didn't deserve her backup.
+
+"It's true," Lily said. "Ace and aro people get that sort of shit, too."
+
+Erica whipped her head around to look at Lily, eyes widening hopefully.
+
+"Exactly," Ray said.
+
+"Internalized biphobia?" repeated Jason.
+
+Ray didn't skip a beat. "Yeah. It's when bisexuals start to believe the biphobia they're surrounded by. We're told that our sexuality isn't real, or that we're straight if we're with another gender, and that our feelings don't count if we've never dated a certain gender, that kind of crap. Then we hear it so many times we doubt ourselves."
+
+"Yeah," I said. "That's how I feel. I've been told I was 'turning' straight or 'turning' lesbian again depending on which gender I got a crush on. And a little while ago, someone told me it was good I can date guys, because then I don't have to face discrimination."
+
+Brooke startled in her seat, and it was only then I remembered it was actually her who'd made that comment. I hadn't brought it up to guilt her, and I hoped she didn't take it that way. Now that I'd started letting out some of the anger and frustration I'd barely known was there, though, I couldn't stop.
+
+"And I guess I could technically choose to just never act on my crushes when they're not on a guy, but what the fuck? And the implication is that I'm less queer than others, because, you know, I can just go straight and not deal with any oppression at all, easy. Like being with a guy magically makes me straight. Like it's a competition, or a ranking, and I need to stop speaking on queer issues because am I really queer? Really, though? And I want to clarify that this person didn't say any of that, but that's just how it felt. And maybe I don't know what it's like to be gay or lesbian, but I do know some people will never understand what it's like to be queer and to blush every time you join in on a conversation about it because you feel like you're treading on people's toes, because when they say `queer' they don't mean you."
+
+I hadn't meant to yell.
+
+The room fell uncomfortably quiet. Brooke had covered her mouth with her hand, and Ray bit her lower lip. "Once, I had a girl ask me who would I choose," Ray said. "And I was like, well who are they? And she's all oh, no one in particular. And I asked her if she had to choose between girl A and B, who would she choose, and she got all grumpy at me and said it was different."
+
+Around the room, the others were starting to break into smiles.
+
+"I'm always hearing that it's suddenly `weird' if I like one gender after being attracted to another," I said. "Oh, and once, some straight guy asked me how being bi `works' when I'm in a relationship. And I asked him how it works for him, and he said `it works in that I'm not bisexual.' Then I asked if he's attracted to women, how can he possibly stop himself from cheating on his girlfriend with every woman he runs into. Like, for fuck's sake, dude, I said I'm bisexual, not a nymphomaniac."
+
+"Oh my god." Ray snorted.
+
+"I swear, most people think we're either lying about being attracted to multiple genders, or that we must be so attracted to literally everyone that we need to make out with every human on this earth, immediately, damn it!"
+
+Finn slammed his hands on the table, causing Brooke and me, along with a few other members, to jump. He straightened in his seat, looking grave. "Darcy."
+
+"Yes?"
+
+He grinned. "You're queer."
+
+Ray nodded. "You're queer."
+
+Brooke looked between us, her lips trembling. "You're queer, Darcy."
+
+I loved her so much. I might not be in love with her anymore, but I loved her. Was this an olive branch? Did we talk again, now? I would do anything, anything for that.
+
+"You're queer," Alexei echoed.
+
+"You're queer." Jason.
+
+"You're queer." Jaz and Mr. Elliot in unison. Erica whispered it alongside them in a voice too quiet to hear.
+
+"You're queer!" Lily shouted, rising in her seat for emphasis.
+
+I was not going to cry. I was not going to cry. I was---
+
+"Even if I'm with a straight guy?" I asked.
+
+"Yes."
+
+"Yeah."
+
+"Fuck yes."
+
+"Always."
+
+Instead of tears, giggles came out. Happy, giddy giggles. And the others joined me.
+
+For the first time, the very very first time, I really believed them. That my relationship status did not change me. And that even if other people didn't agree, every single person in this room had my back without hesitation. I was with them and they were with me and we were with each other. A community within a community within a community. No questions asked. No proof needed. No valid form of identification required.
+
+We just belonged because we belonged.
+
+\bigskip
+\noindent\textit{Source: Sophie Gonzales, \textit{Perfect on Paper} (2021), Hodder \& Stoughton (abridged).}
+
+\end{document}

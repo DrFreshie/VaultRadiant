@@ -37,7 +37,23 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
 
-        Component.Explorer({ title: "Lektioner" }),
+        Component.Explorer({
+          title: ({ fileData }) => {
+            const parts = (fileData.slug ?? "").split("/")
+            const parent = parts.length >= 2 ? parts[parts.length - 2] : parts[0]
+            return parent.charAt(0).toUpperCase() + parent.slice(1)
+          },
+          sortFn: (a, b) => {
+            if (a.isFolder && !b.isFolder) return -1
+            if (!a.isFolder && b.isFolder) return 1
+            const aDate = a.data?.date
+            const bDate = b.data?.date
+            if (aDate && bDate) return aDate.getTime() - bDate.getTime()
+            if (aDate) return -1
+            if (bDate) return 1
+            return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+          },
+        }),
   ],
   right: [
     Component.Graph(),

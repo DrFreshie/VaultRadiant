@@ -1,0 +1,283 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\vest{TRY Vesterbro Regular}
+	\newfontfamily\vestb{TRY Vesterbro Poster}
+	\newfontfamily\overp{Overpass}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+	\usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	\definecolor{rowgrey}{RGB}{230, 233, 229}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Layout
+
+	\usepackage{geometry}
+	\geometry{margin=2cm, top=2.5cm, bottom=2.5cm}
+
+	\usepackage{graphicx}
+	\graphicspath{{../img/}}
+	\usepackage{tikz}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{tabularx}
+	\usepackage{booktabs}
+	\usepackage{colortbl}
+	\usepackage{enumitem}
+	\usepackage{multicol}
+
+	\setlength{\parskip}{0.4\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[itemize]{leftmargin=1.2em, itemsep=0pt, topsep=2pt}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\section}{\vestb\large\color{frbgreen}}{}{0em}{}[\vspace{-4pt}\color{frbgreen}\rule{\textwidth}{0.6pt}]
+	\titleformat{\subsection}{\plantinc\normalsize\color{frbblue}}{}{0em}{}
+	\titlespacing{\section}{0pt}{14pt}{4pt}
+	\titlespacing{\subsection}{0pt}{8pt}{2pt}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Table style
+
+	\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+	\newcolumntype{R}{>{\raggedright\arraybackslash}X}
+
+	\newcommand{\termrow}[2]{\textbf{#1} & #2 \\}
+	\newcommand{\termrowshaded}[2]{\rowcolor{rowgrey}\textbf{#1} & #2 \\}
+
+	\newcommand{\termtable}[1]{%
+		\begin{center}
+		\begin{tabularx}{0.94\textwidth}{@{}lR@{}}
+		\toprule
+		\rowcolor{frbgreen}\textcolor{white}{\textbf{Term}} & \textcolor{white}{\textbf{Meaning / how to use it}} \\
+		\midrule
+		#1
+		\bottomrule
+		\end{tabularx}
+		\end{center}%
+	}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titling
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-10ex}
+	\pretitle{\begin{center}\vestb\LARGE\color{frbgreen}}
+	\posttitle{\end{center}\vspace{-0.5em}}
+	\preauthor{\begin{center}\vest\normalsize\color{frbblue}}
+	\postauthor{\end{center}}
+	\predate{\begin{center}\vest\small}
+	\postdate{\end{center}}
+
+	\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\title{Terms overview}
+\date{6l26en - Sommer 2026}
+\author{Voice \quad|\quad Belonging \quad|\quad Borders}
+
+\maketitle
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-15pt,xshift=-45pt]%
+       at (current page.north east)
+        {\includegraphics[scale=0.1]{frbvuc_logo.png}};
+\end{tikzpicture}
+
+\noindent\textit{Use this sheet when you prepare for the oral exam. Try to connect the terms to specific texts, scenes, quotations, or examples.}
+
+\vspace{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Voice}
+
+\subsection*{Core terms}
+
+\termtable{
+\termrow{voice}{The way a person, narrator, speaker, or text expresses ideas, feelings, and identity.}
+\termrowshaded{personal voice}{A voice that feels individual, honest, or strongly connected to someone's own experience.}
+\termrow{narrative voice}{The voice telling a story. Ask: who speaks, what do they know, and how do they see the world?}
+\termrowshaded{speaker}{The "I" or voice in a poem, speech, or text. Not always the same as the author.}
+\termrow{point of view}{The perspective from which a story or argument is presented.}
+\termrowshaded{tone}{The attitude or mood of the voice, e.g. serious, angry, ironic, hopeful, bitter, humorous.}
+\termrow{register}{The level of language: formal, informal, academic, emotional, everyday, slang etc.}
+\termrowshaded{identity}{How a person sees themselves, and how they are seen by others.}
+\termrow{expression}{The act of showing thoughts, feelings, beliefs, or personality through language or art.}
+\termrowshaded{silence}{When someone cannot, will not, or is not allowed to speak.}
+\termrow{being heard}{When a voice is recognised, respected, or taken seriously.}
+\termrowshaded{marginalised voices}{Voices from people or groups who are often ignored or excluded.}
+\termrow{empowerment}{Gaining confidence, strength, or the right to speak and act.}
+\termrowshaded{freedom of speech}{The right to express opinions without censorship or punishment.}
+\termrow{rhetoric}{The art of using language to persuade or affect an audience.}
+\termrowshaded{ethos}{Appeal to credibility, authority, or trust.}
+\termrow{pathos}{Appeal to emotions.}
+\termrowshaded{logos}{Appeal to reason, evidence, and logic.}
+\termrow{repetition}{Repeating words or phrases for emphasis.}
+\termrowshaded{anaphora}{Repetition at the beginning of successive clauses or sentences.}
+\termrow{rule of three}{Three words, phrases, or examples used together for effect.}
+\termrowshaded{metaphor}{A figurative comparison where one thing is described as another.}
+}
+
+\subsection*{Connect to theme by asking:}
+
+\begin{itemize}
+	\item Who has a voice in this text, and who does not?
+	\item What kind of voice is created: confident, uncertain, angry, personal, official, poetic?
+	\item How does the language reveal the speaker's identity or values?
+	\item Is the text about speaking up, being silenced, or being listened to?
+	\item How does the voice affect the reader or audience?
+\end{itemize}
+
+\subsection*{Sentence starters}
+
+\begin{itemize}
+	\item The text presents voice as\ldots
+	\item The narrator's/speaker's voice seems\ldots
+	\item Through the use of \ldots, the speaker creates a sense of\ldots
+	\item The text gives voice to\ldots
+	\item The silence of \ldots\ is important because\ldots
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Belonging}
+
+\subsection*{Core terms}
+
+\termtable{
+\termrow{belonging}{Feeling accepted, connected, and at home in a place, group, relationship, or identity.}
+\termrowshaded{home}{A physical place, but also a feeling of safety, memory, identity, and connection.}
+\termrow{community}{A group of people connected by place, culture, values, experience, or relationships.}
+\termrowshaded{family}{Biological or chosen relationships that can create belonging, conflict, or responsibility.}
+\termrow{identity}{A person's sense of who they are, shaped by memory, place, language, relationships, and society.}
+\termrowshaded{loneliness}{Feeling isolated, unseen, or disconnected from others.}
+\termrow{alienation}{A stronger form of not belonging; feeling like an outsider or stranger.}
+\termrowshaded{exclusion}{Being kept outside a group, place, or social world.}
+\termrow{inclusion}{Being accepted into a group or community.}
+\termrowshaded{social class}{A person's position in society based on money, status, education, or background.}
+\termrow{prejudice}{Judging someone before knowing them, often based on class, race, gender, culture, or appearance.}
+\termrowshaded{recognition}{Being seen and accepted by others as who you are.}
+\termrow{safety}{The feeling that one is protected physically, socially, or emotionally.}
+\termrowshaded{privacy}{Having a personal space where one can be oneself.}
+\termrow{memory}{Past experiences that shape identity and belonging.}
+\termrowshaded{nostalgia}{A longing for the past, often connected to memory and loss.}
+\termrow{escapism}{Escaping from reality into fantasy, memory, entertainment, or another world.}
+\termrowshaded{second chance}{The possibility of beginning again or creating a new form of life or belonging.}
+\termrow{dialect}{A variety of language connected to a place, region, or social group.}
+\termrowshaded{setting}{The time and place of a text; often important for creating belonging or alienation.}
+}
+
+\subsection*{Connect to theme by asking:}
+
+\begin{itemize}
+	\item Where does the character feel at home, and where do they feel out of place?
+	\item What creates belonging: family, place, love, memory, language, class, or choice?
+	\item Is belonging presented as something you find, choose, or build?
+	\item How does the setting influence the character's sense of belonging?
+	\item What causes loneliness or exclusion in the text?
+\end{itemize}
+
+\subsection*{Sentence starters}
+
+\begin{itemize}
+	\item The text explores belonging through\ldots
+	\item The character feels excluded because\ldots
+	\item Home is presented not only as a place, but as\ldots
+	\item The setting creates a feeling of\ldots
+	\item The text suggests that belonging depends on\ldots
+\end{itemize}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Borders}
+
+\subsection*{Core terms}
+
+\termtable{
+\termrow{border}{A line, limit, or division between places, people, identities, or ideas.}
+\termrowshaded{boundary}{A limit that can be physical, social, emotional, moral, or psychological.}
+\termrow{national border}{A border between countries.}
+\termrowshaded{border crossing}{Moving across a border; can be literal or symbolic.}
+\termrow{migration}{Moving from one country or place to another, often for work, safety, family, or opportunity.}
+\termrowshaded{exile}{Being forced to live away from one's home or country.}
+\termrow{refugee}{A person forced to leave their country because of war, persecution, or danger.}
+\termrowshaded{immigrant}{A person who moves to another country to live there.}
+\termrow{culture}{The values, traditions, language, habits, and art of a group of people.}
+\termrowshaded{cultural identity}{A person's sense of belonging to one or more cultures.}
+\termrow{hybridity}{A mixed identity shaped by more than one culture, place, or language.}
+\termrowshaded{fluid identity}{An identity that changes depending on place, context, or how others see you.}
+\termrow{othering}{Treating someone as different, foreign, or less normal than "us".}
+\termrowshaded{assimilation}{Adapting to fit into a new dominant culture, sometimes by losing parts of one's old identity.}
+\termrow{integration}{Becoming part of a new society while still keeping important parts of one's own identity.}
+\termrowshaded{liminality}{Being in-between two places, identities, stages of life, or social roles.}
+\termrow{threshold}{A doorway or point of transition between one state and another.}
+\termrowshaded{wall}{A physical or symbolic structure that separates and protects, but can also isolate.}
+\termrow{division}{Separation between people, groups, or ideas.}
+\termrowshaded{connection}{What links people across borders or differences.}
+\termrow{transgression}{Breaking or crossing a rule, limit, or boundary.}
+}
+
+\subsection*{Connect to theme by asking:}
+
+\begin{itemize}
+	\item What kind of border is central: national, cultural, personal, social, psychological, or symbolic?
+	\item Who creates the border, and why?
+	\item Who wants to cross the border, and what are the consequences?
+	\item Does the border protect, divide, exclude, or connect people?
+\end{itemize}
+
+\subsection*{Sentence starters}
+
+\begin{itemize}
+	\item The border in the text can be understood as\ldots
+	\item The wall/boundary both separates and\ldots
+	\item The character crosses a border when\ldots
+\end{itemize}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{General analytical terms}
+
+\noindent\textit{Useful across all three units.}
+
+\vspace{0.5em}
+
+\termtable{
+\termrow{theme}{A central idea or issue in a text.}
+\termrowshaded{message}{What the text seems to suggest about a theme.}
+\termrow{characterisation}{How a character is presented through actions, speech, thoughts, appearance, and relationships.}
+\termrowshaded{setting}{The time and place of a story, including the social, cultural, and physical environment.}
+\termrow{conflict}{A struggle between people, values, desires, places, or identities.}
+\termrowshaded{imagery}{The use of vivid, descriptive language that appeals to the senses or creates a mental picture.}
+\termrow{symbol}{Something concrete that represents a larger idea.}
+\termrowshaded{contrast}{A difference used to highlight an idea, e.g. inside/outside, silence/voice, home/away.}
+\termrow{motif}{A repeated image, idea, object, or situation.}
+\termrowshaded{perspective}{The angle from which events or ideas are seen.}
+\termrow{context}{The social, historical, cultural, or political background of a text.}
+\termrowshaded{rhetorical devices}{Language techniques used to affect or persuade the audience, e.g. repetition, rhetorical questions, metaphors, contrasts, anaphora, or the rule of three.}
+\termrow{rhetorical pentagram}{A model for analysing non-fiction texts by looking at sender, receiver/audience, topic, language, and situation/context.}
+\termrowshaded{quotation}{A short piece of evidence from the text used to support your point.}
+}
+
+\end{document}

@@ -6,7 +6,7 @@ tags:
 class: 6l26en
 subject: english
 title: Terms-overview
-type: Overview
+type: Note
 ---
 
 # Terms for the three units
@@ -44,7 +44,7 @@ Use this sheet when you prepare for the oral exam. Try to connect the terms to s
 | rule of three | Three words, phrases, or examples used together for effect. |
 | metaphor | A figurative comparison where one thing is described as another. |
 
-### Useful questions
+### Connect to theme by asking:
 
 - Who has a voice in this text, and who does not?
 - What kind of voice is created: confident, uncertain, angry, personal, official, poetic?
@@ -89,7 +89,7 @@ Use this sheet when you prepare for the oral exam. Try to connect the terms to s
 | dialect | A variety of language connected to a place, region, or social group. |
 | setting | The time and place of a text; often important for creating belonging or alienation. |
 
-### Useful questions
+### Connect to theme by asking:
 
 - Where does the character feel at home, and where do they feel out of place?
 - What creates belonging: family, place, love, memory, language, class, or choice?
@@ -135,21 +135,18 @@ Use this sheet when you prepare for the oral exam. Try to connect the terms to s
 | connection | What links people across borders or differences. |
 | transgression | Breaking or crossing a rule, limit, or boundary. |
 
-### Useful questions
+### Connect to theme by asking:
 
 - What kind of border is central: national, cultural, personal, social, psychological, or symbolic?
 - Who creates the border, and why?
 - Who wants to cross the border, and what are the consequences?
 - Does the border protect, divide, exclude, or connect people?
-- How does the text show identity as fixed, divided, mixed, or fluid?
 
 ### Sentence starters
 
 - The border in the text can be understood as...
 - The wall/boundary both separates and...
 - The character crosses a border when...
-- The text shows othering through...
-- Identity is presented as fluid because...
 
 ---
 
@@ -160,7 +157,9 @@ Use this sheet when you prepare for the oral exam. Try to connect the terms to s
 | theme | A central idea or issue in a text. |
 | message | What the text seems to suggest about a theme. |
 | characterisation | How a character is presented through actions, speech, thoughts, appearance, and relationships. |
+| setting | The time and place of a story, including the social, cultural, and physical environment. |
 | conflict | A struggle between people, values, desires, places, or identities. |
+| imagery | The use of vivid, descriptive language that appeals to the senses or creates a mental picture. |
 | symbol | Something concrete that represents a larger idea. |
 | contrast | A difference used to highlight an idea, e.g. inside/outside, silence/voice, home/away. |
 | motif | A repeated image, idea, object, or situation. |
