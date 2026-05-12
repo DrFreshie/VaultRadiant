@@ -59,4 +59,4 @@ Core concepts: *belonging, home, community, identity, alienation, exclusion, set
 
 ---
 
-*← [[lektioner/index|All lessons]]*
+*← [[6l26en/lektioner/index|All lessons]]*
