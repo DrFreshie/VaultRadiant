@@ -46,12 +46,7 @@ export const defaultContentPageLayout: PageLayout = {
           sortFn: (a, b) => {
             if (a.isFolder && !b.isFolder) return -1
             if (!a.isFolder && b.isFolder) return 1
-            const aDate = a.data?.date
-            const bDate = b.data?.date
-            if (aDate && bDate) return aDate.getTime() - bDate.getTime()
-            if (aDate) return -1
-            if (bDate) return 1
-            return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+            return b.slugSegment.localeCompare(a.slugSegment, undefined, { numeric: true, sensitivity: "base" })
           },
         }),
   ],

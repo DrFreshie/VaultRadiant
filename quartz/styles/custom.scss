@@ -95,6 +95,18 @@ body[data-slug="index"] .page > #quartz-body {
     background 0.18s ease;
 }
 
+article p,
+article li,
+article ul,
+article ol,
+article a,
+article a.external,
+.remark-slide-content a,
+.remark-slide-content a.external,
+.remark-slide-content li {
+  font-family: var(--bodyFont);
+}
+
 .page-introduction {
   font-family: "Nunito", sans-serif;
   text-align: justify;

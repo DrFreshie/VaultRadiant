@@ -35,8 +35,8 @@ Core concepts: *voice, tone, register, rhetoric, ethos, pathos, logos, theme, me
 
 ## Skills and resources
 
-- [[active_listening|Active listening]] — practised as a framework for group discussion
-- [[reflection|Reflection]] — used to consolidate learning at the end of lessons
+- **Active listening** — practised as a framework for group discussion
+- **Reflection** — used to consolidate learning at the end of lessons
 - Oral exam presentation format introduced
 
 ---
