@@ -9,11 +9,27 @@
   flex: 1 1 0;
   min-height: 0;
   overflow-y: auto;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
 }
 
-/* Disable the inner scroll container so only .explorer scrolls */
+.left.sidebar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
+/* Remove inner scroll boundaries and let wheel events bubble to .explorer */
 .left.sidebar .explorer-content {
-  overflow: hidden !important;
+  overflow: visible !important;
+}
+
+.left.sidebar .explorer-content ul {
+  overscroll-behavior: auto !important;
+}
+
+.left.sidebar .explorer-ul {
+  overflow: visible !important;
+  max-height: none !important;
 }
 
 /* Hide Explorer on home page — HomeNav takes its place */
