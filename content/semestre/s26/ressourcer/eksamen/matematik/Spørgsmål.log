@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  29 APR 2026 10:47
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  18 MAY 2026 13:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Spørgsmål.tex
@@ -1277,19 +1277,19 @@ LaTeX Font Info:    Trying to load font information for U+esvect on input line 1
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-Overfull \hbox (9.56667pt too wide) in paragraph at lines 174--175
+Overfull \hbox (9.56667pt too wide) in paragraph at lines 175--176
 []\TU/EBGaramond(0)/m/n/10 Gør re-de for de-fi-ni-tio-nen af lo-ga-rit-me funk-tio-ner-ne $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \TU/EBGaramond(0)/m/n/10 og $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$\TU/EBGaramond(0)/m/n/10 , og ud-led logaritme-
  []
 
 
-Overfull \hbox (9.56667pt too wide) in paragraph at lines 177--178
+Overfull \hbox (9.56667pt too wide) in paragraph at lines 178--179
 []\TU/EBGaramond(0)/m/n/10 Gør re-de for de-fi-ni-tio-nen af lo-ga-rit-me funk-tio-ner-ne $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$ \TU/EBGaramond(0)/m/n/10 og $[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )$\TU/EBGaramond(0)/m/n/10 , og ud-led logaritme-
  []
 
 <../img/frbvuc_logo.png, id=14, 569.4876pt x 362.7954pt>
 File: ../img/frbvuc_logo.png Graphic file (type png)
 <use ../img/frbvuc_logo.png>
-Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 182.
+Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 183.
 (luatex.def)             Requested size: 39.24254pt x 25.0pt.
 [1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
@@ -1320,7 +1320,7 @@ Here is how much of LuaTeX's memory you used:
  105 fonts using 15824103 bytes
  84i,16n,115p,547b,1088s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/andersthaysen/Library/Fonts/klavika-light.otf></usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/fontawesome5/FontAwesome5Free-Solid-900.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Spørgsmål.pdf (2 pages, 259754 bytes).
+Output written on Spørgsmål.pdf (2 pages, 259751 bytes).
 
 PDF statistics: 110 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream

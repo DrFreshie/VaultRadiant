@@ -210,15 +210,36 @@ async function setupExplorer(currentSlug: FullSlug) {
           break
       }
     }
-    // 🔽 NEW: pick the current directory as root
+    // Root the explorer at the class folder (semestre/{semester}/{class}),
+    // so both 'noter' and 'lektioner' are always visible regardless of which
+    // subfolder the current file lives in.
     const simpleCurrent = simplifySlug(currentSlug)
-    const parentSlug = simpleCurrent.split("/").slice(0, -1).join("/") as FullSlug
+    const parts = simpleCurrent.split("/").filter(Boolean)
+    const semestreIdx = parts.indexOf("semestre")
 
     let rootNode: FileTrieNode = trie
-    if (parentSlug) {
-      const maybeFolder = findFolderNode(trie, parentSlug)
-      if (maybeFolder) {
-        rootNode = maybeFolder
+    if (simpleCurrent === "/" || simpleCurrent === "index" || simpleCurrent === "") {
+      // On home page: show only class folders by rooting at the deepest
+      // single-child descendant of 'semestre' (e.g. semestre/s26 → 6h56Ma, 6l26en)
+      const semestreNode = findFolderNode(trie, "semestre" as FullSlug)
+      if (semestreNode) {
+        let node = semestreNode
+        while (node.children.filter((c) => c.isFolder).length === 1) {
+          node = node.children.find((c) => c.isFolder)!
+        }
+        rootNode = node
+      }
+    } else if (semestreIdx !== -1 && parts.length > semestreIdx + 2) {
+      // Inside semestre/{semester}/{class}/... → root at the class folder
+      const classSlug = parts.slice(0, semestreIdx + 3).join("/") as FullSlug
+      const maybeClass = findFolderNode(trie, classSlug)
+      if (maybeClass) rootNode = maybeClass
+    } else {
+      // Fallback: root at the immediate parent folder
+      const parentSlug = parts.slice(0, -1).join("/") as FullSlug
+      if (parentSlug) {
+        const maybeFolder = findFolderNode(trie, parentSlug)
+        if (maybeFolder) rootNode = maybeFolder
       }
     }
 

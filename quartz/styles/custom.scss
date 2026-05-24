@@ -1,5 +1,109 @@
 @use "./base.scss";
-@use "./themes";
+/* Hide the explorer title/toggle button — tree is always open */
+.explorer .title-button.desktop-explorer {
+  display: none;
+}
+
+/* Allow explorer to fill remaining sidebar height and scroll */
+.left.sidebar .explorer {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+/* Disable the inner scroll container so only .explorer scrolls */
+.left.sidebar .explorer-content {
+  overflow: hidden !important;
+}
+
+/* Hide Explorer on home page — HomeNav takes its place */
+body[data-slug="index"] .explorer {
+  display: none;
+}
+
+/* Platon hero image — crossfade on theme toggle */
+.platon-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  blockquote {
+    flex: 1;
+    margin-top: auto;
+  }
+}
+
+.platon-hero {
+  position: relative;
+  flex-shrink: 0;
+  width: 15%;
+}
+
+.platon-hero__img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Dark image sits on top, invisible by default */
+.platon-hero__img--dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* In dark mode: fade light out, then fade dark in */
+[saved-theme="dark"] .platon-hero__img--light {
+  opacity: 0;
+}
+
+[saved-theme="dark"] .platon-hero__img--dark {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+/* Ask Yggdrasil image — crossfade on theme toggle */
+.have-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ask-y {
+  position: relative;
+  flex-shrink: 0;
+  width: 40%;
+  margin-top: -2rem;
+}
+
+.asky__img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+
+/* Dark image sits on top, invisible by default */
+.asky__img--dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+/* In dark mode: fade light out, then fade dark in */
+[saved-theme="dark"] .asky__img--light {
+  opacity: 0;
+}
+
+[saved-theme="dark"] .asky__img--dark {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
 /* Make left sidebar flush so the Prime Radiant quote can be wider */
 @media (min-width: 800px) {
   body .page > #quartz-body .left.sidebar {
@@ -13,86 +117,50 @@
 figure {
   margin: 0em !important;
 }
+
+figure.epigraph {
+  margin: 0 0 2rem !important;
+
+  .epigraph__entry {
+    font-size: 0.9rem;
+    color: var(--darkgray);
+    margin: 0;
+    line-height: 1.5;
+
+    strong {
+      font-weight: 700;
+      color: var(--dark);
+    }
+  }
+
+  .epigraph__pos {
+    font-style: italic;
+    color: var(--gray);
+  }
+
+  .epigraph__sense {
+    font-weight: 600;
+    color: var(--gray);
+    margin: 0 0.1em;
+  }
+
+  .epigraph__def {
+    &::before { content: ': '; color: var(--gray); }
+  }
+
+  figcaption {
+    font-size: 0.72rem;
+    color: var(--gray);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+}
 /* hide the logo section on small screens */
 @media (max-width: 800px) {
   .prime-radiant {
     display: none !important;
   }
-}
-
-/* ===============================
-   Vault Radiant landing page
-   =============================== */
-
-/* Hide sidebars */
-body[data-slug="index"] .left.sidebar,
-body[data-slug="index"] .right.sidebar {
-  display: none !important;
-}
-
-/* Make the main content stretch full width */
-body[data-slug="index"] .page > #quartz-body {
-  grid-template-columns: 1fr !important;
-}
-
-.home-hero {
-  text-align: center;
-  margin: 3rem auto 2rem;
-  max-width: 40rem;
-}
-
-.home-hero__title {
-  font-family: "Audiowide", system-ui, sans-serif;
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-  line-height: 1.1;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  color: #cba6f7; /* catppuccin lavender-ish */
-  text-shadow:
-    0 0 8px rgba(108, 112, 196, 0.7),
-    0 0 18px rgba(137, 180, 250, 0.6);
-}
-
-.home-hero__subtitle {
-  margin-top: 0.75rem;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
-  color: var(--secondary);
-  opacity: 0.85;
-}
-
-/* Class cards grid */
-
-.home-classes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem auto 4rem;
-  max-width: 60rem;
-}
-
-.home-class {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  padding: 1.1rem 1.2rem;
-  border-radius: 1rem;
-
-  background: rgba(30, 30, 46, 0.75); /* mocha base w/ some alpha */
-  border: 1px solid rgba(148, 226, 213, 0.18); /* teal-ish border */
-  text-decoration: none;
-  color: inherit;
-
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.25),
-    0 0 16px rgba(148, 226, 213, 0.12);
-
-  transition:
-    transform 0.18s ease,
-    box-shadow 0.18s ease,
-    border-color 0.18s ease,
-    background 0.18s ease;
 }
 
 article p,
@@ -107,43 +175,15 @@ article a.external,
   font-family: var(--bodyFont);
 }
 
-.page-introduction {
-  font-family: "Nunito", sans-serif;
-  text-align: justify;
-  text-align-last: center;
-  padding-left: 8rem;
-  padding-right: 8rem;
-}
-.home-class__tag {
-  font-family: "Nunito", monospace;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #94e2d5; /* teal */
-  text-align: center;
-  padding: 1rem;
+blockquote,
+blockquote p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88rem;
 }
 
-.home-classes__title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #f2cdcd; /* rosy */
-  text-align: center;
-  margin-top: 7rem;
-}
-
-.home-classes {
-  margin-bottom: 12rem;
-}
-
-/* Hover state */
-.home-class:hover {
-  transform: translateY(-4px);
-  background: rgba(30, 30, 46, 0.95);
-  border-color: #94e2d5;
-  box-shadow:
-    0 14px 26px rgba(0, 0, 0, 0.35),
-    0 0 22px rgba(148, 226, 213, 0.25);
+.handwritten {
+  font-family: "Corinthia";
+  font-size: 35px;
 }
 
 /* Hide the Quartz-rendered page title block */
@@ -288,4 +328,227 @@ html.remark-container .article-title {
       }
     }
   }
+}
+
+// ─── Theme toggle: fade out, hold, fade back in ────────────────────────────
+#quartz-root.theme-transitioning {
+  animation: themeTransition 1.6s ease-in-out forwards;
+}
+
+@keyframes themeTransition {
+  0%   { opacity: 1; }
+  10%  { opacity: 0; }
+  40%  { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+// ─── Dappled light: time-of-day colour stops ───────────────────────────────
+:root {
+  --day: #fffdfa;
+  --evening: #fccc83;
+  --dusk: #db7a2a;
+  --night: #0f131c;
+  --dawn: #16132b;
+  --morning: #9fb3bf;
+  --shadow: #1a1917;
+  --bounce-light: #fffffc;
+  --timing-fn: cubic-bezier(0.455, 0.19, 0, 0.985);
+}
+
+[saved-theme="dark"] {
+  --shadow: #030307;
+  --bounce-light: #1b293f;
+}
+
+#quartz-root {
+  position: relative;
+  z-index: 1;
+}
+
+#dappled-light {
+  pointer-events: none;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  animation-duration: 0s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+body.animation-ready #dappled-light {
+  animation-name: sunrise;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+
+[saved-theme="dark"] body.animation-ready #dappled-light {
+  animation-name: sunset;
+  animation-duration: 1.5s;
+}
+
+#dappled-light #glow {
+  background: linear-gradient(309deg, var(--bounce-light), var(--bounce-light) 20%, transparent);
+  transition: background 1s var(--timing-fn);
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#dappled-light #glow-bounce {
+  background: linear-gradient(355deg, var(--bounce-light) 0%, transparent 30%, transparent 100%);
+  transition: background 1s var(--timing-fn);
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#dappled-light > .perspective {
+  transition:
+    transform 1.7s var(--timing-fn),
+    opacity 4s ease;
+  opacity: 0.07;
+  background-blend-mode: darken;
+  transform-origin: 100% 0;
+  width: 80vw;
+  height: 130vh;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: -30vh;
+  right: 0;
+  transform: matrix3d(0.75, -0.0625, 0, 0.0008, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  filter: blur(6px);
+}
+
+[saved-theme="dark"] #dappled-light > .perspective {
+  opacity: 0.3;
+  transform: matrix3d(0.8333, 0.0833, 0, 0.0003, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+}
+
+#dappled-light #leaves {
+  perspective: 400px;
+  background-image: url(/static/leaves.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1600px;
+  height: 1400px;
+  animation: 8s ease-in-out infinite billow;
+  position: absolute;
+  bottom: 0;
+  right: -600px;
+}
+
+#dappled-light #blinds {
+  width: 100%;
+  position: relative;
+}
+
+#dappled-light #blinds .shutter,
+#dappled-light #blinds .bar {
+  background-color: var(--shadow);
+}
+
+#dappled-light #blinds .shutter {
+  width: 100%;
+  height: 40px;
+  transition: height 1s var(--timing-fn);
+}
+
+[saved-theme="dark"] #dappled-light #blinds .shutter {
+  height: 80px;
+}
+
+#dappled-light #blinds .shutters {
+  transition: gap 1s var(--timing-fn);
+  flex-direction: column;
+  align-items: end;
+  gap: 60px;
+  display: flex;
+}
+
+[saved-theme="dark"] #dappled-light #blinds .shutters {
+  gap: 20px;
+}
+
+#dappled-light #blinds > .vertical {
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+#dappled-light #blinds > .vertical > .bar {
+  width: 12px;
+  height: 100%;
+}
+
+#progressive-blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#progressive-blur > div {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount));
+  mask-image: linear-gradient(
+    252deg,
+    transparent,
+    transparent var(--stop1),
+    black var(--stop2),
+    black
+  );
+  -webkit-mask-image: linear-gradient(
+    252deg,
+    transparent,
+    transparent var(--stop1),
+    black var(--stop2),
+    black
+  );
+  position: absolute;
+}
+
+#progressive-blur > div:first-child {
+  --blur-amount: 20px;
+  --stop1: 0%;
+  --stop2: 0%;
+}
+
+#progressive-blur > div:nth-child(2) {
+  --blur-amount: 120px;
+  --stop1: 20%;
+  --stop2: 50%;
+}
+
+@keyframes sunrise {
+  0%   { background-color: var(--night); }
+  10%  { background-color: var(--dawn); }
+  35%  { background-color: var(--morning); }
+  100% { background-color: var(--day); }
+}
+
+@keyframes sunset {
+  0%   { background-color: var(--day); }
+  30%  { background-color: var(--evening); }
+  60%  { background-color: var(--dusk); }
+  90%  { background-color: var(--dawn); }
+  100% { background-color: var(--night); }
+}
+
+@keyframes billow {
+  0%   { transform: rotateX(0) rotateY(0) scale(1); }
+  18%  { transform: rotateX(1deg) rotateY(2deg) scale(1.03); }
+  32%  { transform: rotateX(-4deg) rotateY(-2deg) scale(0.96); }
+  66%  { transform: rotateX(3deg) rotateY(-1deg) scale(1.04); }
+  100% { transform: rotateX(0) rotateY(0) scale(1); }
 }

@@ -56,4 +56,4 @@ Core concepts: *voice, tone, register, rhetoric, ethos, pathos, logos, theme, me
 
 ---
 
-*← [[6l26en/lektioner/index|All lessons]]*
+*← [[../../../../semestre/s26/6l26en/lektioner/index|All lessons]]*

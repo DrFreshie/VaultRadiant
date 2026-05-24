@@ -6,6 +6,7 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
+    Component.DappledLightScript(),
   ],
   footer: Component.Footer({
   }),
@@ -14,13 +15,6 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    (ctx) => {
-      const fm = ctx.fileData.frontmatter
-      if (fm?.layout === "home") {
-        return Component.Logo()
-      }
-      return null
-    },
     Component.ArticleTitle(),
   ],
   left: [
@@ -37,12 +31,10 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
 
+        Component.HomeNav(),
         Component.Explorer({
-          title: ({ fileData }) => {
-            const parts = (fileData.slug ?? "").split("/")
-            const parent = parts.length >= 2 ? parts[parts.length - 2] : parts[0]
-            return parent.charAt(0).toUpperCase() + parent.slice(1)
-          },
+          title: "",
+          folderDefaultState: "open",
           sortFn: (a, b) => {
             if (a.isFolder && !b.isFolder) return -1
             if (!a.isFolder && b.isFolder) return 1
@@ -72,7 +64,15 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-
+    Component.Explorer({
+      title: "",
+      folderDefaultState: "open",
+      sortFn: (a, b) => {
+        if (a.isFolder && !b.isFolder) return -1
+        if (!a.isFolder && b.isFolder) return 1
+        return b.slugSegment.localeCompare(a.slugSegment, undefined, { numeric: true, sensitivity: "base" })
+      },
+    }),
   ],
   right: [],
 }

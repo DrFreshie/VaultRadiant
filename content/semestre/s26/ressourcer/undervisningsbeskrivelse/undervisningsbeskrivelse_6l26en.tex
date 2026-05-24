@@ -1,0 +1,242 @@
+%! TeX program = lualatex
+%
+% UNDERVISNINGSBESKRIVELSE — FRB branded template
+% Engelsk C — 6l26en
+%
+\documentclass[10pt,a4paper]{article}
+
+%% Core
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}
+
+%% Fonts
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+\newfontfamily\overp{Overpass}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+
+%% Colors
+\usepackage{xcolor}
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+
+%% Graphics
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+%% Tables & layout
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\renewcommand{\arraystretch}{1.4}
+
+\makeatletter
+
+%% ─── Header / Footer ─────────────────────────────────────────────────────────
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{%
+    \centerline{%
+      \begin{minipage}{1\textwidth}%
+        \color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt%
+        \vspace{4em}%
+      \end{minipage}%
+    }%
+  }%
+  \fancyhead[L]{\includegraphics[height=2.5em]{frbvuc_logo.png}}%
+  \fancyhead[R]{\overp\color{frbgreen}\footnotesize \the\year}%
+  \fancyhead[C]{%
+    \overp\color{frbblue}\normalsize \ub@hold\\%
+    \large\vestb\color{frbgreen} Undervisningsbeskrivelse%
+  }%
+  \cfoot{\thepage}%
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{%
+  \centerline{%
+    \begin{minipage}{\textwidth}%
+      \color{frbblue}\hrule width \hsize \kern 1mm%
+    \end{minipage}%
+  }%
+}
+\lhead{\overp\color{frbgreen}\footnotesize \ub@hold}
+\rhead{\overp\color{frbgreen}\footnotesize \the\year}
+\cfoot{\thepage}
+
+%% ─── Metadata (pgfkeys) ──────────────────────────────────────────────────────
+
+\pgfkeys{
+  /ub/fag/.store in         = \ub@fag,
+  /ub/niveau/.store in      = \ub@niveau,
+  /ub/institution/.store in = \ub@institution,
+  /ub/hold/.store in        = \ub@hold,
+  /ub/termin/.store in      = \ub@termin,
+  /ub/uddannelse/.store in  = \ub@uddannelse,
+  /ub/laerer/.store in      = \ub@laerer,
+  /ub/fag={}, /ub/niveau={}, /ub/institution={},
+  /ub/hold={}, /ub/termin={}, /ub/uddannelse={}, /ub/laerer={}
+}
+\newcommand{\ubmeta}[1]{\pgfkeys{/ub/.cd, #1}}
+
+%% ─── Course info table ───────────────────────────────────────────────────────
+
+\newcommand{\infotabel}{%
+  {\large\bfseries\overp\color{frbgreen}%
+    Undervisningsbeskrivelse for: \ub@hold\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Fag:         & \ub@fag         \\\hline
+    Niveau:      & \ub@niveau      \\\hline
+    Institution: & \ub@institution \\\hline
+    Hold:        & \ub@hold        \\\hline
+    Termin:      & \ub@termin      \\\hline
+    Uddannelse:  & \ub@uddannelse  \\\hline
+    Lærer(e):    & \ub@laerer      \\\hline
+  \end{tabularx}%
+}
+
+%% ─── Overview table ──────────────────────────────────────────────────────────
+
+\newcommand{\ub@forlrows}{}
+\newcommand{\ub@forlrow}[3]{\gappto\ub@forlrows{#1 & #2 & #3 \\\hline}}
+
+\gdef\ubfinalcnt{?}
+\AtEndDocument{%
+  \immediate\write\@auxout{\string\gdef\string\ubfinalcnt{\theubcnt}}%
+}
+
+\newcommand{\forloebsoversigt}{%
+  \vspace{1.5em}%
+  {\large\bfseries\overp\color{frbgreen}Forløbsoversigt (\ubfinalcnt):\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|l|X|}
+    \hline
+    \ub@forlrows
+  \end{tabularx}%
+}
+
+%% ─── Forløb environment ──────────────────────────────────────────────────────
+
+\newcounter{ubcnt}
+
+\newenvironment{forloeb}[3]{% {titel}{dato}{omfang}
+  \stepcounter{ubcnt}%
+  \gdef\ub@cur@titel{#1}%
+  \gdef\ub@cur@dato{#2}%
+  \gdef\ub@cur@omfang{#3}%
+  \gdef\ub@cur@ind{}%
+  \gdef\ub@cur@arb{}%
+  \gdef\ub@cur@fok{}%
+  \immediate\write\@auxout{\string\ub@forlrow{\theubcnt}{#2}{#1}}%
+}{%
+  \vspace{1em}%
+  {\large\bfseries\overp\color{frbgreen}%
+    Forløb \theubcnt: \ub@cur@titel\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Omfang: & \ub@cur@omfang\ lektioner \\\hline
+    Start:  & \ub@cur@dato \\\hline
+    Indhold: & {\setlength{\parskip}{0pt}\ub@cur@ind} \\\hline
+    Arbejdsformer: & \ub@cur@arb \\\hline
+    Fokuspunkter:  & \ub@cur@fok \\\hline
+  \end{tabularx}%
+}
+
+%% Bullet-item accumulators used inside {forloeb}
+\newcommand{\bog}[1]{%
+  \ifdefempty{\ub@cur@ind}%
+    {\gappto\ub@cur@ind{\textit{#1}\par}}%
+    {\gappto\ub@cur@ind{\vspace{0.5em}\textit{#1}\par}}%
+}
+\newcommand{\kap}[1]{\gappto\ub@cur@ind{\quad\textbullet\ #1\par}}
+\newcommand{\arb}[1]{\gappto\ub@cur@arb{\textbullet\ #1\newline}}
+\newcommand{\fok}[1]{\gappto\ub@cur@fok{\textbullet\ #1\newline}}
+
+\makeatother
+
+%% ─── Kursusoplysninger ───────────────────────────────────────────────────────
+
+\ubmeta{%
+  fag         = {Engelsk C, HFE},
+  niveau      = C,
+  institution = {Frederiksberg VUC \& STX (147248)},
+  hold        = {6l26en},
+  termin      = {Juni 2026},
+  uddannelse  = {},
+  laerer      = {Anders Ravnholt Thaysen (ART)}
+}
+
+%% ─── Document ────────────────────────────────────────────────────────────────
+
+\begin{document}
+\thispagestyle{plain}
+
+\infotabel
+
+\forloebsoversigt
+
+\newpage
+
+%% ─── Forløb ──────────────────────────────────────────────────────────────────
+
+\begin{forloeb}{Voice}{16.01.26}{8}
+  \bog{Engage! (2022)}
+  \kap{Stephen Fry: \textit{Have You Heard of Oscar Wilde?} --- non-fiction essay}
+  \kap{Gregory Maguire: \textit{How th'Irth Wint Rong by Hapless Joey@Homeskool.guv} --- short story}
+  \kap{Katherine Mansfield: \textit{The Doll's House} --- short story}
+  \kap{Jacinda Ardern: \textit{Address to the UN General Assembly} (2019) --- speech}
+  \arb{Aktiv lytning og gruppediskussion}
+  \arb{Creative writing - short stories and speeches}
+  \fok{Voice, tone og register}
+  \fok{Tema og budskab (fiction/non-fiction)}
+  \fok{Den retoriske situation}
+  \fok{Grammatik: Verber (tider, regelmæssige)}
+\end{forloeb}
+
+\begin{forloeb}{Belonging}{24.02.26}{8}
+  \bog{Engage! (2022)}
+  \kap{Hanif Kureishi: \textit{The Decline of the West} --- short story}
+  \kap{Rachel Cusk: \textit{After Caravaggio's Sacrifice of Isaac} --- short story}
+  \kap{Carys Bray: \textit{Dancing in the Kitchen} --- short story}
+  \kap{Brian Patten: \textit{Out of Control} --- poem}
+  \kap{Zadie Smith: \textit{Two Men Arrive in a Village} --- short story}
+  \bog{\emph{Brian Reed}, S-Town (2017)}
+  \kap{Episode 1 --- podcast}
+  \arb{Nærlæsning}
+  \arb{Højtlæsning (role-reading)}
+  \fok{Characterisation}
+  \fok{Setting}
+  \fok{Bloom's taxonomy}
+  \fok{Tilhørsforhold og identitet}
+  \fok{Grammatik: Verber (modal, do-omskrivning, omvendt ordstilling)}
+\end{forloeb}
+
+\begin{forloeb}{Borders}{07.04.26}{8}
+  \bog{Engage! (2022)}
+  \kap{Susan V.\ Meyers: \textit{Visits to the Border} --- non-fiction artikel}
+  \kap{Robert Frost: \textit{Mending Wall} --- digt}
+  \kap{Riz Ahmed: \textit{Airports and Auditions} --- longform non-fiction}
+  \bog{Selvvalgt roman eller podcast --- \emph{sekundær litteratur}}
+  \arb{Udvidet læsning (selvvalgt roman)}
+  \arb{Podcastproduktion}
+  \arb{Creative writing (Twine)}
+  \fok{Grænser: metaforisk og konkret}
+  \fok{Longform artikel og narrativ non-fiction}
+  \fok{Migration og identitet}
+  \fok{Grammatik: Præpositioner og pronominer}
+\end{forloeb}
+
+\end{document}

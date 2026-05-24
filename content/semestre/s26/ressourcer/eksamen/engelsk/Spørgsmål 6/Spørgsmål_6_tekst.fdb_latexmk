@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1778230585.6556 "Spørgsmål_6_tekst.tex" "Spørgsmål_6_tekst.pdf" "Spørgsmål_6_tekst" 1778230589.9182 0
+["lualatex"] 1779263441.53775 "Spørgsmål_6_tekst.tex" "Spørgsmål_6_tekst.pdf" "Spørgsmål_6_tekst" 1779263443.60106 0
   "/Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf" 1727709108 814012 96f8070768e84367bca5f780ebaf4db8 ""
   "/Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf" 1727709108 936656 40d46b48de5e2877f7933ee32493ba8d ""
   "/Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF" 1644030048 86952 fec8248ee5dcb2b1c49f628d71b86a35 ""
@@ -26,7 +26,7 @@
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/walbaumcom-roman.luc" 1771195008.07475 48500 123c1b4e60f1e595dcffa839139e57a0 ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramonditalicvariablefontwghtttf-1.luc" 1771165712.61863 674993 308405e4d62f709b310687ac6bc0089e ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc" 1771165712.85199 698115 67298566f854f1044188d3789a433071 ""
-  "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1778230584.54525 14023 88863837b6915982ae939d3992ab78dd ""
+  "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1779103949.78036 14475 b101c65f422a505f0e577a46d7cfc628 ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1772102812.75784 136901 b6af7d91e54ac34478e102529dd069a4 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf" 1255129361 94256 a52a5407fe2a4281f96a01e9736568c3 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm" 1254269338 12056 7e13df7fe4cbce21b072ba7c4f4deb6e ""
@@ -252,9 +252,9 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1772102680 134574 d52c003edc7102800e5ea661673cf4ba ""
   "/usr/local/texlive/2025basic/texmf-var/tex/generic/config/language.dat" 1771196379.62223 3786 cd38354308350164d4a1fd7b74f29cdc ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1771196452 5657771 f48defe9ade43e07e924caaf90f0acba ""
-  "Spørgsmål_6_tekst.aux" 1778230589.6561 374 9203ca4572282830ef500a3e5d75dfee "lualatex"
-  "Spørgsmål_6_tekst.out" 1778230589.39906 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "Spørgsmål_6_tekst.tex" 1778230178.71719 13029 25a9c5c7fd7ddee6b684d038efe1439e ""
+  "Spørgsmål_6_tekst.aux" 1779263443.39877 362 3156066b36ac6780c3dbcf09e64267f0 "lualatex"
+  "Spørgsmål_6_tekst.out" 1779263443.23307 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "Spørgsmål_6_tekst.tex" 1779263439.2292 12027 1267d3d2957ec13b7a0d0d73d6611cd2 ""
   (generated)
   "Spørgsmål_6_tekst.aux"
   "Spørgsmål_6_tekst.log"

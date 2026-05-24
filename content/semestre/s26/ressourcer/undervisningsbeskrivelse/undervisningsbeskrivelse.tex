@@ -1,0 +1,272 @@
+%! TeX program = lualatex
+%
+% UNDERVISNINGSBESKRIVELSE — FRB branded template
+%
+% Compile TWICE with lualatex:
+%   lualatex template-undervisningsbeskrivelse.tex   (1st pass: overview blank)
+%   lualatex template-undervisningsbeskrivelse.tex   (2nd pass: overview filled)
+%
+% API:
+%   \ubmeta{%           <-- the % after { is required
+%     fag=..., niveau=..., institution=..., hold=...,
+%     termin=..., uddannelse=..., laerer=... }
+%
+%   \begin{forloeb}{Titel}{dd.mm.yy}{N lektioner}{Bognavn}
+%     \kap{kapitel X}          % bogkapitler (gentag for hvert)
+%     \arb{Arbejdsform}        % arbejdsformer (gentag for hvert)
+%     \fok{Fokuspunkt}         % fokuspunkter (gentag for hvert)
+%   \end{forloeb}
+%
+%   \infotabel          — kursusinfo-tabel (side 1)
+%   \forloebsoversigt   — nummereret oversigt (side 1, korrekt fra 2. kompilering)
+
+\documentclass[10pt,a4paper]{article}
+
+%% Core
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}
+
+%% Fonts
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+\newfontfamily\overp{Overpass}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+
+%% Colors
+\usepackage{xcolor}
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+
+%% Graphics
+\usepackage{graphicx}
+\graphicspath{{../img/}}   %% adjust relative to your document location
+\usepackage{tikz}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+%% Tables & layout
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\renewcommand{\arraystretch}{1.4}
+
+\makeatletter
+
+%% ─── Header / Footer ─────────────────────────────────────────────────────────
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{%
+    \centerline{%
+      \begin{minipage}{1\textwidth}%
+        \color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt%
+        \vspace{4em}%
+      \end{minipage}%
+    }%
+  }%
+  \fancyhead[L]{\includegraphics[height=2.5em]{frbvuc_logo.png}}%
+  \fancyhead[R]{\overp\color{frbgreen}\footnotesize \the\year}%
+  \fancyhead[C]{%
+    \overp\color{frbblue}\normalsize \ub@hold\\%
+    \large\vestb\color{frbgreen} Undervisningsbeskrivelse%
+  }%
+  \cfoot{\thepage}%
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{%
+  \centerline{%
+    \begin{minipage}{\textwidth}%
+      \color{frbblue}\hrule width \hsize \kern 1mm%
+    \end{minipage}%
+  }%
+}
+\lhead{\overp\color{frbgreen}\footnotesize \ub@hold}
+\rhead{\overp\color{frbgreen}\footnotesize \the\year}
+\cfoot{\thepage}
+
+%% ─── Metadata (pgfkeys) ──────────────────────────────────────────────────────
+
+\pgfkeys{
+  /ub/fag/.store in         = \ub@fag,
+  /ub/niveau/.store in      = \ub@niveau,
+  /ub/institution/.store in = \ub@institution,
+  /ub/hold/.store in        = \ub@hold,
+  /ub/termin/.store in      = \ub@termin,
+  /ub/uddannelse/.store in  = \ub@uddannelse,
+  /ub/laerer/.store in      = \ub@laerer,
+  /ub/fag={}, /ub/niveau={}, /ub/institution={},
+  /ub/hold={}, /ub/termin={}, /ub/uddannelse={}, /ub/laerer={}
+}
+\newcommand{\ubmeta}[1]{\pgfkeys{/ub/.cd, #1}}
+
+%% ─── Course info table ───────────────────────────────────────────────────────
+
+\newcommand{\infotabel}{%
+  {\large\bfseries\overp\color{frbgreen}%
+    Undervisningsbeskrivelse for: \ub@hold\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Fag:         & \ub@fag         \\\hline
+    Niveau:      & \ub@niveau      \\\hline
+    Institution: & \ub@institution \\\hline
+    Hold:        & \ub@hold        \\\hline
+    Termin:      & \ub@termin      \\\hline
+    Uddannelse:  & \ub@uddannelse  \\\hline
+    Lærer(e):    & \ub@laerer      \\\hline
+  \end{tabularx}%
+}
+
+%% ─── Overview table ──────────────────────────────────────────────────────────
+%%
+%% Rows are written to .aux on each compile and read back on the next.
+%% The count (\ubfinalcnt) works the same way.
+%% Result: correct overview from the 2nd lualatex run onward.
+
+\newcommand{\ub@forlrows}{}
+\newcommand{\ub@forlrow}[3]{\gappto\ub@forlrows{#1 & #2 & #3 \\\hline}}
+
+\gdef\ubfinalcnt{?}
+\AtEndDocument{%
+  \immediate\write\@auxout{\string\gdef\string\ubfinalcnt{\theubcnt}}%
+}
+
+\newcommand{\forloebsoversigt}{%
+  \vspace{1.5em}%
+  {\large\bfseries\overp\color{frbgreen}Forløbsoversigt (\ubfinalcnt):\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|l|X|}
+    \hline
+    \ub@forlrows
+  \end{tabularx}%
+}
+
+%% ─── Forløb environment ──────────────────────────────────────────────────────
+
+\newcounter{ubcnt}
+
+\newenvironment{forloeb}[4]{% {titel}{dato}{omfang}{bog}
+  %% begin: reset accumulators, step counter, register for overview
+  \stepcounter{ubcnt}%
+  \gdef\ub@cur@titel{#1}%
+  \gdef\ub@cur@dato{#2}%
+  \gdef\ub@cur@omfang{#3}%
+  \gdef\ub@cur@bog{#4}%
+  \gdef\ub@cur@kap{}%
+  \gdef\ub@cur@arb{}%
+  \gdef\ub@cur@fok{}%
+  \immediate\write\@auxout{\string\ub@forlrow{\theubcnt}{#2}{#1}}%
+}{%
+  %% end: render the detail table
+  \vspace{1em}%
+  {\large\bfseries\overp\color{frbgreen}%
+    Forløb \theubcnt: \ub@cur@titel\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Omfang: & \ub@cur@omfang\ lektioner \\\hline
+    Start:  & \ub@cur@dato \\\hline
+    Indhold: &
+      \ifdefempty{\ub@cur@bog}{}{%
+        \textit{\ub@cur@bog}%
+        \ifdefempty{\ub@cur@kap}{}{\newline\newline}%
+      }%
+      \ub@cur@kap
+      \\\hline
+    Arbejdsformer: & \ub@cur@arb \\\hline
+    Fokuspunkter:  & \ub@cur@fok \\\hline
+  \end{tabularx}%
+}
+
+%% Bullet-item accumulators used inside {forloeb}
+\newcommand{\kap}[1]{\gappto\ub@cur@kap{\textbullet\ #1\newline}}
+\newcommand{\arb}[1]{\gappto\ub@cur@arb{\textbullet\ #1\newline}}
+\newcommand{\fok}[1]{\gappto\ub@cur@fok{\textbullet\ #1\newline}}
+
+\makeatother
+
+%% ─── Kursusoplysninger ───────────────────────────────────────────────────────
+
+\ubmeta{%
+  fag         = {Matematik C -> B, 2HF},
+  niveau      = B,
+  institution = {Frederiksberg VUC \& STX (147248)},
+  hold        = {Matematik C-B},
+  termin      = {Juni 2026},
+  uddannelse  = {},
+  laerer      = {Anders Ravnholt Thaysen (ART)}
+}
+
+%% ─── Document ────────────────────────────────────────────────────────────────
+
+\begin{document}
+\thispagestyle{plain}
+
+\infotabel
+
+\forloebsoversigt
+
+\newpage
+
+%% ─── Forløb ──────────────────────────────────────────────────────────────────
+
+\begin{forloeb}{Funktioner}{15.01.26}{9}{plus B hf (Læreplan 2024)}
+  \kap{kapitel 1}
+  \kap{kapitel 2}
+  \arb{Opgaveregning, individuelt og i par}
+  \arb{Projektarbejde i grupper}
+  \fok{Andengradspolynomiet}
+  \fok{Andengradsligninger}
+  \fok{Kvadratsætninger}
+\end{forloeb}
+
+\begin{forloeb}{Geometri}{04.02.26}{8}{plus B hf (Læreplan 2024)}
+  \kap{kapitel 3}
+  \arb{Opgaveregning, individuelt og i par}
+  \arb{Projektarbejde i grupper}
+  \fok{Linjens ligning}
+  \fok{Cirklens ligning}
+  \fok{Afstande i koordinatsystemet}
+\end{forloeb}
+
+\begin{forloeb}{Differentialregning}{02.03.26}{12}{plus B hf (Læreplan 2024)}
+  \kap{kapitel 4}
+  \kap{kapitel 5}
+  \kap{kapitel 6}
+  \arb{Opgaveregning, individuelt og i par}
+  \arb{Projektarbejde i grupper}
+  \fok{Stykkevis lineære funktioner}
+  \fok{Logaritmer}
+  \fok{Differentialkvotient}
+  \fok{Monotoniforhold}
+  \fok{Optimering}
+  \fok{Modellering}
+  \fok{Regneregler}
+\end{forloeb}
+
+\begin{forloeb}{Sandsynlighedsregning}{08.04.26}{4}{plus B hf (Læreplan 2024)}
+  \kap{kapitel 7}
+  \arb{Opgaveregning, individuelt og i par}
+  \arb{Projektarbejde i grupper}
+  \fok{Kombinatorik}
+  \fok{Stokastiske variable}
+  \fok{Middelværdi, varians og spredning}
+  \fok{Binomialfordelingen}
+  \fok{Hypotesetest}
+\end{forloeb}
+
+\begin{forloeb}{Repetition}{29.04.26}{5}{}
+  \arb{Opgaveregningg, individuelt og i par}
+  \arb{Projektarbejde i grupper}
+  \fok{Geometrisk algebra}
+  \fok{Bevisførelse}
+\end{forloeb}
+
+\end{document}

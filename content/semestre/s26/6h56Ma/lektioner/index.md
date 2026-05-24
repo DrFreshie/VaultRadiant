@@ -1,5 +1,5 @@
 ---
-title: "6h56Ma — Matematik"
+title: "Lektioner"
 type: classpage
 ---
 
@@ -14,4 +14,4 @@ type: classpage
 
 ## Reference
 
-- [[6h56Ma/noter/Undervisningsbeskrivelse|Undervisningsbeskrivelse]]
+- [[../../../../semestre/s26/6h56Ma/noter/Undervisningsbeskrivelse|Undervisningsbeskrivelse]]

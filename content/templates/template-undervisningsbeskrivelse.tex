@@ -1,0 +1,206 @@
+%! TeX program = lualatex
+%
+% UNDERVISNINGSBESKRIVELSE — FRB branded template
+%
+% Compile TWICE with lualatex:
+%   lualatex <filename>.tex   (1st pass: overview blank)
+%   lualatex <filename>.tex   (2nd pass: overview filled)
+%
+% API:
+%   Sæt kursusoplysninger med \renewcommand nær bunden af preamble.
+%
+%   \begin{forloeb}{Titel}{dd.mm.yy}{N}{Bognavn}
+%     \kap{kapitel X}      % bogkapitler (gentag for hvert)
+%     \arb{Arbejdsform}    % arbejdsformer (gentag for hvert)
+%     \fok{Fokuspunkt}     % fokuspunkter (gentag for hvert)
+%   \end{forloeb}
+%
+%   \infotabel          — kursusinfo-tabel (side 1)
+%   \forloebsoversigt   — nummereret oversigt (korrekt fra 2. kompilering)
+
+\documentclass[10pt,a4paper]{article}
+
+%% ─── Packages ────────────────────────────────────────────────────────────────
+
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{tabularx}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+%% Fonts
+\setmainfont{EB Garamond}
+\newfontfamily\overp{Overpass}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+
+%% Colors
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+
+\graphicspath{{../img/}}   %% adjust relative to your document location
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\renewcommand{\arraystretch}{1.4}
+
+%% ─── Metadata fields (defined early so header can reference them) ─────────────
+
+\newcommand{\ubFag}{}
+\newcommand{\ubNiveau}{}
+\newcommand{\ubInstitution}{}
+\newcommand{\ubHold}{}
+\newcommand{\ubTermin}{}
+\newcommand{\ubUddannelse}{}
+\newcommand{\ubLaerer}{}
+
+%% ─── Header / Footer ─────────────────────────────────────────────────────────
+
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{%
+    \centerline{%
+      \begin{minipage}{1\textwidth}%
+        \color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt%
+        \vspace{4em}%
+      \end{minipage}%
+    }%
+  }%
+  \fancyhead[L]{\includegraphics[height=2.5em]{frbvuc_logo.png}}%
+  \fancyhead[R]{\overp\color{frbgreen}\footnotesize \the\year}%
+  \fancyhead[C]{%
+    \overp\color{frbblue}\normalsize \ubHold\\%
+    \large\vestb\color{frbgreen} Undervisningsbeskrivelse%
+  }%
+  \cfoot{\thepage}%
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{%
+  \centerline{%
+    \begin{minipage}{\textwidth}%
+      \color{frbblue}\hrule width \hsize \kern 1mm%
+    \end{minipage}%
+  }%
+}
+\lhead{\overp\color{frbgreen}\footnotesize \ubHold}
+\rhead{\overp\color{frbgreen}\footnotesize \the\year}
+\cfoot{\thepage}
+
+%% ─── Aux helpers ─────────────────────────────────────────────────────────────
+
+\makeatletter
+\newcommand{\ubwriterow}[3]{\immediate\write\@auxout{\string\ubForlRow{#1}{#2}{#3}}}
+\AtEndDocument{\immediate\write\@auxout{\string\gdef\string\ubFinalCnt{\theubcnt}}}
+\makeatother
+
+%% ─── Course info table ───────────────────────────────────────────────────────
+
+\newcommand{\infotabel}{%
+  {\large\bfseries\overp\color{frbgreen}%
+    Undervisningsbeskrivelse for: \ubHold\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Fag:         & \ubFag         \\\hline
+    Niveau:      & \ubNiveau      \\\hline
+    Institution: & \ubInstitution \\\hline
+    Hold:        & \ubHold        \\\hline
+    Termin:      & \ubTermin      \\\hline
+    Uddannelse:  & \ubUddannelse  \\\hline
+    Lærer(e):    & \ubLaerer      \\\hline
+  \end{tabularx}%
+}
+
+%% ─── Overview table (two-pass via .aux) ──────────────────────────────────────
+
+\newcommand{\ubForlRows}{}
+\newcommand{\ubForlRow}[3]{\gappto\ubForlRows{#1 & #2 & #3 \\\hline}}
+\gdef\ubFinalCnt{?}
+
+\newcommand{\forloebsoversigt}{%
+  \vspace{1.5em}%
+  {\large\bfseries\overp\color{frbgreen}Forløbsoversigt (\ubFinalCnt):\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|l|X|}
+    \hline
+    \ubForlRows
+  \end{tabularx}%
+}
+
+%% ─── Forløb environment ──────────────────────────────────────────────────────
+
+\newcounter{ubcnt}
+\gdef\ubCurTitel{}\gdef\ubCurDato{}\gdef\ubCurOmfang{}
+\gdef\ubCurBog{}\gdef\ubCurKap{}\gdef\ubCurArb{}\gdef\ubCurFok{}
+
+\newenvironment{forloeb}[4]{% {titel}{dato}{omfang}{bog}
+  \stepcounter{ubcnt}%
+  \gdef\ubCurTitel{#1}\gdef\ubCurDato{#2}%
+  \gdef\ubCurOmfang{#3}\gdef\ubCurBog{#4}%
+  \gdef\ubCurKap{}\gdef\ubCurArb{}\gdef\ubCurFok{}%
+  \ubwriterow{\theubcnt}{#2}{#1}%
+}{%
+  \vspace{1em}%
+  {\large\bfseries\overp\color{frbgreen}%
+    Forløb \theubcnt: \ubCurTitel\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Omfang: & \ubCurOmfang\ lektioner \\\hline
+    Start:  & \ubCurDato \\\hline
+    Indhold: &
+      \ifdefempty{\ubCurBog}{}{%
+        \textit{\ubCurBog}%
+        \ifdefempty{\ubCurKap}{}{\newline\newline}%
+      }%
+      \ubCurKap
+      \\\hline
+    Arbejdsformer: & \ubCurArb \\\hline
+    Fokuspunkter:  & \ubCurFok \\\hline
+  \end{tabularx}%
+}
+
+\newcommand{\kap}[1]{\gappto\ubCurKap{\textbullet\ #1\newline}}
+\newcommand{\arb}[1]{\gappto\ubCurArb{\textbullet\ #1\newline}}
+\newcommand{\fok}[1]{\gappto\ubCurFok{\textbullet\ #1\newline}}
+
+%% ─── Kursusoplysninger ───────────────────────────────────────────────────────
+
+\renewcommand{\ubFag}{}
+\renewcommand{\ubNiveau}{}
+\renewcommand{\ubInstitution}{Frederiksberg VUC \& STX (147248)}
+\renewcommand{\ubHold}{}
+\renewcommand{\ubTermin}{}
+\renewcommand{\ubUddannelse}{}
+\renewcommand{\ubLaerer}{}
+
+%% ─── Document ────────────────────────────────────────────────────────────────
+
+\begin{document}
+\thispagestyle{plain}
+
+\infotabel
+
+\forloebsoversigt
+
+\newpage
+
+%% ─── Forløb ──────────────────────────────────────────────────────────────────
+
+\begin{forloeb}{Titel}{dd.mm.yy}{N}{Bognavn}
+  \kap{kapitel X}
+  \arb{Arbejdsform}
+  \fok{Fokuspunkt}
+\end{forloeb}
+
+\end{document}

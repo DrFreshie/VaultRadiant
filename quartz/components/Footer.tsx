@@ -19,19 +19,32 @@ export default ((opts?: Options) => {
 
     return (
       <footer class={displayClass ?? ""}>
-
-      <ul class={classNames(displayClass, "tags")}>
-        {tags.map((tag) => {
-          const linkDest = resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)
-          return (
-            <li>
-              <a href={linkDest} class="internal tag-link">
-                {tag}
-              </a>
-            </li>
-          )
-        })}
-      </ul>
+        <hr />
+        <ul class={classNames(displayClass, "tags")}>
+          {tags.map((tag) => {
+            const linkDest = resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)
+            return (
+              <li>
+                <a href={linkDest} class="internal tag-link">
+                  {tag}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+        <p>
+          {i18n(cfg.locale).components.footer.createdWith}{" "}
+          <a href="https://quartz.jzhao.xyz/">Quartz v{version}</a> © {year}
+        </p>
+        {Object.keys(links).length > 0 && (
+          <ul>
+            {Object.entries(links).map(([text, link]) => (
+              <li>
+                <a href={link}>{text}</a>
+              </li>
+            ))}
+          </ul>
+        )}
       </footer>
     )
   }

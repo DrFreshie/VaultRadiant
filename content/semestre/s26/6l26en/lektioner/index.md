@@ -1,5 +1,5 @@
 ---
-title: "6l26en — English"
+title: "Lektioner"
 type: classpage
 ---
 

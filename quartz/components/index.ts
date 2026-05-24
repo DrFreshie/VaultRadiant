@@ -27,13 +27,19 @@ import LessonLayout from "./LessonLayout"
 import ConditionalContent from "./ConditionalContent.tsx"
 import Lavat from "./Lavat.tsx"
 import Logo from "./Logo.tsx"
+import HomeNav from "./HomeNav.tsx"
 import Slide from "./Slide"
+import DappledLight from "./DappledLight"
+import DappledLightScript from "./DappledLightScript"
 export {
+  DappledLight,
+  DappledLightScript,
   LessonLayout,
   ConditionalContent,
   ArticleTitle,
   Lavat,
   Logo,
+  HomeNav,
   Content,
   TagContent,
   FolderContent,

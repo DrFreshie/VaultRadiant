@@ -48,4 +48,4 @@ Core concepts: *border, boundary, migration, exile, liminality, hybridity, fluid
 
 ---
 
-*← [[6l26en/lektioner/index|All lessons]]*
+*← [[../../../../semestre/s26/6l26en/lektioner/index|All lessons]]*

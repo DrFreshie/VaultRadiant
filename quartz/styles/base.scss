@@ -345,21 +345,6 @@ blockquote {
   transition: border-color 0.2s ease;
 }
 
-h1 {
-  text-align: center !important;
-  font-size: 4rem !important;
-  font-family: "Vollkorn" !important;
-  font-weight: 600;
-}
-
-html[saved-theme="light"] h1 {
-  color: #8839ef;
-}
-
-html[saved-theme="dark"] h1 {
-  color: #CBA9F7;
-}
-
 h2,
 h3,
 h4,

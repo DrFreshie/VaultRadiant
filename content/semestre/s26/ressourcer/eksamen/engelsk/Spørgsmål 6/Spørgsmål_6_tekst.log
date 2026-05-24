@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  8 MAY 2026 10:56
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  20 MAY 2026 09:50
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Spørgsmål_6_tekst.tex
@@ -1246,7 +1246,7 @@ LaTeX Font Warning: Font shape `TU/PlantinMTProBoldCondensed(0)/m/it' undefined
 
 [1
 
-{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./Spørgsmål_6_tekst.aux)
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./Spørgsmål_6_tekst.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1260,19 +1260,19 @@ Package rerunfilecheck Info: File `Spørgsmål_6_tekst.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33318 strings out of 476076
+ 33316 strings out of 476076
  125129,1373583 words of node,token memory allocated
  751 words of node memory still in use:
    7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 20 attribute, 84 glue_spec, 11 attribute_list, 3 write nodes
-   avail lists: 2:883,3:298,4:258,5:1055,6:61,7:11961,8:2,9:496,10:12,11:825
- 55008 multiletter control sequences out of 65536+600000
+   avail lists: 2:845,3:300,4:264,5:1024,6:45,7:11992,8:2,9:482,10:12,11:837
+ 55007 multiletter control sequences out of 65536+600000
  76 fonts using 13251839 bytes
- 84i,6n,115p,883b,977s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,5n,115p,883b,977s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on Spørgsmål_6_tekst.pdf (4 pages, 68035 bytes).
+Output written on Spørgsmål_6_tekst.pdf (3 pages, 66307 bytes).
 
-PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 131072)
+PDF statistics: 52 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
