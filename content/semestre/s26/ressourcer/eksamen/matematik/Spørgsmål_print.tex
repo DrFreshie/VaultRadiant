@@ -1,0 +1,164 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+\newfontfamily\wal{Walbaum Com}
+\newfontfamily\klav{Klavika}
+\newfontfamily\klavl{Klavika light}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{frbred}{RGB}{159, 37, 37}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[h]{esvect}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+\newcommand{\qm}[1]{``#1''}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title styling
+
+\pretitle{\begin{center}\vestb\Huge\color{frbgreen}}
+\posttitle{\end{center}}
+\preauthor{\begin{center}\vest\Large\color{frbblue}}
+\postauthor{\end{center}}
+\predate{\begin{center}\vest\large\color{frbblue}}
+\postdate{\end{center}}
+\setlength{\droptitle}{-12ex}
+
+\titleformat{\subsection}{\color{frbgreen}\overp\large}{}{}{}
+
+\newcommand{\questionpage}[3]{%
+  \title{Eksamen 6h56 Ma}
+  \author{Spørgsmål #1}
+  \date{Forår, 2026}
+  \maketitle
+
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-15pt,xshift=-45pt]
+      at (current page.north east)
+      {\includegraphics[scale=0.1]{frbvuc_logo.png}};
+  \end{tikzpicture}
+
+  \thispagestyle{empty}
+  \vspace{-4em}
+
+  \begin{center}
+    {\color{frbblue}\rule{\textwidth}{1pt}}
+  \end{center}
+
+  \subsection*{#2}
+  #3
+  \clearpage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+
+\questionpage{1}{Andengradspolynomier}{%
+Gør, for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlen til udregning af polynomiets rødder:
+$$x=\frac{-b\pm \sqrt{b^2-4ac}}{2a},$$
+og forklar hvordan grafen for andengradspolynomiet afhænger af $a$ og diskriminanten $d$.
+}
+
+\questionpage{2}{Andengradspolynomier}{%
+Gør, for et andengradspolynomium $f(x)=ax^2+bx+c$, rede for formlen til udregning af polynomiets toppunkt:
+$$T=\left(\frac{-b}{2a},\frac{-d}{4a}\right),$$
+og forklar hvordan grafen for andengradspolynomiet afhænger af $a$, $b$, og $c$.
+}
+
+\questionpage{3}{Geometri}{%
+Gør, for to ortogonale linjer $y=ax+b$ og $y=cx+d$, rede for formlen for produktet af deres hældninger:
+$$a\cdot c=-1,$$
+og forklar med et eksempel, hvordan man kan finde et skæringspunkt mellem to linjer.
+}
+
+\questionpage{4}{Geometri}{%
+Gør for to punkter i et koordinatsystem, rede for formlen for afstanden mellem dem:
+$$|AB| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.$$
+Gør desuden, for en cirkel i et koordinatsystem med centrum i $C(a,b)$ og radius $r$, rede for cirklens ligning
+$$(x-a)^2+(y-b)^2=r^2,$$
+og forklar, hvordan man kan finde en ligning for tangenten til en cirkel.
+}
+
+\questionpage{5}{Funktioner}{%
+Gør rede for definitionen af logaritmefunktionerne $\log(x)$ og $\ln(x)$, og udled logaritmeregnereglen:
+$$\log(ab)=\log(a)+\log(b).$$
+Forklar desuden funktionernes definitions- og værdimængde, samt hvordan man kan udregne en funktions monotoniforhold.
+}
+
+\questionpage{6}{Funktioner}{%
+Gør rede for definitionen af logaritmefunktionerne $\log(x)$ og $\ln(x)$, og udled logaritmeregnereglen:
+$$\log(a^x)=x\cdot \log(a).$$
+Forklar desuden funktionernes definitions- og værdimængde, samt hvordan man kan udregne en funktions monotoniforhold.
+}
+
+\questionpage{7}{Differentialregning}{%
+Gør, for to funktioner $f(x)$ og $g(x)$, rede for formlen for den afledte af deres sum:
+$$\left(f(x)+g(x)\right)'=f'(x)+g'(x),$$
+og forklar hvordan man kan differentiere deres produkt.
+}
+
+\questionpage{8}{Differentialregning}{%
+Gør, for funktionen $f(x)=x^2$, rede for formlen for dennes afledte:
+$$f'(x)=2x,$$
+og forklar hvordan man ved hjælp af differentialregning kan udregne en funktions monotoniforhold.
+}
+
+\questionpage{9}{Differentialregning}{%
+Gør, for funktionen $f(x)=\sqrt{x}$, rede for formlen for dennes afledte:
+$$f'(x)=\frac{1}{2\sqrt{x}},$$
+og forklar hvad en sammensat funktion er, og hvordan man kan differentiere en sådan.
+}
+
+\questionpage{10}{Differentialregning}{%
+Gør, for funktionen $f(x)=\frac{1}{x}$, rede for formlen for dennes afledte:
+$$f'(x)=-\frac{1}{x^2},$$
+og forklar hvordan differentialregning kan bruges til løse et optimeringsproblem.
+}
+
+\questionpage{11}{Sandsynlighedsregning}{%
+Gør, for en binomialfordelt stokastisk variabel $X$, rede for formlen til udregning af sandsynligheden:
+$$P(X=r)=K(n,r)\cdot p^r\cdot (1-p)^{n-r},$$
+og forklar hvordan man med en såkaldt binomialtest kan afprøve en statistisk hypotese.
+}
+
+\end{document}
