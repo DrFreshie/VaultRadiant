@@ -1,0 +1,226 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{The Road Home}
+\date{2019}
+\author{Theresa Ronan}
+
+\maketitle
+
+\noindent\linenumbers On Tuesdays I stay after school late for track practice. By the time I arrive home my stomach aches with hunger. A few miles of running has a way of doing that to me. As soon as I push open the front door of my apartment, the smell of pasta sauce makes my mouth water. My parents are both from El Salvador, but my mom cooks the best Italian dishes I've ever had. Not that we eat out all that often.
+
+The house is eerily quiet. \qm{Mama,} I call out.
+
+No answer.
+
+[\ldots]
+
+I drop my backpack on the floor and kick off my shoes. \qm{Papa.}
+
+He doesn't reply either. My father often works late, but my mother is almost always home by the time I'm done with track. She has to be here. Pasta sauce doesn't get cooked by itself.
+
+[\ldots]
+
+I take out my binder from my backpack and sit down on the couch, my favorite place to do homework in the tiny two-bedroom apartment I share with my parents. Up until a few months ago I'd also shared it with my older brother, Enrique, but now he lives with his girlfriend.
+
+Before I know it, an hour has passed. My mother never takes that long at the store, and my father is always home before six. I pull my cell phone out of my back pocket and dial my mother's phone number. No answer. My father doesn't pick his phone up either.
+
+Panic sets in. Where the hell are they? The front door hadn't been locked, but I didn't notice any signs of a struggle inside the apartment and nothing seems missing. It is like they have just vanished.
+
+Just breathe. My imagination is getting the better of me. There has to be a perfectly logical explanation for why no one is home.
+
+I get up from the couch and head outside. Our car is in its designated parking spot. Wherever my parents are, they had to have gotten there on foot. I knock on my neighbor's door in search of answers.
+
+She pulls her door open a crack. \qm{Can I help you?}
+
+\qm{I was wondering if you saw either my mom or dad today? Their car is still here but they're not home, and they're not answering their phones either. I'm worried something happened to them.}
+
+\qm{Sorry, kiddo, but I don't know where they are.}
+
+She shuts the door before I can ask any more questions. Most of my neighbors aren't very friendly. At least not to my family. They don't like what we are -- immigrants, with accents and brown skin. More than once I've overheard comments about my mother's poor English. So what if she doesn't speak English that well, I wanted to tell them. She works hard and has never asked for a single handout like so many people assume all us immigrants do.
+
+My brother will know what to do, I decide. I call him, but he doesn't answer either.
+
+\qm{Shit!} I feel like slamming my phone on the ground, but that won't do me any good, and my mom will be furious. My parents struggle to make ends meet. A cell phone is an extravagance.
+
+Another hour passes. I've tumbled into full blown panic. I knock on every one of my neighbor's doors, but no one knows anything. At least that's what they claim.
+
+[\ldots]
+
+I am tempted to call the police but a voice in my head stops me. What would happen if I did? I am only fifteen. Would the police make me come with them? And what would happen if they dug for information and found out the truth -- that my parents are illegal immigrants. They could be sent back to El Salvador, and what would I do then? Their secret is one I've never shared with anyone. Ever.
+
+Lots of people I know have rocky relationships with their parents, but not me. We are close, because we are all each other has. All of my cousins and aunts and uncles still live in El Salvador. My parents fled to the United States when my brother was still a baby in search of a better life and a brighter future for their children. When my brother graduated from high school a few years ago it was the happiest I'd ever seen my mother or father. Sometimes they tell me stories of the violent neighborhood they grew up in. They are grateful to be in America even though they worry. Many of their friends have been arrested and deported, especially in the last few years.
+
+For a moment the memory lifts me out of despair, but I quickly fall back into it when my calls go unanswered yet again.
+
+Somehow I manage to pick myself up off the floor. I venture outside again and wander my neighborhood. It is a safe place. My parents say the extra rent is worth the peace of mind. I'm not sure I agree. The neighborhood I live in might not have a problem with crime, but the people who live here have a problem with us. After I graduate I plan on moving to a bigger city. One where my brown skin doesn't stand out so much.
+
+By the time I return home it is dark outside. I fish the keys out of my pocket and am about to unlock the door when I hear my name.
+
+\qm{Marisol.}
+
+I turn my head. Standing a few feet away is a boy I know from school. He sits beside me in math class. We don't talk all that often, but whenever we do he is always really nice. His father manages the apartment complex, but I've never seen him here this late.
+
+\qm{Carter. What are you doing here?}
+
+\qm{Looking for you.}
+
+I frown. \qm{Why?}
+
+\qm{My dad told me what happened to your parents. I couldn't stop thinking about how awful this whole thing must be for you. I wanted to see if you were okay.}
+
+\qm{Wait. You know what happened to them?}
+
+\qm{You don't?} He sounds surprised.
+
+\qm{The only thing I know is that they're missing.} I swallow the lump in my throat. \qm{I've called them a hundred times and asked all my neighbors if they've seen them, but no one knows anything.}
+
+\qm{So this whole time you had no idea where they are?}
+
+I shake my head.
+
+Carter sucks in a breath. \qm{I'm sorry, Marisol.}
+
+\qm{Sorry for what? If you know something, just tell me.}
+
+\qm{My dad told me your parents and brother were taken into custody by ICE. He was talking to my mom about it earlier tonight and I overheard them. I think he assumed you knew,} Carter says.
+
+\qm{Are you serious?}
+
+Carter nods, his expression somber.
+
+\qm{Oh my God! What am I going to do?}
+
+It hadn't occurred to me that my family could just be taken from me. Whoever had arrested them didn't even give them a chance to leave me a note or turn off the freaking stove. How can anyone be that heartless?
+
+\qm{What you need is a lawyer,} Carter says.
+
+\qm{I don't have any money. Where am I going to get one of those?}
+
+\qm{Pack a bag,} Carter instructs, \qm{and come with me. My parents will help you.}
+
+\qm{They will? Why? They don't even know me.}
+
+\qm{But I know you,} he says. When he realizes that answer hasn't convinced me he continues, \qm{My parents have always taught me that helping someone who needs it is just the right thing to do.}
+
+I shake my head. I am like my mother. I don't like handouts. And I'm not sure I can trust Carter.
+
+\qm{You can't stay here by yourself.}
+
+\qm{What if my parents come back? I need to be here,} I say, even though I know that won't happen. I've heard stories about people whose immigration cases had taken months to sort out. I doubt my parents' situation will be any different.
+
+\qm{What if they don't?}
+
+The question prompts a fresh round of tears. Carter walks up to me and puts his arms around me. I sob into his shoulder.
+
+\qm{Let me help,} he whispers.
+
+I nod. \qm{Okay.} What other choice do I have?
+
+I'm not sure Carter can help, but at least he wants to, unlike my unfeeling neighbors. I am certain that at least one of them knew something, but they refused to tell me. How can anyone have that much hate in their heart? The thought of a child wandering the streets in search of her parents didn't even give them a moment's pause.
+
+But Carter is different, or at least I'm praying he is. I want my parents back so I have to take a leap of faith and trust him. It will be my first step on the long journey to bring my family home again.
+
+\end{document}

@@ -1,0 +1,602 @@
+Navn:
+
+Alexander Willer
+
+Fødselsdato:
+
+050106
+
+Skole:
+
+Næstved Gymnasium og HF
+
+Fag:
+
+Studieretningsprojekt, Samlet vurd. (6647--Gym bekend, )
+
+Dato for prøveaflæggelse:
+
+26-03-2026
+
+Studieretningsprojektet i 3.g 2026 – Opgaveformulering
+Elev id: 3z 01
+Elev: Alexander Willer
+
+Fag:
+
+Vejleder:
+
+Engelsk A
+
+Susan Duvander
+Email: su@ngh.nu
+
+Historie A
+
+Helene Reinholdt Jørgensen
+Email: rs@ngh.nu
+
+Område og opgaveformulering:
+Middelaldertræk i historisk fiktion
+Redegør for centrale træk ved middelalderen, herunder samfundsstrukturen og ridderstandens
+rolle. Inddrag historiefaglig analyse af kilderne ”Ejnhart om Karl den store” (bilag 1) og ”Froissart
+om heltemod” (bilag 2) med fokus på idealet for ridderstanden.
+Foretag en engelskfaglig analyse af romanen A Knight of the Seven Kingdoms (1998) af George
+R.R. Martin med særlig fokus på en karakteristik af udvalgte centrale karakterer og deres
+relation til ridderidealet samt en miljøbeskrivelse, herunder hvordan Westeros som fiktivt univers
+trækker på middelalderlige samfundsstrukturer.
+Diskutér på baggrund af din redegørelse og analyse, hvorfor læserne er fascineret af historisk
+inspireret fiktion samt hvilke muligheder og begrænsninger historisk inspireret fiktion indebærer.
+Afslutningsvis bedes du overveje, hvilken forpligtelse en forfatter af historisk inspireret fiktion har
+til at gengive virkeligheden, både i forhold til historisk nøjagtighed og i forhold til læserens
+forståelse af fortiden. Inddrag selvvalgt materiale i din diskussion.
+Bilag 1: ”Ejnhart om Karl den store” fra Knudsen, Sanne og Danielsen, Kim: Middelalderen,
+Systime 2011
+Bilag 2: ”Froissart om heltemod” fra Knudsen, Sanne og Danielsen, Kim: Middelalderen, Systime
+2011
+
+Opgaven skal have et omfang på 15-20 normalsider og skal indeholde et 10-20 linjers resume på
+dansk, der anbringes lige efter titelsiden (inden indholdsfortegnelsen).
+
+MIDDELALDERTRÆK I
+HISTORISK FIKTION
+Studieretningsprojekt i Engelsk A og Historie A
+
+Alexander Willer 3.Z
+Næstved Gymnasium og HF
+26. marts 2026
+Vejledere:
+Engelsk - Susan Duvander
+Historie - Helene Reinholdt Jørgensen
+
+1
+
+Resumé
+Projektet undersøger hvordan man i historisk fiktion trækker fra virkelige tidsperioder, samt
+hvordan der kan trækkes paralleller mellem romaner, af denne art, og den enkelte tidsperiode.
+Projektet fokuserer, mere specifikt, på middelalderens rolle i den historisk inspirerede fiktionsgenre.
+Først og fremmest redegøres der for centrale træk ved middelalderen, herunder samfundsstrukturen
+og ridderstandens rolle, hvortil der inddrages to historiefaglige analyser af to relevante kilder.
+I projektet analyseres fiktionsromanen ”A Knight of The Seven Kingdoms” af George R. R. Martin,
+med særligt fokus på udvalgte centrale karakterer og deres relation til ridderidealet. Desuden laves
+en miljøbeskrivelse, og det analyseres ligeledes, hvilke træk der er mellem det fiktive univers og
+Middelalderen og dens samfundsstrukturer. I diskussionen fremlægges der argumenter for og imod,
+om forfatterne af historisk inspirerede romaner har et ansvar for hvordan læserens opfattelse af
+historiske begivenheder og tidsperioder bliver formet. Desuden fremhæves argumenter for hvordan
+forfatteren er i stand til at gøre denne genre så fascinerende for læseren, samt hvilke muligheder og
+begrænsninger genren giver. Afslutningsvis konkluderes det, at forfatteren til en vis grad har et
+ansvar for hvordan læserens opfattelse af den historiske virkelighed bliver formet, og fortalt videre i
+fremtiden. Samtidig kan det konkluderes, at læseren også selv bærer et vist ansvar i at kunne skelne
+mellem det faktuelle og det som forfatteren har ”fundet på” for at gøre fortællingen interessant.
+
+2
+
+Indholdsfortegnelse
+INDLEDNING ..............................................................................................................................4
+MIDDELALDEREN OG RIDDERSTANDENS ROLLE ..........................................................................5
+Idealet for ridderstanden set i historiske tekster .............................................................................................................. 9
+Analyse af ”A Knight of The Seven Kingdoms”(1998)..................................................................................................... 12
+Forfatterens rolle i læserens fortidsforståelse ................................................................................................................. 17
+Konklusion ..................................................................................................................................................................................... 20
+
+3
+
+Indledning
+Historisk inspireret fiktion er i moderne tid blevet en meget populær genre, som med sin
+fascinerende stil, evner at nå ud til mennesker i massevis. Denne fiktionsgenre er ofte inspireret af
+en historisk tidsperiode, men er ikke en direkte afspejling af virkeligheden som man kender den.
+Hvilken forpligtigelse har man dermed som forfatter af historisk inspireret fiktion til at gengive
+virkeligheden og i hvor stor grad påvirker man læseserens forståelse af fortiden? Hvad er det der er
+så fascinerende ved Middelalderen, at man som forfatter i denne genre oftest vælger at tage
+udgangspunkt i Middelalderen som historisk tidsperiode?
+Denne opgave tager udgangspunkt i en redegørelse der redegør for centrale træk ved
+middelalderen, herunder samfundsstrukturen og ridderstandens rolle. I redegørelsen inddrages en
+historiefaglig analyse af kilderne ”Ejnhart om Karl den Stor” og ”Froissart om heltemod”, med
+fokus på idealet for ridderstanden. Med særligt fokus på en karakteristik af udvalgte centrale
+karakterer, og deres relation til ridderidealet analyseres George R. R. Martins roman ”A Knight of
+the Seven Kingdoms” fra 1998. Kan man på baggrund af analysen af ”A Knight of the Seven
+Kingdoms”, trækker paralleller mellem romanen og Middelalderens samfundsstrukturer?
+
+4
+
+Middelalderen og ridderstandens rolle
+Begrebet Middelalder bliver første gang brugt i 1400-tallets Italien. Middelalderen betyder egentlig
+mellemperiode, og strækker sig fra omkring år 500-1500. Ofte inddeles disse tusind år i tre
+underperioder. Den tidlige Middelalder fra 500-1000, højmiddelalderen fra 1000-1300 og
+senmiddelalderen 1300-1500. Man så denne tidsperiode som en periode, der lå mellem Antikken og
+den daværende nutid (Renæssancen). Når man bruger begrebet Middelalder, refererer man til de
+vesteuropæiske lande. I de efterfølgende århundreder helt frem til 1900-tallet havde man en generel
+opfattelse af Middelalderen, som værende noget negativt. Man kan sige, at man så den som et
+ubetydeligt skridt på vejen fra Antikkens afslutning til dens genfødsel i Renæssancen. Op til
+omkring år 800 var strukturen primitiv og domineret af godsejere og bønder, da man ikke havde
+fælles opfattelse af landegrænser og at distancen hvorpå man kunne føre diplomati var meget lokalt.
+Det var almindeligt at bruge hele sit liv i en lille landsby, og aldrig kende til noget andet end det.
+Dette var anderledes fra romernes bykultur og markedsøkonomi, hvor man her havde en
+selvforsynende økonomi uden penge(naturalieøkonomi). Omkring år 800 kom systemet
+Feudalisme, hvor kongen udlånte dele af sin jord til diverse stormænd, de såkaldte kronvasaller.1
+Kronvasallerne fik udbyttet af den udlånte jord, til gengæld for militær støtte til kongen, i form af
+soldater og riddere. Derudover udlånte kronvasallerne dele af deres jord til andre herremænd, som
+så var kronvasallernes egne vasaller. Dette gjorde, at man på begge sider af denne udveksling af
+landområder, var forpligtet til at garantere den andens sikkerhed. Derfor var det forholdsvis
+almindeligt, at en bonde overgav sit land til en herre af en art, for så at få det foræret igen, men med
+en sikkerhedsgaranti oveni. Denne grad af selvstændighed, som vasaller og kronvasaller var
+overladt, kunne i nogle tilfælde forstyrre magtbalancen i lenssamfundet. Så selvom kongen på
+papiret havde ejerskab over hele sit rige og dets jord, ophobede visse vasaller deres lokale magt i
+form af militær, i en sådan grad at de kunne kræve flere privilegier og en højere indflydelse hos
+kongen. Dermed var datidens konger og kejsere en del af et stort magtspil i deres egne riger.
+Ovennævnte forhold mellem konge og kronvasal, blev bekendtgjort ved en troskabsed, hvor man
+lagde sin hånd på biblen. Derudover var kroningsceremonierne særligt meget religiøse, da man
+skulle vise, at man havde Guds interesse og støtte2. Man gjorde mest brug af dette system i datidens
+franske og engelske kongeriger. Hvorimod man i Skandinavien havde det man kalder
+1 Knudsen, Sanne Stemann - Middelalderen (2011) S. 37-39
+2 Ibid. 11
+
+5
+
+valgkongedømmer, hvori rigets elite, bestående af de mest magtfulde mænd i adelen, udpegede en
+konge. Dog var kongerne og deres efterfølgere i høj grad beslægtede, og derfor blev disse
+kongedømmer med tiden officielt til arvekongedømmer, og dette var bl.a. for at indskrænke magten
+hos adelen. En essentiel del af Middelalderen, hvis man vil forstå dens familieforhold, er
+ejendomsretten. Denne ret indebar, at hvis en mand ejede noget jord og/eller besad ejendomme,
+bestemte han over alle personer der boede på hans jord.
+
+Romerkirkens magt i Middelalderen
+Den anden magtfulde spiller i Middelalderens magtspil var kirken. Specifikt den romersk-katolske
+kirke. Romerriget blev i slutningen af 300-tallet opdelt i det vestlige og det østlige Romerrige. I takt
+med denne opdeling af riget, delte man også den kristne kirke i to. Det vestlige og det østlige
+kirkesamfund. På trods af det vestlige Romerriges fald allerede i slutningen af 400-tallet, forblev
+den kristne tro den altoverskyggende religion i Vesteuropa.3 Man levede i Middelalderen i samfund,
+hvor man ikke endnu kendte til naturvidenskabelige forklaringer på den verden, man levede i.
+Derfor brugte datidens borgere, uanset klasse, kristendommen som en vej mod mening med livet og
+forklaring på alt omkring dem. Kristendommen gav ikke kun viden og mening, men var en
+levemåde. Man levede efter Guds idealer i håb om at kunne opnå adgang til himlen i sit efterliv.
+Med dette millenaristiske4 verdenssyn havde kirken et stærkt greb om befolkningen og generelt alle
+troende mennesker i samtiden. Eftersom ikke mange andre end præster og andre i den religiøse elite
+kunne læse, besad man som en af disse en utrolig magtfuld stilling. Hvad end man sagde til den
+almene borger, så de som værende sandheden. Det var Guds ord. Der var også en bred
+overbevisning om, at Dommedag ville komme omkring år 1000, hvilket kun forstærkede dette greb.
+Da det så ikke skete, opfandt man omkring år 1200 Skærsilden.5 Med denne kom pavens
+nøglemagt, som betød at paven ved aflad kunne gøre brug af sine nøgler til Himmeriges porte, og
+dermed give adgang til et evigt liv i paradis. Således kunne man kun nå frelse gennem kirken.
+Paven var set som ufejlbarlig i sin magtposition, da han blev set som Guds stedfortræder på jorden.
+Han havde med sin position i Rom, magten til bl.a. at kunne udstede interdikt, hvis man ikke
+efterlevede pavens forordninger. Dette betød at paven ikke kun havde magten til at skænke adgang
+
+3 Ibid. S. 20
+4 Millenarisme er en forestilling om, at verden snart går under og bliver erstattet med en bedre
+
+verden(dommedag)
+5 www.historieportalen.systime.dk/?id=303
+
+6
+
+til himlen, men altså også til at fratage denne adgang til frelsen. 6Med den vestlige romerkirkes
+voksende magt og rigdom fulgte et magtspil. Romerkirkens magt i det vestlige Europa var truet af
+det byzantinske riges østlige kirkesamfund. Som følge af den østlige trussel, måtte paverne gøre,
+hvad de kunne for at sikre indflydelse i det vestlige Europa. Dette gjorde man bl.a. ved at indgå
+alliancer med datidens store konger. Derfor var flere af paverne dygtige diplomater og
+administratorer. Biskop Adalbert af Laon inddelte i sin tid (ca. 947-1030), med udgangspunkt i
+Guds orden, samfundet i tre dele: de bedende, de kæmpende og de arbejdende.7
+
+Ridderen
+Krig var meget almindelig i Middelalderen. Man så krig som værende en måde, hvorpå man kunne
+vinde ære og afgøre stridigheder, men udover død og ødelæggelse medførte krig nogle store
+teknologiske udviklinger. Det handlede om for kongerne og adelen at have de største og bedste
+våben, og have den største hær. I omkring år 800 blev en ny krigertype introduceret. Denne var
+kendt som ridderen, hvilket reelt bestod af en kriger på hesteryg iført rustning, samt sværd, skjold
+og lanse. I den tidlige Middelalder var ridderen en barbarisk kriger, der undertrykte
+civilbefolkningen, hvor end de førte krig. De spillede en stor rolle for de franske konger, da de var
+med til at forsvare dem imod muslimske tropper fra Den Iberiske Halvø. I højmiddelalderen
+ændrede billedet sig lidt, og nu sås ridderne som værende dem som beskyttede de svage, herunder
+kvinder og selve Kristendommen. De spillede også en stor rolle i korstogene fra slutningen af 1000tallet og frem til slutningen af 1200-tallet.8 Ridderstanden havde en selvopfattelse af, at de var
+krigere sendt af Gud. Sendt i krig for Kristendommen, af Guds stedfortræder på jord. Titlen som
+ridder var også en stor ære og anset for at være en fornem titel fordi det det krævede en lang
+uddannelse og en fejlfri kampevne, før man kunne få ridderslaget. Ridderslaget var en ceremoni
+hvori, primært kongen eller en anden ridder, slog en værdig mand til ridder og dermed optog
+vedkommende som en del af ridderstanden. Det var derfor også vigtigt, at man efterlevede idealerne
+af en ridder, hvilket bl.a. var at man var tapper og havde en høvisk opførsel. Den høviske
+omgangsform kom til i fredstid, hvor konger og adelen omgav sig med ridderne på deres borge.
+Ridderne var en del af hoffet, sammen med blandt andre vasaller og unge væbnere, under
+uddannelse som riddere. Man var hermed en del af den høviske omgangsform. Man skulle dermed
+leve op til høviske idealer, som bestod af en masse regler, som skulle vejlede én i hvordan man
+6 Knudsen, Sanne Stemann - Middelalderen (2011) S. 20
+7 Ibid. S. 11
+8 Ibid. S. 41
+
+7
+
+skulle omgås hinanden ved hoffet. Det indebar blandt andet, at man bar passende tøj, spiste og drak
+fin mad og vin, og at man opførte sig respektfuldt og med ære overfor husets fruer. På trods af de
+høviske idealer var det dog de færreste, der i virkeligheden nærmede sig disse. Som ridder var man
+altså ikke kun dygtig i kamp og værdsat for sin tapperhed, men altså også en del af selve hoffet i
+fredstid.9
+
+9 Ibid. S. 41
+
+8
+
+Idealet for ridderstanden set i historiske tekster
+Ridderidealet var i Middelalderen, ikke kun for ridderne, et ideal, som man levede efter. Reglerne
+og principperne gik igen i forskellige former. Selvom man ikke kaldte dem ridderidealer, havde de
+samme formål om man skulle leve efter et æreskodeks, som beskrevet i redegørelsen. En af
+måderne, hvorpå disse idealer blev illustreret, var gennem fortællinger og ikonificering af visse
+historiske figurer. I disse tekster og fortællinger repræsenterede disse historiske personer, i sig selv,
+idealerne. De var ikke nødvendigvis historisk korrekte, men da der, som tidligere nævnt, i den
+tidsperiode ikke var mange, der kunne læse og/eller skrive, var det markant nemmere for forfatterne
+at pynte på fortællingerne uden at blive faktatjekket. Derudover var det grundet et generelt lavt
+udbud af litterært materiale fra Middelalderen, især den tidlige Middelalder, muligt faktisk at forme
+historien selv med blæk og pen. Det ser man for eksempel i Ejnharts tekst “Kejser Karl den Stores
+liv og levned”, som han skrev kort efter kejserens død i år 814.
+
+Ejnhart om Karl den Store
+I denne biografi beskriver Ejnhart kejserens bedrifter og milepæle. Det gør Ejnhart med et formål
+om blandt andet at sørge for, at kejseren vil blive husket i et positivt lys. Dette er tydeligt helt fra
+begyndelsen af teksten, da Ejnhart begynder med: “Skønt således Karl viste sin storhed ved at
+udvide sit rige (…)”. Her fastslår han, at kejseren som en selvfølge besidder en storhed, og
+fortsætter med at forklare, hvordan storheden kom til udtryk. Derudover gør han brug af udtryk som
+“stor og stærk krop[...] et ærefrygtindgydende og værdigt udseende”, hvilket endnu engang
+forstærker idealiseringen af kejseren. Nogle af disse betegnelser læner sig også op ad trækkene i
+ridderidealet, såsom det værdige og ærefrygtindgydende udseende. Kejseren har altså gennem sit
+udseende udstrålet både sin klasseposition og ære, hvilket stemmer overens med ridderidealet.
+Disse udelukkende positive beskrivelser fortsætter i resten af teksten med blandt andet kejserens
+veltalenhed og flersprogede evner. Man kan derfor stille spørgsmål til kildens troværdighed og
+pålidelighed. Det er også vigtigt at forstå Ejnharts egen relation til kejseren, da den i dette tilfælde
+har haft en klar indflydelse på, hvordan denne tekst er skrevet. Ejnhart blev i 790’erne en del af
+hoffet hos kejseren, og derefter ansat som rådgiver for Karl den Store. Der var han i omkring 20 år
+op til kejserens død i år 814. Her er der en klar interessekonflikt i det, at Ejnhart har været rådgiver
+for kejseren selv. Det er derfor svært at forestille sig nogen grund til, at Ejnhart skulle have
+interesse i at skulle skrive negativt om den afdøde kejser. Især når kejserens eftermæle til en vis
+
+9
+
+grad repræsenterer Ejnharts eget. Han vil gerne fremstille manden, som han selv har rådgivet i 20
+år, som den ideelle leder og som værende ufejlbarlig. Det vil jo være ensbetydende med, at Ejnhart
+selv har gjort et udsøgt stykke arbejde. Ejnhart har højst sandsynligt været klar over den enorme
+indflydelse hans tekst ville have på befolkningens opfattelse af kejseren. Det har altså dengang
+været nemmere at påvirke den generelle holdning på forskellige punkter, da der som sagt ikke har
+været fyldt med skribenter i et Europa for 1200 år siden. Propaganda har dermed været et effektivt
+og muligvis almindeligt værktøj hos magtens elite. Med denne fremstilling af kejseren formede
+Ejnhart altså også den fremtidige opfattelse af Karl den Store. Biografien har til dels resulteret i at
+kejseren, i sig selv, blev et ideal for eftertidens konger og kejsere. Man ser stadig spor af dette, når
+nutidige historikere blandt andet ser ham som “Europas fader”. Dog bliver af andre set som have
+været en meget nationalistisk og mere Hitler-lignende figur, hvilket står i rimelig stær kontrast til
+Ejnharts beskrivelser. 10
+
+Froissart om heltemod
+En anden tekst, hvor ridderidealets værdi i Middelalderen kommer til udtryk, er indledningen til den
+franskfødte forfatter og hofhistoriker Jean Froissarts krønike. Dog er det først vigtigt at være
+kildekritisk i dette tilfælde, da han som sagt var hofhistoriker, og ikke hvad man i dag ville anse
+som en pålidelig historiker. Som der også står i teksten, var han ansat som krønikeskriver hos den
+engelske dronning. 11Han så derfor historien fra et elitært perspektiv, hvilket ligesom Ejnhart, har
+givet Froissart en vis grad af frihed, når det kom til at forme historien gennem historiske tekster.
+Froissart lægger i krønikens indledning ud med at redegøre for, hvad han anser for at være
+heltemod. Dertil fremlægger han, hvor vigtig han synes sådan heltemod er for Middelalderens
+adelige. Han mener at heltemod og tapperhed bør vægte højere end rigdom og sin slægts rang. Han
+laver i følgende citat en sammenligning, hvor han appellerer til læserens religiøse side. “For
+ligesom de evangelister og tolv apostle er vor Herre nærmere end andre, er de tapre nærmere til
+ære og hæd end andre”. Her påstår han, at hvis den religiøse elite er tættere på Gud, så er “de
+tapre” på samme måde, “ nærmere til ære og hæd”. De to påstande har ikke nødvendigvis noget
+med hinanden at gøre, men han tvinger læseren til at give ham ret. For hvis Gud siger det, så er det
+rigtigt. Dermed tillægger Froissart ridderidealet samme vigtighed som de øverste mænd i den
+10 Knudsen, Sanne Stemann - Middelalderen (2011): ”Ejnhart om Karl den Store” S.
+
+39
+
+11 Knudsen, Sanne Stemann - Middelalderen (2011): ”Froissart om heltemod” S. 47
+
+10
+
+kristne kirke, hvilket, når man er klar over vigtigheden af kirken i samtiden, virkelig illustrerer,
+hvor højt man altså vægtede disse idealer. Dog skal man huske på, hvad Froissarts egen position i
+adelen var. Man kan derfor argumentere for, at disse påstande og synspunkter kun repræsenterer
+kongemagtens syn på ridderidealet. Hvis man ser på ovenstående sammenligning, men med
+kildekritiske briller ser man en tydelig tendens fra Froissarts side. Han mener, at et sæde ved
+kongens højbord har samme værdi, som hvis man var del af den religiøse elite og altså tættere på
+Gud. Han hæver på den måde kongens status til at være på højde med Gud og som hans
+stedfortræder på jorden. Her fletter Froissart, på en lignende vis til Ejnhart, en udelukkende positiv
+fremstilling af kongen ind i sin tekst.
+
+I tekstens helhed vægter Froissart heltegerninger og ærefulde handlinger højere end sin adelige
+status og slægt. Han er i det, med til at lægge grund for et nyere opfattelse af, hvad en ridder er og
+hvad deres vigtigste opgaver er. Han mener at man er ikke en sand ridder, alene fordi man af sin
+kongelige far bliver slået til ridder, man dertil fordi man har udvist heltemod og ære.
+
+11
+
+Analyse af ”A Knight of The Seven Kingdoms”(1998)
+I Middelalderen var ridderidealet det, man stræbte efter for at være den bedste version af sig selv,
+om det så var soldat eller leder. Selvom denne tidsperiode foregik for over 500 år siden, ser man, i
+en vis grad, stadig spor fra ridderidealet den dag i dag. For eksempel gennem traditioner såsom
+krigsmedaljer, som bl.a. kan anerkende en soldats tapperhed i krig. Derudover har ridderidealet,
+samt andre karakteristiske træk fra Middelalderen, med tiden overlevet gennem den litterære genre
+historisk fiktion. Romaner og fortællinger som foregår i en ramme, som er stærkt inspireret af en
+tidsperiode, for eksempel Middelalderen, men stadig er fiktion. Et eksempel på en roman i en
+Middelalderlig inspireret ramme er George R. R. Martins roman fra 1998, ‘A Knight Of The Seven
+Kingdoms’, hvor man hen over en 4-årig periode, følger den herreløse ridder ‘Ser Duncan the Tall’
+og hans trofaste væbner ‘Egg’, i deres rejse i den Middelalder inspirerede verden Westeros.
+Romanen bliver fortalt af en tredjepersonsfortæller fra Ser Duncans perspektiv, hvori man som
+læser har et indblik i hans indre tanker. Det ser man tydeligt allerede i begyndelsen, da han begraver
+sin afdøde læremester Ser Arlan of Pennytree. “[…] he knew he ought to fill the hole before it broke
+[...]”12. Man ser også her at fortælleren ikke er alvidende, da man hører hvad Dunk tænker og altså
+ikke andre karakterers indre tanker. Læserens adgang til Dunk indre tanker er essentiel, hvis man vil
+forstå ham som person. Ser Duncan ‘the Tall’, er romanens hovedperson, og får kaldenavnet Dunk.
+Man følger ham fra han er en ung væbner på 16-17 år uden nogen plan for sin fremtid, til både at
+være læremester og personlig sikkerhedsvagt for en kommende konge. Han er en dynamisk
+karakter, da han gennemgår en personlig udvikling, hvori han bliver mere moden og selvsikker.
+Dette opnås igennem de udfordringer han møder på sin vej, og det at han tager ansvaret for den
+unge Egg, som viser sig at være af kongeslægten med sin sande titel som ’Prince Aegon
+Targaryen’.
+
+Personkarakteristik af Dunk
+Det der er kendetegnende for Dunk er hans ærefulde og ydmyge væsen. Han er meget respektfuld
+og tro mod de hierarkiske spilleregler, hvor han umiddelbart kun taler til folk af højere rang, når det
+forventes af ham. Det bryder han dog, når han oplever stærk uretfærdighed. Et eksempel på dette er,
+
+12 Martin, George R. R., A Knight of the seven Kingdoms, 1998 S. 6
+
+12
+
+da prins Aerion Targaryen, brækker en finger på den unge skuespillerinde Tansel ’too Tall’, i et
+irrationelt vredesudbrud. Dunk reagerer instinktivt og glemmer i øjeblikket alt, hvad hans
+læremester havde lært ham. ”Dunk stood there stupidly, not quite believing what he saw. […] Three
+long strides, then Dunk grabbed the prince’s shoulder and wrenched him around hard.”. 13 Her ser
+man det sjældne syn af Dunk der mister besindelsen, og bryder de hierarkiske spilleregler, samtidig
+med at bevare sin ære og retfærdighedssans. Han ser ikke Aerion som værende en prins, men en
+trussel for Tansel, og tænker ikke på konsekvenserne af sine handlinger, men på at beskytte en
+kvinde i nød. Man ser her Dunks natur, som består af karaktertræk tilhørende ridderidealet, såsom
+at beskytte en kvinde i nød og at han viser sin ridderlighed gennem handlinger af tapperhed. Her
+kommer det til udtryk at Dunk er en rund karakter idet, at ridderidealet allerede nu skinner igennem
+hos ham. Ved første øjekast ligner han ikke en ridder, hverken i måden hvorpå han taler eller måden
+han klæder sig på. Dog har han visse ydre ridderlige karaktertræk idet han har sin egen hest, et
+skjold, et sværd og en rustning. Han har derudover titlen som ’Ser’ Duncan, efter han af sin afdøde
+læremester blev tildelt dette ved at han formentlig blev slået til ridder, kort inden læremesterens
+død. Dette kan dog betvivles da Dunk i bogens begyndelse, da begravede Ser Arlan, overvejede
+sine fremtidige muligheder, som kan ses i følgende citat: ”I could find another hedgeknight in need
+of a squire to tend his animals and clean his mail, he thought.”14. Her er det underforstået at når
+Dunk overvejer at tjene som væbner hos en anden ridder, ikke selv kan være ridder. På trods af
+dette, fortæller han Lord Ashford, ved sin tilmelding i turneringen, at han blev slået til ridder af Ser
+Arlan, og beskriver ceremonien således: ”He knighted me before he passed, with his own sword.
+[…] He touched me once on my right shoulder and once on my left, and said some words, and when
+I got up, he said I was a knight” 15. Han fortæller altså her at han direkte er blevet slået til ridder,
+men hans minde om ceremonien er tåget. Det vil sige at man her ser et eksempel på Dunk der
+bryder sit æreskodeks, ved at han muligvis lyver om sin titel og udgiver sig for at være en anden.
+Det ændrer også læserens syn på hans og Eggs forhold, hvis man ser på måden hvorpå Dunk bliver
+utrolig skuffet over at Egg ikke havde afsløret sin sande identitet. Hvis hele Dunks fortælling er
+baseret på en løgn, kunne man argumentere for, at han gennem hele historien er en falsk ridder. Så
+kan man også pludselig sætte spørgsmålstegn ved bogens titel. Er han så ikke en ridder? Man kan
+modsat argumentere for at bogens formål, er at udfordre den traditionelle opfattelse af hvad det
+kræver at være en ridder. I løbet af bogen udviser Dunk mange ridderlige træk. Han er i nogle
+13 Martin, George R. R., A Knight of the seven Kingdoms, 1998 S. 73
+14 Martin, George R. R., A Knight of the seven Kingdoms, 1998 S. 7
+15 Martin, George R. R., A Knight of the seven Kingdoms, 1998 S. 28
+
+13
+
+situationer den eneste sande ridder til stede, f.eks. da han, uden tøven, beskyttede Tansel.
+Forfatteren forsøger at overbevise læseren om at definitionen af en ridder er en, der lever op til
+ridderidealet igennem sine handlinger og hensigter. Man fjerner her værdien i titlen og klassen hos
+en ridder og lægger vægten i hvilke handlinger og hensigter der faktisk skaber en ridder, hvilket
+stemmer overens med hvordan Froissart beskriver heltemod og ridderidealet i sin krønike.
+
+Personkarakteristik af Bennis
+Hvis man vil se på en ridder, so har en anden tilgang til sin rolle som ridder, så kan man se på Ser
+Bennis of the Brown Shield. Bennis er i romanen en biperson, som har en mindre, men vigtig rolle,
+for fortællingen om Dunk. Han er ligesom Dunk en herreløs ridder. Man møder ham, når Dunk og
+Egg på deres rejse, midlertidigt tjener i Standfast hos den gamle ridder og landejer Ser Eustace
+Osgrey. Første gang man møder Bennis bliver han direkte beskrevet af Dunk som værende,
+ondskabsfuld og spydig. Hvilket ses i følgende citat: ”Bennis was a mean-mouthed man, and it
+pleased him to make mock”16 Derudover havde han dårlige tænder og lugter. Han er dertil både en
+statisk og en rund karakter, eftersom han ikke ændrer sine handlemåder og på flere måder ikke har
+forandret sig siden Dunk stødte på ham for flere år siden, og dermed er forblevet den færdigstøbte
+person han var dengang. Et eksempel på Bennis’ kontrast til Dunk er følgende udveksling mellem
+de to omhandlende Ser Eustace Osgrey: ””Don’t call him Useless.” Dunk was fond of the old
+knight. ”You sleep beneath his roof, give him some respect.” You respect him for the both o’ us,
+Dunk,” said Bennis. “I’ll call him what I will.””. 17 Her ser man tydelige forskelle mellem de to
+riddere. Bennis har en klar mangel på respekt og giver sin herrer et nedladende kaldenavn, hvortil
+Dunk konfronterer Bennis og forsvarer Osgrey. Et andet eksempel er da Dunk og Bennis støder på
+nogle gravere ved dæmningen og Bennis sprætter den ene gravers kind op med sit sværd. Her
+begynder Dunk at tvivle og være imod Bennis’ handlinger, hvilket kan ses i følgende citat: “He
+goes too far […] He should not have done that”18. Man ser derudover her hvordan Dunk på trods af
+sin makkers handlinger er tro til sin ed til Osgrey, og står ved Bennis’ side i situationen. De to
+riddere er klare modsætninger på nærmest alle punkter. Når Dunk har respekt, ære, tapperhed,
+ydmyghed og lever op en titel, som han muligvis ikke officielt besidder, er Bennis respektløs,
+æreløs, arrogant og lever ikke op til sin officielle titel som ridder. George R.R. Martin bruger
+hermed Bennis’ dårlige karaktertræk til at fremhæve Dunks positive karakter.
+16 Ibid. S. 127
+17 Ibid. S. 127
+18 Ibid. S. 131-132
+
+14
+
+Det middelalderlige miljø i Westeros
+Fortællingen foregår i Westeros som er et kontinent i George R.R. Martins fiktive univers i
+bogserien ”A song of Ice and Fire”. Man følger Dunk og Egg på deres rejse rundt i Westeros
+primært i områderne Ashford og Standfast, som begge er lokaliseret i det tidligere kongerige ’The
+Reach’ og til slut ender de to i ’The Riverlands’. Selvom Westeros er i en fiktiv verden, er der
+mange genkendelige træk fra Middelalderen, som går igen i det fysiske miljø i Westeros. Ser man
+f.eks. på ridderturneringen i Ashford Meadow, er der flere tydelige samfundsstrukturelle træk. Det
+er tydeligt at samfundet er klasseopdelt. Det sociale miljø ligner i hierarkiet Middelalderens
+vesteuropæiske hierarki, hvilket man kan se et eksempel på dette da Dunk ved sin ankomst til
+tuneringspladsen godt er klar over hvor han er tilladt at sove, på baggrund af sin plads i hierarkiet.
+”Yet however fine their pavillions were to look upon, he knew there was no place there for him.[…]
+While the lords and great knight dined on capons and suckling pigs, Dunks supper would be a hard,
+stringy piece of salt beef.”.19 Udover den ubehagelige soveplads, nævnes her at Dunks mad er langt
+værre end herrerne og de store ridderes, hvilket tydeligt illustrerer den forskelsbehandling får, hvis
+man tilhører en højere klasse i samfundet. Et andet tydeligt eksempel på klasseforskellen er da prins
+Aerion overfalder Tansel, hvorefter Dunk som sagt bryder hierarkiets regler ved så at angribe
+prinsen. Det at ingen andre end Dunk gjorde noget i en så uretfærdig situation, grundet frygten for
+konsekvenserne af at gå imod overklassen, viser igen magtforholdet der er i en sådan
+samfundsstruktur. Der er derudover klare træk fra Middelalderens lenssamfund, i Westeros. Man på
+samme måde som det virkelige lenssystem en konge øverst i hierarkiet, hertil Daeron Targaryen.
+Under ham har man hvad der svarer virkelighedens kronvasaller, og under dem deres egne vasaller.
+En af de utallige vasaller i Westeros er Ser Eustace Osgrey of Standfast. Både han og Lady
+Rohanne of Coldmoat, er vasaller af samme herrer. Dette bliver indikeret under deres konfrontation,
+hvor der bliver forslået følgende: ”Let us go to Goldengrove, I implore you both, and place the
+matter before Lord Rowan for his judgement.”20, hvilket hentyder til at de begge to er vasaller af
+samme herrer i ’Lord Rowan’. Dette stemmer overens med lenssystemet man så i bl.a.
+Middelalderens England. Endnu en måde hvor George R.R. Martin trækker fra det middelalderlige
+England, er titlen man bliver tildelt som ridder. I Middelalderens England, og stadig til den dag i
+dag, bliver man tildelt titlen som ’Sir’ når man er slået til ridder af kongen eller dronningen. I
+
+19 Ibid. S. 16-17
+20 Ibid. S. 219
+
+15
+
+Westeros bruges ’Ser’ som tilsvarende, hvilket afskiller denne verden fra virkeligheden, i små
+detaljer som denne.
+
+16
+
+Forfatterens rolle i læserens fortidsforståelse
+I fiktionslitteratur har man helt frie tøjler til at skabe sin helt egen unikke verden. Man ser dog af
+og til at det fiktive univers hvori en fortælling foregår, er stærkt inspireret af en historisk
+tidsperiode. Indenfor fantasygenren er det ofte Middelalderens tidsperiode man vælger som
+inspiration. Det kan man ifølge Bilbo Egelund, lektor i dansk, historie og samfundsfag, blandt
+andet begrunde med Middelalderens eventyrlige stemning. Han skriver i sin bog ”Fantasylitteratur”
+fra 201121, at der i fantasygenren er tre centrale områder, hvor man ser ligheder mellem denne
+genre og Middelalderen. Først samfundets opbygning og struktur, dernæst den primitive teknologi
+og sidst forestillinger om magi og væsener. Da man i Middelalderen levede i et postaksialt
+samfund med tilbøjelighed til at tro på fiktive væsener i myter såsom engle og dæmoner, er det til
+en vis grad nemmere at skrive fantasylitteratur i en sådan ramme.22 Derudover kan manglen på
+pålidelige kilder og generelt den lave mængde af litterært materiale føre til en form for
+mystificering af tidsperioden. Det gør at man nemmere kan fordybe sig i det fiktive univers, da
+man ikke nødvendigvis har et helt klart objektivt billede på Middelalderen, som udgangspunkt til at
+sammenligne med. Det gør nok ikke den store forskel for den almene læser, hvorvidt de adelige
+familier hedder ’Lannister’ og ’Stark’, eller ’Lancaster’ og ’York’. Derfor kan man på den ene side
+sige at det er en fordel for fantasyforfatterne, da det altså åbner op for flere muligheder og friere
+tøjler i kreativiteten. På den anden side, kan man argumentere for at historisk inspireret fiktion
+kommer med begrænsninger idet man, som forfatter giver sig selv en ramme at skrive indenfor.
+Samtidig kan begrænsningerne bidrage til kreativiteten. Hvis man for eksempel vil transportere sin
+karakter fra et sted til et andet hurtigere end teknologisk muligt med Middelalderens teknologi,
+tvinger det forfatteren til at finde på alternative måder. Det kunne være en flyvende kost, eller at
+fortællingens karakter ridder på en drage. Man kan derimod igen argumentere for at den primitive
+teknologi, tiltaler nogle læsere. For eksempel det lavere tempo, hvor nogle karakterer, såsom Dunk
+og Egg i Westeros tager på en rejse, der med moderne teknologi ville tage tre dage, men som i en
+middelalderlig verden tager seks måneder. Altså at forfatteren i sin fortælling uddyber de små ting,
+der måske i andre litterære genrer ville være ligegyldig, men som i en middelalderlig verden
+bidrager til realismen. Når man lever i en så globaliseret og informationsrig verden med konstante
+nyheder og andre informationer, kan det måske være meget rart at fordybe sig i en anden verden,
+
+21 Egelund, Bilbo - Fantasylitteratur (2011)
+22 Ibid. S. 44-45
+
+17
+
+hvor livet er lidt mere simpelt. En verden som på flere måder minder om vores, men som er meget
+mere primitiv.
+
+Man kan dog mene at en fiktiv verden som er historisk inspireret, måske kan blive for realistisk. At
+det muligvis kan gå ind og påvirke læserens opfattelse af fortiden. Man kan se på det fra flere sider.
+Man kunne på den ene side sige at ansvaret ligger hos forfatteren, i det han eller hun kan skabe en
+fiktiv verden, der i for høj grad minder om virkeligheden. Det kommer også an på hvilken form af
+historisk inspireret fiktion, der er tale om. Det er nok nemmere for en læser at adskille den fiktive
+verden fra den virkelige, hvis der er tale om historisk inspireret fantasylitteratur. Hvorimod det kan
+blive lidt mere kompliceret, hvis der er tale om fiktion, der bygger på virkelige historiske tekster og
+begivenheder. Et eksempel er dramatiseringen af vikingekongen Ragnarr Lodbrok og hans sønners
+togter til England og Frankrig, hvor man i seks sæsoner af serien ’Vikings’(2013)23 bliver taget ind
+i en fiktiv verden af det 9. århundrede. Læser man professor for arkæologi på University of
+Chester, Howard Williams’ artikel24, hvor han analyserer seriens historiske nøjagtighed, er der
+både flere nøjagtige fremstillinger af datidens nordiske samfund, men også mange unøjagtigheder
+når det kommer til historiske begivenheder. Her bidrager tv-serien både til at udbrede vikingetiden,
+og den historiske periode, til den almene seer, men kan derimod sandsynligvis også gå ind og
+påvirke deres opfattelse af historiske begivenheder. Hvis man ikke læser historiebøger, men at den
+eneste form for historisk formidling man bliver udsat for, er fiktion, er det forståeligt hvis det er
+med til at forme ens opfattelse af fortiden. Man kan her sammenligne moderne forfattere af fiktion
+som ’Vikings’, med forfattere som Ejnhart og Froissart, i det at de alle faktisk er med til at forme
+samtidens menneskers opfattelse af fortiden. I dag, er det muligvis grundet en mangel på historisk
+interesse, når der er så mange andre former for læring og underholdning. Hvor det i Ejnharts og
+Froissarts tider handlede mere om en verden hvor man ikke var nær så informeret som i dag, og at
+man overhovedet ikke havde den teknologiske udvikling som man har i dag. Ser man på
+fiktionsverdener som George R. R. Martins Westeros, som er tydeligt inspireret af Middelalderen,
+men som tager udgangspunkt i en fiktiv verden, med fiktive karakter, og fiktive væsener, har man
+som forfatter ikke samme forpligtigelse til læserens opfattelse af historien. Den almene læser vil
+ikke tro at der var drager i Middelalderen, fordi der er i Westeros. Man kunne derimod godt
+
+23 Bo, Stakka - Vikings (2013)
+24 Williams, Harold - https://www.historyextra.com/vikings: The real Vikings: the early medieval world behind
+
+the hit drama (2020)
+
+18
+
+komme til at tro på at Ragnarr Lodbrok var bror til grundlæggeren af Normandiet, Rollo, da de
+bliver fremstillet som brødre i serien. I virkeligheden levede de forskudt af hinanden, men denne
+fremstilling har passet bedre i et tv-drama, så man er gået med det. Det er derfor vigtigt at være
+varsom som seer, når det kommer til fiktion, der bygger på virkelige begivenheder, men
+overhovedet ikke i samme grad når det kommer til historisk inspireret fantasyfiktion.
+
+19
+
+Konklusion
+På baggrund af denne opgave er det rimelig at konkludere, at historisk inspireret fiktion har stor
+indflydelse på hvordan læserens opfattelse af fortiden bliver formet. Ansvaret man som forfatter, af
+historisk fiktion har i påvirkningen af modtagerens fortidsforståelse, kommer an på udgangspunktet
+af fiktionen. Man har et klart større ansvar hvis man skriver fiktion som bygger på historiske
+tekster eller begivenheder, end hvis man skriver fantasylitteratur som er inspireret af en historisk
+periode. Skriver man fiktion der bygger på historiske tekster og begivenheder, skal man være klar
+over at man påvirker læserens opfattelse af virkelige historiske begivenheder. Det er derfor vigtigt
+at finde en balance mellem virkelighed og drama. Serier som ’Vikings’ kan være med til at forme
+en ny upræcis opfattelse af hvordan verdenen egentlig så ud i denne tidsperiode. Skriver man
+derimod fantasyfiktion som er historisk inspireret, har man ikke samme ansvar, da det fiktive
+element fylder mere i denne verden og læseren dermed er klar over at det ikke er en præcis
+afspejling af virkeligheden. Grunden til at historisk inspireret fiktion er fascinerende for læseren er
+dét, at man kan leve sig ind i et helt nyt univers i en fiktiv verden, som man samtidig kan
+genkende, da den enten er stærkt inspireret af eller foregår i en historisk tidsperiode i den virkelige
+verden. Historisk inspireret fiktion giver forfatteren mulighed for både at lege med historien og
+kreere sin egen virkelighedslignende verden, med præcis de fiktive væsener som de ønsker.
+Rammen af en bestemt tidsperiode, kan ud fra hvor historisk nøjagtig man som forfatter vil være,
+sætte begrænsninger for det fiktive univers, idét man i en serie om vikinger i 800-tallet ikke ville se
+biler eller smartphones. ’A Knight Of The Seven Kingdoms’ illustrerer, med George R. R. Martins
+brug af middelalderlige træk som lenssamfund og det sociale hierarki, samt Ser Duncan The Talls
+ridderlig karakter, hvilke muligheder man har for, på fascinerende vis, at forme sit eget fiktive
+univers med tilhørende karakterer, men samtidig uden direkte at forme læserens fortidsforståelse,
+ved at finde den passende balance mellem virkelighed og fiktion. Man har altså et ansvar både som
+forfatter, men også som læser til at kunne skelne mellem fiktionsverdener og den virkelige verden.
+
+20
+
+Litteraturliste
+Internetsider:
+Jahnke, Carsten: ”Det katolske årtusind”
+www.historieportalen.systime.dk/?id=303
+Sidst besøgt (24. marts 2026)
+
+Artikler:
+Williams, Harold: ”The real Vikings: the early medieval world behind the hit drama”
+https://www.historyextra.com/period/viking/real-history-behind-drama-vikings-ragnar-lothbrok-who-howaccurate-fact-fiction/
+Sidst besøgt (26. marts 2026)
+
+Bøger:
+Knudsen, Sanne Stemann: Middelalderen historie, religion, litteratur og kunst
+Systime, 2011
+
+Egelund, Bilbo: Fantasylitteratur
+Gyldendal, 2011
+
+Martin, George R. R.: A Knight of the Seven Kingdoms
+Harper Voyager, 1998
+
+21
+
+

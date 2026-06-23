@@ -1,0 +1,150 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{George Floyd: Whanganui café wouldn't let my Māori mum use the toilet}
+\date{2020}
+\author{Colleen Maria Lenihan}
+
+\maketitle
+
+\noindent\textit{As the United States rages over the death of George Floyd, Auckland photographer and writer Colleen Maria Lenihan recalls a racist incident in Whanganui with her mother and local resident, Ihapera Te Wake.}
+
+\bigskip
+
+\noindent\linenumbers It was January 2011. I had spent the past decade living in Tokyo and was visiting my mother in Whanganui over the summer. Although Japan has amazing cuisine, arguably the best in the world (Tokyo has the highest number of Michelin-starred restaurants), I often craved New Zealand food.
+
+On my first day back, Mum and I went to a local cafe for lunch. I had a hankering for some good old Kiwi coffee-lounge stodge. A cheese-and-onion sandwich followed by a caramel slice, washed down with a nice, strong cup of tea. Maybe an asparagus roll. All very 70s.
+
+As I slid my woodgrain tray past the stacks of thin sandwiches and brightly coloured slices that now seemed so exotic and strange, my mother politely asked the woman behind the counter if she could use the restroom.
+
+\qm{No, we don't have one. Go to the Subway down the road.}
+
+Off Mum went. As I was eyeing a ham-and-tomato savoury in the pie warmer, a Pākehā woman came in and asked the same question.
+
+\qm{Yes, right this way,} was the instant response.
+
+I grew up on the North Shore in the 80s as a \qm{half-caste} who looks white, and people would be shocked that the petite brown woman who'd come to pick me up from brownies and sleepovers was actually my mother. I'd overhear my friends' parents say all manner of racist things about Māori, the gist being that we are lazy, good-for-nothing thieves. You certainly wouldn't want one in your house. Then Mum would turn up and they'd clutch their pearls and grab hold of their handbags and say, \qm{Oh}.
+
+I felt myself perspire and my pulse started to race. I fixed the server with a hard look.
+
+\qm{Why did you send my mother, a 60-year-old woman and a customer here, down the road when she asked to use the toilet? When you let the next person use it?}
+
+Another staff member came over. The racism was so blatant they didn't even try to deny it. \qm{So sorry, we're really sorry,} they said, over and over. Only to me, I might add. They never once apologised to my mother who returned a few minutes later, to find me still shaking.
+
+\qm{What's wrong, girl?} she asked.
+
+I told her what happened. She looked at me and shrugged.
+
+\qm{Don't worry about it. I'm used to it.}
+
+That broke my heart. That she was used to this treatment. She didn't even think we had to leave, but I'd lost my appetite.
+
+This racist incident wouldn't have shocked me as much growing up. I could totally relate to Jemaine Clement when he said: \qm{As a pale-skinned Māori person, I felt like a spy as a kid.} I was shocked that it would happen in 2011.
+
+I'd been out of the country for 10 years though.
+
+I remember the time Mum came to my high school to pick me up but couldn't find me, and had to ask kids on the school bus where I was. She was terribly upset because a Pākehā boy had repeatedly said to her, \qm{You're not Colleen's mother}. He wouldn't believe her and treated my mother, an adult, with total disrespect, simply because she was brown.
+
+I remember my Mum upset because my Dad had said, \qm{Don't speak that s*** in my house,} when she'd tried to teach us kids a karakia in te reo. I would deliberately mispronounce Māori place names around Pākehā friends so I didn't seem weird. Being Māori was definitely not cool when I was growing up. It even felt like something to be ashamed of.
+
+I'm so glad that times have changed. On my return to New Zealand in 2015, I saw a group of Māori with tā moko speaking te reo with each other at the airport. It looked really normal, which might be a strange thing to say. It made such a positive impression on me. However, when Taika Waititi said, \qm{New Zealand is racist as f***,} I had to agree with him.
+
+An article about the resulting furore popped up in my feed, and I commented that he was absolutely right, and explained what happened with my mother at the cafe. The majority of responses were supportive, but there were a significant number of people who made disparaging remarks and accused me of lying. One woman said that I wasn't a good daughter because, if that had happened to her mother, she would have done something about it. She demanded to know why I didn't go to the Human Rights Commission. Who has the time and energy to lay a formal complaint for every micro-aggression? This same person also said that New Zealand wasn't racist, because she had never seen it. Well, why would she experience it, being white?
+
+I know I have white privilege, precisely because I see how differently I am reacted to and treated, compared with my brown mother and brother.
+
+I wept when I watched the brutal and sadistic killing of George Floyd. The execution of a human being for being black is racism in its ultimate expression.
+
+The arming of police here in New Zealand is a serious concern for Māori and Pasifika communities. We know our people are far more likely to be killed. The statistics clearly support this. If you are Māori, you're six times more likely to have the police pull a gun on you than if you're Pākehā. Also consider the shocking fact that Māori women are the most incarcerated indigenous women in the world.
+
+Even so, I believe New Zealand is a relatively tolerant country, a view I hold after having lived in Japan for 15 years, a deeply xenophobic society, followed by a year in the United States.
+
+I also believe that the rights and recognition that Māori receive now directly reflect the tenacity and fighting spirit of our people, not this mistaken idea that here in New Zealand we've treated our natives well compared with other countries. When people in the dominant culture who don't know what it's like to be colonised, and don't understand the intergenerational trauma and systemic racism that naturally follows such oppression would say things like \qm{Get over it, it's in the past}, our people didn't give up. They endured lengthy legal battles and made sustained efforts to get some form of redress for what was violently ripped away and stolen. Māori people have fought for each and every gain that has been made, and will continue to fight, and will continue to flourish.\source{https://www.nzherald.co.nz/nz/colleen-maria-lenihan-on-george-floyd-whanganui-cafe-wouldnt-let-my-maori-mum-use-toilet/FYZMA55UKVANYOBECFSMU3D5DU/}
+\end{document}

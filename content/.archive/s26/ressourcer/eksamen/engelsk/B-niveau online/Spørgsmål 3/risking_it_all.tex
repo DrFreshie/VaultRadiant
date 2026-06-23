@@ -1,0 +1,185 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{Risking it all: migrants brave Darién Gap in pursuit of the American dream}
+\date{April 28, 2022}
+\author{Laurence Blair}
+
+\maketitle
+
+\noindent\textit{Last year a record 133,000 people risked their lives on a perilous trek through a lawless jungle -- and the numbers keep rising.}
+
+\bigskip
+
+\noindent\linenumbers José Moreno and Katerin Huertas have walked and hitchhiked hundreds of miles. Moreno, 20, wears beach sandals and carries a backpack stuffed with baby clothes, nappies and oat milk. Huertas, 22, carries their seven-month-old son, Kylean, strapped to her chest.
+
+They cross a knee-deep river and scramble up a muddy slope in the sweltering heat. But the worst of their journey is yet to come. Ahead of them lies one of the most dangerous border crossings in the world: the Darién Gap, a lawless, roadless region of mountainous jungle, venomous snakes, fast-flowing rivers and murderous drug traffickers that connects South and Central America.
+
+According to official data from the Panama government shared with the Guardian, more than 13,000 people illegally crossed from Colombia into Panama via the Darién Gap in the first three months of 2022: nearly triple the number during the same period last year. About 133,000 people made the journey in 2021 -- the highest on record for any year by far.
+
+The latest figures have alarmed human rights organisations and UN officials, who fear numbers will continue to rise.
+
+They warn that the combination of wars and conflict, the climate crisis and the fallout from the Covid pandemic is sending a constant flow of tens of thousands of desperate, vulnerable people from around the world through the Darién Gap -- which only a few hundred migrants a year would have braved a decade ago.
+
+\qm{There is serious concern that the numbers could go up very significantly,} says Michele Klein Solomon, regional director for the UN's International Organization for Migration. \qm{We don't see this abating.}
+
+Many of the migrants are robbed, raped and murdered by traffickers and armed groups. Women sometimes give birth along the way. About a quarter of those making the journey are children, most of them under five.
+
+\qm{There's no such thing as a safe route through the Darién,} says Klein Solomon. At least 51 people died trying to cross the region in 2021, she says, adding: \qm{We know that's a very significant underestimate.}
+
+The Guardian accompanied migrants as they set out from Capurganá -- a small beach town popular with Colombian tourists on the south-eastern edge of the Darién, accessible only by air or sea -- into the jungle.
+
+So far this year, about a third are from crisis-torn Venezuela, with nearly as many from Haiti. Others come from as far as Senegal, the Democratic Republic of the Congo, Bangladesh, Uzbekistan and China. Most are groups of young men, or families with children.
+
+Moreno and Huertas are part of a group of about 20 people heading north, \qm{for a better future for our children}, says Moreno. \qm{Getting to the United States, American soil -- the American dream.}
+
+The situation back home in Venezuela is \qm{terrible}, he adds. \qm{Crime is rising, the cost of food is rising, and salaries aren't going up.} He worked for nine months selling fruit on the street in Chile and Peru.
+
+Not far behind the Venezuelans on the trail is a group of seven people -- including three children aged between one and three -- from Haiti.
+
+Shiller Rebi, 50, and Herold Louis, 41, spent three years working on construction sites in Santa Catarina, Brazil, to raise enough money for the trek north with their families.
+
+\qm{Haiti is in many crises,} says Rebi. \qm{Economic crisis, a presidential crisis \ldots{} We don't have work, we can't earn money to eat, to pay for school.} They hope to reach Mexico and then, maybe, the United States.
+
+Also making the journey are two families from Angola. Nine months earlier, Simão Vieira had fled from the African country, and his job at a telecoms company, after he was attacked during an inter-ethnic conflict. \qm{They were going to kill me,} he says.
+
+In Brazil, he had life-saving surgery. But his family experienced racism and struggled to make a living.
+
+Vieira, his wife, Ruth and their daughter, Jacira, 12, are now bound for \qm{any country that receives us and treats us well}.
+
+Back in Capurganá, taxi drivers shuttle migrants to a camp on the outskirts of town as soon as they step off the boat.
+
+\qm{We want to help them,} says Carlos Ballesteros, president of a local civic group. The rudimentary compound of breeze blocks will soon include a campsite, a kitchen and a shop, ready to cater to 1,000 people daily. \qm{Everyone's earning a little bit of cash,} he says.
+
+Here, migrants are told what to expect in the jungle -- and encouraged to travel light.
+
+\qm{In the jungle you will get to know the dark side of everyone. You have a dream, but you are not obliged to go,} one local organiser tells a subdued group of Venezuelans, including Moreno and Huertas.
+
+Then they are left to haggle with some of the 180 local people working as porters and self-described \qm{guides}, who charge as much as \$120 (£95) for each person.
+
+The Venezuelans insist they can only scrape together 400,000 Colombian pesos (£80) in total, but convince someone to take them as far as the border with Panama. There, they will be handed over to indigenous Guna guides.
+
+\qm{I'm not doing harm to anyone,} says Hermán Colina, a farmer in rubber boots with a machete at his hip who has grudgingly agreed to accompany the group. He had himself fled poverty and violence elsewhere in Colombia -- four of his brothers were killed by guerrillas, he says.
+
+According to Colina, the route has become more organised, safer and quicker, in contrast to chaotic scenes last year, when tens of thousands of migrants were camped in nearby towns. It now takes four or five days, down from more than a week. Colina claims that he has rescued migrants with broken bones and dispatched them to faraway hospitals free of charge.
+
+But UN officials and local rights organisation workers say that such activities amount to human trafficking -- and that guides often extort, sexually assault and abandon their clients. Katiara Mesa, an official in the mayor's office in Capurganá, says they have received no reports of such abuses -- but concedes that migrants have no way of raising the alarm.
+
+An alternative route by sea to Panama also carries deadly risks. In October, three people died and at least six disappeared -- including three children -- after an overloaded boat sank while carrying about 30 people from Haiti, Venezuela and Cuba. Several of them were buried in an overgrown corner of the local cemetery.
+
+Those that make it to Panama still face a journey of 2,000 miles across half a dozen borders to reach the US. In March, US authorities arrested 210,000 people at the border -- the highest monthly total in 20 years. Half of those were deported.
+
+The US should make it much easier for refugees and temporary workers to get visas in their home countries, say experts.
+
+\qm{You shouldn't have to make it all the way to the US to claim asylum. It's insane, and only benefits the smugglers,} says Adam Isacson, of the Washington Office on Latin America (Wola), a US human rights organisation.
+
+Panama also bears responsibility for the lawlessness of the Darién, says Isacson. \qm{It's 60 miles of trail. Why is there not a single policeman there? You can't leave people unprotected for that long.}
+
+Klein Solomon says Panama and other host countries such as Brazil, Colombia and Chile need more international funding to receive and integrate migrants. \qm{They haven't got the resources,} she says.
+
+None of the many dangers -- or the risk of deportation at their destination -- deter the group of Venezuelans from the journey.
+
+\qm{We hope all this effort isn't in vain,} says Huertas, hoisting her backpack again and checking on her baby. \qm{To have the opportunity to get ahead, to work, to give the kids a good future. That's the most important thing, right?}\source{https://www.theguardian.com/global-development/2022/apr/28/risking-it-all-migrants-brave-darien-gap-in-pursuit-of-the-american-dream}
+\end{document}

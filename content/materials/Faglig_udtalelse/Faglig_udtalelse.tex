@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{letter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\geometry{margin=2.5cm}
+\definecolor{letterblue}{RGB}{30, 89, 111}
+\let\letterclassopening\opening
+\renewcommand{\opening}[1]{\letterclassopening{#1}\vspace{2em}}
+\renewcommand{\closing}[1]{\par\vspace{2em}\noindent #1\par\vspace{1em}\noindent\fromsig\par}
+
+\signature{Anders Thaysen}
+\address{
+{\color{letterblue}\vestb Anders Thaysen}
+}
+\date{\vest\today}
+
+\begin{document}
+
+\begin{letter}{}
+\opening{Kære ledelse på Næstved Gymnasium,}
+
+Write your letter here.
+\closing{Venlig hilsen,}
+
+\end{letter}
+
+\end{document}

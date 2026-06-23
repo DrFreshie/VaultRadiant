@@ -31,9 +31,11 @@ import HomeNav from "./HomeNav.tsx"
 import Slide from "./Slide"
 import DappledLight from "./DappledLight"
 import DappledLightScript from "./DappledLightScript"
+import FigureViewer from "./FigureViewer"
 export {
   DappledLight,
   DappledLightScript,
+  FigureViewer,
   LessonLayout,
   ConditionalContent,
   ArticleTitle,

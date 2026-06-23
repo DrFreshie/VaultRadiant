@@ -1,0 +1,145 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\title{Superman and Me}
+\date{1998}
+\author{Sherman Alexie}
+
+\maketitle
+
+\noindent\linenumbers I learned to read with a Superman comic book. Simple enough, I suppose. I cannot recall which particular Superman comic book I read, nor can I remember which villain he fought in that issue. I cannot remember the plot, nor the means by which I obtained the comic book. What I can remember is this: I was 3 years old, a Spokane Indian boy living with his family on the Spokane Indian Reservation in eastern Washington state. We were poor by most standards, but one of my parents usually managed to find some minimum-wage job or another, which made us middle-class by reservation standards. I had a brother and three sisters. We lived on a combination of irregular paychecks, hope, fear and government surplus food.
+
+My father, who is one of the few Indians who went to Catholic school on purpose, was an avid reader of westerns, spy thrillers, murder mysteries, gangster epics, basketball player biographies and anything else he could find. He bought his books by the pound at Dutch's Pawn Shop, Goodwill, Salvation Army and Value Village. When he had extra money, he bought new novels at supermarkets, convenience stores and hospital gift shops. Our house was filled with books. They were stacked in crazy piles in the bathroom, bedrooms and living room. In a fit of unemployment-inspired creative energy, my father built a set of bookshelves and soon filled them with a random assortment of books about the Kennedy assassination, Watergate, the Vietnam War and the entire 23-book series of the Apache westerns. My father loved books, and since I loved my father with an aching devotion, I decided to love books as well.
+
+I can remember picking up my father's books before I could read. The words themselves were mostly foreign, but I still remember the exact moment when I first understood, with a sudden clarity, the purpose of a paragraph. I didn't have the vocabulary to say "paragraph," but I realized that a paragraph was a fence that held words. The words inside a paragraph worked together for a common purpose. They had some specific reason for being inside the same fence. This knowledge delighted me. I began to think of everything in terms of paragraphs. Our reservation was a small paragraph within the United States. My family's house was a paragraph, distinct from the other paragraphs of the LeBrets to the north, the Fords to our south and the Tribal School to the west. Inside our house, each family member existed as a separate paragraph but still had genetics and common experiences to link us. Now, using this logic, I can see my changed family as an essay of seven paragraphs: mother, father, older brother, the deceased sister, my younger twin sisters and our adopted little brother.
+
+At the same time I was seeing the world in paragraphs, I also picked up that Superman comic book. Each panel, complete with picture, dialogue and narrative was a three-dimensional paragraph. In one panel, Superman breaks through a door. His suit is red, blue and yellow. The brown door shatters into many pieces. I look at the narrative above the picture. I cannot read the words, but I assume it tells me that "Superman is breaking down the door." Aloud, I pretend to read the words and say, "Superman is breaking down the door." Words, dialogue, also float out of Superman's mouth. Because he is breaking down the door, I assume he says, "I am breaking down the door." Once again, I pretend to read the words and say aloud, "I am breaking down the door" In this way, I learned to read. This might be an interesting story all by itself. A little Indian boy teaches himself to read at an early age and advances quickly. He reads "Grapes of Wrath" in kindergarten when other children are struggling through "Dick and Jane." If he'd been anything but an Indian boy living on the reservation, he might have been called a prodigy. But he is an Indian boy living on the reservation and is simply an oddity. He grows into a man who often speaks of his childhood in the third-person, as if it will somehow dull the pain and make him sound more modest about his talents.
+
+[\ldots]
+
+Despite all the books I read, I am still surprised I became a writer. I was going to be a pediatrician. These days, I write novels, short stories, and poems. I visit schools and teach creative writing to Indian kids. In all my years in the reservation school system, I was never taught how to write poetry, short stories or novels. I was certainly never taught that Indians wrote poetry, short stories and novels. Writing was something beyond Indians. I cannot recall a single time that a guest teacher visited the reservation.
+
+There must have been visiting teachers. Who were they? Where are they now? Do they exist? I visit the schools as often as possible. The Indian kids crowd the classroom.
+
+Many are writing their own poems, short stories and novels. They have read my books.
+
+They have read many other books. They look at me with bright eyes and arrogant wonder. They are trying to save their lives. Then there are the sullen and already defeated Indian kids who sit in the back rows and ignore me with theatrical precision.
+
+The pages of their notebooks are empty. They carry neither pencil nor pen. They stare out the window. They refuse and resist. "Books," I say to them. "Books," I say. I throw my weight against their locked doors. The door holds. I am smart. I am arrogant. I am lucky. I am trying to save our lives. 
+\end{document} 

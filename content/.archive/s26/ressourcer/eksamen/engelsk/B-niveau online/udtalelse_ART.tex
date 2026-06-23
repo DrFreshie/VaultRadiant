@@ -1,0 +1,44 @@
+\documentclass[11pt,a4paper]{letter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\newcommand{\qm}[1]{``#1"}
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\geometry{margin=2.5cm}
+\definecolor{letterblue}{RGB}{30, 89, 111}
+\let\letterclassopening\opening
+\renewcommand{\opening}[1]{\letterclassopening{#1}\vspace{2em}}
+\renewcommand{\closing}[1]{\par\vspace{2em}\noindent #1\par\vspace{1em}\noindent\fromsig\par}
+
+\signature{Anders Thaysen}
+\address{
+{\color{letterblue}\vestb Anders Thaysen}
+}
+\date{\vest\today}
+
+\begin{document}
+
+\begin{letter}{}
+\opening{Kære Hamza,}
+
+Til din eksamen havde vi en dialog om teksten, hvor du desværre ikke fik vist at du \qm{behersker et sammenhængende og forholdsvis flydende engelsk med relativ høj grad af grammatisk korrekthed}, som er et af bedømmelseskriterierne. Der var desværre mange meningsforstyrrende grammatiske fejl og udtale vanskligheder, som gjorde store dele af dit oplæg uforståelig. De kommunikative vanskeligheder gjorde det også svært for dig at vise din tekstforståelse og dine analytiske evner. Din vurdering er såeledes ikke baseret udelukkende på dine sproglige evner, da de to ting i dit tilfælde hænger uløseligt sammen.
+
+De basalsproglige vanskeligheder ved f.eks. stedord som \qm{he/she}, og \qm{his/her}, samt udtale vanskligheder ved almindelige ord som f.eks. \qm{alive} gjorde at vi i størstedelen af tiden fokuserede på at prøve at forstå hvad du sagde, og vi når i løbet af eksamination derfor ikke op på et analyserende plan, men forbliver på et lidt for basalt redegørende niveau i vores samtale.
+
+Dette er desværre ikke tilstrækkeligt og du får derfor karakteren 00, som netop gives for \qm{den utilstrækkelige præstation, der ikke demonstrerer en acceptabel grad af opfyldelse af fagets mål}.\footnote{\href{https://www.retsinformation.dk/eli/lta/2007/262}{Bekendtgørelse nr. 262 af 20/03/2007, \S 7.}}
+ 
+\closing{Venlig hilsen,}
+
+\end{letter}
+
+\end{document}

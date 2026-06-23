@@ -1,0 +1,159 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Undocumented, Yet Hopeful}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{January 20, 2018}
+\author{Sandy Rivera}
+
+\maketitle
+
+\noindent\linenumbers Good afternoon. Buenas tardes.
+
+My name is Sandy Rivera. I am from Tamaulipas, Mexico. I am 20 years old. I am a junior at IUPUI aspiring to be an elementary school teacher. I am a sister, I am a daughter, I am a friend, I am a student. I am a proud Latina woman. But importantly, I am undocumented and unafraid.
+
+First and foremost, I would like to thank God for giving me the opportunity to stand here in front of you all today — to not only share my personal story as an immigrant woman, but to stand in solidarity with each and every one of you.
+
+My story begins in 2002, as I migrated to the United States with my mother and older brother on a tourist visa. After many years, we would finally be reunited with my father, who had been working in the United States since the age of 18 to provide for his family back in Mexico. Unlike most, my journey to the United States fell on the easier side. I was able to travel on a bus and safely cross the border. But like most immigrants, many sacrifices, hardships, and the uncertainty for the future have gotten me to where I am today.
+
+Growing up, I was aware of my status here in the United States, but I chose to hide in the shadows by assimilating to American societal values and expectations. This assimilation created a rift between who I was and who I was meant to be. As a young child, until the time I reached high school, I made the decision to hide a part of me that I didn't want to accept. I was afraid. I was ashamed. And ultimately I feared what people would think of me if they were to find out.
+
+It wasn't until my high school beginnings that I was forced to face a part of me that I had buried. After many college career fairs and conversations with both friends and teachers, it was then that I realized that I would not be able to have my first job, my license, and my first car — all things that were considered milestones for the typical American high school student. But most importantly, I realized that despite all the sacrifices and efforts made by my parents, I would fail to grasp onto the opportunity and dreams that they hoped I would be able to attain by bringing me to the United States.
+
+Immigrant parents are the original Dreamers. They left their homes. They left their families. They left all they ever knew for their children. Immigrant parents have already done the hard part; it is up to us to continue to pave the way for the next generations to come.
+
+So once again I say: Immigrant parents are the original Dreamers. They sacrificed all their dreams in order for us to live ours.
+
+On August 15, 2012, the program Deferred Action for Childhood Arrivals — also known as DACA — was enacted. DACA created a pathway for me to attain all the dreams I thought were far beyond my reach. Through DACA I was not only able to bring benefit upon myself, but I was also able to give back to the only country I have ever known as home.
+
+On September 5, 2017, the DACA program was rescinded by the Trump administration. But just because it was rescinded, it did not mean that my dreams would be placed at a halt. I stand here before you today with more hope than I have ever had, despite the current administration — despite the current challenges that have delayed the progress towards clean, comprehensive, and proper immigration reform.
+
+To everyone that stands here today: know that our fight is far from over. We must continue to fight for those who have come before us and for those that will come after us. We must fight for our brothers and sisters who face oppression. We must continue to fight for those who live in the shadows. We must continue to fight for those without voice.
+
+Today I stand before you undocumented, unafraid, and unapologetic. Today I am now aware of who I am meant to be. Today I stand before you as a proud Latina woman with a message that I wish I would have gotten as a little girl:
+
+Keep pushing forward regardless of the odds placed against you.
+
+In life, we must face uncertainties in order to persevere. It is okay to be afraid. It is okay to make mistakes. It is okay to be human. You are not defined by whatever category society places you in. You are defined by what makes you, you. You are strong, beautiful, independent, passionate, selfless, and resilient. You are a woman.
+
+\bigskip
+\noindent\textit{Source: National Immigrant Justice Center, January 20, 2018.}
+
+\end{document}

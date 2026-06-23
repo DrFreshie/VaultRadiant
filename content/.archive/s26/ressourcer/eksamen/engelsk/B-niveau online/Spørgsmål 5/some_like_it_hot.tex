@@ -1,0 +1,132 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{Some Like It Hot: Hispanics and the American Melting Pot}
+\date{May 17, 2012}
+\author{Guy Garcia}
+
+\maketitle
+
+\noindent\linenumbers As the number and influence of Hispanics in the U.S. has steadily increased in recent decades, they have been celebrated and derided, welcomed and deported, courted for their dollars and lambasted for clinging to their culture even as they are bombarded with ads for the latest pseudo-enchilada at Taco Bell.
+
+Hispanics have been sliced and diced by age, size, and gender. They have been measured by how they look and what they buy, what language they speak, where they live, and whom they vote for.
+
+But what some people really want to know is: Do they melt? Specifically, are they following the traditional model of \qm{melting pot} Americanization, or are they, as some recent studies suggest, impervious to the homogenizing foundry of acculturation? The answer to that question has important implications not just for Hispanics, but also for the social and economic well-being of all Americans.
+
+With the 2012 presidential elections looming, and minority births outnumbering those of non-Hispanic whites for the first time in U.S. history, the argument over the nature and future of Hispanic acculturation and identity is reaching a crescendo, with plenty of data and emotion on both sides of the debate.
+
+New studies by Nielsen and EthniFacts make the case that Latinos in the U.S. will not \qm{disappear into the melting pot, as many other immigrant groups have done before,} but instead are becoming \qm{the first major immigrant group to exhibit cultural sustainability -- successfully integrating into American culture while retaining major elements of Latino culture on a long-term basis.}
+
+The notion that Hispanics in the U.S. are a distinct, culturally-contained population with its own tastes, language, and needs has long been embraced by corporations eager to get their share of Latino buying power, which is projected to rise from \$1 trillion today to \$1.5 trillion by 2050.
+
+Yet others find the idea of a Latino-American subculture not only dubious, but downright alarming. A chorus of voices, led by conservative politicians like Rick Santorum and Marco Rubio, warns that Hispanics who refuse to voluntarily jump into the melting pot should be ready to feel a legislative nudge. The underlying agenda is that the goal of all immigrants should be to discard their ethnic baggage and disappear, or melt, into the great cultural cauldron of America.
+
+During the fifth Republican presidential debate, Santorum, the former senator from Pennsylvania, suggested that one way the GOP could appeal to Hispanic voters was by passing a law to make English the official language of the United States. \qm{My father and my grandfather came to this country not speaking a word of English, but it was the greatest gift to my father to have to learn English so he could assimilate into this country,} said Santorum, whose father was an Italian immigrant. \qm{We are a melting pot, not a salad bowl, and we need to continue that tradition.}
+
+[Santorum's aversion to salads is no doubt rooted in the recognition that non-Hispanic whites will become a minority by 2045 and that multicultural populations already make up a plurality in many of the biggest U.S. cities and states. Never mind that Hispanics have consistently shown a rate of English adoption that matches that of earlier immigrants from Europe and other countries.
+
+A joint survey of Latinos by the Pew Hispanic Center and the Kaiser Family Foundation in 2002 found a high degree of assimilation among American Hispanics, and no measurable difference in their ability to learn and use English. More recently, results from the 2008 American Community Survey showed that the number of people who reported speaking English \qm{very well} in California and Texas had actually increased between 2000 and 2007.]
+
+The concept of an American melting pot as the symbol of a universal smelting of various races and cultures into a new, national amalgam dates back as far as 1782 when J. Hector St. John de Crevecoeur alluded to the process in his book, \textit{Letters from an American Farmer}.
+
+\qm{What then is the American, this new man?\ldots{} He becomes an American by being received into the broad lap of our great Alma Mater. Here individuals of all nations are melted into a new race of men, whose labors and posterity will one day cause great changes in the world.}
+
+Great changes have certainly come, but the notion of the U.S. as a homogeneous monosocial soup no longer fits the facts. The flaw in the melting-pot definition of America is its tacit assumption that acculturation takes places only in one direction, and that the nation's newcomers assimilate into is a static, fixed entity. What Santorum and other melting-pot metaphorians fail to understand is that the pot, in effect, also melts.
+
+Throughout U.S. history, when immigrants have brought the flavors and textures of their homelands into the process of becoming American, the encounter has been mutually beneficial -- and mutually transformational. The ability of the American mainstream to accommodate new groups into its political and social fabric has always led to a reformulation -- and redefinition -- of the mainstream itself. This dynamic relationship between perimeter and core, insider and outsider, is what allows America to absorb immigrants without sacrificing its stability or social cohesion. The mutual transformation of native and newcomer is the active ingredient in the American social experiment.
+
+In fact, a close look at the results of the 2010 census shows that Hispanics and other multicultural populations are evolving in ways that have nothing in common with pots or salads. The census reveals a steep rise in the percentage of respondents who selected one or more race or ethnicity, reflecting a new form of identity that is contextual, multidimensional, and malleable.
+
+As America's Hispanic population becomes increasingly native born, they will expand the ranks of those who reject labels and definitions that no longer describe them. They will speak English, and, if they're lucky, several other languages, too. They will continue to mingle and mix with Asians, African-Americans and whites; and they will use technology to explore and express their individual identity and reach out to communicate and collaborate across national and ethnic borders, further redefining not just what it means to be Hispanic, but also what it means to be American.
+
+In an age where social media, instant language translation software and online avatars are melding and blurring the boundaries between race, ethnicity, and nationality, people are not so much melting as they are morphing, merging, and mashing.
+
+Young Americans see no contradiction in being many things at once, and they can reinvent themselves at will, instantly and globally. They don't need to melt to know that this country is big enough for all of us.\source{https://www.theatlantic.com/politics/archive/2012/05/some-like-it-hot-hispanics-and-the-american-melting-pot/427461/?utm_source=copy-link&utm_medium=social&utm_campaign=share}
+\end{document}

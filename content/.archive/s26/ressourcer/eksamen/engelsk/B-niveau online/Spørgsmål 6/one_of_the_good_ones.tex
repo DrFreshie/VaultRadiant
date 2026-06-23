@@ -1,0 +1,129 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{One of the Good Ones}
+\date{2019}
+\author{Moria Lomas}
+
+\maketitle
+
+\noindent\linenumbers I sat on the floor of the kitchen, watching the tuatua. They were sitting in seawater in the green bucket. The tuatua bucket. The mop-the-floor bucket was blue. It was high tide, and they all had their feeding tubes out, like little sea anemones on stalks. Tuatua still knew the tides, even if they were in a bucket sitting on the floor.
+
+I had collected them in the morning when the tide was low. I wriggled my feet in the soft sand, ankle deep in water, feeling for the hard edge of a shell. Then I had to act fast, squatting down and pushing my fingers under them before they could get away and dig deeper into the bed. When I pulled them up, they were still poking their tongues out and spat water at me. If they were big enough, I'd run back and put them in the bucket pushed down into the wet sand, lapped by the ocean. If they were babies, I'd drop them back in the water and watch them roll backwards and forwards with the waves. Sometimes, I'd rescue them and poke them upright so they could dig down again before the seagulls came and got them.
+
+I picked up the bucket by the handle and spun it round. The bucket moved, but the tuatua stayed in the same place. They didn't even notice the bucket being moved round. [\ldots]
+
+I love tuatua. When Uncle Roy and Dad arrived at the bach, we'd have them for dinner on fresh bread and butter. Mum and I had walked down to the bakery together to buy the square white loaf. [\ldots]
+
+The sun warmed my arms and legs as I sat on the deck waiting for Dad and Uncle Roy. Uncle Roy worked for a company. He was the smart one; he wore a suit and lived in a flash house and owned the bach. Mum and I stayed there all summer holidays to keep Aunty Shirley company. The men came down on the weekends. Sometimes, my cousins, Justin and Michael, would come back with them, and then I'd have to move out of the bunkroom and onto the divan to sleep. More often than not, they'd stay in Auckland though. [\ldots].
+
+Dad worked at the railway workshops in Ōtāhuhu. I'd been to his work. I had to sit still when I went with him. I sat on the workbench and watched, breathing in the oil and diesel. I liked the smell, and I liked the big strong men in dirty, faded blue overalls and work boots. They would come to talk to Dad and say \qm{She yours?} and Dad would say \qm{Yep} and I would sit still and proud because he was the boss. Dad would go off with the men to look at the engines, and he'd tell them what to do, and they'd do it. I sat still on the bench and watched them working on the big engines and breathed in the fumes.
+
+After we had the tuatua for dinner, I sat on the divan in the window half-reading my book. The grown-ups sat at the table playing cards. There was a clunk clunk as Dad opened another beer each for him and Uncle Roy. The conversation flowed over me as I traced the flower pattern on the squab with one finger.
+
+\qm{Can't believe they've got a quota for Maoris in med. school. Just makes it harder for good kids like Justin. Bloody ridiculous. This is New Zealand -- we're all New Zealanders.} Uncle Roy's voice was getting louder. \qm{Bloody Maoris all the same. Just useless. Can't get into university unless they get a hand-up.}
+
+I put my book down, curled my toes in and hid my hands inside my bent knees as he continued, \qm{Though it's not really their fault. Didn't even have a written language. No idea -- like those ones bloody living on Bastion Point.}
+
+I glanced over at Mum, but she was looking down, focused on the cards in her hand. Uncle Roy caught my eye. \qm{Not you, love.} He winked at me. \qm{You're one of the good ones.}
+
+I picked up my book and pretended to read, but instead thought about those Māori. The bad ones. Not the good ones like Mum and me. The ones that were taking Justin's place at med. school. The ones you saw on TV protesting, making trouble. The lazy ones on the dole. I thought about my cousins, and Mrs Castles at school, and Grandad and Nan, and my friends and the kids in my class. I didn't know any of the bad ones. I didn't know where they were.
+
+In the morning, after breakfast, Uncle Roy called me over and pressed fifty cents into my hand. \qm{Go down to the dairy and get yourself a treat.} I turned it over in my hand, looking at the Endeavour -- Captain Cook's ship. He was the first one that came to New Zealand. I skipped out to the footpath holding the money tight. Fifty cents.
+
+I walked carefully to avoid the cracks and lines in the path and thought about what I could buy. I had enough to buy a K Bar, a packet of mixed lollies and a spaceman drink. As I went past the houses, I trailed the no-money hand on the plants and fences at their fronts -- the bumpy up and down of the white wooden fence, the smooth of the metal pipes, bouncing my hand up over the twisted wire netting before it could scratch me, stroking the leaves of the hedges that feathered and flicked under my palm. I'd never had a spaceman drink before. I'd never had fifty cents before.
+
+The spaceman drinks were on a stand just inside the front door by the ice-block freezer. I carefully looked through them to find the yellow one. If they didn't have any pineapple, I'd have raspberry. I really wanted to try pineapple, but maybe orange would be good instead of raspberry if there wasn't any.
+
+\qm{Hey! You!} The harsh voice jarred me from my thoughts. I looked up at the man behind the counter. \qm{Leave those alone and get out. I've had enough of you kids stealing.} The edge of the fifty cents dug into my palm as I stood still, staring at him. \qm{I've told you before -- get out!} he continued. \qm{Bloody thieving kids. Bloody thieving Maoris. I'm sick of it. Get out!}
+
+I put the drink I was holding back on the stand and walked out of the shop, swallowing hard to stop the tears, my legs shaking. As I walked home, I counted my breaths like I did when Mr Andrews yelled at the class because the boys were being naughty. One, two, three, four. One, two, three, four. I tried to run my empty hand over the hedge, but it wasn't feathery anymore. It just felt like hard sticks and shiny leaves now. I'd never had a spaceman drink.
+
+\end{document}

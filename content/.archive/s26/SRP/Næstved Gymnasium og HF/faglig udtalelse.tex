@@ -1,0 +1,48 @@
+\documentclass[11pt,a4paper]{letter}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+	\newcommand{\qm}[1]{“#1”}
+
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\geometry{margin=2.5cm}
+\definecolor{letterblue}{RGB}{30, 89, 111}
+\let\letterclassopening\opening
+\renewcommand{\opening}[1]{\letterclassopening{#1}\vspace{2em}}
+\renewcommand{\closing}[1]{\par\vspace{2em}\noindent #1\par\vspace{1em}\noindent\fromsig\par}
+
+\signature{Anders Thaysen}
+\address{
+{\color{letterblue}\vestb Anders Thaysen}
+}
+\date{\vest\today}
+
+\begin{document}
+
+\begin{letter}{}
+\opening{Kære ledelse på Næstved Gymnasium,}
+
+Denne klage giver for mig ikke anledning til at genoverveje vores daværende vurdering af standpunkt.
+
+Det er korrekt at min computer løb tør for strøm undervejs i eksaminationen. Jeg kan dog ikke vedkende mig at det skulle have \qm{påvirket} forløbet på nogen måde. Hændelsen varede ca. 7 sekunder, og mit fokus var uændret undervejs og efterfølgende.
+
+Jeg er ikke enig i elevens beskrivelse af dialogen i eksaminationsforløbet. Den manglende forståelse bundede efter min overbevisning i en faglig usikkerhed hos eleven. Engelskfaglige spørgsmål om f.eks. afsenderforhold i forbindelse med fremstilling af Lance Armstrong i analyseobjektet blev ikke forstået. Ej heller videnskabsteoretiske spørgsmål om de engelskfaglige metoders rolle i besvarelsen af opgavens problemformulering blev forstået.
+
+Det er korrekt at det var vores vurdering at analysen i opgaven ikke var tilstrækkeligt \qm{dybdegående}, og at elevens oplæg ikke ændrede ved denne vurdering. Analysen af dokumentaren var f.eks. uden engelskfaglige begreber, og dens konklusioner var vage og oftest helt uden belæg. 
+
+Opgaven har dog, som der også står i klagen, en slags besvarelse af \qm{alle dele af opgaveformuleringen}, og jeg fastholder derfor, at karakteren 02 er den rette karakter for den pågældende elev.
+
+\closing{Venlig hilsen,}
+
+\end{letter}
+
+\end{document}

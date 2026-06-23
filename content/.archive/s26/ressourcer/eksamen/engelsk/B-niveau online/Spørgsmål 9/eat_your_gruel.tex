@@ -1,0 +1,146 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+	\usepackage{multicol}
+	\usepackage{cellspace}
+	\setlength\cellspacetoplimit{4pt}
+	\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+	\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+	\setlength{\columnsep}{0pt}
+	\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{'Eat your gruel and be thankful for it': why the hero of {\plantin\textit{I, Daniel Blake}} is taking it to the stage}
+\date{May 24, 2023}
+\author{Simon Hattenstone}
+
+\maketitle
+
+\noindent\textit{Seven years on, Ken Loach's angriest film still shocks with its portrayal of life on benefits. It made Dave Johns a star -- but did nothing to mellow his righteous fury.}
+
+\bigskip
+
+\noindent\linenumbers With his biblical white beard and bright woolly hat, Dave Johns is unrecognisable. He looks like an Arctic explorer. It's only when he takes off the hat and reveals the familiar shiny pate that you realise it is him after all -- Daniel Blake.
+
+Before \textit{I, Daniel Blake}, Johns was a jobbing comedian. He'd not even had a bit part in a movie, never mind starred in one. Then Ken Loach's film premiered at Cannes in 2016, got a 15-minute standing ovation, won the Palme d'Or and transformed Johns' life.
+
+Since then he has played leading men in movies, written a one-man show about finding success in his 60s and has now adapted \textit{I, Daniel Blake} for the stage. It will premiere in Newcastle, where the film was set, before touring the country.
+
+Daniel Blake is a middle-aged widower who has a heart attack and is benefits-sanctioned for turning down work his doctors have declared him unfit to do. He became an everyman for our age -- shorthand for anybody on benefits screwed by the system. In an act of heroic resistance, he spray-paints \qm{I, Daniel Blake, demand my appeal date before I starve} on the side of the Jobcentre Plus building. The film, written by Paul Laverty, introduced many of us to food banks for the first time.
+
+Loach has spent his career documenting social injustice. At the time of its release, \textit{I, Daniel Blake} was described as his angriest film yet. Which makes it very angry indeed, incensed that Britain had reached its nadir with David Cameron's \qm{big society} -- people living in the world's fifth richest country reliant on charity to keep themselves from starving. Little did we know. Back then, there was only one food bank in Newcastle. Now there are nine (and 80 in the north-east). Back then, food banks were used by people struggling to survive on benefits. Now they are also used by nurses and teachers.
+
+\qm{Seven years on, I still have people in the street come up to me and say, 'Oh my God, that film Daniel Blake, how it hit a nerve,'} says Johns, now 67. We meet in Byker, a district in the east of Newcastle, where he grew up. Today, the cast are rehearsing the play with the director Mark Calvert in a former youth centre. Byker is full of formers -- former council houses, former shops, former youth centres. It was always a disadvantaged area, but, Johns tells me, when he was growing up it seemed so much more alive and hopeful. \qm{Part of the reason we're in the situation we're in is because there isn't real social housing now,} Johns says. \qm{It's all housing associations.}
+
+[\ldots]
+
+\qm{It makes me furious that in seven years, nothing has changed,} Johns says. \qm{Apart from it's got worse,} Calvert says. \qm{Austerity and Brexit were a perfect storm. And now there's the cost of living crisis. There's a line in the play when Katie says, 'I don't live, Dan, I just exist.' I wonder how many people have the same feeling.}
+
+They direct me to the sheets of paper pinned to the wall. \qm{Here are the facts,} Calvert says. And he reads them aloud. \qm{The number of emergency food parcels distributed since 2017-18 has more than doubled, from 1,354,362 to 2,986,203 in 2022-23, with more than a million food parcels provided for children. And the north-east now has the highest level of child poverty in any region across the country.}
+
+What disgusts both men is when politicians insist that \textit{I, Daniel Blake} exaggerates people's hardship. Calvert mentions a powerful BBC documentary about the Newcastle West End Foodbank. \qm{It followed a remarkable woman called Anita and her son Brett and it's soul-destroying \ldots{} Anita gets universal credit and did all the things people think people on benefits don't do -- she had three jobs. We met her last week and every other sentence she was bursting into tears.}
+
+She used to donate to the food bank a year ago and now she's using it, says Johns. \qm{She said, 'If I didn't have the food bank, I don't know what I'd do,' and you could see it. When we came out, Bryony Corrigan, who's playing Katie, said: 'I've just met the real Katie.' So when people go, 'It's not real,' you just go, 'You're living in a different world from what we are.'}
+
+When they break from rehearsals, I ask the cast what they want people to get from the play. \qm{We want to reignite awareness,} Corrigan says. \qm{A lot of volunteers at the food banks were saying people have stopped donating because they're struggling so much. And there's still a lot of shame about accessing them.} David Nellist, who plays Daniel, tells me: \qm{This play feels more relevant by the day. We should all be ashamed -- not to use them, but to have them at all.}
+
+Calvert is still deciding which political quotes to use in the show. There are so many crackers to choose from. [\ldots]
+
+There's Jacob Rees-Mogg in 2017: \qm{To have charitable support given by people voluntarily to support their fellow citizens I think is rather uplifting and shows what a good compassionate country we are.} Johns says one of his favourites is from Thérèse Coffey when she was secretary of state for health and social care for just under two months in 2022: \qm{Poor people are richer than you think.} He's getting outraged, just looking at the words.
+
+[\ldots]
+
+Both men grew up in working-class families in Newcastle and say they still have impostor syndrome working in the arts. \qm{I feel my choices have been limited by my class identity,} Calvert says. \qm{I think that is woven across the whole region.} He says that his parents still don't really understand what he does now as a director. \qm{They think I'm a teacher.}
+
+[\ldots]
+
+He [Johns] spent five years as a bricklayer after leaving school at 15 and says he was terrible -- lazy and unskilled. \qm{I remember the boss saying, 'The day you finish your apprenticeship you're out of here.'} The boss was as good as his word. \qm{The day after I came out of my indenture, they said, 'You're gone.'} He did odds and sods on building sites for years, got a job backstage at the Tyne Theatre and Opera House when he was 30 and started performing standup in his mid-30s. \qm{I sometimes see apprentices that worked with me on the building sites and they say, you were useless but you were really, really funny.}
+
+For 25 years, he just about got by as a comedian. Then he was cast in \textit{I, Daniel Blake}. \qm{I was so chuffed that when I went for the audition I was going to meet Ken Loach. I had no idea I was going to get the part, not in a million years. Then he kept calling me back. Then he offered me the part.} You sense he still really can't believe the way life has turned out.
+
+[\ldots]
+
+Johns and Calvert return to the subject of choice. Although opportunities seemed so limited when they were growing up, they did manage to pursue their chosen careers. Choice is at the heart of a civilised society, they say. And lack of choice is at the heart of \textit{I, Daniel Blake} -- and the world it depicts.
+
+Calvert says that on a recent visit to the food bank, one of the volunteers mentioned a woman who had asked for baked beans. Johns takes up the story. \qm{They were giving her some beans and it was own-brand, and she went, 'Have you not got any Heinz, because I like Heinz?' And people were going, 'You take what you're given.' Well, why should you not have choice just because you're poor and struggling?} He looks appalled. \qm{It's like, just eat your gruel and be thankful for it.}\source{https://www.theguardian.com/stage/2023/may/24/i-daniel-blake-on-stage-ken-loach-dave-johns}
+
+\end{document}

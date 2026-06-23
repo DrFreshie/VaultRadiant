@@ -1,0 +1,818 @@
+Navn:
+
+Alma Saxtoft Nielsen
+
+Fødselsdato:
+
+021206
+
+Skole:
+
+Næstved Gymnasium og HF
+
+Fag:
+
+Studieretningsprojekt, Samlet vurd. (6647--Gym bekend, )
+
+Dato for prøveaflæggelse:
+
+24-03-2026
+
+Studieretningsprojektet i 3.g 2026 – Opgaveformulering
+Elev id: 3t 02
+Elev: Alma Saxtoft Nielsen
+Fag:
+
+Vejleder:
+
+Biologi A
+
+Mads Ole Lind
+Email: mo@ngh.nu
+
+Engelsk A
+
+Susan Duvander
+Email: su@ngh.nu
+
+Område og opgaveformulering:
+Biologien bag seriemorderes adfærd
+Lav en kort redegørelse for DNA og gener, og forklar hvordan bestemte gener kan
+kode for voldelig adfærd.
+Redegør for definitionen på seriemord, samt lav en kort beskrivelse af to
+selvvalgte seriemorderes baggrund og motivation til at begå deres mord.
+Benyt en selvvalgt metode til undersøgelse af MAOA-genet – herunder giv en
+analyse af betydningen af forsøgets resultater.
+Lav en engelskfaglig analyse og fortolkning af filmen The Silence of the Lambs
+(1991) med særligt henblik på karakteristik og miljø, samt hvordan de filmiske
+virkemidler understøtter disse. Ved hjælp af selvvalgt materiale bedes du drage
+paralleller mellem fiktion og virkelighed.
+Afslutningsvis diskuteres, i et tværfagligt perspektiv, hvorvidt epigenetiske faktorer
+kan være en medvirkende årsag til seriemordernes adfærd, og hvordan arv og
+miljø spiller sammen i udviklingen af en seriemorder.
+Opgaven skal have et omfang på 15-20 normalsider og skal indeholde et 10-20 linjers resume på
+dansk, der anbringes lige e>er ?telsiden (inden indholdsfortegnelsen).
+
+BIOLOGIEN BAG SERIEMORDERES ADFÆRD
+
+SRP 2026
+3. t
+Næstved Gymnasium & HF
+Alma Saxtoft Nielsen
+Engelsk A & Biologi A
+
+Resume
+Denne opgave undersøger biologien bag seriemorderens adfærd, for at finde ud af, hvorfor de slår
+ihjel og hvad der har formet til at blive en morder. For at finde ud af dette er der taget udgangspunkt
+i hvordan MAOA-genet kan medvirke til voldelig adfærd, samt i to amerikanske seriemordere, som
+begge har haft en svær barndom der kan have indflydelse på deres voksenliv. Til at undersøge
+MAOA-genet, er der foretaget en PCR-test, som undersøger om man har genet eller ej, hvor efter
+det kan diskuteres hvorvidt man er påvirket af genet eller ej. Derudover bliver der draget paralleller
+mellem virkelighed og fiktion samt en analyse af en fiktiv spillefilm, som tager inspiration fra den
+virkelige verden og giver bedre indblik i morderen. Da der er flere faktorer som er med til
+dannelsen af seriemorderen, bliver de forskellige faktorer diskuteret, og hvorvidt de sammen vil
+spille en endnu større rolle. Opgaven konkluderer, at selvom man har et MAOA-gen med lav
+aktivitet, som kan være med til at kode for voldelig adfærd, burde der være flere faktorer i spil, for
+at genet bliver relevant for adfærden. Det bliver bevist, at opvæksten, samt de epigenetiske faktorer,
+er noget af det aller mest vigtigste, når det kommer til udviklingen af seriemorderen. Da
+barndommen er der, hvor mennesket er mest sårbart, vil det også være her hvor både arv og miljø
+omkring individet, vil påvirke senere hen i voksenlivet. Sammen med den hårde opvækst, vil
+MAOA-genet begynde at have en større betydning, når det kommer til voldelig adfærd. Det gælder,
+at jo flere faktorer der bliver påvirket, jo større er chancen for voldelig adfærd.
+
+Indholdsfortegnelse
+Indledning ............................................................................................................................................. 1
+Redegørelse ........................................................................................................................................... 2
+DNA og gener ............................................................................................................................................ 2
+Seriemorder .............................................................................................................................................. 3
+Analyse.................................................................................................................................................. 5
+PCR-forsøg ............................................................................................................................................... 5
+The silence of the lambs ............................................................................................................................ 9
+Diskussion ........................................................................................................................................... 14
+Konklusion ........................................................................................................................................... 18
+Litteraturliste ....................................................................................................................................... 19
+Bilag 1 .................................................................................................................................................. 22
+1a. .......................................................................................................................................................... 22
+1b. .......................................................................................................................................................... 22
+Bilag 2 .................................................................................................................................................. 23
+2a ........................................................................................................................................................... 23
+2b. .......................................................................................................................................................... 23
+2c. .......................................................................................................................................................... 23
+Bilag 3 .................................................................................................................................................. 24
+
+Indledning
+Når man hører om seriemordere på TV eller på nettet, kan man tit undre sig over, hvorfor de slår
+folk ihjel og hvordan noget kan gå så vidt som det. Fiktive film om seriemordere har ofte fået
+inspiration fra den virkelige verden, som ofte er nogle af de mest kendte og grusomme
+seriemordere. Men hvorfor er det helt præcis de slår ihjel? Man kunne tænke det havde noget at
+gøre med morderens opvækst eller miljøet omkring dem, men hvad hvis det faktisk ligger i DNA’et,
+og det på den måde er en mere naturlig ting? I denne opgave vil den fiktive seriemorder bliver sat
+op mod den virkelige seriemorder, samt undersøge om DNA kan spille en rolle, ift. atypisk adfærd.
+Denne opgave er udarbejdet ved en kort redegørelse af DNA og gener, og hvordan bestemte gener
+kan kode for voldelig adfærd, samt definitionen på seriemorder og en beskrivelse af de to
+amerikanske seriemordere Ted Bundy og Gary Heidnik og deres motiv for at slå ihjel. For at
+undersøge MAOA-genet yderligere, er der lavet en PCR-test, som viser hvordan man undersøger
+enkelte gener, hvor resultaterne efter er blevet analyseret. Der er også blevet lavet en engelskfaglig
+analyse og fortolkning af filmen ”The Silence og the Lambs” fra 1991, med fokus på karakteristik
+og miljø og de filmiske virkemidler, og til sidst sat fiktionen op imod virkeligheden. Da der er
+mange faktorer som kan have indflydelse på humør og adfærd, vil der til sidst vil der blive
+diskuteret hvorvidt epigenetiske faktorer kan spille en rolle ift. seriemorderens adfærd samt hvordan
+arv og miljø spiller sammen i udviklingen af seriemorderen.
+
+1
+
+Redegørelse
+Der findes flere forskellige faktorer, som kan være med til at udvikle en voldelig adfærd. Det
+gælder både barnets opvækst, og i nogle tilfælde også DNA.
+
+DNA og gener
+DNA kan beskrives kort som ”byggesten” til mennesket. DNA’et består af nukleotider, som er en
+base med et sukkerstof og fosfat. Baserne på sukkermolekylerne forestiller trinene på stigen og
+kaldes adenin, thymin, guanin og cytosin, hvor adenin og thymin binder til hinanden og guanin og
+cytosin binder til hinanden. DNA-molekylet er ansvarligt for cellernes arvelige egenskaber.1
+Rækkefølgen af baserne danner den genetiske kode, som hjælper cellen med at danne proteiner, og
+gør den unik. En sekvens af DNA kaldes et gen. Gener er det som indeholder information om et
+bestemt protein og kan derfor give en arvelig egenskab når DNA’et videregives til nye celler. Det er
+altså generne der bl.a. er med til at bestemme øjenfarve.2
+MAOA-genet, også kaldet krigergenet, er et gen der sidder på den korte arm af x-kromosomet og
+kan være med til at påvirke menneskets humør og adfærd. MAOA-genets opgave er nemlig at
+nedbryde tre vigtige neurotransmittere; noradrenalin, som hæver blodtrykket og øger årvågenhed
+der er en del af kamp- og flugt responsen i kroppen, og serotonin og dopamin, som er med til
+reguleringen af humøret og årvågenhed, og ubalancer ved disse tre neurotransmittere, er ofte blevet
+set hos folk med psykiske lidelser. Det vil altså sige, hvis man har lav aktivitet i MAOA-genet, vil
+der være et overskydende niveau af de tre neurotransmittere.3 Kort sagt er MAOA-genet en
+variation af et bestemt gen, som betyder, at genet ikke nedbryder signalstofferne særligt godt, og
+derved kan være med til at påvirke ens adfærd.4 I et eksperiment, forsøgte man at teste genet. Det
+viste sig, at folk med lav aktivitet i MAOA-genet (MAOA-L) ikke i sig selv begyndte at være
+aggressiv på daglig basis, men da forsøgspersonerne blev sat under høj provokation, blev de mere
+
+Egebo Lone Als, Paludan Müller Paul, Torp Kresten Cæsar, Ussing Steen, kapitel 8 s. 150 Biologi til tiden,
+Nucleus (2005)
+2
+Biotech Academy, DNA og gener
+3
+Richardson Sarah, A Violence in the Blood, Discover Magazine (1993, 1. oktober)
+4
+Nielson, Ida Hammerich. Hver tredje mand har kriger-gen, AU universitetshistorie (2022, 24. november)
+1
+
+2
+
+aggressive, som beviste at selve situationen de var i, kunne være med til at påvirke genet.5 Flere
+studier viser mere eller mindre det samme, og tilføjer også at opvæksten har meget at skulle have
+sagt. Det viser sig nemlig, at dem der har lav aktivitet i MAOA-genet, som også har været udsat for
+misbrug eller vold i deres barndom, er mere tilbøjelige til at begå vold og blive aggressive som
+voksen, og kan i værste tilfælde gå så langt, at de får lyst til at slå ihjel.6 Det er også bevist, at dem
+med høj aktivitet i MAOA-genet, i modsætning til dem med lav aktivitet, ikke blev aggressive ved
+høj provokation. Det understreger, at både biologiske-, miljømæssige- og sociale faktorer har en
+rolle, når der kommer til kriminel adfærd, og en kombination af disse kan fører til nærmest
+modbydelige handlinger.7 Et andet studie viser, at mænd med lav aktivitet i MAOA-genet og som
+ikke var homozygot for serotonin transporter polymorphism, havde flere frygtamplituder, end mænd
+med høj aktivitet i MAOA-genet. Det viser altså, at både MAOA-genet og serotonin sammen har
+stor indflydelse på adfærden.8
+Epigenetik er en anden faktorer, som kan have betydning for udviklingen af selve barnet.
+Epigenetik er molekylære forandringer omkring DNA’et, og ændres i respons på omgivelserne, hvor
+ekspressionen af andre gener styres. Allerede i de første par dage, vil fosteret allerede være påvirket
+af det omgivende miljø. Selvom epigenetik er arvelig, kan forandringer i cellerne være med til at
+regulere hvordan gener udtrykkes. Det betyder at miljøet kan være med til at tænde og slukke for
+gener uden andre ændringer i DNA’et, som derved kan have indladelse på adfærden senere i livet.9
+
+Seriemorder
+Der findes flere former af mordere, såsom massemordere, spreemordere og seriemordere.
+Massemordere er dem der finder sted til bl.a. skoleskyderier, hvor flere mord finder sted til samme
+begivenhed på samme tidspunkt, med fire eller flere drab. Seriemordere er mordere, som har nogle
+
+5
+
+McDermott , Rose., Tingley, Dustin., Cowden, Jonathan., Frazzetto, Giovanni. & Johnson, Dominic D. P.
+Monoamine oxidase A gene (MAOA) predicts behavioral aggression following provocation, PNAS (2009, 17.
+februar)
+6
+McDermott Rose, Dawes Chris, Prom-Wormley Elizabeth, Eaves Lindon & Hatemi Peter K., MAOA and
+Aggression: A Gene–Environment Interaction in Two Populations, Sage Journals (2012, 25. november)
+7
+S. Sohrabi, The criminal gene: the link between MAOA and aggression (REVIEW), Springer Nature Link (2015, 14.
+januar)
+8
+Marcelo Martínez, Róger. Interaction efects of the 5-HTT and MAOAuVNTR gene variants on pre-attentive EEG
+activity in response to threatening voices, Communications Biology, (2022, 8. april)
+9
+Donkin, Ida., Barrès, Romain. & Pinborg, Anja, Epigenetisk påvirkning af fosterets udvikling, Ugeskrift for læger
+(2016, 12. septemper)
+
+3
+
+pauser imellem deres mord og har som minimum har slået to ofre ihjel, og dræber ikke flere i
+samme anledning som massemorderen. Spreemorder ligger lidt som en blanding mellem de to. Her
+ligger grænsen også på 2 eller flere mord og kan ske til forskellige begivenheder, men i modsætning
+til en seriemorder, så har spreemorderen ikke en pause mellem deres mord, som er med til at
+adskille de to betegnelser fra hinanden. Nogen kategoriserer seriemordere som hvide mænd, men
+det ikke helt korrekt, da det er alle etniciteter der har lige tendens til at blive seriemordere. De har
+alle forskellige motiver der giver dem lyst til at så ihjel. Det gælder både sex, vrede,
+opmærksomhed og andre ting. De dræber ofte i områder hvor de føler sig komfortable, og når de er
+blevet mere trygge i deres handlinger, eller vil forsøge ikke at blive opdaget, vil de efterfølgende
+begynde at dræbe lidt væk fra tryghed zonen. Seriemordere er ofte dårlige til at socialisere sig, og
+har ofte personlighedsforstyrrelser, men de fleste bliver alligevel ikke dømt som sindssyge. De
+fleste planlægger deres mord meget grundigt, men alligevel er der meget de skal lære at mestre for
+ikke at blive opdaget. Når seriemorderen begynder at begå sine mord uden for tryghedszonen,
+betyder det også at det bliver mere besværligt at bortskaffe liget. Når de er kommet afsted med
+mord flere gange, kommer de ofte til at begynde at begå nogle små fejl, fordi de får en idé om, at de
+aldrig vil blive opdaget. Dette er med til at lede politiet tættere på morderen.10
+Ted Bundy af en amerikansk seriemorder der florerede rundt i 1970’erne. Han indrømmede selv 30
+mord på kvinder, men nogen eksperter påstod at han faktisk havde slået over 100 ihjel. Han blev
+født i 1949 af Eleanor Louise Cowell, som var en ugift ung kvinde, der havde meget religiøse
+forældre. Ted voksede af den grund op med sine bedsteforældre de første par år af hans liv, hvor han
+troede de var hans forældre, og at hans mor var hans søster. I 1951 flyttede han dog med sin mor til
+Tacoma, hvor han mødte sin nye bonus far, Johnnie Bundy, som han aldrig brød sig om. Ted Bundy
+fik i en meget tidlig alder en interesse for knive, og viste ingen tegn på hverken skyld eller skam, og
+prøvede ind imellem også at drukne folk da han svømmede. Han fascination af vold forsatte og hans
+mord så også meget ens og grusomme ud. Han lokkede ofte kvinder ind i hans bil, ved at lade som
+om han var såret og håbe på offeret vil tilbyde sin hjælp, hvorefter han ville voldtage dem og banke
+dem ihjel. I 1975 anmeldte hans kæreste ham og han blev herved dømt til 15 års fængsel, hvor han
+
+Morton, Robert J. & Hilts, Mark A. Serial Murder: Multi-Disciplinary Perspectives for Investigators. U.S.
+Department of Justice (2005).
+10
+
+4
+
+alligevel formåede at flygte to gange. I sidste ende, da han igen var blevet fanget, blev han dømt til
+døden i den elektriske stol i 1989.11
+Gary Heidnik er en anden amerikansk morder, som havde en meget brutal barndom. Heidnik påstod
+selv, at hans far mishandlede ham og gjorde grin med ham, hvis han tissede i sengen. Da han var
+blevet færdig med gymnasiet, meldte han sig ind i militæret, hvor han efter 13 måneder blev smidt
+ud grundet hans psykiske tilstand. Efter han i lang tid ikke havde klaret sig særlig godt social, fandt
+han ud af at kunne få kontrol over mennesker på baggrund af deres religion. Senere lærte han også
+at manipulere folk, hvilket han udnyttede som en superkraft, til at lukke kvinder inde i hans kælder,
+hvor han mishandlede dem. Han hyrede kvinder til at have sex med ham, hvorefter han ville kvæle
+dem og trække dem ned i sin kælder, hvor han lænkede dem fast. Han brugte dem som sex slaver og
+tvang dem også til at torturere hinanden. Han sprækkede en af deres kroppe op, hvorefter han tvang
+de andre kvinder til at spise af liget. Alle hans ofre var mørke kvinder, fordi hans ønske var at have
+10 slaver, som han alle skulle have et barn med, såvel han kunne lave den perfekte race.12
+Det ses altså hvordan både Ted Bundy og Gary Heidnik, begge havde en hård barndom og heller
+ikke har haft særlig gode sociale kompetencer, som nok har været med til at påvirke dem til senere
+hen til at slå ihjel. Det er uvist, hvorvidt de to amerikanske seriemordere skulle have et MAOA-gen,
+men havde de stadig været her i dag, ville man kunne foretage en undersøgelse på dem for at finde
+svar.
+
+Analyse
+PCR-forsøg
+For at undersøge om man har MAOA-genet, foretages der en PCR-test. Denne undersøgelse er lavet
+med sprinter genet, som bruges som model for at undersøge MAOA-genet. Forsøget er kvantitativt,
+og vil til sidst få data for alle forsøgspersoner, samt sammenlignes med PCR om MAOA-uVNTR.
+
+Piccotti, Tyler. Ted Bundy, Biography, (2024, 26. juli)
+Oliver, Mark. Gary Heidnik, The ‘House Of Horrors’ Killer Who Inspired Bufalo Bill From The Silence Of The
+Lambs, Ati, (2023, 29. oktober)
+11
+12
+
+5
+
+Dette forsøg omhandler Alpha-actinin-3, som er et protein der kodes af ACTN3-genet, også kaldet
+sprintergenet. Genet sidder på kromosom 11, og alle mennesker har to alleler af genet. Alphaactinin-3 findes i de hurtige muskelfibre, som er mindre ilteffektive end de langsomme muskelfibre,
+men til gengæld kontraherer den hurtigere og danner mere kraft. En af allelerne i ACTN3-genet er
+årsagen til nogle personer mangler alpha-actinin-3. Den homozygote X-genotype er en C-til-Tmutation i exon 16, hvor argininbasen bliver ændret til et for tidligt stopkodon, som vil betyde at
+muskelfibrene ikke kan producere alpha-actinin-3, som er vigtigt for de hurtige muskelfibre.13
+PCR betyder polymerase chain reaction. PCR er en metode der bliver brugt til opformering af
+DNA, altså at få DNA molekylerne til at blive til mange flere. For at lave en PCR, skal man bruge
+det DNA som ønskes at undersøges, polymerase, som er et enzym der kan binde nukleotider til en
+enkelt streng af DNA, frie nukleotider, som skal være med til at danne strengen ved hjælp af
+polymerasen, og til sidst en primer, for at polymerasen rent faktisk kan binde sig til det enkelte
+strengede DNA. Primeren er en kort streng af nukleotider, som bindes til et bestemt område på det
+enkelt strengede DNA. PCR’en skal opvarmes til 95°C, hvor hydrogenbindingerne i DNAstrengene adskilles, og derved blive DNA’et enkelt strenget. Temperaturen sænkes, og primeren kan
+nu binde sig til startstedet på DNA-strengene. De to primere skal hver især kunne genkende et
+bestemt område på hver streng. Temperaturen stiges igen, og polymerasen bliver nu aktiv og kan nu
+binde sig til primerne og bruger de frie nukleotider til at danne en komplementær streng.
+Polymerasen sætter sig på hver sin primer og kører hver sin retning og danner dobbelte strenget
+DNA. Denne proces fortsættes, til det ønskede opformering DNA er opnået.14
+Forsøget udføres ved at der tages blodprøver på 5 forsøgspersoner. Forsøget bliver opstillet i
+rækkefølge, så det er nemt at finde ud af, hvor man er nået til, samt så det et let at finde forskel på
+de forskellige mikrorør. Først indstilles varmeblokken til 55°C, så den er klar til forsøget. Herefter
+tilsættes der 20 μL Proteinase K, 200 μL fuldblod og 20 μL RNase, som bagefter skal vortex i 5
+sekunder. Mikrorøret Inkubéres ved stuetemperatur i 2 minutter, hvor efter der tilsættes 200 μL
+Binding Buffer og igen kort vortex, og skal efter igen inkubéres ved 55°C i 10 minutter. Herefter
+tilsættes 200 μL 96–100 % ethanol, og mikrorøret skal vortex igen. Nu er det tid til binding af
+DNA’et. Spin kolonnen placeres i opsamlingsrøret, hvor lysatet overføres deri. Mikrorøret
+
+13
+14
+
+6
+
+Bilag 3
+Biotech Academy. Metoder - PCR | Biotech Academy, YouTube
+
+centrifugeres nu ved 10.000 omdrejninger i minuttet, i 1 minut. Det er er løbet i gennem smides ud,
+og kolonnen bliver nu placeret i et nyt opsamlingsrør. Der tilsættes nu 500 μL Wash Buffer 1, hvor
+den efterfølgende skal centrifugeres igen i et minut med 10.000 omdrejninger i minuttet.
+Gennemløbet kasseres igen og opsamlingsrøret bliver skiftet. Nu tilføjes der 500 μL Wash Buffer 2,
+og skal efter centrifugeres ved maksimal hastighed i 3 minutter. Opsamlingsrøret kasseres og
+kolonnen placeres i et rent 1,5 mL mikrorør. Der tilsættes nu 50–100 μL Elution Buffer til midten af
+membranen, og skal inkubéres ved stuetemperatur i et minut og til sidst centrifugeres ved maksimal
+hastighed i et minut. Der skal nu analyseret 6 prøver, 5 forsøgspersoner og en negativ kontrol med
+vand. Et mastermix blandes i et 1,5 ml eppendorfrør, og vil til sidst blive blandet med en pipette og
+vortex mixeren. Der udtages 18 μl af mastermixet fra eppendorfrøret Mastermixet består af
+følgende reagenser: MilliQ vand, primer og 2 stk. sybergreen probemix, der indeholder hhv. dNTP,
+buffer, MgCl2 og polymerase.15
+Resultaterne fra forsøget skal nu analyseres. De tre muligheder er homozygot med to c-alleler, som
+betyder man er sprinter. Homozygot med to t-alleler, som betyder man er udholdenhedsløber. Og til
+sidst har vi Heterozygot, hvor man både har c-alleler og t-alleler, og betyder man er hybrid. Der vil
+tages udgangspunkt i forsøgsperson 1, 2 og 3. Hvis man kigger på resultaterne fra undersøgelsen,
+ses det at for forsøgsperson nummer 1 at der er usikkerhed i resultaterne. Det ses nemlig, at grafen
+og tabellen ikke passer sammen. Tabellen viser at personen er homozygot (CC), men grafen viser
+heterozygot (CT). Det samme er tilfældet for forsøgsperson nummer 2, bare omvendt. I denne
+opgave tages der udgangspunkt i tabellens resultater, da den er mest akkurat, og da grafen kan vise
+støj fra baggrunden. Det ses for forsøgsperson 1 forsøgsperson er homozygot og har genotypen RR,
+som ses fordi prøven er negativ overfor T-allelen, da signalet, 6,55, er for svagt, mens probe C har
+målt 22,56, og er derfor klart mere tydelig.16 Forsøgsperson 2 er heterozygot og har genotypen RX.
+Det ses fordi prøven er positiv for både T-allelen og C-allelen, hvor T proben måler 25,90 og C
+proben måler 23,03.17 Det står derfor klart, at forsøgsperson nummer 2, er heterozygot, også kaldet
+hybrid. Hvis der kigges på forsøgsperson 3, ses det igen tydeligt, at vedkommet er homozygot. Det
+ses da testen er positiv for C-allelen og negativ for T-allelen, med resultaterne 6,56 for probe T, som
+er et for svagt signal til det rent faktisk har betydning, mens C proben måler 22,16, som er et stærkt
+
+Bilag 3
+Bilag 2a
+17
+Bilag 2b
+15
+16
+
+7
+
+signal.18 Det viser altså at forsøgsperson 1 og 3 er homzygote for c-allelen, altså sprintere, fordi de
+tydeligt har sprintergenet, mens forsøgsperson 2 er hybrid, fordi hun er bærer af både
+udholdenhedsgenet og sprinter genet.
+For at lave en PCR på MAOA-genet, skal der bruges en anden primer, som passer til netop dette
+gen. Samme proces som før udføres til det ønskede DNA, er opnået. I figuren nedenfor, ses der flere
+forskellige udfald af resultater fra MAOA-genet. I figur a ses de forskellige MAOA-alleler, 5,5 R,
+4,5 R, 3,5 R og 2,5 R, hvor hvert 1 R består af 30 bp, og 0,5 R består af 15 bp. Figur b viser
+genotyperne i 3% agarose gel, hvor række 1 og 2 viser mænd, og de sidste 6 er for kvinder. Det vil
+sige, at dette forsøg er lavet på folk med MAOA-genet, og derfor lyser de op i resultaterne. Havde
+nogle af resultaterne været negative, havde stregerne ikke dukket op. Det ses også for dem der er
+hetrozygote, de 4 sidste, at der sker en gentagelse, som understreger der må være to forskellige
+alleler, gør at de må være hetrozygote. Det ses også i tallene ovenfor, hvor mænd er hemizygote,
+altså de har kun en genotype fordi de kun har et x-kromosom, og kvinderne både kan være
+homezygote og hetrozygote i de næste 6 rækker, fordi de har to x-kromosomer.19
+
+20
+
+Selvom PCR-testen ender med at vise at man har genet, er det ikke ensbetydende med, at man
+begynder at have en atypisk adfærd. Det hele kommer nemlig an på aktivitetsniveauet i genet, samt
+hvordan ens opvækst har påvirket en. Ved at tage en blodprøve, vil man kunne undersøge hvor
+mange uVNTR gentagelser der er, som kan vise aktivitetsniveauet i genet, som man derefter vil
+Bilag 2c
+Marcelo Martínez, Róger., Liao, Tsai-Tsen., Fan, Yang-Teng., Chen, Yu-Chun. & Chen, Chenyi. Interaction
+efects of the 5-HTT and MAOA-uVNTR gene variants on pre-attentive EEG activity in response to threatening
+voicesn, communications biology, (2022, 8. april)
+20
+Marcelo Martínez, Róger., Liao, Tsai-Tsen., Fan, Yang-Teng., Chen, Yu-Chun. & Chen, Chenyi. Interaction efects
+of the 5-HTT and MAOA-uVNTR gene variants on pre-attentive EEG activity in response to threatening voicesn,
+communications biology, Róger Marcelo Martínez, Tsai-Tsen Liao, Yang-Teng Fan, Yu-Chun Chen & Chenyi Chen,
+(2022, 8. april) s. 3 nederst
+18
+
+19
+
+8
+
+kunne bruge som argumentation for atypisk adfærd. Når det er sagt, er det selvfølgelig ikke en
+undskyldning for aggressiv adfærd, at man har lav aktivitet i MAOA-genet, da der er mange andre
+faktorer, som også er med til at påvirke adfærden.21
+
+The silence of the lambs
+For at forstå sammenhængen mellem fiktion og den virkelige verden, foretages der nu en analyse af
+”The Silence of the Lambs” fra 1991 af Jonathan Demme, som er en fiktiv thriller spillefilm på 1
+time og 53 minutter, som omhandler de fiktive seriemordere Hannibal Lecter og Buffalo Bill.
+Filmen tager inspiration fra den virkelige verden, og er meget inspireret af de to seriemordere Ted
+Bundy og Gary Heidnik. Clarice Starling er hovedpersonen i filmen, og er i gang med at færdiggøre
+sin uddannelse inden for FBI. Hun bliver tildelt opgaven at få fanget seriemorderen Buffalo Bill, og
+for at få bedre indblik i hvordan han tænker, snakker hun med en anden indespærret seriemorder,
+Hannibal Lecter.
+Filmen begynder i in medias red, hvor Starling er ved at træne kondition, med ikke-diegetisk lyd i
+baggrunden. Ved 00.02.56-00.03.23 ses et tilt af et træ med fem skilte, hvorpå det står; ”HURT”,
+”AGONY”, ”PAIN”, ”LOVE - IT” og ”PRIDE”, stadig med dramatisk ikke-diegetisk lyd i
+baggrunden. Skiltene er med til at symbolisere et uhyggeligt miljø, som seeren skal til at se. I
+samme scene sker der et fokus skift fra selve træet, til Starling som kommer løbene, og
+kameraføringen skifter til en panorering der følger hende. Det bliver altså meget tydeligt helt fra
+start, at Starling er meget vigtig person for filmen. Da hun får til opgave at snakke med Hannibal
+Lecter, bliver han præsenteret ved en panorering, hvor kameraet bliver fra Starlings perspektiv, der
+går mod hans celle. Seeren ser et totalt billede af seriemorderen, som er placeret centralt i billedet
+mellem to lodrette linjer, som igen hentyder til, at han vil være en vigtig del af filmen og signalere
+både styrke og stolthed.22 Han virker meget rolig, men samtidig ubehagelig for seeren, da han
+næsten kigger direkte ind i kameraet. I samme scene fornemmer man Starling er nervøs, som kan
+ses på hendes ansigtsudtryk, der skifter især når Lecter beder hende bevise hendes værd. Deres
+samtale foregår som et over the shoulder perspektiv og skifter også mellem halvnær og nær
+beskæring, hvor det ofte er Lecter der er nær, så man kun kan se hans ansigt, og Starling der er
+I Marcelo Martínez, Róger., Liao, Tsai-Tsen., Fan, Yang-Teng., Chen, Yu-Chun. & Chen, Chenyi. Interaction
+efects of the 5-HTT and MAOA-uVNTR gene variants on pre-attentive EEG activity in response to threatening
+voicesn, communications biology.
+22
+Bilag 1a
+21
+
+9
+
+halvnær. Det får Lecter til at virke mere ubehagelig, fordi han kommer meget tæt på seeren og
+virker meget interesseret i Starling som person, og udover det smiler han også lettere uhyggeligt og
+stiger nærmest ind i seerens øjne. Seeren bliver meget hurtigt klar over, at han er en ubehagelig
+person, og han kommer hurtigt i kontakt med seerens følelser. Kameraet følger ham og laver et tilt,
+da han dufter ud af lufthullerne, og finder ud af hvilken creme Starling bruger. Starling er ofte
+halvnær i scenen, og ansigtsudtryk er meget synlige. Det er tydeligt for seeren at forstå, at hun føler
+sig nervøs og ukomfortabelt i situationen. I samme scene hører man også kort om de to mordere.
+Seeren bliver informeret om, at Buffalo Bill, som er seriemorder på fri fod, godt kan lide at flå sine
+ofre. Starling siger også ”Most serial killers keep some sort of trophies from their victims [… ]”23,
+hvor efter det bliver tilføjet at Lecter ikke havde noget trofæ, men han i stedet for spiste sine ofre,
+som gør det klart at han er kannibal og gør det endnu mere ubehageligt, at have ham så tæt på
+seeren som han er. Da Starling sender hendes papir ind, kommer der en halvtotal beskæring af
+Lecter, hvor han forsøger at smiger Starling ved at give hende et blink. Samme indstilling er filmet
+over the shoulder med en smule frøperspektiv, som får Lecter til at fremstå mere truende og
+dominant, som er brugt flere gange i løbet af deres dialog, mens Starling er filmet i normalt
+perspektiv. I scenen bruges der både diegetisk lyd og ikke-diegetisk lyd, hvor samtalen er tydelig,
+men også med noget spændings musik i baggrunden, som især bliver tydeligt til sidst da Lecter
+forsøger at hjælpe Starling, som viser han synes at hun er lidt spændende. Miljøet i scenen virker
+meget utrygt fra hun træder ind, til hun igen kommer ud. Fangerne i cellerne virker alle meget
+ubehagelige og den ene psykopat, Miggs, chikanerer også Starling. Det gør situationen endnu mere
+ubehagelig for både Starling og seeren, men hun vil gøre alt for at kunne få fat i Buffalo Bill, som
+viser hendes mod til seeren.24
+Starling tager ud for at undersøge den garage, som Lecter havde fortalt hende om. Garagen er meget
+skummel, og det kan ses den ikke har været besøgt længe, da der er masser af både støv og
+spindelvæv. Der står en udstoppet ørn, som kan være et symbol på styrke og sejr. Hun finder en
+karet derinde, hvori hun finder et menneske hoved med makeup på, nede i et glas. Hun forstår
+hurtigt, at Lecter er ham der har lejet garagen og tager af den grund tilbage for at snakke med ham.
+Lecter virker stadig meget interesseret i Starling og sagen om Buffalo Bill. Lecter fortæller at
+Benjamin Raspail, som er det hoved som lå i glasset, er en af hans gamle patienter, men det ikke var
+
+23
+24
+
+Jonathan Demme (instruktør), The Silence of the Lambs, ViaPlay, (1991) 00.15.24
+Jonathan Demme (instruktør), The Silence of the Lambs, ViaPlay, (1991) 00.11.54-00.18.45
+
+10
+
+ham der slog ham ihjel. Han påstår, at Raspail har været et eksperiment for en ny begyndende
+morder, da han ikke førhen har gået med makeup, og det må derfor være en morder, som har ønsket
+at forsøge at få ham til at ligne en dame. Der bruges igen point of view fra Starling perspektiv på
+Lecter, hvor hun bl.a. lægger mærke til, at hans tegninger er væk, som han selv påstår at være en
+afskaffelse for Miggs som nu er død. Da Lecter bevæger sig tættere på Starling, kommer han igen i
+frøperspektiv for at virke mere dominant. Her starter der igen ikke- diegetisk lyd, som er med til at
+fremkalde det utrygge og uhyggelige miljø, samtidigt med at seeren stadig kan følge med i deres
+samtale. Lecter tilbyder at hjælpe Starling med at fange Buffalo Bill, og vil derfor gerne have fat i
+sagsbeviserne. Det går op for Starling, at Lecter har mere information om Buffalo Bill end hun
+troede, og han fortæller hende at Buffalo Bill nok allerede er ved at finde sit nye offer. Allerede i
+næste scene, bliver hans nye offer præsenteret. Hun bliver præsenteret først i sin bil med et
+autokamera i sin bil, hvor hun synger med på sin yndlingssang. Seeren bliver vist et ultranært
+billede af Buffalo Bill, hvor man kun lige kan se hans øjne og kikkerten. Han holder øje med hende,
+og så snart hun er kommet ud af sin bil, forsøger han at få en sofa ind i sin bil, i håb om hun vil
+tilbyde hendes hjælp. Han har taget forbinding om hans arm, så det ligner han har brækket den.
+Kameraet følger hende i en panorering, hvor man kan se hun får øje på ham. Synsvinklen bliver fra
+offerets, Catherine Martin, perspektiv, hvor hun kigger hen på ham og bliver til en panorering. Her
+lægger hun mærke til at han kæmper med at få sofaen ind med hans brækkede arm, ender hun også
+med at tilbyde sin hjælp, som viser sig at være den største fejl i hende liv. Hun bliver præsenteret
+meget i nærbillede, som får hendes ansigtsudtryk til at komme til syne, og det ses hvordan hun
+overvejer om hun skal hjælpe eller ej. Da de har fået sofaen ind, er offeret ikke længere til syne,
+men efter han har spurgt hvilken størrelse tøj hun bruger, begynder han at banke hende og seeren
+hører tydeligt hendes skrig. Scenen bruger både diegetisk ikke-diegetisk lyd, som er med til at skabe
+en uhyggelig scene. Der bliver også brugt effektlyde her, så Buffalo Bills slag tydeligt kan høres.
+Da han begynder at klippe hendes tøj op, kan klippene fra saksen tydeligt høres, og kameraet tilter
+for at følge hans hånd. Man kan også høre Catherine Martin der forsøger at trække vejret. Man er
+ikke tvivl om hun er bange. Han får startet sin bil og kammerat følger med bilen centreret i
+billedet.25
+Senere i filmen bliver Buffalo Bill præsenteret med baggrunds popmusik, hvor han er ved at lægge
+makeup. Her sker der krydsklipning mellem Catherine Martin i hans kælder, og ham. Det ses
+25
+
+Jonathan Demme (instruktør), The Silence of the Lambs, ViaPlay, (1991) 00.22.02-00.33.31
+
+11
+
+hvordan han forsøger at ligne en dame. Tidligere hører man også Starling finder ud af, at Buffalo
+Bill vil lave en dame dragt ud af rigtig hud. Det ses hvordan Buffalo Bill trækker sig længere væk
+fra kameraet, og beundre sig selv som dame. Dette fortæller en del om det sociale miljø han lever i,
+hvor han ønsker at være smuk som en kvinde. Man må gå ud fra, at det er noget han har taget med
+sig fra barndommen, hvor han har lært, at idealet er at være en smuk kvinde. Senere i filmen sker
+der parallelklipning, som skifter fra Buffalo Bill og hans kælder, og FBI der skal til at bryde ind i
+hans hus. Man ser Buffalo Bill der stresser rundt, og hører der bliver ringet på døren, samtidigt med
+FBI ringer på, men da døren ikke bliver åbnet, bryder de ind. Man ser Buffalo Bill åbne døren, hvor
+Starling står på den anden side. De to forløb mødes altså ikke. Her bruges meget diegetisk lyd samt
+effektlyde, som tydeliggør både indbruddet og hans hund der lider i kælderen. Han er meget
+fascineret af insekter, og da han sidder med en af dem, kommer der et ultranært billede af ham, hvor
+det kun er insektet og hans øjne man kan se. Det får seeren til at føle sig meget tæt på morderen og
+skaber en uhyggelig stemning. Hans kælder er generelt et meget ubehageligt miljø. Da han ser hans
+hund, er nede i kælderen sammen med Catherine Martin, kommer der et tydeligt fugleperspektiv,
+som får hende fremstillet bange og udsat, som også er tydeligt i hendes ansigtsudtryk. Kammerat
+laver et tilt og der bruges low-key lys for at fremstille omstændighederne endnu uhyggeligere. Her
+er der også brugt håndholdt kamera, som er med til at give kaos i scenen og får også seeren til at
+føle at de rent faktisk er til stede. Mørket symboliserer også det ubehagelige miljø, som både hans
+offer står i, men også det sociale som Buffalo Bill har taget til sig. Derudover får hun en strejf af
+varmt gult lys, som står meget i kontrast til selve situationen hun er i, men symbolisere også håb for
+hende om at komme ud igen.26 I samme scene er det tydeligt at Buffalo Bill bliver frustreret, og
+seeren kommer længere og længere ind på hans sind, lige så vel som hans ofre kommer længere og
+længere ned i hans kælder. Da Starling er kommet ind i Buffalo Bills hus, går der ikke længe før det
+går op for hende at det ham. Da hun konfronterer ham, begynder han at flygte, og Starling følger
+efter og finder hurtigt hans kælder. Der kommer et nærbillede af Starling, hvor seeren tydeligt kan
+fornemme at hun er bange. Det får også hende til at fremstå modig, når hun alligevel, selvom hun er
+bange, går ned i en kælder, som hun udmærket godt ved tilhøre en morder. Fra Starling træder ind i
+det rum, hvor hun finder Catherine Martin, bliver der taget et single shot, hvor Starling forsøger at
+gøre rummet mere sikkert ved at lukke alle døre. Kameraet er håndholdt, som følger Starling og
+skaber mere kaos til scenen. Der er mange lodrette linjer, som kommet imellem Starling og
+kameraet, som også er med til at skabe mere uro. Catherine Martins stemme er meget tydelig, og
+26
+
+Bilag 1b
+
+12
+
+selvom seeren ikke kan se ansigtet, ved man er hun er bange. Derudover er der også tilføjet nogle
+effektlyde fra hunden der gør, som giver endnu mere kaos til scenen.27 Til sidst i filmen, er det
+Starling der får ramt på Buffalo Bill, og dette giver hende en masse heltemod. Selvom hun ikke er
+færdig udannet betjent, er det alligevel hende som ender med at rede dagen.28
+Starling bliver gjort til en rund person, da seeren igennem filmen, får meget information om hende
+som person. Det gør det også klart, at det er hende der er fokus, og det hende seeren skal følge hele
+filmen igennem. En person som Lecter udvikler sig fra start til slut, som gør ham til en dynamisk
+person. I starten er han inde i hans celle, hvor han virker meget ubehagelig, men alligevel meget
+interesseret i Starling og hendes sag. Selvom man kunne tro han var kommet til mere fornuft, slår
+han alligevel nogle betjente ihjel, som i sidste ende fører til at han slipper fri. Her er han dog stadig
+meget interesseret i Starling, og ringer til hende og går en kort samtale med hende. Det giver filmen
+en meget åben slutning, som giver seeren helt lyst til at vide hvad der skal ske efter og hvad Lecters
+nye plan er. Andre personer er mere flade, såsom hendes chef og Cathrine Martin, som man kun
+selv kan tolke sig til, hvor de større roller er mere runde. Buffalo Bill er en karakter, man bliver nødt
+til tolke sig til, da man er usikker på hans baggrund. Det bliver dog klart for seeren hvad hans motiv
+er, og han nok lider er en personlighedsforstyrrelse, og derfor bliver han en rund karakter.
+Mange mennesker er meget fascineret af true crime, og det med at overskride nogle grænser. True
+crime giver muligheden for at komme helt tæt på en morder eller et offer, som de fleste aldrig nogen
+sinde ville opleve i virkeligheden. Hvis man sætter filmen ”The silence of the lambs” op mod
+virkeligheden, ses der flere ligheder med både Ted Bundy og Gary Heidnik. Det ses nemlig,
+hvordan Buffalo Bill lokker sine ofre ind i hans bil, hvor han lades som om han er såret, hvor efter
+han banker dem, som er meget ens med det Ted Bundy også gjorde. Idéen med at opholde ofrene i
+kælderen, er blevet inspireret af Gary Heidnik, som ofte havde flere ofre gemt i sin kælder. Det ses
+hvordan, at selvom filmen er en fiktiv spillefilm, så er stadig taget flere elementer fra den virkelige
+verden, som er med til at gøre den endnu mere uhyggelig, da hans handlinger har fundet sted i
+virkeligheden. Da Buffalo Bill er en fiktiv figur, ved man ikke med sikkerhed, hvordan hans
+barndom har været, men det tyder på i filmen, at han har taget flere ting med sig, såsom at han
+gerne vil være en kvinde og er meget voldelig overfor sine ofre.
+
+27
+28
+
+Jonathan Demme (instruktør), The Silence of the Lambs, ViaPlay, (1991) 01.29.31-01-41.49
+Morsø Gymnasium, 16mm, Filmiske virkemidler
+
+13
+
+Diskussion
+Flere forskellige faktorer, kan være med til udviklingen af seriemorderen. Det gælder både det
+genetiske og opvæksten som er med til at påvirke individet både miljømæssigt og socialt. Selvom
+alle måske ikke lige tænker over, hvad deres barn går igennem, fordi de ”bare” er et barn og derved
+måske ikke tænker så meget over miljøet både fysisk og psykisk, så kan det have store
+konsekvenser senere hen, og måske man endda er kommet til at opdrage en seriemorder, uden man
+ved at det.
+En af de faktorer som spiller en rolle er de epigenetiske processer, som er meget betydningsfuldt for
+menneskets udvikling. De tidlige livsbegivenheder viser sig ofte få langvarige konsekvenser for
+neurobiologisk udvikling og adfærd. Epigenetikken er med til forståelse af udviklingen af en
+sygdom, psykopatologi og den normative udvikling. Omsorgen mellem barn og voksen, har også
+meget stor betydning for udvikling af barnet. Påvirkning på bare et enkelt procesniveau laver
+forandringer på andre procesniveauer og kan såvel aktivere eller deaktivere gener. Inde i cellens
+DNA-streng, som er snoet omkring nogle proteinkerner, de såkaldte histoner, som har en hale, hvor
+metylgrupperne kan sætte sig på halerne, som gør kromatinstrukturen så stram, at DNA-koden ikke
+kan aflæses. Når et histon acetyliseres, bliver DNA-strengen så løs, og bestemte gener kan blive
+aflæsset, og specifikke gener enten aktiveret eller deaktiveret29
+Barndommen er en af de vigtige faktorer, som kan have stor betydning for, hvordan man som
+voksen vil opføre sig. to ud af tre som er blevet udsat for vold som barn, tager det med i sit
+voksenliv og bliver påvirket både ved adfærd og evne til at vokse og lære, og kan være mere
+tilbøjelige til at begå kriminalitet i voksenlivet og måske endda begå mord. Barnet vil ofte lære
+meget i sin opvækst, så hvis det opvokses med vold, er det ofte det, som barnet vil tage med videre i
+voksenlivet, og barnet kommer ofte til at ligne sine forældre i deres adfærd og personlighed. Det
+gælder også hvis barnet er blevet mobbet, vil det ofte spille en rolle senere hen og være med til at
+påvirke dets adfærd. Hvis barnet får en hjerneskade, kan også påvirke og ændre dets adfærd.
+Forskellen på børn og voksne her er, at sker skaden som barn, vil den have indflydelse på resten af
+livet, som gør den vil have større betydning, hvor hvis det sker for en voksen som, vil det være en
+
+Grønbæk, Emilie Sloth. & Sommer, Dion. Epigenetik og udviklingstransaktioner i den tidlige
+tilknytningsrelation, Tidsskrift, Psyke & Logos (2019, 16. december).
+29
+
+14
+
+mindre del af livet der bliver påvirket. Det betyder barnets hjerneskade vil være med til at påvirke
+deres personlighed og deres følelser resten livet. Ofte burde hjerneskader ikke i sig selv påvirke til
+at atypisk adfærd, men kan lede til flere udfordringer i livet, hvor de udfordringer kan være med til
+at påvirke ens adfærd, f.eks. hvis man bliver mobbet, afstødt eller ikke længere kan socialisere sig
+grundet skaden.30
+Gener kan også have indflydelse på adfærden. Professor Anders Børglum fortæller at flere
+undersøgelser viser, at hvis man har en dårlig barndom og også har kriger-genet, har man tendens til
+en voldelig adfærd. Det betyder altså, at miljø og gener i den forstand har meget betydning sammen,
+så uden en dårlig barndom eller dårlige omgivelser, burde genet ikke have nogen effekt. Selvom
+MAOA-genet sidder på x-kromosomet, så er det alligevel primært mænd, som har genet, selvom
+kvinder har to x-kromosomer. Det ses fordi de kvindelige kønshormoner ofte er med til at
+modpåvirke kriger-genet, og får på den måde ikke lyst eller trang til at være voldelig. Hvis kvinden
+skulle blive påvirket af genet, skulle det være sat på begge hendes x-kromosomer, og stadig have
+lav aktivitet, samtidigt med at hendes barndom eller miljø skulle have påvirket hende.31 Testosteron
+kan også være med til at påvirke en, primært mænd, til en aggressiv adfærd. Hvis man tager
+udgangspunkt i dyr, er det mere tydelig at se. Kigger man f.eks. på en kronhjorteflok, vil det altid
+være hannen, som har testosteron, som er den aggressive og vil gå til kamp, hvis en anden han eller
+noget truende kommer tæt på. Derudover er det også bevist, at de fleste hunner vil være mindre
+aggressive, og har også meget mindre testosteron end hannen. Når det kommer til mennesket, er der
+nogle studier der viser, at testosteron stadig har en stor effekt, mens andre tyder på meget lav effekt
+eller slet ingen effekt, så igen kan testosteron ikke have direkte indflydelse på en aggressiv adfærd,
+men være med til at påvirke, især hvis andre faktorer bliver påvirket.32
+Selvom det ofte er mænd, som er seriemordere, findes der altså stadig kvindelige seriemordere.
+Kvindelige seriemordere er meget sjældnere set end mandlige, og ofte meget anderledes end mænd.
+Langt flere mænd dræbte i et åbent rum, end kvinder, men det også er langt flere kvinder der dræber
+i eget hus, end mænd. Mænd drabsvåben er ofte skydevåben, hvor kvinders våben oftere er knive
+Mroczkowski Sarah. Nature and Nurture: How they play a role in Serial Killers and their Victims (1970-1999),
+Digital Showcase, University of Lynchburg (2023, 1. maj)
+31
+Nielson, Ida Hammerich. Hver tredje mand har kriger-gen, AU Universitetshistorie (2022, 24. november)
+32
+S.N. Geniole, B.M. Bird, J.S. McVittie, R.B. Purcell, J. Archer & J.M. Carré. Is testosterone linked to human
+aggression? A meta-analytic examination of the relationship between baseline, dynamic, and manipulated
+testosterone on human aggression, Science Direct (2020, juli)
+30
+
+15
+
+eller gift. Det er også vist, at de fleste mandlige seriemordere, har ofte flere ofre end kvinderne, som
+både gælder mord og voldtægter. De kvindelige mordere har ofte en følelsesmæssig relation til
+deres ofre, og har ofte selv fremstået som et offer, før de selv begyndte at slå ihjel, og de ofte ikke
+lige så aggressive som den mandlige.33 Mens den mandlige seriemorder ofte dræber fremmede, som
+ofte er det køn som de er seksuelt tiltrukket af, er kvinder mere tilbøjelige til at dræbe nogen de har
+tæt, eller endda en de er i familie med. Derfor er den kvindelige morder betragtet som mere farlig,
+da de fleste frygter noget udenfor hjemmet, men den kvindelige morder ofte begår sine mord meget
+tæt på, endda i egen husstand, og kan hurtigt få lokket sit næste offer i fælden.34 Når det er sagt,
+gælder det ikke alle. En kendt kvindelig seriemorder er Aileen Wuornos, som mindede mere om de
+mandlige seriemordere, end hun gjorde om de kvindelige seriemordere. Hun havde også en meget
+svær barndom, og prøvede også engang at begå selvmord. Wuornos var også en meget voldelig
+kvinde, som tidligere havde slået sin bror med en stok, inden han døde. Hendes mord senere blev
+begået med et skydevåben, som er meget atypisk for den kvindelige seriemorder. Wuornos var også
+en meget aggressiv seriemorder, i forhold til den almindelige kvindelige seriemorder. Derudover
+havde hun ingen følelsesmæssig relation til sine ofre, da hun selv var til kvinder, og alle hendes
+mord var på mænd. Da hun blev fanget, fortalte hun, at hun var blevet voldtaget, hvilket er med til
+at gøre hende til offer selv.35
+Mænd og kvinder kan altså begge være seriemordere, men langt oftere mænd. Det skyldes på
+testosteronet, men også mange andre epigenetiske faktorer. Da mænd ofte har en større mængde af
+testosteron end kvinder, er det sjældent at det er kvinden der bliver påvirket af testosteron, ift.
+manden. Siden MAOA-genet er placeret på x-kromosomet, vil det langt oftere være mænd der
+bliver påvirket, da de udelukkende har et x-kromosom, hvor kvinder har to, og derved vil et enkelt
+MAOA-gen ikke have betydning for kvinden, når hun har et andet ”rask” x-kromosom. Derudover
+er de kvindelige kønshormoner også med til at modvirke de voldelige gener, hvor det ikke er
+tilfældet for mænd. Dog burde både mænd og kvinder ikke blive påvirket specielt meget, hvis deres
+opvækst har været god, og de har fået omsorg som barn.
+
+L. Muzinié Masle, M. Goreta and V. Jukié. The Comparison of Forensic-Psychiatric Traits between Female and
+Male Perpetrators of Murder or Attempted Murder, Hrčak (1999, 11. oktober)
+34
+Cassady, Morgan S. What Makes a Woman Become a Serial Killer, Valdosta (2017, 11. maj)
+35
+Jenkins, John Philip. Aileen Wuornos, American serial killer, Britannica
+33
+
+16
+
+Det viser altså hvordan både social arv og det miljø man vokser, op i kan have kæmpe betydning,
+for udviklingen af seriemorderen. Selvom gener kan være med til at kode for atypisk adfærd, er
+altså stadig barndommen som går ind og får en evt. betydning for genet. Det ses også, hvordan
+epigenetiske faktorer kan have kæmpe indflydelse på barnet senere hen. Omsorgen og miljøet
+omkring barnet, er altså noget af det absolut vigtigste, når det kommer til udviklingen af adfærd.
+Dog er det ikke ensbetydende med, at hvis man har haft en hård barndom, og ikke fået den omsorg
+man har brug for, samtidigt med man har MAOA-L genet og større mængde testosteron i kroppen
+samt en evt. hjerneskade, at man derfor skulle slå nogen ihjel. Der kan være tilfælde, hvor man ikke
+bliver påvirket, mens andre gør, men det kan godt resultere i atypisk adfærd, uden man behøver at
+slå ihjel. Uanset hvad, er det vigtigt at være opmærksom på hvordan miljøet, både fysisk og
+psykisk, kan påvirke barnet helt fra dag et.
+
+17
+
+Konklusion
+Ud fra teorien om DNA og gener samt de amerikanske seriemorderes opvækst og motiver, kan det
+nu konkluderes, at flere forskellige faktorer kan være med til at danne en voldelig adfærd. Ud fra
+PCR-forsøget ses det hvordan det er muligt at finde ud af, om man har genet eller ej, men uanset
+hvad, er det ikke udelukkende genet alene, men andre faktorer som er med til at påvirke individets
+adfærd. Analysen af filmen ”the silence of the lambs”, som har taget meget inspiration fra den
+virkelige verden, viser hvordan selv seriemordere kan have det svært mentalt, hvilket ofte er den
+grund til de ønsker at slå ihjel. Det ses også, hvordan social arv og miljø allerede fra dag et, kan
+påvirke barnet og de epigenetiske faktorer, kan ved bare de små livsbegivenheder have længere
+konsekvenser og have kæmpe indflydelse på barnets adfærd i voksenlivet. Ted Bundy, Gary
+Heidnik og Aileen Wuornos har alle haft en svær barndom, som har været med til at gøre dem mere
+aggressive og til at blive seriemordere. Det ses også hvordan fiktive spille film, tager udgangspunkt
+i den virkelige verden, som gør grænsen mellem fiktion og virkeligheden bliver sløret. Det er altså
+bevist, at DNA kan spille en rolle ift. atypisk adfærd, men andre faktorer, så som arv og miljø, skal
+være med til at påvirke DNA’et, for at det spiller en rolle. Det vigtigt at understrege, at de fleste ting
+der finder sted i barndommen, er ofte noget barnet vil tage med i voksenlivet, og derfor er det meget
+vigtigt, at barnet ikke bliver udsat for hverken fysisk og psykisk vold. Alt i alt kan det konkluderes
+at flere forskellige faktorer, kan have betydning for individet og deres adfærd. Det er bevist at, den
+sociale arv og miljøet fra barndommen, ofte har meget langvarige konsekvenser, og kan oftest
+mærkes helt inde i voksenlivet. Mange af de forskellige faktorer kan sammen spille en kæmpe rolle
+i, hvordan ens adfærd er senere hen, og kan ofte beskrive hvorfor seriemordere slår ihjel den dag i
+dag.
+
+18
+
+Litteraturliste
+DNA og gener. Biotechacademy. Lokaliseret den 12. marts 2026 på
+https://www.biotechacademy.dk/undervisning/gymnasialeprojekter/genteknologi/dna-og-gener/
+Egebro, Lone Als, Paludan-Müller, Paul, Torp, Kresten Cæsar & Ussing, Steen.
+(2005). Lokaliseret den 11. marts 2026 på Biologi til tiden. Nucleus.
+Litteraturlisteautomaten. (s.d.). Litteraturlisteautomaten. Lokaliseret den 23.
+marts 2026 på https://litteraturlisteautomaten.dk/
+Morton, Robert J. & Hilts, Mark A. (2008). Serial Murder: Multi-Disciplinary
+Perspectives for Investigators. U.S. Department of Justice. Lokaliseret den 11.
+marts på https://www.fbi.gov/ﬁle-repository/reports-and-publications/statsservices-publications-serial-murder-serial-murder-july-2008-pdf/view
+Oliver, Mark. (2023, 29. oktober). Gary Heidnik, The ‘House Of Horrors’ Killer
+Who Inspired Buﬀalo Bill From The Silence Of The Lambs. Lokaliseret den
+12. marts på Ati. https://allthatsinteresting.com/gary-heidnik
+Piccotti, Tyler. (2024, 26. juni). Ted Bundy. Biography. Lokaliseret den 12.
+marts på https://www.biography.com/crime/ted-bundy
+Richardson, Sarah. (1993, 1. oktober). A Violence in the
+Blood. Discovermagazine. Lokaliseret den 12. marts 2026 på
+https://www.discovermagazine.com/a-violence-in-the-blood-2618
+Demme, Jonathan. (Instruktør). (1991). The Silence of the Lambs [Film].
+ViaPlay. Lokaliseret den 17. marts på
+https://viaplay.dk/player/default//ﬁlm/ondskabens-ojne-1991
+McDermott, Rose., Tingley, Dustin., Cowden, Jonathan., Frazzetto, Giovanni.
+& Johnson, Dominic D. P. (2009, 17. februar). Monoamine oxidase A gene
+(MAOA) predicts behavioral aggression following provocation. Pnas.
+Lokaliseret den 13. marts på
+https://www.pnas.org/doi/abs/10.1073/pnas.0808376106
+
+19
+
+McDermott, Rose., Dawes, Chris., Prom-Wormley, Elizabeth., Eaves, Lindon.
+& Hatemi, Peter K. (2012, 25. november). MAOA and Aggression: A Gene–
+Environment Interaction in Two Populations. Sage Journals. Lokaliseret den
+13. marts på
+https://journals.sagepub.com/doi/abs/10.1177/0022002712457746
+S. Sohrabi (2015, 14. januar). The criminal gene: the link between MAOA and
+aggression. Springer Nature Link. Lokaliseret den 16. marts 2026 på
+https://link.springer.com/article/10.1186/1753-6561-9-S1-A49
+Róger Marcelo Martínez, Tsai-Tsen Liao, Yang-Teng Fan, Yu-Chun Chen &
+Chenyi Chen. (2022, 8. april). Interaction e;ects of the 5-HTT and MAOAuVNTR
+gene variants on pre-attentive EEG activity in response to threatening voices.
+Communications Biology. Lokaliseret den 19. marts på
+https://www.nature.com/articles/s42003-022-03297-w
+Morsø Gymnasium. (s.d.). Filmiske virkemidler. 16mm. Lokaliseret den 18.
+marts 2026 på https://www.16mm.dk/ﬁlmiskevirkemidler.html
+Nielson, Ida Hammerich. (2022, 24. november). Hver tredje mand har krigergen. AU Universitetshistorie. Lokaliseret den 19. marts 2026
+https://auhist.au.dk/showroom/praesentationer/aviser-blade-og-magasinerfra-au/univers/2010/artikler/nr7/hvertredjemandharkrigergen
+S.N. Geniole, B.M. Bird, J.S. McVittie, R.B. Purcell, J. Archer & J.M. Carré. (2020,
+juli). Is testosterone linked to human aggression? A meta-analytic
+examination of the relationship between baseline, dynamic, and
+manipulated testosterone on human aggression. Science Direct. Lokaliseret
+den 19. marts 2026 på
+https://www.sciencedirect.com/science/article/abs/pii/S0018506X19304519?
+via%3Dihub
+Biotech Academy. (2021, 28. januar). Metoder - PCR | Biotech Academy.
+YouTube. Lokaliseret den 19. marts på
+https://www.youtube.com/watch?v=B1MPUZAAmsM
+
+20
+
+Donkin, Ida., Barrès, Romain. & Pinborg, Anja. (2016, 12.
+septemper). Epigenetisk påvirkning af fosterets udvikling. Ugeskrift for læger.
+Lokaliseret den 21. marts på https://ugeskriftet.dk/videnskab/epigenetiskpavirkning-af-fosterets-udvikling
+Grønbæk, Emilie Sloth. & Sommer, Dion. (2019, 16. december). Epigenetik og
+udviklingstransaktioner i den tidlige tilknytningsrelation. Tidsskrift, Psyke & Logos.
+Lokaliseret den 21. marts på
+https://tidsskrift.dk/psyke/article/view/117818/165829
+L. Muzinié, M. Goreta & V. Jukié. (1999, 11. oktober). The Comparison of
+Forensic-Psychiatric Traits between Female and Male Perpetrators of Murder or
+Attempted Murder. Hrčak. Lokaliseret den 20. marts på
+https://hrcak.srce.hr/ﬁle/15429
+Jenkins, John Philip. (s.d.). Aileen Wuornos: American serial killer. Britannica.
+Lokaliseret den 20. marts 2026 på
+https://www.britannica.com/biography/Aileen-Wuornos
+Cassady, Morgan S. (2017, 11. maj). What Makes a Woman Become a Serial
+Killer. Valdosta. Lokaliseret den 20. marts 2026 på
+https://vtext.valdosta.edu/items/88afd24d-51f0-4a4a-a58b6854f48a8b1c/full
+Mroczkowski, Sarah. (2023, 1. maj). Nature and Nurture: How they play a role in
+Serial Killers and their Victims (1970-1999). Digital Showcase, University of
+Lynchburg. Lokaliseret den 20. marts 2026 på
+https://digitalshowcase.lynchburg.edu/cgi/viewcontent.cgi?article=1283&con
+text=utcp
+
+21
+
+Bilag 1
+1a.
+
+1b.
+
+22
+
+Bilag 2
+2a
+
+2b.
+
+2c.
+
+23
+
+Bilag 3
+Øvelsesvejledning ACTN-genet
+
+24
+
+

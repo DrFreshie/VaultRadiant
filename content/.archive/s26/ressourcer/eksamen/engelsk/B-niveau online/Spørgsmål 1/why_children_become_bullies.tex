@@ -1,0 +1,184 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\title{Why children become bullies at school}
+\date{2019}
+\author{Kelly Oakes}
+
+\maketitle
+
+\noindent\textit{Bullying behaviour often emerges in childhood, and the consequences for victims can last a lifetime. But what makes a child become a bully?}
+
+\bigskip
+
+\noindent\linenumbers When RubySam Youngz was singled out by a bully at the age of 10 in her last year of primary school, she felt isolated and confused. She'd just moved with her family from England to Wales and the bully honed in on her accent. They then started mocking her appearance. \qm{Nothing really made sense to me,} she says. \qm{I'm in a new place, I don't really know anyone, no one likes me, and I really do not know why.}
+
+Youngz says the relentless bullying, which continued through secondary school, had a knock-on effect in all areas of her life, and she took up smoking and drinking in an attempt to cope. Now aged 46, it is only in the past year that she has come to terms with the effect that the bullying had on her.
+
+\qm{I felt like 'no one else likes me, so I don't like me',} she says.
+
+Her experience underlines a painful truth. Children, for all their innocence and inexperience of the world, can be some of the most vicious bullies. Their actions, perhaps less hindered by the social norms we learn in later life, can be merciless, violent and shocking. And they can have life-long implications for the victims.
+
+But what makes a child become a bully?
+
+\qm{For the longest time, in the research literature, we thought there was just one type of bully: a highly aggressive kid that had self-esteem issues that may come from a violent home or neglectful home,} says Dorothy Espelage, a professor of education at the University of North Carolina at Chapel Hill. That picture is now changing.
+
+The definition of bullying that academic researchers have adopted states that it's a form of aggression between individuals or groups that have different levels of power. It perhaps fails to capture the terrible toll it can have on victims or the complex reasons why people become bullies in the first place. But one key element is the difference in power.
+
+\qm{It could be that you're bullying me, and you're popular, and I'm not popular, and that power differential makes it difficult for me to defend myself,} says Espelage. While domestic violence and sibling aggression are still risk factors for children becoming bullies, they're not the only reason, she adds. Children who grow up in violent homes but go to a school with an anti-bullying programme and a supportive atmosphere won't necessarily become bullies.
+
+Researchers' picture of the typical school bully has become more nuanced in recent years. Aside from the blunt and open aggressor, another more Machiavellian kind of bullying has come to be recognised. Children who fall into this category tend to have better social skills, are often charismatic and liked by teachers -- far from the \qm{oafish} stereotype of bullies. Crucially, these children can turn on and off their bullying to suit their needs.
+
+\qm{Socially dominant bullies want to be the leader of the crowd,} says Espelage. \qm{And the way that they do that is to push kids down the hierarchy.}
+
+[\ldots]
+
+Bullying has also taken on new forms in recent years. One common characteristic of bullying as previously defined by academics is that the aggression towards the victim is repeated. But the online world is blurring this due to the potential impact that just one instance of cyberbullying can have.
+
+\qm{Does it have to happen more than once, when you've posted something that's gone to a million people?} asks Espelage. \qm{Probably not.}
+
+[\ldots]
+
+So what should you do if you think your child may be bullying other children?
+
+Getting to the bottom of their motivations is a good first step. \qm{If somebody called me and said your child is engaging in these behaviours, I would want to say [to the child], 'OK, what are you getting from that? Why are you doing this?',} says Espelage. \qm{It may be that your child\ldots{} is in a school where that's what they're expected to do.}
+
+It's also worth considering whether your own actions may be influencing your child's. \qm{For some parents, their interpersonal style may be modelling that behaviour,} she says.
+
+One way to address school bullying could be a buddy system designed to foster peer support, where younger students are assigned an older mentee to show them the ropes when they start school.
+
+\qm{The fact that younger students have the opportunity to model the right behaviour from the older students} is one advantage of such a system, says Tzani-Pepelasi. But having a supportive school environment in general is also important when it comes to tackling bullying. \qm{It takes a lot of persistence, and consistency from the teachers and the school staff in general, as without them the system cannot function,} she says.
+
+Espelage agrees that strong relationships between teachers and among peers are key. \qm{What we know from our research is those schools where they pay attention to the issues of connectedness, making sure every kid feels like they belong in that school, there's less bullying,} she says.
+
+Often, though, that support isn't there. In 2014, Espelage and her colleagues published a five-year study showing a worrying link between bullying and sexual harassment in schools. It revealed that bullying among younger children often involves homophobic insults, which then escalates to sexual harassment in later school years.
+
+But the children involved in sexual harassment -- both the perpetrators and the victims -- often didn't seem to understand how serious the incidents were, perhaps because teachers may not be stepping in to prevent them. [\ldots]
+
+As for whether kids grow out of bullying once they leave school, Espelage says some may do so -- or find a different outlet for their aggression -- but not all. \qm{I would argue, based on my experience, that some [school bullies] go into professions in which that type of behaviour works for them, whether that's a police officer, a professor at a university, a lawyer.}
+
+Perhaps saddest of all, however, is that the impact of bullying on victims can last for decades, leading to poorer physical and psychological health. Youngz, who was bullied throughout secondary school, has now trained as a grief recovery specialist, and hopes to be able to help others who have been through similar kinds of loss.
+
+Her main bully contacted her via Facebook earlier this year to apologise. When she received the message, Youngz felt angry. \qm{It did nothing for me at all personally to relieve any pain that she put me through,} she says. \qm{It might have helped her, I don't know.}
+
+But when it comes down to it, she thinks the apology -- just like the bullying that had such a negative impact on her life -- was really more about the bully than about Youngz herself.
+
+\qm{I have compassion towards her because I can understand maybe why she did what she did, because she may have been having troubles at home as well,} she says. \qm{But I'm not agreeing with what she did.}\source{https://www.bbc.com/future/article/20190913-why-some-children-become-merciless-bullies}
+
+\end{document}

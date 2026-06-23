@@ -1,0 +1,188 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	\setcounter{secnumdepth}{0}
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+\begin{document}
+\title{The Happiest Days of Your Life}
+\date{1978}
+\author{Penelope Lively}
+
+\maketitle
+
+\noindent\linenumbers The boy sat on the back seat of the car, a box of chocolates, unopened, beside him, and a comic, folded. The trim Sussex landscape flowed past the windows: cows, white-fenced fields, highly-priced period houses. The sunlight was glassy, remote as a coloured photograph. The backs of the two heads in front of him swayed with the motion of the car.
+
+His mother half-turned to speak to him. \qm{Nearly there, darling.}
+
+The father glanced downwards at his wife's wrist. \qm{Are we all right for time?}
+
+\qm{Just right. Nearly twelve.}
+
+\qm{I could do with a drink. Hope they lay something on.}
+
+\qm{I'm sure they will. The Wilcoxes say they're awfully nice. Not really the schoolmaster-type at all, Sally says.}
+
+The man said: \qm{He's an Oxford chap, of course.}
+
+\qm{Is he? You didn't say.}
+
+\qm{Mmm.}
+
+\qm{Of course, the fees are that much higher than at Seaford.}
+
+\qm{Fifty quid or so. We'll have to see.}
+
+The car turned right, between white gates and high, dark, tight-clipped hedges. The whisper of the road under the tyres changed to the crunch of gravel. The child, staring sideways, read black lettering on a white board: \qm{St Edward's Preparatory School. Please Drive Slowly.} He shifted on the seat, and the leather sucked at the bare skin under his knees, stinging.
+
+[\ldots]
+
+The building was red brick, early nineteenth century, spreading out long arms in which windows glittered blackly. Flowers, trapped in neat beds, were alternate red and white. They went up the steps, the man, the woman, and the child two paces behind.
+
+Smoothing a skirt that would be ridged from sitting, the woman, the mother, thought: \qm{I like the way they've got the maid all done up properly, the little white apron and all. Very nice. If he comes here there'll be speech days and that kind of thing. Sally says it's quite dressy -- she bought that cream linen coat for coming here \ldots{}}
+
+They went into a room looking out into a terrace. Beyond, dappled lawns, gently shifting trees, cows grazing behind iron railings; within, books, leather chairs, a table with magazines [\ldots]
+
+\qm{If you would wait here. The headmaster won't be long.}
+
+Alone, they sat, inspected. \qm{I like the atmosphere, don't you?}
+
+\qm{Very pleasant, yes. Four hundred a term, near enough. Wilcox says quite a few City people send their boys here. One or two of the merchant bankers, those kind of people. It's the sort of contact that would do no harm at all. You meet someone, get talking at a cricket match or what have you \ldots{} Not at all a bad thing.}
+
+\qm{All right, Charles? You didn't get sick in the car, did you?}
+
+The child had black hair, flicked down smooth to his head. His ears, too large, jutted out, transparent in the light from the window, laced with tiny, delicate veins. His clothes had the shine and crease of newness. He looked at the books, the dark brown pictures, his parents -- and said nothing.
+
+\qm{Come here and let me tidy your hair.}
+
+Just then the door opened. The child hesitated, stood up, sat, then rose again with his father.
+
+\qm{Are you Mr and Mrs Manders? How nice to meet you -- I'm Margaret Spokes. Will you forgive my husband, he's tied up with some wretch who broke the cricket pavilion window and will be just a few more minutes.}
+
+She went on: \qm{We try to be organised but a schoolmaster's day is always just that bit unpredictable\ldots{}} [\ldots]
+
+\qm{And this is Charles? My dear, we've been forgetting all about you! In a minute I'm going to borrow Charles and take him off to meet some of the boys because, after all, you're choosing a school for him, aren't you, and not for you. He ought to know what he might be letting himself in for, and it shows we've got nothing to hide.} [\ldots]
+
+The headmaster reflected his wife's style, like paired cards in Happy Families. His clothes were mature rather than old, his skin well-scrubbed, his shoes clean, his geniality untainted by the least condescension. He was genuinely sorry to have kept them waiting, but in this business one lurches from one minor crisis to the next \ldots{}
+
+\qm{And this is Charles? Hello there, Charles.} His large hand rested for a moment on the child's head, quite extinguishing the thin, dark hair. It was as though he had but to clench his fingers to crush the skull. But he took his hand away and moved the parents to the window, to observe the mutilated cricket pavilion.
+
+And the child is borne away by the headmaster's wife. She never touches him or tells him to come, but simply bears him away like some relentless tide, down corridors and through swinging glass doors; she tows him like a frail craft, not bothering to look back to see if he is following, confident in the strength of magnetism, or obedience.
+
+She delivers him to a room where boys are scattered among inky tables and rungless chairs and sprawled on a mangy carpet. There is a scampering, then silence. [\ldots] They look at her with bright eyes in open, eager faces. Someone leaps to hold the door for her; she is gone. The child stands in the centre of the room, and it draws in around him. The circle of children contracts; faces are only a yard or so from him -- strange faces, looking, assessing. Asking questions. They help themselves to his name, his age, his school. [\ldots]
+
+He stands in the middle of them with shoulders humped, staring down at feet: grubby plimsolls and kicked brown sandals. There is a noise in his ears like rushing water, a torrential din out of which voices boom, blotting each other out so that he cannot always hear the words.
+
+\qm{Do you?} they say, and \qm{Have you?} and \qm{What's your?} And the faces, if he looks up, swing into one another in kaleidoscopic patterns and the floor under his feet is unsteady, lifting and falling.
+
+Out of the noises comes one voice that is complete, that he can hear. \qm{Next term we'll mash you,} it says. \qm{We always mash new boys.}
+
+A bell goes, somewhere beyond doors and down corridors, and suddenly the children are all gone, clattering away and leaving him there with the heaving floor and the walls that shift and swing. The headmaster's wife comes back and tows him away, and he is with his parents again.
+
+They are in the car; and the high hedges skim past the windows once more, in the other direction, and the gravel under the tyres changes to tarmac.
+
+\qm{Well?}
+
+\qm{I liked it, didn't you?} The mother adjusted the car around her, closing windows, shrugging into her seat.
+
+\qm{Very pleasant. Nice chap.}
+
+\qm{I like him. Not quite so sure about her.}
+
+\qm{It's pricey, of course.}
+
+\qm{All the same\ldots}
+
+\qm{Money well spent, though.}
+
+\qm{Shall we settle it, then?}
+
+\qm{Yes, I'll drop him a line.}
+
+The mother pitched her voice a notch higher to speak to her child in the back of the car. \qm{Would you like to go there, Charles? Like Simon Wilcox? Did you see the lovely gym, and the swimming pool? And did the other boys tell you all about it?}
+
+The child does not answer. He looks straight ahead of him, at the road coiling beneath the bonnet of the car. His face is haggard with anticipation. \qm{Next term, we'll mash you\ldots}
+\end{document}

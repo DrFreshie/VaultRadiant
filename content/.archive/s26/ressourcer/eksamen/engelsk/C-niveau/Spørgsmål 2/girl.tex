@@ -1,0 +1,149 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+	
+	\usepackage{xcolor}
+  \usepackage{transparent}
+	
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+	
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+	%\usepackage{geometry}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{100pt}
+		\setlength\cellspacebottomlimit{100pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	%\usepackage{dirtytalk}
+	%\usepackage{tasks}
+	
+	
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	%\reversemarginpar
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+	
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+	
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+			
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+	
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+	
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+			\MakePerPage{footnotes}
+	
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Girl}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1978}
+\author{Jamaica Kincaid}
+
+\maketitle
+%\begin{tikzpicture}[remember picture,overlay]
+   % \node[opacity=0.3, anchor=north west,yshift=140pt,xshift=0pt]%
+      % at (current page.north west)
+       % {\includegraphics[scale=0.4]{HG_logo.PNG}};
+%    \end{tikzpicture}
+    
+\noindent\linenumbers Wash the white clothes on Monday and put them on the stone heap; wash the color clothes on Tuesday and put them on the clothesline to dry; don’t walk bare-head in the hot sun; cook pumpkin fritters in very hot sweet oil; soak your little cloths right after you take them off; when buying cotton to make yourself a nice blouse, be sure that it doesn’t have gum in it, because that way it won’t hold up well after a wash; soak salt fish overnight before you cook it; is it true that you sing benna in Sunday school?; always eat your food in such a way that it won’t turn someone else’s stomach; on Sundays try to walk like a lady and not like the slut you are so bent on becoming; don’t sing benna in Sunday school; you mustn’t speak to wharf-rat boys, not even to give directions; don’t eat fruits on the street—flies will follow you; \emph{but I don’t sing benna on Sundays at all and never in Sunday school}; this is how to sew on a button; this is how to make a buttonhole for the button you have just sewed on; this is how to hem a dress when you see the hem coming down and so to prevent yourself from looking like the slut I know you are so bent on becoming; this is how you iron your father’s khaki shirt so that it doesn’t have a crease; this is how you iron your father’s khaki pants so that they don’t have a crease; this is how you grow okra—far from the house, because okra tree harbors red ants; when you are growing dasheen, make sure it gets plenty of water or else it makes your throat itch when you are eating it; this is how you sweep a corner; this is how you sweep a whole house; this is how you sweep a yard; this is how you smile to someone you don’t like too much; this is how you smile to someone you don’t like at all; this is how you smile to someone you like completely; this is how you set a table for tea; this is how you set a table for dinner; this is how you set a table for dinner with an important guest; this is how you set a table for lunch; this is how you set a table for breakfast; this is how to behave in the presence of men who don’t know you very well, and this way they won’t recognize immediately the slut I have warned you against becoming; be sure to wash every day, even if it is with your own spit; don’t squat down to play marbles—you are not a boy, you know; don’t pick people’s flowers—you might catch something; don’t throw stones at blackbirds, because it might not be a blackbird at all; this is how to make a bread pudding; this is how to make doukona; this is how to make pepper pot; this is how to make a good medicine for a cold; this is how to make a good medicine to throw away a child before it even becomes a child; this is how to catch a fish; this is how to throw back a fish you don’t like, and that way something bad won’t fall on you; this is how to bully a man; this is how a man bullies you; this is how to love a man, and if this doesn’t work there are other ways, and if they don’t work don’t feel too bad about giving up; this is how to spit up in the air if you feel like it, and this is how to move quick so that it doesn’t fall on you; this is how to make ends meet; always squeeze bread to make sure it’s fresh; \emph{but what if the baker won’t let me feel the bread?}; you mean to say that after all you are really going to be the kind of woman who the baker won’t let near the bread?
+
+\end{document}

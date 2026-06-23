@@ -1,0 +1,863 @@
+Navn:
+
+Laura Højen Meyer
+
+Fødselsdato:
+
+170306
+
+Skole:
+
+Næstved Gymnasium og HF
+
+Fag:
+
+Studieretningsprojekt, Samlet vurd. (6647--Gym bekend, )
+
+Dato for prøveaflæggelse:
+
+24-03-2026
+
+Indholdsfortegnelse
+INDLEDNING......................................................................................................................................................... 1
+BARNDOMSTRAUMERS BETYDNING FOR MENNESKETS UDVIKLING OG IDENTITET .................................................. 2
+ET OMSORGSSVIGTS DANNELSE AF TRAUMATISKE HÆNDELSER .......................................................................................................2
+TRAUMATISKE HÆNDELSERS PÅVIRKNING AF BARNETS UDVIKLING, IDENTITET OG RELATIONER .............................................................3
+CASE ANALYSE AF ”MINE SENFØLGER OG PTSD-SYMPTOMER FØR OG NU.” ............................................................ 6
+TYPER OG REAKTIONER PÅ OMSORGSSVIGT OG TRAUMER .............................................................................................................6
+PSYKOSOCIAL UDVIKLING OG TRAUMATISKE KRISER .....................................................................................................................8
+OVERLEVELSES- OG COPING-STRATEGIER ...................................................................................................................................9
+ENGELSKFAGLIG ANALYSE AF A LITTLE LIFE .......................................................................................................... 11
+SKILDRING AF BARNDOMSTRAUMERS KONSEKVENSER GENNEM HOVEDPERSONEN JUDE ...................................................................11
+SAMMENLIGNING AF BUDSKABER...........................................................................................................................................17
+HVILKEN ROLLE KAN SKØNLITTERATUR HAVE FOR MENNESKETS FORSTÅELSE OG BEARBEJDNING AF EGNE
+ERFARINGER OM TRAUMATISKE OPLEVELSER/HÆNDELSER? ................................................................................ 19
+KONKLUSION...................................................................................................................................................... 23
+LITTERATURLISTE ................................................................................................................................................ 24
+PRIMÆRE KILDER: ...............................................................................................................................................................24
+SEKUNDÆRE KILDER: ...........................................................................................................................................................24
+Billeder til forside: .....................................................................................................................................................25
+
+Resume
+I projektet undersøges, hvilken betydning barndomstraumer har for menneskets identitet og
+udvikling, og dertil skønlitteraturs medvirken til traumebearbejdning. Dette gøres blandt andet ved
+en redegørelse, hvor der psykologifagligt redegøres for traumatiske hændelser i barndommen, og
+hvordan de kan påvirke barnets udvikling, identitet og relationer. Her er der særligt fokus på typer
+og reaktioner på omsorgssvigt, psykosociale udvikling og traumatiske kriser. Som en del af
+projektet, er der inddraget en psykologifaglig case analyse af podcast episoden ”Mine senfølger og
+PTSD-symptomer før og nu” af Sarah Liv, og en engelskfaglig analyse af A Little Life af Hanya
+Yanagihara, med særligt fokus på barndomstraumers konsekvenser og de samlede budskaber.
+Analysen viser, at barndomstraumer kan have altomsluttende konsekvenser for individets identitet
+og relationer. Dertil kommer vigtigheden af den rette hjælp og bearbejdning af traumerne.
+Diskussionen har særligt fokus på skønlitteraturens rolle for menneskers forståelse og bearbejdning
+af egne traumatiske hændelser, med anvendelse af psykologifaglig om bl.a. Erindringer, samt bilag
+1 og 2. På denne måde er det et af projektets konklusioner, at litteratur kan have en funktionel rolle i
+bearbejdning af disse hændelser, men med den kritiske sans i hånden.
+Desuden konkluderes det, at barndomstraumer ifølge projektet, spiller en altafgørende rolle for
+menneskets senere relationer, udvikling og ikke mindst selvopfattelse.
+
+Indledning
+Utryghed, en krop i konstant alarmberedskab og en uforklarlig følelse af skyld. For mange børn er
+dette ikke ukendte reaktioner, men en del af deres hverdag. Barndommen forbindes ofte med
+tryghed, leg og at være ubekymret, men for nogle bliver den i stedet præget af frygt, svigt og
+utilgængelighed. Traumatiske hændelser i barndommen kan gribe ind i barnets udvikling, forme
+identitet og påvirker relationer langt ind i voksenlivet. Når et barn vokser op i et miljø, hvor det
+ikke bliver beskyttet og anerkendt, bliver traumet ikke blot en hændelse, men en grundlæggende del
+af barnets selvforståelse. Det bliver derved interessant, hvor stor en påvirkning disse traumer i
+barndommen egentlig har for menneskets senere udvikling.
+I denne opgave vil der psykologifaglig blive redegjort for, hvordan traumatiske hændelser kan vise
+sig i barndommen. Herudover vil der blive redegjort for, hvordan disse traumatiske hændelser i
+barndommen kan påvirke barnets udvikling, identitet og relationer. Der vil blive analyseret
+podcasten ”Mine senfølger og PTSD-symptomer før og nu” med fokus på anvendelsen af
+psykologifaglige teorier som bl.a. omsorgssvigt, kriser og coping-strategier. Der vil blive foretaget
+en engelskfaglig analyse og fortolkning af romanen A Little Life med henblik på at belyse,
+fremstillingen af konsekvenserne af barndomstraumer gennem hovedpersonen Jude. Afslutningsvis
+vil der blive diskuteret hvilken rolle skønlitteratur kan have for menneskets bearbejdning og
+forståelse af egne traumatiske hændelser. I den forlængelse, vil der blive inddraget bilag 1 og 2 for
+at understøtte dette samt psykologifaglig teori såsom spontane og traumatiske erindringer.
+
+1
+
+Barndomstraumers betydning for menneskets udvikling og
+identitet
+Barndommen spiller en afgørende rolle for menneskets udvikling, da denne periode, lægger
+grundlaget for personlighed, identitet og relationer til andre mennesker. Børn er afgørende
+afhængige af stabile og omsorgsfulde relationer til voksne, som kan skabe tryghed, og støtte deres
+følelsesmæssige og sociale udvikling. Når et barn derimod udsættes for traumatiske hændelser eller
+manglende omsorg i opvæksten, kan det få betydelige konsekvenser for barnets
+udviklingsmuligheder og senere liv. Traumatiske hændelser i barndommen omfatter situationer,
+hvor barnets grundlæggende behov for tryghed, omsorg og stabilitet ikke bliver opfyldt. Dette kan
+være alt fra fysisk, psykisk eller seksuelle overgreb, omsorgssvigt, uforudsigelighed i hjemmet,
+eller følelsesmæssig negligering. Fælles for disse er, at de rammer barnet i en periode, hvor de er
+særligt sårbare, og under stor udvikling. I mange tilfælde dannes traumerne tidligt i en persons liv,
+og for at forstå disse traumer skal man også forstå svigtet som er sket ved traumets dannelse.
+
+Et omsorgssvigts dannelse af traumatiske hændelser
+Psykologisk forskning peger på, at tidlige traumer har betydelige konsekvenser for barnets
+udviklingsforløb, både kort- og langvarigt. Hvis man skal forstå barndomstraumer, skal man også
+forstå omsorgssvigt, så det er relevant at starte med at skelne mellem typerne af omsorgssvigt. Når
+man undersøger omsorgssvigt, er det oftest i forbindelse med vanrøgt, fysisk-, psykisk- og seksuelle
+overgreb.1 Psykologen Else Christensen har opstillet forskellige typer af omsorgssvigt. Her har hun
+inddelt det i: aktivt fysisk omsorgssvigt, passivt fysisk omsorgssvigt, aktivt psykisk omsorgssvigt
+og passivt psykisk omsorgssvigt.
+Hun skelner blandt andet mellem aktivt fysisk omsorgssvigt, hvor nære voksne med vilje påfører
+barnet smerte, skade eller seksuelle krænkelser. Her kan barnet ses med blå mærker, sår og andre
+fysiske skader. Passivt fysisk omsorgssvigt ses, når barnet udsættes for skadeligt og fysisk ubehag
+grundet manglende tilsyn og forsømmelse som er kendetegnet som vanrøgt. Barnet kan ved passivt
+fysisk omsorgssvigt være nusset, og på andre måder være uplejet og negligeret. Disse er de fysiske
+omsorgssvigt, som oftest er mere iøjnefaldende og genkendelige. Dog er der også den psykiske
+
+1 Larsen, Ole Schultz. ”Omsorgssvigt” (s. 126.) Psykologiens Veje
+
+2
+
+omsorgssvigt. Psykisk omsorgssvigt er de svigt, som oftest er sværere at observere og fastslå.
+Aktivt psykisk omsorgssvigt er når børn udsættes for nedværdigende handlinger, eller verbalt bliver
+nedgjort. Dette kommer til udtryk ved, at barnet ofte har lavt selvværd, selvtillid og mangel på
+livsglæde.
+Sidst er der det passivt psykiske omsorgssvigt. Her vil barnet typisk være understimuleret, grundet
+forældrenes/tryghedspersoners manglende opdragelsesevne. Dette kan være en ubevidst handling,
+som skyldes manglende overskud i forhold til at leve op til omsorgsfigurens rolle, eller grundet
+misbrug, psykiske sygdomme eller lav begavelse. Barnet ville kunne fremstå forskræmt og/eller
+ubegavet, som om udfoldelsen af barnets kognitive evner ikke er blevet stimuleret. 2
+Christensens opstilling af typerne gør det muligt at identificere, hvilke former for svigt barnet
+udsættes for, og hvordan disse kan fungere som traumatiske hændelser, der forstyrrer barnets
+grundlæggende følelse af tryghed. Når omsorgen svigter, mister barnet den stabile tryghed, som er
+nødvendig for at udforske sig selv og for udvikle sunde relationer3
+
+Traumatiske hændelsers påvirkning af barnets udvikling, identitet og
+relationer
+Efter at have identificeret de forskellige typer af omsorgssvigt, og dermed de potentielle
+traumatiske hændelser, bliver det relevant at undersøge, hvordan barnet reagere og udvikler sig.
+Dette kan på den måde, være med til at forklare, hvordan disse traumatiske hændelser påvirker
+barnet senere udvikling, identitet og relationer.
+Psykologen Kari Killén bygger videre på Else Christensens forståelse for typerne af omsorgssvigt
+ved at forske i, hvordan børn typisk reagerer på omsorgssvigt. Killén har forsket i disse reaktioner
+og fremhæver, at børn i sådanne miljøer udvikler forskellige reaktioner, der hjælper dem med, at
+navigere i en hverdag præget af uforudsigelighed og manglende stabilitet.
+Disse strategier er ” (…) en række af de reaktioner og måder at overleve på, man kan møde hos
+børn, der udsættes for omsorgssvigt.”4 Strategierne er langt fra tilfældige, men funktionelle
+tilpasninger, som barnet udvikler for at skabe kontrol i en situation, som er uforudsigelig. En af de
+reaktioner Kari Killén beskriver, er mistillid til omverdenen. Dette viser sig ved, at barnet kan
+2 André Philip Ravn, F. & Wolf, T. (2017) ”Else Christensens typer af omsorgssvigt.”, Celle til Selfie (s. 13)
+3 Larsen, Ole Schultz. ”Omsorgssvigt” (s.126) Psykologiens Veje
+4 Larsen, Ole Schultz. ”Børns reaktioner på omsorgssvigt” (s. 127) Psykologiens Veje
+
+3
+
+udvikle negative forventninger til verden, andre mennesker og sig selv. Barnet vil konstant være på
+vagt og være opmærksom på små ændringer i omgivelserne, fordi de har lært at konflikter og fare
+kan opstå pludseligt.
+Denne mistillid bliver derved en overlevelsesstrategi, der hjælper barnet med at forberede sig på det
+uforudsigelige. Andre børn reagerer f.eks. med dissociation, hyperaktivitet, destruktivitet,
+depression og/ eller skyldfølelse. 5 Når barnet gentagende gange har erfaret at dets behov ikke bliver
+mødt, eller bliver mødt med afvisning, vrede eller ligegyldighed, kan det udvikle en reaktion, hvor
+barnet undertrykker sine følelser for at undgå yderlige smerte. Disse former for følelsesmæssig
+lukning ville på kort sigt ”beskytte” barnet, men på længere sigt vil det hæmme barnets evne til at
+udtrykke følelser, danne nære relationer og udvikle en sund selvopfattelse.
+Det helt centrale i Kari Killéns teori er, at barnets reaktioner ikke er ”problematisk adfærd”, men
+barnets forsøg på at tilpasse sig det givne miljø, og derved beskytte sig selv. Killén gør det tydeligt,
+at barnet reaktioner skal forstås i en kontekst, hvor omsorgssvigt og traumatiske hændelser skaber
+rammerne for barnets videre følelsesmæssige og sociale udvikling. 6
+Traumatiske hændelser kan samtidig forstås som kriser, der udfordrer barnets daværende forståelse
+af omverden. Psykoanalytikeren Erik H. Eriksons psykosociale udviklingsmodel beskriver, hvordan
+menneskets identitet formes gennem otte udviklingsfaser, hvor hver fase indebær en central
+udviklingskrise. I barndommen fra 0 til ca. 12 år, skal barnet bl.a. udvikle basale kompetencer som
+f.eks.: tillid vs. mistillid, selvstændig vilje vs. skam og tvivl, initiativ vs. skyldfølelse, flid og
+skaberevne vs. mindreværd.7 Hvis barnet møder stabile og omsorgsfulde voksne, vil en positiv
+tilstand dominere i en given fase, hvilket styrker barnets identitet og selvopfattelse.
+Udsættes barnet derimod for omsorgssvigt eller traumatiske hændelser, dominerer et negativt
+faseskift og skaber mistillid, skam og lav selvopfattelse. Erikson understreger, at tidligere
+udviklingskriser er afgørende for de efterfølgende faser, og kommer varigt til at præge det
+pågældende menneske, og identitetsdannelsen. Tab, skuffelser eller nye belastninger senere i livet
+kan reaktivere konflikter fra tidligere faser. 8
+Johan Cullberg bygger videre på Erik H. Eriksons forståelse af udviklingskriser, men retter sit fokus
+
+5 Larsen, Ole Schultz. ”Børns reaktioner på omsorgssvigt” (s. 127-128) Psykologiens Veje
+6 Larsen, Ole Schultz. ”Børns reaktioner på omsorgssvigt” (s. 126-127) Psykologiens Veje
+7 Larsen, Ole Schultz. ”Eriksons psykosociale faser” (Figur 6.3 s. 77) Psykologiens Veje
+8 Larsen, Ole Schultz. ”6. Udviklingspsykologi - Erik H. Erikson” (s. 75-77) Psykologiens Veje
+
+4
+
+mod de psykologiske reaktioner, der opstår, når individet udsættes for en traumatisk hændelse.
+Hvor Erikson beskriver udviklingskriser som nødvendige, undersøger Cullberg de kriser som
+opstår, når et menneske udsættes for en belastning det ikke kan håndtere. Han skelner mellem
+akutte- og kroniske traumatiske kriser, hvor sidstnævnte er særligt relevante i forbindelse med
+omsorgssvigt.
+Kronisk traumatiske kriser opstår, når individet udsættes for vedvarende traumatiske situationer.
+Dette kan ses ved vedvarende vold i hjemmet, negligering, overgreb: fysisk-, psykisk og seksuelt
+og/ eller omsorgssvigt. I modsætning til akutte traumatiske kriser, som har en tydelig begyndelse og
+afslutning, bliver kroniske kriser en inkorporeret del af hverdagen, som forhindrer bearbejdelse. Det
+kan føre til mistillid til omverdenen, skyld- og skamfølelse og mangel på selvrespekt som også ses i
+Kari Killéns reaktioner på omsorgssvigt.
+Hvor voksne ofte kan udvikle mestrings- og overlevelsesstrategier, har børn ikke samme ressourcer.
+Børn er afhængige af tryghed og tillid til voksne for en hensigtsmæssig udvikling og kan derved
+ikke på samme måde som voksne, udvikle mestrings- og overlevelsesstrategier. 9 Dette uddyber
+Cullbergs teori om Eriksons pointe, at uløste udviklingskriser kan få langvarige konsekvenser,
+særligt når barnet udsættes for vedvarende traumer, der forhindrer en sund psykosocial udvikling.
+
+9 Larsen, Ole Schultz. ”Kriser og kollektive katastrofer” (ibog) Psykologiens Veje
+
+5
+
+Case analyse af ”Mine senfølger og PTSD-symptomer før og
+nu.”
+Podcasten Forbandet Barndom Episode 1 ”Mine senfølger og PTSD-symptomer før og nu” er
+indspillet af Sarah Liv, og er en personlig fortælling om hendes traumer. I podcasten, fortæller hun
+om sine udfordringer efter et overgreb som skete da hun var 11 år. Hun beskriver i generel forstand,
+hvilke senfølger og PTSD-symptomer der findes, og hvilke hun selv har oplevet og bærer præg af.
+Dertil gennemgår hun også sine erfaringer, og videregiver gode råd til andre som har oplevet det
+samme.
+I denne psykologifaglige analyse, vil der være fokus på Sarah Livs senfølger, da hun forklarer om
+nogle af de svigt og reaktioner hun har oplevet. Dertil fortæller hun også om, hvordan disse har
+påvirket hendes senere liv, og hvordan hun har fået hjælp til at bearbejde dette. Der vil blive
+anvendt teori om bl.a. typer og reaktioner af omsorgssvigt, kriser og coping-strategier til at
+analyserer podcasten.
+
+Typer og reaktioner på omsorgssvigt og traumer
+Omsorg er en helt essentiel del af børn udvikling, og udsættes et barn for omsorgssvigt, kan de have
+konsekvenser på flere aspekter. Omsorgssvigt dækker over flere ting, både hvilken type det er, og
+hvilke reaktioner der er på den. Undersøges de forskellige typer af omsorgssvigt, er det ofte
+vanrøgt, fysisk, psykisk eller seksuelle overgreb.10 Som tidligere nævnt, har Psykologen Else
+Christensen opstillet typer af omsorgssvigt. I podcasten er det passivt psykisk omsorgssvigt og
+seksuelt overgreb som Sarah Liv har været udsat for, og det vil derfor blive forklaret. Passivt
+psykisk omsorgssvigt ses ofte i dysfunktionelle hjem, hvor barnet overses, oplever manglende
+kærlighed, og følelsen af at være ønsket og elsket. 11 Seksuelt overgreb, er når barnet misbruges
+seksuelt f.eks. ved samleje. 12
+I casen ses disse eksempler på omsorgssvigt. Sarah Liv bliver ud fra den givne information udsat
+for både passivt psykisk omsorgssvigt og for aktivt fysisk omsorgssvigt i form af seksuelle
+10 Larsen, Ole Schultz. ”Omsorgssvigt” (s. 126) Psykologiens Veje
+11 André Philip Ravn, F. & Wolf, T. (2017) ”Else Christensens typer af omsorgssvigt.”, Celle til Selfie (s. 13)
+12 Larsen, Ole Schultz. ”Omsorgssvigt” (s. 126) Psykologiens Veje
+
+6
+
+overgreb. Sarah Livs passivt psykiske omsorgssvigt ligger i, at hun nævner sin dysfunktionelle
+opvækst. Dog er det de seksuelle overgreb, som har sat sig dybest i hende, og ses da hun siger
+”Selvbillede (…) er en af grundkernerne (…) der lider et stort knæk, når man kommer fra en
+dysfunktionel familie, men også når man har været udsat for overgreb.” 13 Der kan altså
+argumenteres for, at der ifølge Sarah Liv har været manglende psykisk omsorg, som hun har haft
+brug for som barn. Da man ikke hører mere om forældrene og deres baggrund, kan det være svært
+at be- eller afkræfte dette, men grundlæggende har dette været med til at påvirke hendes senere liv.
+Reaktioner fra børn som har været udsat for omsorgssvigt og traumer, er netop noget af det Kari
+Killén har forsket i. Hun har undersøgt reaktioner på omsorgssvigt, og nogle af disse er
+repræsenterede i casen. Depression, dissociation, skyldfølelse og kontaktforstyrrelser er nogle af de
+reaktioner, som ses ved børn der har været udsat for omsorgssvigt og/eller overgreb. 14. Når barnet
+f.eks. ikke får støtte til at forstå sine følelser, udvikles skam- og skyldfølelse. Disse
+reaktionsmønstre udvikles hos barnet, og kan ses som en beskyttelses reaktion.
+Disse reaktioner nævnes også i podcasten omkring Sarah livs egne senfølger, efter de traumatiske
+hændelser som skete i hendes barndom. Sarah Liv beskriver blandt andet ”Noget af det som har
+fyldt rigtig meget gennem, nærmest hele mit liv, det er den her dybe indre ensomhedsfølelse eller
+tomhedsfølelse” 15 og her påpeger hun særlig ”Skyld og skam og ramt af mange depressioner”16
+Hendes reaktioner, er ifølge Kari Killéns teori meget naturlige og repræsentative.
+Sarah Liv siger desuden, at disse reaktioner har fulgt hende op igennem voksenlivet, og det er
+stadig noget hun arbejder med. Efter fødslen af sit første barn, har hun oplevet at mange af hendes
+tidligere traumer er kommet tilbage, og er forstærkede. Dette er kommet af, at hun har prøvet at
+fortrænge episoderne og sine følelser, og fortæller: ”Minder, traumer og flashback er ikke noget
+man kan glemme, man kan måske undertrykke den i en periode (…) det har jeg selv gjort, men det
+buldrede frem efter jeg blev mor.”17 Dette fremhæver at forældreskab ofte aktiverer egne
+tilknytningserfaringer, fordi man nu står i en rolle, der spejles i egen barndom. Disse reaktioner
+bliver derved ikke et udtryk for noget unormalt, men derimod for forventelige psykologiske
+
+13 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (7.51 - 8.00) Forbandet Barndom Podcast
+14 Larsen, Ole Schultz. ”Børns reaktioner på omsorgssvigt” (s. 126-127) Psykologiens Veje
+15 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (6.24 - 6.29) Forbandet Barndom Podcast
+16 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (6.32 - 6.34) Forbandet Barndom Podcast
+17 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (11.58 -12.09)
+
+7
+
+senfølger af tidlige traumer. De senfølger Sarah Liv oplever efter overgrebet og svigtet, har stor
+sammenhæng og lighed med PTSD-symptomer.18
+Teorierne om typerne og reaktionerne på omsorgssvigt, giver en god forståelse for traumedannelse.
+Som beskrevet tidligere, er det tydeligt at opvæksten spiller en central rolle for mennesker senere
+liv, og dette har også været tilfældet for Sarah Liv. Disse teorier undersøger dog ikke, hvordan det
+konkret kan udfordre senere faser i livet.
+
+Psykosocial udvikling og traumatiske kriser
+Den psykosociale udviklingsmodel blev først introduceret af psykoanalytikeren Erik H. Erikson.
+Han var interesseret i at undersøge menneskets identitet, og de udviklingskriser mennesker
+gennemgår i deres liv. Erikson mener, at tidligere udviklingskriser er afgørende for de efterfølgende
+faser, og kommer varigt til at påvirke det pågældende menneske. Han opdelte denne model i otte
+faser, hvor de første fire fra 0-12 år betegnes som barndommen. 19 Der er sidenhen blevet
+videreudviklet ud fra denne teori. Johan Cullberg har forsket i de forskellige typer af kriser, samt
+reaktioner på dem. Her har han opdelt den i akutte og kroniske kriser, hvor særligt kroniske
+traumatiske kriser er relevante for casen.
+Sarah Livs traume er sket i hendes barndom, og derved inden for de fire første faser ift. Erik H.
+Eriksons psykosociale udviklingsmodel. Disse faser er helt fundamentale for udviklingen af tillid,
+skam, skyldfølelse og mindreværd. Men for Sarah Liv, har særligt manglen på tillid og tryghed haft
+betydelige konsekvenser for hendes senere. I podcasten siger hun ”Noget af det der også har fyldt
+meget tidligere det er den her fundamentale mangel på tryghed”20 Denne negative udvikling i de
+tidligere faser, har påvirket hende i et langt større omfang end man måske kunne tro det ville. Hun
+beskriver det som ”Jeg har ikke følt mig tryg nogen steder, når jeg sover eller er i mit eget hjem
+eller er sammen med mine tætteste. Min krop har altid været på vagt” 21. Dette understreger hvor
+vigtige de fire barndomsfaser er for individets senere faser, og for Sarah Liv viser det sig ved
+mistillid til alle omkring hende, selv hendes tætteste.
+18 PTSD (s.d) Psykiatrifonden
+19 Larsen, Ole Schultz. ”Eriksons psykosociale faser” (Figur 6.3 s. 77) Psykologiens veje
+20 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (8.18 - 8.23) Forbandet Barndom Podcast
+21 Liv, S. ” Mine senfølger og PTSD-symptomer før og nu” (8.27 - 8.33) Forbandet Barndom Podcast
+
+8
+
+Havde der derimod været en dominerende positiv udvikling i disse faser, påvirket af miljøet og
+Sarah Livs egne ressourcer, ville der havde været en optimal identitetsudvikling som ville have lagt
+grundfundamentet for en positiv bearbejdning senere.
+De kroniske traumatiske kriser er defineret ved at der skal være kontinuitet, og derved vedvarende
+handlinger. Dette ses f.eks. ved svigtet og seksuelle overgreb som Sarah Liv har oplevet. Mange af
+de reaktioner som sker under kroniske traumatiske kriser, har stor sammenhæng til Kari Killéns
+reaktioner og Erik H. Eriksons psykosociale udviklingsmodel. 22 Sarah Liv beskriver, hvordan
+hendes reaktioner såsom mistillid, skam og mangel på selvrespekt har påvirket hendes liv, hvilket
+kan spores tilbage til hendes dysfunktionelle hjem. Ved kroniske kriser udvikler det på gældende
+menneske overlevelsesstrategier eller coping-strategier.
+
+Overlevelses- og coping-strategier
+Coping spiller en central rolle i, hvordan mennesker håndterer og overlever traumatiske erfaringer.
+Richard Lazarus skelner mellem problem- og emotionsfokuseret coping. Problemfokuseret coping
+handler om at forsøge at løse eller ændre selve problemet f.eks. ved at søge hjælp, skabe struktur
+eller ændre adfærd. Emotionsfokuseret coping handler derimod om at regulere de følelser traumet
+vækker, f.eks. gennem benægtelse, distancering eller kontrol over følelser. 23
+Sarah Livs fortælling peger på, at hun tidligere har anvendt overlevelsesstrategier, som typisk hører
+til emotionsfokuseret coping. Her har hun forsøgt at dæmpe eller undgå svære følelser gennem
+fortrængning eller distancering. Hun fortæller ”(…) jeg har haft fokus på at indarbejde nogle gode
+strategier og fjernet de overlevelsesstrategier der har været tidligere, og erstattet dem med nogle
+bedre alternativer (…) det er noget af det der har hjulet rigtig meget”. 24 Dette viser en bevægelse
+mod en mere problemfokuseret coping-strategi, hvor hun arbejder bevidst med at forstå og ændre
+sine reaktionsmønstre. Denne udvikling af nye mestringsstrategier kan ses som en vigtig del af
+hendes bearbejdning, og en måde hvorpå hun gradvist reflekterer i voksenlivet.25
+
+22 Larsen, Ole Schultz. ”Kriser og kollektive katastrofer” (ibog) Psykologiens veje
+23 Larsen, Ole Schultz. ”Coping” (s. 455-456) Psykologiens Veje
+24 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (21.42- 21.50) Forbandet Barndom Podcast
+25 Larsen, Ole Schultz. ”Coping” (s. 455-456) Psykologiens veje
+
+9
+
+Barndomstraumer udgør en af de mest omfattende risikofaktorer for senere psykiske udfordringer.
+Når et barn udsættes for vedvarende belastninger som omsorgssvigt eller seksuelle overgreb, kan
+det skabe store vanskeligheder for identitetsdannelsen og evnen til at indgå i stabile relationer.
+Sammenfattende viser casen om Sarah Liv, hvordan barndomstraumer kan sætte dybe spor i et
+menneskes udvikling. Dog viser podcasten også, at personlig bearbejdning og mestringsstrategier
+kan have en effektiv effekt.
+Dette giver mulighed for en bedre forståelse af, hvordan traumatiske hændelser er med til at forme
+identitet og relationer. Mange af disse pointer danner store paralleller til romanen A Little Life, som
+viser hvordan konsekvenserne af barndomstraumer skildres gennem fiktion.
+
+10
+
+Engelskfaglig analyse af A Little Life
+Menneskers tidlige erfaringer kan sætte dybe spor og forme både identitet og relationer langt ind i
+voksenlivet. Litteraturen har ofte fungeret som et rum, hvor traumers langvarige konsekvenser
+udforskes og illustreres. I det følgende er der fokus på det engelsksprogede værk A Little Life
+(2015) skrevet af den amerikanske forfatter Hanya Yanagihara. Romanen har siden sin udgivelse
+fået betydelig opmærksomhed for sin intense og hjerteskærende skildring af menneskelig smerte,
+venskab og overlevelse. Gennem hovedpersonen Judes livshistorie, udforsker romanen, hvordan
+dybe traumer kan forme et menneskes identitet, relationer og selvbillede. Det er således interessant
+at kigge på, hvordan skildringen af barndomstraumers konsekvenser udfoldes gennem romanens
+hovedperson Jude.
+Romanen A Little Life (2015) er skrevet af den amerikanske forfatter Hanya Yanagihara. Romanen
+følger fire unge mænd: Jude, Willem, Malcolm og JB som mødes på college og senere etablerer
+deres liv i New York City. Selvom romanens begyndelse præsenteres som en fortælling om
+venskab, ambitioner og drømme, bliver det hurtigt tydeligt at Judes historie udgør romanens
+egentlige midtpunkt. Jude er en talentfuld jurist med en dybt traumatisk og hemmelighedsfuld
+baggrund, som gradvist udfoldes gennem romanens mange flashbacks. Han lever med selvhad,
+kroniske smerter og en omfattende følelse af værdiløshed hvilket præger både hans relationer og
+selvopfattelse. De tre venner forsøger på hver deres måde at støtte Jude, men romanen viser
+samtidig, hvordan kærlighed og loyalitet ikke altid er nok til at hele gamle sår. Gennem vennernes
+livsforløb, præget af karriere gennembrud, afhængighed, tab og omsorg, skildrer Yanagihara et
+komplekst billede af traumers vedvarende konsekvenser, og de måder mennesker forsøger at leve
+videre på, trods en fortid der aldrig helt slipper underbevidstheden.
+
+Skildring af barndomstraumers konsekvenser gennem hovedpersonen
+Jude
+Selvom fortællingen foregår over flere årtier og i flere forskellige sociale miljøer, bliver det hurtigt
+klart at Yanagihara bruger både miljøskildring, fortælleteknik og en detaljeret person beskrivelse til
+at illustrere, hvordan barndomstraumer former et menneskes kamp for at eksistere. Judes fortid
+
+11
+
+fungerer ikke blot som baggrundsstøj, men som en konstant påmindelse der påvirker hans
+relationer, selvopfattelse og hans evne til at leve i nuet.
+Miljøskildringen i A Litte Life fungerer som en ramme for forståelsen af Judes udvikling, og de
+langvarige konsekvenser hans barndomstraumer bærer med sig. Romanen skildrer to tydelige
+miljøer: det fysiske miljø, som henviser til de steder Jude lever og bevæger sig i, og det psykiske
+miljø, som mærkes og ses gennem hans selvopfattelse og væremåde. Disse to miljøer spejler og
+forstærker hinanden, og danner romanens tyngende fortælling.
+New York City udgør det centrale fysiske miljø. Byen fungerer både som et sted for muligheder,
+men også som et fængsel for Jude. På overfladen repræsenterer byen frihed, anonymitet og
+ambition, som bogen beskriver ”New York was populated by the ambitious.”26. Den bliver et sted
+hvor Jude og hans venner, kan skabe sig et nyt liv og jagte deres drømme. Men for Jude bliver byen
+aldrig et neutralt og trygt sted.
+Hans traumatiske baggrund præger hans oplevelse af de fysiske miljøer han befinder sig i. Jude har
+et stort behov for at have kontrol over sine tanker, og dette behov afspejles tydeligt i hans
+omgivelser, hvor tryghed og forudsigelighed er altafgørende for ham. Willem, Judes tætteste ven
+beskriver ”(…) because he locked anything that could be: doors, windows, closets. It was reflexive
+for him.”27 Dette viser, hvordan romanens fysiske miljø altid følges af det psykiske. Det er præget
+af ængstelighed, mistillid og en dyb følelse af usikkerhed som påvirker Judes fysiske handlinger, og
+udgør en signifikant konsekvens af hans traumer. At låse alt omkring sig er ikke blot en vane, men
+et symbol på hans indre behov for kontrol, som han ikke havde som barn.
+Uanset, hvor Jude befinder sig fysisk, følger hans traumer og ensomhed med som en konstant
+påmindelse. Dette bliver tydeligt i citatet ”Before New York there had been law school, and before
+that, college, (…) Philadelphia, and the long, slow trip across the country, (…) there was Montana,
+and the boys’ home (…) the Southwest, and the motel rooms, and the lonely stretches of road (…)
+there was South Dakota and the monastery. And before that? A father and a mother, presumably.
+Or, more realistically, simply a man and a woman. And then, probably, just a woman. And then
+him.”28 Denne opremsning af de steder han har levet, gør det klart at det fysiske miljø blot sætter
+rammen for Judes liv, og ligegyldigt hvor i landet han befinder sig, følger det psykiske miljø med.
+
+26 Yanagihara, H. A Little Life (2015) s. 49
+27 Yanagihara, H. A Little Life (2015) s.90
+28 Yanagihara, H. A Little Life (2015) s. 165
+
+12
+
+Det psykiske miljø er romanens egentlige centrum, et indre, traumatiseret område, han forsøger at
+fortrænge og kontrollere. På trods af de mange steder han har befundet sig, viser citatet også hans
+totale ensomhed, og det svigt han oplevede i barndommen. Det er derved ikke blot en spejling af
+Judes indre tilstand, men præger hele romanens stemning som er fyldt med melankoli.
+Jude bærer ikke blot traumerne med sig, han har lavet regler og indlæringer der hjælper med at
+bevare kontrollen, men som også fastholder ham i fortiden. Jude blev som spæd efterladt, men
+fundet af munke og opfostret i et kloster. Under sit ophold i klosteret bliver Jude udsat for alvorlige
+overgreb. En af munkene: Brother Luke, udnytter Judes sårbarhed og længsel efter omsorg. Han
+manipulerer Jude til at tro, at han er en tryghedsperson. I virkeligheden udnytter han denne tillid, til
+at udøve både fysisk, psykisk og seksuel vold mod ham.
+I sin tid hos munkene, blev Jude undervist i forskellige fag, udover disse faglige lektioner blev han
+også belært om munkenes syn på, hvordan han skulle være og opføre sig. For at kunne efterleve
+munkenes krav, opsatte Jude en masse regler. Disse ses i citatet ”He had all sorts of rules he’d
+constructed for himself over the decades, based on lessons someone must have taught him - what he
+wasn’t entitled to; what he mustn’t enjoy; what he mustn’t hope or wish for; what he mustn’t
+covet” 29 Disse regler blev dannet for at være underdanig overfor munkene, men mest af alt for at
+overleve.
+Det psykiske miljø afspejler også personkarakteristikken af Jude. Disse indlæringer og regler har
+været med til at skabe, hvem han var og er. Ved romanens udfoldelse illustreres gradvist hans
+dystre barndom. Her kan der både være tale om hans ydre- og indre karakteristik. Jude bærer
+masser af fysiske ar på kroppen, men arrene i dem hans sjæl er langt mere grusomme.
+Den ydre karaktstik understøtter hans indre tilstand. Hans krop bærer tydelige spor af fortidens
+overgreb og hans egen selvskade ” (…) he developed a wound on each calf (…)”30 og “ (…) he was
+cutting himself so much (…)31 Hans fysiske tilstand bliver en spejling af hans psykiske nedbrydning.
+Hans krop bliver et kort over alt det han har gennemlevet, og alt det han stadig kæmper med.
+Jude fremstår som en kompleks og traumatiseret karakter, hvis personlighed er formet af år med
+svigt, overgreb og manipulation. Han fortrænger store dele af sin fortid, og holder den skjult for
+sine venner, hvilket fungerer som en beskyttelse, men også bevarer kontrol over sit eget selvbillede.
+
+29 Yanagihara, H. A Little Life (2015) s. 398
+30 Yanagihara, H. A Little Life (2015) s. 661
+31 Yanagihara, H. A Little Life (2015) s. 217
+
+13
+
+Brødrene i klosteret lærte Jude fra barnsben, at han ikke fortjente kærlighed, og at han skulle være
+taknemmelig for den mindste opmærksomhed. Dette gør, at han bliver usikker og mistroisk ved
+omsorg. ”His silence was both a necessity and a protection, (…)”32 Jude ved ganske enkelt ikke,
+hvordan kærlighed føles, og han tvivler på om han er berettiget til den. Samtidig viser citatet også,
+hvordan hans personlighed er bygget op omkring at skjule sig følelsesmæssigt for at opretholde en
+facade.
+Jude er både en statisk og dynamisk karakter på samme tid. Han udvikler sig i sine relationer, især
+gennem Willem som er hans bedste ven, og Harold som er hans adoptivfar. Disse to personer bliver
+hans katalysatorer for at stræbe efter glæden og er derved vendepunkter i hans liv. De lægger
+fundamentet for en positiv retning, mens hans selvhad består. Han forbliver fanget i en indre
+stilstand hvor han ser sig selv som skadet og uværdig. Hans selvdestruktive adfærd bliver en direkte
+spejling af den indre karakteristik. Selvskaden som Brother Luke introducerede ham til, bliver en
+måde at håndtere den indre smerte. ” (…) then had gotten into his car and driven home and cut
+himself until he was bleeding so much that he couldn’t grip the razor properly.” 33 Dette viser hvor
+voldsomt og ukontrolleret hans selvskade kan blive i situationer, hvor han ikke er i kontrol.
+Selvskaden er alt omsluttende for romanens handlingsforløb, og skildres i form af de mange
+episoder med ”cutting,” men også selvmordstanker ”He had considered killing himself before, of
+course (…).34 Dette viser både hans udvikling, men også stilstanden.
+Spurgte man Jude selv, hvorvidt han var statisk eller dynamisk, ville han mene at han var statisk.
+Det fjerde kapitel i romanen, ved navn ”The axiom of equality” 35 er Judes favorit, aksiom36 som
+hævder ”that x always equals x.” 37 Ift. om Jude er statisk, ses dette ved at lige meget hvor meget
+han prøver at fortrænge fortiden, flygter han aldrig. ” (…) he knows that x will always equal x, no
+matter what he does, or how many years he moves away from the monastery, from Brother Luke, no
+matter how much he earns or how hard he tries to forget.”38 Dette betyder ifølge Jude, at de ting
+som er sket i hans barndom, vil følge ham resten af livet, og vil spænde ben for hans udvikling og
+glæde.
+
+32 Yanagihara, H. A Little Life (2015) s. 107
+33 Yanagihara, H. A Little Life (2015) s. 363
+34 Yanagihara, H. A Little Life (2015) s. 443
+35 Yanagihara, H. A Little Life (2015) s. 321
+36 Smith, A. ”Aksiom” (2025) Danmarks Nationalleksikon
+37 Yanagihara, H. A Little Life (2015) s. 385
+38 Yanagihara, H. A Little Life (2015) s. 386
+
+14
+
+Alligevel rummer Jude også en hjerteskærende optimisme, som gør hans karakter yderlig tragisk. I
+citatet, ” (…) he was an optimist. Every month, every week, he chose to open his eyes, to live
+another day in the world.”39 vises det, at trods alle traumerne, forsøger han at fortsætte. Han vælger
+livet, selv når det gør ondt, og selv når han ikke føler han fortjener det. Denne lille smule håb gør
+hans kamp hjerteskærende, da det viser hvor ivrig han er for at føle lykke eller bare være ”normal.”
+A Little Life har en utraditionel fortælleteknik, som har stor betydning for, hvordan læseren oplever
+både Jude, og romanens skildring af konsekvenserne. Hoveddelen af bogen er fortalt af en
+3.personsfortæller, som bevæger sig tæt på karaktererne. Dog er det uden at være en fuldstændig
+alvidende fortæller. 3. persons fortælleren følger ofte Judes tanker, følelser og kropslige reaktioner
+helt tæt på, så læseren får en næroplevelse af hans indre totur. ”But sometimes he wonders whether
+he has insulted himself so much that he has neglected some essential part of being human (…)” 40
+Denne fortællestil skaber en intens og klaustrofobisk læseoplevelse, da Yanagihara søger for, at
+læseren mærker Judes indre kamp for at holde styr på sine traumer.
+Fortællestilen brydes dog indimellem, særligt i de kapitler, hvor Harold, Judes adoptivfar fortæller
+fra sit perspektiv. Hvor Jude selv er tilbageholdende og præget af selvhad, fungerer Harolds jegfortæller, som et varmt, stabilt og trygt narrativ. Dette ses i citatet: “ (…) I thought often of what I
+was trying to do, of how hard it is to keep alive someone who doesn’t want to stay alive.” 41Her
+formår Yanagihara at illustrere Harolds afmagt, men ikke mindst kærlighed. Han forsøger at forstå
+Jude, men hemmeligholdelsen af Judes fortid gør, at han kun kan se konsekvenserne af den.
+Jeg-fortælleren giver også et indblik i, hvordan Judes psykiske miljø påvirker dem omkring ham.
+De små informationer om Jude, skaber bekymring og ”It sometimes felt as if we were living our
+relationship in reverse, and instead of worrying for him less, I worried for him more (…)”42
+Harolds bekymring vokser, jo tættere han kommer på Jude. Dette viser konsekvenserne, af Judes
+tavshed, og påvirker ikke kun ham selv, men også mennesker der elsker ham. Jo mere Harold lærer
+om Judes fortid, desto tydeligere bliver det for ham, hvor dybt traumerne sidder. Det Jude ikke
+indser er, at han er knudepunktet for de mennesker der elsker ham.
+
+39 Yanagihara, H. A Little Life (2015) s. 164
+40 Yanagihara, H. A Little Life (2015) s. 357
+41 Yanagihara, H. A Little Life (2015) s. 802
+42 Yanagihara, H. A Little Life (2015) s. 800
+
+15
+
+Romanen bærer præg af mange flashbacks og flashforwards. Dette ses bl.a. når Jude gennemlever
+tidligere episoder fra sin barndom. Læseren får en forståelse af, de overgreb og traumer Jude bliver
+udsat for gennem sin barndom og bliver derved en flue på væggen, som ser udfoldelsen af
+traumerne. Yanagihara danner på denne måde signifikante og sanselige beskrivelser af de
+situationer Jude har stået i, som bidrager til den nære læseoplevelse. Herudover benytter Yanagihara
+sig også af flashforward, som er med til at holde læseren interesseret og motiveret. Dette ses bl.a. da
+læseren gennemgående får små ”stikpiller” omkring Judes evne til at gå.
+Som læser fornemmes hurtigt, en negativ udvikling, men inden dette konkret bliver pointeret,
+bruges flashforward ”He didn’t know then that this was he last time in his life that he would over
+run (…)”43 Denne flashforward er skrevet i en af romanens mange flashbacks fra Judes barndom.
+Her træder Judes jeg-fortæller og indre monolog tydeligt i kraft. Citatet viser, at han laver en
+henvendelse til sig selv, og derved giver læseren en forsmag på, hvad der kommer til at ske senere,
+men bevare interessen.
+En anden fortælleteknik Yanagihara, benytter sig af, er brugen af ”style of writing.” Det ses særligt
+ved brugen af beskrivende sprog, gentagelser og symbolik som giver læseren en mere mærkbar
+læseoplevelse. Symbolikken ses blandt andet ved romanens andet kapitel som er kaldt ”The
+Postman.”44 Dette bliver et symbol på vennernes manglende information om Jude. JB beskriver”
+(…) we never see him wih anyone, we don’t know what race he is, we don’t know anything about
+him. Post-sexual, post-racial, post-identity, post-past.”45 og efterfølgende ”The post man. Jude the
+Postman.”46 Dette indikerer både vennernes frustration, men også symbolikken i at en postmand,
+ofte er en anonym person som afspejler Jude.
+Romanen viser tydelige træk på tankemylder og overtænkning i sine mange gentagelser og
+opremsninger. Dette ses særligt i de indre monologer ”and lifted his new sweater and shirts and
+socks and shoes”47 eller da han opremser ” He would (…) he would (…) he would” (…).48 Det ses
+her, at han lader sine tanker slippe fri, og på denne måde giver Yanagihara et indblik i Judes
+komplekse psyke. Denne form for skriveteknik, kaldes også ”stream of consciousness”49, og ses
+
+43 Yanagihara, H. A Little Life (2015) s. 633
+44 Yanagihara, H. A Little Life (2015) s. 95
+45 Yanagihara, H. A Little Life (2015) s. 107
+46 Yanagihara, H. A Little Life (2015) s. 107
+47 Yanagihara, H. A Little Life (2015) s. 131
+48 Yanagihara, H. A Little Life (2015) s. 729
+49 Sauerberg, O. ”Stream of consciousness” . Dansk Nationalleksikon
+
+16
+
+gennemgående i romanens indre monolog. Dette er med til at understøtte Judes komplekse og
+hjerteskærende karakter, som er fyldt med selvhad, melankoli og spekulation.
+Romanens titel A Little Life kan tolkes på flere måder. Den direkte oversættelse, Et lille liv, rummer
+et ironisk aspekt, da fortællingen indkapsler alt andet end et lille liv.
+Romanens udfoldelse beviser, at intet kan beskrives som lille, hverken i den følelsesmæssige tyngde
+eller i Judes liv. Samtidig forsvinder et centralt aspekt i oversættelsen. På engelsk kan A Little Life
+nemlig også forstås som et glimt af liv, noget der i romanens mange sider, får en dyster og
+foruroligende betydning. I begyndelsen af romanen virker titlen uskyldig, men med undring over
+sig. Gradvist afsløres det, som en direkte reference til Brother Lukes krav om, at Jude ” (…) have to
+show a little life.”50 En sætning der hentyder til dyb manipulation, udnyttelse og misbrug, idet den
+anvendes i forbindelse med de overgreb han udsættes for. Denne sætning bruges ikke bare én gang,
+men går igen” (…) as Brother Luke had once asked him - to show a little life, a little enthusiasm.”51
+Titlen bliver dermed ikke blot en kommentar til Judes liv, men en afspejling af de traumatiske
+hændelser, der gennemborer hele romanen, og de altafgørende konsekvenser barndomstraumer kan
+have for mennesket.
+
+Sammenligning af budskaber
+Både A Little Life og podcasten ”Mine senfølger og PTSD-symptomer før og nu” formidler et fælles
+budskab om, at bearbejdning af traumer, er en krævende og smertefuld proces som kræver den rette
+hjælp. I podcasten siger Sarah Liv, ” der findes jo sindssygt mange behandlingsmuligheder (…) Det
+er meget forskelligt, alt efter hvem man er, hvad man har været igennem og hvor man er i sin
+proces.”52 Dette understreger, at heling ikke blot har én korrekt metode, men at det afhænger af
+individuelle behov og omstændigheder. Det samme ses i romanen, hvor Jude kæmper med
+konsekvenserne af sine barndomstraumer hele livet, og hvor hans manglende evne til at tage imod
+hjælp, gør det endnu mere smertefuldt og gennemgribende.
+Et andet fælles budskab er betydningen af trygge relationer, og hvordan mistillid kan stå i vejen for
+et positivt livssyn og selvbillede. I podcasten beskrives det, at Sarah Liv har haft et stort behov for
+
+50 Yanagihara, H. A Little Life (2015) s. 473
+51 Yanagihara, H. A Little Life (2015) s. 547
+52 Liv, S. ”Mine senfølger og PTSD-symptomer før og nu” (25.55- 26.02) Forbandet Barndom
+
+17
+
+at distancere sig fra sine traumer, og hvor selv hverdagssituationer skaber frygt. A Little Life
+skildrer dette gennem Judes adfærd. Hans modvilje mod fysisk nærhed og andre
+kontaktforstyrrelser, ses tydeligt i citatet ” (…) Jude wasn’t a hugger and so he didn’t”53 Det
+illustrerer, hvordan hans psykiske traumer påvirker hans krop og grænser, formet af de tidligere
+overgreb. Mistilliden kommer også til udtryk i tilliden til voksne ”The professor had always been
+kind to him, but wasn’t there something about that kindness the made him resemble Brother
+Luke?”54 Dette viser, hvordan traumer kan påvirke evnen til at skelne mellem fare og omsorg.
+Denne mistillid bliver altomsluttende, og påvirker personens evne til at indgå i trygge relationer, og
+evnen til at tage imod omsorg i voksenlivet.
+Samlet set viser romanen og podcasten, at barndomstraumer kan have langvarige konsekvenser for
+tillid, relationer og selvbillede. Begge påpeger også, at støtte og stabile relationer er helt afgørende
+for at bevæge sig imod et bedre sted psykisk og i relationer. Det illustreres også, at vejen dertil
+sjældent er enkel og i nogle tilfælde såsom Judes, uopnåelig.
+
+53 Yanagihara, H. A Little Life (2015) s.93
+54 Yanagihara, H. A Little Life (2015) s. 614
+
+18
+
+Hvilken rolle kan skønlitteratur have for menneskets
+forståelse og bearbejdning af egne erfaringer om
+traumatiske oplevelser/hændelser?
+Skønlitteratur har fungeret som et rum, hvor mennesker kan spejle sig i andres erfaringer, og få
+adgang til følelser, de måske ikke selv kan sætte ord på eller definere. Dette kan vise, hvor
+skadende konsekvenserne af barndomstraumer kan være for individet, som både ses i A Little Life
+og ”Mine senfølger og PTSD-symptomer før og nu.” Bilag 1 og bilag 2 præsenterer, hver deres
+synspunkter på litteraturen som bearbejdningsmetode, og samtidig forholdes der sig kritisk til dette.
+Når det gælder traumatiske hændelser, kan litteraturen både forværre situationen, men også åbne for
+nye perspektiver. Samtidig rejser det spørgsmålet, om litteratur kan fungere som en funktionel
+bearbejdningsmetode, eller om den primært giver mulighed for refleksion eller forværring, snarere
+end heling.
+Bilag 1 præsenterer biblioterapi som en bearbejdningsmetode, hvor litteratur bruges til at støtte
+mental sundhed. Dette understøttes med citatet” (…) tailored recommendation of fiction is offered
+with the aim of improving mental health.”55 Det viser, at litteratur kan fungere som et redskab, som
+kan tilpasses efter læseren, og det der skal bearbejdes. Dette bliver derved en funktionel og
+personlig metode til at sætte egne erfaringer i perspektiv.
+Litteraturen kan altså ” (…) help readers process emotions, discover coping strategies, or simply
+provide momentary escape from their everyday woes.”56 Den kan fungere som en potentiel støtte og
+som en flugt fra hverdagens kriser. Det bliver muligt at opdage nye mestringsstrategier som både
+kan have en positiv eller negativ indflydelse på bearbejdningen. Bilag 2 viser det fra et andet
+perspektiv. Her ses forfatterens skrive proces som en bearbejdningsform. Alex Schulman har
+oplevet svigtet helt tæt på i sin egen barndom, og bruger sit forfatterskab som en måde at bearbejde
+sine traumer på.
+Ifølge bilag 1 er identifikationen med andres beskrivelser, om det er fiktion eller ikke-fiktion, med
+til at kunne bearbejde traumatiske hændelser i livet. I bilaget fremhæves”(…) reading about
+
+55 Zimmer, K. (Bilag 1) ”It opened up something in me’; Why people are turning to bibliotherapy” (s. 1) BBC
+56 Zimmer, K. (Bilag 1)”It opened up something in me’; Why people are turning to bibliotherapy” (s. 2) BBC
+
+19
+
+characters with our own lived experiences allows us to identify with them and experience a
+cathartic moment when the characters overcome challenges (…).57 Dette understreger, at litteratur
+ikke blot bliver en bearbejdnings metode, men også skaber rum, hvor alt kan lade sig gøre og
+spejles i. Denne identifikation understreger bilag 2 også, her skrives det ”Mange lader til at kunne
+spejle sig i det dybt personlige stof.”58 Litteraturen bliver derved brugbart og relaterbart på et
+bredere personligt plan.
+Biblioterapi har både positive og negative aspekter, men for børn kan dette være en effektiv måde,
+at danne et univers, hvor der er plads til følelsesmæssig udvikling. I bilaget nævnes det, at børn med
+udfordringer såsom omsorgssvigt og følelsesmæssig negligering, kan have stor gavn af at læse
+litteratur.”It has been found to help children (…) to express themselves.”59 Der kan derved
+argumenteres for, at dette kan være en særligt god bearbejdningsmetode for børn som har oplevet
+kroniske traumatiske kriser og omsorgssvigt. En af udfordringerne med traumer og omsorgssvigt er,
+at man fortrænger og har udfordringer med at udtrykke sine følelser.
+På den ene side kan litteratur være en vigtig støtte for børn, der har oplevet svigt eller ustabile
+relationer. På den anden side advarer bilag 1 også om, at” (…) doesn’t mean the any kind of fiction
+boosts mental health for everyone”60 og” (…) research suggests that certain books can even be
+harmful.”61 Dog afhænger dette som nævnt af, hvad man prøver at bearbejde. En bog som A Little
+Life, kan det diskuteres, om den ville være bearbejdende, da dens tyngde og detaljerede
+beskrivelser, kan være med til at forværre en persons bearbejdnings proces. Litteraturens effekt er
+derved ikke garanteret, og afhænger af læserens situation og tilstand.
+Som nævnt fokuserer bilag 1 på læserens brug af litteratur som bearbejdningsform, mens bilag 2
+giver et indblik i, hvordan skønlitteratur og skrivning kan fungere som en bearbejdningsmetode for
+forfatteren selv. Forfatteren Alex Schulman, beskriver hvordan hans barndom med omsorgssvigt
+såsom ”Alkoholproblemet, Afstanden. Hendes manglende evne til at vise kærlighed. Det er min
+mor”62 har inspireret hans skrivning. Dette bærer tydelige tegn på passivt- og aktivt psykisk
+omsorgssvigt, og derudover mangel på tilknytning.
+Ifølge John Bowlby og Mary Ainsworth kan tidlige relationer præget af følelsesmæssig afstand føre
+57 Zimmer, K. (Bilag 1)”It opened up something in me’; Why people are turning to bibliotherapy” (s. 4-5) BBC
+58 Mikkelsen, M. (Bilag 2) ”Uden min ulykkelige barndom havde jeg ikke skrevet bøger” (s. 3) Kristeligt Dagblad
+59 Zimmer, K. (Bilag 1)”It opened up something in me’; Why people are turning to bibliotherapy” (s. 4) BBC
+60 Zimmer, K. (Bilag 1)”It opened up something in me’; Why people are turning to bibliotherapy” (s. 2) BBC
+61 Zimmer, K. (Bilag 1)”It opened up something in me’; Why people are turning to bibliotherapy” (s. 2) BBC
+62 Mikkelsen, M. (bilag 2)”Uden min ulykkelige barndom havde jeg ikke skrevet bøger” (s. 2) Kristeligt Dagblad
+
+20
+
+til utrygge tilknytningsmønstre, som kan være med til at påvirke et menneskes senere evne til at
+bygge trygge relationer, og regulere følelser.63 Forfatteren i bilag 2, Alex Schulmans beskrivelse af
+sin mor, bærer tydelige tegn på en utryg tilknytning, grundet den manglende evne til at vise
+kærlighed. Denne tydelige realisation af morens manglende omsorg, kan på den ene side ses som en
+bearbejdning i form af forfatterens egen barndom. På den anden side, gives hans livserfaringer
+videre, som læseren måske ville kunne bruge til sin egen bearbejdnings proces. Man kan i den
+forbindelse se en lighed mellem de to bilag, som viser, at netop læsning eller skrivningen af
+erfaringer kan bidrage til en positiv bearbejdning for andre.
+Bilag 2 viser også en anden form for bearbejdning. Her forsøger Schulman aktivt at fremkalde
+erindringer omkring sin barndom, for at finde et svar på morens adfærd og væremåde. Han forsøger
+nemlig ” (…) at skaffe alt det, som kan minde mig om barndommen. Det er, som om genstande,
+steder og dufte hjælper stemninger og erindringer på vej.” 64 Her bliver Dorthe Berntsens teori om
+spontane og traumatiske erindringer særligt interessante. Dette fænomen kaldes selvbiografisk
+hukommelse, som både indebærer spontane og viljestyrkede erindringer 65 Berntsen skelner mellem
+spontane erindringer, som er ”Erindringer der dukker på af sig selv, uden man gør noget forsøg på
+at huske dem.”66 og de ”viljestyrkede erindringer hvor vi målrettet og kontrolleret prøver at
+genkalde os noget”67 Sidst nævnte gør sig gældende for Alex Schulmans erindringssøgen fra sin
+barndom. Den aktive søgen, for at finde dufte, steder og genstande, er tydelige eksempler på
+viljestyrkede erindringer. På den ene side viser dette, hvordan skriveprocessen og
+erindringssøgningen kan fungere som en bearbejdningsproces. På den anden side understreger det
+også, hvor skrøbelig denne proces er. Erindringer er ikke faste, men kan blive påvirkede og
+forandrede, og viser derved også at man altid skal være kritisk overfor dem.
+Der kan argumenteres for, at dette er en meget destruktiv form for bearbejdning, men samtidig kan
+man ikke bebrejde ham, at ville have svar på, hvorfor hans barndom var som den var.
+Litteratur som bearbejdning er ikke uden risiko, bilag 1 fremhæver, at ” (…) certain types of fiction
+can cause harm”68 hvilket understreger, at man skal være kritisk overfor biblioterapi som
+63 Sommer, D. ”Tilknytning” Dansk Nationalleksikon
+64 Mikkelsen, M. (bilag 2)”Uden min ulykkelige barndom havde jeg ikke skrevet bøger” (s. 2) Kristeligt Dagblad
+65 Berntsen, D. ”Spontane og traumatiske erindringer” (2.47) Aarhus Universitet
+66 Berntsen, D. ”Spontane og traumatiske erindringer” (0.33 - 0.38) Aarhus Universitet
+67 Berntsen, D. ”Spontane og traumatiske erindringer” (1.48 - 1.54) Aarhus Universitet
+68 Zimmer, K. (bilag 1)”It opened up something in me’; Why people are turning to bibliotherapy” (s. 6) BBC
+
+21
+
+terapeutisk metode, da fortællinger kan have følelsesmæssig påvirkning på mennesket der står i en
+livskrise, og pointerer vigtigheden ved andre metoder. Den samme kritik ses også i bilag 2, hvor
+Alex Schulman har prøvet terapi, og erkender ”Minderne er for smertefulde, selvom han både har
+gået i terapi og i bog efter bog, har prøvet at skrive smerten væk” 69 Det bliver tydeligt, at hverken
+læsning eller skrivning kan trænge ind til de traumer, og at litteraturen i nogle tilfælde kan fastholde
+personen i den smertefulde proces af bearbejdning af barndomstraumer, frem for at skabe en positiv
+fremgang. Alligevel kan litteraturen også skabe en forståelse, som kan være betydningsfuld for
+mennesket. Forfatteren Schulman reflekterer over denne forståelse og siger ”Jeg tror aldrig, det
+lykkes mig at skrive mig ind til tilgivelse”70 hvilket påpeger, at litteraturen ikke garantere en
+løsning, men stadig kan åbne for forståelse og fællesskab.
+Sammenfattende viser diskussionen, at skønlitteratur kan spille en positiv rolle i menneskets
+forståelse og bearbejdning af traumatiske erindringer, men at denne rolle er kompleks og individuel.
+Litteraturen kan på den måde skabe et rum, hvor der er plads til identifikation og fællesskab, uanset
+om man er læser eller forfatter. De to bilag viser dog også, at litteraturen kan være skadelig og skal
+tilpasses efter personen. Den kan påvirke smertefulde erindringer, som kan skabe afstand til det
+egentlige formål med bearbejdningen. Den kan derved både være skadende, hvis ikke tilpasset
+rigtigt, men også være en effektiv måde at forstå og bearbejde egne traumatiske hændelser.
+
+69 Mikkelsen, M. (bilag 2) ”Uden min ulykkelige barndom havde jeg ikke skrevet bøger” (s. 2) Kristeligt Dagblad
+70 Mikkelsen, M. (bilag 2)”Uden min ulykkelige barndom havde jeg ikke skrevet bøger” (s. 3) Kristeligt Dagblad
+
+22
+
+Konklusion
+Barndomstraumer viser sig på tværs af psykologifaglige teorier, skildring gennem skønlitteratur og
+personlige fortællinger som en dyb integreret hændelse, der former menneskets identitet, udvikling
+og relationer langt ind i voksenlivet. Projektet viser, hvordan omsorgssvigt både fysisk, psykisk og
+seksuelt skaber fundamentale brud i barnets udvikling, særligt når svigter kommer fra de personer,
+som burde skabe tryghed.
+Når et barn udsættes for omsorgssvigt eller overgreb, forstyrres de grundlæggende udviklingsfaser,
+som normalt skaber tillid, selvværd og følelsesmæssig stabilitet. De anvendte teorier viser
+tilsammen, hvordan svigt både skaber reaktioner som videreføres til voksenlivet, og hæmmer
+barnets mulighed for at gennemgå senere udviklingsfaser på den sund måde. ”Mine senfølger og
+PTSD-symptomer før og nu” af Sarah Liv og romanen A Little Life viser tilsammen, hvordan
+barndomstraumer kan få smertefulde og langvarige konsekvenser for et menneskes selvopfattelse
+og relationer. Budskaberne viser på sammen måde, at traumer ikke forsvinder af sig selv, og at den
+rette og aktive bearbejdning er altafgørende for menneskets senere liv. Litteraturen kan på denne
+måde også blive en funktionel bearbejdningsmetode, hvor der skabes et univers, hvor individet ikke
+er alene med sine traumer. Det er dog helt essentielt at forholde sig kritisk til det materiale man
+læser, da det skal tilrettelægges efter den enkelte.
+Det kan konkluderes ud fra dette projekt, at barndomstraumer ikke kun påvirker barnet umiddelbare
+udvikling, men har en afgørende betydning for identitet, relationer og ikke mindst selvopfattelse.
+
+23
+
+Litteraturliste
+Primære kilder:
+-
+
+Yanagihara, Y. (2015). A Little Life. Anchor Books. (Originalværk udgivet 2015)
+
+-
+
+Bilag 1: Zimmer, K. (s.d.). "It opened up something in me”: Why people are turning to
+bibliotherapy. BBC. Lokaliseret den 17. juli 2025 på
+https://www.bbc.com/future/article/20250616-how-bibliotherapy-can-both-help-and-harmyour-mental-health
+(Besøgt 24/3 2026)
+
+-
+
+Bilag 2: Mikkelsen, M. (2025, 6. oktober). Uden min ulykkelige barndom havde jeg ikke
+skrevet bøger. Kristligt Dagblad, Sektion 1, s. 1-5.’
+
+-
+
+Sarah Liv. (Vært). (2022, 9. december). Mine senfølger og PTSD-symptomer før og
+nu [Audiopodcast]. Sarah Liv .
+https://open.spotify.com/episode/2OfmH950nrUWQTM28gjvz8
+(Besøgt 22/3 2026)
+
+Sekundære kilder:
+-
+
+André Philip Ravn, F. & Wolf, T. (2017). Else Christensen's typer efter omsorgssvigt. I: T.
+Stoltenberg & B. Gottlieb (Red.), Celle til Selfie (s. 13). Forlaget Colombus.
+
+-
+
+Berntsen, D. [forelæsning]. (2014, 3. februar). Spontane og traumatiske erindringer [Video].
+Aarhus Universitet. https://www.youtube.com/watch?v=4ezvLCwAjfQ
+(Besøgt 23/3 2026)
+
+-
+
+PTSD. (s.d.). Psykiatrifonden. https://psykiatrifonden.dk/diagnoser/ptsd
+(Besøgt 18/3 2026)
+
+-
+
+Sauerberg, O. (s.d.). Stream of consciousness. Dansk Nationalleksikon.
+https://lex.dk/stream_of_consciousness
+(Besøgt 22/3 2026)
+
+-
+
+Schultz Larsen, O. (2018). Psykologiens veje (3. udg.). Systime.
+
+-
+
+Schultz Larsen, O. (2022). Psykologiens veje: Kriser og kollektive katastrofer.
+(ibog)Systime. https://psykveje.systime.dk/?id=5576
+(Besøgt 19/3 2026)
+
+24
+
+-
+
+Sengeløv, L. (s.d.). Mestring. Sundhed.dk.
+https://www.sundhed.dk/borger/patienthaandbogen/kraeft/sygdomme/at-dele-en-krise-ilivet/mestring/
+(Besøgt 16/3 2026)
+
+-
+
+Smith, A. (2025). Aksiom. Danmarks Nationalleksikon. https://lex.dk/aksiom
+(Besøgt 19/3 2026)
+
+-
+
+Sommer, D. (s.d.). Tilknytning. Dansk Nationalleksikon. https://lex.dk/tilknytning
+(Besøgt: 17/3 2026
+
+-
+
+Tilknytning. (s.d.). Syddansk Universitet.
+https://www.sdu.dk/da/forskning/videnscenter_for_psykotraumatologi/forskning/traumemek
+anismer-og-metoder/tilknytning#
+(Besøgt 23/3 2026)
+
+Billeder til forside:
+-
+
+Emily, O. (2020, 9. juni). Book Review: A Little Life [Book Review: A Little Life// Hanya
+Yanagihara]. The Independent. https://www.indiependent.co.uk/book-review-a-little-lifehanya-yanagihara/
+(Besøgt 15/3 2026)
+
+-
+
+Liv, S. (Vært). (2022, 9. december). Mine senfølger og PTSD-symptomer før og
+nu [Audiopodcast]. Sarah Liv.
+https://open.spotify.com/episode/2OfmH950nrUWQTM28gjvz8
+(Besøgt 22/3 2026)
+
+-
+
+Liv, S. (Vært). (s.d.). Forbandet Barndom [Audiopodcast]. Forbandet Barndom.
+https://open.spotify.com/show/7ePB5CZMNKu6eba2oXzvBp
+(Besøgt 22/3 2026)
+
+25
+
+

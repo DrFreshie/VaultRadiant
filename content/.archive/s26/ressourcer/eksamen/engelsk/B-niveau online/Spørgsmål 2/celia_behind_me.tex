@@ -1,0 +1,168 @@
+ %! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[danish]{babel}
+	\usepackage[T1]{fontenc}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinc[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantinsb{Plantin MT Pro Semibold}
+	\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+	\newfontfamily\wal{Walbaum Com}
+	\newfontfamily\klav{Klavika}
+	\newfontfamily\klavl{Klavika light}
+	\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+	\usepackage{xcolor}
+  \usepackage{transparent}
+
+	\definecolor{frbblue}{RGB}{47, 88, 109}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{frbgreenl}{RGB}{162, 202, 137}
+	\definecolor{frbgreen}{RGB}{28, 85, 66}
+	\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	\usepackage{tikz}
+	\usepackage{placeins}
+	\usepackage[modulo]{lineno}
+
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+
+	\usepackage{multicol}
+	\usepackage{cellspace}
+		\setlength\cellspacetoplimit{4pt}
+		\setlength\cellspacebottomlimit{4pt}
+	\usepackage{tabularx}
+		\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+	\usepackage{siunitx}
+
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+
+	\setlist[enumerate]{label=\alph*),left=20pt}
+
+	\usepackage{lipsum}
+	\usepackage{comment}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+	\usepackage[h]{esvect}
+	\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+	\newcommand*\quotesize{20}
+	\newcommand*{\openquote}
+		{\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+			\node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+	\newcommand*{\closequote}[1]
+		{\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+			\node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+	\newcommand{\qm}[1]{``#1"}
+	\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\newcommand{\subtitle}[1]{\vspace{10pt}\newline\normalsize\plantin #1}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantinc\large}{}{}{}
+
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinc\huge\color{frbblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+
+	\setcounter{secnumdepth}{0}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+	\usepackage{bigfoot}
+	\DeclareNewFootnote{a}
+		\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+			\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+			\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+			\MakePerPage{footnotes}
+
+			%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\title{Celia Behind Me}
+\date{1984}
+\author{Isabel Huggan}
+
+\maketitle
+
+\noindent\linenumbers There was a little girl with large smooth cheeks and very thick glasses who lived up the street when I was in public school. Her name was Celia. It was far too rare and grown-up a name, so we always laughed at it. And we laughed at her because she was a chubby, diabetic child, made peevish by our teasing.
+
+My mother always said, \qm{You must be nice to Celia, she won't live forever,} and even as early as seven I could see the unfairness of that position. I already knew about mortality and was prepared to go to heaven with my two aunts who had died together in a car crash with their heads smashed like overripe melons. I overheard the bit about the melons when my mother was on the telephone, repeating that phrase and sobbing.
+
+I often thought about the melons when I saw Celia because her head was so round and she seemed so bland and stupid and fruitlike. All rosy and vulnerable at the same time as being the most awful pain. She'd follow us home from school, whining if we walked faster than she did. Everybody always walked faster than Celia because her short little legs wouldn't keep up. [\ldots]
+
+Celia, by the year I turned nine in December, had failed once and was behind us in school, which was a relief because at least in class there wasn't someone telling you to be nice to Celia. [\ldots] As the fall turned to winter, the five of us who lived on Brubacher Street and went back and forth to school together got meaner and meaner to Celia. [\ldots] I knew, deep in my wretched heart, that were it not for Celia I was next in line for humiliation. I was kind of chunky and wore glasses too, and had sucked my thumb so openly in kindergarten that \qm{Sucky} had stuck with me all the way to Grade 3.
+
+Little beasts we were, making our way along slippery streets. Celia, her glasses steamed up even worse than mine, would scuffle and trip a few yards behind us, and I walked along wishing that some time I'd look back and she wouldn't be there. But she always was, and I was always conscious of the hatred that had built up during the winter, in conflict with other emotions that gave me no peace at all.
+
+It was the last day before the thaw when the tension broke, like northern lights exploding in the frozen air.
+
+During the afternoon recess of the day I'm remembering, at the end of the shed where the girls stood, a sudden commotion broke out when Sandra, a rich big girl from Grade 4, brought forth a huge milk-chocolate bar from her pocket. [\ldots] Made bold by cold and desire, I spoke up.
+
+\qm{Could I have a bit, Sandra?} She turned to where Celia and I stood, holding the precious foil in her hand. Wrapping it in a ball, she pushed it over at Celia.
+
+\qm{This last bit is for Celia,} she said to me.
+
+\qm{But I can't eat it,} whispered Celia, her round face aflame with the sensation of being singled out for a gift. \qm{I've got di-a-beet-is.}
+
+\qm{Then could I have it, eh?} The pressure under which I acted made my chin quiver and a tear started down my cheek before I could wipe it away.
+
+\qm{No, no, no!} jeered Sandra then. \qm{Suckybabies can't have sweets either. Di-a-beet-ics and Sucky-babies can't eat chocolate. Give it back, you little fart, Celia. That's the last time I ever give you anything!}
+
+Wild, appreciative laughter from the chocolate-tongued mob, and they turned their backs on us, Celia and me, and waited while Sandra crushed the remaining bits into tiny pieces.
+
+After school there was the usual bunch of us walking home and, of course, Celia trailing behind us. The cold of the past few days had been making us hurry, taking the shortest routes. But this day we were all full of that peculiar energy that swells up before a turn in the weather and, as one body, we turned down the street that meant the long way home. [\ldots] We slid down the snowy slope at the mouth of the pipe that seemed immense then but was really only five feet in diameter. Part of its attraction was the tremendous racket you could make by scraping a stick along the sides as you went through.
+
+I was last because I had dropped my schoolbag in the snow and stopped to brush it off. And when I looked up, down at the far end, the figures of my four friends were silhouetted as they emerged into the daylight. As I started making great sliding steps to catch up, I heard Celia behind me, and her plaintive, high voice: \qm{Elizabeth! Wait for me, okay? I'm scared to go through alone. Elizabeth?}
+
+And of course I slid faster and faster, unable to stand the thought of being the only one in the culvert with Celia. Then we would come out together and we'd really be paired up. What if they always ran on ahead and left us to walk together? I got right to the end, when I heard another noise and looked up. There they all were, on the bridge looking down, and as soon as they saw my face began to chant, \qm{Better wait for Celia, Sucky. Better get Celia, Sucky.}
+
+The sky was very pale and lifeless, and I looked up in the air at my breath curling in spirals and felt -- I remember this very well -- a clear-headed instant of understanding. And with that, raced back into the tunnel where Celia stood whimpering half-way along.
+
+\qm{You little fart!} I screamed at her, my voice breaking. \qm{You little diabetic fart! I hate you! I hate you! Stop it, stop crying, I hate you! I could bash your head in I hate you so much, you fart, you fart! I'll smash your head like a melon! And it'll go in pieces all over and you'll die. You'll die, you diabetic. You're going to die!} Shaking her, shaking her and banging her against the cold metal, crying and sobbing for grief and gasping with pure hatred. And then there were the others, pulling at me, yanking me away, and in the moral tones of those who don't actually take part, warning me that they were going to tell, that Celia probably was going to die now, that I was really evil, they would tell what I said. [\ldots]
+
+Both my mother and my father spanked me that night. At first I tried not to cry, and tried to defend myself against their angry words, tried to tell them when they asked, \qm{But whatever possessed you to do such a terrible thing?} But whatever I said seemed to make them more angry and they became so embittered by their own shame that they slapped my buttocks for personal revenge as much as to teach me a lesson. [\ldots]
+
+Celia hadn't died, of course. She'd been half-carried, half-dragged home by the heroic others, and given pills and attention and love, and the doctor had come to look at her head but she didn't have so much as a bruise. She had a dirty hat, and a bad case of hiccups all night, but she survived.
+
+Celia forgave me, all too soon. Within weeks her mother allowed her to walk back and forth to school with me again. But, in all the years before she finally died at seventeen, I was never able to forgive her. She made me discover a darkness far more frightening than the echoing culvert, far more enduring than her smooth, pink face.
+
+\end{document}
