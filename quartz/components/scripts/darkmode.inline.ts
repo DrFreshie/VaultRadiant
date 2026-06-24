@@ -18,6 +18,13 @@ document.addEventListener("nav", () => {
     emitThemeChangeEvent(newTheme)
   }
 
+  const shortcutHandler = (e: HTMLElementEventMap["keydown"]) => {
+    if (e.key.toLowerCase() === "t" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
+      e.preventDefault()
+      switchTheme()
+    }
+  }
+
   const themeChange = (e: MediaQueryListEvent) => {
     const newTheme = e.matches ? "dark" : "light"
     document.documentElement.setAttribute("saved-theme", newTheme)
@@ -33,5 +40,9 @@ document.addEventListener("nav", () => {
   // Listen for changes in prefers-color-scheme
   const colorSchemeMediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
   colorSchemeMediaQuery.addEventListener("change", themeChange)
-  window.addCleanup(() => colorSchemeMediaQuery.removeEventListener("change", themeChange))
+  document.addEventListener("keydown", shortcutHandler)
+  window.addCleanup(() => {
+    colorSchemeMediaQuery.removeEventListener("change", themeChange)
+    document.removeEventListener("keydown", shortcutHandler)
+  })
 })

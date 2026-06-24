@@ -267,6 +267,17 @@ blockquote p {
   font-size: 0.88rem;
 }
 
+article em,
+article i,
+article .presenter-section em,
+article .presenter-section i,
+.remark-slide-content em,
+.remark-slide-content i {
+  font-style: normal !important;
+  color: var(--secondary) !important;
+  font-weight: 600;
+}
+
 @font-face {
   font-family: "Bristol";
   src: url("/static/Bristol.otf") format("opentype");
