@@ -9,7 +9,7 @@ const homeNavCss = `
 }
 
 .home-nav__heading {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -54,23 +54,23 @@ export default (() => {
             <li><a href="/classnotes/eng-b/lessonplans">Engelsk B</a></li>
           </ul>
         </section>
-        <section>
-          <h3 class="home-nav__heading">Matematik</h3>
-          <ul class="home-nav__list">
-            <li><a href="/semestre/s26/6h56Ma/noter/funktioner">Funktioner</a></li>
-            <li><a href="/semestre/s26/6h56Ma/noter/geometri">Geometri</a></li>
-            <li><a href="/semestre/s26/6h56Ma/noter/differentialregning">Differentialregning</a></li>
-            <li><a href="/semestre/s26/6h56Ma/noter/sandsynlighed">Sandsynlighed</a></li>
-          </ul>
-        </section>
-        <section>
-          <h3 class="home-nav__heading">Engelsk</h3>
-          <ul class="home-nav__list">
-            <li><a href="/semestre/s26/6l26en/noter/belonging">Belonging</a></li>
-            <li><a href="/semestre/s26/6l26en/noter/borders">Borders</a></li>
-            <li><a href="/semestre/s26/6l26en/noter/voice">Voice</a></li>
-          </ul>
-        </section>
+        {/* <section> */}
+        {/*   <h3 class="home-nav__heading">Matematik</h3> */}
+        {/*   <ul class="home-nav__list"> */}
+        {/*     <li><a href="/semestre/s26/6h56Ma/noter/funktioner">Funktioner</a></li> */}
+        {/*     <li><a href="/semestre/s26/6h56Ma/noter/geometri">Geometri</a></li> */}
+        {/*     <li><a href="/semestre/s26/6h56Ma/noter/differentialregning">Differentialregning</a></li> */}
+        {/*     <li><a href="/semestre/s26/6h56Ma/noter/sandsynlighed">Sandsynlighed</a></li> */}
+        {/*   </ul> */}
+        {/* </section> */}
+        {/* <section> */}
+        {/*   <h3 class="home-nav__heading">Engelsk</h3> */}
+        {/*   <ul class="home-nav__list"> */}
+        {/*     <li><a href="/semestre/s26/6l26en/noter/belonging">Belonging</a></li> */}
+        {/*     <li><a href="/semestre/s26/6l26en/noter/borders">Borders</a></li> */}
+        {/*     <li><a href="/semestre/s26/6l26en/noter/voice">Voice</a></li> */}
+        {/*   </ul> */}
+        {/* </section> */}
       </nav>
     )
   }

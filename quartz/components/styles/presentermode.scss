@@ -40,10 +40,16 @@
     overflow-y: auto;
   }
 
+  &:not([presenter-slide="program"]) body .page > #quartz-body .left.sidebar {
+    --presenter-sidebar-shift: clamp(0px, calc((100vw - 1500px) / 2), 18rem);
+    margin-left: calc(-1 * var(--presenter-sidebar-shift)) !important;
+    margin-right: var(--presenter-sidebar-shift) !important;
+  }
+
   & .sidebar.left::before {
     content: "";
     position: absolute;
-    inset: 0 2rem 0 0;
+    inset: 0;
     background-image: radial-gradient(
       circle,
       color-mix(in srgb, var(--secondary) 22%, transparent) 0.08rem,
@@ -145,9 +151,49 @@
   }
 
   &[presenter-slide="program"] .presenter-section.active {
-    width: 100%;
-    max-width: 44rem;
+    width: min(100%, 82rem);
+    max-width: 82rem;
     margin-inline: auto;
+  }
+
+  &[presenter-slide="program"] .presenter-program-slide {
+    display: grid;
+    grid-template-columns: minmax(14rem, 22rem) minmax(0, 44rem) minmax(14rem, 22rem);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 5rem);
+    width: 100%;
+  }
+
+  &[presenter-slide="program"] .presenter-lesson-title {
+    grid-column: 1;
+    font-size: xxx-large;
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    color: var(--secondary);
+    border-right: solid 2px;
+    margin: 3rem 3rem 0 0;
+    padding-top: 2rem;
+    opacity: 70%;
+    font-family: var(--headerFont);
+  }
+
+  &[presenter-slide="program"] .presenter-program-card {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  @media (max-width: 900px) {
+    &[presenter-slide="program"] .presenter-section.active {
+      width: 100%;
+      max-width: 44rem;
+    }
+
+    &[presenter-slide="program"] .presenter-program-slide {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+    }
   }
 
   & .center {
@@ -236,6 +282,15 @@
     margin: 0;
   }
 
+  & .presenter-program li.presenter-program__active {
+    color: var(--gray);
+    font-weight: 600;
+  }
+
+  & .presenter-program li.presenter-program__active::marker {
+    color: var(--darkgray);
+  }
+
   & .presenter-hover-zone {
     position: fixed;
     top: 0;
@@ -272,6 +327,7 @@
     font-size: 2.1rem;
     font-weight: 700;
     color: var(--dark);
+    font-family: var(--headerFont);
   }
 
   & .presenter-progress {

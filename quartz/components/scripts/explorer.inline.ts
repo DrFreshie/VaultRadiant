@@ -210,12 +210,12 @@ async function setupExplorer(currentSlug: FullSlug) {
           break
       }
     }
-    // Root the explorer at the class folder (semestre/{semester}/{class}),
-    // so both 'noter' and 'lektioner' are always visible regardless of which
-    // subfolder the current file lives in.
+    // Root the explorer at the class folder when possible, so sibling
+    // sections like 'noter' and 'lektioner' stay visible on lesson pages too.
     const simpleCurrent = simplifySlug(currentSlug)
     const parts = simpleCurrent.split("/").filter(Boolean)
     const semestreIdx = parts.indexOf("semestre")
+    const classnotesIdx = parts.indexOf("classnotes")
 
     let rootNode: FileTrieNode = trie
     if (simpleCurrent === "/" || simpleCurrent === "index" || simpleCurrent === "") {
@@ -232,6 +232,11 @@ async function setupExplorer(currentSlug: FullSlug) {
     } else if (semestreIdx !== -1 && parts.length > semestreIdx + 2) {
       // Inside semestre/{semester}/{class}/... → root at the class folder
       const classSlug = parts.slice(0, semestreIdx + 3).join("/") as FullSlug
+      const maybeClass = findFolderNode(trie, classSlug)
+      if (maybeClass) rootNode = maybeClass
+    } else if (classnotesIdx !== -1 && parts.length > classnotesIdx + 1) {
+      // Inside classnotes/{class}/... → root at the class folder
+      const classSlug = parts.slice(0, classnotesIdx + 2).join("/") as FullSlug
       const maybeClass = findFolderNode(trie, classSlug)
       if (maybeClass) rootNode = maybeClass
     } else {

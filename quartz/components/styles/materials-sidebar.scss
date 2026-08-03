@@ -1,0 +1,35 @@
+.materials-sidebar-section {
+  margin-top: 1.5rem;
+}
+
+.materials-sidebar-section > h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.materials-sidebar-content {
+  border-radius: 5px;
+  border: 1px solid var(--lightgray);
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  padding: 1rem;
+}
+
+.materials-sidebar-content > *:first-child {
+  margin-top: 0;
+}
+
+.materials-sidebar-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.materials-sidebar-content ul,
+.materials-sidebar-content ol {
+  padding-left: 1.2rem;
+}
+
+@media all and (max-width: 1200px) {
+  .materials-sidebar-section {
+    display: none;
+  }
+}

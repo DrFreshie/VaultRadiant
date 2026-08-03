@@ -20,10 +20,7 @@ export default (() => {
   }
 
   // IMPORTANT: css must be a STRING, not an object
-  ConditionalContent.css =
-    (LessonLayoutConstructor.css ?? "") +
-    "\n" +
-    (ContentConstructor.css ?? "")
+  ConditionalContent.css = (LessonLayout.css ?? "") + "\n" + (DefaultContent.css ?? "")
 
   return ConditionalContent
 }) satisfies QuartzComponentConstructor

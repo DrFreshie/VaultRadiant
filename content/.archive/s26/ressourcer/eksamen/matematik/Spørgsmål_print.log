@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  12 JUN 2026 10:00
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  24 JUN 2026 07:59
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Spørgsmål_print.tex
@@ -1147,6 +1147,20 @@ Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 162.
 (luatex.def)             Requested size: 56.95209pt x 36.28166pt.
  [11
 
+]
+File: ../img/frbvuc_logo.png Graphic file (type png)
+<use ../img/frbvuc_logo.png>
+Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 168.
+(luatex.def)             Requested size: 56.95209pt x 36.28166pt.
+ [12
+
+]
+File: ../img/frbvuc_logo.png Graphic file (type png)
+<use ../img/frbvuc_logo.png>
+Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 174.
+(luatex.def)             Requested size: 56.95209pt x 36.28166pt.
+ [13
+
 ] (./Spørgsmål_print.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -1157,19 +1171,19 @@ Package rerunfilecheck Info: File `Spørgsmål_print.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 28099 strings out of 476076
+ 28111 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 736 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 40 attribute, 77 glue_spec, 21 attribute_list, 3 write nodes
-   avail lists: 2:370,3:163,4:69,5:156,6:24,7:1312,8:26,9:228,10:4,11:114
- 49837 multiletter control sequences out of 65536+600000
+ 748 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 4 glue, 4 kern, 1 glyph, 44 attribute, 77 glue_spec, 23 attribute_list, 3 write nodes
+   avail lists: 2:364,3:163,4:69,5:153,6:24,7:1315,8:26,9:228,10:4,11:114
+ 49841 multiletter control sequences out of 65536+600000
  102 fonts using 14806255 bytes
  84i,7n,92p,553b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Regular.otf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on Spørgsmål_print.pdf (11 pages, 262589 bytes).
+Output written on Spørgsmål_print.pdf (13 pages, 265194 bytes).
 
-PDF statistics: 116 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 131072)
+PDF statistics: 124 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

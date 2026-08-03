@@ -12,6 +12,19 @@ function isElement(node: ChildNode): node is HTMLElement {
   return node.nodeType === Node.ELEMENT_NODE
 }
 
+function escapeHtml(text: string) {
+  return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;")
+}
+
+function getLessonTitle() {
+  return document.querySelector(".page-header h1.article-title")?.textContent?.trim() ?? ""
+}
+
 function getPresenterContentRoot(article: HTMLElement) {
   return (
     (article.querySelector(":scope > .lesson-section > .lesson-content") as HTMLElement | null) ??
@@ -95,7 +108,31 @@ function renderFloatingControls(total: number, current: number) {
   `
 }
 
-function renderLeftSidebar(programHtml: string | null, total: number, current: number) {
+function highlightActiveProgramItem(container: HTMLElement, activeTitle: string | null) {
+  const items = Array.from(container.querySelectorAll("li")) as HTMLLIElement[]
+  const normalizedActiveTitle = activeTitle ? normalizeHeading(activeTitle) : ""
+
+  items.forEach((item) => item.classList.remove("presenter-program__active"))
+  if (!normalizedActiveTitle) return
+
+  const match = items.find((item) => {
+    const itemText = normalizeHeading(item.textContent ?? "")
+    return (
+      itemText === normalizedActiveTitle ||
+      itemText.includes(normalizedActiveTitle) ||
+      normalizedActiveTitle.includes(itemText)
+    )
+  })
+
+  match?.classList.add("presenter-program__active")
+}
+
+function renderLeftSidebar(
+  programHtml: string | null,
+  total: number,
+  current: number,
+  activeTitle: string | null,
+) {
   const leftSidebar = document.querySelector(".sidebar.left") as HTMLElement | null
   if (!leftSidebar) return
 
@@ -113,6 +150,11 @@ function renderLeftSidebar(programHtml: string | null, total: number, current: n
         <div class="presenter-program">${programHtml ?? "<h2>Program</h2><p>No program section found.</p>"}</div>
       </div>
     `
+
+    const program = leftSidebar.querySelector(".presenter-program") as HTMLElement | null
+    if (program) {
+      highlightActiveProgramItem(program, activeTitle)
+    }
   }
 
   renderFloatingControls(total, current)
@@ -244,7 +286,13 @@ async function showActiveSection(index: number) {
     const article = document.querySelector(".center article") as HTMLElement | null
     const contentRoot = article ? getPresenterContentRoot(article) : null
     const model = contentRoot ? buildPresenterModel(contentRoot) : null
-    renderLeftSidebar(model?.programSection?.html ?? null, sections.length, activeSectionIndex)
+    const activeTitle = model?.presenterSections[activeSectionIndex]?.title ?? null
+    renderLeftSidebar(
+      model?.programSection?.html ?? null,
+      sections.length,
+      activeSectionIndex,
+      activeTitle,
+    )
   }
 
   if (isProgramSlideTransition(previousIndex, activeSectionIndex)) {
@@ -261,20 +309,23 @@ function applyPresenterMode() {
   const contentRoot = getPresenterContentRoot(article)
   const model = buildPresenterModel(contentRoot)
   if (!model) return
+  const lessonTitle = getLessonTitle()
 
   activeSectionIndex = Math.max(0, Math.min(activeSectionIndex, model.presenterSections.length - 1))
   article.classList.add("presenter-mode-active")
   contentRoot.innerHTML = `<div class="presenter-sections">${model.presenterSections
     .map(
       (section, index) =>
-        `<section class="presenter-section${index === activeSectionIndex ? " active" : ""}" data-index="${index}">${section.html}</section>`,
+        `<section class="presenter-section${index === activeSectionIndex ? " active" : ""}" data-index="${index}">${index === 0 && lessonTitle ? `<div class="presenter-program-slide"><div class="presenter-lesson-title">${escapeHtml(lessonTitle)}</div><div class="presenter-program-card">${section.html}</div></div>` : section.html}</section>`,
     )
     .join("")}</div>`
+  ;(window as any).bootHangman?.(contentRoot)
 
   renderLeftSidebar(
     model.programSection?.html ?? null,
     model.presenterSections.length,
     activeSectionIndex,
+    model.presenterSections[activeSectionIndex]?.title ?? null,
   )
   document.documentElement.setAttribute("presenter-mode", "on")
 }
@@ -318,6 +369,13 @@ function handleSidebarClick(e: Event) {
   const target = e.target as HTMLElement | null
   const button = target?.closest("button") as HTMLButtonElement | null
   if (!button) return
+
+  const isPresenterControl =
+    button.classList.contains("presenter-close") ||
+    button.classList.contains("presenter-prev") ||
+    button.classList.contains("presenter-next")
+
+  if (!isPresenterControl) return
 
   if (button.classList.contains("presenter-close")) {
     isPresenterMode = false

@@ -1,4 +1,4 @@
-PWD /Users/andersthaysen/GitRepos/VaultRadiant/content/semestre/s26/ressourcer/eksamen/matematik
+PWD /Users/andersthaysen/GitRepos/VaultRadiant/content/.archive/s26/ressourcer/eksamen/matematik
 INPUT /usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt
 INPUT ./Spørgsmål_print.tex
 OUTPUT Spørgsmål_print.log
@@ -272,6 +272,8 @@ INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/esvect/vect10.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/esvect/vect7.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/esvect/vect5.tfm
 INPUT /usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT ../img/frbvuc_logo.png
+INPUT ../img/frbvuc_logo.png
 INPUT ../img/frbvuc_logo.png
 INPUT ../img/frbvuc_logo.png
 INPUT ../img/frbvuc_logo.png
