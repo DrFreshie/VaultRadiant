@@ -50,8 +50,8 @@ export default (() => {
         <section>
           <h3 class="home-nav__heading">Klasser</h3>
           <ul class="home-nav__list">
-            <li><a href="/classnotes/eng-c/lessonplans">Engelsk C</a></li>
-            <li><a href="/classnotes/eng-b/lessonplans">Engelsk B</a></li>
+            <li><a href="/classnotes/eng-c">Engelsk C</a></li>
+            <li><a href="/classnotes/eng-b">Engelsk B</a></li>
           </ul>
         </section>
         {/* <section> */}
