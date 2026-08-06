@@ -4,12 +4,25 @@
 //   padding: 1.5rem;
 // }
 
+.lesson-meta-divider {
+  margin: 0 0 0.75rem;
+}
+
 .lesson-date {
   display: block;
   width: 100%;
   font-size: 0.9rem;
   opacity: 0.6;
-  margin: -1.5rem 0 -1.5rem;
+  margin: 0;
+  text-align: right;
+}
+
+.lesson-theme {
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin: -0.35rem 0 1.5rem;
   text-align: right;
 }
 

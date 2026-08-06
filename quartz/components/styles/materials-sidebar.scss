@@ -1,8 +1,10 @@
-.materials-sidebar-section {
+.materials-sidebar-section,
+.dictionary-sidebar-section {
   margin-top: 1.5rem;
 }
 
-.materials-sidebar-section > h3 {
+.materials-sidebar-section > h3,
+.dictionary-sidebar-section > h3 {
   font-size: 1rem;
   margin: 0;
 }
@@ -28,8 +30,114 @@
   padding-left: 1.2rem;
 }
 
+.dictionary-sidebar-content {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.dictionary-sidebar-intro > *:first-child {
+  margin-top: 0;
+}
+
+.dictionary-sidebar-intro > *:last-child {
+  margin-bottom: 0;
+}
+
+.dictionary-search-form {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.dictionary-search-label {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.dictionary-search-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem;
+}
+
+.dictionary-search-input,
+.dictionary-search-button,
+.dictionary-define-popup {
+  border: 1px solid var(--lightgray);
+  border-radius: 0.45rem;
+  font: inherit;
+}
+
+.dictionary-search-input {
+  background: color-mix(in srgb, var(--light) 77%, transparent);
+  color: var(--dark);
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+}
+
+.dictionary-search-button {
+  background: color-mix(in srgb, var(--secondary) 77%, transparent);
+  color: var(--light);
+  cursor: pointer;
+  padding: 0.55rem 0.8rem;
+}
+
+.dictionary-define-popup {
+  background: color-mix(in srgb, var(--light) 95%, transparent);
+  box-shadow: 0 8px 20px color-mix(in srgb, var(--dark) 18%, transparent);
+  color: var(--dark);
+  cursor: pointer;
+  left: 0;
+  padding: 0.45rem 0.7rem;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.wiktionary-entry {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.wiktionary-term-row,
+.wiktionary-source,
+.wiktionary-status {
+  margin: 0;
+}
+
+.wiktionary-term-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.wiktionary-pos {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  text-transform: lowercase;
+}
+
+.wiktionary-definition {
+  font-size: 0.95rem;
+}
+
+.wiktionary-definition p {
+  margin: 0;
+}
+
+.wiktionary-source {
+  font-size: 0.8rem;
+}
+
+.wiktionary-source a {
+  color: var(--secondary);
+}
+
 @media all and (max-width: 1200px) {
-  .materials-sidebar-section {
+  .materials-sidebar-section,
+  .dictionary-sidebar-section {
     display: none;
   }
 }

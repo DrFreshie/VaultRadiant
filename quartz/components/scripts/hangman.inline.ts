@@ -5,7 +5,7 @@ type HangmanState = {
   maxWrong: number
 }
 
-const DEFAULT_ALPHABET = "abcdefghijklmnopqrstuvwxyzæøå"
+const DEFAULT_ALPHABET = "abcdefghijklmnopqrstuvwxyz"
 
 function parseKeyValueBlock(input: string) {
   const params: Record<string, string> = {}
@@ -30,18 +30,18 @@ function normalizeLetter(char: string) {
 }
 
 function getUniqueLetters(answer: string) {
-  return Array.from(new Set(Array.from(answer.toLowerCase()).filter((char) => /[a-zæøå]/i.test(char))))
+  return Array.from(new Set(Array.from(answer.toLowerCase()).filter((char) => /[a-z]/i.test(char))))
 }
 
 function maskAnswer(answer: string, guessed: Set<string>) {
   return Array.from(answer).map((char) => {
-    if (!/[a-zæøå]/i.test(char)) return char
+    if (!/[a-z]/i.test(char)) return char
     return guessed.has(normalizeLetter(char)) ? char : "_"
   })
 }
 
 function createKeyboard(alphabet: string) {
-  return Array.from(new Set(Array.from(alphabet.toLowerCase()).filter((char) => /[a-zæøå]/i.test(char))))
+  return Array.from(new Set(Array.from(alphabet.toLowerCase()).filter((char) => /[a-z]/i.test(char))))
 }
 
 function renderGame(container: HTMLElement, state: HangmanState) {

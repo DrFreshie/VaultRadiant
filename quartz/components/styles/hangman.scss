@@ -4,7 +4,7 @@
 
 .hangman-card {
   border: 1px solid var(--lightgray);
-  border-radius: 1rem;
+  border-radius: 5px;
   background: color-mix(in srgb, var(--light) 94%, var(--secondary) 6%);
   padding: 1.1rem;
   display: flex;
@@ -179,7 +179,7 @@
   border: 1px solid var(--lightgray);
   background: var(--light);
   color: var(--darkgray);
-  border-radius: 0.7rem;
+  border-radius: 0.45rem;
   padding: 0.5rem 0.65rem;
   cursor: pointer;
   font: inherit;
