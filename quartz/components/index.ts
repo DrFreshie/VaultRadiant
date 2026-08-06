@@ -30,17 +30,20 @@ import Lavat from "./Lavat.tsx"
 import Logo from "./Logo.tsx"
 import HomeNav from "./HomeNav.tsx"
 import ClassNavHeading from "./ClassNavHeading"
+import SectionNavHeading from "./SectionNavHeading"
 import Slide from "./Slide"
 import DappledLight from "./DappledLight"
 import DappledLightScript from "./DappledLightScript"
 import HangmanScript from "./HangmanScript"
 import MaterialsSidebarScript from "./MaterialsSidebarScript"
+import ExplorerSectionsScript from "./ExplorerSectionsScript"
 import FigureViewer from "./FigureViewer"
 export {
   DappledLight,
   DappledLightScript,
   HangmanScript,
   MaterialsSidebarScript,
+  ExplorerSectionsScript,
   FigureViewer,
   LessonLayout,
   ConditionalContent,
@@ -49,6 +52,7 @@ export {
   Logo,
   HomeNav,
   ClassNavHeading,
+  SectionNavHeading,
   Content,
   TagContent,
   FolderContent,

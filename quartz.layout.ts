@@ -9,6 +9,7 @@ export const sharedPageComponents: SharedLayout = {
     Component.DappledLightScript(),
     Component.HangmanScript(),
     Component.MaterialsSidebarScript(),
+    Component.ExplorerSectionsScript(),
   ],
   footer: Component.Footer({}),
 }
@@ -31,10 +32,13 @@ export const defaultContentPageLayout: PageLayout = {
 
     Component.HomeNav(),
     Component.ClassNavHeading(),
+    Component.SectionNavHeading(),
     Component.Explorer({
       title: "",
       folderDefaultState: "open",
       sortFn: (a, b) => {
+        if (a.slugSegment === "notes" && b.slugSegment !== "notes") return 1
+        if (a.slugSegment !== "notes" && b.slugSegment === "notes") return -1
         if (a.isFolder && !b.isFolder) return -1
         if (!a.isFolder && b.isFolder) return 1
         return b.slugSegment.localeCompare(a.slugSegment, undefined, {
@@ -63,10 +67,13 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.ClassNavHeading(),
+    Component.SectionNavHeading(),
     Component.Explorer({
       title: "",
       folderDefaultState: "open",
       sortFn: (a, b) => {
+        if (a.slugSegment === "notes" && b.slugSegment !== "notes") return 1
+        if (a.slugSegment !== "notes" && b.slugSegment === "notes") return -1
         if (a.isFolder && !b.isFolder) return -1
         if (!a.isFolder && b.isFolder) return 1
         return b.slugSegment.localeCompare(a.slugSegment, undefined, {
