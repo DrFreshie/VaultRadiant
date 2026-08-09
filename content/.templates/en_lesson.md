@@ -3,9 +3,7 @@
 
 ## ⋮⋮ Program
 
--
 
-## ≣ Tasks
 
 ## %%Notes
 
