@@ -37,6 +37,33 @@ body[data-slug="index"] .explorer {
   display: none;
 }
 
+/* On mobile, show class/section headings inside the pullout nav menu */
+@media (max-width: 800px) {
+  .class-nav-heading,
+  .section-nav-heading {
+    display: none;
+    position: fixed;
+    left: 1.5rem;
+    z-index: 102;
+    margin: 0;
+  }
+
+  .sidebar.left:has(.explorer:not(.collapsed)) .class-nav-heading {
+    display: block;
+    top: 5.35rem;
+  }
+
+  .sidebar.left:has(.explorer:not(.collapsed)) .section-nav-heading {
+    display: block;
+    top: 8.35rem;
+    margin: 0;
+  }
+
+  .sidebar.left:has(.explorer:not(.collapsed)) .explorer .explorer-content {
+    padding-top: 6rem;
+  }
+}
+
 /* Swap Graph for FigureViewer in math notes */
 body[data-slug^="noter/matematik"] .graph {
   display: none;
@@ -316,12 +343,7 @@ figure.epigraph {
     margin-top: 0.2rem;
   }
 }
-/* hide the logo section on small screens */
-@media (max-width: 800px) {
-  .prime-radiant {
-    display: none !important;
-  }
-}
+/* mobile logo is handled in component-specific styles */
 
 article p,
 article li,

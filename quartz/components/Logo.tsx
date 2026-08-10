@@ -6,6 +6,9 @@ export default (() => {
   const PrimeRadiantAside: QuartzComponent = (_props: QuartzComponentProps) => {
     return (
       <aside class="prime-radiant">
+        <a href="/" class="prime-radiant__mobile-link" aria-label="Vault Radiant home">
+          <img src="/static/logov3_icon.png" alt="Vault Radiant" class="prime-radiant__mobile-icon" />
+        </a>
         <a href="/" class="prime-radiant__link">
           {/* Headline */}
           <div class="prime-radiant__title">

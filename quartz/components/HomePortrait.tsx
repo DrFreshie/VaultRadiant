@@ -7,6 +7,12 @@ const homePortraitCss = `
   position: relative;
 }
 
+@media all and (max-width: 1200px) {
+  .home-portrait {
+    display: none;
+  }
+}
+
 .home-portrait__img {
   display: block;
   width: 100%;
