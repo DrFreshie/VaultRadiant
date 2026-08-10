@@ -81,7 +81,7 @@ const homeNavCss = `
     position: relative;
     order: -1;
     flex: 0 0 auto;
-    z-index: 1;
+    z-index: 21;
   }
 
   .home-nav__desktop {
@@ -93,7 +93,7 @@ const homeNavCss = `
     width: fit-content;
     flex: 0 0 auto;
     position: relative;
-    z-index: 1;
+    z-index: 21;
   }
 
   .home-nav__mobile summary {

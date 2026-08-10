@@ -15,9 +15,23 @@
     .sidebar.left:has(.explorer) {
       box-sizing: border-box;
       position: sticky;
-      background-color: transparent;
+      background: transparent;
       padding: 1rem 0 1rem 0;
       margin: 0;
+
+      &::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4.5rem;
+        background: transparent;
+        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(6px);
+        pointer-events: none;
+        z-index: 19;
+      }
     }
 
     .hide-until-loaded ~ .explorer-content {
