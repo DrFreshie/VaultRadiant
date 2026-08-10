@@ -1,6 +1,7 @@
 ---
 title: Genres as interpretive lenses
 type: note
+draft: true
 ---
 
 # Genres as interpretive lenses

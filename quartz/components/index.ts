@@ -29,6 +29,7 @@ import ConditionalContent from "./ConditionalContent.tsx"
 import Lavat from "./Lavat.tsx"
 import Logo from "./Logo.tsx"
 import HomeNav from "./HomeNav.tsx"
+import HomePortrait from "./HomePortrait"
 import ClassNavHeading from "./ClassNavHeading"
 import SectionNavHeading from "./SectionNavHeading"
 import Slide from "./Slide"
@@ -51,6 +52,7 @@ export {
   Lavat,
   Logo,
   HomeNav,
+  HomePortrait,
   ClassNavHeading,
   SectionNavHeading,
   Content,

@@ -1,5 +1,6 @@
 ---
 title: Skriftlig progressionsplan
+draft: true
 ---
 
 ## Skriftlighed

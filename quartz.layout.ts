@@ -48,7 +48,7 @@ export const defaultContentPageLayout: PageLayout = {
       },
     }),
   ],
-  right: [Component.Graph(), Component.FigureViewer()],
+  right: [Component.Graph(), Component.HomePortrait(), Component.FigureViewer()],
   afterBody: [],
 }
 

@@ -157,17 +157,51 @@ body[data-slug^="noter/matematik"] .graph {
   font-weight: 700;
   text-align: center;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  overflow: hidden;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.28s ease,
+    background-color 0.28s ease;
 }
 
 .unit-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
-  background: color-mix(in srgb, var(--light) 75%, var(--tertiary) 25%);
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+.unit-button:not(.unit-button--identity):hover {
+  background: color-mix(in srgb, var(--light) 80%, var(--tertiary) 20%);
   color: var(--dark);
 }
 
+.unit-button--identity {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url("/imgs/wroef.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.28s ease,
+    background-size 0.45s ease,
+    background-position 0.45s ease;
+}
+
+.unit-button--identity:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url("/imgs/wroef.jpg");
+  background-size: 106%;
+  background-position: center 42%;
+  color: white;
+  filter: brightness(1.04) saturate(1.05);
+}
+
 article.hide-folder-listing + .page-listing {
+  display: none;
+}
+
+article.hide-folder-dates + .page-listing .meta {
   display: none;
 }
 

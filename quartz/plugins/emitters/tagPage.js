@@ -1,0 +1,129 @@
+import HeaderConstructor from "../../components/Header";
+import BodyConstructor from "../../components/Body";
+import { pageResources, renderPage } from "../../components/renderPage";
+import { defaultProcessedContent } from "../vfile";
+import { getAllSegmentPrefixes, joinSegments, pathToRoot } from "../../util/path";
+import { defaultListPageLayout, sharedPageComponents } from "../../../quartz.layout";
+import { TagContent } from "../../components";
+import { write } from "./helpers";
+import { i18n } from "../../i18n";
+function computeTagInfo(allFiles, content, locale) {
+    const tags = new Set(allFiles.flatMap((data) => data.frontmatter?.tags ?? []).flatMap(getAllSegmentPrefixes));
+    // add base tag
+    tags.add("index");
+    const tagDescriptions = Object.fromEntries([...tags].map((tag) => {
+        const title = tag === "index"
+            ? i18n(locale).pages.tagContent.tagIndex
+            : `${i18n(locale).pages.tagContent.tag}: ${tag}`;
+        return [
+            tag,
+            defaultProcessedContent({
+                slug: joinSegments("tags", tag),
+                frontmatter: { title, tags: [] },
+            }),
+        ];
+    }));
+    // Update with actual content if available
+    for (const [tree, file] of content) {
+        const slug = file.data.slug;
+        if (slug.startsWith("tags/")) {
+            const tag = slug.slice("tags/".length);
+            if (tags.has(tag)) {
+                tagDescriptions[tag] = [tree, file];
+                if (file.data.frontmatter?.title === tag) {
+                    file.data.frontmatter.title = `${i18n(locale).pages.tagContent.tag}: ${tag}`;
+                }
+            }
+        }
+    }
+    return [tags, tagDescriptions];
+}
+async function processTagPage(ctx, tag, tagContent, allFiles, opts, resources) {
+    const slug = joinSegments("tags", tag);
+    const [tree, file] = tagContent;
+    const cfg = ctx.cfg.configuration;
+    const externalResources = pageResources(pathToRoot(slug), resources);
+    const componentData = {
+        ctx,
+        fileData: file.data,
+        externalResources,
+        cfg,
+        children: [],
+        tree,
+        allFiles,
+    };
+    const content = renderPage(cfg, slug, componentData, opts, externalResources);
+    return write({
+        ctx,
+        content,
+        slug: file.data.slug,
+        ext: ".html",
+    });
+}
+export const TagPage = (userOpts) => {
+    const opts = {
+        ...sharedPageComponents,
+        ...defaultListPageLayout,
+        pageBody: TagContent({ sort: userOpts?.sort }),
+        ...userOpts,
+    };
+    const { head: Head, header, beforeBody, pageBody, afterBody, left, right, footer: Footer } = opts;
+    const Header = HeaderConstructor();
+    const Body = BodyConstructor();
+    return {
+        name: "TagPage",
+        getQuartzComponents() {
+            return [
+                Head,
+                Header,
+                Body,
+                ...header,
+                ...beforeBody,
+                pageBody,
+                ...afterBody,
+                ...left,
+                ...right,
+                Footer,
+            ];
+        },
+        async *emit(ctx, content, resources) {
+            const allFiles = content.map((c) => c[1].data);
+            const cfg = ctx.cfg.configuration;
+            const [tags, tagDescriptions] = computeTagInfo(allFiles, content, cfg.locale);
+            for (const tag of tags) {
+                yield processTagPage(ctx, tag, tagDescriptions[tag], allFiles, opts, resources);
+            }
+        },
+        async *partialEmit(ctx, content, resources, changeEvents) {
+            const allFiles = content.map((c) => c[1].data);
+            const cfg = ctx.cfg.configuration;
+            // Find all tags that need to be updated based on changed files
+            const affectedTags = new Set();
+            for (const changeEvent of changeEvents) {
+                if (!changeEvent.file)
+                    continue;
+                const slug = changeEvent.file.data.slug;
+                // If it's a tag page itself that changed
+                if (slug.startsWith("tags/")) {
+                    const tag = slug.slice("tags/".length);
+                    affectedTags.add(tag);
+                }
+                // If a file with tags changed, we need to update those tag pages
+                const fileTags = changeEvent.file.data.frontmatter?.tags ?? [];
+                fileTags.flatMap(getAllSegmentPrefixes).forEach((tag) => affectedTags.add(tag));
+                // Always update the index tag page if any file changes
+                affectedTags.add("index");
+            }
+            // If there are affected tags, rebuild their pages
+            if (affectedTags.size > 0) {
+                // We still need to compute all tags because tag pages show all tags
+                const [_tags, tagDescriptions] = computeTagInfo(allFiles, content, cfg.locale);
+                for (const tag of affectedTags) {
+                    if (tagDescriptions[tag]) {
+                        yield processTagPage(ctx, tag, tagDescriptions[tag], allFiles, opts, resources);
+                    }
+                }
+            }
+        },
+    };
+};
