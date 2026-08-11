@@ -26,6 +26,12 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
+        {
+          Component: Component.ConditionalRender({
+            component: Component.DesktopOnly(Component.PresenterMode()),
+            condition: (props) => props.fileData.frontmatter?.type === "lesson",
+          }),
+        },
       ],
     }),
 

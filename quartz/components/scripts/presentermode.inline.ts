@@ -365,10 +365,15 @@ function prevSection() {
   showActiveSection(activeSectionIndex - 1)
 }
 
-function handleSidebarClick(e: Event) {
+function handleDocumentClick(e: Event) {
   const target = e.target as HTMLElement | null
   const button = target?.closest("button") as HTMLButtonElement | null
   if (!button) return
+
+  if (button.classList.contains("presentermode")) {
+    void togglePresenterMode()
+    return
+  }
 
   const isPresenterControl =
     button.classList.contains("presenter-close") ||
@@ -388,13 +393,6 @@ function handleSidebarClick(e: Event) {
 }
 
 document.addEventListener("nav", async () => {
-  const toggleButtons = document.getElementsByClassName("presentermode")
-  Array.from(toggleButtons).forEach((button) => {
-    const clickHandler = () => void togglePresenterMode()
-    button.addEventListener("click", clickHandler)
-    window.addCleanup(() => button.removeEventListener("click", clickHandler))
-  })
-
   function shortcutHandler(e: HTMLElementEventMap["keydown"]) {
     if (e.key.toLowerCase() === "p" && (e.ctrlKey || e.metaKey) && !e.shiftKey) {
       e.preventDefault()
@@ -427,10 +425,10 @@ document.addEventListener("nav", async () => {
   }
 
   document.addEventListener("keydown", shortcutHandler)
-  document.addEventListener("click", handleSidebarClick)
+  document.addEventListener("click", handleDocumentClick)
   window.addCleanup(() => {
     document.removeEventListener("keydown", shortcutHandler)
-    document.removeEventListener("click", handleSidebarClick)
+    document.removeEventListener("click", handleDocumentClick)
   })
 
   const params = new URLSearchParams(window.location.search)
