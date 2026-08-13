@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Paragraph structure illustration</title>
+  <desc id="desc">A paragraph shown as stacked sentence bars with labels for topic sentence, supporting sentences, and concluding sentence.</desc>
+  <rect width="1200" height="900" rx="36" fill="#f6f7fb"/>
+  <rect x="110" y="90" width="980" height="720" rx="28" fill="#ffffff" stroke="#d8dde8" stroke-width="6"/>
+
+  <text x="150" y="160" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="700" fill="#24324a">A strong paragraph</text>
+
+  <rect x="150" y="210" width="880" height="92" rx="18" fill="#dff3e5" stroke="#2d9b4c" stroke-width="4"/>
+  <text x="190" y="268" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#1f6f39">Topic sentence</text>
+  <text x="720" y="268" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#2c5135">Main idea</text>
+
+  <rect x="150" y="338" width="880" height="74" rx="14" fill="#eef1f6"/>
+  <rect x="150" y="434" width="880" height="74" rx="14" fill="#eef1f6"/>
+  <rect x="150" y="530" width="880" height="74" rx="14" fill="#eef1f6"/>
+
+  <text x="190" y="384" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#445066">Supporting sentence</text>
+  <text x="190" y="480" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#445066">Supporting sentence</text>
+  <text x="190" y="576" font-family="Helvetica, Arial, sans-serif" font-size="30" fill="#445066">Supporting sentence</text>
+
+  <rect x="150" y="640" width="880" height="92" rx="18" fill="#fff4d6" stroke="#f0b84b" stroke-width="4" stroke-dasharray="14 10"/>
+  <text x="190" y="698" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#9a6a09">Concluding sentence (optional)</text>
+
+  <text x="150" y="785" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#6a7382">One clear idea → support it → finish neatly</text>
+</svg>
