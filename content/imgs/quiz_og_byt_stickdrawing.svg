@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Stick drawing of two students doing quiz-og-byt</title>
+  <desc id="desc">Two stick-figure students stand facing each other, each holding a card while speaking.</desc>
+  <rect width="800" height="500" fill="white"/>
+  <g stroke="#111" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <line x1="80" y1="430" x2="720" y2="430" stroke="#555" stroke-width="5"/>
+
+    <circle cx="250" cy="130" r="42"/>
+    <line x1="250" y1="172" x2="250" y2="295"/>
+    <line x1="250" y1="210" x2="185" y2="250"/>
+    <line x1="250" y1="210" x2="320" y2="240"/>
+    <line x1="250" y1="295" x2="205" y2="390"/>
+    <line x1="250" y1="295" x2="290" y2="390"/>
+
+    <circle cx="550" cy="130" r="42"/>
+    <line x1="550" y1="172" x2="550" y2="295"/>
+    <line x1="550" y1="210" x2="480" y2="240"/>
+    <line x1="550" y1="210" x2="615" y2="250"/>
+    <line x1="550" y1="295" x2="510" y2="390"/>
+    <line x1="550" y1="295" x2="595" y2="390"/>
+
+    <rect x="322" y="212" width="76" height="56" rx="8"/>
+    <rect x="405" y="212" width="76" height="56" rx="8"/>
+
+    <path d="M338 90 q40 -30 80 0" stroke="#555" stroke-width="5"/>
+    <path d="M382 70 q24 -18 48 0" stroke="#555" stroke-width="5"/>
+    <path d="M455 90 q40 -30 80 0" stroke="#555" stroke-width="5"/>
+  </g>
+  <g fill="#111" font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="378" y="245" font-size="22">begreb</text>
+    <text x="443" y="245" font-size="22">forklar</text>
+    <text x="378" y="58" font-size="28">"Hvad betyder det?"</text>
+    <text x="495" y="58" font-size="28">"Jeg forklarer!"</text>
+  </g>
+</svg>

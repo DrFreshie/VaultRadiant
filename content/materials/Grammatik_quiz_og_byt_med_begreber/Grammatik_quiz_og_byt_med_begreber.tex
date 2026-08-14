@@ -1,0 +1,46 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[a4paper,margin=1.6cm]{geometry}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Grammatik quiz og byt med begreber}
+\cfoot{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.35}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcommand{\termcard}[1]{\fbox{\parbox[c][3.2cm][c]{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\centering\bfseries\large #1}}}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE\bfseries Quiz og byt: grammatiske begreber}\\[0.4em]
+    Klip kortene ud, og giv hvert kort til en elev.
+\end{center}
+
+\vspace{0.8em}
+
+\noindent
+\begin{tabularx}{\textwidth}{YYYY}
+\termcard{Kongruens} & \termcard{Præsens} & \termcard{Præteritum} & \termcard{Pluskvamperfektum} \\
+[0.6cm]
+\termcard{Perfektum} & \termcard{Uregelmæssige verber} & \termcard{Do-omskrivning} & \termcard{Omvendt ordstilling} \\
+[0.6cm]
+\termcard{Pluralis} & \termcard{Genitiv} & \termcard{Apostroffer} & \termcard{Adjektiver} \\
+[0.6cm]
+\termcard{Adverbier} & \termcard{Pronomener} & \termcard{Præpositioner} & \termcard{Konjunktioner} \\
+[0.6cm]
+\termcard{Udvidet tid} & \termcard{Modalverber} & \termcard{Artikler} & \termcard{Aktiv/Passiv} \\
+\end{tabularx}
+
+\end{document}
