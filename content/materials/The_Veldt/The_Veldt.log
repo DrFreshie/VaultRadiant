@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  17 AUG 2026 09:19
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  17 AUG 2026 10:39
  restricted system commands enabled.
  file:line:error style messages enabled.
 **The_Veldt.tex
@@ -1078,13 +1078,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--106
  []
 
 
+Underfull \hbox (badness 5771) in paragraph at lines 110--110
+[]\TU/EBGaramond(0)/m/it/7 adj. \TU/EBGaramond(0)/m/n/7 cov-ered with
+ []
+
+
 Underfull \hbox (badness 2435) in paragraph at lines 120--120
 []\TU/EBGaramond(0)/m/it/7 n. \TU/EBGaramond(0)/m/n/7 tech-nol-ogy that
  []
 
 [1
 
-{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1082) in paragraph at lines 146--146
+\TU/EBGaramond(0)/m/n/7 ing of pain or emo-
+ []
+
+[2]
+Underfull \hbox (badness 4001) in paragraph at lines 204--204
+[]\TU/EBGaramond(0)/m/it/7 n. \TU/EBGaramond(0)/m/n/7 some-thing that
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 204--204
+\TU/EBGaramond(0)/m/n/7 calms you or makes
+ []
+
+[3]
 Underfull \hbox (badness 1092) in paragraph at lines 220--220
 []\TU/EBGaramond(0)/m/it/7 adj. \TU/EBGaramond(0)/m/n/7 com-mu-ni-cated
  []
@@ -1094,18 +1114,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--220
 \TU/EBGaramond(0)/m/n/7 di-rectly from one
  []
 
-[4] [5] [6] [7]
-Underfull \hbox (badness 1297) in paragraph at lines 420--420
+
+Underfull \hbox (badness 1248) in paragraph at lines 220--220
+[]\TU/EBGaramond(0)/m/it/7 n. \TU/EBGaramond(0)/m/n/7 things that flow
+ []
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]\TU/EBGaramond(0)/m/it/7 n. \TU/EBGaramond(0)/m/n/7 a girl from
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+\TU/EBGaramond(0)/m/n/7 the novel \TU/EBGaramond(0)/m/it/7 Green
+ []
+
+[6] [7]
+Underfull \hbox (badness 1297) in paragraph at lines 418--418
 \TU/EBGaramond(0)/m/n/7 ap-pear in the mind;
  []
 
-[8] [9]
-Underfull \hbox (badness 1354) in paragraph at lines 544--544
+[8]
+Underfull \hbox (badness 7344) in paragraph at lines 508--508
+\TU/EBGaramond(0)/m/n/7 that make life easy
+ []
+
+[9]
+Underfull \hbox (badness 1354) in paragraph at lines 540--540
 []\TU/EBGaramond(0)/m/it/7 n. \TU/EBGaramond(0)/m/n/7 an un-rea-son-able
  []
 
 
 LaTeX Warning: Marginpar on page 10 moved.
+
+
+Underfull \hbox (badness 3536) in paragraph at lines 562--562
+[]\TU/EBGaramond(0)/m/it/7 v. \TU/EBGaramond(0)/m/n/7 think-ing deeply
+ []
 
 [10] [11] [12] (./The_Veldt.aux)
  ***********
@@ -1119,14 +1167,14 @@ Package rerunfilecheck Info: File `The_Veldt.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  29632 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 5807 words of node memory still in use:
-   41 hlist, 23 vlist, 2 rule, 7 mark, 30 disc, 10 local_par, 108 glue, 38 kern, 26 penalty, 416 glyph, 118 attribute, 87 glue_spec, 60 attribute_list, 3 write nodes
-   avail lists: 2:976,3:292,4:246,5:781,6:90,7:8513,8:2,9:581,10:11,11:293
+ 12589 words of node memory still in use:
+   93 hlist, 55 vlist, 2 rule, 7 mark, 56 disc, 26 local_par, 260 glue, 112 kern, 62 penalty, 931 glyph, 282 attribute, 88 glue_spec, 142 attribute_list, 3 write nodes
+   avail lists: 2:989,3:327,4:246,5:855,6:91,7:8839,8:2,9:614,10:13,11:288
  51347 multiletter control sequences out of 65536+600000
- 40 fonts using 7176215 bytes
- 84i,6n,92p,1118b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on The_Veldt.pdf (12 pages, 85125 bytes).
+ 41 fonts using 7669343 bytes
+ 84i,6n,92p,1175b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
+Output written on The_Veldt.pdf (12 pages, 87972 bytes).
 
 PDF statistics: 90 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream

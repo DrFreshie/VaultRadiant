@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1786951140.99928 "The_Veldt.tex" "The_Veldt.pdf" "The_Veldt" 1786951142.5731 0
+["pdflatex"] 1786955975.14595 "The_Veldt.tex" "The_Veldt.pdf" "The_Veldt" 1786955977.22846 0
   "/Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf" 1727709108 814012 96f8070768e84367bca5f780ebaf4db8 ""
   "/Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf" 1727709108 936656 40d46b48de5e2877f7933ee32493ba8d ""
   "/Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF" 1644030048 86952 fec8248ee5dcb2b1c49f628d71b86a35 ""
@@ -232,9 +232,9 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1772102680 134574 d52c003edc7102800e5ea661673cf4ba ""
   "/usr/local/texlive/2025basic/texmf-var/tex/generic/config/language.dat" 1771196379.62223 3786 cd38354308350164d4a1fd7b74f29cdc ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1771196452 5657771 f48defe9ade43e07e924caaf90f0acba ""
-  "The_Veldt.aux" 1786951142.41892 413 67bb8497493b207ed7d2eccd4b83e21a "pdflatex"
-  "The_Veldt.out" 1786951142.18097 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "The_Veldt.tex" 1786951138.4765 30476 9d0759d789679a003b2d1656a8d4423b ""
+  "The_Veldt.aux" 1786955977.01999 413 67bb8497493b207ed7d2eccd4b83e21a "pdflatex"
+  "The_Veldt.out" 1786955976.67289 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "The_Veldt.tex" 1786955974.23833 31242 23c77043ae7263cd71d5506d44610efa ""
   (generated)
   "The_Veldt.aux"
   "The_Veldt.log"
