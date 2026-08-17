@@ -1,5 +1,6 @@
 import * as Plugin from "./quartz/plugins";
 import LessonLayout from "./quartz/components/LessonLayout";
+const includeDrafts = process.argv.includes("--serve");
 /**
  * Quartz 4 Configuration
  *
@@ -77,7 +78,7 @@ const config = {
             Plugin.Description(),
             Plugin.Latex({ renderEngine: "katex" }),
         ],
-        filters: [Plugin.RemoveDrafts()],
+        filters: includeDrafts ? [] : [Plugin.RemoveDrafts()],
         emitters: [
             Plugin.AliasRedirects(),
             Plugin.ComponentResources(),
