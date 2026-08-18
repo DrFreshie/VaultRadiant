@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage[a4paper,margin=1.6cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{eso-pic}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\pagestyle{empty}
+
+% Indstillinger
+\newcommand{\ruledpages}{0}        % antal sider
+\newcommand{\linegap}{0.85}        % afstand mellem linjer i cm
+\newcommand{\topheadergap}{4.7}    % plads til navn/dato over linjerne i cm
+
+% Tegn linjer og vandmærke på hver side
+\newcommand{\DrawRuledPage}{%
+  \AddToShipoutPictureBG*{%
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[opacity=0.08, anchor=south east] at ($(current page.south east)+(-1.6cm,1.6cm)$) {\includegraphics[width=5cm]{../img/frbvuc_logo.png}};
+      \foreach \y in {0,\linegap,...,24} {
+        \draw[gray!55, line width=0.35pt]
+          ($(current page.north west)+(1.6cm,-\topheadergap cm-\y cm)$) --
+          ($(current page.north east)+(-1.6cm,-\topheadergap cm-\y cm)$);
+      }
+    \end{tikzpicture}%
+  }%
+}
+
+\begin{document}
+
+\vspace*{1em}
+\noindent
+\textbf{Name} \rule{0.55\linewidth}{0.4pt}
+\hfill
+\textbf{Date:} \rule{0.22\linewidth}{0.4pt}
+\vspace*{10em}
+
+\DrawRuledPage
+\null
+\newpage
+
+\DrawRuledPage
+\vspace*{1em}
+\noindent\Large\textbf{Feedback}
+\null
+
+% \foreach \n in {3,...,\ruledpages} {%
+%   \newpage
+%   \DrawRuledPage
+%   \null
+% }
+
+\end{document}
