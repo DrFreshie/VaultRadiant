@@ -1,0 +1,172 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	% Ordklassefarver
+	\definecolor{nouncolor}{RGB}{0, 85, 170}
+	\definecolor{verbcolor}{RGB}{180, 30, 45}
+	\definecolor{adjcolor}{RGB}{0, 140, 90}
+	\definecolor{proncolor}{RGB}{120, 70, 170}
+	\definecolor{advcolor}{RGB}{200, 110, 0}
+	\definecolor{prepcolor}{RGB}{150, 120, 40}
+	\definecolor{conjcolor}{RGB}{220, 80, 140}
+	\definecolor{detcolor}{RGB}{90, 90, 90}
+	\definecolor{intcolor}{RGB}{0, 150, 150}
+	
+	\newcommand{\noun}[1]{\textcolor{nouncolor}{#1}}
+	\newcommand{\wverb}[1]{\textcolor{verbcolor}{#1}}
+	\newcommand{\adj}[1]{\textcolor{adjcolor}{#1}}
+	\newcommand{\pron}[1]{\textcolor{proncolor}{#1}}
+	\newcommand{\adv}[1]{\textcolor{advcolor}{#1}}
+	\newcommand{\prep}[1]{\textcolor{prepcolor}{#1}}
+	\newcommand{\conj}[1]{\textcolor{conjcolor}{#1}}
+	\newcommand{\detw}[1]{\textcolor{detcolor}{#1}}
+	\newcommand{\interj}[1]{\textcolor{intcolor}{#1}}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Molly's Diary Entry}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{Dec 13th, 1947}
+\author{Molly Finch}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+
+Dear Diary,
+
+I'll be gone soon, but I wanted to tell somebody about what's gonna happen. It started when Mom sent me to bed without dinner. I woke up and I was starving. So I looked around for something to eat.
+
+The gerbil food was dry, but I didn't mind it.
+
+My Halloween candy was all gone.
+
+I thought about eating Christopher, but I held back.
+
+I kept eating and eating.
+
+I ate a lot of things that night.
+
+Then I heard chirping outside my window. It was a barn swallow going back to her nest. I reached out for her, and suddenly... I was a cat! I tried to be quiet but the bird was really scared. Mom and Dad didn't even look at me. I jumped and I almost got her. I could tell she was getting really tired. Now I was up in the big tree. I promised dad I wouldn't climb it anymore. But all I cared about was eating that momma bird.
+
+I gobbled her up... And suddenly I was an owl! First, all I heard was the wind. Then I heard little teeth nibbling in the grass. I imagined his face looking up and seeing mine, through my talons. I swallowed him up, and I didn't chew one bit. Then I flew off to find something bigger. She was almost too big to carry. I started choking, but I couldn't stop eating. And suddenly I was a shark!
+
+I rolled off a cliff and into the ocean. Now I was hungrier than ever. I wanted fat, juicy seals. I tore off her flipper and it tasted really good. I grabbed on tight. But I was so hungry, I jumped out of the water. When I opened my eyes, everything had changed. Now I was a monster. and I smelled people everywhere. I was big, but I moved real quiet. I wanted to stop but also I didn't.
+
+After the last passenger, I was still hungry. And across the water I smelled something new. Something I had to have. So I swam towards it. I slithered onto the sand and the good smell went into an old pipe. I got closer and closer. All my stomachs started growling. And suddenly, I was me again. I held my breath for a long time but I couldn't hear anything. I think it's waiting for me to fall asleep. But it's not going to wait much longer. It needs to feed. And we both know... I will be... delicious.
+
+\newpage
+\section*{Ordklassefarvet version}
+
+{\small
+\noun{Substantiver} \textcolor{nouncolor}{■} \quad
+\noun{Verber} \textcolor{verbcolor}{■} \quad
+\noun{Adjektiver} \textcolor{adjcolor}{■} \quad
+\noun{Pronominer} \textcolor{proncolor}{■} \quad
+\noun{Adverbier} \textcolor{advcolor}{■} \quad
+\noun{Præpositioner} \textcolor{prepcolor}{■} \quad
+\noun{Konjunktioner} \textcolor{conjcolor}{■} \quad
+\noun{Artikler} \textcolor{detcolor}{■} \quad
+\noun{Interjektion} \textcolor{intcolor}{■}
+}
+
+\bigskip
+
+\interj{Dear} \noun{Diary},
+
+\pron{I}'\wverb{ll} \wverb{be} \wverb{gone} \adv{soon}, \conj{but} \pron{I} \wverb{wanted} \prep{to} \wverb{tell} \noun{somebody} \prep{about} \pron{what}'\wverb{s} \wverb{gonna} \wverb{happen}. \pron{It} \wverb{started} \adv{when} \noun{Mom} \wverb{sent} \pron{me} \prep{to} \noun{bed} \prep{without} \noun{dinner}. \pron{I} \wverb{woke} \adv{up} \conj{and} \pron{I} \wverb{was} \adj{starving}. \adv{So} \pron{I} \wverb{looked} \adv{around} \prep{for} \noun{something} \prep{to} \wverb{eat}.
+
+\detw{The} \noun{gerbil} \noun{food} \wverb{was} \adj{dry}, \conj{but} \pron{I} \wverb{didn't} \wverb{mind} \pron{it}.
+
+\pron{My} \noun{Halloween} \noun{candy} \wverb{was} \adv{all} \wverb{gone}.
+
+\pron{I} \wverb{thought} \prep{about} \wverb{eating} \noun{Christopher}, \conj{but} \pron{I} \wverb{held} \adv{back}.
+
+\pron{I} \adv{kept} \wverb{eating} \conj{and} \wverb{eating}.
+
+\pron{I} \wverb{ate} \detw{a} \adj{lot} \prep{of} \noun{things} \detw{that} \noun{night}.
+
+\adv{Then} \pron{I} \wverb{heard} \noun{chirping} \adv{outside} \pron{my} \noun{window}. \pron{It} \wverb{was} \detw{a} \noun{barn} \noun{swallow} \wverb{going} \adv{back} \prep{to} \pron{her} \noun{nest}. \pron{I} \wverb{reached} \adv{out} \prep{for} \pron{her}, \conj{and} \adv{suddenly}... \pron{I} \wverb{was} \detw{a} \noun{cat}! \pron{I} \wverb{tried} \prep{to} \wverb{be} \adj{quiet} \conj{but} \detw{the} \noun{bird} \wverb{was} \adv{really} \adj{scared}. \noun{Mom} \conj{and} \noun{Dad} \wverb{didn't} \adv{even} \wverb{look} \prep{at} \pron{me}. \pron{I} \wverb{jumped} \conj{and} \pron{I} \adv{almost} \wverb{got} \pron{her}. \pron{I} \wverb{could} \wverb{tell} \pron{she} \wverb{was} \wverb{getting} \adv{really} \adj{tired}. \adv{Now} \pron{I} \wverb{was} \adv{up} \prep{in} \detw{the} \adj{big} \noun{tree}. \pron{I} \wverb{promised} \noun{dad} \pron{I} \wverb{wouldn't} \wverb{climb} \pron{it} \adv{anymore}. \conj{But} \adv{all} \pron{I} \wverb{cared} \prep{about} \wverb{was} \wverb{eating} \detw{that} \noun{momma} \noun{bird}.
+
+\pron{I} \wverb{gobbled} \pron{her} \adv{up}... \conj{And} \adv{suddenly} \pron{I} \wverb{was} \detw{an} \noun{owl}! \adv{First}, \adv{all} \pron{I} \wverb{heard} \wverb{was} \detw{the} \noun{wind}. \adv{Then} \pron{I} \wverb{heard} \adj{little} \noun{teeth} \noun{nibbling} \prep{in} \detw{the} \noun{grass}. \pron{I} \wverb{imagined} \pron{his} \noun{face} \wverb{looking} \adv{up} \conj{and} \wverb{seeing} \pron{mine}, \prep{through} \pron{my} \noun{talons}. \pron{I} \wverb{swallowed} \pron{him} \adv{up}, \conj{and} \pron{I} \wverb{didn't} \wverb{chew} \detw{one} \noun{bit}. \adv{Then} \pron{I} \wverb{flew} \adv{off} \prep{to} \wverb{find} \noun{something} \adj{bigger}. \pron{She} \wverb{was} \adv{almost} \adv{too} \adj{big} \prep{to} \wverb{carry}. \pron{I} \wverb{started} \noun{choking}, \conj{but} \pron{I} \wverb{couldn't} \wverb{stop} \wverb{eating}. \conj{And} \adv{suddenly} \pron{I} \wverb{was} \detw{a} \noun{shark}!
+
+\pron{I} \wverb{rolled} \adv{off} \detw{a} \noun{cliff} \conj{and} \prep{into} \detw{the} \noun{ocean}. \adv{Now} \pron{I} \wverb{was} \adj{hungrier} \prep{than} \adv{ever}. \pron{I} \wverb{wanted} \adj{fat}, \adj{juicy} \noun{seals}. \pron{I} \wverb{tore} \adv{off} \pron{her} \noun{flipper} \conj{and} \pron{it} \wverb{tasted} \adv{really} \adj{good}. \pron{I} \wverb{grabbed} \adv{on} \adj{tight}. \conj{But} \pron{I} \wverb{was} \adv{so} \adj{hungry}, \pron{I} \wverb{jumped} \adv{out} \prep{of} \detw{the} \noun{water}. \adv{When} \pron{I} \wverb{opened} \pron{my} \noun{eyes}, \noun{everything} \wverb{had} \wverb{changed}. \adv{Now} \pron{I} \wverb{was} \detw{a} \noun{monster}. \conj{and} \pron{I} \wverb{smelled} \noun{people} \adv{everywhere}. \pron{I} \wverb{was} \adj{big}, \conj{but} \pron{I} \wverb{moved} \adv{real} \adj{quiet}. \pron{I} \wverb{wanted} \prep{to} \wverb{stop} \conj{but} \adv{also} \pron{I} \wverb{didn't}.
+
+\prep{After} \detw{the} \adj{last} \noun{passenger}, \pron{I} \wverb{was} \adv{still} \adj{hungry}. \conj{And} \adv{across} \detw{the} \noun{water} \pron{I} \wverb{smelled} \noun{something} \adj{new}. \noun{Something} \pron{I} \wverb{had} \prep{to} \wverb{have}. \adv{So} \pron{I} \wverb{swam} \prep{towards} \pron{it}. \pron{I} \wverb{slithered} \prep{onto} \detw{the} \noun{sand} \conj{and} \detw{the} \adj{good} \noun{smell} \wverb{went} \prep{into} \detw{an} \adj{old} \noun{pipe}. \pron{I} \wverb{got} \adj{closer} \conj{and} \adj{closer}. \adv{All} \pron{my} \noun{stomachs} \wverb{started} \noun{growling}. \conj{And} \adv{suddenly}, \pron{I} \wverb{was} \pron{me} \adv{again}. \pron{I} \wverb{held} \pron{my} \noun{breath} \prep{for} \detw{a} \adj{long} \noun{time} \conj{but} \pron{I} \wverb{couldn't} \wverb{hear} \noun{anything}. \pron{I} \wverb{think} \pron{it}'\wverb{s} \wverb{waiting} \prep{for} \pron{me} \prep{to} \wverb{fall} \adj{asleep}. \conj{But} \pron{it}'\wverb{s} \adv{not} \wverb{going} \prep{to} \wverb{wait} \adv{much} \adj{longer}. \pron{It} \wverb{needs} \prep{to} \wverb{feed}. \conj{And} \pron{we} \adv{both} \wverb{know}... \pron{I} \wverb{will} \wverb{be}... \adj{delicious}.
+
+\end{document}
