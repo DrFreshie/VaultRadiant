@@ -246,7 +246,6 @@ INPUT ./The_two_kinds_of_stories_we_tell_ourselves.out
 OUTPUT The_two_kinds_of_stories_we_tell_ourselves.out
 OUTPUT The_two_kinds_of_stories_we_tell_ourselves.pdf
 INPUT /Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc
-INPUT /usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
@@ -279,6 +278,7 @@ INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./The_two_kinds_of_stories_we_tell_ourselves.aux
 INPUT ./The_two_kinds_of_stories_we_tell_ourselves.out
 INPUT /Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  13 AUG 2026 16:04
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  21 AUG 2026 08:00
  restricted system commands enabled.
  file:line:error style messages enabled.
 **The_two_kinds_of_stories_we_tell_ourselves.tex
@@ -1072,17 +1072,16 @@ Overfull \hbox (1.00761pt too wide) in paragraph at lines 92--93
 []\TU/EBGaramond(0)/m/n/10 An in-di-vid-ual’s life story is not an ex-haus-tive his-tory of ev-ery-thing that has hap-pened. Rather,
  []
 
-[1
-
-{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 112.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 96.
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 112.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 96.
  (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] (./The_two_kinds_of_stories_we_tell_ourselves.aux)
+) [1
+
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./The_two_kinds_of_stories_we_tell_ourselves.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1092,21 +1091,21 @@ Package rerunfilecheck Info: File `The_two_kinds_of_stories_we_tell_ourselves.ou
 )
 
 Here is how much of LuaTeX's memory you used:
- 29674 strings out of 476076
+ 29673 strings out of 476076
  125129,1144653 words of node,token memory allocated
  766 words of node memory still in use:
    6 hlist, 4 vlist, 2 rule, 7 mark, 4 glue, 4 kern, 1 penalty, 1 glyph, 24 attribute, 86 glue_spec, 13 attribute_list, 3 write nodes
-   avail lists: 2:758,3:294,4:267,5:985,6:27,7:12118,8:2,9:464,10:11,11:772
+   avail lists: 2:704,3:278,4:232,5:800,6:29,7:9334,8:2,9:430,10:9,11:584
  51388 multiletter control sequences out of 65536+600000
  71 fonts using 9557975 bytes
- 84i,8n,92p,1239b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,8n,92p,809b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
 </usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on The_two_kinds_of_stories_we_tell_ourselves.pdf (2 pages, 44456 bytes).
+Output written on The_two_kinds_of_stories_we_tell_ourselves.pdf (1 page, 38514 bytes).
 
-PDF statistics: 45 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 131072)
+PDF statistics: 41 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

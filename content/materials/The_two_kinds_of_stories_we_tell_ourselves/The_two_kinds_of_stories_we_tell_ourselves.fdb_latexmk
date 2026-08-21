@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1786629864.53528 "The_two_kinds_of_stories_we_tell_ourselves.tex" "The_two_kinds_of_stories_we_tell_ourselves.pdf" "The_two_kinds_of_stories_we_tell_ourselves" 1786629866.63383 0
+["pdflatex"] 1787292046.15154 "The_two_kinds_of_stories_we_tell_ourselves.tex" "The_two_kinds_of_stories_we_tell_ourselves.pdf" "The_two_kinds_of_stories_we_tell_ourselves" 1787292048.08269 0
   "/Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf" 1727709108 936656 40d46b48de5e2877f7933ee32493ba8d ""
   "/Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF" 1644030048 86952 fec8248ee5dcb2b1c49f628d71b86a35 ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-italic-variablefont-wght.luc" 1771165711.46356 500965 9541d05234cb2c0fa8e07ee1c4411e1f ""
@@ -10,7 +10,7 @@
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/plantinmtprocnbd.luc" 1771165711.50269 59725 c7d4fedcdd78a401af5347dba20983ea ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/plantinmtprosmbd.luc" 1771165711.53531 72971 9490d61d14c51d6d69eca2108fd30116 ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc" 1771165712.85199 698115 67298566f854f1044188d3789a433071 ""
-  "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1781251254.9413 18731 48bc9531323a5862a001d6127ddbd688 ""
+  "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1787203632.89659 18923 77339315556c072a153ba9460e006dea ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1772102812.75784 136901 b6af7d91e54ac34478e102529dd069a4 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf" 1255129361 94256 a52a5407fe2a4281f96a01e9736568c3 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -256,9 +256,9 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1772102680 134574 d52c003edc7102800e5ea661673cf4ba ""
   "/usr/local/texlive/2025basic/texmf-var/tex/generic/config/language.dat" 1771196379.62223 3786 cd38354308350164d4a1fd7b74f29cdc ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1771196452 5657771 f48defe9ade43e07e924caaf90f0acba ""
-  "The_two_kinds_of_stories_we_tell_ourselves.aux" 1786629866.35874 326 6207ee3b234608956ac537beb02e1f0a "pdflatex"
-  "The_two_kinds_of_stories_we_tell_ourselves.out" 1786629866.20461 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "The_two_kinds_of_stories_we_tell_ourselves.tex" 1786629861.3105 9629 9dd14d65b18e051179208c9029226b39 ""
+  "The_two_kinds_of_stories_we_tell_ourselves.aux" 1787292047.87989 314 668a20d6630c8f7b507ed31646d4c298 "pdflatex"
+  "The_two_kinds_of_stories_we_tell_ourselves.out" 1787292047.76029 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "The_two_kinds_of_stories_we_tell_ourselves.tex" 1787292044.14036 8451 63d3e1b6212d270e7230522b3d591134 ""
   (generated)
   "The_two_kinds_of_stories_we_tell_ourselves.aux"
   "The_two_kinds_of_stories_we_tell_ourselves.log"
