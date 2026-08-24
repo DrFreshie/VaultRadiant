@@ -41,7 +41,9 @@ function maskAnswer(answer: string, guessed: Set<string>) {
 }
 
 function createKeyboard(alphabet: string) {
-  return Array.from(new Set(Array.from(alphabet.toLowerCase()).filter((char) => /[a-z]/i.test(char))))
+  return Array.from(
+    new Set(Array.from(alphabet.toLowerCase()).filter((char) => /[a-z]/i.test(char))),
+  )
 }
 
 function renderGame(container: HTMLElement, state: HangmanState) {
@@ -64,15 +66,13 @@ function renderGame(container: HTMLElement, state: HangmanState) {
   }
 
   if (status) {
-    status.textContent = solved
-      ? "You won!"
-      : lost
-        ? "Game over"
-        : ""
+    status.textContent = solved ? "You won!" : lost ? "Game over" : ""
   }
 
   if (wrong) {
-    const wrongLetters = Array.from(state.guessed).filter((letter) => !state.answer.toLowerCase().includes(letter))
+    const wrongLetters = Array.from(state.guessed).filter(
+      (letter) => !state.answer.toLowerCase().includes(letter),
+    )
   }
 
   if (figure) {
@@ -145,7 +145,6 @@ function initGame(container: HTMLElement) {
       </div>
     </div>
   `
-
   ;(container as any)._hangmanState = {
     answer,
     guessed: new Set<string>(),
@@ -154,7 +153,9 @@ function initGame(container: HTMLElement) {
   } satisfies HangmanState
 
   container.querySelectorAll(".hangman-key").forEach((button) => {
-    button.addEventListener("click", () => guessLetter(container, (button as HTMLElement).dataset.letter ?? ""))
+    button.addEventListener("click", () =>
+      guessLetter(container, (button as HTMLElement).dataset.letter ?? ""),
+    )
   })
 
   container.querySelector(".hangman-reset")?.addEventListener("click", () => initGame(container))
@@ -187,16 +188,22 @@ function upgradeHangmanPlaceholders(root: ParentNode = document) {
     const answer = params.word ?? params.answer
     if (!answer) continue
 
-    const nearestFigure = pre.closest("figure[data-rehype-pretty-code-figure]") as HTMLElement | null
+    const nearestFigure = pre.closest(
+      "figure[data-rehype-pretty-code-figure]",
+    ) as HTMLElement | null
     const declaredLanguage =
       code.getAttribute("data-language") ??
       pre.getAttribute("data-language") ??
       nearestFigure?.getAttribute("data-language") ??
       ""
 
+    const lowerLanguage = declaredLanguage.toLowerCase()
     const looksLikeHangmanBlock =
-      declaredLanguage.toLowerCase() === "hangman" ||
-      /(\bword\s*:|\banswer\s*:)/i.test(code.textContent ?? "")
+      lowerLanguage === "hangman" ||
+      (lowerLanguage !== "minutecryptic" &&
+        lowerLanguage !== "cryptic" &&
+        !/\bclue\s*:/i.test(code.textContent ?? "") &&
+        /(\bword\s*:|\banswer\s*:)/i.test(code.textContent ?? ""))
 
     if (!looksLikeHangmanBlock) continue
 

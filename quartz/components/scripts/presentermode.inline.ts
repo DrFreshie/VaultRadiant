@@ -320,6 +320,7 @@ function applyPresenterMode() {
     )
     .join("")}</div>`
   ;(window as any).bootHangman?.(contentRoot)
+  ;(window as any).bootMinuteCryptic?.(contentRoot)
 
   renderLeftSidebar(
     model.programSection?.html ?? null,

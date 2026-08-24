@@ -7,6 +7,7 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     Component.DappledLightScript(),
+    Component.MinuteCrypticScript(),
     Component.HangmanScript(),
     Component.MaterialsSidebarScript(),
     Component.ExplorerSectionsScript(),

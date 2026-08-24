@@ -36,6 +36,7 @@ import Slide from "./Slide"
 import DappledLight from "./DappledLight"
 import DappledLightScript from "./DappledLightScript"
 import HangmanScript from "./HangmanScript"
+import MinuteCrypticScript from "./MinuteCrypticScript"
 import MaterialsSidebarScript from "./MaterialsSidebarScript"
 import ExplorerSectionsScript from "./ExplorerSectionsScript"
 import FigureViewer from "./FigureViewer"
@@ -43,6 +44,7 @@ export {
   DappledLight,
   DappledLightScript,
   HangmanScript,
+  MinuteCrypticScript,
   MaterialsSidebarScript,
   ExplorerSectionsScript,
   FigureViewer,
