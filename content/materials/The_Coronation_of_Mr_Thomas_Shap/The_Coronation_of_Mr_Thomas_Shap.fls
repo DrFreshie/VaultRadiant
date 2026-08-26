@@ -281,4 +281,5 @@ INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/
 INPUT /usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT ./The_Coronation_of_Mr_Thomas_Shap.aux
 INPUT ./The_Coronation_of_Mr_Thomas_Shap.out
+INPUT /Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramonditalicvariablefontwghtttf-1.luc
 INPUT /Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc

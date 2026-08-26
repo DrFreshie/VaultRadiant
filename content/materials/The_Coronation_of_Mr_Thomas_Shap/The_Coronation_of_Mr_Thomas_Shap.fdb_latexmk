@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1787511907.53759 "The_Coronation_of_Mr_Thomas_Shap.tex" "The_Coronation_of_Mr_Thomas_Shap.pdf" "The_Coronation_of_Mr_Thomas_Shap" 1787511909.32824 0
+["pdflatex"] 1787726375.75966 "The_Coronation_of_Mr_Thomas_Shap.tex" "The_Coronation_of_Mr_Thomas_Shap.pdf" "The_Coronation_of_Mr_Thomas_Shap" 1787726388.72031 0
+  "/Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf" 1727709108 814012 96f8070768e84367bca5f780ebaf4db8 ""
   "/Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf" 1727709108 936656 40d46b48de5e2877f7933ee32493ba8d ""
   "/Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF" 1644030048 86952 fec8248ee5dcb2b1c49f628d71b86a35 ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/ebgaramond-italic-variablefont-wght.luc" 1771165711.46356 500965 9541d05234cb2c0fa8e07ee1c4411e1f ""
@@ -9,6 +10,7 @@
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc" 1771165712.21036 127601 a1d82a756ffb96fd9ae144f17cb892da ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/plantinmtprocnbd.luc" 1771165711.50269 59725 c7d4fedcdd78a401af5347dba20983ea ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/otl/plantinmtprosmbd.luc" 1771165711.53531 72971 9490d61d14c51d6d69eca2108fd30116 ""
+  "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramonditalicvariablefontwghtttf-1.luc" 1771165712.61863 674993 308405e4d62f709b310687ac6bc0089e ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc" 1771165712.85199 698115 67298566f854f1044188d3789a433071 ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1787203632.89659 18923 77339315556c072a153ba9460e006dea ""
   "/Users/andersthaysen/Library/texlive/2025basic/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1772102812.75784 136901 b6af7d91e54ac34478e102529dd069a4 ""
@@ -256,9 +258,9 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1772102680 134574 d52c003edc7102800e5ea661673cf4ba ""
   "/usr/local/texlive/2025basic/texmf-var/tex/generic/config/language.dat" 1771196379.62223 3786 cd38354308350164d4a1fd7b74f29cdc ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1771196452 5657771 f48defe9ade43e07e924caaf90f0acba ""
-  "The_Coronation_of_Mr_Thomas_Shap.aux" 1787511909.12386 338 8474aac503b54ac48598fc4835fb194d "pdflatex"
-  "The_Coronation_of_Mr_Thomas_Shap.out" 1787511908.98736 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "The_Coronation_of_Mr_Thomas_Shap.tex" 1787511906.56619 12253 b6f6bded489ecf5a63383db72f5ada0e ""
+  "The_Coronation_of_Mr_Thomas_Shap.aux" 1787726387.32004 338 8474aac503b54ac48598fc4835fb194d "pdflatex"
+  "The_Coronation_of_Mr_Thomas_Shap.out" 1787726386.54114 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "The_Coronation_of_Mr_Thomas_Shap.tex" 1787726332.94511 12823 cb74414defa71598966530148793421f ""
   (generated)
   "The_Coronation_of_Mr_Thomas_Shap.aux"
   "The_Coronation_of_Mr_Thomas_Shap.log"

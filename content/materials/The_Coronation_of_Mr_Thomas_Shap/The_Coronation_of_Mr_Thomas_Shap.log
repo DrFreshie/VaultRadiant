@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  23 AUG 2026 21:05
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  26 AUG 2026 08:39
  restricted system commands enabled.
  file:line:error style messages enabled.
 **The_Coronation_of_Mr_Thomas_Shap.tex
@@ -1067,11 +1067,60 @@ Package caption Info: End \AtBeginDocument code.
 \FN@cache251=\box136
 \footinsdefault=\insert250
 \FN@cache250=\box137
- [1
 
-{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \hbox (badness 2165) in paragraph at lines 90--90
+\TU/EBGaramond(0)/m/n/7 be weighed or mea-
+ []
+
+
+Underfull \hbox (badness 2401) in paragraph at lines 94--94
+[]\TU/EBGaramond(0)/m/it/7 adj. \TU/EBGaramond(0)/m/n/7 con-vinc-ing or
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 98--98
+[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 de-fen-sive walls
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--100
+[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 goods of-fered
+ []
+
+[1
+
+{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 4739) in paragraph at lines 102--102
+[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 the de-sire for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 long-haired
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+\TU/EBGaramond(0)/m/n/7 pack an-i-mals from
+ []
+
+[2]
+Underfull \hbox (badness 6157) in paragraph at lines 108--108
+[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 a pur-ple pre-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 at-ten-dants
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--114
+\TU/EBGaramond(0)/m/n/7 or guards in an
+ []
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 116.
- (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 116.
@@ -1087,21 +1136,21 @@ Package rerunfilecheck Info: File `The_Coronation_of_Mr_Thomas_Shap.out' has not
 )
 
 Here is how much of LuaTeX's memory you used:
- 29675 strings out of 476076
+ 29676 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 766 words of node memory still in use:
-   6 hlist, 4 vlist, 2 rule, 7 mark, 4 glue, 4 kern, 1 penalty, 1 glyph, 24 attribute, 86 glue_spec, 13 attribute_list, 3 write nodes
-   avail lists: 1:1,2:763,3:291,4:263,5:765,6:30,7:11236,8:2,9:465,10:16,11:434
- 51388 multiletter control sequences out of 65536+600000
- 71 fonts using 9557975 bytes
- 84i,8n,92p,2719b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 6213 words of node memory still in use:
+   46 hlist, 28 vlist, 2 rule, 7 mark, 32 disc, 12 local_par, 112 glue, 63 kern, 29 penalty, 422 glyph, 144 attribute, 87 glue_spec, 73 attribute_list, 3 write nodes
+   avail lists: 1:1,2:823,3:354,4:263,5:883,6:36,7:11628,8:2,9:598,10:16,11:452
+ 51389 multiletter control sequences out of 65536+600000
+ 72 fonts using 10023327 bytes
+ 84i,8n,92p,2866b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
-</usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on The_Coronation_of_Mr_Thomas_Shap.pdf (3 pages, 49687 bytes).
+</Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf></usr/local/texlive/2025basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
+Output written on The_Coronation_of_Mr_Thomas_Shap.pdf (3 pages, 64909 bytes).
 
-PDF statistics: 49 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 131072)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 
