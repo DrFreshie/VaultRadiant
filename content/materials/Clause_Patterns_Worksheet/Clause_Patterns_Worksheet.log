@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  27 AUG 2026 07:58
+This is LuaHBTeX, Version 1.22.0 (TeX Live 2025)  (format=lualatex 2026.2.16)  27 AUG 2026 09:35
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Clause_Patterns_Worksheet.tex
@@ -1250,7 +1250,7 @@ Package caption Info: End \AtBeginDocument code.
 \FN@cache251=\box136
 \footinsdefault=\insert250
 \FN@cache250=\box137
-<../img/frbvuc_logo.png, id=19, 569.4876pt x 362.7954pt>
+<../img/frbvuc_logo.png, id=11, 569.4876pt x 362.7954pt>
 File: ../img/frbvuc_logo.png Graphic file (type png)
 <use ../img/frbvuc_logo.png>
 Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 133.
@@ -1263,23 +1263,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `Clause_Patterns_Worksheet.out' has not changed.
-(rerunfilecheck)             Checksum: 70C804CCC7969DC1F30F87BD051FC044;120.
+(rerunfilecheck)             Checksum: F033B1E40B8734B8AB3F517F85422C37;40.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33192 strings out of 476076
+ 33177 strings out of 476076
  125129,1144653 words of node,token memory allocated
  742 words of node memory still in use:
    7 hlist, 3 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 84 glue_spec, 10 attribute_list, 2 write nodes
-   avail lists: 1:2,2:1392,3:628,4:171,5:114,6:102,7:6705,8:2,9:637,10:4,11:490
- 54855 multiletter control sequences out of 65536+600000
- 89 fonts using 19115751 bytes
- 84i,12n,115p,561b,1125s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</System/Library/Fonts/Supplemental/Times New Roman Italic.ttf></System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf>
-Output written on Clause_Patterns_Worksheet.pdf (2 pages, 257250 bytes).
+   avail lists: 1:2,2:1103,3:541,4:155,5:76,6:88,7:4989,8:2,9:557,10:4,11:389
+ 54853 multiletter control sequences out of 65536+600000
+ 88 fonts using 18714143 bytes
+ 84i,12n,115p,561b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf>
+Output written on Clause_Patterns_Worksheet.pdf (2 pages, 219101 bytes).
 
-PDF statistics: 103 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 37 named destinations out of 1000 (max. 131072)
- 40 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 75 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
+ 24 named destinations out of 1000 (max. 131072)
+ 24 words of extra memory for PDF output out of 10000 (max. 100000000)
 

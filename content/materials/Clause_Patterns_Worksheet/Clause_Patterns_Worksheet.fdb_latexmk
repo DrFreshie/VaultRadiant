@@ -1,8 +1,7 @@
 # Fdb version 4
-["lualatex"] 1787810291.75519 "Clause_Patterns_Worksheet.tex" "Clause_Patterns_Worksheet.pdf" "Clause_Patterns_Worksheet" 1787810346.82694 0
+["lualatex"] 1787816101.71035 "Clause_Patterns_Worksheet.tex" "Clause_Patterns_Worksheet.pdf" "Clause_Patterns_Worksheet" 1787816110.08053 0
   "../img/frbvuc_logo.png" 1785919888.197 124323 45fc343b9a23ded1717243603c6e123f ""
   "/System/Library/Fonts/Supplemental/Times New Roman Bold.ttf" 1779353822 832472 47e2cfe6c7f2d721956ff54f0ef18585 ""
-  "/System/Library/Fonts/Supplemental/Times New Roman Italic.ttf" 1779353822 660268 c120acb0ba70534c94975cdd9ab9a67d ""
   "/System/Library/Fonts/Supplemental/Times New Roman.ttf" 1779353822 824920 4aa25ae5255896a14e6982eef8a0ee75 ""
   "/Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf" 1748538204 315752 87c915a06b3d1930c9b48cd950f570f5 ""
   "/Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf" 1495337172 103112 fe478a604ff6ef4de4031ad5f079a3e9 ""
@@ -255,9 +254,9 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1772102680 134574 d52c003edc7102800e5ea661673cf4ba ""
   "/usr/local/texlive/2025basic/texmf-var/tex/generic/config/language.dat" 1771196379.62223 3786 cd38354308350164d4a1fd7b74f29cdc ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1771196452 5657771 f48defe9ade43e07e924caaf90f0acba ""
-  "Clause_Patterns_Worksheet.aux" 1787810345.88829 766 8e59d918b80d0800c86d660c4a0907cb "lualatex"
-  "Clause_Patterns_Worksheet.out" 1787810345.89127 120 70c804ccc7969dc1f30f87bd051fc044 "lualatex"
-  "Clause_Patterns_Worksheet.tex" 1787810286.14598 7835 a5da0d0fc1bc96c331257e33842ff47c ""
+  "Clause_Patterns_Worksheet.aux" 1787816109.15416 538 77a0202aa79785057c57dcec7ca7c059 "lualatex"
+  "Clause_Patterns_Worksheet.out" 1787816109.16229 40 f033b1e40b8734b8ab3f517f85422c37 "lualatex"
+  "Clause_Patterns_Worksheet.tex" 1787816100.55299 5952 d06d111b12dc59f301189d228565c193 ""
   (generated)
   "Clause_Patterns_Worksheet.aux"
   "Clause_Patterns_Worksheet.log"
