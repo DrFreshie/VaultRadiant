@@ -1,0 +1,195 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+\newfontfamily\wal{Walbaum Com}
+\newfontfamily\klav{Klavika}
+\newfontfamily\klavl{Klavika light}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\usepackage{transparent}
+
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{placeins}
+
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{multicol}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{100pt}
+\setlength\cellspacebottomlimit{100pt}
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+\usepackage[h]{esvect}
+\newcommand{\twvect}[2]{\ensuremath{\begin{pmatrix}#1\\#2\end{pmatrix}}}
+
+\newcommand*\quotesize{20}
+\newcommand*{\openquote}
+  {\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+    \node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+\newcommand*{\closequote}[1]
+  {\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+    \node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+\newcommand{\qm}[1]{``#1''}
+\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+\usepackage{chngcntr}
+
+\renewcommand\thesection{\arabic{section}}
+
+\titleformat{\section}[block]
+  {\flushright\overp\Large\color{frbgreen}}
+  {}
+  {0pt}
+  {\clearpage EKSTRA}
+  [{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+\usepackage{bigfoot}
+\DeclareNewFootnote{a}
+\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+\MakePerPage{footnotes}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Clause Patterns Worksheet}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\lhead{}
+\rhead{}
+\cfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\vspace{4em}
+
+\subsection{}
+Find the clause pattern in each sentence and label the elements. Use only these patterns: \textbf{S V IO DO}, \textbf{S V SP}, and \textbf{S V DO OP}. Add adverbials where relevant.
+
+\begin{enumerate}[label=\arabic*)]
+  \item She gave the child a pencil.
+  \item The old woman in the corner was surprisingly cheerful after lunch.
+  \item They elected him president.
+  \item Our teacher gave us extra homework yesterday.
+  \item The sky above the harbour was completely clear.
+  \item The committee elected Maria chair last spring.
+  \item His uncle gave the twins a very noisy toy for Christmas.
+  \item The students at the back were unusually quiet during the film.
+  \item The club elected Jonas treasurer after a short debate.
+  \item My neighbour gave her daughter a small box of chocolates.
+  \item Their new puppy was full of energy all morning.
+  \item The class elected Emma spokesperson for the project.
+  \item The librarian gave me a copy of the article before lunch.
+  \item Her explanation of the problem was clear to everyone.
+  \item The voters elected their youngest candidate mayor in 2019.
+  \item My brother gave our guests fresh coffee in the garden.
+  \item The children in the playground were very happy after the rain stopped.
+  \item The board elected him vice-president for another year.
+  \item The guide gave the tourists a map of the old city.
+  \item Their final answer was wrong at first.
+\end{enumerate}
+
+\subsection{}
+Find the clause pattern in the bold part of each famous opening line. Label the elements and note whether the pattern is \textbf{S V IO DO}, \textbf{S V SP}, or \textbf{S V DO OP}.
+
+\begin{enumerate}[label=\arabic*)]
+  \item William Gibson, \textit{Neuromancer}: \qm{\textbf{The sky above the port was the color of television}, tuned to a dead channel.}
+  \item Leo Tolstoy, \textit{Anna Karenina}: \qm{\textbf{Happy families are all alike}; every unhappy family is unhappy in its own way.}
+  \item Ralph Ellison, \textit{Invisible Man}: \qm{\textbf{I am an invisible man}.}
+  \item Toni Morrison, \textit{Beloved}: \qm{\textbf{124 was spiteful}. Full of a baby's venom.}
+  \item Dodie Smith, \textit{I Capture the Castle}: \qm{\textbf{I write this sitting in the kitchen sink}.}
+  \item J.\ R.\ R.\ Tolkien, \textit{The Hobbit}: \qm{In a hole in the ground there lived a hobbit.} Rewrite the clause in normal word order and then label the elements.
+  \item Charles Dickens, \textit{David Copperfield}: \qm{\textbf{Whether I shall turn out to be the hero of my own life}}, or whether that station will be held by anybody else, these pages must show. Find the pattern in the bold clause after \qm{to be}.
+  \item Charlotte Brontë, \textit{Jane Eyre}: \qm{\textbf{There was no possibility of taking a walk that day}.} Find the pattern in the main clause.
+\end{enumerate}
+
+\subsection{}
+For each pattern, choose two clauses from exercise 1 or 2 and explain briefly why the noun phrases are \textbf{IO + DO}, \textbf{SP}, or \textbf{DO + OP}.
+
+\begin{enumerate}[label=\arabic*)]
+  \item Write one short test you can use for \textbf{IO}.
+  \item Write one short test you can use for \textbf{OP}.
+  \item Write one example of your own for each of the three patterns.
+\end{enumerate}
+
+\end{document}
