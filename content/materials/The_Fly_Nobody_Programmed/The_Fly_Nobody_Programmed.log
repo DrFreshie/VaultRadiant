@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.29)  1 SEP 2026 10:31
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.29)  1 SEP 2026 11:21
  restricted system commands enabled.
  file:line:error style messages enabled.
 **The_Fly_Nobody_Programmed.tex
@@ -1069,15 +1069,7 @@ Package caption Info: End \AtBeginDocument code.
 \FN@cache250=\box137
  [1
 
-{/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
- (/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
- (/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3] (./The_Fly_Nobody_Programmed.aux)
+{/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./The_Fly_Nobody_Programmed.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1087,21 +1079,19 @@ Package rerunfilecheck Info: File `The_Fly_Nobody_Programmed.out' has not change
 )
 
 Here is how much of LuaTeX's memory you used:
- 29682 strings out of 476076
+ 29627 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 784 words of node memory still in use:
-   6 hlist, 4 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 26 attribute, 87 glue_spec, 14 attribute_list, 3 write nodes
-   avail lists: 1:1,2:948,3:325,4:242,5:747,6:51,7:9284,8:2,9:466,10:5,11:574
- 51395 multiletter control sequences out of 65536+600000
- 74 fonts using 10269263 bytes
- 84i,8n,92p,561b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
+ 737 words of node memory still in use:
+   6 hlist, 3 vlist, 2 rule, 7 mark, 3 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 87 glue_spec, 10 attribute_list, 3 write nodes
+   avail lists: 1:1,2:851,3:285,4:235,5:713,6:43,7:8639,8:2,9:428,10:5,11:528
+ 51352 multiletter control sequences out of 65536+600000
+ 41 fonts using 6916063 bytes
+ 84i,5n,92p,561b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </Users/andersthaysen/Library/Fonts/PlantinMTProSmBd.TTF></usr/local/texlive/2026basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on The_Fly_Nobody_Programmed.pdf (3 pages, 58451 bytes).
+Output written on The_Fly_Nobody_Programmed.pdf (2 pages, 57614 bytes).
 
-PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 1048576)
+PDF statistics: 61 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 1048576)
  48 words of extra memory for PDF output out of 10000 (max. 100000000)
 
