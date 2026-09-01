@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.29)  31 AUG 2026 17:01
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.29)  1 SEP 2026 10:31
  restricted system commands enabled.
  file:line:error style messages enabled.
-**The_Coronation_of_Mr_Thomas_Shap.tex
-(./The_Coronation_of_Mr_Thomas_Shap.tex
+**The_Fly_Nobody_Programmed.tex
+(./The_Fly_Nobody_Programmed.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -1015,8 +1015,8 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@expandcount=\count409
  (/usr/local/texlive/2026basic/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (./The_Coronation_of_Mr_Thomas_Shap.aux)
-\openout1 = The_Coronation_of_Mr_Thomas_Shap.aux
+))) (./The_Fly_Nobody_Programmed.aux)
+\openout1 = The_Fly_Nobody_Programmed.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
@@ -1058,99 +1058,50 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 78.
- (./The_Coronation_of_Mr_Thomas_Shap.out) (./The_Coronation_of_Mr_Thomas_Shap.out)
+ (./The_Fly_Nobody_Programmed.out) (./The_Fly_Nobody_Programmed.out)
 \@outlinefile=\write5
 
-\openout5 = The_Coronation_of_Mr_Thomas_Shap.out
+\openout5 = The_Fly_Nobody_Programmed.out
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \FN@cache251=\box136
 \footinsdefault=\insert250
 \FN@cache250=\box137
-
-Underfull \hbox (badness 2165) in paragraph at lines 90--90
-\TU/EBGaramond(0)/m/n/7 be weighed or mea-
- []
-
-
-Underfull \hbox (badness 2401) in paragraph at lines 94--94
-[]\TU/EBGaramond(0)/m/it/7 adj. \TU/EBGaramond(0)/m/n/7 con-vinc-ing or
- []
-
-
-Underfull \hbox (badness 1253) in paragraph at lines 98--98
-[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 de-fen-sive walls
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 goods of-fered
- []
-
-[1
+ [1
 
 {/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 4739) in paragraph at lines 102--102
-[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 the de-sire for
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 long-haired
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--104
-\TU/EBGaramond(0)/m/n/7 pack an-i-mals from
- []
-
-[2]
-Underfull \hbox (badness 6157) in paragraph at lines 108--108
-[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 a pur-ple pre-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
-[]\TU/EBGaramond(0)/m/it/7 noun \TU/EBGaramond(0)/m/n/7 at-ten-dants
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--114
-\TU/EBGaramond(0)/m/n/7 or guards in an
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 116.
-(/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
+ (/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 116.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
  (/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [3] (./The_Coronation_of_Mr_Thomas_Shap.aux)
+) [2] [3] (./The_Fly_Nobody_Programmed.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `The_Coronation_of_Mr_Thomas_Shap.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `The_Fly_Nobody_Programmed.out' has not changed.
+(rerunfilecheck)             Checksum: 51DA152A9CCB19E0B3B7A80D764AA836;1063.
 )
 
 Here is how much of LuaTeX's memory you used:
- 29675 strings out of 476076
+ 29682 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 6213 words of node memory still in use:
-   46 hlist, 28 vlist, 2 rule, 7 mark, 32 disc, 12 local_par, 112 glue, 63 kern, 29 penalty, 422 glyph, 144 attribute, 87 glue_spec, 73 attribute_list, 3 write nodes
-   avail lists: 1:1,2:823,3:354,4:263,5:883,6:36,7:11628,8:2,9:598,10:16,11:452
- 51388 multiletter control sequences out of 65536+600000
- 72 fonts using 10089567 bytes
- 84i,8n,92p,2866b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 784 words of node memory still in use:
+   6 hlist, 4 vlist, 2 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 26 attribute, 87 glue_spec, 14 attribute_list, 3 write nodes
+   avail lists: 1:1,2:948,3:325,4:242,5:747,6:51,7:9284,8:2,9:466,10:5,11:574
+ 51395 multiletter control sequences out of 65536+600000
+ 74 fonts using 10269263 bytes
+ 84i,8n,92p,561b,437s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 warning  (pdf backend): unreferenced destination with name 'Hfootnote.1'
-</Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf></usr/local/texlive/2026basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
-Output written on The_Coronation_of_Mr_Thomas_Shap.pdf (3 pages, 64853 bytes).
+</Users/andersthaysen/Library/Fonts/PlantinMTProSmBd.TTF></usr/local/texlive/2026basic/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf></Users/andersthaysen/Library/Fonts/PlantinMTProCnBd.TTF>
+Output written on The_Fly_Nobody_Programmed.pdf (3 pages, 58451 bytes).
 
-PDF statistics: 56 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+PDF statistics: 69 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  5 named destinations out of 1000 (max. 1048576)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 48 words of extra memory for PDF output out of 10000 (max. 100000000)
 

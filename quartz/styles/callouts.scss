@@ -118,6 +118,23 @@
     --callout-icon: var(--callout-icon-quote);
   }
 
+  // Neutral, titleless box for simple phrase banks, examples, etc.
+  // Usage:
+  // > [!box]
+  // > firstly, therefore, in some ways, ...
+  &[data-callout="box"],
+  &[data-callout="neutral"] {
+    --color: var(--gray);
+    --border: var(--lightgray);
+    --bg: color-mix(in srgb, var(--lightgray) 45%, transparent);
+    padding: 0.85rem 1rem;
+  }
+
+  &[data-callout="box"] > .callout-title,
+  &[data-callout="neutral"] > .callout-title {
+    display: none;
+  }
+
   &.is-collapsed {
     & > .callout-title > .fold-callout-icon {
       transform: rotateZ(-90deg);
