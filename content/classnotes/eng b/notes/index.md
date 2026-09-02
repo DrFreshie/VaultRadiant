@@ -1,5 +1,6 @@
 ---
+tags: []
+graph: false
 title: Noter
 ---
-
-Hej Verden.
+# Noter

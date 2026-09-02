@@ -1,3 +1,9 @@
+---
+tags: []
+draft: true
+title: Opgave 5 - Omskriv med modalverber
+---
+
 # Opgave 5 - Omskriv med modalverber
 
 Omskriv følgende sætninger, så betydningen i sætningen bevares. Erstat i hver sætning verbet med et modalverbum.
