@@ -197,7 +197,7 @@ body[data-slug^="noter/matematik"] .graph {
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
 
-.unit-button:not(.unit-button--identity):hover {
+.unit-button:not(.unit-button--identity):not(.unit-button--american-south):hover {
   background: color-mix(in srgb, var(--light) 80%, var(--tertiary) 20%);
   color: var(--dark);
 }
@@ -218,6 +218,28 @@ body[data-slug^="noter/matematik"] .graph {
 
 .unit-button--identity:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url("/imgs/wroef.jpg");
+  background-size: 106%;
+  background-position: center 42%;
+  color: white;
+  filter: brightness(1.04) saturate(1.05);
+}
+
+.unit-button--american-south {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url("/imgs/Thompson.jpg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.28s ease,
+    background-size 0.45s ease,
+    background-position 0.45s ease;
+}
+
+.unit-button--american-south:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.18)), url("/imgs/Thompson.jpg");
   background-size: 106%;
   background-position: center 42%;
   color: white;
