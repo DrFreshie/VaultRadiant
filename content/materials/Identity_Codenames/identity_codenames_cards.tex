@@ -1,0 +1,40 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=12mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{tikz}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% Print double-sided with "flip on long edge". Back pages are horizontally reversed
+% so each word aligns with itself after cutting.
+\newlength{\cardw}
+\newlength{\cardh}
+\setlength{\cardw}{\dimexpr(\paperwidth-24mm)/5\relax}
+\setlength{\cardh}{\dimexpr(\paperheight-24mm)/5\relax}
+
+\newcommand{\cardpage}[1]{%
+\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (origin) at ([xshift=12mm,yshift=-12mm]current page.north west);
+  \foreach \c in {0,...,5} {\draw[gray!65,line width=0.35pt] ([xshift=\c\cardw]origin) -- ([xshift=\c\cardw,yshift=-5\cardh]origin);}
+  \foreach \r in {0,...,5} {\draw[gray!65,line width=0.35pt] ([yshift=-\r\cardh]origin) -- ([xshift=5\cardw,yshift=-\r\cardh]origin);}
+  \foreach \word [count=\i from 0] in {#1} {%
+    \pgfmathtruncatemacro{\col}{mod(\i,5)}%
+    \pgfmathtruncatemacro{\row}{floor(\i/5)}%
+    \node[align=center,text width=.88\cardw,font=\bfseries\fontsize{14}{16}\selectfont]
+      at ([xshift=(\col+.5)*\cardw,yshift=-(\row+.5)*\cardh]origin) {\word};
+  }
+\end{tikzpicture}\newpage}
+
+\begin{document}
+\cardpage{accent, ancestor, nickname, passport, hometown, profession, belief, habit, fashion, memory, gender, generation, ritual, secret, citizen, class, language, signature, role model, team, religion, neighbour, dream, label, voice}
+\cardpage{hometown, passport, nickname, ancestor, accent, memory, fashion, habit, belief, profession, citizen, secret, ritual, generation, gender, team, role model, signature, language, class, voice, label, dream, neighbour, religion}
+\cardpage{family, style, reputation, username, heritage, job, body, border, childhood, symbol, tribe, outsider, leader, fan, student, artist, pronoun, country, mask, playlist, tradition, home, rank, story, name}
+\cardpage{heritage, username, reputation, style, family, symbol, childhood, border, body, job, student, fan, leader, outsider, tribe, playlist, mask, country, pronoun, artist, name, story, rank, home, tradition}
+\cardpage{age, community, uniform, profile, status, roots, future, clothes, skill, skin, local, traveller, parent, minority, majority, career, values, nickname, sport, sibling, education, flag, diary, friend, identity}
+\cardpage{status, profile, uniform, community, age, skin, skill, clothes, future, roots, majority, minority, parent, traveller, local, sibling, sport, nickname, values, career, identity, friend, diary, flag, education}
+\cardpage{birthplace, online, clan, choice, history, migrant, food, hero, stereotype, confidence, village, city, citizenship, subculture, loyalty, rebellion, voice, mirror, group, solitude, freedom, shame, pride, change, belonging}
+\cardpage{history, choice, clan, online, birthplace, confidence, stereotype, hero, food, migrant, loyalty, subculture, citizenship, city, village, solitude, group, mirror, voice, rebellion, belonging, change, pride, shame, freedom}
+\end{document}
