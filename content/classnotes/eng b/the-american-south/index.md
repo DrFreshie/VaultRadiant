@@ -1,6 +1,5 @@
 ---
 tags: []
-draft: false
 title: The American South
 ---
 
