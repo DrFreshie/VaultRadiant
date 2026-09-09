@@ -1,0 +1,132 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantin\large}{}{}{}
+\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{ulem}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\setlist[itemize]{left=20pt}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+  \title{Truthfully}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2021}
+\author{Katrine Brøndsted \& Mathias Larsen}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+
+\subsection{Literary Journalism -- an introduction}
+
+Journalism is the reporting of recent events. This is also called ``the news''. This chapter explores the form of journalism often referred to as ``literary journalism'' or ``narrative journalism''. The idea is that this is a form of writing that goes beyond reporting and takes on qualities that can be compared to fiction while still being true to the facts of the event.
+
+This form of journalism is seen in many magazines and publications, and sometimes these longform articles are even developed into books. In literary journalism, the writer's own \glos{humanity}{menneskelighed}{n.} and personality are more evident, and the events described focus more on subjective details and not getting a quick overview of events. Narrative journalism often begins with a so-called ``hook'' that catches the reader's attention like in fiction. Some might begin \textit{in medias res}, with a short shocking first sentence, a surprising take on a topic, and/or an interesting statement.
+
+In traditional news reports or articles, the important facts are laid out in the very beginning, so that the audience might quickly know what is going on. The focus here is on delivering information in a precise and efficient manner. In contrast, literary journalism often plays with devices seen in fiction like flashbacks, flash-forwards, framing devices, suspense, subjective viewpoints, etc. Although both traditional reporting and literary journalism have to deal with factual events, literary journalism might try to find a different approach and focus. Generally speaking, reporting might be about \textit{what} happened, and literary journalism might focus more on \textit{why} or \textit{how} it happened.
+
+\subsection{New Journalism}
+
+In 1960s America, a new form of journalism \glos{emerged}{se dagens lys; dukke op}{v.}. It was different from the traditional style of journalist writings in that it combined the reporting of actual events with traits from literature. The writer would often spend weeks or months \glos{immersed}{fordybet}{adj.} in the culture of the subject -- be it spending time with exclusive eccentrics, drug dealers, or minatory murderers. As in fiction, the writers ``constructed well-developed characters, sustained dialogue, vivid scenes, and strong plotlines marked with dramatic tension. They also wrote in voices that were distinctly their own.''\footnote{\url{https://www.britannica.com/topic/New-Journalism}} This ``new journalism'' was made famous by people like Tom Wolfe and Truman Capote. These writers also began writing so-called ``nonfiction novels'' which \glos{blurred}{sløre; udviske}{v.} the lines between fact and fiction.
+
+Here is a list of characteristics which are often found in new journalism:
+
+\begin{itemize}
+    \item the writer is present in the report (almost like a 1st person narrator) and might play a role in the piece, albeit mostly a small one
+    \item it is somewhat subjective, but nothing in the story is made up
+    \item we are often led into the story by a ``donkey'' (see the interview with Lawrence Wright on pp. 18--20), a scene, or a narrative hook. Thus, this kind of journalism does not necessarily begin with the who, what, when, where, and how as a regular news article does
+    \item it is investigative journalism; often a social critique or with a political agenda
+    \item this kind of (news) story emphasizes the human interest angle
+    \item the language uses some of the stylistic elements used in fiction such as metaphors, similes, and loaded adjectives as to discreetly (or sometimes not so discreetly) let the reader know what the opinion of the writer is
+\end{itemize}
+
+\subsection{Gonzo Journalism}
+
+From new journalism sprang the even more controversial ``gonzo journalism'', where all pretense of objectivity is gone. This type of writing is often associated with the American journalist Hunter S. Thompson (1937--2005) who wrote articles that seemed more like \glos{frenetic}{hektisk; kaotisk}{adj.} descriptions of extreme events than ordinary reporting. The emphasis here was not on reporting the facts about a certain event but on presenting the reporter's very subjective experience. And in Thompson's case, the experience was often filtered through various drugs. In new journalism, the reader senses how the writer reacts to the events unfolding, but with gonzo journalism you could argue that the reaction of the reporter is at the very center of the text, and it can feel like -- and often is -- new journalism on drugs. A classic example would be Thompson's article ``The Kentucky Derby Is Decadent and Depraved'' (1970), where the actual events at the derby are left vague while Thompson's feverish experiences and the people attending the event are described vividly; the focus is more on immersion and less on getting an overview. Writer Joe Hagan describes the style of writing as a ``delirious, quasi-fictional hallucination starring Hunter S. Thompson and Welsh illustrator Ralph Steadman whose ghoulish ink splatter grotesques were unlike anything in American magazines at the time. Instead of polite reportage on a hallowed sporting event, Thompson and Steadman would down bourbon at the club and paint the whole Grand Guignol from bar stools.''\footnote{Joe Hagan, \textit{Sticky Fingers: The Life and Times of Jann Wenner and Rolling Stone Magazine}, p. 178.}
+
+Here is a list of characteristics which are often found in gonzo journalism:
+
+\begin{itemize}
+    \item the writer is present in the report (almost like a 1st person narrator), but unlike new journalism the writer does not just cover the story but becomes the story
+    \item highly subjective
+    \item the language is filled with sarcasm, humor, and exaggeration
+    \item the language uses some of the stylistic elements used in fiction such as metaphors, similes and highly loaded adjectives giving the reader a visceral experience; almost a participatory experience
+    \item often a social critique or with a political agenda
+    \item in spite of the almost rambling, stream of consciousness style of writing, this reporting still has standards of accuracy and grammar
+    \item the piece can play with chronology and create scenes that may be compiled of several situations which makes this style of writing a mix of fact and fiction
+\end{itemize}
+
+\subsection{Longform Journalism}
+
+Today, we no longer call it new journalism (because it is no longer new), and gonzo has for the most part also changed from the drug-induced frantic writings of Hunter S. Thompson to the intriguing and perhaps more structured writings of Jon Ronson, Hannah Dreier, George Saunders, Lizzie Johnson, Leslie Jamison, Lawrence Wright, Hanna Rosin, and many more. In many current longform pieces, you will find characteristics of both new journalism and gonzo. Some write engagingly about a subject without a strong author presence; others put themselves in the center and write more experiential/participatory journalism. Now, there is no need for you to wait: dive right into the many captivating topics explored by longform writers of both past and present.
+
+\end{document}

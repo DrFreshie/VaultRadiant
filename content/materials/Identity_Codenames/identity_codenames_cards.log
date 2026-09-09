@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.29)  4 SEP 2026 09:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.29)  4 SEP 2026 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -423,11 +423,11 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 \cardw=\skip51
 \cardh=\skip52
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 31
-.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5
+7.
 
-(/usr/local/texlive/2026basic/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(/usr/local/texlive/2026basic/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (/usr/local/texlive/2026basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
 ef
@@ -436,20 +436,20 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 ) (./identity_codenames_cards.aux)
 \openout1 = `identity_codenames_cards.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -458,13 +458,13 @@ LaTeX Font Info:    ... okay on input line 31.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(34.1433pt, 529.22128pt, 34.1433pt)
-* v-part:(T,H,B)=(34.1433pt, 776.76025pt, 34.1433pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=529.22128pt
-* \textheight=776.76025pt
+* modes: landscape 
+* h-part:(L,W,R)=(34.1433pt, 776.76025pt, 34.1433pt)
+* v-part:(T,H,B)=(34.1433pt, 529.22128pt, 34.1433pt)
+* \paperwidth=845.04684pt
+* \paperheight=597.50787pt
+* \textwidth=776.76025pt
+* \textheight=529.22128pt
 * \oddsidemargin=-38.1267pt
 * \evensidemargin=-38.1267pt
 * \topmargin=-75.1267pt
@@ -519,15 +519,15 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12854 strings out of 469006
- 265555 string characters out of 5454813
- 646158 words of memory out of 5000000
- 41356 multiletter control sequences out of 15000+600000
- 637773 words of font info for 45 fonts, out of 8000000 for 9000
+ 12866 strings out of 469006
+ 265565 string characters out of 5454813
+ 687054 words of memory out of 5000000
+ 41369 multiletter control sequences out of 15000+600000
+ 639864 words of font info for 46 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 102i,6n,107p,422b,658s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/lm/lmbx12.pfb>
-Output written on identity_codenames_cards.pdf (8 pages, 37248 bytes).
+ 102i,6n,107p,422b,856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on identity_codenames_cards.pdf (8 pages, 69105 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream

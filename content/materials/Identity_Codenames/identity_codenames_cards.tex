@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{article}
-\usepackage[margin=12mm]{geometry}
+\usepackage[landscape,margin=12mm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -7,6 +7,7 @@
 \usepackage{tikz}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
 
 % Print double-sided with "flip on long edge". Back pages are horizontally reversed
 % so each word aligns with itself after cutting.
@@ -15,17 +16,42 @@
 \setlength{\cardw}{\dimexpr(\paperwidth-24mm)/5\relax}
 \setlength{\cardh}{\dimexpr(\paperheight-24mm)/5\relax}
 
+\definecolor{cardtan}{HTML}{E8DDC8}
+\definecolor{cardedge}{HTML}{BFAF93}
+\definecolor{cardpaper}{HTML}{FFFDF6}
+\definecolor{cardblue}{HTML}{5C7185}
+\definecolor{cardtext}{HTML}{2C2C2C}
+
+\newcommand{\drawonecard}[1]{%
+  \begin{scope}[x=\cardw,y=\cardh]
+    % background fills the whole cut-out square
+    \fill[cardtan] (0,-1) rectangle (1,0);
+    % rounded inner line encasing both words, close to the card edge
+    \draw[cardedge!80,line width=.45pt,rounded corners=3pt] (.06,-.92) rectangle (.94,-.08);
+    % small upside-down label for the other side of the table
+    \node[rotate=180, text=cardtext!55, font=\bfseries\scriptsize]
+      at (.50,-.31) {\MakeUppercase{#1}};
+    % white box around the main word
+    \draw[fill=white, draw=cardblue!65, line width=.45pt]
+      (.23,-.76) rectangle (.77,-.56);
+    \node[text=cardtext, font=\bfseries\footnotesize, align=center, text width=.50\cardw]
+      at (.50,-.66) {\MakeUppercase{#1}};
+  \end{scope}%
+}
+
 \newcommand{\cardpage}[1]{%
 \begin{tikzpicture}[remember picture,overlay]
   \coordinate (origin) at ([xshift=12mm,yshift=-12mm]current page.north west);
-  \foreach \c in {0,...,5} {\draw[gray!65,line width=0.35pt] ([xshift=\c\cardw]origin) -- ([xshift=\c\cardw,yshift=-5\cardh]origin);}
-  \foreach \r in {0,...,5} {\draw[gray!65,line width=0.35pt] ([yshift=-\r\cardh]origin) -- ([xshift=5\cardw,yshift=-\r\cardh]origin);}
   \foreach \word [count=\i from 0] in {#1} {%
     \pgfmathtruncatemacro{\col}{mod(\i,5)}%
     \pgfmathtruncatemacro{\row}{floor(\i/5)}%
-    \node[align=center,text width=.88\cardw,font=\bfseries\fontsize{14}{16}\selectfont]
-      at ([xshift=(\col+.5)*\cardw,yshift=-(\row+.5)*\cardh]origin) {\word};
+    \begin{scope}[shift={([xshift=\col\cardw,yshift=-\row\cardh]origin)}]
+      \drawonecard{\word}
+    \end{scope}
   }
+  % cut-out grid, drawn on top so it remains visible
+  \foreach \c in {0,...,5} {\draw[gray!55,line width=0.3pt] ([xshift=\c\cardw]origin) -- ([xshift=\c\cardw,yshift=-5\cardh]origin);}
+  \foreach \r in {0,...,5} {\draw[gray!55,line width=0.3pt] ([yshift=-\r\cardh]origin) -- ([xshift=5\cardw,yshift=-\r\cardh]origin);}
 \end{tikzpicture}\newpage}
 
 \begin{document}

@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{ulem}
+
+\setmainfont{EB Garamond}
+\setsansfont{Overpass}
+
+\definecolor{hgblue}{RGB}{10,40,80}
+\definecolor{hgred}{RGB}{140,10,10}
+\definecolor{lightblue}{RGB}{222,234,246}
+
+\titleformat{\section}{\Large\bfseries\sffamily\color{hgblue}}{}{0pt}{}
+\titleformat{\subsection}{\large\bfseries\sffamily\color{hgred}}{}{0pt}{}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\renewcommand{\arraystretch}{1.35}
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+\newenvironment{excerpt}{%
+  \def\FrameCommand{\fboxsep=8pt\colorbox{lightblue}}%
+  \MakeFramed{\advance\hsize-2\width\FrameRestore}%
+}{\endMakeFramed}
+
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcommand{\source}[1]{\hfill{\footnotesize\emph{#1}}}
+\newcommand{\answerlines}[1]{\vspace{#1}}
+
+\begin{document}
+
+{\sffamily\bfseries\Huge\color{hgblue} Identity: Grammar Tasks}\par
+\vspace{0.5em}
+{\large Five written grammar tasks based on authentic excerpts from the identity unit materials.}\par
+\vspace{1em}
+
+\section{Assignment 1}
+
+\textbf{Find all verbs in the present tense in the excerpt below and rewrite them in the past tense. Write the whole text as your answer and underline the changed verbs.}
+
+\begin{tabularx}{\textwidth}{|p{0.18\textwidth}|Y|}
+\hline
+\textbf{Example} & We \emph{are} all storytellers. $\rightarrow$ We \uline{were} all storytellers. \\
+\hline
+\end{tabularx}
+
+\begin{excerpt}
+We are all storytellers — all engaged, as the anthropologist Mary Catherine Bateson puts it, in an “act of creation” of the “composition of our lives.” Yet unlike most stories we’ve heard, our lives don’t follow a predefined arc. Our identities and experiences are constantly shifting, and storytelling is how we make sense of it. By taking the disparate pieces of our lives and placing them together into a narrative, we create a unified whole that allows us to understand our lives as coherent — and coherence, psychologists say, is a key source of meaning.
+
+Northwestern University psychologist Dan McAdams is an expert on a concept he calls “narrative identity.” McAdams describes narrative identity as an internalized story you create about yourself — your own personal myth. Like myths, our narrative identity contains heroes and villains that help us or hold us back, major events that determine the plot, challenges overcome and suffering we have endured. When we want people to understand us, we share our story or parts of it with them; when we want to know who another person is, we ask them to share part of their story.
+
+An individual’s life story is not an exhaustive history of everything that has happened. Rather, we make what McAdams calls “narrative choices.” Our stories tend to focus on the most extraordinary events, good and bad, because those are the experiences we need to make sense of and that shape us. But our interpretations may differ. For one person, for example, a childhood experience like learning how to swim by being thrown into the water by a parent might explain his sense of himself today as a hardy entrepreneur who learns by taking risks. For another, that experience might explain why he hates boats and does not trust authority figures. A third might leave the experience out of his story altogether, deeming it unimportant.
+
+%\source{Silvia de Couët, “The Fly Nobody Programmed”, 2026}
+\end{excerpt}
+
+\newpage
+\section{Assignment 2}
+
+\textbf{Read the excerpt below and write examples of the following word classes: 5 adjectives, 5 pronouns, 5 prepositions and 5 nouns/substantives.}
+
+\begin{excerpt}
+Imagine someone rebuilds your entire brain. Every single nerve node, every connection. Then they place the whole thing into a virtual body and hit Play.
+
+What would you expect? Nothing? Chaos? A digital twitch, maybe?
+
+The San Francisco startup Eon Systems did exactly that. Not with a human brain – we’re not there yet – but with a fruit fly’s. And what happened next is simultaneously fascinating, unsettling, and quite possibly the most important scientific moment of 2026.
+
+The virtual fly started walking. It groomed its antennae. It searched for food. And nobody had told it how.
+
+\end{excerpt}
+
+\begin{tabularx}{\textwidth}{|Y|Y|Y|Y|}
+\hline
+\textbf{Adjectives} & \textbf{Pronouns} & \textbf{Prepositions} & \textbf{Nouns/substantives} \\
+\textbf{(tillægsord)} & \textbf{(stedord)} & \textbf{(forholdsord)} & \textbf{(navneord)} \\
+\hline
+ & & & \\[1.2cm]
+\hline
+ & & & \\[1.2cm]
+\hline
+ & & & \\[1.2cm]
+\hline
+ & & & \\[1.2cm]
+\hline
+ & & & \\[1.2cm]
+\hline
+\end{tabularx}
+
+\newpage
+\section{Assignment 3}
+
+\textbf{Find one-word synonyms for the underlined words in the table. Each underlined word has another common meaning, so use the context from “The Coronation of Mr. Thomas Shap” to choose the right synonym. The first example is shown.}
+
+\begin{tabularx}{\textwidth}{|Y|p{0.22\textwidth}|p{0.22\textwidth}|}
+\hline
+\textbf{Sentence from the text} & \textbf{Word} & \textbf{Synonym (one word)} \\
+\hline
+It was the \uline{occupation} of Mr. Thomas Shap to persuade customers that the goods were genuine. & occupation & job \\
+\hline
+It was the occupation of Mr. Thomas Shap to persuade customers that the \uline{goods} were genuine. & goods & \\
+\hline
+Their unspoken \uline{will} was consulted. & will & \\
+\hline
+He withdrew his dreams from it, his \uline{fancies}, his ambitions. & fancies & \\
+\hline
+He used to take little \uline{flights} of fancy at first. & flights & \\
+\hline
+He still discussed the \uline{passing} day's ephemeral topic. & passing & \\
+\hline
+Those that knew him always spoke of Shap as “a \uline{sound}, sane, level-headed man.” & sound & \\
+\hline
+On far the most important day of his life he went as usual to town by the early train to sell plausible \uline{articles} to customers. & articles & \\
+\hline
+He knew as well as any that his fancy could not \uline{rule} these beautiful lands. & rule & \\
+\hline
+This unfortunate missing of the morning train even occurred again, and the \uline{firm} spoke to him severely about it. & firm & \\
+\hline
+\end{tabularx}
+
+\source{Lord Dunsany, “The Coronation of Mr. Thomas Shap”, 1912}
+
+\newpage
+\section{Assignment 4}
+
+\textbf{The fragments below come from two different authentic excerpts, but they have been jumbled. Connect the fragments so that they form two meaningful texts. Write the two complete texts as your answer.}
+
+\begin{tabularx}{\textwidth}{|p{0.08\textwidth}|Y|}
+\hline
+a) & Their approach sensitized a switch somewhere, \\
+\hline
+b) & where it strikes the world more brilliantly further South. \\
+\hline
+c) & He used to take little flights of fancy at first, \\
+\hline
+d) & Similarly, behind them, in the halls, lights went on and off as they left them behind, with a soft automaticity. \\
+\hline
+e) & And then he began to imagine butterflies there; \\
+\hline
+f) & They walked down the hall of their soundproofed Happylife Home, \\
+\hline
+g) & after that, silken people and the temples they built to their gods. \\
+\hline
+h) & which had cost them thirty thousand dollars installed, \\
+\hline
+i) & and the nursery light flicked on when they came within ten feet of it. \\
+\hline
+j) & dwelt all day in his dreamy way on fields and rivers lying in the sunlight \\
+\hline
+k) & this house which clothed and fed and rocked them to sleep and played and sang and was good to them. \\
+\hline
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{|p{0.18\textwidth}|Y|}
+\hline
+\textbf{Text 1} & \\[4cm]
+\hline
+\textbf{Text 2} & \\[4cm]
+\hline
+\end{tabularx}
+
+\end{document}
