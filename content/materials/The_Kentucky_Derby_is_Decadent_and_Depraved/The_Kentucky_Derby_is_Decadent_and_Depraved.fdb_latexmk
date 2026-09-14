@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1788965400.67947 "The_Kentucky_Derby_is_Decadent_and_Depraved.tex" "The_Kentucky_Derby_is_Decadent_and_Depraved.pdf" "The_Kentucky_Derby_is_Decadent_and_Depraved" 1788965402.53132 0
+["pdflatex"] 1789039520.58237 "The_Kentucky_Derby_is_Decadent_and_Depraved.tex" "The_Kentucky_Derby_is_Decadent_and_Depraved.pdf" "The_Kentucky_Derby_is_Decadent_and_Depraved" 1789039522.39411 0
   "../img/thompson.jpg" 1788121636.395 70891 30c8824110ae736ddca2538692b386d5 ""
   "/Users/andersthaysen/Library/Fonts/EBGaramond-Italic-VariableFont_wght.ttf" 1782860892 719832 9a5e932362319437e17d44f0926133bb ""
   "/Users/andersthaysen/Library/Fonts/EBGaramond-VariableFont_wght.ttf" 1782860892 808180 b2995d2f29f757537bd595136eeac274 ""
@@ -234,9 +234,9 @@
   "/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1788040928 134125 7b092c2cbb8b327ebbb7cba58b01ba7e ""
   "/usr/local/texlive/2026basic/texmf-var/tex/generic/config/language.dat" 1772405583 3773 08a169064ede2f014617db571a0f508e ""
   "/usr/local/texlive/2026basic/texmf-var/web2c/luahbtex/lualatex.fmt" 1788036416 5655821 12915ed6a164ec6c52b93710d96eced3 ""
-  "The_Kentucky_Derby_is_Decadent_and_Depraved.aux" 1788965402.30734 928 f68de78c6d815ec239e18aaa8d85e48c "pdflatex"
-  "The_Kentucky_Derby_is_Decadent_and_Depraved.out" 1788965402.312 789 307f72c116dc76634be4a35d6406a55f "pdflatex"
-  "The_Kentucky_Derby_is_Decadent_and_Depraved.tex" 1788965399.44289 43923 0541c2a3d1853a007bb6b7a744adbaba ""
+  "The_Kentucky_Derby_is_Decadent_and_Depraved.aux" 1789039522.2019 928 f68de78c6d815ec239e18aaa8d85e48c "pdflatex"
+  "The_Kentucky_Derby_is_Decadent_and_Depraved.out" 1789039522.20495 789 307f72c116dc76634be4a35d6406a55f "pdflatex"
+  "The_Kentucky_Derby_is_Decadent_and_Depraved.tex" 1789039220.74 43903 8f1f9ddbf4013bbcb98f5c81fd52a704 ""
   (generated)
   "The_Kentucky_Derby_is_Decadent_and_Depraved.aux"
   "The_Kentucky_Derby_is_Decadent_and_Depraved.log"
