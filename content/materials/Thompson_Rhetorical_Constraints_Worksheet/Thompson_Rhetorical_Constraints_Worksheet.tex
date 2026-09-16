@@ -1,0 +1,45 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.8cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\setmainfont[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\headingfont[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+\usepackage[svgnames]{xcolor}
+\usepackage{tabularx,array,enumitem,colortbl}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\definecolor{hgblue}{RGB}{10, 40, 80}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{hggrey}{RGB}{235, 235, 232}
+\definecolor{hggreen}{RGB}{145, 205, 205}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
+\renewcommand{\arraystretch}{1.45}
+\setlist[enumerate]{leftmargin=*, itemsep=0.35em}
+
+\newcommand{\blank}{\rule{2.2cm}{0.4pt}}
+\newcommand{\head}[1]{\textcolor{hgred}{\headingfont\large #1}}
+
+\begin{document}
+
+{\headingfont\Huge\color{hgblue} Rhetorical Constraints}\par
+{\large Hunter S. Thompson, \textit{The Kentucky Derby Is Decadent and Depraved}}\par
+
+\vspace{2em}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{0.34\textwidth}>{\centering\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.34\textwidth}}
+\rowcolor{hggrey}\textbf{Strategy} & & \textbf{Audience} \\
+\vspace{0.25em}Humour / exaggeration & & \vspace{0.25em}Intellectual \\
+\vspace{0.25em}Symbolism & & \vspace{0.25em}Conservative \\
+\vspace{0.25em}Self-parody & & \vspace{0.25em}Sceptical \\
+\vspace{0.25em}Observations & & \vspace{0.25em}Traditionalist \\
+\vspace{0.25em}Direct / loaded language & & \vspace{0.25em}Countercultural \\
+\vspace{0.25em}Elements of fiction & & \vspace{0.25em}Literary \\
+\vspace{0.25em}Objective reporting & & \vspace{0.25em}Anti-authoritarian \\
+\vspace{0.25em}Statistics & & \vspace{0.25em}Obnoxious \\
+\vspace{0.25em}Concise language & & \vspace{0.25em}Hooligan \\
+\vspace{0.25em}Moral sermon & & \vspace{0.25em}Derby fans \\
+\end{tabularx}
+
+\end{document}

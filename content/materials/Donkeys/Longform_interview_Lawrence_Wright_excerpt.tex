@@ -1,0 +1,96 @@
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref}
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}
+	\usepackage{wrapfig}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantin\large}{}{}{}
+	\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+  \usepackage[normalem]{ulem}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}}
+				\MakePerPage{footnotes}
+	
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	\setlist[itemize]{left=20pt}
+	
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{`The Donkey' - Getting Into the Story}
+\date{2014}
+\author{Lawrence Wright}
+\maketitle
+    
+\thispagestyle{plain}
+\setcounter{page}{1}
+\linenumbers
+
+The following text is an interview with author Lawrence Wright about how he draws in his readers. The interview is from the \emph{Longform} podcast and was done by Aaron Lammer on 12 March 2014. Lawrence Wright talks about his style of writing, his use of character, setting and creating a scene as well as how to begin a story with a `donkey'. Check out this interview in full and others at \url{longform.org/podcast}.
+
+\subsection{Longform interview with Lawrence Wright (excerpt -- transcript)}
+
+\emph{What kinds of things did you discover during those first stories that you were reporting that drew you into reporting as a profession?}
+
+``[\ldots] I was very much under the influence of the `new journalists.' And it was a time when journalism began to seem exciting, but it had to be \glos{literary}{litterær; som vedrører litteratur}{adj.}. You couldn't just go out and report the facts. [\ldots] There was nobody to teach that, so when I first started \glos{freelancing}{som er uden fast ansættelse; tjener sine penge på enkeltopgaver}{v.}, I was just in \glos{agony}{voldsom smerte; kval; pine}{n.} about how to start a story. I felt that if you could find the right \glos{entry point}{indgang; begyndelsespunkt}{n.}, then you would be able to wind your way through it in a more literary way, but you could not start, you know, the way I typically start all my stories now at \emph{the New Yorker}, where you're more or less \glos{required}{påkrævet; obligatorisk}{adj.} to `On April 13th, so and so started' \ldots{} you know, you have to have everything in the first couple of sentences. I wanted to make my stories a lot more literary [\ldots].''
+
+``I was blocked because of my own ambition. I would spend a week on the couch trying to figure out how to get started on a story. Eventually, I began to find a way to get into stories. And then the main problem was [\ldots] how to arrange the information in a stylish way that will carry the reader through the story, and I finally understood that the only way to do that, for me, is through characters and scenes. Those, I think, are the building blocks of any great story -- whether it's fiction or nonfiction. If you have wonderful characters that the reader cares about they will carry you into a world that might be really difficult to understand, but if you care about that person, all the information that creates the world that character lives in becomes more meaningful. So you can feed information to the reader in a way that makes them \glos{eager}{ivrig; spændt}{adj.} to take it in. And then if you have great scenes, that's where you can spread the \glos{canvas}{lærred}{n.} out and paint the picture and draw the reader in. If you have those two things [\ldots] these are the things that I need in order to have a great story, to have the information is important, but essentially what the reader cares about, and the reason the reader is in the story in the first place and will stay in it, is because they have a human connection to the people that are involved in the story.''
+
+\emph{How did you balance those larger-than-life characters [of al Qaeda leader Osama bin Laden and founder of Scientology L. Ron Hubbard, respectively] against the overall larger story that involves international relations and massive amounts of FBI agents and Scientology tax agents?}
+
+``Just to take the example of \emph{The Looming Tower}. On 9/11, I was [at breakfast], and I got in the car, and you know by the time I got home, I knew that the world had changed. And [\ldots] I feel that I need to address that somehow. As the story opened up a little bit, it became more personal to me in part because we had lived in Cairo for two years when we were young teachers at the American University, so I spoke Arabic, I had lived in a Muslim country, I knew something about that part of the world. [\ldots] But how do you take such a \glos{vast}{enorm}{adj.} tragedy and make it human and understandable? For me the only way to do that is to find certain key figures, I call them donkeys, [\ldots] a very useful \glos{beast of burden}{lastdyr}{n.}, it can carry a lot of information on its back, and also it will take the reader into a world that he may not understand or may not have thought he cared about until you have this donkey.''
+
+\end{document}
