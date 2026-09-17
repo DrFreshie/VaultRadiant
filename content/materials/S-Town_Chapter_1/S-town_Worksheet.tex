@@ -28,13 +28,17 @@
 \definecolor{frbgreenl}{RGB}{162, 202, 137}
 \definecolor{frbgreen}{RGB}{28, 85, 66}
 \definecolor{frbgrey}{RGB}{243, 245, 242}
+\definecolor{postityellow}{RGB}{255, 242, 153}
+\definecolor{postitgreen}{RGB}{204, 235, 197}
+\definecolor{postitblue}{RGB}{199, 224, 244}
+\definecolor{postitpink}{RGB}{248, 203, 214}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
 
 \usepackage{graphicx}
 \graphicspath{{../img/}}
 \usepackage{tikz}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc,shadows}
 \usepackage{placeins}
 
 \usepackage[pdfborder={0 0 0}]{hyperref}
@@ -154,4 +158,30 @@
   \item Listen to different quotes from John. How would you characterise the way he speaks?
   \item Look up the words \emph{offglide} and \emph{monophthong}. Can you find examples of the these characteristics of Alabama English in the podcast?
 \end{enumerate}
+
+\clearpage
+\thispagestyle{plain}
+\begin{center}
+  {\overp\Large\color{frbgreen}Student post-it notes}
+\end{center}
+\vspace{0.5em}
+
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \tikzset{postit/.style={draw=black!15, line width=0.4pt, rounded corners=1pt, drop shadow={shadow xshift=1.2pt, shadow yshift=-1.2pt, opacity=0.18}, inner sep=7pt, align=left, font=\overp\small, text width=5.0cm, minimum height=2.6cm}}
+
+  \node[postit, fill=postityellow, rotate=-2] at (2.8,12.8) {\textbf{1. Old clocks}\\Fixing clocks = metaphor. Small hidden problems matter, and you need patience to understand S-Town and John.};
+  \node[postit, fill=postitgreen, rotate=1.5] at (8.6,12.8) {\textbf{2. Main focus}\\Brian investigates John's claims about a murder, but it also becomes a portrait of John and Woodstock.};
+  \node[postit, fill=postitblue, rotate=-1] at (14.4,12.8) {\textbf{3. Donkey}\\The donkey is the rumour/story John sends Brian after. It carries information about the alleged murder.};
+
+  \node[postit, fill=postitpink, rotate=2] at (2.8,9.3) {\textbf{4. Engagement}\\Mystery, strange details, John's voice, and Brian's questions make us want to keep listening.};
+  \node[postit, fill=postityellow, rotate=-1.5] at (8.6,9.3) {\textbf{5. John}\\Brilliant, angry, funny, lonely. He cares about truth and detail, but sounds very frustrated with his town.};
+  \node[postit, fill=postitgreen, rotate=1] at (14.4,9.3) {\textbf{6. Setting}\\Rural Alabama. John calls it corrupt and backwards. The place feels hot, poor, isolated, and full of gossip.};
+
+  \node[postit, fill=postitblue, rotate=-2] at (2.8,5.8) {\textbf{7. Suspense}\\Foreshadowing, cliffhangers, unanswered questions, and sudden twists. The episode keeps changing direction.};
+  \node[postit, fill=postitpink, rotate=1.5] at (8.6,5.8) {\textbf{8. Short stories}\\They work like clues. Reed uses them to show how John thinks about secrets, death, irony, and hidden lives.};
+  \node[postit, fill=postityellow, rotate=-1] at (14.4,5.8) {\textbf{9. John's speech}\\Fast, detailed, sarcastic, poetic, and full of strong opinions. He sounds educated and Southern at the same time.};
+
+  \node[postit, fill=postitgreen, rotate=1] at (8.6,2.3) {\textbf{10. Alabama English}\\Offglide = vowel moves at the end. Monophthong = vowel stays flat. Listen for Southern pronunciation in John's words like \emph{time}.};
+\end{tikzpicture}
+
 \end{document}

@@ -1,0 +1,309 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\usepackage{transparent}
+
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+\definecolor{postityellow}{RGB}{255, 242, 153}
+\definecolor{postitgreen}{RGB}{204, 235, 197}
+\definecolor{postitblue}{RGB}{199, 224, 244}
+\definecolor{postitpink}{RGB}{248, 203, 214}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage{placeins}
+
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{multicol}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{100pt}
+\setlength\cellspacebottomlimit{100pt}
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+\newcommand*\quotesize{20}
+\newcommand*{\openquote}
+  {\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+    \node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+\newcommand*{\closequote}[1]
+  {\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+    \node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+\newcommand{\qm}[1]{``#1''}
+\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+\usepackage{chngcntr}
+
+\renewcommand\thesection{\arabic{section}}
+
+\titleformat{\section}[block]
+  {\flushright\overp\Large\color{frbgreen}}
+  {}
+  {0pt}
+  {\clearpage EKSTRA}
+  [{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+\usepackage{bigfoot}
+\DeclareNewFootnote{a}
+\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+\MakePerPage{footnotes}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Voice worksheet}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\lhead{}
+\rhead{}
+\cfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\subsection{}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item The word `voice' can have various meanings: sound, expression of ideas/opinions, physical voice, give opinion (vb). Look at the synonyms or near synonyms for `voice' and find the odd one out in each of the lists.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item Sound:
+    \begin{itemize}[label=$\blacksquare$, leftmargin=2em]
+      \item \textbf{\textit{language $\cdot$ noise $\cdot$ tone $\cdot$ utterance $\cdot$ wish $\cdot$ words}}
+    \end{itemize}
+
+    \item Expression of ideas/opinions:
+    \begin{itemize}[label=$\blacksquare$, leftmargin=2em]
+      \item \textbf{\textit{decision $\cdot$ division $\cdot$ say $\cdot$ view $\cdot$ vote $\cdot$ will $\cdot$ wish}}
+    \end{itemize}
+
+    \item Physical voice:
+    \begin{itemize}[label=$\blacksquare$, leftmargin=2em]
+      \item \textbf{\textit{instrument $\cdot$ jaw $\cdot$ medium $\cdot$ mouthpiece $\cdot$ organ $\cdot$ spokesman $\cdot$ vehicle}}
+    \end{itemize}
+
+    \item Give opinion (vb):
+    \begin{itemize}[label=$\blacksquare$, leftmargin=2em]
+      \item \textbf{\textit{air $\cdot$ articulate $\cdot$ assert $\cdot$ declare $\cdot$ divulge $\cdot$ enunciate $\cdot$ express $\cdot$ invest $\cdot$ raise an issue $\cdot$ speak out $\cdot$ utter}}
+    \end{itemize}
+  \end{enumerate}
+
+  \item Translate these expressions into Danish so that the meaning is identical with that of the English expression, i.e. you need not translate word for word.
+  \begin{multicols}{2}
+  \begin{itemize}[leftmargin=1.5em]
+    \item an inner voice
+    \item the voice of conscience/reason/sanity
+    \item a critical voice
+    \item a distinctive voice
+    \item add a voice
+    \item have a voice
+    \item lower one's voice
+    \item find a voice
+    \item give voice to
+    \item have a voice in something
+    \item lend a voice
+    \item make your voice heard
+    \item raise your voice
+    \item speak with one voice
+  \end{itemize}
+  \end{multicols}
+
+\end{enumerate}
+
+\subsection{}
+Rea the rest of the text and write notes on what the text tells us about:
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item what Joey has to say about himself
+    \item what Joey has to say about Big Ant
+    \item what Big Ant has to say about herself
+    \item what Big Ant has to say about Joey
+    \item the world surrounding Joey and Big Ant
+    \item the time they live in
+    \item the time that was before the Cold Time
+    \item places that people used to go to
+    \item the way people used to travel
+    \item th’Irthsore
+    \item Joey’s parents
+    \item Joey’s grandfather
+    \item what happened in the Alps
+    \item what kind of people work in the Alps
+    \item the result of activities in the Alps
+    \item normality
+    \item what Joey has to say about what happened to the world
+    \item what Big Ant has to say about what happened to the world
+    \item the Committee’s point of view
+    \item what is going to happen to Joey
+    \item what is going to happen to the ham
+  \end{enumerate}
+
+\clearpage
+
+\subsection{}
+\textbf{LANGUAGE AND TEXT STRUCTURE}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Reread and examine these three excerpts from the text from a linguistic point of view:
+  \begin{itemize}[leftmargin=1.5em]
+    \item \qm{I liv in a shack [...] Me to}, lines 20--24
+    \item Big Ant's first Note to Commity, lines 25--32
+    \item The letter from the Committee at the end of the story, lines 109--116
+  \end{itemize}
+  Find examples of incorrect use of language in each of the texts. Focus on:
+  \begin{itemize}[leftmargin=1.5em]
+    \item spelling
+    \item grammar, particularly concord and adjectives/adverbs
+    \item punctuation
+    \item sentence structure and complexity
+    \item the choice of words
+  \end{itemize}
+  Suggest reasons for the different levels of correctness in the three excerpts.
+
+  \item Text structure: What is the function of the OK OKs?
+
+  \item The text is published as a short story. In what way does it resemble short stories as you know the genre? You may consider the beginning, middle, incidents, characters, plot development, dialogue.
+
+  \item How many people are speaking or writing? Are they writing to each other / about each other? What is the connection between the characters?
+
+  \item This is a definition of the epistolary /ɪˈpɪstələri/ novel: An epistolary novel is a novel written as a series of letters or similar documents. Sometimes diary entries or electronic documents like text messages are used. The word epistolary is derived via Latin from the Greek word epistle meaning letter. Reading letters rather than a traditional short story or novel allows the reader to construct their own image or story. They do not need to rely on a narrator.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item To what extent is \qm{How th'Irth Wint Rong by Hapless Joey@homeskool.guv} an epistolary short story? Compare with \emph{What Remains of Edith Finch?}
+    \item What is the effect of writing the story through letters rather than as one coherent narrative?
+  \end{enumerate}
+
+  \item Reflect on what reading parts of the text with a focus on language did to your understanding of the text.
+\end{enumerate}
+
+\subsection{}
+\textbf{VOCABULARY}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Apocalypse (Greek origin) means revelation and is used about Judgment Day in a biblical sense and the end of the world as described in the Book of Revelations, the last book of the New Testament in the Bible. The prefix post- means `after'. In post-apocalyptic literature, the setting is typically one in which the end of the world has already taken place and the characters are trying to survive and get on in a new world. The event that caused the world to collapse may be disease, war, or manmade and natural disasters.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item Find and explain the odd one out. Pay attention to prefixes and roots respectively: \textit{posthumous $\cdot$ postnatal $\cdot$ posture $\cdot$ postgraduate}
+    \item Find and explain the odd one out. Pay attention to prefixes and roots respectively: \textit{post-war $\cdot$ post office $\cdot$ postmodernism $\cdot$ post-mortem}
+    \item Find and explain the odd one out. Pay attention to prefixes and roots respectively: \textit{postponement $\cdot$ post-it-note $\cdot$ post-industrial $\cdot$ postscript}
+  \end{enumerate}
+
+  \item Topos (Greek origin) means place. The prefix u- means `no-' and the prefix dys- means `lacking' or `bad'. Utopias typically describe a society which is `perfect' from the point of view of the narrator whereas dystopias describe the opposite. Utopias and dystopias are frequently found in science fiction.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item VOCABULARY. Find out what the following terms ending in -topia and derivations mean by looking at the prefixes.
+    \begin{multicols}{2}
+    \begin{itemize}[leftmargin=1.5em]
+      \item ecotopia
+      \item subtopia
+      \item technotopia
+      \item digitopia
+      \item pornotopia
+      \item utopia
+      \item dystopia
+      \item dysfunctional
+      \item dyslexia
+    \end{itemize}
+    \end{multicols}
+
+    \item Or -- if you look at the suffix (derivative) of the words?
+    \begin{itemize}[leftmargin=1.5em]
+      \item utopianism
+      \item dystopianism
+    \end{itemize}
+
+    \item Write one sentence about the text in which you include at least three of the words from the task online.
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+\textbf{RELIGIOUS PERSPECTIVE}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Reread and examine the passage \qm{Here is what happind \ldots} until \qm{why is that I wunder.} (lines 68--102).
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item This passage includes references to God and the Bible. Find examples of words which have a religious dimension.
+    \item According to Joey, what did the people do, and what was God's reaction?
+    \item What light do biblical references throw on your understanding of the text?
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+\textbf{SCIENCE}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Reread and examine the passage beginning \qm{But it was not the same normil \ldots} until \qm{\ldots the say-so.} (lines 92--108).
+  \item Find out what a collider is and what its purpose is.
+  \item Find and watch a film clip about the CERN Collider.
+  \item What links can you establish between the film clip and the text?
+  \item What new light does the film throw on your reading and understanding of the text?
+\end{enumerate}
+
+\end{document}

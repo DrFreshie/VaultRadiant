@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.29)  17 SEP 2026 05:55
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.8.29)  17 SEP 2026 07:09
  restricted system commands enabled.
  file:line:error style messages enabled.
-**S-town_Worksheet.tex
-(./S-town_Worksheet.tex
+**Voice_Worksheet.tex
+(./Voice_Worksheet.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -1109,11 +1109,11 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip91
 \f@nch@widthR=\skip92
 \@temptokenb=\toks57
-) (./S-town_Worksheet.aux
+) (./Voice_Worksheet.aux
 Package babel Info: 'danish' activates 'danish' shorthands.
 (babel)             Reported on input line 9.
 )
-\openout1 = S-town_Worksheet.aux
+\openout1 = Voice_Worksheet.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
@@ -1155,10 +1155,10 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring OFF on input line 126.
- (./S-town_Worksheet.out) (./S-town_Worksheet.out)
+ (./Voice_Worksheet.out) (./Voice_Worksheet.out)
 \@outlinefile=\write4
 
-\openout4 = S-town_Worksheet.out
+\openout4 = Voice_Worksheet.out
 
 
 Package siunitx Warning: Tabular column type "S" overwritten with siunitx
@@ -1170,52 +1170,50 @@ Package caption Info: End \AtBeginDocument code.
 \FN@cache251=\box136
 \footinsdefault=\insert250
 \FN@cache250=\box137
-<../img/frbvuc_logo.png, id=35, 569.4876pt x 362.7954pt>
+<../img/frbvuc_logo.png, id=55, 569.4876pt x 362.7954pt>
 File: ../img/frbvuc_logo.png Graphic file (type png)
 <use ../img/frbvuc_logo.png>
 Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 131.
 (luatex.def)             Requested size: 142.37155pt x 90.69862pt.
-[1{/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+LaTeX Font Info:    Trying to load font information for U+msa on input line 148.
+(/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 148.
+ (/usr/local/texlive/2026basic/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1{/usr/local/texlive/2026basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-<../img/frbvuc_logo.png>]
-
-LaTeX Font Warning: Font shape `TU/Overpass(0)/b/n' undefined
-(Font)              using `TU/Overpass(0)/m/n' instead on input line 172.
-
-
-Overfull \hbox (143.59218pt too wide) in paragraph at lines 185--186
-[][] 
+<../img/frbvuc_logo.png>] [2]
+Overfull \hbox (6.93527pt too wide) in paragraph at lines 244--245
+[]\TU/TimesNewRoman(0)/m/n/10 To what extent is ``How th’Ir-th Wint Rong by Hap-less Jo-ey@ho-meskool.guv''
  []
 
-[2
+[3
 
-] (./S-town_Worksheet.aux)
+] [4] (./Voice_Worksheet.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `S-town_Worksheet.out' has not changed.
-(rerunfilecheck)             Checksum: F033B1E40B8734B8AB3F517F85422C37;40.
+Package rerunfilecheck Info: File `Voice_Worksheet.out' has not changed.
+(rerunfilecheck)             Checksum: D1DCE9558DA54436B75EE2768F63EB5F;240.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33357 strings out of 476076
+ 33409 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 1358 words of node memory still in use:
-   23 hlist, 3 vlist, 10 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 114 attribute, 84 glue_spec, 58 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
-   avail lists: 1:1,2:2443,3:1150,4:123,5:1268,6:72,7:4044,8:2,9:477,10:13,11:342
- 55027 multiletter control sequences out of 65536+600000
- 76 fonts using 18282879 bytes
- 84i,12n,115p,552b,961s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</Users/andersthaysen/Library/Fonts/Overpass-Italic-VariableFont_wght.ttf></System/Library/Fonts/Supplemental/Times New Roman Italic.ttf></System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf>
-Output written on S-town_Worksheet.pdf (2 pages, 255529 bytes).
+ 1373 words of node memory still in use:
+   24 hlist, 3 vlist, 10 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 116 attribute, 84 glue_spec, 59 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
+   avail lists: 1:1,2:1812,3:760,4:243,5:147,6:135,7:8792,8:2,9:771,10:4,11:771
+ 55020 multiletter control sequences out of 65536+600000
+ 92 fonts using 19160311 bytes
+ 84i,12n,115p,580b,1270s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</System/Library/Fonts/Supplemental/Times New Roman Italic.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold Italic.ttf></System/Library/Fonts/Supplemental/Times New Roman.ttf></System/Library/Fonts/Supplemental/Times New Roman Bold.ttf></Users/andersthaysen/Library/Fonts/TRYVesterbro-Poster.otf></Users/andersthaysen/Library/Fonts/Overpass-VariableFont_wght.ttf></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Voice_Worksheet.pdf (4 pages, 300998 bytes).
 
-PDF statistics: 103 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 1048576)
- 184 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 184 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 63 named destinations out of 1000 (max. 1048576)
+ 224 words of extra memory for PDF output out of 10000 (max. 100000000)
 
