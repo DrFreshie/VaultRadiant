@@ -1,0 +1,195 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\usepackage{transparent}
+
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+\definecolor{postityellow}{RGB}{255, 242, 153}
+\definecolor{postitgreen}{RGB}{204, 235, 197}
+\definecolor{postitblue}{RGB}{199, 224, 244}
+\definecolor{postitpink}{RGB}{248, 203, 214}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage{placeins}
+
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{multicol}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{100pt}
+\setlength\cellspacebottomlimit{100pt}
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+\newcommand*\quotesize{20}
+\newcommand*{\openquote}
+  {\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+    \node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+\newcommand*{\closequote}[1]
+  {\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+    \node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+\newcommand{\qm}[1]{``#1''}
+\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+\usepackage{chngcntr}
+
+\renewcommand\thesection{\arabic{section}}
+
+\titleformat{\section}[block]
+  {\flushright\overp\Large\color{frbgreen}}
+  {}
+  {0pt}
+  {\clearpage EKSTRA}
+  [{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+\usepackage{bigfoot}
+\DeclareNewFootnote{a}
+\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+\MakePerPage{footnotes}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Huckleberry Finn}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\lhead{}
+\rhead{}
+\cfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\subsection{}
+\textbf{CREATIVE WRITING: MISSING PERSON REPORT}
+
+Huckleberry Finn is mistreated by his father and decides to run away. Write a missing person report on Huck by using your analysis of the text. Write in the present tense.
+
+Your missing person report should include the following points:
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Basic information about Huck, such as name, date of birth or age, address, family, etc.
+  \item Physical appearance and clothing: height, weight, build, particular marks, clothes, etc.
+  \item Habits and personality. Consider the following questions:
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item Does Huck smoke or drink alcohol?
+    \item Does Huck have any particular habits?
+    \item What type of personality does Huck have? Is he outgoing or quiet? Friendly or depressed?
+    \item What are Huck's personal values and philosophy?
+    \item Is Huck religious?
+    \item Does Huck have any personal or emotional problems?
+    \item What level of education or training does Huck have?
+  \end{enumerate}
+  \item Huck's plans and/or activities on the day he goes missing.
+  \item When Huck is last seen, and by whom.
+  \item Huck's overall health and mental condition.
+\end{enumerate}
+
+\clearpage
+
+\subsection{}
+\textbf{CREATIVE WRITING: WRITE YOUR OWN CHAPTER 3}
+
+Write your own version of a third chapter to \textit{The Adventures of Huckleberry Finn}. Try to write in Huck's voice and use as many features of Southern American English (SoAE) as possible.
+
+Before you write, make notes on these questions:
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item What happens after Huck runs away?
+  \item Where does Huck go, and why does he choose this place?
+  \item Who does Huck meet? Is this person helpful, dangerous, or both?
+  \item What problem or conflict appears in the chapter?
+  \item How can you show Huck's personality through his language, thoughts, and choices?
+  \item Which SoAE elements can you include? Think about grammar, vocabulary, spelling, pronunciation, and sentence structure.
+\end{enumerate}
+
+\vspace{0.5em}
+\textbf{Checklist:}
+\begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+  \item I write in the first person as Huck.
+  \item I use the present or past tense consistently.
+  \item I include details about setting, action, and Huck's feelings.
+  \item I use several SoAE elements deliberately.
+  \item I make the chapter sound like it belongs in the novel.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,199 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\usepackage{transparent}
+
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+\definecolor{postityellow}{RGB}{255, 242, 153}
+\definecolor{postitgreen}{RGB}{204, 235, 197}
+\definecolor{postitblue}{RGB}{199, 224, 244}
+\definecolor{postitpink}{RGB}{248, 203, 214}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage{placeins}
+
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{multicol}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{100pt}
+\setlength\cellspacebottomlimit{100pt}
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\usepackage{siunitx}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+\newcommand*\quotesize{20}
+\newcommand*{\openquote}
+  {\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+    \node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+\newcommand*{\closequote}[1]
+  {\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+    \node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+\newcommand{\qm}[1]{``#1''}
+\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+\usepackage{chngcntr}
+
+\renewcommand\thesection{\arabic{section}}
+
+\titleformat{\section}[block]
+  {\flushright\overp\Large\color{frbgreen}}
+  {}
+  {0pt}
+  {\clearpage EKSTRA}
+  [{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+\usepackage{bigfoot}
+\DeclareNewFootnote{a}
+\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+\MakePerPage{footnotes}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Huckleberry Finn}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\lhead{}
+\rhead{}
+\cfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\subsection{}
+\textbf{LANGUAGE: THE USE OF DIALECT}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item In some parts of the novel, Twain has chosen to use a language that deviates from Standard American English and is grammatically incorrect. Look at the first paragraph and rewrite the sentences into Standard American English.
+
+  \item Afterwards, answer the questions below.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item What did you change? Consider vocabulary, grammar, and sentence structure.
+    \item Why does Twain choose to use dialect and incorrect grammar?
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{}
+\textbf{ANALYSIS: THE STRUCTURE OF THE NOVEL}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item The novel starts with a \qm{Notice} and an \qm{Explanatory}. What is the author saying here?
+  \item Why does he find it necessary to state these things?
+  \item What is the function of the opening?
+  \item What is the effect on the reader?
+\end{enumerate}
+
+\subsection{}
+\textbf{ANALYSIS: THE NARRATOR AND HIS VOICE}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Who is the narrator of the text? Look at the first 5--6 lines of chapter 1 in particular.
+  \item The narrator starts off by saying \qm{YOU don't know\ldots}. Who is the \qm{you}?
+  \item The narrator also mentions Mark Twain in the opening. What is the effect of this?
+\end{enumerate}
+
+\clearpage
+
+\subsection{}
+\textbf{CHARACTERIZATION OF HUCKLEBERRY FINN}
+
+What do you know about Huckleberry Finn? Find information in the text and write down the line number(s) where you found the information.
+
+\begin{figure}[h!]
+\centering\renewcommand{\arraystretch}{2.2}
+\begin{tabularx}{0.98\textwidth}{|p{0.27\textwidth}|X|p{0.18\textwidth}|}
+    \hline
+    \cellcolor{frbgreenl}\textbf{Huckleberry Finn} & \cellcolor{frbgreenl}\textbf{Information} & \cellcolor{frbgreenl}\textbf{Line(s)}\\\hline
+    Facts about Huckleberry. & & \\\hline
+    How his relationship is to the widow. & & \\\hline
+    How he feels about staying at the widow's house. & & \\\hline
+    At the beginning of the novel, Huck talks a great deal about truth. Find these places and discuss why Huck emphasizes this. & & \\\hline
+    What Huck thinks about the \qm{sivilized} world. & & \\\hline
+    What freedom is to Huckleberry. & & \\\hline
+\end{tabularx}
+\end{figure}
+
+\subsection{}
+\textbf{STYLE OF WRITING: SOUTHERN LANGUAGE}
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Find examples of Southern language. You can include vocabulary, sentence structure, grammar, dialect, etc. Use the terms presented in the chapter introduction to the South.
+  \item What effect is achieved by using dialect?
+\end{enumerate}
+
+\end{document}
