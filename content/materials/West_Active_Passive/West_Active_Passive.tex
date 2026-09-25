@@ -1,0 +1,174 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vest{TRY Vesterbro Regular}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\usepackage{transparent}
+
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+\definecolor{hgred}{RGB}{140, 10, 10}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{multicol}
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+\newcommand{\qm}[1]{``#1''}
+
+\newtcolorbox{excerptbox}{%
+  breakable,
+  enhanced,
+  colback=frbgrey,
+  colframe=frbgreenl,
+  boxrule=0.6pt,
+  arc=2mm,
+  left=3mm,right=3mm,top=2mm,bottom=2mm,
+  before upper={\setlength{\parindent}{1.5em}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+\usepackage{chngcntr}
+\renewcommand\thesection{\arabic{section}}
+\titleformat{\section}[block]
+  {\flushright\overp\Large\color{frbgreen}}
+  {}
+  {0pt}
+  {\clearpage EKSTRA}
+  [{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Active / Passive}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\cfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\subsection{}
+Beskriv forskellen på de to nedenstående tekster:
+
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{0.8cm}}X@{}}
+\begin{excerptbox}
+\noindent The agreement \textbf{was written} by the government's representative. The people \textbf{were promised} food, cloth, and tools. Later, only half of the goods \textbf{were delivered}. The rest \textbf{was never given} to them.
+\end{excerptbox}
+&
+\begin{excerptbox}
+\noindent The government's representative \textbf{wrote} the agreement. He \textbf{promised} the people food, cloth, and tools. Later, the government \textbf{delivered} only half of the goods. They never \textbf{gave} them the rest.
+\end{excerptbox}
+\end{tabularx}
+
+\subsection{}
+Læs teksten nedenfor, og find alle verballed i passiv.
+
+\begin{excerptbox}
+\noindent He didn’t much like his name but it had been given to him and for now it was his and he would put up with it until he got another.
+
+In the end there hadn’t been any kind of battle. In the end they had given in, succumbed, and agreed to take what they’d been offered and move off into the west.
+
+Like a dark, diminished cloud, they had moved west across the landscape away from what had been theirs, eventually unpacking everything they’d been given for leaving, only to find they’d been given half of what had been promised.
+
+It was all written out in the agreement with the amounts listed next to the items, but even before they met the English trader, Mr. Hollinghurst, and he told them what they had signed, the boy’s people knew that what had been promised by the government’s representative and what was written in the paper were not what they’d been given.
+
+Of everything they’d been promised, they could see from the size of the bundles that there was less than half.
+
+Half the money, half the red cloth, half the handkerchiefs, half the number of guns, half the powder, half the white ruffled shirts, half the blue jackets, half the rum, half the tobacco, half the white beads, half the red beads, half the blue beads, half the kettles, half the looking glasses, and so on and so on and so on.
+
+Old Woman From A Distance remembered lying awake, listening to the men talk about what they should do. Some said they should go back and claim the rest of the things they’d been promised. Then one very old man said they should take nothing of what they’d been given—not a shirt, not a handkerchief, not a bead. He said that if they gave up their land for trifles, they would waste away.
+
+He prophesied that a time would come when they would know that the whole of the earth had been pulled from beneath the skin of their feet, that they would wake up one morning in the dawn and find that all the forests and all the mountains, all the rivers and the vast sweep of the prairie, had slipped from their grasp like a rope of water, and all they had to show for the bargains they had made was some worthless jewelry, some old clothes, and a few bad guns. Everything they’d bartered—their dogs and their furs, their pounded fish and their root cakes, their good behavior, their knowledge of the country and the way they’d always done things—they would understand that they had given it all away for a song.
+\end{excerptbox}
+
+\subsection{}
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Omskriv disse sætninger fra \textbf{passiv} til \textbf{aktiv}. Du må gerne indsætte et subjekt, hvis det mangler, fx \textit{the government}, \textit{the representative}, \textit{the settlers} eller \textit{someone}.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item His name had been given to him.
+    \item They had been offered land and goods.
+    \item They had been given half of what had been promised.
+    \item It was all written out in the agreement.
+    \item They would be driven to where the sun sets.
+  \end{enumerate}
+
+  \item Omskriv disse sætninger fra \textbf{aktiv} til \textbf{passiv}.
+  \begin{enumerate}[label=\textbf{\alph*.}, leftmargin=1.5em]
+    \item The government's representative promised them goods.
+    \item The English trader told them what they had signed.
+    \item The settlers had attacked them that past winter.
+    \item The old man prophesied their future.
+  \end{enumerate}
+
+  \item Diskutér kort på dansk: Hvorfor passer passivformen godt til netop dette uddrag? Hvad gør passivformen ved vores oplevelse af magt, ansvar og skyld?
+\end{enumerate}
+
+\vspace{1cm}
+\textbf{Huskeregel:} Hvis du kan indsætte \textit{by someone} efter verballeddet, er der ofte tale om passiv: \textit{They had been promised goods by someone}.
+
+\end{document}

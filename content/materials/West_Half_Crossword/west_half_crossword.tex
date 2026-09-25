@@ -1,0 +1,314 @@
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=14mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{knowncell}{HTML}{EAF4FF}
+\definecolor{letterblue}{HTML}{006EB6}
+\newcommand{\cellsize}{0.56}
+\newcommand{\cell}[4]{%
+  \draw[fill=#3, draw=black, line width=0.55pt] (#1*\cellsize,#2*\cellsize) rectangle ++(\cellsize,\cellsize);
+  \node[font=\bfseries\footnotesize, text=letterblue] at (#1*\cellsize+0.5*\cellsize,#2*\cellsize+0.47*\cellsize) {#4};
+}
+\newcommand{\num}[3]{%
+  \node[anchor=north west, font=\scriptsize, inner sep=0.45pt] at (#1*\cellsize+0.015,#2*\cellsize+\cellsize-0.015) {#3};
+}
+\newcommand{\studentpage}[3]{%
+{\large\textbf{Student #1:}} You and your partner have different parts of the same crossword puzzle. Fill in the missing words by asking your partner for clues.\par\medskip
+Take turns asking questions like: \textbf{What's 3 across?} or \textbf{What's 5 down?} Answer by describing the word without saying it. Multi-word answers are written without spaces in the grid.
+\begin{center}
+\begin{tikzpicture}[x=1cm,y=1cm]
+#2
+#3
+\end{tikzpicture}
+\end{center}
+\newpage
+}
+\begin{document}
+\studentpage{A}{%
+  \cell{10}{16}{white}{}
+  \cell{10}{15}{white}{}
+  \cell{6}{14}{knowncell}{F}
+  \cell{10}{14}{white}{}
+  \cell{16}{14}{white}{}
+  \cell{2}{13}{knowncell}{F}
+  \cell{5}{13}{knowncell}{T}
+  \cell{6}{13}{knowncell}{R}
+  \cell{7}{13}{knowncell}{I}
+  \cell{8}{13}{knowncell}{N}
+  \cell{9}{13}{knowncell}{K}
+  \cell{10}{13}{knowncell}{E}
+  \cell{11}{13}{knowncell}{T}
+  \cell{12}{13}{knowncell}{S}
+  \cell{16}{13}{white}{}
+  \cell{2}{12}{knowncell}{A}
+  \cell{6}{12}{knowncell}{O}
+  \cell{10}{12}{white}{}
+  \cell{12}{12}{knowncell}{T}
+  \cell{14}{12}{knowncell}{M}
+  \cell{15}{12}{knowncell}{A}
+  \cell{16}{12}{knowncell}{M}
+  \cell{17}{12}{knowncell}{M}
+  \cell{18}{12}{knowncell}{O}
+  \cell{19}{12}{knowncell}{T}
+  \cell{20}{12}{knowncell}{H}
+  \cell{2}{11}{knowncell}{T}
+  \cell{6}{11}{knowncell}{N}
+  \cell{8}{11}{knowncell}{N}
+  \cell{12}{11}{knowncell}{O}
+  \cell{14}{11}{knowncell}{O}
+  \cell{16}{11}{white}{}
+  \cell{19}{11}{knowncell}{R}
+  \cell{2}{10}{knowncell}{H}
+  \cell{6}{10}{knowncell}{T}
+  \cell{8}{10}{knowncell}{E}
+  \cell{10}{10}{white}{}
+  \cell{12}{10}{knowncell}{V}
+  \cell{14}{10}{knowncell}{U}
+  \cell{16}{10}{white}{}
+  \cell{19}{10}{knowncell}{A}
+  \cell{20}{10}{knowncell}{U}
+  \cell{21}{10}{knowncell}{N}
+  \cell{22}{10}{knowncell}{T}
+  \cell{2}{9}{knowncell}{E}
+  \cell{6}{9}{knowncell}{I}
+  \cell{8}{9}{knowncell}{W}
+  \cell{9}{9}{white}{}
+  \cell{10}{9}{white}{}
+  \cell{11}{9}{white}{}
+  \cell{12}{9}{knowncell}{E}
+  \cell{13}{9}{white}{}
+  \cell{14}{9}{knowncell}{N}
+  \cell{15}{9}{white}{}
+  \cell{16}{9}{white}{}
+  \cell{17}{9}{white}{}
+  \cell{19}{9}{knowncell}{D}
+  \cell{0}{8}{white}{}
+  \cell{1}{8}{white}{}
+  \cell{2}{8}{knowncell}{R}
+  \cell{3}{8}{white}{}
+  \cell{4}{8}{white}{}
+  \cell{5}{8}{white}{}
+  \cell{6}{8}{knowncell}{E}
+  \cell{8}{8}{knowncell}{S}
+  \cell{10}{8}{white}{}
+  \cell{12}{8}{knowncell}{P}
+  \cell{14}{8}{knowncell}{T}
+  \cell{16}{8}{white}{}
+  \cell{19}{8}{knowncell}{E}
+  \cell{22}{8}{white}{}
+  \cell{6}{7}{knowncell}{R}
+  \cell{8}{7}{knowncell}{P}
+  \cell{10}{7}{white}{}
+  \cell{12}{7}{knowncell}{I}
+  \cell{14}{7}{knowncell}{A}
+  \cell{19}{7}{knowncell}{R}
+  \cell{20}{7}{white}{}
+  \cell{21}{7}{white}{}
+  \cell{22}{7}{white}{}
+  \cell{23}{7}{white}{}
+  \cell{4}{6}{knowncell}{J}
+  \cell{8}{6}{knowncell}{A}
+  \cell{10}{6}{white}{}
+  \cell{12}{6}{knowncell}{P}
+  \cell{14}{6}{knowncell}{I}
+  \cell{22}{6}{white}{}
+  \cell{4}{5}{knowncell}{O}
+  \cell{8}{5}{knowncell}{P}
+  \cell{10}{5}{white}{}
+  \cell{12}{5}{knowncell}{E}
+  \cell{14}{5}{knowncell}{N}
+  \cell{22}{5}{white}{}
+  \cell{2}{4}{white}{}
+  \cell{3}{4}{white}{}
+  \cell{4}{4}{knowncell}{U}
+  \cell{5}{4}{white}{}
+  \cell{6}{4}{white}{}
+  \cell{7}{4}{white}{}
+  \cell{8}{4}{knowncell}{E}
+  \cell{9}{4}{white}{}
+  \cell{14}{4}{knowncell}{S}
+  \cell{4}{3}{knowncell}{R}
+  \cell{6}{3}{white}{}
+  \cell{8}{3}{knowncell}{R}
+  \cell{4}{2}{knowncell}{N}
+  \cell{6}{2}{white}{}
+  \cell{0}{1}{white}{}
+  \cell{1}{1}{white}{}
+  \cell{2}{1}{white}{}
+  \cell{3}{1}{white}{}
+  \cell{4}{1}{knowncell}{E}
+  \cell{5}{1}{white}{}
+  \cell{6}{1}{white}{}
+  \cell{4}{0}{knowncell}{Y}
+  \cell{6}{0}{white}{}
+}{%
+  \num{8}{9}{16}
+  \num{8}{11}{9}
+  \num{14}{12}{11}
+  \num{12}{13}{19}
+  \num{2}{4}{2}
+  \num{5}{13}{13}
+  \num{6}{14}{15}
+  \num{4}{6}{5}
+  \num{14}{12}{7}
+  \num{16}{14}{12}
+  \num{0}{8}{14}
+  \num{0}{1}{18}
+  \num{2}{13}{1}
+  \num{10}{10}{4}
+  \num{19}{12}{17}
+  \num{10}{16}{8}
+  \num{19}{7}{10}
+  \num{6}{4}{20}
+  \num{19}{10}{3}
+  \num{22}{8}{6}
+}
+
+\studentpage{B}{%
+  \cell{10}{16}{knowncell}{B}
+  \cell{10}{15}{knowncell}{O}
+  \cell{6}{14}{white}{}
+  \cell{10}{14}{knowncell}{N}
+  \cell{16}{14}{knowncell}{C}
+  \cell{2}{13}{white}{}
+  \cell{5}{13}{white}{}
+  \cell{6}{13}{white}{}
+  \cell{7}{13}{white}{}
+  \cell{8}{13}{white}{}
+  \cell{9}{13}{white}{}
+  \cell{10}{13}{knowncell}{E}
+  \cell{11}{13}{white}{}
+  \cell{12}{13}{white}{}
+  \cell{16}{13}{knowncell}{O}
+  \cell{2}{12}{white}{}
+  \cell{6}{12}{white}{}
+  \cell{10}{12}{knowncell}{S}
+  \cell{12}{12}{white}{}
+  \cell{14}{12}{white}{}
+  \cell{15}{12}{white}{}
+  \cell{16}{12}{knowncell}{M}
+  \cell{17}{12}{white}{}
+  \cell{18}{12}{white}{}
+  \cell{19}{12}{white}{}
+  \cell{20}{12}{white}{}
+  \cell{2}{11}{white}{}
+  \cell{6}{11}{white}{}
+  \cell{8}{11}{white}{}
+  \cell{12}{11}{white}{}
+  \cell{14}{11}{white}{}
+  \cell{16}{11}{knowncell}{P}
+  \cell{19}{11}{white}{}
+  \cell{2}{10}{white}{}
+  \cell{6}{10}{white}{}
+  \cell{8}{10}{white}{}
+  \cell{10}{10}{knowncell}{B}
+  \cell{12}{10}{white}{}
+  \cell{14}{10}{white}{}
+  \cell{16}{10}{knowncell}{A}
+  \cell{19}{10}{white}{}
+  \cell{20}{10}{white}{}
+  \cell{21}{10}{white}{}
+  \cell{22}{10}{white}{}
+  \cell{2}{9}{white}{}
+  \cell{6}{9}{white}{}
+  \cell{8}{9}{knowncell}{W}
+  \cell{9}{9}{knowncell}{I}
+  \cell{10}{9}{knowncell}{L}
+  \cell{11}{9}{knowncell}{D}
+  \cell{12}{9}{knowncell}{E}
+  \cell{13}{9}{knowncell}{R}
+  \cell{14}{9}{knowncell}{N}
+  \cell{15}{9}{knowncell}{E}
+  \cell{16}{9}{knowncell}{S}
+  \cell{17}{9}{knowncell}{S}
+  \cell{19}{9}{white}{}
+  \cell{0}{8}{knowncell}{P}
+  \cell{1}{8}{knowncell}{I}
+  \cell{2}{8}{knowncell}{R}
+  \cell{3}{8}{knowncell}{O}
+  \cell{4}{8}{knowncell}{G}
+  \cell{5}{8}{knowncell}{U}
+  \cell{6}{8}{knowncell}{E}
+  \cell{8}{8}{white}{}
+  \cell{10}{8}{knowncell}{O}
+  \cell{12}{8}{white}{}
+  \cell{14}{8}{white}{}
+  \cell{16}{8}{knowncell}{S}
+  \cell{19}{8}{white}{}
+  \cell{22}{8}{knowncell}{W}
+  \cell{6}{7}{white}{}
+  \cell{8}{7}{white}{}
+  \cell{10}{7}{knowncell}{U}
+  \cell{12}{7}{white}{}
+  \cell{14}{7}{white}{}
+  \cell{19}{7}{knowncell}{R}
+  \cell{20}{7}{knowncell}{I}
+  \cell{21}{7}{knowncell}{V}
+  \cell{22}{7}{knowncell}{E}
+  \cell{23}{7}{knowncell}{R}
+  \cell{4}{6}{white}{}
+  \cell{8}{6}{white}{}
+  \cell{10}{6}{knowncell}{S}
+  \cell{12}{6}{white}{}
+  \cell{14}{6}{white}{}
+  \cell{22}{6}{knowncell}{S}
+  \cell{4}{5}{white}{}
+  \cell{8}{5}{white}{}
+  \cell{10}{5}{knowncell}{E}
+  \cell{12}{5}{white}{}
+  \cell{14}{5}{white}{}
+  \cell{22}{5}{knowncell}{T}
+  \cell{2}{4}{knowncell}{D}
+  \cell{3}{4}{knowncell}{A}
+  \cell{4}{4}{knowncell}{U}
+  \cell{5}{4}{knowncell}{G}
+  \cell{6}{4}{knowncell}{H}
+  \cell{7}{4}{knowncell}{T}
+  \cell{8}{4}{knowncell}{E}
+  \cell{9}{4}{knowncell}{R}
+  \cell{14}{4}{white}{}
+  \cell{4}{3}{white}{}
+  \cell{6}{3}{knowncell}{O}
+  \cell{8}{3}{white}{}
+  \cell{4}{2}{white}{}
+  \cell{6}{2}{knowncell}{R}
+  \cell{0}{1}{knowncell}{L}
+  \cell{1}{1}{knowncell}{E}
+  \cell{2}{1}{knowncell}{T}
+  \cell{3}{1}{knowncell}{T}
+  \cell{4}{1}{knowncell}{E}
+  \cell{5}{1}{knowncell}{R}
+  \cell{6}{1}{knowncell}{S}
+  \cell{4}{0}{white}{}
+  \cell{6}{0}{knowncell}{E}
+}{%
+  \num{8}{9}{16}
+  \num{8}{11}{9}
+  \num{14}{12}{11}
+  \num{12}{13}{19}
+  \num{2}{4}{2}
+  \num{5}{13}{13}
+  \num{6}{14}{15}
+  \num{4}{6}{5}
+  \num{14}{12}{7}
+  \num{16}{14}{12}
+  \num{0}{8}{14}
+  \num{0}{1}{18}
+  \num{2}{13}{1}
+  \num{10}{10}{4}
+  \num{19}{12}{17}
+  \num{10}{16}{8}
+  \num{19}{7}{10}
+  \num{6}{4}{20}
+  \num{19}{10}{3}
+  \num{22}{8}{6}
+}
+\end{document}
