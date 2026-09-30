@@ -71,23 +71,16 @@ function buildPresenterModel(contentRoot) {
   }
   return { originalHtml, programSection, bodySections, presenterSections }
 }
-function renderFloatingControls(total, current) {
-  let controls = document.querySelector(".presenter-hover-zone")
-  if (!controls) {
-    controls = document.createElement("div")
-    controls.className = "presenter-hover-zone"
-    document.body.appendChild(controls)
+function renderMarginNavZones() {
+  let nav = document.querySelector(".presenter-margin-nav")
+  if (!nav) {
+    nav = document.createElement("div")
+    nav.className = "presenter-margin-nav"
+    document.body.appendChild(nav)
   }
-  controls.innerHTML = `
-    <div class="presenter-floating-controls">
-      <div class="presenter-floating-title">Presenter</div>
-      <div class="presenter-progress">Section ${current + 1} / ${total}</div>
-      <div class="presenter-sidebar-actions">
-        <button type="button" class="presenter-prev" aria-label="Previous section">←</button>
-        <button type="button" class="presenter-next" aria-label="Next section">→</button>
-        <button type="button" class="presenter-close" aria-label="Exit presenter mode">✕</button>
-      </div>
-    </div>
+  nav.innerHTML = `
+    <button type="button" class="presenter-margin-zone presenter-margin-zone--prev" aria-label="Previous section"></button>
+    <button type="button" class="presenter-margin-zone presenter-margin-zone--next" aria-label="Next section"></button>
   `
 }
 function highlightActiveProgramItem(container, activeTitle) {
@@ -105,7 +98,7 @@ function highlightActiveProgramItem(container, activeTitle) {
   })
   match?.classList.add("presenter-program__active")
 }
-function renderLeftSidebar(programHtml, total, current, activeTitle) {
+function renderLeftSidebar(programHtml, current, activeTitle) {
   const leftSidebar = document.querySelector(".sidebar.left")
   if (!leftSidebar) return
   if (!leftSidebar.dataset.presenterOriginalHtml) {
@@ -125,7 +118,7 @@ function renderLeftSidebar(programHtml, total, current, activeTitle) {
       highlightActiveProgramItem(program, activeTitle)
     }
   }
-  renderFloatingControls(total, current)
+  renderMarginNavZones()
 }
 function restoreLeftSidebar() {
   const leftSidebar = document.querySelector(".sidebar.left")
@@ -135,7 +128,7 @@ function restoreLeftSidebar() {
       leftSidebar.innerHTML = originalHtml
     }
   }
-  document.querySelector(".presenter-hover-zone")?.remove()
+  document.querySelector(".presenter-margin-nav")?.remove()
 }
 function sleep(ms) {
   return new Promise((resolve) => window.setTimeout(resolve, ms))
@@ -238,7 +231,6 @@ async function showActiveSection(index) {
     const activeTitle = model?.presenterSections[activeSectionIndex]?.title ?? null
     renderLeftSidebar(
       model?.programSection?.html ?? null,
-      sections.length,
       activeSectionIndex,
       activeTitle,
     )
@@ -268,7 +260,6 @@ function applyPresenterMode() {
   window.bootMinuteCryptic?.(contentRoot)
   renderLeftSidebar(
     model.programSection?.html ?? null,
-    model.presenterSections.length,
     activeSectionIndex,
     model.presenterSections[activeSectionIndex]?.title ?? null,
   )
@@ -307,16 +298,12 @@ function handleSidebarClick(e) {
   const button = target?.closest("button")
   if (!button) return
   const isPresenterControl =
-    button.classList.contains("presenter-close") ||
-    button.classList.contains("presenter-prev") ||
-    button.classList.contains("presenter-next")
+    button.classList.contains("presenter-margin-zone--prev") ||
+    button.classList.contains("presenter-margin-zone--next")
   if (!isPresenterControl) return
-  if (button.classList.contains("presenter-close")) {
-    isPresenterMode = false
-    void animateModeTransition(() => disablePresenterMode())
-  } else if (button.classList.contains("presenter-prev")) {
+  if (button.classList.contains("presenter-margin-zone--prev")) {
     prevSection()
-  } else if (button.classList.contains("presenter-next")) {
+  } else if (button.classList.contains("presenter-margin-zone--next")) {
     nextSection()
   }
 }

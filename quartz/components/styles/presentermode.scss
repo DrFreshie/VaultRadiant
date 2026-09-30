@@ -291,64 +291,33 @@
     color: var(--darkgray);
   }
 
-  & .presenter-hover-zone {
+  & .presenter-margin-nav {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 8rem;
-    height: 100vh;
+    inset: 0;
     z-index: 30;
-    overflow: visible;
-  }
-
-  & .presenter-floating-controls {
-    position: absolute;
-    top: 5.5rem;
-    right: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.8rem;
-    opacity: 0;
-    transform: translateX(1rem);
-    transition:
-      opacity 140ms ease,
-      transform 140ms ease;
     pointer-events: none;
   }
 
-  & .presenter-hover-zone:hover .presenter-floating-controls {
-    opacity: 1;
-    transform: translateX(0);
+  & .presenter-margin-zone {
+    position: fixed;
+    bottom: 0;
+    width: max(8rem, calc((100vw - min(100vw, 1500px)) / 2));
+    height: 50vh;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
     pointer-events: auto;
   }
 
-  & .presenter-floating-title {
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: var(--dark);
-    font-family: var(--headerFont);
+  & .presenter-margin-zone--prev {
+    left: 0;
   }
 
-  & .presenter-progress {
-    color: var(--gray);
-    font-size: 0.9rem;
+  & .presenter-margin-zone--next {
+    right: 0;
   }
 
-  & .presenter-sidebar-actions {
-    display: flex;
-    gap: 0.4rem;
-  }
-
-  & .presenter-sidebar-actions button {
-    border: 1px solid var(--lightgray);
-    background: var(--light);
-    color: var(--darkgray);
-    border-radius: 0.8rem;
-    padding: 0.7rem 1rem;
-    cursor: pointer;
-    box-shadow: 0 6px 18px color-mix(in srgb, var(--darkgray) 10%, transparent);
-  }
 
   @media all and (max-width: 800px) {
     & .sidebar.left {
