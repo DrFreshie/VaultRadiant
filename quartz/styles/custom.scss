@@ -18,6 +18,14 @@
   &::-webkit-scrollbar { display: none; }
 }
 
+/* Keep the right sidebar (materials/dictionary) reachable on tall pages */
+.right.sidebar {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
 /* Remove inner scroll boundaries and let wheel events bubble to .explorer */
 .left.sidebar .explorer-content {
   overflow: visible !important;
