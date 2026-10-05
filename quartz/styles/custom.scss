@@ -298,6 +298,16 @@ article iframe {
   margin: 0 auto;
 }
 
+article iframe.matly-frame {
+  width: min(100%, 1100px);
+  height: min(82vh, 920px);
+  min-height: 720px;
+  aspect-ratio: auto;
+  border: 1px solid color-mix(in srgb, var(--secondary) 18%, var(--light));
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
 .katex-display {
   display: flex !important;
   justify-content: center !important;

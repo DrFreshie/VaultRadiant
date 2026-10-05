@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matly</title>
+    <link rel="stylesheet" href="./matly.css" />
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">MATLY</p>
+          <h1>Ligningsspillet</h1>
+          <p class="lede">Træn lineære ligninger trin for trin. Svar med hele tal eller brøker som <code>-3/4</code>.</p>
+        </div>
+        <div class="score-card">
+          <span>Stime</span>
+          <strong id="streak">0</strong>
+        </div>
+      </header>
+
+      <section class="panel controls" aria-label="Vælg niveau">
+        <button class="level is-active" data-level="1">Niveau 1<br /><small>ax + b = c</small></button>
+        <button class="level" data-level="2">Niveau 2<br /><small>ax + b = cx + d</small></button>
+        <button class="level" data-level="3">Niveau 3<br /><small>parenteser</small></button>
+      </section>
+
+      <section class="panel game">
+        <div class="equation" id="equation"></div>
+        <ol class="steps" id="steps"></ol>
+        <form class="answer-row" id="answer-form">
+          <label for="answer" id="answer-label">Svar</label>
+          <input id="answer" autocomplete="off" inputmode="text" placeholder="fx 6 eller -3/4" />
+          <button type="submit">Tjek</button>
+        </form>
+        <p class="feedback" id="feedback"></p>
+        <div class="actions">
+          <button type="button" id="hint">Vis hint</button>
+          <button type="button" id="new">Ny ligning</button>
+        </div>
+      </section>
+    </main>
+    <script src="./matly.js"></script>
+  </body>
+</html>
