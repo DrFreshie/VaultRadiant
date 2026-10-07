@@ -1,8 +1,8 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.7)  7 OCT 2026 13:38
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.7)  7 OCT 2026 14:07
  restricted system commands enabled.
  file:line:error style messages enabled.
-**Voice_Worksheet.tex
-(./Voice_Worksheet.tex
+**The_Kings_Speech_Rhetorical_Situation.tex
+(./The_Kings_Speech_Rhetorical_Situation.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
@@ -283,6 +283,14 @@ LaTeX Info: Redefining \genfrac on input line 173.
 \cur@row=\count311
 \cur@col=\count312
 \conditionsep=\skip68
+) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks32
+\inpenc@posthook=\toks33
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
 ) (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
  (/usr/share/texmf-dist/tex/generic/babel/luababel.def
@@ -334,13 +342,27 @@ LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) o
 \l@unhyphenated=\language33
  (/usr/share/texmf-dist/tex/generic/babel/luababel.def
 \bbl@attr@locale=\attribute4
-) (/usr/share/texmf-dist/tex/generic/babel/locale/da/babel-danish.tex)
-Package babel Info: Importing font and identification data for danish
-(babel)             from babel-da.ini. Reported on input line 4330.
- (/usr/share/texmf-dist/tex/generic/babel-danish/danish.ldf
-Language: danish 2021/02/06 v1.3s Danish support from the babel system
-Package babel Info: Making " an active character on input line 82.
- (/usr/share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-da.tex UTF-8 Danish hyphenation patterns (/usr/share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-da.tex)))) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+) (/usr/share/texmf-dist/tex/generic/babel/locale/en/babel-english.tex)
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 4330.
+ (/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'british' set to \l@english
+(babel)             (\language0). Reported on input line 82.
+Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
+(babel)             (\language0). Reported on input line 83.
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@english
+(babel)             (\language0). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@english
+(babel)             (\language0). Reported on input line 108.
+)) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 116.
+ (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
@@ -364,23 +386,6 @@ Package: fontspec-luatex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 ) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
 luaotfload | cache : Lookup cache loaded from /home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
-
-Package fontspec Info: 
-(fontspec)             Font family 'TimesNewRoman(0)' created for font 'Times
-(fontspec)             New Roman' with options [Ligatures=TeX].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:Times New
-(fontspec)             Roman:mode=node;language=dflt;+tlig;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"name:Times New
-(fontspec)             Roman/B:mode=node;language=dflt;+tlig;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"name:Times New
-(fontspec)             Roman/I:mode=node;language=dflt;+tlig;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"name:Times
-(fontspec)             New Roman/BI:mode=node;language=dflt;+tlig;"
-
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "EB Garamond/BI" (it probably
@@ -540,8 +545,7 @@ Package fontspec Info:
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
 (fontspec)             <->"name:Overpass:mode=node;script=latn;language=dflt;"
 
-
-(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+ (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
  (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -564,12 +568,12 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen197
 \ar@mcellbox=\box62
 \extrarowheight=\dimen198
-\NC@list=\toks32
+\NC@list=\toks34
 \extratabsurround=\skip69
 \backup@length=\skip70
 \ar@cellbox=\box63
 )
-\everycr=\toks33
+\everycr=\toks35
 \minrowclearance=\skip71
 \rownum=\count325
 ) (/usr/share/texmf-dist/tex/latex/transparent/transparent.sty
@@ -581,7 +585,7 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 ) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 ))) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks34
+\pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen199
 \pgfutil@tempdimb=\dimen256
 ) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -593,10 +597,10 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks37
+\pgfkeys@temptoks=\toks38
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks39
 ))
 \pgf@x=\dimen257
 \pgf@y=\dimen258
@@ -614,11 +618,12 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \c@pgf@countb=\count327
 \c@pgf@countc=\count328
 \c@pgf@countd=\count329
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
+\t@pgf@toka=\toks40
+\t@pgf@tokb=\toks41
+\t@pgf@tokc=\toks42
 \pgf@sys@id@count=\count330
- (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
 Driver file for pgf: pgfsys-luatex.def
@@ -638,11 +643,10 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 \pgfmath@dimen=\dimen267
 \pgfmath@count=\count333
 \pgfmath@box=\box65
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
-) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\pgfmath@toks=\toks43
+\pgfmath@stack@operand=\toks44
+\pgfmath@stack@operation=\toks45
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count334
 )) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -682,7 +686,8 @@ File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@pt@x=\dimen287
 \pgf@pt@y=\dimen288
 \pgf@pt@temp=\dimen289
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -705,8 +710,7 @@ File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -725,8 +729,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen294
 \pgffor@skip=\dimen295
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@stack=\toks46
+\pgffor@toks=\toks47
 )) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
@@ -761,7 +765,8 @@ File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+)
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
 File: tikzlibraryshadows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -787,9 +792,8 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-\pdftexcmds@toks=\toks46
-))
-(/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+\pdftexcmds@toks=\toks48
+)) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
@@ -942,9 +946,9 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 ) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2025/11/04 v2.10 package option processing (HA)
  (/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks47
-\XKV@tempa@toks=\toks48
-\XKV@tempb@toks=\toks49
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
+\XKV@tempb@toks=\toks51
 )
 \XKV@depth=\count370
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -953,7 +957,8 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \cellspacebottomlimit=\dimen319
 \cellspace@firstht=\dimen320
 \cellspace@lastdp=\dimen321
-) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+)
+(/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@col@width=\dimen322
 \TX@old@table=\dimen323
@@ -961,10 +966,10 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@target=\dimen325
 \TX@delta=\dimen326
 \TX@cols=\count371
-\TX@ftn=\toks50
+\TX@ftn=\toks52
 )
 
-Package array Warning: Redefining primitive column b on input line 49.
+Package array Warning: Redefining primitive column b on input line 45.
 
 (/usr/share/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2025-07-09 v3.4.14 A comprehensive (SI) units package
@@ -1002,7 +1007,7 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages 
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip75
 \enit@outerparindent=\dimen332
-\enit@toks=\toks51
+\enit@toks=\toks53
 \enit@inbox=\box129
 \enit@count@id=\count386
 \enitdp@description=\count387
@@ -1011,7 +1016,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \WF@size=\dimen334
 \c@WF@wrappedlines=\count388
 \WF@box=\box130
-\WF@everypar=\toks52
+\WF@everypar=\toks54
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/share/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
@@ -1038,10 +1043,27 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \aftertitleunit=\skip77
 \ttl@plus=\dimen343
 \ttl@minus=\dimen344
-\ttl@toksa=\toks53
+\ttl@toksa=\toks55
 \titlewidth=\dimen345
 \titlewidthlast=\dimen346
 \titlewidthfirst=\dimen347
+) (/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2026/02/16 line numbers on paragraphs v5.7
+\linenopenalty=\count391
+\output=\toks56
+\linenoprevgraf=\count392
+\linenumbersep=\dimen348
+\linenumberwidth=\dimen349
+\c@linenumber=\count393
+\c@pagewiselinenumber=\count394
+\c@LN@truepage=\count395
+\c@internallinenumber=\count396
+\c@internallinenumbers=\count397
+\quotelinenumbersep=\dimen350
+\bframerule=\dimen351
+\bframesep=\dimen352
+\bframebox=\box132
+\@LN@amsmath@ams@eqpen=\count398
 ) (/usr/share/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2018/04/09 v1.1a change counter resetting
 Package chngcntr Info: \counterwithout already defined.
@@ -1058,36 +1080,36 @@ Package: manyfoot 2019/08/03 v1.11 Many Footnote Levels Package (NCC)
  (/usr/share/texmf-dist/tex/latex/ncctools/nccfoots.sty
 Package: nccfoots 2005/02/03 v1.2 NCC Footnotes Package (NCC)
 )
-\MFL@columnwidth=\dimen348
+\MFL@columnwidth=\dimen353
 ) (/usr/share/texmf-dist/tex/latex/bigfoot/suffix.sty
 Package: suffix 2006/07/15 1.5a Variant command support
 ) (/usr/share/texmf-dist/tex/latex/bigfoot/perpage.sty
 Package: perpage 2014/10/25 2.0 Reset/sort counters per page
-\c@abspage=\count391
+\c@abspage=\count399
 )
-\footnotewidowpenalty=\count392
-\footnoteclubpenalty=\count393
-\finalfootnotewidowpenalty=\count394
-\c@FN@totalid=\count395
-\c@pp@a@FN@totalid=\count396
-\FN@id=\count397
+\footnotewidowpenalty=\count400
+\footnoteclubpenalty=\count401
+\finalfootnotewidowpenalty=\count402
+\c@FN@totalid=\count403
+\c@pp@a@FN@totalid=\count404
+\FN@id=\count405
 \FN@master=\marks4
 \FN@slave=\marks5
 \FN@color=\marks6
-\FN@outervsize=\dimen349
+\FN@outervsize=\dimen354
 \FN@vsize=\skip78
-\FN@insertions=\box132
-\FN@output=\toks54
-\FN@tempbox=\box133
+\FN@insertions=\box133
+\FN@output=\toks57
+\FN@tempbox=\box134
 \FN@savebox=\insert252
-\FN@topmarkbox=\box134
-\FN@outputflag=\count398
-\FN@myvsize=\dimen350
-\bigfoottolerance=\count399
+\FN@topmarkbox=\box135
+\FN@outputflag=\count406
+\FN@myvsize=\dimen355
+\bigfoottolerance=\count407
 )
 \footinsa=\insert251
-\c@footnotea=\count400
-\c@pp@a@footnotes=\count401
+\c@footnotea=\count408
+\c@pp@a@footnotes=\count409
  (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@headwidth=\skip79
@@ -1104,123 +1126,100 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip90
 \f@nch@widthC=\skip91
 \f@nch@widthR=\skip92
-\@temptokenb=\toks55
-) (./Voice_Worksheet.aux
-Package babel Info: 'danish' activates 'danish' shorthands.
-(babel)             Reported on input line 9.
-)
-\openout1 = Voice_Worksheet.aux
+\@temptokenb=\toks58
+) (./The_Kings_Speech_Rhetorical_Situation.aux)
+\openout1 = The_Kings_Speech_Rhetorical_Situation.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count402
-\scratchdimen=\dimen351
-\scratchbox=\box135
-\nofMPsegments=\count403
-\nofMParguments=\count404
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count405
-\MPscratchDim=\dimen352
-\MPnumerator=\count406
-\makeMPintoPDFobject=\count407
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count410
+\scratchdimen=\dimen356
+\scratchbox=\box136
+\nofMPsegments=\count411
+\nofMParguments=\count412
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count413
+\MPscratchDim=\dimen357
+\MPnumerator=\count414
+\makeMPintoPDFobject=\count415
+\everyMPtoPDFconversion=\toks60
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 124.
- (./Voice_Worksheet.out) (./Voice_Worksheet.out)
+Package hyperref Info: Link coloring OFF on input line 133.
+ (./The_Kings_Speech_Rhetorical_Situation.out) (./The_Kings_Speech_Rhetorical_Situation.out)
 \@outlinefile=\write4
 
-\openout4 = Voice_Worksheet.out
+\openout4 = The_Kings_Speech_Rhetorical_Situation.out
 
 
 Package siunitx Warning: Tabular column type "S" overwritten with siunitx
 (siunitx)                definition.
 
-Package translations Info: no dictionary file `translations-basic-dictionary-danish.trsl' found. on input line 124.
+(/usr/share/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 133.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\FN@cache251=\box136
+\FN@cache251=\box137
 \footinsdefault=\insert250
-\FN@cache250=\box137
-<../img/frbvuc_logo.png, id=55, 569.4876pt x 362.7954pt>
+\FN@cache250=\box138
+<../img/frbvuc_logo.png, id=43, 569.4876pt x 362.7954pt>
 File: ../img/frbvuc_logo.png Graphic file (type png)
 <use ../img/frbvuc_logo.png>
-Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 129.
+Package luatex.def Info: ../img/frbvuc_logo.png  used on input line 138.
 (luatex.def)             Requested size: 142.37155pt x 90.69862pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 146.
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 146.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-<../img/frbvuc_logo.png>] [2]
-Missing character: There is no ɪ (U+026A) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ˈ (U+02C8) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ɪ (U+026A) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ɪ (U+026A) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ˈ (U+02C8) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ɪ (U+026A) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
+<../img/frbvuc_logo.png>] [2
 
-Overfull \hbox (6.93527pt too wide) in paragraph at lines 242--243
-[]\TU/TimesNewRoman(0)/m/n/10 To what extent is ``How th’Ir-th Wint Rong by Hap-less Jo-ey@ho-meskool.guv''
- []
-
-[3
-
-
-Missing character: There is no ɪ (U+026A) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ˈ (U+02C8) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-Missing character: There is no ɪ (U+026A) in font "name:Times New Roman:mode=node;language=dflt;+tlig;"!
-] [4] (./Voice_Worksheet.aux)
+] [3] (./The_Kings_Speech_Rhetorical_Situation.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-Package rerunfilecheck Info: File `Voice_Worksheet.out' has not changed.
-(rerunfilecheck)             Checksum: D1DCE9558DA54436B75EE2768F63EB5F;240.
+Package rerunfilecheck Info: File `The_Kings_Speech_Rhetorical_Situation.out' has not changed.
+(rerunfilecheck)             Checksum: 2E15AD30293F71A84AEB8E4F8206A1DF;279.
 )
 
 Here is how much of LuaTeX's memory you used:
- 33207 strings out of 476076
+ 33633 strings out of 476076
  125129,1144653 words of node,token memory allocated
- 1373 words of node memory still in use:
-   24 hlist, 3 vlist, 10 rule, 7 mark, 5 glue, 4 kern, 1 penalty, 1 glyph, 116 attribute, 84 glue_spec, 59 attribute_list, 2 write, 16 pdf_literal, 16 pdf_colorstack nodes
-   avail lists: 1:1,2:1812,3:760,4:243,5:147,6:135,7:8801,8:2,9:771,10:4,11:771
- 54833 multiletter control sequences out of 65536+600000
- 88 fonts using 14209287 bytes
- 84i,12n,115p,580b,1270s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/fonts/TTF/Timesi.TTF></usr/share/fonts/TTF/Timesbi.TTF></usr/share/fonts/TTF/Times.TTF></usr/share/fonts/TTF/Timesbd.TTF></home/anders/.local/share/fonts/TRYVesterbro-Poster.otf></home/anders/.local/share/fonts/Overpass-VariableFont_wght.ttf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on Voice_Worksheet.pdf (4 pages, 296137 bytes).
+ 1338 words of node memory still in use:
+   22 hlist, 3 vlist, 10 rule, 7 mark, 3 glue, 4 kern, 1 penalty, 1 glyph, 114 attribute, 84 glue_spec, 58 attribute_list, 3 write, 16 pdf_literal, 16 pdf_colorstack nodes
+   avail lists: 1:1,2:1060,3:459,4:225,5:611,6:78,7:7744,8:2,9:594,10:5,11:337
+ 55284 multiletter control sequences out of 65536+600000
+ 61 fonts using 11108391 bytes
+ 84i,12n,115p,573b,1128s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></home/anders/.local/share/fonts/TRYVesterbro-Poster.otf></home/anders/.local/share/fonts/Overpass-VariableFont_wght.ttf>
+Output written on The_Kings_Speech_Rhetorical_Situation.pdf (3 pages, 192951 bytes).
 
-PDF statistics: 184 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 63 named destinations out of 1000 (max. 1048576)
- 224 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 133 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
+ 33 named destinations out of 1000 (max. 1048576)
+ 200 words of extra memory for PDF output out of 10000 (max. 100000000)
 

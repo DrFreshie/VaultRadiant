@@ -1,0 +1,224 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+
+\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+\usepackage{breqn}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fonts
+  \usepackage{fontspec}
+  \newfontfamily\garamond[Numbers=OldStyle]{EB Garamond}
+  \newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro}
+  \newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+  \newfontfamily\vest{TRY Vesterbro Regular}
+  \newfontfamily\vestb{TRY Vesterbro Poster}
+  \newfontfamily\overp{Overpass}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Colors
+
+\usepackage{xcolor}
+\usepackage{transparent}
+
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{hgred}{RGB}{140, 10, 10}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgrey}{RGB}{243, 245, 242}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Other Graphics
+
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage{placeins}
+
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\usepackage{multicol}
+\usepackage{cellspace}
+\setlength\cellspacetoplimit{100pt}
+\setlength\cellspacebottomlimit{100pt}
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=\hsize}>{\centering\arraybackslash}X}
+\IfFileExists{siunitx.sty}{\usepackage{siunitx}}{}
+\setlength\cellspacetoplimit{4pt}
+\setlength\cellspacebottomlimit{4pt}
+
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+
+\usepackage[modulo]{lineno}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% New commands
+
+\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+
+\newcommand*\quotesize{20}
+\newcommand*{\openquote}
+  {\tikz[remember picture,overlay,xshift=-3ex,yshift=-0ex]
+    \node (OQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont``};\kern0pt}
+
+\newcommand*{\closequote}[1]
+  {\tikz[remember picture,overlay,xshift=2ex,yshift={#1}]
+    \node (CQ) {\quotefont\fontsize{\quotesize}{\quotesize}\selectfont''};}
+
+\newcommand{\qm}[1]{``#1''}
+\newcommand{\iquote}[1]{\begin{quote}\itshape \openquote#1\hfill\closequote{0ex} \end{quote}}
+\newcommand{\lines}[1]{\vspace{#1\baselineskip}}
+\newcommand{\speechpar}[2]{\textsuperscript{#1}\,#2\par}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sections
+\usepackage{chngcntr}
+
+\renewcommand\thesection{\arabic{section}}
+
+\titleformat{\section}[block]
+  {\flushright\overp\Large\color{frbgreen}}
+  {}
+  {0pt}
+  {\clearpage EKSTRA}
+  [{\color{frbgreenl}\vspace{-1em}\hspace*{-0.165\linewidth}\rule{\dimexpr1.165\linewidth\relax}{0.4pt}\kern1mm}]
+
+\counterwithout{subsection}{section}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[runin]
+     {\bfseries}
+     {}
+     {0pt}
+     {\llap{\thesubsection\hspace{2em}}}
+
+   \titlespacing*{\subsection}
+     {0pt}
+     {1.2\baselineskip}
+     {1em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Header & Footer
+
+\usepackage{bigfoot}
+\DeclareNewFootnote{a}
+\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+\newcommand{\footnotes}[1]{\footnotea[2]{#1}}
+\MakePerPage{footnotes}
+
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[L]{}
+  \fancyhead[C]{}
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb The King's Speech}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\lhead{}
+\rhead{}
+\cfoot{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]%
+        at (current page.north west)
+        {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline, line width=0.6pt] (C) circle (65mm);
+  \draw[bgline, line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\textbf{THE SPEECH}
+
+\emph{King George VI's radio address to the British Empire, 3 September 1939.}
+
+\linenumbers In this grave hour, perhaps the most fateful in our history, I send to every household of my peoples, both at home and overseas, this message, spoken with the same depth of feeling for each one of you as if I were able to cross your threshold and speak to you myself.
+
+For the second time in the lives of most of us, we are at war.
+
+Over and over again, we have tried to find a peaceful way out of the differences between ourselves and those who are now our enemies; but it has been in vain.
+
+We have been forced into a conflict, for we are called, with our allies, to meet the challenge of a principle which, if it were to prevail, would be fatal to any civilized order in the world.
+
+It is a principle which permits a state, in the selfish pursuit of power, to disregard its treaties and its solemn pledges, which sanctions the use of force or threat of force against the sovereignty and independence of other states.
+
+Such a principle, stripped of all disguise, is surely the mere primitive doctrine that might is right, and if this principle were established throughout the world, the freedom of our own country and of the whole British Commonwealth of nations would be in danger.
+
+But far more than this, the peoples of the world would be kept in bondage of fear, and all hopes of settled peace and of the security, of justice and liberty, among nations, would be ended.
+
+This is the ultimate issue which confronts us. For the sake of all that we ourselves hold dear, and of the world order and peace, it is unthinkable that we should refuse to meet the challenge.
+
+It is to this high purpose that I now call my people at home, and my peoples across the seas, who will make our cause their own.
+
+I ask them to stand calm and firm and united in this time of trial.
+
+The task will be hard. There may be dark days ahead, and war can no longer be confined to the battlefield, but we can only do the right as we see the right, and reverently commit our cause to God. If one and all we keep resolutely faithful to it, ready for whatever service or sacrifice it may demand, then with God's help, we shall prevail.
+
+May He bless and keep us all.
+\nolinenumbers
+
+\clearpage
+
+\subsection{Exigence}
+Why is the speech being given?
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item What is the historical situation?
+  \item What crisis or problem is the speaker responding to?
+  \item Why is it necessary to speak at this exact moment?
+  \item What does the speaker want the audience to understand about the situation?
+  \item How does the speaker describe the cause of the crisis?
+  \item Is the situation presented as voluntary, unavoidable, or forced?
+  \item Which words or phrases create a sense of seriousness or urgency?
+  \item What is the main purpose of the speech: to inform, persuade, comfort, unite, or call people to action?
+\end{enumerate}
+
+\subsection{Audience}
+Who is the speech addressed to?
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item Who is the direct audience?
+  \item Is the speech aimed at one group or several groups?
+  \item How can you see this in the text?
+  \item What emotions is the audience likely feeling: fear, anger, grief, uncertainty, patriotism?
+  \item What does the audience already know about the situation?
+  \item What shared experiences does the audience have, for example the First World War?
+  \item How does the speaker try to create closeness with the audience?
+  \item Which values does the speaker appeal to?
+  \item What does the speaker want the audience to feel or do?
+\end{enumerate}
+
+\subsection{Constraints}
+What limits or shapes the speech?
+
+\begin{enumerate}[label=\arabic*., leftmargin=*]
+  \item What role does the speaker have, and how does that role limit him?
+  \item Can the King speak like a politician? Why or why not?
+  \item Which historical experiences influence the audience?
+  \item How does the memory of the First World War affect the way he speaks about war?
+  \item What expectations does the audience have of a king in a time of crisis?
+  \item Does the speech need to unite different groups? How does this affect the language?
+  \item Which topics must the speaker be careful about?
+  \item How does the speaker balance honesty about danger with hope for victory?
+  \item Which religious, moral, or national values shape the speech?
+\end{enumerate}
+
+\end{document}
