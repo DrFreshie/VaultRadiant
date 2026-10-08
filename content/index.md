@@ -14,9 +14,9 @@ title: Vault Radiant
 
 <span class="handwritten">Velkommen til...</span>
 
-Denne side samler lektionsplaner og slides fra undertegnedes undervisning i engelsk og matematik på Frederiksberg VUC & STX, samt - på et tidspunkt - generelle noter fra de to fag. Har du mig i dette semester kan således finde din klasse til venstre og få et overblik over hvad vi laver i timerne. Er du ikke studerende er du naturligvis også velkommen til at kigge dig omkring. 
+Denne side samler lektionsplaner og slides fra min undervisning i engelsk og matematik på Frederiksberg VUC & STX, samt generelle noter fra de to fag. Har du mig i dette semester kan således finde din klasse til venstre og få et overblik over hvad vi laver i timerne. Er du ikke studerende er du naturligvis også velkommen til at kigge dig omkring.
 
-Har du kommentarer eller spørgsmål, er der materiale fra en undervisningsgang der mangler, eller er der noget andet der ikke fungerer som det skal, er velkommen til at kontakte mig på [art@frbvuc.dk](mailto:art@frbvuc.dk). 
+Har du kommentarer eller spørgsmål, er der materiale fra en undervisningsgang der mangler, eller er der noget andet der ikke fungerer som det skal, er du velkommen til at kontakte mig på [art@frbvuc.dk](mailto:art@frbvuc.dk). 
 
 <!-- Et sted til at opbevare værdifulde ting; strålende værdifulde faktisk. Det er dette steds (for)mål. Her er nemlig viden. Ikke min viden, men en "viden om noget evigt og ikke viden om noget, der bliver til for derefter at blive tilintetgjort igen", og som derfor "kan trække vores sjæl mod sandheden", som Platon får Sokrates til at formulere det i *Staten*, når han taler om hvorfor dog viden om geometri er vigtig. Sokrates uddyber: -->
 <!---->
