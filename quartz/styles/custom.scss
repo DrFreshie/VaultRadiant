@@ -329,6 +329,76 @@ article iframe.matly-frame {
   }
 }
 
+// Editorial quote: > [!pullquote], with an optional <cite> attribution.
+.callout[data-callout="pullquote"] {
+  position: relative;
+  margin: 2rem 0;
+  padding: 3.5rem clamp(1.25rem, 5vw, 3rem) 3rem;
+  border: 0;
+  border-block: 1px solid color-mix(in srgb, var(--secondary) 30%, transparent);
+  border-radius: 0 1.5rem 0 1.5rem;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--secondary) 8%, var(--light)),
+    color-mix(in srgb, var(--tertiary) 4%, var(--light))
+  );
+
+  &::before,
+  &::after {
+    position: absolute;
+    color: color-mix(in srgb, var(--secondary) 50%, transparent);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 6rem;
+    line-height: 1;
+    pointer-events: none;
+    // Decorative punctuation, not additional spoken quote text.
+    content: "\201C" / "";
+  }
+
+  &::before {
+    top: 0.4rem;
+    left: 1rem;
+  }
+
+  &::after {
+    content: "\201D" / "";
+    bottom: -0.4rem;
+    right: 1rem;
+  }
+
+  > .callout-title {
+    display: none;
+  }
+
+  > .callout-content {
+    display: block;
+    overflow-wrap: anywhere;
+
+    p {
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+      line-height: 1.55;
+      color: var(--dark);
+      text-wrap: pretty;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    cite {
+      display: block;
+      margin-top: 1.25rem;
+      font-family: var(--bodyFont);
+      font-size: 0.8rem;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--secondary);
+    }
+  }
+}
+
 // Math callout types — top/bottom border only, no side borders
 .callout[data-callout="definition"],
 .callout[data-callout="sætning"],

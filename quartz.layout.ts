@@ -55,7 +55,14 @@ export const defaultContentPageLayout: PageLayout = {
       },
     }),
   ],
-  right: [Component.Graph(), Component.HomePortrait(), Component.FigureViewer()],
+  right: [Component.Graph({
+    localGraph: {
+      depth: 3,
+      // showTags: false,
+      removeTags: ["lesson", "english"],
+  },
+  }),
+    Component.HomePortrait(), Component.FigureViewer()],
   afterBody: [],
 }
 

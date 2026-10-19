@@ -1,0 +1,121 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\usepackage{xcolor}
+\definecolor{frbgreenl}{RGB}{162,202,137}
+\definecolor{frbgreen}{RGB}{28,85,66}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+\newcommand{\qm}[1]{``#1''}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Brave New World}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\cfoot{\thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]
+    at (current page.north west)
+    {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline,line width=0.6pt] (C) circle (65mm);
+  \draw[bgline,line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\subsection{}
+\textbf{GRAMMAR: WORD CLASSES AND WORD FORMATION}
+
+Among other things, \emph{Brave New World} outlines a fictional scientific process called Bokanovsky's Process. Huxley also invents the words \emph{bokanovskified} and \emph{bokanovskification} (paragraphs 12 and 13) as derivatives of this made-up name.
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item Determine which word classes \emph{Bokanovsky}, \emph{bokanovskified}, and \emph{bokanovskification} belong to. How can you tell? Consider their endings and how they are used in the text.
+  \item Using your knowledge of English grammar, discuss how the name of the novel's other fictional scientific technique, Podsnap's Technique, might be turned into other word classes. Is it possible to make an adjective, a noun, and a verb? Suggest forms and try using each in a sentence.
+\end{enumerate}
+
+\subsection{}
+\textbf{GRAMMAR: CAPITAL LETTERS}
+
+Find the words spelled with a capital letter (not simply because they begin a sentence) in these excerpts from the novel. Explain why the capital letters are used. You may use your grammar book.
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item \qm{\ldots\ three hundred Fertilizers were plunged, as the Director of Hatcheries and Conditioners entered the room \ldots}
+  \item \qm{\ldots\ while the Alphas and Betas remained until definitely bottled: while the Gammas, Deltas and Epsilons were brought out again, after only thirty-six hours to undergo Bokanovsky's Process.}
+  \item \qm{Pilkington, at Mombasa, had produced individuals who were sexually mature at four and full grown at six and half.}
+\end{enumerate}
+
+\subsection{}
+\textbf{UTOPIAS AND DYSTOPIAS}
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item Discuss whether the title \emph{Brave New World} hints at a utopia or a dystopia. What expectations does it set for the novel?
+\end{enumerate}
+
+\clearpage
+
+\subsection{}
+\textbf{AFTER FORD: DATING THE FUTURE}
+
+Huxley's novel is set in the year 632 A.F., meaning \emph{After Ford}. The novel's calendar counts from the year Henry Ford's Model T was introduced.
+
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item Look up when the Ford Model T was introduced.
+  \item Calculate when the story takes place in our calendar. Would you classify it as near-future or far-future science fiction? Explain your answer.
+  \item What year A.F. were you born? What year A.F. do we live in now?
+  \item Why could this year be considered as significant as the year of the birth of Jesus?
+\end{enumerate}
+
+\subsection{}
+\textbf{HENRY FORD: RESEARCH}
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item Look up more information about Ford and write down the three pieces of information you believe are most important. Record your sources.
+  \item Compare notes with your neighbour. Explain why you chose your three pieces of information.
+\end{enumerate}
+
+\subsection{}
+\textbf{HENRY FORD: QUOTATIONS}
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item Look up inspirational quotations attributed to Henry Ford and write down your favourites. Record your sources and check whether the quotations can reliably be traced to Ford.
+  \item Discuss what you like about the quotations or find intriguing. You are welcome to pick some you disagree with.
+\end{enumerate}
+
+\subsection{}
+\textbf{VOCABULARY: THE ODD ONE OUT}
+
+Find the odd one out in each list and explain your choice. The odd one out may differ in terms of meaning or word class. You may use dictionaries. Compete or cooperate with your neighbour.
+\begin{enumerate}[label=\textbf{\alph*.},leftmargin=1.5em]
+  \item \textbf{\textit{sultry -- crimson -- vivacious -- beckon}}
+  \item \textbf{\textit{prodigious -- morula -- pituitary -- ovary}}
+  \item \textbf{\textit{heredity -- zealous -- wastage -- placenta}}
+  \item \textbf{\textit{ram -- foal -- hog -- hum}}
+\end{enumerate}
+
+\end{document}
