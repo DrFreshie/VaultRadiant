@@ -1,9 +1,11 @@
 .materials-sidebar-section,
+.glossary-sidebar-section,
 .dictionary-sidebar-section {
   margin-top: 1.5rem;
 }
 
 .materials-sidebar-section > h3,
+.glossary-sidebar-section > h3,
 .dictionary-sidebar-section > h3 {
   font-size: 1rem;
   margin: 0;
@@ -137,6 +139,7 @@
 
 @media all and (max-width: 1200px) {
   .materials-sidebar-section,
+  .glossary-sidebar-section,
   .dictionary-sidebar-section {
     display: none;
   }

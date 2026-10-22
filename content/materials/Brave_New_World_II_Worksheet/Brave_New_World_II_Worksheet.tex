@@ -1,0 +1,79 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\usepackage{xcolor}
+\definecolor{frbgreenl}{RGB}{162,202,137}
+\definecolor{frbgreen}{RGB}{28,85,66}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+\newcommand{\qm}[1]{``#1''}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Brave New World}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\cfoot{\thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]
+    at (current page.north west)
+    {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline,line width=0.6pt] (C) circle (65mm);
+  \draw[bgline,line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\begin{enumerate}
+  % \item Re-read the opening paragraph of the novel and find examples of information that surprised you. Discuss what the role of the opening is. Does this information work as cognitive estrangement? Give reasons for your answer.
+  \item The motto of the World State is ‘Community, Identity, Stability’ as we learn in the opening paragraph. How is science used to achieve this goal? All three goals must be addressed in your answer.
+  \item Using your knowledge of Ford from last lesson as well as the novel, discuss why the World State in Brave New World has chosen Henry Ford to base their calendar on. Discuss the implications of choosing someone like Ford as a godlike figure.
+  \item Comment on the mood of lines 1 - 3: which words create this mood?
+  \item Compare this mood with the mood set in lines 41 - 58. What purpose does the style of writing serve here? Comment e.g. on the repeated "; how..." phrases.
+  \item Who is the narrator of the story? Is the narrator limited or omniscient? Is it a fly-on-the-wall or intrusive narrator?
+  \item Discuss the claim that the setting in science fiction stories is often more important than characters and that the setting is often treated as a character. To what extent is this theoretical point true for this story?
+  \item What are the main themes? Is the story warning us about something? And if so, what is it a warning about? Is it:
+  \begin{itemize}
+    \item human cloning
+    \item predestination and conditioning
+    \item individuality
+    \item control
+    \item the political use of technology
+    \item something else?
+  \end{itemize}
+Give reasons for your answer and explain which understanding of these themes you are left with.
+\item Consider the novel as a product of its time. Which political, cultural and/or technological events and trends from the 1920s and 30s might have inspired Huxley to write the novel?
+\item Brave New World is considered a satirical novel. How does the satire reveal itself in Chapter 1? Find 2-3 examples and explain how it works.
+\end{enumerate}
+
+\end{document}

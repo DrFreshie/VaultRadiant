@@ -40,6 +40,9 @@ function buildPresenterModel(contentRoot: HTMLElement) {
   const temp = document.createElement("div")
   temp.innerHTML = originalHtml
 
+  // Exclude marked callouts only from the slide copy, preserving the normal page.
+  temp.querySelectorAll('[data-callout="no-slide"]').forEach((callout) => callout.remove())
+
   const sections: Array<{ title: string; html: string; isProgram: boolean }> = []
   let current: { title: string; nodes: string[]; isProgram: boolean } | null = null
 

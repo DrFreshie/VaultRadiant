@@ -300,6 +300,7 @@ function initSidebarEnhancements() {
   if (!lessonContent) return
 
   moveLessonSectionToSidebar("materials", "materials-sidebar-section")
+  moveLessonSectionToSidebar("glossary", "glossary-sidebar-section")
   const dictionaryContent = moveLessonSectionToSidebar("dictionary", "dictionary-sidebar-section")
   createDictionaryWidget(dictionaryContent)
 }

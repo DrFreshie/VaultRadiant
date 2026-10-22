@@ -1,4 +1,10 @@
 @use "./base.scss";
+
+// Centre Markdown tables without changing cell alignment or overflow scrolling.
+.table-container > table {
+  margin-inline: auto;
+}
+
 /* Hide the explorer title/toggle button — tree is always open */
 .explorer .title-button.desktop-explorer {
   display: none;
@@ -329,11 +335,119 @@ article iframe.matly-frame {
   }
 }
 
+// Keep no-slide markers invisible on the page while retaining their content.
+.callout[data-callout="no-slide"] {
+  display: contents;
+  font-family: var(--bodyFont);
+  font-size: inherit;
+
+  p {
+    font-family: var(--bodyFont);
+    font-size: inherit;
+  }
+
+  > .callout-title {
+    display: none;
+  }
+
+  > .callout-content {
+    display: contents;
+  }
+}
+
+// Student activities: > [!task] Discuss in pairs, followed by a numbered list.
+.callout[data-callout="task"],
+.callout[data-callout="task-columns"] {
+  --color: var(--secondary);
+  --bg: transparent;
+  --border: color-mix(in srgb, var(--secondary) 40%, transparent);
+  margin: 1.25rem 0;
+  padding: 0.25rem 1rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  font-family: var(--bodyFont);
+
+  > .callout-title {
+    gap: 0;
+    padding: 0;
+    margin: 0 0 0.35rem;
+    font-size: 0.9em;
+    font-weight: 600;
+
+    > .callout-icon {
+      display: none;
+    }
+
+    > .callout-title-inner > p {
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      color: var(--secondary);
+    }
+  }
+
+  > .callout-content > ol {
+    margin: 0;
+    padding-inline-start: 1.5em;
+
+    > li::marker {
+      color: var(--secondary);
+      font-weight: 500;
+    }
+  }
+}
+
+// Two alternatives: nest two [!task] callouts inside [!task-columns].
+.callout[data-callout="task-columns"] {
+  border-inline-start: 0;
+
+  &[data-callout-default-title="true"] > .callout-title {
+    display: none;
+  }
+
+  > .callout-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+
+    > .callout {
+      min-width: 0;
+      margin: 0;
+    }
+
+    > .callout + .callout {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset-block: 0.25rem;
+        inset-inline-start: -0.75rem;
+        width: 1px;
+        background: color-mix(in srgb, var(--secondary) 15%, transparent);
+      }
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: minmax(0, 1fr);
+
+      > .callout + .callout::before {
+        display: none;
+      }
+    }
+  }
+}
+
 // Editorial quote: > [!pullquote], with an optional <cite> attribution.
 .callout[data-callout="pullquote"] {
   position: relative;
-  margin: 2rem 0;
-  padding: 3.5rem clamp(1.25rem, 5vw, 3rem) 3rem;
+  width: 65%;
+  margin: 1.5rem auto;
+  padding: 2.25rem clamp(1rem, 3vw, 1.75rem) 1.75rem;
+
   border: 0;
   border-block: 1px solid color-mix(in srgb, var(--secondary) 30%, transparent);
   border-radius: 0 1.5rem 0 1.5rem;
@@ -343,12 +457,16 @@ article iframe.matly-frame {
     color-mix(in srgb, var(--tertiary) 4%, var(--light))
   );
 
+  @media (max-width: 700px) {
+    width: 100%;
+  }
+
   &::before,
   &::after {
     position: absolute;
     color: color-mix(in srgb, var(--secondary) 50%, transparent);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 6rem;
+    font-size: 4.5rem;
     line-height: 1;
     pointer-events: none;
     // Decorative punctuation, not additional spoken quote text.
@@ -375,8 +493,8 @@ article iframe.matly-frame {
     overflow-wrap: anywhere;
 
     p {
-      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-      font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+      font-family: Baskerville, "Baskerville Old Face", "Libre Baskerville", Georgia, serif;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
       line-height: 1.55;
       color: var(--dark);
       text-wrap: pretty;
@@ -388,7 +506,7 @@ article iframe.matly-frame {
 
     cite {
       display: block;
-      margin-top: 1.25rem;
+      margin-top: 0.75rem;
       font-family: var(--bodyFont);
       font-size: 0.8rem;
       font-style: normal;
