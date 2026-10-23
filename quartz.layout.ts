@@ -1,6 +1,7 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 import type { QuartzComponentProps } from "./quartz/components/types"
+import { isArchiveSlug } from "./quartz/util/archive"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -40,29 +41,38 @@ export const defaultContentPageLayout: PageLayout = {
     Component.HomeNav(),
     Component.ClassNavHeading(),
     Component.SectionNavHeading(),
-    Component.Explorer({
-      title: "",
-      folderDefaultState: "open",
-      sortFn: (a, b) => {
-        if (a.slugSegment === "notes" && b.slugSegment !== "notes") return 1
-        if (a.slugSegment !== "notes" && b.slugSegment === "notes") return -1
-        if (a.isFolder && !b.isFolder) return -1
-        if (!a.isFolder && b.isFolder) return 1
-        return b.slugSegment.localeCompare(a.slugSegment, undefined, {
-          numeric: true,
-          sensitivity: "base",
-        })
-      },
+    Component.ConditionalRender({
+      component: Component.Explorer({
+        title: "",
+        folderDefaultState: "open",
+        sortFn: (a, b) => {
+          if (a.slugSegment === "notes" && b.slugSegment !== "notes") return 1
+          if (a.slugSegment !== "notes" && b.slugSegment === "notes") return -1
+          if (a.isFolder && !b.isFolder) return -1
+          if (!a.isFolder && b.isFolder) return 1
+          return b.slugSegment.localeCompare(a.slugSegment, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        },
+      }),
+      condition: (props) => !isArchiveSlug(props.fileData.slug),
     }),
   ],
-  right: [Component.Graph({
-    localGraph: {
-      depth: 3,
-      // showTags: false,
-      removeTags: ["lesson", "english"],
-  },
-  }),
-    Component.HomePortrait(), Component.FigureViewer()],
+  right: [
+    Component.ConditionalRender({
+      component: Component.Graph({
+        localGraph: {
+          depth: 3,
+          // showTags: false,
+          removeTags: ["lesson", "english"],
+        },
+      }),
+      condition: (props) => !isArchiveSlug(props.fileData.slug),
+    }),
+    Component.HomePortrait(),
+    Component.FigureViewer(),
+  ],
   afterBody: [],
 }
 
@@ -108,7 +118,7 @@ export const defaultListPageLayout: PageLayout = {
           })
         },
       }),
-      condition: (props) => !isTagPage(props),
+      condition: (props) => !isTagPage(props) && !isArchiveSlug(props.fileData.slug),
     }),
   ],
   right: [],

@@ -70,7 +70,8 @@ function sluggify(s: string): string {
 }
 
 export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
-  fp = stripSlashes(fp) as FilePath
+  // Keep the source archive hidden in the vault, but use clean public URLs.
+  fp = stripSlashes(fp).replace(/^\.archive\//, "archive/") as FilePath
   let ext = getFileExtension(fp)
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
   if (excludeExt || [".md", ".html", undefined].includes(ext)) {

@@ -1,0 +1,111 @@
+% Shared experimental anthology layout, loaded after the original preamble.
+\usepackage[a4paper,left=39mm,right=39mm,top=25mm,bottom=25mm,headheight=15pt,headsep=8mm,footskip=12mm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\usepackage{microtype}
+\newfontfamily\editorialsans{Arial}
+\providecommand{\mysectionfont}{\plantin}
+\definecolor{digitalteal}{HTML}{24645E}
+\colorlet{editionaccent}{hgblue}
+\newcommand{\editiontitlefont}{\plantinb\fontsize{30}{32}\selectfont}
+\newcommand{\editionbody}{\fontsize{11.5}{15}\selectfont}
+\newcommand{\editionopening}{\raggedright}
+\newcommand{\editionrule}{\par\vspace{5mm}{\color{editionaccent}\hrule height .5pt}\vspace{7mm}}
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt plus .5pt}
+
+% Classic novel: centred, quietly formal, with indented paragraphs.
+\ifdefstring{\DesignFamily}{classic}{%
+  \renewcommand{\editionopening}{\centering}
+  \renewcommand{\editiontitlefont}{\normalfont\fontsize{28}{32}\selectfont}
+  \renewcommand{\editionrule}{\par\vspace{6mm}{\color{hgblue}\rule{18mm}{.5pt}}\par\vspace{8mm}}
+}{}
+% Short fiction: intimate, unboxed, with a small italic byline.
+\ifdefstring{\DesignFamily}{story}{%
+  \renewcommand{\editionopening}{\centering}
+  \renewcommand{\editiontitlefont}{\normalfont\fontsize{29}{33}\selectfont}
+  \renewcommand{\editionrule}{\par\vspace{11mm}}
+}{}
+% Modernist novel: asymmetric opening and a more architectural title.
+\ifdefstring{\DesignFamily}{modernist}{%
+  \renewcommand{\editiontitlefont}{\plantinb\fontsize{36}{36}\selectfont}
+  \renewcommand{\editionrule}{\par\vspace{5mm}{\color{hgblue}\hrule height 1.2pt}\vspace{7mm}}
+}{}
+% Personal essay: a literary-magazine opening and spacious block paragraphs.
+\ifdefstring{\DesignFamily}{essay}{%
+  \setlength{\parindent}{0pt}\setlength{\parskip}{.55\baselineskip}
+  \renewcommand{\editiontitlefont}{\normalfont\itshape\fontsize{31}{34}\selectfont}
+}{}
+% Web writing: sans-serif reading texture, visible original subheadings.
+\ifdefstring{\DesignFamily}{digital}{%
+  \colorlet{editionaccent}{digitalteal}
+  \setlength{\parindent}{0pt}\setlength{\parskip}{.65\baselineskip}
+  \renewcommand{\editionbody}{\editorialsans\fontsize{10.5}{15}\selectfont}
+  \renewcommand{\editiontitlefont}{\editorialsans\bfseries\fontsize{29}{32}\selectfont}
+}{}
+% Reportage: a larger headline and a strong burgundy editorial rule.
+\ifdefstring{\DesignFamily}{reportage}{%
+  \colorlet{editionaccent}{hgred}
+  \setlength{\parindent}{0pt}\setlength{\parskip}{.4\baselineskip}
+  \renewcommand{\editiontitlefont}{\plantinb\fontsize{33}{34}\selectfont}
+  \renewcommand{\editionrule}{\par\vspace{4mm}{\color{hgred}\hrule height 2pt}\vspace{6mm}}
+}{}
+% Speech: formal metadata and more breathing room between spoken units.
+\ifdefstring{\DesignFamily}{speech}{%
+  \setlength{\parindent}{0pt}\setlength{\parskip}{.65\baselineskip}
+  \renewcommand{\editionbody}{\fontsize{11.5}{16}\selectfont}
+  \renewcommand{\editiontitlefont}{\plantin\fontsize{25}{28}\selectfont}
+}{}
+% Newspaper personal commentary: assertive headline, compact byline.
+\ifdefstring{\DesignFamily}{commentary}{%
+  \setlength{\parindent}{0pt}\setlength{\parskip}{.45\baselineskip}
+  \renewcommand{\editiontitlefont}{\plantinb\fontsize{35}{37}\selectfont}
+  \renewcommand{\editionrule}{\par\vspace{4mm}{\color{hgblue}\hrule height .4pt}\vspace{1mm}{\color{hgblue}\hrule height .4pt}\vspace{7mm}}
+}{}
+% Poetry: a smaller measure, preserved verse lines, and ample white space.
+\ifdefstring{\DesignFamily}{poetry}{%
+  \geometry{left=44mm,right=36mm}
+  \setlength{\parindent}{0pt}\setlength{\parskip}{.8\baselineskip}
+  \renewcommand{\editionbody}{\fontsize{12.5}{19}\selectfont}
+  \renewcommand{\editiontitlefont}{\normalfont\fontsize{29}{33}\selectfont}
+  \renewcommand{\editionrule}{\par\vspace{13mm}}
+}{}
+
+\titleformat{\subsection}{\color{editionaccent}\plantin\large}{}{}{}
+\ifdefstring{\DesignFamily}{digital}{%
+  \titleformat{\subsection}{\color{editionaccent}\editorialsans\bfseries\normalsize}{}{}{}
+}{}
+\titlespacing*{\subsection}{0pt}{1.2\baselineskip}{.3\baselineskip}
+\renewcommand{\linenumberfont}{\normalfont\editorialsans\fontsize{7}{8}\selectfont\color{black!42}}
+\setlength{\linenumbersep}{5mm}
+\modulolinenumbers[5]
+\fancypagestyle{anthology}{%
+  \fancyhf{}
+  \fancyhead[L]{\editorialsans\fontsize{7}{9}\selectfont\color{black!55}\RunningTitle}
+  \fancyhead[R]{\editorialsans\fontsize{7}{9}\selectfont\color{black!55}\DesignGenre}
+  \fancyfoot[R]{\editorialsans\fontsize{8}{10}\selectfont\color{hgblue}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\fancypagestyle{opening}{%
+  \fancyhf{}
+  \fancyfoot[R]{\editorialsans\fontsize{8}{10}\selectfont\color{hgblue}\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+\makeatletter
+\renewcommand{\maketitle}{%
+  \pagestyle{anthology}\thispagestyle{opening}
+  \begingroup
+    \setlength{\parskip}{0pt}\setlength{\parindent}{0pt}
+    \noindent{\editorialsans\fontsize{8}{10}\selectfont\color{editionaccent}\MakeUppercase{\DesignGenre}\hfill\@date}\par
+    \vspace{10mm}
+    {\editionopening
+      {\color{editionaccent}\editiontitlefont\@title\par}
+      \vspace{4mm}
+      {\normalfont\fontsize{12}{15}\selectfont\@author\par}
+      \editionrule
+    }
+  \endgroup
+  \editionbody\noindent\ignorespaces
+}
+\makeatother
+\AtBeginDocument{\editionbody\emergencystretch=1em\widowpenalty=1000\clubpenalty=1000}

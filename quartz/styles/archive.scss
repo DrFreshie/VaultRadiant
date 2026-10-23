@@ -1,0 +1,80 @@
+// The URL slug follows SPA navigation, so the archive treatment needs no JS.
+body:is([data-slug="archive"], [data-slug^="archive/"]) {
+  --light: #f2f0ea;
+  --archive-edge: rgb(105 98 83 / 7%);
+  --archive-stamp: rgb(100 93 80 / 5%);
+  --archive-grain-opacity: 0.06;
+
+  background-color: var(--light);
+  background-image: radial-gradient(ellipse at 50% 25%, transparent 30%, var(--archive-edge) 100%);
+  min-height: 100vh;
+
+  // Replace the normal animated daylight with still, gently aged paper.
+  #dappled-light {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+    z-index: 0; // The page content sits above both decorative layers.
+  }
+
+  &::before {
+    content: "";
+    inset: 0;
+    opacity: var(--archive-grain-opacity);
+    background-image: url("./static/archive-paper-grain.svg");
+    background-size: 240px 240px;
+    mix-blend-mode: multiply;
+  }
+
+  &::after {
+    content: "ARKIV";
+    top: 8vh;
+    right: 4vw;
+    padding: 0.08em 0.22em;
+    border: 0.055em double currentColor;
+    border-radius: 0.06em;
+    color: var(--archive-stamp);
+    font-family: var(--headerFont);
+    font-size: clamp(2.5rem, 6vw, 6.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.12em;
+    transform: rotate(12deg);
+  }
+}
+
+[saved-theme="dark"] body:is([data-slug="archive"], [data-slug^="archive/"]) {
+  --light: #181817;
+  --archive-edge: rgb(0 0 0 / 24%);
+  --archive-stamp: rgb(210 204 190 / 4.5%);
+  --archive-grain-opacity: 0.065;
+
+  &::before {
+    mix-blend-mode: screen;
+  }
+}
+
+@media (max-width: 600px) {
+  body:is([data-slug="archive"], [data-slug^="archive/"])::after {
+    top: 5rem;
+    right: 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+@media print {
+  body:is([data-slug="archive"], [data-slug^="archive/"]) {
+    --light: white;
+    background: white;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 import { unescapeHTML } from "../util/escape"
 import { CustomOgImagesEmitterName } from "../plugins/emitters/ogImage"
+import { isArchiveSlug } from "../util/archive"
 export default (() => {
   const Head: QuartzComponent = ({
     cfg,
@@ -86,6 +87,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        {isArchiveSlug(fileData.slug) && <meta name="robots" content="noindex" />}
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js

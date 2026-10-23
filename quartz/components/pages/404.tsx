@@ -10,6 +10,13 @@ const NotFound: QuartzComponent = ({ cfg }: QuartzComponentProps) => {
     <article class="popover-hint">
       <h1>404</h1>
       <p>{i18n(cfg.locale).pages.error.notFound}</p>
+      <p>
+        Siden kan være flyttet til arkivet. Her kan du finde undervisning og materialer fra
+        tidligere semestre.
+      </p>
+      <p>
+        <a href={`${baseDir.replace(/\/$/, "")}/archive/`}>Se arkivet</a>
+      </p>
       <a href={baseDir}>{i18n(cfg.locale).pages.error.home}</a>
     </article>
   )

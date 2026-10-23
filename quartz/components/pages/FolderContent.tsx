@@ -9,6 +9,7 @@ import { QuartzPluginData } from "../../plugins/vfile"
 import { ComponentChildren } from "preact"
 import { concatenateResources } from "../../util/resources"
 import { trieFromAllFiles } from "../../util/ctx"
+import { isArchiveSlug } from "../../util/archive"
 
 interface FolderContentOptions {
   /**
@@ -30,7 +31,10 @@ export default ((opts?: Partial<FolderContentOptions>) => {
   const FolderContent: QuartzComponent = (props: QuartzComponentProps) => {
     const { tree, fileData, allFiles, cfg } = props
 
-    const trie = (props.ctx.trie ??= trieFromAllFiles(allFiles))
+    // Archive listings also contain PDFs/images; don't reuse the active-page trie.
+    const trie = isArchiveSlug(fileData.slug)
+      ? trieFromAllFiles(allFiles)
+      : (props.ctx.trie ??= trieFromAllFiles(allFiles))
     const folder = trie.findNode(fileData.slug!.split("/"))
     if (!folder) {
       return null
@@ -38,6 +42,7 @@ export default ((opts?: Partial<FolderContentOptions>) => {
 
     const allPagesInFolder: QuartzPluginData[] =
       folder.children
+        .filter((node) => isArchiveSlug(fileData.slug) || !isArchiveSlug(node.slug))
         .map((node) => {
           // regular file, proceed
           if (node.data) {

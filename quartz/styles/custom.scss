@@ -1,4 +1,5 @@
 @use "./base.scss";
+@use "./archive.scss";
 
 // Centre Markdown tables without changing cell alignment or overflow scrolling.
 .table-container > table {

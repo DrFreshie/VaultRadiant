@@ -14,4 +14,5 @@ Vi ses til timerne.
 <div class="unit-grid">
   <a class="unit-button unit-button--identity" href="./classnotes/eng-c/identity/">Identity</a>
   <a class="unit-button unit-button--voice" href="./classnotes/eng-c/voice/">Voice</a>
+  <a class="unit-button unit-button--future" href="./classnotes/eng-c/the-future-is-written/">The Future Is Written</a>
 </div>

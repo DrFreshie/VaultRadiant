@@ -4,6 +4,7 @@ import { version } from "../../package.json"
 import { i18n } from "../i18n"
 import { classNames } from "../util/lang"
 import { FullSlug, resolveRelative } from "../util/path"
+import { isArchiveSlug } from "../util/archive"
 
 interface Options {
   links: Record<string, string>
@@ -15,11 +16,18 @@ export default ((opts?: Options) => {
     const links = opts?.links ?? {}
 
     // grab tags from frontmatter (or empty array)
-    const tags = (fileData.frontmatter?.tags ?? []) as string[]
+    const tags = isArchiveSlug(fileData.slug)
+      ? []
+      : ((fileData.frontmatter?.tags ?? []) as string[])
 
     return (
       <footer class={displayClass ?? ""}>
         <hr />
+        {isArchiveSlug(fileData.slug) && (
+          <p>
+            <a href={resolveRelative(fileData.slug!, "archive/index" as FullSlug)}>Til arkivet</a>
+          </p>
+        )}
         <ul class={classNames(displayClass, "tags")}>
           {tags.map((tag) => {
             const linkDest = resolveRelative(fileData.slug!, `tags/${tag}` as FullSlug)

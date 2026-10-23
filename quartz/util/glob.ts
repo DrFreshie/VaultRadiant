@@ -11,8 +11,9 @@ export async function glob(
   cwd: string,
   ignorePatterns: string[],
 ): Promise<FilePath[]> {
-  const fps = (
-    await globby(pattern, {
+  const fps = // Opt in only the archive dot-folder; other hidden folders stay private.
+  (
+    await globby([pattern, `.archive/${pattern}`], {
       cwd,
       ignore: ignorePatterns,
       gitignore: true,

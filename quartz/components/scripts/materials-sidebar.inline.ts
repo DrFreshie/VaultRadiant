@@ -1,5 +1,10 @@
+import { isArchiveSlug } from "../../util/archive"
+
 function normalizeSidebarHeading(text: string) {
-  return text.replace(/^[^\p{L}\p{N}]+/gu, "").trim().toLowerCase()
+  return text
+    .replace(/^[^\p{L}\p{N}]+/gu, "")
+    .trim()
+    .toLowerCase()
 }
 
 function moveLessonSectionToSidebar(sectionName: string, className: string) {
@@ -7,7 +12,9 @@ function moveLessonSectionToSidebar(sectionName: string, className: string) {
   const lessonContent = document.querySelector(".lesson-content") as HTMLElement | null
   if (!rightSidebar || !lessonContent) return null
   if (rightSidebar.querySelector(`.${className}`)) {
-    return rightSidebar.querySelector(`.${className} .materials-sidebar-content`) as HTMLElement | null
+    return rightSidebar.querySelector(
+      `.${className} .materials-sidebar-content`,
+    ) as HTMLElement | null
   }
 
   const headings = Array.from(lessonContent.querySelectorAll(":scope > h2")) as HTMLHeadingElement[]
@@ -76,7 +83,9 @@ function fetchWiktionary(term: string, lang: string) {
 
     const data = (await response.json()) as WiktionaryApiResponse
     const entries = Array.isArray(data[lang]) ? data[lang] : []
-    const entry = entries.find((candidate) => candidate.definitions && candidate.definitions.length > 0)
+    const entry = entries.find(
+      (candidate) => candidate.definitions && candidate.definitions.length > 0,
+    )
     const definition = entry?.definitions
       ?.map((item) => item.definition?.trim())
       .find((item): item is string => Boolean(item))
@@ -125,7 +134,9 @@ function createDictionaryWidget(existingContent: HTMLElement | null) {
   if (!rightSidebar) return
 
   let panel = rightSidebar.querySelector(".dictionary-sidebar-section") as HTMLElement | null
-  let content: HTMLElement | null = panel?.querySelector(".materials-sidebar-content") as HTMLElement | null
+  let content: HTMLElement | null = panel?.querySelector(
+    ".materials-sidebar-content",
+  ) as HTMLElement | null
 
   if (panel?.querySelector(".dictionary-search-form")) return
 
@@ -177,7 +188,12 @@ function createDictionaryWidget(existingContent: HTMLElement | null) {
   const submitSearch = async (rawTerm: string) => {
     const term = rawTerm.trim()
     if (!term) {
-      renderDictionaryResult(results, "", lang, `<p class="wiktionary-status">Type a word to search.</p>`)
+      renderDictionaryResult(
+        results,
+        "",
+        lang,
+        `<p class="wiktionary-status">Type a word to search.</p>`,
+      )
       return
     }
 
@@ -286,7 +302,10 @@ function createDictionaryWidget(existingContent: HTMLElement | null) {
     })
   }
 
-  const initialTerm = existingContent?.querySelector("[data-term]")?.getAttribute("data-term")?.trim()
+  const initialTerm = existingContent
+    ?.querySelector("[data-term]")
+    ?.getAttribute("data-term")
+    ?.trim()
   const savedTerm = localStorage.getItem(dictionaryStorageKey)?.trim()
   const termToLoad = initialTerm || savedTerm
   if (termToLoad) {
@@ -301,6 +320,8 @@ function initSidebarEnhancements() {
 
   moveLessonSectionToSidebar("materials", "materials-sidebar-section")
   moveLessonSectionToSidebar("glossary", "glossary-sidebar-section")
+  if (isArchiveSlug(document.body.dataset.slug)) return
+
   const dictionaryContent = moveLessonSectionToSidebar("dictionary", "dictionary-sidebar-section")
   createDictionaryWidget(dictionaryContent)
 }

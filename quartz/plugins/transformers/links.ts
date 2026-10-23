@@ -13,6 +13,7 @@ import path from "path"
 import { visit } from "unist-util-visit"
 import isAbsoluteUrl from "is-absolute-url"
 import { Root } from "hast"
+import { isArchiveSlug, resolveArchiveLink } from "../../util/archive"
 
 interface Options {
   /** How to resolve Markdown paths */
@@ -45,7 +46,9 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
 
             const transformOptions: TransformOptions = {
               strategy: opts.markdownLinkResolution,
-              allSlugs: ctx.allSlugs,
+              allSlugs: ctx.allSlugs.filter(
+                (slug) => isArchiveSlug(file.data.slug) || !isArchiveSlug(slug),
+              ),
             }
 
             visit(tree, "element", (node, _index, _parent) => {
@@ -103,11 +106,9 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   isAbsoluteUrl(dest, { httpOnly: false }) || dest.startsWith("#")
                 )
                 if (isInternal) {
-                  dest = node.properties.href = transformLink(
-                    file.data.slug!,
-                    dest,
-                    transformOptions,
-                  )
+                  dest = node.properties.href =
+                    resolveArchiveLink(file.data.slug!, dest, ctx.allSlugs) ??
+                    transformLink(file.data.slug!, dest, transformOptions)
 
                   // url.resolve is considered legacy
                   // WHATWG equivalent https://nodejs.dev/en/api/v18/url/#urlresolvefrom-to
@@ -149,11 +150,9 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
 
                 if (!isAbsoluteUrl(node.properties.src, { httpOnly: false })) {
                   let dest = node.properties.src as RelativeURL
-                  dest = node.properties.src = transformLink(
-                    file.data.slug!,
-                    dest,
-                    transformOptions,
-                  )
+                  dest = node.properties.src =
+                    resolveArchiveLink(file.data.slug!, dest, ctx.allSlugs) ??
+                    transformLink(file.data.slug!, dest, transformOptions)
                   node.properties.src = dest
                 }
               }
