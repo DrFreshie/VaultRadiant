@@ -1,6 +1,7 @@
 %! TeX program = lualatex
-\documentclass[10pt,a5paper]{book}
+\documentclass[12pt,a5paper]{book}
 	
+\usepackage[margin=15mm]{geometry}
 	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
 	\usepackage{breqn}
 	\usepackage[utf8]{inputenc}
@@ -122,7 +123,18 @@
 %\date{\vspace{-3em}} % I tilfældet ingen dato
 \date{1932}
 \author{Aldous Huxley}
+
+% Seperate margins for frontpage
+\newgeometry{margin=44mm}
 \maketitle
+\restoregeometry
+
+% Blank page after frontpage
+\null
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
     
 \linenumbers \textsc{A squat grey building} of only thirty-four stories. Over the main entrance the words, CENTRAL LONDON HATCHERY AND CONDITIONING CENTRE, and, in a shield, the World State's motto, COMMUNITY, IDENTITY, STABILITY.
 
