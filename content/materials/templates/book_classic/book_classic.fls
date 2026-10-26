@@ -247,7 +247,6 @@ INPUT ./book_classic.out
 OUTPUT book_classic.out
 OUTPUT book_classic.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT /home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc
 INPUT ./book_classic.aux
 INPUT ./book_classic.out
 INPUT /home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/streams/ebgaramonditalicvariablefontwghtttf-1.luc

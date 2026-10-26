@@ -16,6 +16,21 @@
 \usepackage{flowfram}
 \usepackage{lettrine}
 \usepackage{microtype}
+\usepackage[modulo,pagewise]{lineno}
+\modulolinenumbers[5]
+  \renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+
+% Show line numbers in the leftmost column on every page.
+\renewcommand{\makeLineNumber}{%
+  \ifnum\value{thisframe}=1
+    \hss\linenumberfont\LineNumber\hspace{\linenumbersep}%
+     \else
+       \ifnum\value{thisframe}=5
+         \hss\linenumberfont\LineNumber\hspace{\linenumbersep}%
+       \fi
+     \fi
+}
+
 % Shared baseline grid for article text (including subsection headings).
 \newlength{\newsleading}
 \setlength{\newsleading}{10.5pt}
@@ -179,7 +194,8 @@
 % Preserve the grid rather than adding emergency interline glue.
 \lineskiplimit=-1000pt
 % ARTICLE BODY: no manual column breaks or layout blocks are needed here.
-\lettrine[lines=4,lhang=0.05,nindent=0pt]{I}{magine} someone rebuilds your entire brain. Every single nerve node, every connection. Then they place the whole thing into a virtual body and hit Play.
+
+\linenumbers\lettrine[lines=4,lhang=0.05,nindent=0pt]{I}{magine} someone rebuilds your entire brain. Every single nerve node, every connection. Then they place the whole thing into a virtual body and hit Play.
 
 What would you expect? Nothing? Chaos? A digital twitch, maybe?
 

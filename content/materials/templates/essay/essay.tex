@@ -2,6 +2,27 @@
 \documentclass[9pt,a4paper]{extarticle}
 \usepackage{essay-layout}
 
+\usepackage[switch,modulo]{lineno}
+\modulolinenumbers[5]
+% Reset after each completed page without lineno's pagewise output handling.
+\AddToHook{shipout/after}{\resetlinenumber[1]}
+% lineno triggers an output cycle per line; flowfram ships several columns per page.
+\maxdeadcycles=1000
+  \renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+
+% Show line numbers in the leftmost column on every page.
+\newcommand{\essayLineNumber}{%
+  \ifnum\value{thisframe}=3
+    \hss\linenumberfont\LineNumber\hspace{\linenumbersep}%
+     \else
+       \ifnum\value{thisframe}=4
+         \hss\linenumberfont\LineNumber\hspace{\linenumbersep}%
+       \fi
+     \fi
+}
+% Customize placement without bypassing pagewise logging and counter calculation.
+\setmakelinenumbers\essayLineNumber
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ESSAY SETTINGS — edit these fields and the continuous article body below.
 % Keep essay-layout.sty alongside this file when copying the template.
@@ -17,7 +38,7 @@
 
 \setupessay
 \begin{document}
-\lettrine[lines=2,lhang=0.05,nindent=0pt]{I}{ got off} the plane around midnight and no one spoke as I crossed the dark runway to the terminal. The air was thick and hot, like wandering into a steam bath. Inside, people hugged each other and shook hands … big grins and a whoop here and there: “By God! You old bastard! Good to see you, boy! Damn good … and I mean it!”
+\linenumbers\lettrine[lines=2,lhang=0.05,nindent=0pt]{I}{ got off} the plane around midnight and no one spoke as I crossed the dark runway to the terminal. The air was thick and hot, like wandering into a steam bath. Inside, people hugged each other and shook hands … big grins and a whoop here and there: “By God! You old bastard! Good to see you, boy! Damn good … and I mean it!”
 
 In the air-conditioned lounge I met a man from Houston who said his name was something or other — “but just call me Jimbo” — and he was here to get it on. “I’m ready for anything, by God! Anything at all. Yeah, what are you drinkin?” I ordered a Margarita with ice, but he wouldn’t hear of it: “Naw, naw … what the hell kind of drink is that for Kentucky Derby time? What’s wrong with you, boy?” He grinned and winked at the bartender. “Goddam, we gotta educate this boy. Get him some good whiskey … ”
 

@@ -200,6 +200,7 @@ INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype-luatex.def
 INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.lua
 INPUT /usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
+INPUT /usr/share/texmf-dist/tex/latex/lineno/lineno.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 INPUT /usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty

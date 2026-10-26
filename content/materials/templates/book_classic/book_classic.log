@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.7)  23 OCT 2026 15:21
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.7)  24 OCT 2026 17:12
  restricted system commands enabled.
  file:line:error style messages enabled.
 **book_classic.tex
@@ -1047,26 +1047,26 @@ File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (./book_classic.aux)
 \openout1 = book_classic.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 120.
-LaTeX Font Info:    ... okay on input line 120.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: luatex
@@ -1121,7 +1121,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 120.
+Package hyperref Info: Link coloring OFF on input line 122.
  (./book_classic.out) (./book_classic.out)
 \@outlinefile=\write5
 
@@ -1259,37 +1259,44 @@ Package fontspec Info:
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-Overfull \hbox (1.16664pt too wide) in paragraph at lines 141--142
+
+LaTeX Font Warning: Font shape `TU/EBGaramond(0)/b/n' undefined
+(Font)              using `TU/EBGaramond(0)/m/n' instead on input line 141.
+
+
+Overfull \hbox (1.16664pt too wide) in paragraph at lines 145--146
 \TU/EBGaramond(0)/m/n/12 their hands gloved with a pale corpse-coloured rub-ber. The light was frozen,
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/EBGaramond(0)/m/it' tried instead on input line 150.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
-[1]
+[1
+
+]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Font Info:    Font shape `TU/EBGaramond(0)/m/sl' in size <12> not available
+(Font)              Font shape `TU/EBGaramond(0)/m/it' tried instead on input line 162.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.2'
 [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Overfull \hbox (18.85211pt too wide) in paragraph at lines 173--174
+Overfull \hbox (18.85211pt too wide) in paragraph at lines 177--178
 \TU/EBGaramond(0)/m/n/12 see? Can’t you see?’ He raised a hand; his ex-pres-sion was solemn. ‘Bokanovsky’s
  []
 
 
-Overfull \hbox (5.95476pt too wide) in paragraph at lines 179--180
+Overfull \hbox (5.95476pt too wide) in paragraph at lines 183--184
 []\TU/EBGaramond(0)/m/n/12 ‘Ninety-six iden-ti-cal twins work-ing ninety-six iden-ti-cal ma-chines!’ The voice
  []
 
 
-Overfull \hbox (0.33344pt too wide) in paragraph at lines 183--184
+Overfull \hbox (0.33344pt too wide) in paragraph at lines 187--188
 []\TU/EBGaramond(0)/m/n/12 ‘But, alas,’ the Di-rec-tor shook his head, ‘we can’t bokanovskify in-def-i-nitely.’ 
  []
 
@@ -1300,31 +1307,31 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-Overfull \hbox (16.52667pt too wide) in paragraph at lines 223--224
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Overfull \hbox (16.52667pt too wide) in paragraph at lines 227--228
 \TU/EBGaramond(0)/m/n/12 had to put in af-ter the last Japanese earth-quake!’ He laughed good-humouredly
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [7]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Overfull \hbox (5.99734pt too wide) in paragraph at lines 277--278
+Overfull \hbox (5.99734pt too wide) in paragraph at lines 281--282
 \TU/EBGaramond(0)/m/n/12 chanic was busy with screw-driver and span-ner on the blood-surrogate pump
  []
 
 
-Overfull \hbox (5.96799pt too wide) in paragraph at lines 279--280
+Overfull \hbox (5.96799pt too wide) in paragraph at lines 283--284
 \TU/EBGaramond(0)/m/n/12 ‘The sur-ro-gate goes round slower; there-fore passes through the lung at longer
  []
 
 
-Overfull \hbox (14.38531pt too wide) in paragraph at lines 279--280
+Overfull \hbox (14.38531pt too wide) in paragraph at lines 283--284
 \TU/EBGaramond(0)/m/n/12 in-ter-vals; there-fore gives the em-bryo less oxy-gen. Noth-ing like oxygen-shortage
  []
 
@@ -1332,18 +1339,18 @@ Overfull \hbox (14.38531pt too wide) in paragraph at lines 279--280
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
-Overfull \hbox (2.228pt too wide) in paragraph at lines 305--306
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Overfull \hbox (2.228pt too wide) in paragraph at lines 309--310
 []\TU/EBGaramond(0)/m/n/12 He be-came rather tech-ni-cal; spoke of the ab-nor-mal en-docrine co-ordination
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [11]
-Overfull \hbox (0.34532pt too wide) in paragraph at lines 325--326
+Overfull \hbox (0.34532pt too wide) in paragraph at lines 329--330
 []\TU/EBGaramond(0)/m/n/12 ‘Charm-ing, charm-ing,’ mur-mured the Di-rec-tor and, giv-ing her two or three
  []
 
@@ -1355,24 +1362,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
 Package rerunfilecheck Info: File `book_classic.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 )
 
 Here is how much of LuaTeX's memory you used:
- 30177 strings out of 476076
+ 30180 strings out of 476076
  125129,1373583 words of node,token memory allocated
- 732 words of node memory still in use:
-   6 hlist, 3 vlist, 2 rule, 7 mark, 3 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 86 glue_spec, 10 attribute_list, 3 write nodes
-   avail lists: 1:2,2:806,3:343,4:204,5:676,6:43,7:8448,8:2,9:440,10:10,11:517
- 51886 multiletter control sequences out of 65536+600000
- 63 fonts using 18292631 bytes
+ 737 words of node memory still in use:
+   6 hlist, 3 vlist, 2 rule, 7 mark, 3 glue, 4 kern, 1 penalty, 1 glyph, 18 attribute, 87 glue_spec, 10 attribute_list, 3 write nodes
+   avail lists: 1:3,2:917,3:342,4:396,5:691,6:46,7:8675,8:2,9:442,10:10,11:546
+ 51888 multiletter control sequences out of 65536+600000
+ 63 fonts using 18654071 bytes
  84i,6n,92p,1641b,576s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/anders/.local/share/fonts/EBGaramond-Italic-VariableFont_wght.ttf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></home/anders/.local/share/fonts/EBGaramond-VariableFont_wght.ttf>
-Output written on book_classic.pdf (15 pages, 82352 bytes).
+</home/anders/.local/share/fonts/EBGaramond-Italic-VariableFont_wght.ttf></home/anders/.local/share/fonts/EBGaramond-VariableFont_wght.ttf>
+Output written on book_classic.pdf (15 pages, 80375 bytes).
 
-PDF statistics: 93 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 14 named destinations out of 1000 (max. 1048576)
+PDF statistics: 87 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 1048576)
  16 words of extra memory for PDF output out of 10000 (max. 100000000)
 

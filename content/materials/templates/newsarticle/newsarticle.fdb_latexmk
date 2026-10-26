@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1792752302.22993 "newsarticle.tex" "newsarticle.pdf" "newsarticle" 1792752331.20846 0
+["lualatex"] 1792856135.88916 "newsarticle.tex" "newsarticle.pdf" "newsarticle" 1792856137.1487 0
   "../../../imgs/fruitfly.png" 1792739799.56545 277901 01b55a7fe98c6c2ea39c7592296571dc ""
   "/etc/texmf/tex/generic/config/language.dat" 1791372713.68688 3619 3cd2aa409dc607b94ffa00170aec3fa3 ""
   "/home/anders/.local/share/fonts/EBGaramond-Italic-VariableFont_wght.ttf" 1790629448.81402 814012 96f8070768e84367bca5f780ebaf4db8 ""
@@ -16,7 +16,7 @@
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/texgyreheros-regular.luc" 1792736387.07154 213462 6f4a41b046f0ff21dbe519e83b988fd6 ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/streams/ebgaramonditalicvariablefontwghtttf-1.luc" 1792399199.51339 674990 f39f22859638d864be7183adfbc30642 ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc" 1792310395.09612 698112 cf0a0caae7bc8df522ab900b4de26c74 ""
-  "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1792752301.35509 17076 1e0b0e8263a0fd5fd76eeaac44607a21 ""
+  "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1792763135.50355 19546 19fd9f6f222010ea9a00409e22ea147f ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1792703743.79588 150383 94700fef2c0a08112656bac9f2134e82 ""
   "/home/anders/.texlive/texmf-var/web2c/luahbtex/lualatex.fmt" 1791371603 5657694 fffd31466a508c0bf51ca4851b02e67c ""
   "/usr/share/texmf-dist/fonts/opentype/public/tex-gyre/texgyreheros-bold.otf" 1775415801 135204 f5f20609880fff666e17267854df804d ""
@@ -161,6 +161,7 @@
   "/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1775415801 678 4792914a8f45be57bb98413425e4c7af ""
   "/usr/share/texmf-dist/tex/latex/lettrine/lettrine.cfg" 1775415801 1377 1572f06fa6bf6d8e0a1cc9d612d9b60a ""
   "/usr/share/texmf-dist/tex/latex/lettrine/lettrine.sty" 1775415801 12409 2337d8b212fa9553db1946c781bb33ff ""
+  "/usr/share/texmf-dist/tex/latex/lineno/lineno.sty" 1775415801 155535 edbc920f8c4825a66d507b1de69c9ae0 ""
   "/usr/share/texmf-dist/tex/latex/microtype/microtype-luatex.def" 1775415801 42030 74a1c972081a8850beae0d9e0badc90c ""
   "/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg" 1775415801 27642 f0cea12315babf4d40608f4eeb5c8458 ""
   "/usr/share/texmf-dist/tex/latex/microtype/microtype.lua" 1775415801 6658 199c880d7eab30058d2a30c2a625ea0c ""
@@ -230,9 +231,9 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua" 1775415801 7918 4272855a25780b80472f3b58edd95e33 ""
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791372762 328759 3d8ba6ffe9a13491c7e7884ddcacc692 ""
-  "newsarticle.aux" 1792752330.92771 317 497579aec219fbcd8b4240878e8aa4d0 "lualatex"
-  "newsarticle.out" 1792752329.73669 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "newsarticle.tex" 1792742802.61372 12964 658e4336b8d9d30e99881316706831b4 ""
+  "newsarticle.aux" 1792856136.9129 374 888769ab66ee2a77e5ea5559d3cb2dac "lualatex"
+  "newsarticle.out" 1792856136.7569 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "newsarticle.tex" 1792856106.86612 13413 033225a37d42c177c22206858f694a67 ""
   (generated)
   "newsarticle.aux"
   "newsarticle.log"
