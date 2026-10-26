@@ -45,6 +45,7 @@ function buildPresenterModel(contentRoot: HTMLElement) {
 
   const sections: Array<{ title: string; html: string; isProgram: boolean }> = []
   let current: { title: string; nodes: string[]; isProgram: boolean } | null = null
+  let continuationHeadingHtml = ""
 
   for (const node of Array.from(temp.childNodes)) {
     if (isElement(node) && node.tagName === "H2") {
@@ -57,10 +58,31 @@ function buildPresenterModel(contentRoot: HTMLElement) {
       }
 
       const title = node.textContent?.trim() ?? ""
+      const continuationHeading = node.cloneNode(true) as HTMLElement
+      continuationHeading.removeAttribute("id")
+      continuationHeading
+        .querySelectorAll("[id]")
+        .forEach((element) => element.removeAttribute("id"))
+      continuationHeadingHtml = continuationHeading.outerHTML
       current = {
         title,
         nodes: [node.outerHTML],
         isProgram: normalizeHeading(title).includes("program"),
+      }
+      continue
+    }
+
+    // Markdown thematic breaks start a continuation slide under the same heading.
+    if (isElement(node) && node.tagName === "HR" && current) {
+      sections.push({
+        title: current.title,
+        html: current.nodes.join(""),
+        isProgram: current.isProgram,
+      })
+      current = {
+        title: current.title,
+        nodes: [continuationHeadingHtml],
+        isProgram: false,
       }
       continue
     }
@@ -282,11 +304,7 @@ async function showActiveSection(index: number) {
     const contentRoot = article ? getPresenterContentRoot(article) : null
     const model = contentRoot ? buildPresenterModel(contentRoot) : null
     const activeTitle = model?.presenterSections[activeSectionIndex]?.title ?? null
-    renderLeftSidebar(
-      model?.programSection?.html ?? null,
-      activeSectionIndex,
-      activeTitle,
-    )
+    renderLeftSidebar(model?.programSection?.html ?? null, activeSectionIndex, activeTitle)
   }
 
   if (isProgramSlideTransition(previousIndex, activeSectionIndex)) {

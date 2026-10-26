@@ -1,0 +1,104 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\usepackage{xcolor}
+\definecolor{frbgreenl}{RGB}{162,202,137}
+\definecolor{frbgreen}{RGB}{28,85,66}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+\newcommand{\qm}[1]{``#1''}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb The Relive Box}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\cfoot{\thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]
+    at (current page.north west)
+    {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline,line width=0.6pt] (C) circle (65mm);
+  \draw[bgline,line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\begin{enumerate}
+  \item Who is the narrator? Is it a first- or third-person narrator? Is the narrator reliable or unreliable?
+
+  \item The story takes place around Christmas time. Discuss the role of this setting and include reflections on the allusions to Charles Dickens.
+
+  \item What do the other settings, those from the memories, add to the story? Characterise at least one of these settings and discuss its effect.
+
+  \item As with most of Boyle's stories, \qm{The Relive Box} contains elements of humour. Look for these and discuss their role. You might, for instance, look for puns, parody, irony and self-irony.
+
+  \item In the short story, we only gradually learn about the Relive Box. What is the effect of withholding information and slowing down the info-dump?
+
+  \item What is the role of rhetorical questions asked by the narrator throughout the story? Find and use examples in your answer.
+
+  \item Characterise Wes as a young man and today. Does Wes develop in the course of the story? If so, how? If not, explain how we see this.
+
+  \item Explain how and for what purposes Wes uses his Relive Box and discuss what causes him to use the device like this.
+
+  \item Characterise Katie. To what extent is she a typical teenager? Is she a generic or complex character? Include examples from the text in your answer.
+
+  \item Characterise the parent-daughter relationship in the short story. Consider the following questions when characterising the relationship:
+    \begin{itemize}
+      \item How does Wes see his role as a parent?
+      \item How do they talk to each other, choice of words, tone, etc.?
+      \item What do they seem to need from each other and to what extent do they get it?
+      \item What difference does the age difference play in regard to how they see and use the Relive Box?
+    \end{itemize}
+
+  \item When hearing The Clash's \qm{Should I Stay or Should I Go?}, Wes talks of \qm{flatline ironies which almost make you believe everything in this life's been programmed} (paragraph 69).
+    \begin{itemize}
+      \item Look at the context and explain what he means by this.
+      \item What does the comment tell us about Wes?
+      \item Discuss if you have ever had similar experiences.
+    \end{itemize}
+
+  \item Comment on the ending of the story. Discuss if it is tragic or if it contains glimpses of hope.
+
+  \item Might the story be inspired by issues or technology that already exist in today's world? If so, what are they and how does the extrapolation work? What is the story criticising or warning about?
+
+  \item Discuss why Boyle has written a near future rather than a far future story to shed light on the issue.
+
+  \item Do you consider \qm{The Relive Box} soft or hard sci-fi? Give reasons for your answer using what you learned in the introduction.
+
+  \item The story also mentions the possibility of subversive hacker attacks. Discuss if this is a minor detail or important sub-theme.
+
+  \item Which other themes do you find important in the story? Give reasons for your answer and find examples in the text.
+\end{enumerate}
+
+\end{document}

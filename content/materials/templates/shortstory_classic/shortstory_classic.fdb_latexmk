@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1792753206.18369 "shortstory_classic.tex" "shortstory_classic.pdf" "shortstory_classic" 1792753207.60284 0
+["lualatex"] 1793006007.16798 "shortstory_classic.tex" "shortstory_classic.pdf" "shortstory_classic" 1793006008.66783 0
   "/etc/texmf/tex/generic/config/language.dat" 1791372713.68688 3619 3cd2aa409dc607b94ffa00170aec3fa3 ""
   "/home/anders/.local/share/fonts/EBGaramond-Italic-VariableFont_wght.ttf" 1790629448.81402 814012 96f8070768e84367bca5f780ebaf4db8 ""
   "/home/anders/.local/share/fonts/EBGaramond-VariableFont_wght.ttf" 1790629448.81447 936656 40d46b48de5e2877f7933ee32493ba8d ""
@@ -11,7 +11,7 @@
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/plantinmtprosmbd.luc" 1792310381.67694 72968 6ee7bdfa81c5625de736597454afe66f ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/streams/ebgaramonditalicvariablefontwghtttf-1.luc" 1792399199.51339 674990 f39f22859638d864be7183adfbc30642 ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/streams/ebgaramondvariablefontwghtttf-1.luc" 1792310395.09612 698112 cf0a0caae7bc8df522ab900b4de26c74 ""
-  "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1792752301.35509 17076 1e0b0e8263a0fd5fd76eeaac44607a21 ""
+  "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1793006005.99427 23133 4cf5efe0f8650f9ccadac36cc63c156a ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1792703743.79588 150383 94700fef2c0a08112656bac9f2134e82 ""
   "/home/anders/.texlive/texmf-var/web2c/luahbtex/lualatex.fmt" 1791371603 5657694 fffd31466a508c0bf51ca4851b02e67c ""
   "/usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm" 1775415801 12056 7e13df7fe4cbce21b072ba7c4f4deb6e ""
@@ -234,9 +234,9 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua" 1775415801 7918 4272855a25780b80472f3b58edd95e33 ""
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1791372762 328759 3d8ba6ffe9a13491c7e7884ddcacc692 ""
-  "shortstory_classic.aux" 1792753207.45019 432 156c12d351f10194b538939d68cc7880 "lualatex"
-  "shortstory_classic.out" 1792753207.03518 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "shortstory_classic.tex" 1792753204.96214 33325 e25533d06f35470e2be61f7896828cfa ""
+  "shortstory_classic.aux" 1793006008.4945 452 56d302c394d2e235b70cf0374e35d5c5 "lualatex"
+  "shortstory_classic.out" 1793006008.04722 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "shortstory_classic.tex" 1792998070.87655 45864 9e412207d5f60da5210c46233694cec0 ""
   (generated)
   "shortstory_classic.aux"
   "shortstory_classic.log"
