@@ -1,0 +1,605 @@
+%! TeX program = lualatex
+\documentclass[12pt,a5paper]{book}
+	
+\usepackage[margin=15mm]{geometry}
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+  \newfontfamily\bembo{bembo.otf}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[switch,modulo,pagewise]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{“#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+  \renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	% Typographic cover inspired by Tell Me an Ending, without background imagery.
+	\usepackage{titling}
+	\newfontfamily\coverfont{EB Garamond}
+	\definecolor{coveraccent}{HTML}{A6534D}
+	\definecolor{coverink}{HTML}{20242B}
+	\newcommand{\coversubtitle}{Excerpt}
+	% Override the cover title to control its lowercase, stacked arrangement.
+	\newcommand{\covertitle}{tell\\me\\an\\ending}
+	\renewcommand{\maketitle}{%
+		\begin{titlepage}
+			\thispagestyle{empty}
+			\coverfont\color{coverink}\raggedright
+			\setlength{\parskip}{0pt}
+			\vspace*{0mm}
+			{\centering\color{coverink!70}\fontsize{12}{16}\selectfont
+			\addfontfeatures{LetterSpace=14}\MakeUppercase{\theauthor}\par}
+			\vspace{9mm}
+			% Large, closely stacked lowercase serif lettering, like the reference.
+			{\color{coveraccent}\fontsize{93}{79}\selectfont\covertitle\par}
+			\vfill
+			% Centre the footer elements within the rightmost third of the page.
+			\noindent\hfill\begin{minipage}{0.25\textwidth}
+			\centering
+			{\color{black}
+			\begin{tikzpicture}[x=1mm,y=1mm,line width=0.35pt,
+				line cap=round,line join=round]
+				\draw (-6.3,5.7)--(-7,-1.5)--(7,-1.5)--(6.3,5.7);
+				\draw (-5.8,6.5)--(-6.4,-0.5)
+					.. controls (-3.7,-0.3) and (-1.6,-0.8) .. (0,-1.5)
+					.. controls (1.6,-0.8) and (3.7,-0.3) .. (6.4,-0.5)
+					--(5.8,6.5);
+				\draw (-6.3,5.7)--(-5.9,5.7) (-5.8,6.5)--(-5.2,6.5)
+					(6.3,5.7)--(5.9,5.7) (5.8,6.5)--(5.2,6.5);
+				\draw (-5.1,7.2)
+					.. controls (-2.7,7.5) and (-1,6.9) .. (0,5.5)
+					.. controls (1,6.9) and (2.7,7.5) .. (5.1,7.2)
+					--(5.7,0.3)
+					.. controls (3.5,0.5) and (1.5,0) .. (0,-1.2)
+					.. controls (-1.5,0) and (-3.5,0.5) .. (-5.7,0.3)--cycle;
+				\draw (0,5.5)--(0,-1.2);
+				\draw (0,-1.5) ellipse [x radius=0.7mm,y radius=0.22mm];
+			\end{tikzpicture}\par}
+			\vspace{7mm}
+			{\color{coverink!65}\fontsize{11}{15}\selectfont\coversubtitle\par}
+			\vspace{2mm}
+			{\fontsize{11}{15}\selectfont\thedate\par}
+			\end{minipage}\par
+			\vspace*{3mm}
+		\end{titlepage}%
+	}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+% Scene break from shortstory_classic, in the book's accent colour.
+\newcommand{\storybreak}{%
+  \par\vspace{0.6\baselineskip}
+  \begin{center}\color{coveraccent}\small *\enspace *\enspace *\end{center}
+  \vspace{0.3\baselineskip}\noindent\ignorespaces
+}
+
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{Tell Me an Ending}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{2022}
+\author{Jo Harkin}
+
+% Separate, symmetric margins for the modern cover.
+\newgeometry{margin=12mm}
+\maketitle
+\restoregeometry
+
+% Blank page after frontpage
+\null
+\thispagestyle{empty}
+\newpage
+
+\pagenumbering{arabic}
+
+\chapter*{}
+    
+\linenumbers \qm{Just a few more questions,} says Noor. \qm{Box ticking. And then we're all done.}
+
+She remembers from her training, years ago, that she's supposed to give a reassuring smile at this point, to let the client sitting in front of her know that the difficult bit is over, that this is just a small matter of paperwork before they can begin their new, happy life.
+
+Noor said to Louise at the time that the clients Noor forgets to smile at probably feel more reassured than the ones who receive a smile, see the forced nature of the smile, and start worrying what Noor might be hiding, but Louise said it didn't matter.
+
+Nobody expects it to look authentic, Louise said. You look like a competent professional doing a token smile, and that's perfect. That's all they want from you.
+
+Noor smiles at her client.
+
+\qm{Great,} says the client. He rubs his face. His body softens into his chair. He's only about thirty; his notes say he saw a man being sucked into a snowblower at a ski resort. \qm{Good to know.}
+
+\qm{So. Since your deletion procedure, have you experienced any insomnia, unexplained mood changes, symptoms of paranoia, hallucinations or visual disturbances, headaches, anxiety, depression?}
+
+\qm{No,} says the client. \qm{Does that stuff often happen after a wipe?}
+
+\qm{After a removal,} Noor says, because Nepenthe doesn't like the word wipe. They prefer Targeted Removal Solution. Not that it matters. Slang is slang: they can't fight the tide.
+
+\qm{None of these are common aftereffects,} she continues. \qm{In fact, incidences are far lower for our clients than for the general population.}
+
+\qm{Cool,} says the guy. \qm{Well, I haven't had any of those.}
+
+\qm{And you say your PTSD symptoms have subsided.}
+
+\qm{Yep. All gone.}
+
+\qm{Well, that's certainly good news,} she says. She stifles a small burp, apple flavored. It reminds her that the apple she ate for breakfast was a while ago. She wonders how long she's got until lunch.
+
+Noor is the head of the Aftercare team. She doesn't usually conduct follow-up interviews personally, but she's doing a few to test out the new script. She's looking forward to the end of them.
+
+There are two kinds of clients at Nepenthe: self-informed and self-confidential. The self-informeds know that they've had a memory removed; the self-confidentials don't. Self-informed clients tend to be people who have witnessed terrible but relatively simple events, like snowblowing accidents. In most cases, these clients are content with knowing that they saw these things, without being able to remember the thing itself. It's enough that the incident has become ... abstract.
+
+The self-informed clients usually arrive for their interview a month after their procedure, say they feel great, and leave. Even on the rare occasion that someone doesn't feel great, they're usually civilized about it. Before Noor started working at Nepenthe, she thought that she'd be facing a lot of chair smashing, desk tipping, door punching. But in fact, the clients are almost uniformly well-behaved.
+
+It's because we're messing with their brains, Louise says. Makes people very polite.
+
+Noor never meets any of the self-confidentials. Their procedures take place at night. And nobody interviews them afterward. Obviously. Noor gets reports from their GPs instead, who usually reach the same conclusion: the patient, to all appearances, is feeling great.
+
+\qm{I do have one thing I was just ... wondering about,} says Noor's client now. \qm{Maybe it's stupid.}
+
+\qm{Please,} Noor says. \qm{There's no such thing as a stupid question.}
+
+Her stomach mutters, as if to disagree. She folds her hands over it.
+
+\qm{I remembered something I read, about how life is like a symphony, and what Nepenthe does is edit out the wrong note. But then, I was ... I mean, I've been kind of unmotivated, l've been wiping out on the mountain bike a lot, I was wondering the other day if I'm in the right job. And I'm thinking – what if I accidentally deleted a good note along with the bad note? Or if even if it was just the bad note, if I needed that note to, well, be me.}
+
+What a bloody stupid question, thinks Noor.
+
+Instead she says, \qm{Your state of mind goes through changes all the time. You're only noticing it now because – post-procedure – you're on the alert for side effects. It's a well-known cognitive phenomenon. When the brain takes up a theory, it focuses on gathering evidence to support it and ignores everything else. It's not objective.}
+
+\qm{Huh,} says the client. Eyebrows up, slow nod. \qm{That's nice. Reassuring. They should tell people that earlier.}
+
+Noor waits.
+
+\qm{Oh,} says the client. \qm{They already did, didn't they?}
+
+\qm{In your first appointment, yes. In fact, your notes indicate you felt positive about it then, too.}
+
+\qm{So I am still the same person,} the client says. \qm{That's good.}
+
+\qm{Absolutely,} Noor says. She sighs. \qm{So, last question: Do you feel that every element of the unwanted memory has been completely removed?} The client stops smiling. He frowns.
+
+Noor knew he would. This is part of the new script – reworded in a hurry not by the psychology department, but by Nepenthe's legal team.
+
+\qm{Is this about traces?} says the client.
+
+\qm{How do you mean?} asks Noor. Neutral tone.
+
+But she knows exactly what he means. Over the years since Nepenthe opened, there have been a small but vocal number of people claiming to be former self-confidential clients who'd been left with part of the memory intact – or else, that part of the memory had somehow regenerated. The media picked up the story and blew it out of all proportion. Traces was the word they came up with for the phenomenon. Which hadn't been a phenomenon until the media decided that's what it was.
+
+Are you suffering from traces?
+
+Documentaries were made, interviewing mostly mentally ill people about their unexplained visions. Films, TV dramas, novels followed – usually clenchingly moralizing, usually having puns in their titles – and Noor considered them a good thing in that they managed to trivialize the whole issue. The phenomenon eventually dropped off the front pages. People moved on to new phenomena.
+
+Then about a year ago, Nepenthe scientists discovered that deleted memories weren't actually gone for good. That – with another procedure – they could even be recovered.
+
+Oh no, Noor remembers thinking when she found out. Please, no.
+
+But yes. And once that got out, a significant number of people who claimed they'd been tormented by traces argued that they should have the right to know if they were former self-confidential Nepenthe clients – and not only that, to get their memories back. It became a class action lawsuit in several countries, and – in most of these – the former clients won.
+
+Hence: the restorations.
+
+Noor knows her client knows all of this. She's just not sure how much he'll feel emboldened to ask. She sits back and allows her smile to fade into her usual expression, which she's been told variously is one of coolness, flatness, hostility.
+
+\qm{I mean,} says the client, with a look of minor defiance, \qm{are you checking to see if I have any traces –}
+
+\qm{Regarding the alleged phenomenon known as traces,} Noor says carefully, \qm{the company's official position is that evidence of this is only anecdotal. There are yet to be any peer-reviewed, methodologically sound studies proving their existence, let alone explaining what they are or why they occur.}
+
+\qm{Sounds very formal,} the client says. \qm{But this is about that whole fuckup, right? Excuse my language. The ... eff-up. You know. Aren't the traces the reason you guys have to give all the night clients their memories back?}
+
+\qm{It's true that the former self-confidential clients who claimed to be experiencing traces happened to be the ones who brought the lawsuits,} Noor says. \qm{But the argument wasn't about whether or not traces exist. It was about the right to have a memory restored, now that restorations are a possibility. Any former Nepenthe client could have brought that case. It's just that the only people who cared enough to do it were the ones who believed they were experiencing traces.}
+
+\qm{I just don't see why they cared,} the client says. \qm{I mean, given the absence of any peer-reviewed methodologically sound research proving that they ought to care.}
+
+Is he mocking her?
+
+Noor sighs.
+
+Yes, he's definitely mocking her. He's forgotten that he's afraid of Noor, and Nepenthe. Noor blames the fuckup, personally. It's undermined their authority.
+
+\storybreak
+
+After the client has gone, Noor carries her cold cup of tea down the long, glass-walled corridor divided by geometric patterns of light and enters the staff kitchen. She's pleased to see there's nobody else in there. She tips the tea away, puts the kettle on, and allows herself to lean against the empty countertop, enjoying the moment despite the continued keening of her stomach.
+
+Before the moment has a chance to get going, several technicians and a nurse arrive.
+
+\qm{Hi, Noor!} the nurse, Ben, says. He's about thirty, new, and persistently friendly. Noor's heard him in the kitchen before, trying to find out everyone's story.
+
+You're barking up the wrong tree, Noor said to him. This is where stories come to die.
+
+\qm{We were just talking about holidays,} Ben says. \qm{Summer's nearly over. Are you planning a late getaway, Noor?}
+
+\qm{Somewhere to unwind,} says a technician called Jennifer. She casts a meaningful glance at one of the other technicians, whose name Noor can't remember.
+
+\qm{I don't plan on it. Unwinding,} Noor says. She rinses her mug. \qm{It sounds dangerous.}
+
+\qm{Well, I'm going to the Maldives,} says Jennifer to Ben and the technicians.
+
+\qm{Which island?} Noor asks her. \qm{Hotel island or burning trash island?}
+
+Jennifer doesn't have much to say about that. She goes into a corner and becomes very involved with the preparation of her herbal tea. The technician whose name Noor can't remember laughs uncertainly.
+
+Two of the therapists on Noor's team – Monica and Nij – arrive. The kitchen is beginning to feel overcrowded. Noor nods at them.
+
+\qm{How's the new script going?} Monica asks Noor.
+
+\qm{It's a disaster,} Noor says.
+
+\qm{Is it going to be fixed?}
+
+\qm{Probably not,} Noor says.
+
+\qm{But Aftercare doesn't even deal with the self-confidentials! The self-informed aren't getting restorations, right?}
+
+\qm{Nope,} says Noor.
+
+\qm{Do the self-informeds even get traces?} Nij asks. \qm{And do they mind if they do?}
+
+\qm{Don't call them traces,} Noor says. \qm{We don't know if they exist. Remember that.}
+
+\qm{But we're asking clients questions that are obviously about ... er, them.}
+
+\qm{Yep,} says Noor. \qm{Like I said. It's a disaster.}
+
+Monica opens her mouth. She looks at something behind Noor. Then she closes her mouth again.
+
+Noor turns around.
+
+\qm{It's good to see you on message as usual, Noor,} Louise says from the doorway. \qm{Afternoon, everyone.}
+
+\qm{Hi, Dr. Nightingale,} the others say. Then they go quiet. The air fills with the effort of thinking of something to say to Louise that will mark the sayer out as an interesting, well-informed, and promotable individual. Noor, enjoying the return of the silence, spoons three sugars into her tea and stirs it gently.
+
+\qm{Don't rush on my account,} says Louise to Noor.
+
+\qm{Good tea can't be rushed,} Noor says. She picks up her cup and heads out of the kitchen. Louise, holding her own takeout coffee, follows her.
+
+\qm{That is not good tea,} Louise says. \qm{Three sugars?}
+
+\qm{I started drinking tea when I gave up smoking,} Noor explains. \qm{I needed – wait, why am I explaining this? Did you know you're ten minutes early? Normally you're exactly on time.}
+
+\qm{I do know that, and I went to your office to wait, but it was locked,} Louise says.
+
+Noor could remind Louise that offices aren't meant to be left unlocked, but it's been a very long time since the two of them stood on any kind of ceremony.
+
+\qm{Crowshill,} Louise says meditatively. \qm{I lived here for years, but I never enjoy coming back here. There's something wrong with the atmosphere. A big clinic in a small town. It feels off. The other regionals are the same.}
+
+Louise is usually based at the company's London headquarters, but she visits regional clinics every month. Technically, Crowshill – the flagship facility, and only five minutes on the wrong side of the M25, a border town between London, Surrey, and Kent – isn't a regional clinic. But Noor knows how it is. She saw it that way herself, before she moved here from London. Regional is the word for the pleasant square with its plane trees, the fifteenth-century pub where Alexander Pope once had an ale, the Waitrose supermarket, the coffee shops and charity shops and independent butcher with halved pigs hanging in the window, the 1960s Baptist church and old checkerboard Catholic church, the Victorian primary school, the tabby cat that sits at the end of Noor's drive most mornings.
+
+Noor's come to like it.
+
+Louise sits down, takes her phone out, and starts tapping at the screen. \qm{So, first things first. They've finally worked out the schedule for the disaster – I mean, the upcoming restorations. The self-confidentials will all be informed about their status in September. The restoration procedures will start in late October. You shouldn't see much disruption. New self-confidential procedures will remain suspended for the foreseeable, so Crowshill will be closed at night from now on, but that obviously doesn't affect you personally.}
+
+\qm{Nope. I spend my nights sleeping,} Noor says.
+
+(This is a lie.)
+
+\qm{Good for you,} Louise says. \qm{How is the new script going?}
+
+Noor just looks at her.
+
+\qm{I thought so,} Louise says. She looks at her phone screen. \qm{How shall I word it? New script causing consternation? Anxiety? Suspicion?}
+
+\qm{All of the above,} Noor says.
+
+Noor's thinking, now, about sleeping. The possibility of it. Wondering if maybe this might be the time to ask Louise the favor she's been thinking – for the last year – of asking. But how should she word it? Hey, boss, any chance you could sign off on a slightly dodgy memory deletion for me? It's not illegal, exactly, just unethical. No need for consternation, anxiety, or suspicion.
+
+She decides against it – but not before Louise notices her expression. Which is annoying, because Noor thought she'd had no expression.
+
+\qm{Everything okay?} Louise says.
+
+\qm{Yes,} Noor says. She tries to think of a change of subject. \qm{Are you going on holiday this year?}
+
+\qm{What?} Louise says. \qm{You sound like a hairdresser. Are you all right?}
+
+Noor feels mildly offended. \qm{It's a perfectly normal question,} she says. \qm{It's generally considered to be acceptable small talk.}
+
+\qm{Have you ever asked anyone that before?}
+
+\qm{Of course not.}
+
+Louise laughs again. \qm{Well, maybe leave the acceptable small talk to other people.}
+
+\qm{Fair enough,} Noor says. Louise is still looking at her, with more, not less, curiosity. Noor wishes she'd stop it. And as if in answer to her wish, there's a loud scream from outside, in the direction of the gates.
+
+\qm{Liars! Thieves!}
+
+\qm{Shit,} Louise says. \qm{That made me jump. Oh, for fuck's sake. My coffee.}
+
+There's a brown stain on the knee of her pale gray trousers. Noor reaches for the box of tissues, but Louise shakes her head.
+
+\qm{I'll go to the loos and wash it properly,} she says. \qm{Back in a sec.}
+
+After Louise closes the door, Noor's mobile phone goes off: a reminder alert. She thought she'd put it on silent. She picks it up, frowning. The reminder says RASA. Noor has no idea what that is. And she can't find out because her phone keeps rejecting her password. By her third attempt, it becomes apparent that this isn't Noor's phone at all. It's Louise's. Noor's own, identical phone, is still lying on the desk. She puts Louise's phone down, just as Louise herself comes back in. There's a large wet patch on her leg.
+
+\qm{This had better dry before my board meeting,} she says. \qm{Bloody idiots.}
+
+Noor is surprised to see that Louise looks angry – at least, she does for a moment, before she recalibrates. Louise isn't usually someone who gets angry over coffee spilling or protesters screaming. But lately, she has seemed more ... edgy. And when she picks up her phone, the sense of edginess around her deepens.
+
+Of course (Noor reflects with some pride), very few people besides Noor herself would even be able to detect this edginess. Louise always looks the same: cool oval face, every surface perfectly smooth. It's not easy to pin anything on a face like that. According to Nat, a doctor on the Removals team, Louise has had \qm{work done,} but Noor isn't sure that's relevant. She can't remember a time when Louise's face was what you'd call expressive. While her skin might be available for inspection, what's going on underneath it is anybody's guess. Take now, for example. Louise has put her phone down and turned, expectant and calm, toward Noor. Leaving Noor wondering if Louise really did look edgy, a second ago, or not.
+
+If maybe the only edginess is within Noor herself.
+
+\qm{What are we meant to expect?} Noor asks. \qm{Regarding the disaster, I mean. The fact that in three weeks' time, all the self-confidential clients will know who they are. Are we ... prepared?}
+
+Louise does the kind of laugh people do to let you know they find something utterly laughable.
+
+\qm{So that's a no,} says Noor.
+
+\qm{God knows what's going to happen,} Louise says. \qm{And God help us all ... Wouldn't it be nice to believe in God at times like these?}
+
+\qm{Instead of playing him?} Noor says. She remembers her tea and picks it up. It's cold.
+
+Louise sighs. \qm{Unfortunately, we've already made our choice,} she
+
+says.
+
+Noor hasn't seen the emails that are going out. But she imagines they go something like this:
+
+Dear Former client,
+
+Do you want to know a secret?
+
+lt's about you.
+
+It might make you happy, or it might be something unimaginably horrible.
+
+Once you know it, you can't unknow it.
+
+Please get in touch!
+
+Some people would immediately delete the email.
+
+But not everyone.
+
+There are people who, once they read those words, would find it impossible to resist. Noor thinks of the clients who'd deleted the discoveries that their dead parents were rapists, pedophiles, Nazis.
+
+Louise once said to Noor, early on, that Do No Harm is an impossibility. Do Least Harm: that was Louise's ethos.
+
+Which is why Louise said the restorations were a mistake. Based as they were on the philosophy of Protect Nepenthe from Harm, and Fuck Everybody Else.
+
+And Noor, as she usually did, agreed with Louise.
+
+\storybreak
+
+Noor had to look up the word Nepenthe before she came to work here. lt occurred to her on the way to the interview that she had no idea what it meant – if it was a scientific term, or a surname, or what – and she might well be asked about it.
+
+She found out that most people think the name comes from \qm{The Raven,} the poem by Edgar Allan Poe.
+
+She read the poem, which was basically about a raven bothering a man grieving his lost lover. The unhappy man cries, \qm{Let me quaff this kind Nepenthe and forget this lost Lenore!} But there was no Nepenthe for him. Just his own increasing madness, and an annoying raven.
+
+In actual fact, Noor discovered, the word Nepenthe came from the Odyssey. There was a magical potion called Nepenthes Pharmakon, a drug to quiet all pain and strife, and bring forgetfulness of every ill. Helen of Troy got hold of some of it. She used it to spike the drinks of veterans of the Trojan War – which she technically started, so it made sense that she'd want people to forget.
+
+Noor can't remember everything about that interview. It was ten years ago. Some of it – the view from the window, her painful new shoes – is clear and bright; other parts are in darkness.
+
+She remembers Louise saying: The procedure was originally only available via the National Health Service, for people like soldiers and terrorism victims, but of course the technology has been commercialized, and now – so long as no laws have been broken – anyone with enough money can remove a memory of almost anything. Exciting, isn't it?
+
+Louise didn't sound particularly excited. But then, she'd have rattled off this explanation hundreds of times, probably several times that day alone.
+
+But Noor was excited.
+
+I'm very excited, she said.
+
+Right, Louise said. What excites you, specifically? Why do you want this job?
+
+This was when Noor realized that it was possibly a mistake to have spent the train journey looking up poems. That she probably should have spent the time preparing an answer to this particular question.
+
+She embarked on an answer anyway. She went with the truth. It still makes her cringe to think about it. She talked about her background in coding, drew some clumsy links to neuroscience, getting more and more earnest as she went.
+
+She can hear herself now:
+
+You see, we're all coded, we're all running programs. The goal is simplicity, elegance, orderly cooperation, to produce an effective and bug-free whole. Obviously, the human brain is more of a challenge. The ultimate challenge. When you don't know the operating rules, problems seem impossible to fix. But they aren't. To understand the underlying system, the rules, like Nepenthe does, and then use them to fix a, a malfunction, in this case a PTSD response – that's just a ... beautiful concept. Actually I don't think there's anything more beautiful than that.
+
+(She realized she'd been leaning forward and holding the edge of the desk. She let go; put her hands in her lap.)
+
+You didn't mention morality, Louise said.
+
+Well, no, Noor said. Health, function – those aren't moral matters. It's not a moral matter when a program isn't working. It's a practical one.
+
+Louise looked at her for a long time.
+
+I understand, she said.
+
+On the train home, Noor, knowing she had the job, was able to find it a little bit funny that she'd thought she might have been asked about Helen of Troy.
+
+Helen, thinks Noor.
+
+Helena.
+
+Elena.
+
+The problem with thinking about forgetting things is that it always makes you think about the things you want to forget.
+
+Noor hasn't thought about Elena in a long time.
+
+That's a lie.
+
+At first Noor thought about Elena a lot. Over time, she thought about her less. There may have been a period of time – a month or two – when she barely thought about Elena at all. But then the news about restorations arrived, and with it: Elena.
+
+Not the real Elena, who by now was far away in time and space, but the Elena in Noor's head: less understanding than the original, more devious than the original, and much, much harder to dislodge.
+
+Noor was ready for Elena by then, though. She armed herself with a range of CBT and neuroplasticity techniques, visualizations and circuit-reshaping exercises, with the end result that Elena didn't get so much as a foot over the threshold of Noor's brain.
+
+Apart from just now, obviously.
+
+Noor feels embarrassed at this failure. In fact, she could quite happily remove the bit of her brain that was responsible. (The amygdala. As per usual.) Remove, wipe: the terminology doesn't matter. She could put a pencil up her nose, right now, at her desk.
+
+A targeted removal solution.
+
+Ha.
+
+\storybreak
+
+By the time Noor finishes work, a dark cloud is spreading over the sky like spilled paint, making for Crowshill. The glass corridor outside her office is dim. It feels colder now, though rationally Noor knows the clinic temperature is maintained at exactly 23 degrees Celsius.
+
+One of the first things people ask Noor when they find out what she does for a living is What's it like inside the clinic? For some reason, they all want to know.
+
+It looks like what you expect, Noor says.
+
+What do you mean?
+
+Well, imagine a place where you go to get your memories removed. What does that look like?
+
+White, says everyone. Futuristic. Sci-fi.
+
+There you go, says Noor. It looks exactly like that.
+
+Noor's got no idea why the collective idea of the future apparently came to a stop in the sixties. At some point in that decade it was decided that the future looked smooth, curved, and white. And now it is that future, but our idea of the future hasn't changed. Noor wonders if the smooth curved whiteness will ever really come to pass, or if it will just stay in the places it lives now, the lobbies of companies who want to be seen as futuristic.
+
+She passes through Nepenthe's reception area (all white, with two curved white leather sofas and a large white desk like half a Life Saver mint) and goes out through the landscaped grounds to the parking lot. She nods to the security guards. All of them ignore the noise the building has just started making, a low, long ooooooo.
+
+The clinic was originally designed with a large, circular reception area at its heart, and two wings on either side. The wings curved inward and the central portion curved outward, and the whole thing was glass-faced from floor to ceiling. It looked good. Sci-fi good. The problem was that after it was built, it became apparent that, at a certain time of day, the concave glass parts focused the sun so that it burned large brown patches in the grass and melted the paint on the cars. It also dazzled anyone walking past. Clients had to approach the clinic slowly, squinting in the blinding light, through which they could just about make out their own frighteningly deformed reflection.
+
+Hardly striking the right note was how Louise put it.
+
+So in the end, after a lot of meetings, shutters were put up over the windows. Now on windy days the air is funneled between the glass and the shutters, and a kind of low fluting or moaning sound can be heard in all the front-facing offices, including Noor's. She barely hears it these days, herself, but sometimes it startles the clients.
+
+The future is here, thinks Noor, and it wasn't thought through.
+
+\storybreak
+
+What's that? Elena – or: the client, as she was then – had said. That whistling?
+
+It's the shutters, Noor said.
+
+I thought maybe it was all the memories, said Elena. Being released from vents.
+
+Noor didn't know what to say to that.
+
+So she said: Shall we continue?
+
+Sure, Elena said. She moved her hair (shiny brown, waving) off her shoulders. As soon as she did it, the hair started to slide forward again. Noor wondered if this was a gesture she'd adopted years ago, as a little did you notice I'm a very attractive woman, do you see how elegant and also vulnerable my neck is kind of thing, and now performed without even knowing she was doing it.
+
+According to Elena Darke's notes, she had deleted the memory of a helicopter crash in which she was the only survivor. The case got some press attention, not least because it involved the CEO of a big company – her boss, and a married man – and Elena wasn't supposed to have been in the helicopter with him.
+
+In answer to your previous question, Elena said, I wasn't sleeping with Guy. I think he wanted to sleep with me. I mean, who invites a random marketing executive to travel with them in the company helicopter to a conference? But then, what random marketing executive would say no? I'm actually ninety percent gay. I've had a few sexual relationships with men. But those were years ago. Though I did wonder if I would consider sleeping with Guy for a promotion. It's the kind of thing that crosses your mind, right? He wasn't unattractive. Would I do it for 40K? 20K? A better company car? I think now, on balance, I probably wouldn't have. And I'm not saying that just because, you know, he's dead.
+
+Right, Noor said.
+
+She looked back at the previous question.
+
+It said: Is there anything about the care you received during your procedure that you feel could be improved?
+
+And I know what you're thinking, Elena continued. I got the job purely on merit. I've always worked hard. And I've had a good career. Having said that, I'm not sure how I'm going to present this latest development. It's not great on the CV, you know?
+
+There was a short pause. Noor realized, with dismay, that she was about to laugh. And then Elena caught her eye, and was so obviously willing Noor to laugh that Noor ended up not being able to help it, and did.
+
+At last, Elena said. She sat back in her seat with evident satisfaction.
+
+Sorry, Noor said. That was inappropriate.
+
+I enjoy inappropriate, Elena said.
+
+Noor found Elena difficult to look at, suddenly.
+
+The way Elena was looking at her was making it difficult.
+
+She went on to the next question.
+
+Have you experienced any feelings of regret concerning the procedure?
+
+That's an interesting one, Elena said. Sometimes I wonder if it's a good idea to vaporize your memories. And then I think: No, good riddance. If I had the money, I'd wipe more. Childhood, most of that.
+
+Childhood? said Noor.
+
+She wasn't supposed to ask questions like that. She was supposed to refer clients like Elena for further therapy. There was a script.
+
+... Having concluded this assessment, I feel that in this instance it would be helpful for you to discuss your thoughts and feelings further, with one of our team of memory specialists.
+
+She'd wondered in her interview if it had been appropriate to compare clients to computers. Now she wondered what the difference was between her own job and that of the customer service employee for a Wi-Fi provider. Both of them working through their script, switching things off and on, giving up, booking an engineer.
+
+Yeah, Elena said. Childhood was fairly shitty. But not in any original or interesting way.
+
+Yes, Noor said. Uh. I mean, I understand. And I think, with your agreement, that it might be helpful if I refer you on for some therapy sessions with our team of memory –
+
+Sure, sure, Elena said. Why not. I can tell them about how I'm currently trying not to drink, but that's difficult because I live above a cocktail bar. In Fitzrovia. lt's called The Cat and Pigeon. I end up in there every Saturday night, pretty much.
+
+(None of this was appropriate – not at all – but it would have been stupid of Noor to point that out, given that Elena had already identified herself as a person who enjoyed inappropriate things.)
+
+Elena looked at Noor. She pushed her hair back over her shoulders. The sunlight from the shutters sliced her neck.
+
+So, Elena said. If anyone was looking for me. That's where I'd be.
+
+\storybreak
+
+The lowing of the building fades as the wind drops, leaving the grounds nearly silent, except for the occasional clattering wood pigeon, the hiss of the security guards' radios. On the other side of the pines and the tall flint wall that divide the clinic from the town, there will be the noise of cars, and music playing from windows, and the idle chat of the protesters, signs downed, sharing thermos flasks. Soon the gate will start to open, and they'll have to stand at attention, ready for Noor's car to pass.
+
+As Noor drives out, the protesters – for the most part – keep back. They're waving their signs and chanting various slogans. There's a girl aged around six here today, standing with her mother. She's holding a sign that says \qm{Pray to God for Forgiveness.} Noor, against her better judgment, looks at the girl. The girl looks surprised. Then she sticks out her tongue.
+
+Noor edges forward. A couple of wilder-looking protesters jostle around her bumper. Soon a security guard will shoo them off. She turns up the music: Haydn's Orlando Paladino. The chorus inside the car swells; the chorus outside the car vanishes.
+
+The first Nepenthe clinic opened in ’98, or ’99, maybe. Noor can remember the uproar. The ado, the to-do. It wasn't only the protesters: everyone had an opinion on whether or not memories should be deleted. Religious groups worrying over the sanctity of the soul, human rights groups worrying that the technology would be abused by repressive regimes, conspiracy theorists worrying about everything. Journalists, celebrities, MPs, genuine experts, fake experts, genuine angry mobs both online and IRL. Preachers shouting outside the clinic, war veterans shoving the preachers, people turning up apparently from nowhere and throwing bricks.
+
+But as Nepenthe expanded, and reported year-over-year increases in profits – because the majority of people didn't really care about souls or human rights abuse – attendance outside the clinic gates gradually dwindled to no more than ten or so protesters. (Except for one notable day in 2013, when the council announced it was planning to cut down a hundred-year-old tree to build new offices in the center of town. The tree protesters got themselves muddled up with the Nepenthe protesters, but because all the signs said things like \qm{Don't Chainsaw the Past,} and \qm{Respect Our History,} it took a while to work out that there'd been a misunderstanding.)
+
+Those occasions aside, the protesting had gone on peacefully. The regulars tended to be on a first-name basis with security and one another. There were old women on folding chairs, knitting. There was a camaraderie. But now – since the fuckup, the disaster – the clinic gates attract a large and varied crowd. Liberals and reactionaries, Christians and Muslims, concerned parents and anarchists – as likely to shout at one another as they are at the staff.
+
+\qm{Thieves!} It's the same voice as before, closer now. \qm{Liars!}
+
+Noor looks out the window with interest. She sees a man of about sixty, with a beard, holding a sign that says \qm{RASA COVER-UP.} There are already two security guards, in fluorescent orange, on their way over to him. One makes a grab at the sign; the man dodges and darts back, toward Noor's car. The guards follow; the sign is taken, the man gripped by both arms. The crowd boos. Just before the guard can pull the man away, he twists, turning his head backward, and something hits Noor's passenger window. Then, in a violent bustling of hi-vis, the bearded man disappears.
+
+Noor realizes that the thing that hit the window was spit. It sits there at eye level for a second before sliding slowly down the glass. There's a lot of it. How long was this guy preparing it? His one almighty gob.
+
+She turns off the music. As if she's controlling the volume outside, too, the crowd quietens. Perhaps because the security guards are moving among them now, clearing them out of the way of the car perhaps because – like Noor – they were taken aback by the man's vehemence. A line has been crossed, and now they're all waiting to see what happens.
+
+RASA, thinks Noor. She's never heard the word before, and now she's seen it twice in one day.
+
+She squints at the crowd, but the man is gone.
+
+One of the security guards taps on her passenger window. She opens it. \qm{Sorry about that, Dr. Ali,} he says. \qm{We've got it under control now. Everything's under control.} He looks proud, as anyone would if they'd managed to get every single thing under control. \qm{You want someone to clean that for you?}
+
+\qm{It's fine. I need to get the car washed anyway.}
+
+\qm{Right you are. Have a nice evening, Dr. Ali.}
+\end{document}
+

@@ -1,0 +1,273 @@
+%! TeX program = lualatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=30mm,right=30mm,top=28mm,bottom=26mm]{geometry}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+% A typewritten manuscript, not a code listing: keep normal paragraph flow.
+\setmainfont{Courier New}
+\setsansfont{TeX Gyre Heros}
+\newfontfamily\speechheadline{Linux Libertine Display O}
+\usepackage{xcolor}
+\definecolor{speechaccent}{HTML}{70465F}
+\usepackage{tikz}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage{ragged2e}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+
+\usepackage[modulo,pagewise]{lineno}
+\renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+
+% SPEECH SETTINGS — replace these fields and the text below.
+\newcommand{\speechtitle}{I Am Prepared to Die}
+\newcommand{\speechspeaker}{Nelson Mandela}
+\newcommand{\speechoccasion}{Rivonia Trial}
+\newcommand{\speechplace}{Palace of Justice, Pretoria}
+\newcommand{\speechdate}{20 April 1964}
+\newif\ifspeechexcerpt
+\speechexcerpttrue % Use \speechexcerptfalse to hide the excerpt tag.
+\hypersetup{pdftitle={\speechtitle},pdfauthor={\speechspeaker}}
+
+% An open, spoken rhythm rather than a dense book page.
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{7pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{1em}
+\linespread{1.18}
+\raggedbottom
+\clubpenalty=10000
+\widowpenalty=10000
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\sffamily\fontsize{8}{10}\selectfont\color{black!55}\thepage}
+
+% Lectern and microphone, drawn rather than dependent on an icon font.
+\newcommand{\speechornament}{%
+  \begin{tikzpicture}[x=.8mm,y=.8mm,draw=speechaccent,line width=.6pt,
+      line cap=round,line join=round,baseline=0pt]
+    \draw[rounded corners=.65mm] (0,7)--(11,7)--(11,8.5)--(0,8.5)--cycle;
+    \draw[rounded corners=.45mm] (1,7)--(1,0)--(10,0)--(10,7);
+    \draw (3,4.8)--(8,4.8) (3,2.7)--(8,2.7);
+    \draw (10.1,8.5)--(10.1,10.4)--(9.3,11.3);
+    \draw[rounded corners=.4mm] (9.3,11.3)--(8.4,12.2)
+      --(7.7,11.5)--(8.6,10.6)--cycle;
+  \end{tikzpicture}%
+}
+
+% First-page wash ends just below the introduction, independent of its length.
+% Remembered coordinates settle on the second LaTeX run.
+\AddToHookNext{shipout/background}{%
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[speechaccent!6] (current page.north west)
+      rectangle (current page.east |- speechintroend);
+  \end{tikzpicture}%
+}
+
+\begin{document}
+\RaggedRight
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+{\sffamily\fontsize{9}{12}\selectfont\addfontfeatures{LetterSpace=12}%
+\color{speechaccent}\MakeUppercase{\speechspeaker}\par}
+\vspace{3mm}
+% Zero-width placement keeps the ornament wholly in the left margin.
+\noindent\makebox[0pt][r]{%
+  \raisebox{0mm}[0pt][0pt]{\speechornament}\hspace{6mm}}%
+{\speechheadline\fontsize{28}{32}\selectfont\color{speechaccent}‘\speechtitle’\par}
+\ifspeechexcerpt
+  {\sffamily\fontsize{7}{10}\selectfont\addfontfeatures{LetterSpace=10}%
+  \color{speechaccent}EXCERPT\par}
+\fi
+\vspace{2mm}
+{\sffamily\fontsize{9}{13}\selectfont\color{black!65}
+\speechoccasion, \speechplace\\
+\speechdate\par}
+
+% Editorial context: smaller and unboxed, within the opening colour wash.
+\vspace{6mm}
+\begingroup
+\sffamily\fontsize{9.5}{13}\selectfont\color{black!75}
+One of Nelson Mandela's most famous speeches was made at the start of the 1964 trial at which he was found guilty of sabotage and sentenced to life imprisonment. It is known as the Rivonia trial, after the Johannesburg suburb where some of the defendants were arrested. Here are selected excerpts from his three-hour defence - his last public words before he was released from prison in 1990.
+\par
+\endgroup
+\noindent\begin{tikzpicture}[remember picture,overlay]
+  \coordinate (speechintroend) at (0,-4mm);
+\end{tikzpicture}\par
+\vspace{10mm}
+
+\justifying
+\setlength{\parindent}{0pt}
+% Courier has rigid word spaces; allow these (not the letters) to flex.
+\spaceskip=.6em plus .3em minus .1em
+\xspaceskip=\spaceskip
+\hyphenpenalty=50
+\exhyphenpenalty=50
+
+\linenumbers\relax [$\ldots$] I do not however, deny that I planned sabotage. I did not plan it in a spirit of recklessness, nor
+because I have any love of violence. I planned it as a result of a calm and sober
+assessment of the political situation that had arisen after many years of tyranny,
+exploitation, and oppression of my people by the whites.
+
+I admit immediately that I was one of the persons who helped to form Umkhonto we Sizwe
+[armed wing of the African National Congress], and that I played a prominent role in its
+affairs until I was arrested in August 1962.
+
+I, and the others who started the organisation, did so for two reasons.
+
+Firstly, we believed that as a result of government policy, violence by the African people
+had become inevitable, and that unless responsible leadership was given to canalise and
+control the feelings of our people, there would be outbreaks of terrorism which would
+produce an intensity of bitterness and hostility between the various races of this country
+which is not produced even by war.
+
+Secondly, we felt that without violence there would be no way open to the African people
+to succeed in their struggle against the principle of white supremacy. All lawful modes of
+expressing opposition to this principle had been closed by legislation, and we were placed
+in a position in which we had either to accept a permanent state of inferiority, or to defy the
+government.
+
+But the violence which we chose to adopt was not terrorism. Four forms of violence were
+possible. There is sabotage, there is guerrilla warfare, there is terrorism, and there is open
+revolution. We chose to adopt the first method and to exhaust it before taking any other
+decision.
+
+I have always regarded myself, in the first place, as an African patriot. I was born in
+Mthatha, 46 years ago. My guardian was my cousin, who was the acting paramount chief
+of Tembuland, and I am related both to the present paramount chief of Tembuland, Sabata
+Dalindyebo, and to Kaizer Matanzima, the chief minister of the Transkei.
+
+As I understand the state case... the suggestion is that Umkhonto was the inspiration of
+the Communist Party which sought by playing upon imaginary grievances to enrol the
+African people into an army which ostensibly was to fight for African freedom, but in reality
+was fighting for a communist state.
+
+Nothing could be further from the truth. In fact the suggestion is preposterous. Umkhonto
+was formed by Africans to further their struggle for freedom in their own land.
+
+Our fight is against real, and not imaginary, hardships or, to use the language of the state
+prosecutor, so-called hardships. Basically, we fight against two features which are the
+hallmarks of African life in South Africa and which are entrenched by legislation which we
+seek to have repealed.
+
+These features are poverty and lack of human dignity, and we do not need communists or
+so-called agitators to teach us about these things.
+
+South Africa is the richest country in Africa, and could be one of the richest countries in the
+world. But it is a land of extremes and remarkable contrasts. The whites enjoy what may
+well be the highest standard of living in the world, whilst Africans live in poverty and
+misery.
+
+Poverty goes hand in hand with malnutrition and disease. The incidence of malnutrition
+and deficiency diseases is very high amongst Africans. Tuberculosis, pellagra,
+kwashiorkor, gastro-enteritis, and scurvy bring death and destruction of health. The
+incidence of infant mortality is one of the highest in the world.
+
+The complaint of Africans, however, is not only that they are poor and the whites are rich,
+but that the laws which are made by the whites are designed to preserve this situation.
+
+There are two ways to break out of poverty. The first is by formal education, and the
+second is by the worker acquiring a greater skill at his work and thus higher wages. As far
+as Africans are concerned, both these avenues of advancement are deliberately curtailed
+by legislation.
+
+The present government has always sought to hamper Africans in their search for
+education. One of their early acts, after coming into power, was to stop subsidies for
+African school feeding. Many African children who attended schools depended on this
+supplement to their diet. This was a cruel act.
+
+There is compulsory education for all white children at virtually no cost to their parents, be
+they rich or poor. Similar facilities are not provided for the African children, though there
+are some who receive such assistance.
+
+The other main obstacle to the economic advancement of the African is the industrial
+colour-bar under which all the better jobs of industry are reserved for whites only.
+
+The lack of human dignity experienced by Africans is the direct result of the policy of white
+supremacy. White supremacy implies black inferiority. Legislation designed to preserve
+white supremacy entrenches this notion.
+
+Menial tasks in South Africa are invariably performed by Africans. When anything has to
+be carried or cleaned the white man will look around for an African to do it for him, whether
+the African is employed by him or not. Because of this sort of attitude, whites tend to
+regard Africans as a separate breed.
+
+They do not look upon them as people with families of their own; they do not realise that
+they have emotions - that they fall in love like white people do; that they want to be with
+their wives and children like white people want to be with theirs; that they want to earn
+enough money to support their families properly, to feed and clothe them and send them to
+school. And what "house-boy" or "garden-boy" or labourer can ever hope to do this?
+
+Pass laws, which to the Africans are among the most hated bits of legislation in South
+Africa, render any African liable to police surveillance at any time. I doubt whether there is
+a single African male in South Africa who has not at some stage had a brush with the
+police over his pass.
+
+Hundreds and thousands of Africans are thrown into jail each year under pass laws. Even
+worse than this is the fact that pass laws keep husband and wife apart and lead to the
+breakdown of family life.
+
+Poverty and the breakdown of family life have secondary effects. Children wander about
+the streets of the townships because they have no schools to go to, or no money to enable
+them to go to school, or no parents at home to see that they go to school, because both
+parents (if there be two) have to work to keep the family alive.
+
+This leads to a breakdown in moral standards, to an alarming rise in illegitimacy, and to
+growing violence which erupts not only politically, but everywhere. Life in the townships is
+dangerous.
+
+There is not a day that goes by without somebody being stabbed or assaulted. And
+violence is carried out of the townships in the white living areas. People are afraid to walk
+alone in the streets after dark.
+
+Africans want to be paid a living wage. Africans want to perform work which they are
+capable of doing, and not work which the government declares them to be capable of.
+Africans want to be allowed to live where they obtain work, and not be endorsed out of an
+area because they were not born there.
+
+Africans want to be allowed to own land in places where they work, and not to be obliged
+to live in rented houses which they can never call their own. Africans want to be part of the
+general population, and not confined to living in their own ghettos.
+
+African men want to have their wives and children to live with them where they work, and
+not be forced into an unnatural existence in men's hostels. African women want to be with
+their men folk and not be left permanently widowed in the Reserves.
+
+Africans want to be allowed out after 11 o'clock at night and not to be confined to their
+rooms like little children. Africans want to be allowed to travel in their own country and to
+seek work where they want to and not where the Labour Bureau tells them to.
+
+Africans want a just share in the whole of South Africa; they want security and a stake in
+society.
+
+Above all, we want equal political rights, because without them our disabilities will be
+permanent. I know this sounds revolutionary to the whites in this country, because the
+majority of voters will be Africans. This makes the white man fear democracy.
+
+But this fear cannot be allowed to stand in the way of the only solution which will
+guarantee racial harmony and freedom for all. It is not true that the enfranchisement of all
+will result in racial domination.
+
+Political division, based on colour, is entirely artificial and, when it disappears, so will the
+domination of one colour group by another. The ANC has spent half a century fighting
+against racialism. When it triumphs it will not change that policy.
+
+This then is what the ANC is fighting. Their struggle is a truly national one. It is a struggle
+of the African people, inspired by their own suffering and their own experience. It is a
+struggle for the right to live.
+
+% Keep the closing movement together without imposing artificial line breaks.
+\Needspace{12\baselineskip}
+During my lifetime I have dedicated myself to this struggle of the African people. I have
+fought against white domination, and I have fought against black domination.
+
+I have cherished the ideal of a democratic and free society in which all persons live
+together in harmony and with equal opportunities.
+
+It is an ideal which I hope to live for and to achieve. But if needs be, it is an ideal for which
+I am prepared to die.
+
+\end{document}
