@@ -1,0 +1,304 @@
+%! TeX program = lualatex
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[margin=11mm,bottom=14mm]{geometry}
+\usepackage[english]{babel}
+\usepackage{fontspec}
+\setmainfont{EB Garamond}
+\newfontfamily\headlinefont{Plantin MT Pro Bold Condensed}
+\setsansfont{TeX Gyre Heros}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\graphicspath{{./img/}}
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{79B6C6}
+\definecolor{imagegreen}{HTML}{D1DFBC}
+\usepackage{tikz}
+\usepackage{flowfram}
+\usepackage{lettrine}
+\usepackage{microtype}
+\usepackage[modulo,running]{lineno}
+% Line numbering triggers output cycles across all four flow frames per page.
+\maxdeadcycles=1000
+\modulolinenumbers[5]
+  \renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+
+% Reset displayed numbers at each physical page without pagewise aux lookups.
+% Keep the underlying running counter unchanged.
+\newcount\newsnumberpage
+\newcount\newsnumberoffset
+\makeatletter
+\newcommand{\newsLineNumber}{%
+  \begingroup
+    \ifnum\newsnumberpage=\c@page\else
+      \global\newsnumberpage=\c@page
+      \global\newsnumberoffset=\numexpr\c@linenumber-1\relax
+    \fi
+    \advance\c@linenumber by -\newsnumberoffset
+    % Show numbers only in the leftmost flow frame of each page.
+    \ifnum\value{thisframe}=1
+      \hss\linenumberfont\LineNumber\hspace{\linenumbersep}%
+    \else
+      \ifnum\value{thisframe}=5
+        \hss\linenumberfont\LineNumber\hspace{\linenumbersep}%
+      \fi
+    \fi
+  \endgroup
+}
+\makeatother
+\setmakelinenumbers\newsLineNumber*
+
+% Shared baseline grid for article text (including subsection headings).
+\newlength{\newsleading}
+\setlength{\newsleading}{10.5pt}
+\setlength{\topskip}{9.5pt}
+\ExplSyntaxOn
+\NewDocumentCommand{\newsgridsnap}{m}{%
+  \dim_set:Nn #1
+    {\int_div_truncate:nn
+      {\dim_to_decimal_in_sp:n {#1}}
+      {\dim_to_decimal_in_sp:n {\newsleading}}\newsleading}
+}
+\ExplSyntaxOff
+% Headings use the body leading, with one complete blank grid row above.
+% Keeping heading lines in the normal vertical list also works at frame breaks.
+\makeatletter
+\renewcommand{\subsection}[1]{%
+  \par\addpenalty{\@secpenalty}\addvspace{\newsleading}%
+  \begingroup
+    \sffamily\bfseries\fontsize{8}{\newsleading}\selectfont
+    \interlinepenalty=10000
+    \noindent\strut #1\strut\par
+  \endgroup
+  \nobreak\@afterindentfalse\@afterheading
+}
+\makeatother
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\renewcommand{\footrule}{%
+  \ifnum\value{page}=\getpagerefnumber{LastPage}\relax
+    \kern-3pt\hrule width 0.4\newscolumnwidth height \footrulewidth\kern 2.7pt
+  \fi}
+\setlength{\footskip}{9mm}
+\fancyfoot[L]{%
+  \ifnum\value{page}=\getpagerefnumber{LastPage}\relax
+    \fontsize{7}{8}\selectfont Source: \url{\articlesource}%
+  \fi}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{3mm}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+
+% Small outline newspaper ornament, in the same quiet style as a book icon.
+\newcommand{\newsornament}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,draw=black!60,line width=0.25pt,
+      line cap=round,line join=round]
+    \draw (0,6)--(9,6)--(9,0.75)
+      .. controls (9,-0.25) and (10.5,-0.25) .. (10.5,0.75)
+      --(10.5,4.5)--(9,4.5);
+    \draw (0,6)--(0,0)--(9.75,0);
+    \draw[line width=0.4pt] (1.2,4.8)--(7.8,4.8);
+    \draw (1.2,3.6)--(3.9,3.6) (5.1,3.6)--(7.8,3.6);
+    \draw (1.2,2.4)--(3.9,2.4) (5.1,2.4)--(7.8,2.4);
+    \draw (1.2,1.2)--(3.9,1.2) (5.1,1.2)--(7.8,1.2);
+  \end{tikzpicture}%
+}
+
+% Layout internals: executed after the editable settings below.
+\newcommand{\setupnewsarticle}{%
+% Frame geometry: one continuous left column, then three columns below the
+% feature panel. Subsequent pages use four full-height columns automatically.
+% Coordinates are measured from the bottom-left of the text area.
+\newlength{\newspageheight}
+\setlength{\newspageheight}{\textheight}
+\newlength{\newscolumnwidth}
+\setlength{\newscolumnwidth}{\dimexpr(\textwidth-3\columnsep)/4\relax}
+\newlength{\featurewidth}
+\setlength{\featurewidth}{\dimexpr\textwidth-\newscolumnwidth-\columnsep\relax}
+\newlength{\lowerheight}
+% Reserve the original panel spacing plus any extra headline lines.
+% The title may wrap naturally or contain an explicit \\ line break.
+\newsavebox{\newsheadlinebox}
+\sbox{\newsheadlinebox}{%
+  \parbox{\featurewidth}{\raggedright
+    \headlinefont\fontsize{34}{34}\selectfont\articletitle\par}}%
+\newlength{\newsheadlineextra}
+\setlength{\newsheadlineextra}{\dimexpr
+  \ht\newsheadlinebox+\dp\newsheadlinebox-34pt\relax}
+\ifdim\newsheadlineextra<0pt
+  \setlength{\newsheadlineextra}{0pt}
+\fi
+\setlength{\lowerheight}{\dimexpr
+  \newspageheight-\articleimageheight-39mm-\newsheadlineextra\relax}
+% All flow-frame tops fall on the same grid, measured from their shared bottom.
+% Rounding down leaves a little extra clearance below the feature panel.
+\newsgridsnap{\lowerheight}
+\newlength{\openingheight}
+\setlength{\openingheight}{\dimexpr\newspageheight-25mm\relax}
+\newsgridsnap{\openingheight}
+\newlength{\continuationheight}
+\setlength{\continuationheight}{\newspageheight}
+\newsgridsnap{\continuationheight}
+\newflowframe[1]{\newscolumnwidth}{\openingheight}{0pt}{0pt}[opening]
+\newflowframe[1]{\newscolumnwidth}{\lowerheight}{\dimexpr\newscolumnwidth+\columnsep\relax}{0pt}[lower-two]
+\newflowframe[1]{\newscolumnwidth}{\lowerheight}{\dimexpr2\newscolumnwidth+2\columnsep\relax}{0pt}[lower-three]
+\newflowframe[1]{\newscolumnwidth}{\lowerheight}{\dimexpr3\newscolumnwidth+3\columnsep\relax}{0pt}[lower-four]
+\newflowframe[>1]{\newscolumnwidth}{\continuationheight}{0pt}{0pt}[continuation-one]
+\newflowframe[>1]{\newscolumnwidth}{\continuationheight}{\dimexpr\newscolumnwidth+\columnsep\relax}{0pt}[continuation-two]
+\newflowframe[>1]{\newscolumnwidth}{\continuationheight}{\dimexpr2\newscolumnwidth+2\columnsep\relax}{0pt}[continuation-three]
+\newflowframe[>1]{\newscolumnwidth}{\continuationheight}{\dimexpr3\newscolumnwidth+3\columnsep\relax}{0pt}[continuation-four]
+\newstaticframe[1]{\newscolumnwidth}{25mm}{0pt}{\dimexpr\newspageheight-25mm\relax}[byline]
+\newstaticframe[1]{\featurewidth}{\dimexpr\newspageheight-\lowerheight-5mm\relax}{\dimexpr\newscolumnwidth+\columnsep\relax}{\dimexpr\lowerheight+5mm\relax}[feature]
+
+% Add the image named above to replace the placeholder.
+\newcommand{\articleimage}{%
+  \IfFileExists{\articleimagefile}{%
+    % Scale to cover the frame, then crop around the image centre.
+    \begin{tikzpicture}
+      \path[use as bounding box] (0,0) rectangle (\linewidth,\articleimageheight);
+      \begin{pgfinterruptboundingbox}
+        \clip (0,0) rectangle (\linewidth,\articleimageheight);
+        \node[inner sep=0pt] at (.5\linewidth,.5\articleimageheight) {%
+          \adjustbox{min size={\linewidth}{\articleimageheight}}{%
+            \includegraphics[width=\linewidth]{\articleimagefile}}};
+      \end{pgfinterruptboundingbox}
+    \end{tikzpicture}%
+  }{%
+    \begin{tikzpicture}
+      \path[fill=imagegreen] (0,0) rectangle (\linewidth,\articleimageheight);
+      \node[text=black!45,font=\sffamily\small,align=center]
+        at (.5\linewidth,.5\articleimageheight) {ARTICLE IMAGE\\[4pt]\footnotesize Add img/newsarticle-hero.jpg};
+    \end{tikzpicture}%
+  }%
+}
+
+\setstaticcontents*[valign=t]{byline}{%
+  \centering
+
+  \newsornament\par
+  \vspace{3mm}
+
+  {\sffamily\bfseries\fontsize{8}{10}\selectfont\MakeUppercase{\articleauthor}\par}
+  \vspace{2mm}
+  {\color{accent}\rule{24mm}{1.2pt}\par}
+  \vspace{2mm}
+  {\itshape\articledate\par}
+  \vspace{2mm}
+}
+\setstaticcontents*[valign=t]{feature}{%
+  \centering
+  \articleimage\par
+  \vspace{1mm}
+  {\raggedleft\sffamily\fontsize{6}{7}\selectfont\MakeUppercase{\articleimagecredit}\par}
+  \vspace{5mm}
+  \raggedright
+  {\sffamily\bfseries\MakeUppercase{\articlecategory}\enspace\textcolor{accent}{\textbullet}\enspace}%
+  \articlestandfirst\par
+  \vspace{4mm}
+  {\headlinefont\fontsize{34}{34}\selectfont\articletitle\par}
+}
+} % End of layout internals.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ARTICLE SETTINGS — edit these fields and the article body below.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\articletitle}{How We Feel About Robots That Feels}
+\newcommand{\articleauthor}{Louisa Hall}
+\newcommand{\articledate}{November/December, 2017}
+\newcommand{\articlecategory}{Science}
+\newcommand{\articlestandfirst}{As robots become smart enough to detect our feelings and respond appropriately, they could have something like emotions of their own. But that won"t necessarily make them more like humans.}
+\newcommand{\articleimagefile}{../../imgs/robot.png}
+\newcommand{\articleimagecredit}{}
+\newcommand{\articlesource}{https://www.technologyreview.com/2017/10/24/148259/how-we-feel-about-robots-that-feel/}
+
+% PAGE-FIT CONTROL (manual): increase for a taller image / less text space;
+% decrease for a shorter image / more text space. Crop and columns follow.
+\newlength{\articleimageheight}
+\setlength{\articleimageheight}{162mm}
+
+\setupnewsarticle % Apply the settings; leave this line unchanged.
+\begin{document}
+\fontsize{9.5}{\newsleading}\selectfont
+% Preserve the grid rather than adding emergency interline glue.
+\lineskiplimit=-1000pt
+% ARTICLE BODY: no manual column breaks or layout blocks are needed here.
+
+\linenumbers\lettrine[lines=4,lhang=0.05,nindent=0pt]{O}{ctavia}, a humanoid robot designed to fight fires on Navy ships, has mastered an impressive range of facial expressions.
+
+When she’s turned off, she looks like a human-size doll. She has a smooth white face with a snub nose. Her plastic eyebrows sit evenly on her forehead like two little capsized canoes.
+
+When she’s on, however, her eyelids fly open and she begins to display emotion. She can nod her head in a gesture of understanding; she can widen her eyes and lift both her eyebrows in a convincing semblance of alarm; or she can cock her head to one side and screw up her mouth, replicating human confusion. To comic effect, she can even arch one eyebrow and narrow the opposite eye while tapping her metal fingers together, as though plotting acts of robotic revenge.
+
+But Octavia’s range of facial expressions isn’t her most impressive trait. What’s amazing is that her emotional affect is an accurate response to her interactions with humans. She looks pleased, for instance, when she recognizes one of her teammates. She looks surprised when a teammate gives her a command she wasn’t expecting. She looks confused if someone says something she doesn’t understand.
+
+She can show appropriate emotional affect because she processes massive amounts of information about her environment. She can see, hear, and touch. She takes visual stock of her surroundings using the two cameras built into her eyes and analyzes characteristics like facial features, complexion, and clothing. She can detect people’s voices, using four microphones and a voice-recognition program called Sphinx. She can identify 25 different objects by touch, having learned them by using her fingers to physically manipulate them into various possible positions and shapes. Taken together, these perceptual skills form a part of her “embodied cognitive architecture,“ which allows her – according to her creators at the Navy Center for Applied Research in Artificial Intelligence – to “think and act in ways similar to people.“
+
+That’s an exciting claim, but it’s not necessarily shocking. We’re accustomed to the idea of machines acting like people. Automatons created in 18th-century France could dance, keep time, and play the drums, the dulcimer, or the piano. As a kid growing up in the 1980s, I for some reason coveted a doll advertised for the ability to pee in her pants.
+
+We’re even accustomed to the idea of machines thinking in ways that remind us of humans. Many of our long-cherished high-water marks for human cognition – the ability to beat a grandmaster at chess, for example, or to compose a metrically accurate sonnet – have been met and surpassed by computers.
+
+Octavia’s actions, however – the fearful widening of her eyes, the confused furrow of her plastic eyebrows – seem to go a step further. They imply that in addition to thinking the way we think, she’s also feeling human emotions.
+
+That’s not really the case: Octavia’s emotional affect, according to Gregory Trafton, who leads the Intelligent Systems Section at the Navy AI center, is merely meant to demonstrate the kind of thinking she’s doing and make it easier for people to interact with her. But it’s not always possible to draw a line between thinking and feeling. As Trafton acknowledges, “It’s clear that people’s thoughts and emotions are different but impact each other.“ And if, as he says, “emotions influence cognition and cognition influences emotion,“ Octavia’s ability to think, reason, and perceive points to some of the bigger questions that will accompany the rise of intelligent machines. At what point will machines be smart enough to feel something? And how would we really know?
+
+\subsection{Personalized feelings}
+
+Octavia is programmed with theory of mind, meaning that she can anti­cipate the mental states of her human teammates. She understands that people have potentially conflicting beliefs or intentions. When Octavia is given a command that differs from her expectations, she runs simulations to ascertain what the teammate who gave the command might be thinking, and why that person thinks this unexpected goal is valid. She does this by going through her own models of the world but altering them slightly, hoping to find one that leads to the stated goal. When she tilts her head to one side and furrows her eyebrows, it’s to signal that she’s running these simulations, trying to better understand her teammate’s beliefs.
+
+Octavia isn’t programmed with emotional models. Her theory of mind is a cognitive pattern. But it functions a lot like empathy, that most cherished of all human emotions.
+
+Other robot makers skirt the issue of their machines’ emotional intelligence. SoftBank Robotics, for instance, which sells Pepper – a “pleasant and likeable“ humanoid robot built to serve as a human companion – claims that Pepper can “perceive human emotion,“ adding that “Pepper loves to interact with you, Pepper wants to learn more about your tastes, your habits, and quite simply who you are.“ But though Pepper might have the ability to recognize human emotions, and though Pepper might be capable of responding with happy smiles or expressions of sadness, no one’s claiming that Pepper actually feels such emotions.
+
+What would it take for a robot creator to claim that? For one thing, we still don’t know everything that’s involved in feeling emotions.
+
+In recent years, revolutions in psychology and neuroscience have radically redefined the very concept of emotion, making it even more difficult to pin down and describe. According to scientists such as the psychologist Lisa Feldman Barrett, a professor at Northeastern University, it is becoming increasingly clear that our emotions vary widely depending on the culture we’re raised in. They even vary widely within an individual in different situations. In fact, though we share the general feelings that make up what’s known as “affect“ (pleasure, displeasure, arousal, and calmness) with most other humans and many other animals, our more acute and specific emotions vary more than they follow particular norms. Fear, for instance, is a culturally agreed-upon concept, but it plays out in our bodies in myriad ways. It’s inspired by different stimuli, it manifests differently in our brains, and it’s expressed in different ways on our faces. There’s no single “fear center“ or “fear circuit“ in the brain, just as there’s no reliably fearful facial expression: we all process and display our fear in radically different ways, depending on the situation – ways that, through interactions with other people, we learn to identify or label as “fear.“
+
+When we talk about fear, then, we’re talking about a generalized umbrella concept rather than something that comes out of a specific part of the brain. As Barrett puts it, we construct emotions on the spot through an interplay of bodily systems. So how can we expect programmers to accurately model human emotion in robots?
+
+\subsection{Good soldiers}
+
+There are moral quandaries, as well, around programming robots to have emotions. These issues are especially well demonstrated by military robots that, like Octavia, are designed to be sent into frightening, painful, or potentially lethal situations in place of less dispensable human teammates.
+
+At a 2017 conference sponsored by the Army’s somewhat alarmingly titled Mad Scientist Initiative, Lieutenant General Kevin Mangum, the deputy commander for Army Training and Doctrine Command, specified that such robots should and will be autonomous. “As we look at our increasingly complex world, there’s no doubt that robotics, autonomous systems, and artificial intelligence will play a role,“ said Mangum. The 2017 Army Robotic and Autonomous Systems Strategy predicts full integration of autonomous systems by 2040, replacing today’s bomb-disposal robots and other machines that are remotely operated by humans.
+
+When these robots can act and think on their own, should they, like Octavia, be programmed with the semblance of human emotion? Should they be programmed to actually have human emotion? If we’re sending them into battle, should they not only think but feel alongside their human companions?
+
+On the one hand, of course not: if we’re designing robots with the express aim of exposing them to danger, it would be sadistic to give them the capacity to suffer terror, trauma, or pain.
+
+On the other hand, however, if emotion affects intelligence and vice versa, could we be sure that a robot with no emotion would make a good soldier? What if the lack of emotion leads to stupid decisions, unnecessary risks, or excessively cruel retribution? Might a robot with no emotion decide that the intelligent decision would be to commit what a human soldier would feel was a war crime? Or would a robot with no access to fear or anger make better decisions than a human being would in the same frightening and maddening situation?
+
+And then there’s the possibility that if emotion and intelligence are inextricably linked, there’s no such thing as an intelligent robot with no emotion, in which case the question of how much emotion an autonomous robot should have is, in some ways, out of the control of the programmer dealing with intelligence.
+
+\subsection{Emotional attachments}
+
+There’s also the question of how these robots might affect their human teammates.
+
+By 2010, the U.S. Army had begun deploying a fleet of about 3,000 small tactical robots, largely in response to the increasing use of improvised explosive devices in warfare. In place of human soldiers, these robots trundle down exposed roads, into dark caves, and through narrow doorways to detect and disable unpredictable IEDs.
+
+[...]
+
+These men all stress that the robots are tools, not living creatures with feelings. Still, they give their robots human names and tuck them in safely at night. They joke about that impulse, but there’s a slightly disturbing dissonance in the jokes. The servicemen Carpenter interviewed seem to feel somewhat stuck between two feelings: they understand the absurdity of caring for an emotionless robot that is designed to be expendable, but they nevertheless experience the temptation to care, at least a little bit.
+
+Once Carpenter had published her initial interviews, she received more communication from men and women in the military who had developed real bonds with their robots. One former explosive ordnance disposal technician wrote:
+
+“As I am an EOD technician of eight years and three deployments, I can tell you that I found your research extremely interesting. I can completely agree with the other techs you interviewed in saying that the robots are tools and as such I will send them into any situation regardless of the possible danger.
+
+However, during a mission in Iraq in 2006, I lost a robot that I had named “Stacy 4“ (after my wife who is an EOD tech as well). She was an excellent robot that never gave me any issues, always performing flawlessly. ­Stacy 4 was completely destroyed and I was only able to recover very small pieces of the chassis. Immediately following the blast that destroyed ­Stacy 4, I can still remember the feeling of anger, and lots of it. “My beautiful robot was killed …“ was actually the statement I made to my team leader. After the mission was complete and I had recovered as much of the robot as I could, I cried at the loss of her. I felt as if I had lost a dear family member. I called my wife that night and told her about it too. I know it sounds dumb but I still hate thinking about it. I know that the robots we use are just machines and I would make the same decisions again, even knowing the outcome.
+
+I value human life. I value the relationships I have with real people. But I can tell you that I sure do miss Stacy 4, she was a good robot.“
+
+If these are the kinds of testimonials that can be gathered from soldiers interacting with faceless machines like PackBots and Talons, what would you hear from soldiers deployed with robots like Octavia, who see and hear and touch and can anticipate her human teammates’ states of mind?
+
+In popular conversations about the ethics of giving feelings to robots, we tend to focus on the effects of such technological innovation on the robots themselves. Movies and TV shows from Blade Runner to Westworld attend to the trauma that would be inflicted on feeling robots by humans using them for their entertainment. But there is also the inverse to consider: the trauma inflicted on the humans who bond with robots and then send them to certain deaths.
+
+What complicates all this even further is that if a robot like Octavia ends up feeling human emotions, those feelings won’t only be the result of the cognitive architecture she’s given to start with. If they’re anything like our emotions, they’ll evolve in the context of her relationships with her teammates, her place in the world she inhabits.
+
+If her unique robot life, for instance, is spent getting sent into fires by her human companions, or trundling off alone down desert roads laced with explosive devices, her emotions will be different from those experienced by a more sheltered robot, or a more sheltered human. Regardless of the recognizable emotional expressions she makes, if she spends her life in inhumane situations, her emotions might not be recognizably human.
+\end{document}
