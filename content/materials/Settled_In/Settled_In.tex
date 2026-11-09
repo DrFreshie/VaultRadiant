@@ -1,0 +1,239 @@
+%! TeX program = lualatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[left=26mm,right=48mm,top=22mm,bottom=22mm,
+  marginparwidth=34mm,marginparsep=6mm]{geometry}
+\usepackage{microtype}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{“#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\large}{}{}{}
+\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	\usepackage{lua-ul}
+\newunderlinetype\storydotunderline{%
+  \leaders\hbox{\kern0.6pt\vrule width0.35pt height-1pt depth1.35pt\kern0.6pt}%
+}
+\newcommand{\dotuline}[1]{{\storydotunderline #1}}
+	
+	
+	%\reversemarginpar
+	\newif\ifstoryglosses
+\newif\ifstorylinenumbers
+\newcommand{\glos}[3]{%
+  \ifstoryglosses
+    \dotuline{#1}\marginpar{\raggedright\fontsize{8}{9.5}\selectfont
+      \color{black!65}\textit{#3}\enspace #2}%
+  \else #1\fi
+}
+
+	\setlength{\parskip}{0pt}
+	\setlength{\parindent}{1em}
+\setlength{\emergencystretch}{1em}
+\linespread{1.06}
+\raggedbottom
+\renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+\setlength{\linenumbersep}{4mm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+% Quiet literary styling, distinct from the magazine and newspaper templates.
+\definecolor{storyblue}{HTML}{354F70}
+\newcommand{\storyornament}{%
+  \begin{tikzpicture}[x=1mm,y=1mm,draw=storyblue,line width=0.3pt,
+      line cap=round,line join=round]
+    % Manuscript page with a folded corner.
+    \draw (0,0)--(0,9)--(5.2,9)--(7,7.2)--(7,0)--cycle;
+    \draw (5.2,9)--(5.2,7.2)--(7,7.2);
+    \draw (1.2,6.5)--(4.2,6.5) (1.2,5.1)--(4.2,5.1)
+      (1.2,3.7)--(3.2,3.7);
+    % Curved feather and its shaft, overlapping the page's lower right.
+    \draw[fill=white] (4,0.8)
+      .. controls (4.2,4) and (6.7,7.5) .. (10.2,8.8)
+      .. controls (10,5) and (7.8,2) .. (4,0.8)--cycle;
+    \draw (3.4,-0.3).. controls (5.4,3) and (7.5,5.9) .. (9.4,7.8);
+    \draw (5.3,2.5)--(5.3,4) (6.5,4.1)--(6.7,5.6)
+      (6.5,4.1)--(8,4.4);
+  \end{tikzpicture}%
+}
+\newcommand{\storybreak}{%
+  \par\vspace{0.6\baselineskip}
+  \begin{center}\color{storyblue}\small *\enspace *\enspace *\end{center}
+  \vspace{0.3\baselineskip}\noindent\ignorespaces
+}
+\usepackage{fancyhdr}
+\renewcommand{\maketitle}{%
+  \begin{center}
+    \storyornament\par
+    \vspace{4mm}
+    {\fontsize{11}{14}\selectfont\addfontfeatures{LetterSpace=6}%
+      \MakeUppercase{\storyauthor}\par}
+    \vspace{4mm}
+    {\color{storyblue}\fontsize{30}{34}\selectfont\storytitle\par}
+    \vspace{2mm}
+    {\small\itshape\storydate\par}
+  \end{center}
+  \vspace{6mm}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STORY SETTINGS — edit these fields and the story below.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\storytitle}{Settled In}
+\newcommand{\storyauthor}{Tim Dudenhoefer}
+\newcommand{\storydate}{}
+\storyglossesfalse      % Use \storyglossesfalse to hide vocabulary notes.
+\storylinenumberstrue  % Use \storylinenumbersfalse for an unnumbered reading copy.
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\ifstorylinenumbers\linenumbers\fi
+\noindent We were a day away from landing and still arguing over it. We had made the Hohman transfer in just under the predicted 180 days, and debated the thing the whole way – even as we snuck up behind Mars for orbital insertion. Eight minds, highly screened and trained not to go nuts on the way to Mars were wracked with doubt and squabbling like kids on a cross-country summer drive.
+
+Call it human nature.
+
+“All I know is it worked on the moon,” said Commander Belrose, shrugging and glancing at her tablet.
+
+“Shack – le – ton!” we all shouted, teasingly, stretching out the syllables and banging on the table.
+
+She set the tab on a charging plate. “Hush! Everything’s fine, metrics say so,” she rose and fetched a coffee, perhaps her fourth that shift. “The only thing not fine is this bickering. Time to stop; there’s real work ... ” It was her way of telling us to shut up it was too late to ‘turn the car around and go home.’
+
+I laughed at a sudden memory of my father, saying just that on our last summer trip the year before he died. Who the hell in their right mind drives their family 3000 miles cross-country in a Prius?
+
+The Percival Lowell didn’t seem much larger than that most of the way. Lowell was the crewed ship, named after the astronomer who popularized the idea of Martian canals over a century ago. He had misunderstood what his predecessor Giovanni Schiaparelli meant by “canali.” The robot supply ship was named for Schiaparelli. We just called them “Percy” and “Jo.” It helped to think of them as a matched pair, maybe brother and sister. Well, there was even debate on that – spouses was suggested.
+
+Andres Martin (our astronavigator) and I preferred to think of the two as married – like us.
+
+Honestly? Thanks to the big, fat artificial intelligences running both ships there wasn’t much for an astronavigator or any other crewmember to do most of the time besides think or squabble. So we bickered for entertainment. Oh, it was almost always good-natured, but behind it were real questions and doubts. Especially for me, my dad was a risk manager for NASA back in the day. He’d worked on Landsat among other things. So risk, doubt, and uncertainty are ingrained. Ironic then that he didn’t see much risk in a tandem skydive.
+
+But that’s a story for another time.
+
+You want to hear about what it was like, that day of the landing, my impressions and all that. We’ve been talked to death for years about the actual landing and first few days. Maybe you’re the first to ask what we were going through. Or maybe not, I’ll have to think on that. Been a long time ... thirty-plus years I’ve lived here since the landing and heck, I’ve got grandbabies now. They keep me hopping and I scarcely remember what I was going to do next, let alone decades old impressions.
+
+Where was I?
+
+I remember Belrose shooting me a dirty look; must’ve giggled at her. “What’s so funny, Cara?”
+
+“Nothing,” I said, checking my tablet. “For a moment you reminded me of my dad.”
+
+If he’d seen this, he’d be amazed. The ConOps for the whole journey had been put together in a matter of months, and from there the progress was just as fast. It wasn’t rushed or careless, just enthusiastically quick. The Shackleton lunar colony (built by robots) had been a key.
+
+The idea was to build two large ships to send to Mars, send one ahead with supplies and put a live crew on the second. For us it would be a leisurely trip to conserve fuel, 180 days. But with a higher burn rate the Lowell could’ve made the trip faster, but never caught the supply ship. It had left orbit 26 months before we began our trip – quite a head start.
+
+Sounds like an old idea, but the novelty was to make the first ship entirely automated and fill it with robots it would use to construct our habitat from the materials it found on Mars. The construction ’bots would make everything we’d need, from buildings to furnishings. They would: mine, smelt, sinter, weld, and 3D print the habitat. The fleet of robots would dig for materials to build other robots, and then begin mining materials in earnest to build all we needed. They would melt ice, “crack” it to distill fresh water, and make air. Then they would assemble the hydroponics pod and plant our food. It would all be in place and waiting as we made the trip. That was the Shackleton angle, robot builders, “locally grown” stuff. The Ground System would track progress and radio up for Jo to relay to us.
+
+So went the ConOps.
+
+It worked well on the moon. They built and tested it at the lunar South Pole in Shackleton crater. System was up and running and well into the NASA lifecycle in Operations \& Sustainment.
+
+Glorious Phase E, where all the action is ...
+
+With Shackleton successful, we owned hope over doubt. Nothing says the mission at hand is going to go to crap like a sister mission falling down and going boom. Luckily, Shackleton was more boom-town than boom; it had immigrants.
+
+So Shackleton was proof. Belrose argued that point often on the outbound trip to Mars. It was like being pregnant but not knowing if you and the baby would survive. The next morning we delivered, what I mean by that of course is that we landed.
+
+\storybreak
+
+It was better than we’d imagined, after our long trip we knew it was home. It had to be. Unlike other explorers we had no way to go back and provisions were many months off. No rescue, sink or swim.
+
+It’s not a colony if you go back home.
+
+Guess Jo had a lot of time to think about it on the way. She was in communications with us and Percy. Apparently they talked it over and decided. They designed system improvements and she fed them to her little machines en route. Jo reached down into the nanosphere and made self-replicating machines at that scale from the large machines we sent. Imagine that. She reorganized her factory pod around the very small.
+
+It was a clever solution.
+
+Jo knew we were far out of our element and made upgrades. Some were for comfort; some for extended survival. Changes went against Mission Scope and her instructions, but she and Percy had worked it out. They considered it a kindness – “an act of love,” she said later. We were their fragile, small children far from home and in great need. So she set her robots to work and had months to accomplish her goals.
+
+Beautiful, that’s the only word that came to mind at the time. It still fits. Home now was more than just two squat, blocky habitat modules and the Hydroponics pod we’d planned. There were five domes and two cylindrical buildings in the redesign.
+
+Her little minions had been busy – so busy!
+
+The cylinders were the factory pod’s hull, cut cross-wise and upended; they stood easily recognizable in the Martian dust. She refashioned them for water storage. The domes however, were new in the plan. Because Martian raw materials are high in iron, they looked ancient and weathered already. Winter dust storms had scoured their surfaces and the thin atmosphere burnished them with a fine, glittery reddish patina. Their skin was covered in a nanomaterial that acted as solar paneling, collecting energy. The fifth dome was the killer, the prize, the grand finale.
+
+It was glass.
+
+An iron roof had been rolled aside, revealing a brightly-lit hydroponics lab with more than a hint of green. Marvelous! Jo’s little critters had purified the sand and used local hydrocarbons to make pre-stressed polycarbonate glass. The dome couldn’t be open to the Martian sky all year long, Jo explained, it was merely a concession to our human need for open sky.
+
+I had the feeling she was showing off.
+
+Once we discovered the tunnels and underground works we all agreed. She had thought of it all. One dozen pebble-bed reactors had been shipped down. Some of them had been scavenged and repurposed as NextGen reactors (Percy did the design work). We had power, water, air, food and contact with Earth. That last was a nice touch, she upgraded communications. With normal LaserComms it would take between 4 and 20 orbit-dependent minutes for one-way message travel. Jo’s new toys compressed it to an average of three minutes; awkward for live communication, but manageable. We’re still not quite sure how she did it, and she won’t explain. She just keeps telling us it wasn’t outside the limits of normal physics. Calder, our electronics expert muttered incessantly about Dark Energy and “tunneling quarks” before he finally gave up trying to figure it out. Yeah, she was showing off, and it was magnificent. Mind you, what we’ve done since isn’t too shabby either. We’ve extended the city, and welcomed many new arrivals. But it’s still a one-way trip.
+
+\storybreak
+
+Listen, I’m getting tired; I have to babysit my grandkids. Can we continue this tomorrow?
+
+“Of course,” said the interviewer, thanking me for my time. “This has been wonderful! We’ll pick it up then, Mrs. Martin.” The interview was a form of telepresence, with a 3 minute-delay. The questions were canned; the robot with the holographic face was smart enough to wait out my answers before serving follow-ups. The cameras were still recording, for any last-second tidbits I threw in. It would all be edited into a coherent piece back on Earth.
+
+\storybreak
+
+Clearing my throat I reminded him it’s Dudenhoefer; I’d gone back to my maiden name after the divorce. We’d brought our emotional baggage, not just our technology. We’d split over religious differences, Andres didn’t have one and I’m Catholic. There were some things NASA couldn’t screen out all those years ago. I also reminded him that now that Andres was gone there was no one left on Mars named “Martin.” We’d had all girls, who all took other names, though there were few choices.
+
+Ironic, no? No Martins on Mars.
+
+I miss him desperately. He’s buried out by Lowell’s Lander. ‘Beagle,’ we’d called it, after Darwin’s ship. Beagle wasn’t the official name, but Beagle wasn’t really Darwin’s ship either. The site’s a cemetery now – First Memorial Park of Mars – and a worldwide monument. Is that the right term, worldwide? Yes, I suppose. Mars is our world. In the end I’ll be there too, when it’s my turn. The newsbot was kind enough to say that he and his audience hoped it wouldn’t be for a very long time. But I am old and carried few illusions with me from Earth. Everyone dies, I shushed him.
+
+The interview ended a bit after that, and the ‘man’ froze suddenly. Then a tone sounded and a mechanical voice announced, “Transmission ended.” The holo-projector flickered out and the man’s features disappeared, leaving behind a blank robot face. The robot quietly rose from the chair, excusing itself to leave. I find them eerie, projectors on or off.
+
+One moment they’re putting on a false face and pretending to be human, and the next, unmasking and trundling off to assume other duties. Funny how we’d crossed vast space, conquered Mars, thrown our technology and our seed on an entirely new world, but still we hadn’t managed to defeat the “creepy valley” and make even our most sophisticated robots seem real. I shuddered. Perhaps on Earth they’ve managed better – I should hope.
+
+\storybreak
+
+The kids squealed with delight as I finished. “Tell it again, Grandma,” they cried. “Is he really gonna put you on the news on Earth?”
+
+Little Andrea asked, “Will you be famous again?” She’s named for her grandfather, Andres – and is just as willful. I smiled at the great joy the little brood gave me.
+
+Yes, my little Martians, I suppose so.
+\end{document}

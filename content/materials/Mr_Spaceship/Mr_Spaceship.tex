@@ -1,0 +1,685 @@
+%! TeX program = lualatex
+\documentclass[12pt,a5paper]{book}
+	
+\usepackage[margin=15mm]{geometry}
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont{EBGaramond-VariableFont_wght.ttf}[
+    Renderer=HarfBuzz,
+    Numbers=OldStyle,
+    UprightFeatures={RawFeature={axis={wght=400}}},
+    BoldFont={EBGaramond-VariableFont_wght.ttf},
+    BoldFeatures={RawFeature={axis={wght=700}}},
+    ItalicFont={EBGaramond-Italic-VariableFont_wght.ttf},
+    ItalicFeatures={RawFeature={axis={wght=400}}},
+    BoldItalicFont={EBGaramond-Italic-VariableFont_wght.ttf},
+    BoldItalicFeatures={RawFeature={axis={wght=700}}}
+  ]
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+  \newfontfamily\bembo{bembo.otf}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[switch,modulo,pagewise]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\mysectionfont\large}{}{}{}
+	\newcommand{\source}[1]{Source: \href{#1}{#1}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+\setlength{\emergencystretch}{2em}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+  \renewcommand{\linenumberfont}{\normalfont\tiny\color{black!60}}
+
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	% Classic title page, inspired by the photographed Everyman's edition.
+	\usepackage{titling}
+	\definecolor{coverred}{HTML}{963D32}
+\colorlet{coveraccent}{coverred}
+% Scene break from shortstory_classic, in the book's accent colour.
+\newcommand{\storybreak}{%
+  \par\vspace{0.6\baselineskip}
+  \begin{center}\color{coveraccent}\small *\enspace *\enspace *\end{center}
+  \vspace{0.3\baselineskip}\noindent\ignorespaces
+}
+	\newcommand{\coversubtitle}{EXCERPT}
+	\renewcommand{\maketitle}{%
+		\begin{titlepage}
+			\thispagestyle{empty}
+			% Centre on the paper rather than the asymmetric book text block.
+			\noindent\makebox[\textwidth][l]{%
+			\hspace*{\dimexpr-1in-\oddsidemargin\relax}%
+			\begin{minipage}[t][\dimexpr\textheight-\topskip\relax][t]{\paperwidth}
+				\centering
+				\setlength{\parskip}{0pt}
+				\vspace*{5mm}
+				{\fontsize{23}{28}\selectfont\addfontfeatures{LetterSpace=7}\MakeUppercase{\theauthor}\par}
+				\vspace{13mm}
+				{\color{coverred}\fontsize{29}{35}\selectfont\addfontfeatures{LetterSpace=5}\MakeUppercase{\thetitle}\par}
+				\vspace{13mm}
+        \par
+				\vfill
+				% Open-book ornament: curved leaves, layered page edges and a spine.
+				\begin{tikzpicture}[x=1mm,y=1mm,line width=0.35pt,
+					line cap=round,line join=round]
+					% Outer cover and the lower layer of pages.
+					\draw (-6.3,5.7)--(-7,-1.5)--(7,-1.5)--(6.3,5.7);
+					\draw (-5.8,6.5)--(-6.4,-0.5)
+						.. controls (-3.7,-0.3) and (-1.6,-0.8) .. (0,-1.5)
+						.. controls (1.6,-0.8) and (3.7,-0.3) .. (6.4,-0.5)
+						--(5.8,6.5);
+					\draw (-6.3,5.7)--(-5.9,5.7) (-5.8,6.5)--(-5.2,6.5)
+						(6.3,5.7)--(5.9,5.7) (5.8,6.5)--(5.2,6.5);
+					% Curved top leaves and central fold.
+					\draw (-5.1,7.2)
+						.. controls (-2.7,7.5) and (-1,6.9) .. (0,5.5)
+						.. controls (1,6.9) and (2.7,7.5) .. (5.1,7.2)
+						--(5.7,0.3)
+						.. controls (3.5,0.5) and (1.5,0) .. (0,-1.2)
+						.. controls (-1.5,0) and (-3.5,0.5) .. (-5.7,0.3)--cycle;
+					\draw (0,5.5)--(0,-1.2);
+					\draw (0,-1.5) ellipse [x radius=0.7mm,y radius=0.22mm];
+				\end{tikzpicture}\par
+				\vspace{5mm}
+				{\fontsize{10}{14}\selectfont\addfontfeatures{LetterSpace=10}\MakeUppercase{\coversubtitle}\par}
+				\vspace{2mm}
+				{\fontsize{10}{14}\selectfont\thedate\par}
+				\vspace*{8mm}
+			\end{minipage}}\par
+		\end{titlepage}%
+	}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+
+\begin{document}
+\title{Mr. Spaceship}
+\date{1953}
+\author{Philip K. Dick}
+\newgeometry{margin=44mm}
+\maketitle
+\restoregeometry
+\thispagestyle{empty}
+\begingroup
+\fontsize{10}{13}\selectfont
+\noindent\textbf{Introduction}\par\medskip
+The short story takes place in the distant future where humanity has been at war for a long time with an alien lifeform known as ‘Yuks’, who have the upper hand in the war due to their use of organic mines and spaceships that rely on lifeforms rather than mechanics and technology. In order to be a match for the Yuks, Philip Kramer invents a spaceship powered by the reflexes of the human brain. The first challenge, however, is to find a person willing to donate their brain. Kramer learns that his former professor is dying, and they manage to persuade Professor Michael Thomas to donate his brain. He is initially hesitant but curious, and when they let him in on the scientific details, he agrees to do it. On the first test run into space, it turns out that the professor’s knowledge of the spaceship has allowed him to make some changes to the ship, giving his brain control over the spacecraft. When we enter the story, the ship is heading rapidly for the Moon. Kramer is married to Dolores but they are currently separated.
+
+\par
+\endgroup
+\clearpage
+\pagenumbering{arabic}
+\chapter*{}
+\linenumbers The port filled up, as the globe swelled rapidly. The Pilot hurried toward the board, reaching for the controls. All at once the ship jerked. The nose lifted and the ship shot out into space, away from the moon, turning at an oblique angle. The men were thrown to the floor by the sudden change in course. They got to their feet again, speechless, staring at each other.
+
+The Pilot gazed down at the board. “It wasn't me! I didn't touch a thing. I didn't even get to it.”
+
+The ship was gaining speed each moment. Kramer hesitated. “Maybe you better switch it back to manual.”
+
+The Pilot closed the switch. He took hold of the steering controls and moved them experimentally. “Nothing.” He turned around. “Nothing. It doesn't respond.”
+
+No one spoke.
+
+“You can see what has happened,” Kramer said calmly. “The old man won't let go of it, now that he has it. I was afraid of this when I saw the wiring changes. Everything in this ship is centrally controlled, even the cooling system, the hatches, the garbage release. We're helpless.”
+
+“Nonsense.” Gross strode to the board. He took hold of the wheel and turned it. The ship continued on its course, moving away from the moon, leaving it behind.
+
+“Release!” Kramer said into the microphone. “Let go of the controls! We'll take it back. Release.”
+
+“No good,” the Pilot said. “Nothing.” He spun the useless wheel. “It's dead, completely dead.”
+
+“And we're still heading out,” Winter said, grinning foolishly. “We'll be going through the first-line defense belt in a few minutes. If they don't shoot us down –”
+
+“We better radio back.” The Pilot clicked the radio to send. “I'll contact the main bases, one of the observation stations.”
+
+“Better get the defense belt, at the speed we're going. We'll be into it in a minute.”
+
+“And after that,” Kramer said, “we'll be in outer space. He's moving us toward outspace velocity. Is this ship equipped with baths?”
+
+“Baths?” Gross said.
+
+“The sleep tanks. For space-drive. We may need them if we go much faster.”
+
+“But good God, where are we going?” Gross said. “Where – where's he taking us?”
+
+\storybreak
+The Pilot obtained contact. “This is Dwight, on ship,” he said. “We're entering the defense zone at high velocity. Don't fire on us.”
+
+“Turn back,” the impersonal voice came through the speaker. “You're not allowed in the defense zone.”
+
+“We can't. We've lost control.”
+
+“Lost control?”
+
+“This is an experimental ship.”
+
+Gross took the radio. “This is Commander Gross, Security. We're being carried into outer space. There's nothing we can do. Is there any way that we can be removed from this ship?”
+
+A hesitation. “We have some fast pursuit ships that could pick you up if you wanted to jump. The chances are good they'd find you. Do you have space flares?”
+
+“We do,” the Pilot said. “Let's try it.”
+
+“Abandon ship?” Kramer said. “If we leave now we'll never see it again.”
+
+“What else can we do? We're gaining speed all the time. Do you propose that we stay here?”
+
+“No.” Kramer shook his head. “Damn it, there ought to be a better solution.”
+
+“Could you contact him?” Winter asked. “The Old Man? Try to reason with him?”
+
+“It's worth a chance,” Gross said. “Try it.”
+
+“All right.” Kramer took the microphone. He paused a moment. “Listen! Can you hear me? This is Phil Kramer. Can you hear me, Professor. Can you hear me? I want you to release the controls.”
+
+There was silence.
+
+“This is Kramer, Professor. Can you hear me? Do you remember who I am? Do you understand who this is?”
+
+Above the control panel the wall speaker made a sound, a sputtering static. They looked up.
+
+“Can you hear me, Professor? This is Philip Kramer. I want you to give the ship back to us. If you can hear me, release the controls! Let go, Professor. Let go!”
+
+Static. A rushing sound, like the wind. They gazed at each other. There was silence for a moment.
+
+“It's a waste of time,” Gross said.
+
+“No – listen!”
+
+The sputter came again. Then, mixed with the sputter, almost lost in it, a voice came, toneless, without inflection, a mechanical, lifeless voice from the metal speaker in the wall, above their heads.
+
+“... Is it you, Philip? I can't make you out. Darkness ... Who's there? With you ...”
+
+“It's me, Kramer.” His fingers tightened against the microphone handle. “You must release the controls, Professor. We have to get back to Terra. You must.”
+
+Silence. Then the faint, faltering voice came again, a little stronger than before. “Kramer. Everything so strange. I was right, though. Consciousness result of thinking. Necessary result. Cognito ergo sum. Retain conceptual ability. Can you hear me?”
+
+“Yes, Professor –”
+
+“I altered the wiring. Control. I was fairly certain ... I wonder if I can do it. Try ...”
+
+Suddenly the air-conditioning snapped into operation. It snapped abruptly off again. Down the corridor a door slammed. Something thudded. The men stood listening. Sounds came from all sides of them, switches shutting, opening. The lights blinked off; they were in darkness. The lights came back on, and at the same time the heating coils dimmed and faded.
+
+“Good God!” Winter said.
+
+Water poured down on them, the emergency fire-fighting system. There was a screaming rush of air. One of the escape hatches had slid back, and the air was roaring frantically out into space.
+
+The hatch banged closed. The ship subsided into silence. The heating coils glowed into life. As suddenly as it had begun the weird exhibition ceased.
+
+“I can do – everything,” the dry, toneless voice came from the wall speaker. “It is all controlled. Kramer, I wish to talk to you. I've been –been thinking. I haven't seen you in many years. A lot to discuss. You've changed, boy. We have much to discuss. Your wife –”
+
+The Pilot grabbed Kramer's arm. “There's a ship standing off our bow. Look.”
+
+\storybreak
+They ran to the port. A slender pale craft was moving along with them, keeping pace with them. It was signal-blinking.
+
+“A Terran pursuit ship,” the Pilot said. “Let's jump. They'll pick us up. Suits –”
+
+He ran to a supply cupboard and turned the handle. The door opened and he pulled the suits out onto the floor.
+
+“Hurry,” Gross said. A panic seized them. They dressed frantically, pulling the heavy garments over them. Winter staggered to the escape hatch and stood by it, waiting for the others. They joined him, one by one.
+
+“Let's go!” Gross said. “Open the hatch.”
+
+Winter tugged at the hatch. “Help me.”
+
+They grabbed hold, tugging together. Nothing happened. The hatch refused to budge.
+
+“Get a crowbar,” the Pilot said.
+
+“Hasn't anyone got a blaster?” Gross looked frantically around. “Damn it, blast it open!”
+
+“Pull,” Kramer grated. “Pull together.”
+
+“Are you at the hatch?” the toneless voice came, drifting and eddying through the corridors of the ship. They looked up, staring around them. “I sense something nearby, outside. A ship? You are leaving, all of you? Kramer, you are leaving, too? Very unfortunate. I had hoped we could talk. Perhaps at some other time you might be induced to remain.”
+
+“Open the hatch!” Kramer said, staring up at the impersonal walls of the ship. “For God's sake, open it!”
+
+There was silence, an endless pause. Then, very slowly, the hatch slid back. The air screamed out, rushing past them into space.
+
+One by one they leaped, one after the other, propelled away by the repulsive material of the suits. A few minutes later they were being hauled aboard the pursuit ship. As the last one of them was lifted through the port, their own ship pointed itself suddenly upward and shot off at tremendous speed. It disappeared.
+
+Kramer removed his helmet, gasping. Two sailors held onto him and began to wrap him in blankets. Gross sipped a mug of coffee, shivering.
+
+“It's gone,” Kramer murmured.
+
+“I'll have an alarm sent out,” Gross said.
+
+“What's happened to your ship?” a sailor asked curiously. “It sure took off in a hurry. Who's on it?”
+
+“We'll have to have it destroyed,” Gross went on, his face grim. “It's got to be destroyed. There's no telling what it – what he has in mind.”
+
+Gross sat down weakly on a metal bench. “What a close call for us. We were so damn trusting.”
+
+“What could he be planning?” Kramer said, half to himself. “It doesn't make sense. I don't get it.”
+
+\storybreak
+As the ship sped back toward the moon base they sat around the table in the dining room, sipping hot coffee and thinking, not saying very much.
+
+“Look here,” Gross said at last. “What kind of man was Professor Thomas? What do you remember about him?”
+
+Kramer put his coffee mug down. “It was ten years ago. I don't remember much. It's vague.”
+
+He let his mind run back over the years. He and Dolores had been at Hunt College together, in physics and the life sciences. The College was small and set back away from the momentum of modern life. He had gone there because it was his hometown, and his father had gone there before him.
+
+Professor Thomas had been at the College a long time, as long as anyone could remember. He was a strange old man, keeping to himself most of the time. There were many things that he disapproved of, but he seldom said what they were.
+
+“Do you recall anything that might help us?” Gross asked. “Anything that would give us a clue as to what he might have in mind?”
+
+Kramer nodded slowly. “I remember one thing ...”
+
+One day he and the Professor had been sitting together in the school chapel, talking leisurely.
+
+“Well, you'll be out of school, soon,” the Professor had said. “What are you going to do?”
+
+“Do? Work at one of the Government Research Projects, I suppose.”
+
+“And eventually? What's your ultimate goal?”
+
+Kramer had smiled. “The question is unscientific. It presupposes such things as ultimate ends.”
+
+“Suppose instead along these lines, then: What if there were no war and no Government Research Projects? What would you do, then?”
+
+“I don't know. But how can I imagine a hypothetical situation like that? There's been war as long as I can remember. We're geared for war. I don't know what I'd do. I suppose I'd adjust, get used to it.”
+
+The Professor had stared at him. “Oh, you do think you'd get accustomed to it, eh? Well, I'm glad of that. And you think you could find something to do?”
+
+Gross listened intently. “What do you infer from this, Kramer?”
+
+“Not much. Except that he was against war.”
+
+“We're all against war,” Gross pointed out.
+
+“True. But he was withdrawn, set apart. He lived very simply, cooking his own meals. His wife died many years ago. He was born in Europe, in Italy. He changed his name when he came to the United States. He used to read Dante and Milton. He even had a Bible.”
+
+“Very anachronistic, don't you think?”
+
+“Yes, he lived quite a lot in the past. He found an old phonograph and records, and he listened to the old music. You saw his house, how old-fashioned it was.”
+
+“Did he have a file?” Winter asked Gross.
+
+“With Security? No, none at all. As far as we could tell he never engaged in political work, never joined anything or even seemed to have strong political convictions.”
+
+“No,” Kramer agreed. “About all he ever did was walk through the hills. He liked nature.”
+
+“Nature can be of great use to a scientist,” Gross said. “There wouldn't be any science without it.”
+
+“Kramer, what do you think his plan is, taking control of the ship and disappearing?” Winter said.
+
+“Maybe the transfer made him insane,” the Pilot said. “Maybe there's no plan, nothing rational at all.”
+
+“But he had the ship rewired, and he had made sure that he would retain consciousness and memory before he even agreed to the operation. He must have had something planned from the start. But what?”
+
+“Perhaps he just wanted to stay alive longer,” Kramer said. “He was old and about to die. Or –”
+
+“Or what?”
+
+“Nothing.” Kramer stood up. “I think as soon as we get to the moon base I'll make a vidcall to earth. I want to talk to somebody about this.”
+
+“Who's that?” Gross asked.
+
+“Dolores. Maybe she remembers something.”
+
+“That's a good idea,” Gross said.
+
+\storybreak
+“Where are you calling from?” Dolores asked, when he succeeded in reaching her.
+
+“From the moon base.”
+
+“All kinds of rumors are running around. Why didn't the ship come back? What happened?”
+
+“I'm afraid he ran off with it.”
+
+“He?”
+
+“The Old Man. Professor Thomas.” Kramer explained what had happened.
+
+Dolores listened intently. “How strange. And you think he planned it all in advance, from the start?”
+
+“I'm certain. He asked for the plans of construction and the theoretical diagrams at once.”
+
+“But why? What for?”
+
+“I don't know. Look, Dolores. What do you remember about him? Is there anything that might give a clue to all this?”
+
+“Like what?”
+
+“I don't know. That's the trouble.”
+
+On the vidscreen Dolores knitted her brow. “I remember he raised chickens in his back yard, and once he had a goat.” She smiled. “Do you remember the day the goat got loose and wandered down the main street of town? Nobody could figure out where it came from.”
+
+“Anything else?”
+
+“No.” He watched her struggling, trying to remember. “He wanted to have a farm, sometime, I know.”
+
+“All right. Thanks.” Kramer touched the switch. “When I get back to Terra maybe I'll stop and see you.”
+
+“Let me know how it works out.”
+
+He cut the line and the picture dimmed and faded. He walked slowly back to where Gross and some officers of the Military were sitting at a chart table, talking.
+
+“Any luck?” Gross said, looking up.
+
+“No. All she remembers is that he kept a goat.”
+
+“Come over and look at this detail chart.” Gross motioned him around to his side. “Watch!”
+
+Kramer saw the record tabs moving furiously, the little white dots racing back and forth.
+
+“What's happening?” he asked.
+
+“A squadron outside the defense zone has finally managed to contact the ship. They're maneuvering now, for position. Watch.”
+
+The white counters were forming a barrel formation around a black dot that was moving steadily across the board, away from the central position. As they watched, the white dots constricted around it.
+
+“They're ready to open fire,” a technician at the board said. “Commander, what shall we tell them to do?”
+
+Gross hesitated. “I hate to be the one who makes the decision. When it comes right down to it –”
+
+“It's not just a ship,” Kramer said. “It's a man, a living person. A human being is up there, moving through space. I wish we knew what –”
+
+“But the order has to be given. We can't take any chances. Suppose he went over to them, to the yuks.”
+
+Kramer's jaw dropped. “My God, he wouldn't do that.”
+
+“Are you sure? Do you know what he'll do?”
+
+“He wouldn't do that.”
+
+Gross turned to the technician. “Tell them to go ahead.”
+
+“I'm sorry, sir, but now the ship has gotten away. Look down at the board.”
+
+\storybreak
+Gross stared down, Kramer over his shoulder. The black dot had slipped through the white dots and had moved off at an abrupt angle. The white dots were broken up, dispersing in confusion.
+
+“He's an unusual strategist,” one of the officers said. He traced the line. “It's an ancient maneuver, an old Prussian device, but it worked.”
+
+The white dots were turning back. “Too many yuk ships out that far,” Gross said. “Well, that's what you get when you don't act quickly.” He looked up coldly at Kramer. “We should have done it when we had him. Look at him go!” He jabbed a finger at the rapidly moving black dot. The dot came to the edge of the board and stopped. It had reached the limit of the chartered area. “See?”
+
+– Now what? Kramer thought, watching. So the Old Man had escaped the cruisers and gotten away. He was alert, all right; there was nothing wrong with his mind. Or with his ability to control his new body.
+
+Body – The ship was a new body for him. He had traded in the old dying body, withered and frail, for this hulking frame of metal and plastic, turbines and rocket jets. He was strong, now. Strong and big. The new body was more powerful than a thousand human bodies. But how long would it last him? The average life of a cruiser was only ten years. With careful handling he might get twenty out of it, before some essential part failed and there was no way to replace it.
+
+And then, what then? What would he do, when something failed and there was no one to fix it for him? That would be the end. Someplace, far out in the cold darkness of space, the ship would slow down, silent and lifeless, to exhaust its last heat into the eternal timelessness of outer space. Or perhaps it would crash on some barren asteroid, burst into a million fragments.
+
+It was only a question of time.
+
+“Your wife didn't remember anything?” Gross said.
+
+“I told you. Only that he kept a goat, once.”
+
+“A hell of a lot of help that is.”
+
+Kramer shrugged. “It's not my fault.”
+
+“I wonder if we'll ever see him again.” Gross stared down at the indicator dot, still hanging at the edge of the board. “I wonder if he'll ever move back this way.”
+
+“I wonder, too,” Kramer said.
+
+\storybreak
+That night Kramer lay in bed, tossing from side to side, unable to sleep. The moon gravity, even artificially increased, was unfamiliar to him and it made him uncomfortable. A thousand thoughts wandered loose in his head as he lay, fully awake.
+
+What did it all mean? What was the Professor's plan? Maybe they would never know. Maybe the ship was gone for good; the Old Man had left forever, shooting into outer space. They might never find out why he had done it, what purpose – if any – had been in his mind.
+
+Kramer sat up in bed. He turned on the light and lit a cigarette. His quarters were small, a metal-lined bunk room, part of the moon station base.
+
+The Old Man had wanted to talk to him. He had wanted to discuss things, hold a conversation, but in the hysteria and confusion all they had been able to think of was getting away. The ship was rushing off with them, carrying them into outer space. Kramer set his jaw. Could they be blamed for jumping? They had no idea where they were being taken, or why. They were helpless, caught in their own ship, and the pursuit ship standing by waiting to pick them up was their only chance. Another half hour and it would have been too late.
+
+But what had the Old Man wanted to say? What had he intended to tell him, in those first confusing moments when the ship around them had come alive, each metal strut and wire suddenly animate, the body of a living creature, a vast metal organism?
+
+It was weird, unnerving. He could not forget it, even now. He looked around the small room uneasily. What did it signify, the coming to life of metal and plastic? All at once they had found themselves inside a living creature, in its stomach, like Jonah inside the whale.
+
+It had been alive, and it had talked to them, talked calmly and rationally, as it rushed them off, faster and faster into outer space. The wall speaker and circuit had become the vocal cords and mouth, the wiring the spinal cord and nerves, the hatches and relays and circuit breakers the muscles.
+
+They had been helpless, completely helpless. The ship had, in a brief second, stolen their power away from them and left them defenseless, practically at its mercy. It was not right; it made him uneasy. All his life he had controlled machines, bent nature and the forces of nature to man and man's needs. The human race had slowly evolved until it was in a position to operate things, run them as it saw fit. Now all at once it had been plunged back down the ladder again, prostrate before a Power against which they were children.
+
+Kramer got out of bed. He put on his bathrobe and began to search for a cigarette. While he was searching, the vidphone rang.
+
+He snapped the vidphone on.
+
+“Yes?”
+
+The face of the immediate monitor appeared. “A call from Terra, Mr. Kramer. An emergency call.”
+
+“Emergency call? For me? Put it through.” Kramer came awake, brushing his hair back out of his eyes. Alarm plucked at him.
+
+From the speaker a strange voice came. “Philip Kramer? Is this Kramer?”
+
+“Yes. Go on.”
+
+“This is General Hospital, New York City, Terra. Mr. Kramer, your wife is here. She has been critically injured in an accident. Your name was given to us to call. Is it possible for you to –”
+
+“How badly?” Kramer gripped the vidphone stand. “Is it serious?”
+
+“Yes, it's serious, Mr. Kramer. Are you able to come here? The quicker you can come the better.”
+
+“Yes.” Kramer nodded. “I'll come. Thanks.”
+
+\storybreak
+The screen died as the connection was broken. Kramer waited a moment. Then he tapped the button. The screen relit again. “Yes, sir,” the monitor said.
+
+“Can I get a ship to Terra at once? It's an emergency. My wife –”
+
+“There's no ship leaving the moon for eight hours. You'll have to wait until the next period.”
+
+“Isn't there anything I can do?”
+
+“We can broadcast a general request to all ships passing through this area. Sometimes cruisers pass by here returning to Terra for repairs.”
+
+“Will you broadcast that for me? I'll come down to the field.”
+
+“Yes, sir. But there may be no ship in the area for a while. It's a gamble.” The screen died.
+
+Kramer dressed quickly. He put on his coat and hurried to the lift. A moment later he was running across the general receiving lobby, past the rows of vacant desks and conference tables. At the door the sentries stepped aside and he went outside, onto the great concrete steps.
+
+The face of the moon was in shadow. Below him the field stretched out in total darkness, a black void, endless, without form. He made his way carefully down the steps and along the ramp along the side of the field, to the control tower. A faint row of red lights showed him the way.
+
+Two soldiers challenged him at the foot of the tower, standing in the shadows, their guns ready.
+
+“Kramer?”
+
+“Yes.” A light was flashed in his face.
+
+“Your call has been sent out already.”
+
+“Any luck?” Kramer asked.
+
+“There's a cruiser nearby that has made contact with us. It has an injured jet and is moving slowly back toward Terra, away from the line.”
+
+“Good.” Kramer nodded, a flood of relief rushing through him. He lit a cigarette and gave one to each of the soldiers. The soldiers lit up.
+
+“Sir,” one of them asked, “is it true about the experimental ship?”
+
+“What do you mean?”
+
+“It came to life and ran off?”
+
+“No, not exactly,” Kramer said. “It had a new type of control system instead of the Johnson units. It wasn't properly tested.”
+
+“But sir, one of the cruisers that was there got up close to it, and a buddy of mine says this ship acted funny. He never saw anything like it. It was like when he was fishing once on Terra, in Washington State, fishing for bass. The fish were smart, going this way and that –”
+
+“Here's your cruiser,” the other soldier said. “Look!”
+
+An enormous vague shape was setting slowly down onto the field. They could make nothing out but its row of tiny green blinkers. Kramer stared at the shape.
+
+“Better hurry, sir,” the soldiers said. “They don't stick around here very long.”
+
+“Thanks.” Kramer loped across the field, toward the black shape that rose up above him, extended across the width of the field. The ramp was down from the side of the cruiser and he caught hold of it. The ramp rose, and a moment later Kramer was inside the hold of the ship. The hatch slid shut behind him.
+
+As he made his way up the stairs to the main deck the turbines roared up from the moon, out into space.
+
+Kramer opened the door to the main deck. He stopped suddenly, staring around him in surprise. There was nobody in sight. The ship was deserted.
+
+“Good God,” he said. Realization swept over him, numbing him. He sat down on a bench, his head swimming. “Good God.”
+
+The ship roared out into space leaving the moon and Terra farther behind each moment.
+
+And there was nothing he could do.
+
+\storybreak
+“So it was you who put the call through,” he said at last. “It was you who called me on the vidphone, not any hospital on Terra. It was all part of the plan.” He looked up and around him. “And Dolores is really –”
+
+“Your wife is fine,” the wall speaker above him said tonelessly. “It was a fraud. I am sorry to trick you that way, Philip, but it was all I could think of. Another day and you would have been back on Terra. I don't want to remain in this area any longer than necessary. They have been so certain of finding me out in deep space that I have been able to stay here without too much danger. But even the purloined letter was found eventually.”
+
+Kramer smoked his cigarette nervously. “What are you going to do? Where are we going?”
+
+“First, I want to talk to you. I have many things to discuss. I was very disappointed when you left me, along with the others. I had hoped that you would remain.” The dry voice chuckled. “Remember how we used to talk in the old days, you and I? That was a long time ago.”
+
+The ship was gaining speed. It plunged through space at tremendous speed, rushing through the last of the defense zone and out beyond. A rush of nausea made Kramer bend over for a moment.
+
+When he straightened up the voice from the wall went on, “I'm sorry to step it up so quickly, but we are still in danger. Another few moments and we'll be free.”
+
+“How about yuk ships? Aren't they out here?”
+
+“I've already slipped away from several of them. They're quite curious about me.”
+
+“Curious?”
+
+“They sense that I'm different, more like their own organic mines. They don't like it. I believe they will begin to withdraw from this area, soon. Apparently they don't want to get involved with me. They're an odd race, Philip. I would have liked to study them closely, try to learn something about them. I'm of the opinion that they use no inert material. All their equipment and instruments are alive, in some form or other. They don't construct or build at all. The idea of making is foreign to them. They utilize existing forms. Even their ships –”
+
+“Where are we going?” Kramer said. “I want to know where you are taking me.”
+
+“Frankly, I'm not certain.”
+
+“You're not certain?”
+
+“I haven't worked some details out. There are a few vague spots in my program, still. But I think that in a short while I'll have them ironed out.”
+
+“What is your program?” Kramer said.
+
+“It's really very simple. But don't you want to come into the control room and sit? The seats are much more comfortable than that metal bench.”
+
+Kramer went into the control room and sat down at the control board. Looking at the useless apparatus made him feel strange.
+
+“What's the matter?” the speaker above the board rasped.
+
+\storybreak
+Kramer gestured helplessly. “I'm – powerless. I can't do anything. And I don't like it. Do you blame me?”
+
+“No. No, I don't blame you. But you'll get your control back, soon. Don't worry. This is only a temporary expedient, taking you off this way. It was something I didn't contemplate. I forgot that orders would be given out to shoot me on sight.”
+
+“It was Gross' idea.”
+
+“I don't doubt that. My conception, my plan, came to me as soon as you began to describe your project, that day at my house. I saw at once that you were wrong; you people have no understanding of the mind at all. I realized that the transfer of a human brain from an organic body to a complex artificial space ship would not involve the loss of the intellectualization faculty of the mind. When a man thinks, he is.
+
+“When I realized that, I saw the possibility of an age-old dream becoming real. I was quite elderly when I first met you, Philip. Even then my life-span had come pretty much to its end. I could look ahead to nothing but death, and with it the extinction of all my ideas. I had made no mark on the world, none at all. My students, one by one, passed from me into the world, to take up jobs in the great Research Project, the search for better and bigger weapons of war.
+
+“The world has been fighting for a long time, first with itself, then with the Martians, then with these beings from Proxima Centauri, whom we know nothing about. The human society has evolved war as a cultural institution, like the science of astronomy, or mathematics. War is a part of our lives, a career, a respected vocation. Bright, alert young men and women move into it, putting their shoulders to the wheel as they did in the time of Nebuchadnezzar. It has always been so.
+
+“But is it innate in mankind? I don't think so. No social custom is innate. There were many human groups that did not go to war; the Eskimos never grasped the idea at all, and the American Indians never took to it well.
+
+“But these dissenters were wiped out, and a cultural pattern was established that became the standard for the whole planet. Now it has become ingrained in us.
+
+“But if someplace along the line some other way of settling problems had arisen and taken hold, something different than the massing of men and material to –”
+
+“What's your plan?” Kramer said. “I know the theory. It was part of one of your lectures.”
+
+“Yes, buried in a lecture on plant selection, as I recall. When you came to me with this proposition I realized that perhaps my conception could be brought to life, after all. If my theory were right that war is only a habit, not an instinct, a society built up apart from Terra with a minimum of cultural roots might develop differently. If it failed to absorb our outlook, if it could start out on another foot, it might not arrive at the same point to which we have come: a dead end, with nothing but greater and greater wars in sight, until nothing is left but ruin and destruction everywhere.
+
+“Of course, there would have to be a Watcher to guide the experiment, at first. A crisis would undoubtedly come very quickly, probably in the second generation. Cain would arise almost at once.
+
+“You see, Kramer, I estimate that if I remain at rest most of the time, on some small planet or moon, I may be able to keep functioning for almost a hundred years. That would be time enough, sufficient to see the direction of the new colony. After that – Well, after that it would be up to the colony itself.
+
+“Which is just as well, of course. Man must take control eventually, on his own. One hundred years, and after that they will have control of their own destiny. Perhaps I am wrong, perhaps war is more than a habit. Perhaps it is a law of the universe, that things can only survive as groups by group violence.
+
+“But I'm going ahead and taking the chance that it is only a habit, that I'm right, that war is something we're so accustomed to that we don't realize it is a very unnatural thing. Now as to the place! I'm still a little vague about that. We must find the place, still.
+
+“That's what we're doing now. You and I are going to inspect a few systems off the beaten path, planets where the trading prospects are low enough to keep Terran ships away. I know of one planet that might be a good place. It was reported by the Fairchild Expedition in their original manual. We may look into that, for a start.”
+
+The ship was silent.
+
+\storybreak
+Kramer sat for a time, staring down at the metal floor under him. The floor throbbed dully with the motion of the turbines. At last he looked up.
+
+“You might be right. Maybe our outlook is only a habit.” Kramer got to his feet. “But I wonder if something has occurred to you?”
+
+“What is that?”
+
+“If it's such a deeply ingrained habit, going back thousands of years, how are you going to get your colonists to make the break, leave Terra and Terran customs? How about this generation, the first ones, the people who found the colony? I think you're right that the next generation would be free of all this, if there were an –” He grinned. “– An Old Man Above to teach them something else instead.”
+
+Kramer looked up at the wall speaker. “How are you going to get the people to leave Terra and come with you, if by your own theory, this generation can't be saved, it all has to start with the next?”
+
+The wall speaker was silent. Then it made a sound, the faint dry chuckle.
+
+“I'm surprised at you, Philip. Settlers can be found. We won't need many, just a few.” The speaker chuckled again. “I'll acquaint you with my solution.”
+
+At the far end of the corridor a door slid open. There was sound, a hesitant sound. Kramer turned.
+
+“Dolores!”
+
+Dolores Kramer stood uncertainly, looking into the control room. She blinked in amazement. “Phil! What are you doing here? What's going on?”
+
+They stared at each other.
+
+“What's happening?” Dolores said. “I received a vidcall that you had been hurt in a lunar explosion –”
+
+The wall speaker rasped into life. “You see, Philip, that problem is already solved. We don't really need so many people; even a single couple might do.”
+
+Kramer nodded slowly. “I see,” he murmured thickly. “Just one couple. One man and woman.”
+
+“They might make it all right, if there were someone to watch and see that things went as they should. There will be quite a few things I can help you with, Philip. Quite a few. We'll get along very well, I think.”
+
+Kramer grinned wryly. “You could even help us name the animals,” he said. “I understand that's the first step.”
+
+“I'll be glad to,” the toneless, impersonal voice said. “As I recall, my part will be to bring them to you, one by one. Then you can do the actual naming.”
+
+“I don't understand,” Dolores faltered. “What does he mean, Phil? Naming animals. What kind of animals? Where are we going?”
+
+Kramer walked slowly over to the port and stood staring silently out, his arms folded. Beyond the ship a myriad fragments of light gleamed, countless coals glowing in the dark void. Stars, suns, systems. Endless, without number. A universe of worlds. An infinity of planets, waiting for them, gleaming and winking from the darkness.
+
+He turned back, away from the port. “Where are we going?” He smiled at his wife, standing nervous and frightened, her large eyes full of alarm. “I don't know where we are going,” he said. “But somehow that doesn't seem too important right now ... I'm beginning to see the Professor's point, it's the result that counts.”
+
+And for the first time in many months he put his arm around Dolores. At first she stiffened, the fright and nervousness still in her eyes. But then suddenly she relaxed against him and there were tears wetting her cheeks.
+
+“Phil ... do you really think we can start over again – you and I?”
+
+He kissed her tenderly, then passionately.
+
+And the spaceship shot swiftly through the endless, trackless eternity of the void ...
+\end{document}
