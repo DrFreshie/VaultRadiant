@@ -1,3 +1,6 @@
+---
+draft: true
+---
 # Anthology design experiments
 
 Nine complete texts, presented as different parts of the same anthology. Originals in `content/materials/` are untouched.

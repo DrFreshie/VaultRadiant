@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1794215174.08692 "Remarks_on_US_Space_Policy.tex" "Remarks_on_US_Space_Policy.pdf" "Remarks_on_US_Space_Policy" 1794215175.21945 0
+["lualatex"] 1794308317.01169 "Remarks_on_US_Space_Policy.tex" "Remarks_on_US_Space_Policy.pdf" "Remarks_on_US_Space_Policy" 1794308318.17546 0
   "/etc/texmf/tex/generic/config/language.dat" 1791372713.68688 3619 3cd2aa409dc607b94ffa00170aec3fa3 ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/cour.luc" 1793105839.7321 153856 6b489ea8906fd7eda6fa665d882bcf5e ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/courbd.luc" 1793105839.8041 156136 2784f192782d8972d222e48f26b98e89 ""
@@ -12,7 +12,7 @@
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/texgyreheros-bolditalic.luc" 1792736387.16641 213989 c49f246944619f51dd111a86faae1a5e ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/texgyreheros-italic.luc" 1792736387.30422 217278 23b05e5572602ddd50070cc7d9815206 ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/fonts/otl/texgyreheros-regular.luc" 1792736387.07154 213462 6f4a41b046f0ff21dbe519e83b988fd6 ""
-  "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1794212101.84651 21906 e4cb5de0c6265973202f0af1f4282b46 ""
+  "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc" 1794217656.34151 24413 fdc2b4f4588f839d369be1fcce54acf9 ""
   "/home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1792703743.79588 150383 94700fef2c0a08112656bac9f2134e82 ""
   "/home/anders/.texlive/texmf-var/web2c/luahbtex/lualatex.fmt" 1791371603 5657694 fffd31466a508c0bf51ca4851b02e67c ""
   "/usr/share/fonts/TTF/cour.ttf" 1791372922 302688 20f23317e90516cbb7d38bd53b3d1c5b ""
@@ -198,9 +198,9 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload-unicode.lua" 1775415801 7918 4272855a25780b80472f3b58edd95e33 ""
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1775415801 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1793559375 328759 3d8ba6ffe9a13491c7e7884ddcacc692 ""
-  "Remarks_on_US_Space_Policy.aux" 1794215175.06197 2562 f804fef2da68093b9658756cde3e2d40 "lualatex"
-  "Remarks_on_US_Space_Policy.out" 1794215174.87867 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
-  "Remarks_on_US_Space_Policy.tex" 1794215170.59237 14420 789d400c781fbb77e91d846656410308 ""
+  "Remarks_on_US_Space_Policy.aux" 1794308317.98822 2568 9ccc00adadd40fe382c0aec9b8d9bbff "lualatex"
+  "Remarks_on_US_Space_Policy.out" 1794308317.79022 0 d41d8cd98f00b204e9800998ecf8427e "lualatex"
+  "Remarks_on_US_Space_Policy.tex" 1794308315.56619 14414 3069715a22696dcb8b4421ba4157e301 ""
   (generated)
   "Remarks_on_US_Space_Policy.aux"
   "Remarks_on_US_Space_Policy.log"

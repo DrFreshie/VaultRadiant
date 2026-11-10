@@ -1,5 +1,7 @@
 ---
 tags: []
+draft: true
+graph: false
 title: Noter
 ---
 

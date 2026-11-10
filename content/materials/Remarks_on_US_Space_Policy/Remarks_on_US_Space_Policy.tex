@@ -9,6 +9,8 @@
 \newfontfamily\speechheadline{Linux Libertine Display O}
 \usepackage{xcolor}
 \definecolor{speechaccent}{HTML}{70465F}
+\newlength{\speechframepadding}
+\setlength{\speechframepadding}{10mm}
 \usepackage{tikz}
 \usepackage[protrusion=true,expansion=false]{microtype}
 \usepackage{ragged2e}
@@ -57,15 +59,6 @@
   \end{tikzpicture}%
 }
 
-% First-page wash ends just below the introduction, independent of its length.
-% Remembered coordinates settle on the second LaTeX run.
-\AddToHookNext{shipout/background}{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \fill[speechaccent!6] (current page.north west)
-      rectangle (current page.east |- speechintroend);
-  \end{tikzpicture}%
-}
-
 \begin{document}
 \RaggedRight
 \hyphenpenalty=10000
@@ -84,20 +77,25 @@
 \fi
 \vspace{2mm}
 {\sffamily\fontsize{9}{13}\selectfont\color{black!65}
+\tikz[remember picture,overlay]\coordinate (speechoccasiontop) at (\dimexpr\linewidth+\speechframepadding\relax,2.5mm);%
 \speechoccasion, \speechplace\\
 \speechdate\par}
 
-% Editorial context: smaller and unboxed, within the opening colour wash.
+% Editorial context: framed below and on the right up to the occasion.
 \vspace{6mm}
 \begingroup
 \sffamily\fontsize{9.5}{13}\selectfont\color{black!75}
 When the speech was given, the Republican George W. Bush was President of the United States of America. Bush announced the goals of the American space programme and a new vision for NASA at the NASA headquarters in Washington D.C.
 \par
 \endgroup
-\noindent\begin{tikzpicture}[remember picture,overlay]
-  \coordinate (speechintroend) at (0,-4mm);
+\vspace{4mm}
+\noindent\begin{tikzpicture}[remember picture]
+  \path[use as bounding box] (0,0) rectangle (\linewidth,0);
+  \draw[overlay,red!45!black,line width=0.3pt]
+    (0,0) -- (\dimexpr\linewidth+\speechframepadding\relax,0)
+    -- (speechoccasiontop);
 \end{tikzpicture}\par
-\vspace{10mm}
+\vspace{6mm}
 
 \justifying
 \setlength{\parindent}{0pt}

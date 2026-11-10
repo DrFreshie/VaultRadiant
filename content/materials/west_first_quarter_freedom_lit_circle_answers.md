@@ -1,8 +1,11 @@
 ---
-title: West — first quarter literature circle support
-type: material
+tags: []
+draft: true
+graph: false
 subject: english
 theme: freedom
+title: West — first quarter literature circle support
+type: material
 ---
 
 # *West* — first quarter support sheet

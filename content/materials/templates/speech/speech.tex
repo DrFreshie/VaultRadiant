@@ -9,6 +9,8 @@
 \newfontfamily\speechheadline{Linux Libertine Display O}
 \usepackage{xcolor}
 \definecolor{speechaccent}{HTML}{70465F}
+\newlength{\speechframepadding}
+\setlength{\speechframepadding}{10mm}
 \usepackage{tikz}
 \usepackage[protrusion=true,expansion=false]{microtype}
 \usepackage{ragged2e}
@@ -57,15 +59,6 @@
   \end{tikzpicture}%
 }
 
-% First-page wash ends just below the introduction, independent of its length.
-% Remembered coordinates settle on the second LaTeX run.
-\AddToHookNext{shipout/background}{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \fill[speechaccent!6] (current page.north west)
-      rectangle (current page.east |- speechintroend);
-  \end{tikzpicture}%
-}
-
 \begin{document}
 \RaggedRight
 \hyphenpenalty=10000
@@ -84,20 +77,26 @@
 \fi
 \vspace{2mm}
 {\sffamily\fontsize{9}{13}\selectfont\color{black!65}
+\tikz[remember picture,overlay]\coordinate (speechoccasiontop) at (\dimexpr\linewidth+\speechframepadding\relax,2.5mm);%
 \speechoccasion, \speechplace\\
 \speechdate\par}
 
-% Editorial context: smaller and unboxed, within the opening colour wash.
+% Editorial context: framed below and on the right up to the occasion.
+% Compile twice to settle the remembered frame coordinates.
 \vspace{6mm}
 \begingroup
 \sffamily\fontsize{9.5}{13}\selectfont\color{black!75}
 One of Nelson Mandela's most famous speeches was made at the start of the 1964 trial at which he was found guilty of sabotage and sentenced to life imprisonment. It is known as the Rivonia trial, after the Johannesburg suburb where some of the defendants were arrested. Here are selected excerpts from his three-hour defence - his last public words before he was released from prison in 1990.
 \par
 \endgroup
-\noindent\begin{tikzpicture}[remember picture,overlay]
-  \coordinate (speechintroend) at (0,-4mm);
+\vspace{4mm}
+\noindent\begin{tikzpicture}[remember picture]
+  \path[use as bounding box] (0,0) rectangle (\linewidth,0);
+  \draw[overlay,red!45!black,line width=0.3pt]
+    (0,0) -- (\dimexpr\linewidth+\speechframepadding\relax,0)
+    -- (speechoccasiontop);
 \end{tikzpicture}\par
-\vspace{10mm}
+\vspace{6mm}
 
 \justifying
 \setlength{\parindent}{0pt}
