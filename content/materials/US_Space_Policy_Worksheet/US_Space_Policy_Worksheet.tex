@@ -1,0 +1,85 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\usepackage{xcolor}
+\definecolor{frbgreenl}{RGB}{162,202,137}
+\definecolor{frbgreen}{RGB}{28,85,66}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+\newcommand{\qm}[1]{``#1''}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb US Space Policy}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\cfoot{\thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]
+    at (current page.north west)
+    {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline,line width=0.6pt] (C) circle (65mm);
+  \draw[bgline,line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\begin{enumerate}
+  \item Which of the rhetorical devices below can you find in the speech (you may look on edaptio)?
+
+  \begin{quote}
+    anaphora – repetition – rhythm – alliteration – metaphor – simile – understatement – oxymoron – litote – hyperbole – antithesis – analogy – allusion – paradox – irony – apostrophe (speaking directly to the listener) – connotations – tricolon – enumeration
+  \end{quote}
+
+  \item Consider the effect of at least six of these devices by finishing one or several of the sentences below:
+  \begin{itemize}
+    \item \qm{By using xx, Bush achieves \ldots}
+    \item \qm{When Bush uses xx, he makes the listeners \ldots}
+    \item \qm{The use of xx in the speech causes \ldots}
+  \end{itemize}
+
+  \item Which modes of persuasion (ethos, pathos, logos) does Bush employ in the speech? Give concrete examples. Which mode is the predominant one? Why do you think he mainly relies on this one?
+
+  \item How does Bush link the American past, present and future and what is the point of making this connection?
+
+  \item Look at the lists of concepts and events on edaptio and discuss if Bush ought to have used more of these in his speech.
+
+  \item Who is the audience of the speech? Is there more than one group and what is Bush’s intention?
+
+  \item Discuss the pros and cons of focusing on the USA in the speech as opposed to international co-operation and mankind in general. To what extent does Bush try to strike a balance between these elements, and do you think he succeeds?
+
+  \item Discuss if there might be other reasons for exploring space and trying to get to Mars than the ones mentioned by Bush. If you can think of other ones, do you think Bush ought to have included these in his speech? Why/why not?
+
+\end{enumerate}
+
+\end{document}
