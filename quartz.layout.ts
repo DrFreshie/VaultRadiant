@@ -64,6 +64,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Graph({
         localGraph: {
           depth: 3,
+          scopeToClass: true,
           // showTags: false,
           removeTags: ["lesson", "english"],
         },

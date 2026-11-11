@@ -89,9 +89,11 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     enableRadial,
   } = JSON.parse(graph.dataset["cfg"]!) as D3Config
 
+  // Filter before generating links so shared tags cannot bridge into another class.
+  const classScope = graph.dataset.scope
   const data: Map<SimpleSlug, ContentDetails> = new Map(
     Object.entries<ContentDetails>(await fetchData)
-      .filter(([_, v]) => v.graph !== false)
+      .filter(([slug, v]) => v.graph !== false && (!classScope || slug.startsWith(classScope)))
       .map(([k, v]) => [
         simplifySlug(k as FullSlug),
         v,

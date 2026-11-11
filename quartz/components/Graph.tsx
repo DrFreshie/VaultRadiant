@@ -17,6 +17,7 @@ export interface D3Config {
   opacityScale: number
   removeTags: string[]
   showTags: boolean
+  scopeToClass?: boolean
   focusOnHover?: boolean
   enableRadial?: boolean
 }
@@ -65,11 +66,20 @@ export default ((opts?: Partial<GraphOptions>) => {
 
     const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
+    // Only lesson pages opt into class scoping; the global graph stays unfiltered.
+    const classScope =
+      localGraph.scopeToClass && fileData.frontmatter?.type === "lesson"
+        ? fileData.slug?.match(/^classnotes\/[^/]+\//)?.[0]
+        : undefined
     return (
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
         <div class="graph-outer">
-          <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
+          <div
+            class="graph-container"
+            data-cfg={JSON.stringify(localGraph)}
+            data-scope={classScope}
+          ></div>
           <button class="global-graph-icon" aria-label="Global Graph">
             <svg
               version="1.1"
