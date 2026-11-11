@@ -458,6 +458,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                   type: "html",
                   value: `<div
                   class="callout-title"
+                  data-default-title="${useDefaultTitle}"
                 >
                   <div class="callout-icon"></div>
                   <div class="callout-title-inner">${title}</div>
@@ -465,7 +466,8 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
                 </div>`,
                 }
 
-                const blockquoteContent: (BlockContent | DefinitionContent)[] = [titleHtml]
+                const blockquoteContent: (BlockContent | DefinitionContent)[] =
+                  calloutType === "no-slide" && useDefaultTitle ? [] : [titleHtml]
                 if (remainingText.length > 0) {
                   blockquoteContent.push({
                     type: "paragraph",

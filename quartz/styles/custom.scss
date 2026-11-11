@@ -358,8 +358,9 @@ article iframe.matly-frame {
   }
 }
 
-// Keep no-slide markers invisible on the page while retaining their content.
+// Render no-slide content plainly, with a headline only when explicitly supplied.
 .callout[data-callout="no-slide"] {
+  --color: var(--secondary);
   display: contents;
   font-family: var(--bodyFont);
   font-size: inherit;
@@ -370,7 +371,21 @@ article iframe.matly-frame {
   }
 
   > .callout-title {
-    display: none;
+    display: block;
+    color: var(--secondary);
+    margin: 1rem 0 0;
+    padding: 0;
+
+    + p,
+    + .callout-content > :first-child {
+      margin-top: 0;
+    }
+
+    &[data-default-title="true"],
+    > .callout-icon,
+    > .fold-callout-icon {
+      display: none;
+    }
   }
 
   > .callout-content {

@@ -386,13 +386,14 @@ export const ObsidianFlavoredMarkdown = (userOpts) => {
                                     type: "html",
                                     value: `<div
                   class="callout-title"
+                  data-default-title="${useDefaultTitle}"
                 >
                   <div class="callout-icon"></div>
                   <div class="callout-title-inner">${title}</div>
                   ${collapse ? toggleIcon : ""}
                 </div>`,
                                 };
-                                const blockquoteContent = [titleHtml];
+                                const blockquoteContent = calloutType === "no-slide" && useDefaultTitle ? [] : [titleHtml];
                                 if (remainingText.length > 0) {
                                     blockquoteContent.push({
                                         type: "paragraph",
