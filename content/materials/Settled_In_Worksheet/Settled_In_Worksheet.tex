@@ -1,0 +1,75 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper,table]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\newfontfamily\quotefont[Ligatures=TeX]{Linux Libertine O}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\newfontfamily\overp{Overpass}
+\usepackage{xcolor}
+\definecolor{frbgreenl}{RGB}{162,202,137}
+\definecolor{frbgreen}{RGB}{28,85,66}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\setlist[enumerate]{label=\alph*),left=20pt}
+\newcommand{\qm}[1]{``#1''}
+\renewcommand\thesubsection{Exercise \arabic{subsection}}
+\titleformat{\subsection}[leftmargin]{\bfseries}{}{0pt}{\hspace{-5em}\thesubsection}
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}
+  \fancyhf{}
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{}%
+  \fancyhead[R]{\overp\color{frbgreenl}\normalsize English\\\huge\color{frbgreen}\vestb Settled In}
+  \cfoot{\thepage}
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{}
+\cfoot{\thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=north west,yshift=-48pt,xshift=120pt,opacity=0.2]
+    at (current page.north west)
+    {\includegraphics[scale=0.25]{frbvuc_logo.png}};
+\end{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \definecolor{bgline}{RGB}{205,214,208}
+  \coordinate (C) at ($(current page.north)+(35mm,-5mm)$);
+  \draw[bgline,line width=0.6pt] (C) circle (65mm);
+  \draw[bgline,line width=0.4pt]
+    ($(current page.north east)+(0,0mm)$) ++(-28mm,0)
+    -- ($(current page.south east)+(0,10mm)$) ++(-28mm,0);
+\end{tikzpicture}
+
+\begin{enumerate}
+  \item Find the simile in the opening paragraph and discuss the effect of this comparison.
+  \item Compare the simile (question a)) to the narrator saying \qm{We were their fragile small children far away from home} (p. 2, l. 41). Is the comparison used to express the same idea or feeling?
+  \item Find examples of short as well as long sentences in the story and discuss what they are used for respectively.
+  \item Comment on the form and composition of the story. What is the effect of a narrator being interviewed and telling her story to a reporter?
+  \item Find examples of formal as well as informal language in the story and discuss what they are used for respectively and what the effect is of alternating between the two.
+  \item Characterise the narrator and discuss if she is a flat or a complex character.
+  \item The narrator tells several stories about her father. What role do they play in the narrative?
+  \item Comment on the fact that the narrator's surname is Dudenhoefer like the author of the story. What is the effect of this detail?
+  \item Comment on the narrator's tone in the story. What does it reveal about her attitude to her life and the space mission? Consider, for example, her comment \qm{Her little minions had been busy -- so busy!} (p. 2, l. 48). Find other examples to support your analysis.
+  \item Find examples of and comment on the extended metaphor of pregnancy and delivering.
+  \item Discuss the role ascribed to artificial intelligence in the story. To what extent does A.I. help human beings? Does it conflict with human needs and feelings? Consider the A.I. running the ships, the construction robot on the Moon and Mars, as well as the robot at the end. What does it reveal about the narrator's attitude to A.I. when she calls it \qm{big, fat artificial intelligences} (p. 1, l. 25)?
+  \item Comment on the title of the story. Is it neutral or does it reveal an attitude to what happens in the short story? Give reasons.
+  \item Discuss whether you would market the story as hard or soft sci-fi or perhaps something else. Give reasons for your choice.
+  \item The line \qm{Call it human nature} (p. 1, l. 6) is accentuated by being isolated. Discuss if this line sums up the theme(s) of the story.
+  \item Discuss the ending of the story. Is it an open ending, an ambiguous one or is there a resolution? Consider, for instance, the effect of the narrator calling her grandchildren \qm{my little Martians}. What feeling and impression does the ending leave the readers with?
+\end{enumerate}
+
+\end{document}
