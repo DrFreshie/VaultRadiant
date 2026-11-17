@@ -1,6 +1,8 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 import LessonLayout from "./quartz/components/LessonLayout"
+import { RightImage } from "./quartz/plugins/transformers/rightImage"
+import { YouTube } from "./quartz/plugins/transformers/youtube"
 
 const includeDrafts = process.argv.includes("--serve")
 
@@ -78,7 +80,9 @@ const config: QuartzConfig = {
       Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
+      YouTube(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
+      RightImage(),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],

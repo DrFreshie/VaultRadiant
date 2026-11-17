@@ -426,6 +426,11 @@ article iframe.matly-frame {
     }
   }
 
+  > .callout-content p {
+    font-family: inherit;
+    font-size: inherit;
+  }
+
   > .callout-content > ol {
     margin: 0;
     padding-inline-start: 1.5em;
@@ -829,6 +834,48 @@ html.remark-container .article-title {
         margin: auto 0;
       }
     }
+  }
+}
+
+// Standalone ![Alt](image.png "right"/"left") beside preceding section content.
+.right-image-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 55fr) minmax(0, 45fr);
+  gap: 1.5rem;
+  align-items: center;
+
+  > .right-image-content,
+  > .right-image-media {
+    min-width: 0;
+  }
+
+  > .right-image-media > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+  }
+}
+
+.left-image-layout {
+  grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+}
+
+// ![Alt](image.png "center") stays below the text, centered at natural size.
+.center-image-layout > img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .right-image-layout {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

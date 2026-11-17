@@ -135,6 +135,36 @@
     display: none;
   }
 
+  // A titleless, responsive row of nested Markdown callouts.
+  // > [!infobox]
+  // > > [!info] First column
+  // > > Content
+  // >
+  // > > [!info] Second column
+  // > > Content
+  &[data-callout="infobox"] {
+    border: 0;
+    background: none;
+    padding: 0;
+
+    & > .callout-title {
+      display: none;
+    }
+
+    & > .callout-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: stretch;
+
+      & > .callout {
+        flex: 1 1 250px;
+        min-width: 0;
+        margin: 0;
+      }
+    }
+  }
+
   &.is-collapsed {
     & > .callout-title > .fold-callout-icon {
       transform: rotateZ(-90deg);
