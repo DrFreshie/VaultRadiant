@@ -66,11 +66,10 @@ export default ((opts?: Partial<GraphOptions>) => {
 
     const localGraph = { ...defaultOptions.localGraph, ...opts?.localGraph }
     const globalGraph = { ...defaultOptions.globalGraph, ...opts?.globalGraph }
-    // Only lesson pages opt into class scoping; the global graph stays unfiltered.
-    const classScope =
-      localGraph.scopeToClass && fileData.frontmatter?.type === "lesson"
-        ? fileData.slug?.match(/^classnotes\/[^/]+\//)?.[0]
-        : undefined
+    // Scope all class pages locally; the global graph stays unfiltered.
+    const classScope = localGraph.scopeToClass
+      ? fileData.slug?.match(/^classnotes\/[^/]+\//)?.[0]
+      : undefined
     return (
       <div class={classNames(displayClass, "graph")}>
         <h3>{i18n(cfg.locale).components.graph.title}</h3>
