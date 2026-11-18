@@ -1,0 +1,290 @@
+%! TeX program = lualatex
+%
+% UNDERVISNINGSBESKRIVELSE — FRB branded template
+% Engelsk B — 8P87En
+% Compile with lualatex twice from this directory.
+% Based on the archived FRB template; ongoing teaching is explicitly marked.
+%
+\documentclass[10pt,a4paper]{article}
+
+%% Core
+\usepackage[danish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{etoolbox}
+
+%% Fonts
+\usepackage{fontspec}
+\setmainfont[AutoFakeBold=2]{EB Garamond}
+\newfontfamily\overp[AutoFakeBold=2]{Overpass}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+
+%% Colors
+\usepackage{xcolor}
+\definecolor{frbblue}{RGB}{47, 88, 109}
+\definecolor{frbgreen}{RGB}{28, 85, 66}
+\definecolor{frbgreenl}{RGB}{162, 202, 137}
+
+%% Graphics
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage{tikz}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+%% Tables & layout
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[top=3cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\setlength{\headheight}{19pt}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0cm}
+\renewcommand{\arraystretch}{1.4}
+
+\makeatletter
+
+%% ─── Header / Footer ─────────────────────────────────────────────────────────
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{%
+    \centerline{%
+      \begin{minipage}{1\textwidth}%
+        \color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt%
+        \vspace{4em}%
+      \end{minipage}%
+    }%
+  }%
+  \fancyhead[L]{\includegraphics[height=2.5em]{frbvuc_logo.png}}%
+  \fancyhead[R]{\overp\color{frbgreen}\footnotesize 2026}%
+  \fancyhead[C]{%
+    \overp\color{frbblue}\normalsize \ub@hold\\%
+    \large\vestb\color{frbgreen} Undervisningsbeskrivelse%
+  }%
+  \cfoot{\thepage}%
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{%
+  \centerline{%
+    \begin{minipage}{\textwidth}%
+      \color{frbblue}\hrule width \hsize \kern 1mm%
+    \end{minipage}%
+  }%
+}
+\lhead{\overp\color{frbgreen}\footnotesize \ub@hold}
+\rhead{\overp\color{frbgreen}\footnotesize 2026}
+\cfoot{\thepage}
+
+%% ─── Metadata (pgfkeys) ──────────────────────────────────────────────────────
+
+\pgfkeys{
+  /ub/fag/.store in         = \ub@fag,
+  /ub/niveau/.store in      = \ub@niveau,
+  /ub/institution/.store in = \ub@institution,
+  /ub/hold/.store in        = \ub@hold,
+  /ub/termin/.store in      = \ub@termin,
+  /ub/uddannelse/.store in  = \ub@uddannelse,
+  /ub/laerer/.store in      = \ub@laerer,
+  /ub/fag={}, /ub/niveau={}, /ub/institution={},
+  /ub/hold={}, /ub/termin={}, /ub/uddannelse={}, /ub/laerer={}
+}
+\newcommand{\ubmeta}[1]{\pgfkeys{/ub/.cd, #1}}
+
+%% ─── Course info table ───────────────────────────────────────────────────────
+
+\newcommand{\infotabel}{%
+  {\large\bfseries\overp\color{frbgreen}%
+    Undervisningsbeskrivelse for: \ub@hold\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Fag:         & \ub@fag         \\\hline
+    Niveau:      & \ub@niveau      \\\hline
+    Institution: & \ub@institution \\\hline
+    Hold:        & \ub@hold        \\\hline
+    Termin:      & \ub@termin      \\\hline
+    Uddannelse:  & \ub@uddannelse  \\\hline
+    Lærer(e):    & \ub@laerer      \\\hline
+  \end{tabularx}%
+}
+
+%% ─── Overview table ──────────────────────────────────────────────────────────
+
+\newcommand{\ub@forlrows}{}
+\newcommand{\ub@forlrow}[3]{\gappto\ub@forlrows{#1 & #2 & #3 \\\hline}}
+
+\gdef\ubfinalcnt{?}
+\AtEndDocument{%
+  \immediate\write\@auxout{\string\gdef\string\ubfinalcnt{\theubcnt}}%
+}
+
+\newcommand{\forloebsoversigt}{%
+  \vspace{1.5em}%
+  {\large\bfseries\overp\color{frbgreen}Forløbsoversigt (\ubfinalcnt):\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|l|X|}
+    \hline
+    \ub@forlrows
+  \end{tabularx}%
+}
+
+%% ─── Forløb environment ──────────────────────────────────────────────────────
+
+\newcounter{ubcnt}
+
+\newenvironment{forloeb}[3]{% {titel}{dato}{omfang}
+  \stepcounter{ubcnt}%
+  \gdef\ub@cur@titel{#1}%
+  \gdef\ub@cur@dato{#2}%
+  \gdef\ub@cur@omfang{#3}%
+  \gdef\ub@cur@ind{}%
+  \gdef\ub@cur@arb{}%
+  \gdef\ub@cur@fok{}%
+  \immediate\write\@auxout{\string\ub@forlrow{\theubcnt}{#2}{#1}}%
+}{%
+  \vspace{1em}%
+  {\large\bfseries\overp\color{frbgreen}%
+    Forløb \theubcnt: \ub@cur@titel\par}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Omfang: & \ub@cur@omfang \\\hline
+    Start:  & \ub@cur@dato \\\hline
+    Indhold: & {\setlength{\parskip}{0pt}\ub@cur@ind} \\\hline
+    Arbejdsformer: & \ub@cur@arb \\\hline
+    Fokuspunkter:  & \ub@cur@fok \\\hline
+  \end{tabularx}%
+}
+
+%% Bullet-item accumulators used inside {forloeb}
+\newcommand{\bog}[1]{%
+  \ifdefempty{\ub@cur@ind}%
+    {\gappto\ub@cur@ind{\textit{#1}\par}}%
+    {\gappto\ub@cur@ind{\vspace{0.5em}\textit{#1}\par}}%
+}
+\newcommand{\kap}[1]{\gappto\ub@cur@ind{\quad\textbullet\ #1\par}}
+\newcommand{\arb}[1]{\gappto\ub@cur@arb{\textbullet\ #1\newline}}
+\newcommand{\fok}[1]{\gappto\ub@cur@fok{\textbullet\ #1\newline}}
+
+\makeatother
+
+%% ─── Kursusoplysninger ───────────────────────────────────────────────────────
+
+\ubmeta{%
+  fag         = {Engelsk},
+  niveau      = B,
+  institution = {Frederiksberg VUC \& STX (147248)},
+  hold        = {8P87En},
+  termin      = {Ikke angivet; undervisningsperiode: efterår 2026},
+  uddannelse  = {Ikke angivet i lektionsplanerne},
+  laerer      = {Anders Ravnholt Thaysen (ART)}
+}
+
+%% ─── Document ────────────────────────────────────────────────────────────────
+
+\begin{document}
+\thispagestyle{plain}
+
+\infotabel
+
+\forloebsoversigt
+
+\vspace{1em}
+{\large\bfseries\overp\color{frbgreen} Dokumentets status\par}
+Beskrivelsen bygger på de tilgængelige lektionsplaner fra efteråret 2026.
+\textit{The Future Is Written} er igangværende og omfatter også planlagt undervisning.
+Omfang angives som daterede undervisningsgange, ikke som 45-minutters lektioner.
+Endeligt timetal, sidetal, uddannelse og eksamenstermin skal bekræftes før anvendelse som endeligt eksamensgrundlag.
+
+\newpage
+{\large\bfseries\overp\color{frbgreen} General description\par}
+The course develops students' ability to understand, analyse, and discuss English-language texts and to communicate independently in spoken and written English. Three thematic units connect questions of personal identity with cultural representations of America and imagined technological futures. Students work with fiction and non-fiction in written, visual, audio, interactive, and audiovisual forms, attending to the relationship between content, form, audience, and context.
+
+Analytical work progresses from characterisation, setting, narrative perspective, and theme to rhetorical analysis and comparison across genres and media. Students practise distinguishing summary from analysis and interpretation, substantiating claims with textual evidence, and relating individual texts to broader cultural and social questions. American regional identities, expansion, freedom, and the frontier provide a recurring cultural perspective, while British and American science fiction opens discussion of technology, power, and human relationships.
+
+Oral English is practised through pair work, reading circles, structured discussions, read-aloud activities, and short presentations in an oral-exam-style format. Written work includes summaries, analytical paragraphs, discussions, essay introductions and outlines, creative writing, and audience-specific functional texts. Topic sentences and the ACE/PEE model support coherence and the use of evidence. Vocabulary, pronunciation, grammar, and register are developed alongside the thematic work, using materials including \textit{Getting Started} and minlæring.
+
+\newpage
+{\large\bfseries\overp\color{frbgreen} Identity --- description\par}
+This introductory unit explores how identity is shaped by family, memory, possessions, work, and personal narratives. \textit{What Remains of Edith Finch} provides the central point of reference for examining public and private identities, inheritance, trauma, and escapism. Poetry, photography, short fiction, podcast material, and television broaden the discussion and introduce analysis across media.
+
+Students develop an analytical vocabulary for characterisation, setting, narrative perspective, structure, and theme, including attention to how language, cinematic techniques, and game mechanics create meaning. Creative responses in Twine and PostSecret lead into summaries, evidence-based paragraphs, and written discussion. Grammar focuses on verb phrases, tenses, progressive forms, do-support, modal verbs, phrasal verbs, and verb patterns.
+
+\begin{forloeb}{Identity}{11.08.26}{11 undervisningsgange; 11.08.--04.09.26}
+  \bog{Primære tekster og medier}
+  \kap{Giant Sparrow: \textit{What Remains of Edith Finch} --- udvalgte kapitler og slutning; fælles playthroughs}
+  \kap{Paul Laurence Dunbar: \textit{We Wear the Mask} --- digt}
+  \kap{James Mollison: \textit{Where Children Sleep} --- udvalgte fotografier}
+  \kap{\textit{This American Life: Golden Calf}, Act One, ``Bowing Before the Famous'' --- podcast}
+  \kap{Lord Dunsany: \textit{The Coronation of Mr. Thomas Shap} --- novelle}
+  \kap{\textit{Severance} --- tv-uddrag}
+  \kap{Frank Warren / bidragydere: \textit{PostSecret} --- udvalgte postkort}
+  \bog{Supplerende materiale}
+  \kap{Emily Esfahani Smith: \textit{The Two Kinds of Stories We Tell Ourselves} --- artikel}
+  \kap{Silvia de Couët: \textit{The Fly Nobody Programmed} --- artikel}
+  \kap{Ray Bradbury: \textit{The Veldt} --- angivet læsning; efterfølgende analyse ikke dokumenteret}
+  \arb{Fælles playthroughs, nærlæsning, højtlæsning og rollebaseret læsning}
+  \arb{Struktureret diskussion, Blooms taksonomi og sammenligning på tværs af medier}
+  \arb{Twine, PostSecret, summary, ACE/PEE-afsnit og skriftlig diskussion}
+  \fok{Offentlig/privat identitet, erindring, familie, traume og eskapisme}
+  \fok{Characterisation, setting, narrator, reliability, symbolism og theme}
+  \fok{Redemption/contamination narratives; filmiske virkemidler og spilmekanik}
+  \fok{Verballed, tider, udvidet tid, do-omskrivning, modalverber, sammensatte verber og verbalmønstre}
+\end{forloeb}
+
+\newpage
+{\large\bfseries\overp\color{frbgreen} The American South --- description\par}
+This unit compares representations of the American South in journalism, podcast storytelling, fiction, and television. Students examine how stereotypes, dialect, narrative perspective, and historical context shape portrayals of place and people. Gonzo journalism and narrative podcasting introduce questions of subjectivity and the rhetorical situation, while \textit{Huckleberry Finn} develops attention to irony and the difference between narrator and reader.
+
+Whole-work reading of \textit{West} extends the discussion to expansion, the frontier, freedom, gender, and displacement. Reading circles support independent reading, vocabulary work, and text-based discussion. Written work progresses from analytical paragraphs to introductions, essay outlines, and an analytical essay; oral work includes recorded pronunciation practice and exam-style presentations. Grammar covers nouns, subject--verb agreement, and active/passive voice.
+
+\begin{forloeb}{The American South}{11.09.26}{12 undervisningsgange; 11.09.--09.10.26 (inkl. 2 kladdeplaner)}
+  \bog{Primære tekster og medier}
+  \kap{Hunter S. Thompson: \textit{The Kentucky Derby Is Decadent and Depraved} --- gonzo-journalistik}
+  \kap{Brian Reed: \textit{S-Town}, Chapter 1 --- narrativ podcast}
+  \kap{Mark Twain: \textit{The Adventures of Huckleberry Finn}, kapitel 1--2 --- romanuddrag}
+  \kap{Carys Davies: \textit{West} --- hel roman}
+  \kap{\textit{Lovecraft Country}, episode 1 --- tv}
+  \bog{Supplerende materiale}
+  \kap{Lawrence Wright: \textit{Donkeys} --- interviewuddrag om narrativ formidling}
+  \kap{\textit{Southern Stories for Y'all}: Southern American English --- introduktion og quiz}
+  \kap{\textit{Narrating Truth} --- materiale om journalistik og non-fiction}
+  \arb{Nærlæsning, podcastlytning og sammenlignende analyse}
+  \arb{Reading circles med roller: summary, spørgsmål, ordforråd, perspektivering og illustration}
+  \arb{Udtaletræning med optagelser; kreativ skrivning og mundtlige prøveoplæg}
+  \arb{Analytiske afsnit, tragtindledning, essaydisposition og analytical essay}
+  \fok{Repræsentation, stereotyper, dialekt, ironi, frihed, frontier og fordrivelse}
+  \fok{Gonzo, narrative non-fiction, subjektivitet og objektivitet}
+  \fok{Den retoriske situation: exigence, audience og constraints}
+  \fok{Grammatik: substantiver, kongruens og aktiv/passiv}
+\end{forloeb}
+
+\newpage
+{\large\bfseries\overp\color{frbgreen} The Future Is Written --- description\par}
+This ongoing unit examines imagined futures as reflections on the present. Students explore utopia and dystopia, world-building, social conditioning, autonomy, memory, grief, and the ethical implications of technological progress. \textit{Brave New World}, \textit{The Relive Box}, and ``Be Right Back'' connect social visions to intimate relationships and the desire to recover or escape the past.
+
+Comparison of prose and television develops attention to the expressive possibilities of different media. Non-fiction on human--robot relationships supports ethical discussion, while George W. Bush's space-policy speech connects technological optimism to American values, Manifest Destiny, and the frontier. Students practise scene analysis, oral-exam-style presentations, rhetorical analysis, and writing in formal and informal registers for specific audiences.
+
+\begin{forloeb}{The Future Is Written}{11.11.26}{5 planlagte/dokumenterede undervisningsgange; 11.11.--20.11.26; igangværende}
+  \bog{Primære tekster og medier}
+  \kap{Aldous Huxley: \textit{Brave New World}, kapitel 1 --- romanuddrag}
+  \kap{\textit{Brave New World}, S01E01 --- de første 18 minutter af tv-adaptionen}
+  \kap{T. Coraghessan Boyle: \textit{The Relive Box} --- novelle}
+  \kap{\textit{Black Mirror: Be Right Back}, S02E01 --- tv}
+  \kap{Louisa Hall: \textit{How We Feel About Robots That Feel} --- artikel}
+  \kap{George W. Bush: \textit{Remarks on US Space Policy}, 14.01.2004 --- tale}
+  \bog{Supplerende materiale}
+  \kap{\textit{The Future Is Written: A Brief Introduction\ldots} --- science fiction og undergenrer}
+  \kap{\textit{Can AI 'cure' grief?} --- onlinevideo}
+  \arb{Nærlæsning, ordforråd, gruppediskussion og visuel world-building med citater}
+  \arb{Adaptionssammenligning og sceneanalyse med filmstills}
+  \arb{Elevspørgsmål, mundtlige prøveoplæg og retorisk analyse}
+  \arb{Formelle/uformelle manualer og argumenterende e-mail}
+  \fok{Utopi/dystopi, hard/soft science fiction, cognitive estrangement og info-dump}
+  \fok{Autonomi, erindring, sorg, AI, eskapisme og teknologisk fremskridt}
+  \fok{Amerikanske værdier, Manifest Destiny og frontier}
+  \fok{Filmiske og retoriske virkemidler; register og modtagerbevidsthed}
+\end{forloeb}
+
+\end{document}

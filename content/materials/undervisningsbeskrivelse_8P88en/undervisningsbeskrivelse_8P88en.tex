@@ -1,0 +1,170 @@
+%! TeX program = lualatex
+% Engelsk C — 8P88en
+% Based on the archived FRB undervisningsbeskrivelse_6l26en.tex format.
+% Compile twice with lualatex from this directory.
+\documentclass[10pt,a4paper]{article}
+\usepackage[danish]{babel}
+\usepackage{fontspec}
+\setmainfont[AutoFakeBold=2]{EB Garamond}
+\newfontfamily\overp[AutoFakeBold=2]{Overpass}
+\newfontfamily\vestb{TRY Vesterbro Poster}
+\usepackage{xcolor}
+\definecolor{frbblue}{RGB}{47,88,109}
+\definecolor{frbgreen}{RGB}{28,85,66}
+\definecolor{frbgreenl}{RGB}{162,202,137}
+\usepackage{graphicx}
+\graphicspath{{../img/}}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\hypersetup{pdftitle={Undervisningsbeskrivelse — Engelsk C — 8P88en},pdfauthor={Anders Ravnholt Thaysen}}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage[top=3cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\setlength{\headheight}{19pt}
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0pt}
+\renewcommand{\arraystretch}{1.4}
+
+\fancypagestyle{plain}{%
+  \setlength{\headheight}{60pt}%
+  \setlength{\headsep}{0pt}%
+  \fancyhf{}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \renewcommand\headrule{%
+    \centerline{\begin{minipage}{\textwidth}%
+      \color{frbblue}\hrule width \hsize \kern 1mm \hrule width \hsize height 2pt
+      \vspace{4em}%
+    \end{minipage}}}%
+  \fancyhead[L]{\includegraphics[height=2.5em]{frbvuc_logo.png}}%
+  \fancyhead[R]{\overp\color{frbgreen}\footnotesize 2026}%
+  \fancyhead[C]{\overp\color{frbblue}\normalsize 8P88en\\%
+    \large\vestb\color{frbgreen} Undervisningsbeskrivelse}%
+  \cfoot{\thepage}%
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrule{%
+  \centerline{\begin{minipage}{\textwidth}%
+    \color{frbblue}\hrule width \hsize \kern 1mm
+  \end{minipage}}}
+\lhead{\overp\color{frbgreen}\footnotesize 8P88en}
+\rhead{\overp\color{frbgreen}\footnotesize 2026}
+\cfoot{\thepage}
+
+\newcommand{\ubheading}[1]{{\large\bfseries\overp\color{frbgreen}#1\par}}
+\newcommand{\ubitem}[1]{\textbullet\ #1\par}
+\newcommand{\ubgroup}[1]{\textit{#1}\par}
+\newcommand{\ubgap}{\vspace{0.5em}}
+\newcommand{\unittable}[6]{%
+  \vspace{1em}%
+  \ubheading{#1}%
+  \vspace{0.4em}%
+  \begin{tabularx}{\linewidth}{|l|X|}
+    \hline
+    Omfang: & #3 \\\hline
+    Start: & #2 \\\hline
+    Indhold: & {\setlength{\parskip}{0pt}#4} \\\hline
+    Arbejdsformer: & {\setlength{\parskip}{0pt}#5} \\\hline
+    Fokuspunkter: & {\setlength{\parskip}{0pt}#6} \\\hline
+  \end{tabularx}%
+}
+
+\begin{document}
+\thispagestyle{plain}
+\ubheading{Undervisningsbeskrivelse for: 8P88en}
+\vspace{0.4em}
+\begin{tabularx}{\linewidth}{|l|X|}
+\hline
+Fag: & Engelsk C, HFE\\\hline
+Niveau: & C \\\hline
+Institution: & Frederiksberg VUC \& STX (147248) \\\hline
+Hold: & 8P88en \\\hline
+Termin: & December 2026 \\\hline
+Uddannelse: & \\\hline
+Lærer(e): & Anders Ravnholt Thaysen (ART) \\\hline
+\end{tabularx}
+
+\vspace{1.5em}
+\ubheading{Forløbsoversigt (3):}
+\vspace{0.4em}
+\begin{tabularx}{\linewidth}{|l|l|X|}
+\hline
+1 & 13.08.26 & Identity \\\hline
+2 & 14.09.26 & Voice \\\hline
+3 & 19.10.26 & The Future Is Written \\\hline
+\end{tabularx}
+
+\newpage
+\unittable{Forløb 1: Identity}{13.08.26}{8 lektioner}{%
+  \ubgroup{Primære tekster og medier}
+  \ubitem{Giant Sparrow: \textit{What Remains of Edith Finch} --- udvalgte kapitler og slutning; fælles playthroughs}
+  \ubitem{Paul Laurence Dunbar: \textit{We Wear the Mask} --- digt}
+  \ubitem{\textit{This American Life: Golden Calf}, Act One, ``Bowing Before the Famous'' --- podcast}
+  \ubitem{\textit{Severance} --- tv-uddrag}
+  \ubitem{Emily Esfahani Smith: \textit{The Two Kinds of Stories We Tell Ourselves} --- artikel}
+  \ubitem{Silvia de Couët: \textit{The Fly Nobody Programmed} --- artikel}
+}{%
+  \ubitem{Fælles playthroughs, nærlæsning, højtlæsning og guidet forståelse}
+  \ubitem{Par-/gruppediskussion, podcastlytning og optaget mundtlig refleksion, creative writing med Twine}
+  \ubitem{FLIRT, ACE/PEE, Blooms taksonomi}
+}{%
+  \ubitem{Offentlig/privat identitet, erindring, familie, rollemodeller og isolation}
+  \ubitem{Characterisation, setting, narrator, reliability, symbolism og theme}
+  \ubitem{Redemption/contamination narratives og filmiske virkemidler}
+  \ubitem{Grammatik: ordklasser, sætningsanalyse, subjekt, verballed, verbalformer og tider}
+}
+
+\unittable{Forløb 2: Voice}{14.09.26}{7 lektioner}{%
+  \ubgroup{Primære tekster og medier}
+  \ubitem{Stephen Fry: \textit{Have You Heard of Oscar Wilde?} --- non-fiction essay}
+  \ubitem{Gregory Maguire: \textit{How th'Irth Wint Rong by Hapless Joey@Homeskool.guv} --- novelle}
+  \ubitem{Katherine Mansfield: \textit{The Doll's House} --- novelle}
+  \ubitem{Jacinda Ardern: \textit{Address to the UN General Assembly} (2019) --- tale}
+  \ubitem{\textit{Ardern and Trump} --- sammenlignende taleuddrag; video og transskription}
+  \ubitem{Tom Hooper: \textit{The King's Speech} --- spillefilm; analyse af kongens krigstale som fremstillet i filmen}
+}{%
+  \ubitem{Ordforråd: synonymer, antonymer, kategorisering og krydsord}
+  \ubitem{Guidet læsning, forudsigelser, nærlæsning og citatbaseret fortolkning}
+  \ubitem{Forklarende breve/e-mails, kreativ omskrivning og korte taler}
+  \ubitem{Retorisk analyse, film, sammenlignende quick writes og udtaleoptagelser}
+}{%
+  \ubitem{Voice, tone, perspective, eksplicit/implicit betydning, theme og message}
+  \ubitem{Repræsentation, eksklusion og forholdet mellem personlig og offentlig stemme}
+  \ubitem{Retorisk situation: exigence, audience og constraints}
+  \ubitem{Ethos, pathos, logos, retoriske virkemidler, udtale og fremførelse}
+  \ubitem{Grammatik: regelmæssig og uregelmæssig pluralis af substantiver}
+}
+
+\newpage
+\ubheading{The Future Is Written --- description}
+This ongoing unit uses science fiction to explore identity, autonomy, memory, grief, and technological progress. \textit{Brave New World} introduces utopia, dystopia, and world-building. \textit{The Relive Box}, \textit{Tell Me an Ending}, and ``Be Right Back'' examine the attraction and consequences of recovering, removing, or recreating the past. Non-fiction on human--robot relationships supports ethical discussion.
+
+Work on George W. Bush's space-policy speech and \textit{Settled In} compares political and fictional visions of exploration, AI, and human futures beyond Earth. Students connect American values, Manifest Destiny, and the frontier to visions of progress. Activities include comparative discussion, scene analysis, rhetorical analysis, oral presentation, audience-specific writing, and cohesive analytical paragraphs. A draft lesson extends the planned work to visual storytelling in \textit{On a Sunbeam}.
+
+\unittable{Forløb 3: The Future Is Written}{19.10.26}{7 udviklede planer uden kladdemarkering + 2 kladder; 19.10.--23.11.26; igangværende}{%
+  \ubgroup{Tekster og medier i udviklede planer uden kladdemarkering}
+  \ubitem{Aldous Huxley: \textit{Brave New World}, kapitel 1 --- romanuddrag}
+  \ubitem{\textit{Brave New World}, S01E01 --- de første 18 minutter af tv-adaptionen}
+  \ubitem{T. Coraghessan Boyle: \textit{The Relive Box} --- novelle}
+  \ubitem{Jo Harkin: \textit{Tell Me an Ending} --- romanuddrag}
+  \ubitem{\textit{Black Mirror: Be Right Back}, S02E01 --- tv}
+  \ubitem{Louisa Hall: \textit{How We Feel About Robots That Feel} --- artikel}
+  \ubitem{George W. Bush: \textit{Remarks on US Space Policy}, 14.01.2004 --- tale}
+  \ubitem{Tim Dudenhoefer: \textit{Settled In} --- novelle}
+  \ubgap\ubgroup{Supplerende materiale}
+  \ubitem{Introduktion til science fiction og undergenrer --- lektionsmateriale}
+  \ubitem{\textit{Can AI 'cure' grief?} og Elon Musks vision om rumfart --- onlinevideoer}
+  \ubgap\ubgroup{Planlagt materiale i kladder; ikke angivet som gennemført}
+  \ubitem{Tillie Walden: \textit{On a Sunbeam}, kapitel 1--2 eller 1--3 --- webcomic; kladde 23.11.26}
+  \ubitem{``Space Westerns'', 19.11.26 --- uudviklet placeholder uden angivne tekster}
+}{%
+  \ubitem{Nærlæsning, ordforråd, diskussion og citatbaseret world-building}
+  \ubitem{Adaptionssammenligning, sceneanalyse med filmstills og retorisk analyse}
+  \ubitem{Valg mellem optaget samtale, tematisk plakat og mundtligt oplæg}
+  \ubitem{Manualer, leksikonartikel, argumenterende e-mail og sammenhængende analyseafsnit}
+}{%
+  \ubitem{Utopi/dystopi, hard/soft science fiction, cognitive estrangement og info-dump}
+  \ubitem{Autonomi, erindring, sorg, AI, relationer og teknologisk fremskridt}
+  \ubitem{Amerikanske værdier, Manifest Destiny og frontier}
+  \ubitem{Filmiske/retoriske virkemidler, register, modtagerbevidsthed og kohæsion}
+}
+\end{document}

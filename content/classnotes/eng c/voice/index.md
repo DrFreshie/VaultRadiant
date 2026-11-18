@@ -5,15 +5,6 @@ title: Voice
 
 # Voice
 
-Forløbsbeskrivelse kommer her.
+What does it mean to find your voice—and to hear someone else's? This unit explores narrative voices, self-expression, speeches, and the relationship between personal confidence and public responsibility.
 
-%%
-## Texts
-
-- Stephen Fry
-- Oscar Wilde
-- Wendy Cope & Harold Pinter
-- How th'Irth Wint Rong
-- The Dolls House
-- Jacinda Adern
-%%
+→ [[classnotes/eng c/notes/voice|Unit description, texts, and key terms]]
