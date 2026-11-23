@@ -34,25 +34,28 @@ type: Note
 
 1. Analyse the theme of the story: What does the story say about the theme? How is it visible in the story?
 
+<!-- ## Poetry -->
+<!---->
+<!-- Use the [FLIRT model](flirt-model.md) to analyse **Form, Language, Imagery and rhetorical devices, Rhyme/rhythm, and Theme**. Explain how these features work together to create meaning. -->
 ## Non-fiction
 
 ### Intention
 
 1. Describe the sender, audience, circumstances, language and subject of the text (the rhetorical pentagram).
-2. Describe the rhetorical situation of the text:
+2. Describe the [rhetorical situation](rhetorical-situation.md) of the text:
     - Determine the exigence: what change is the speaker hoping to achieve with the text?
     - Determine the constraints: What factors limit or influence the speaker's ability to persuade the audience?
 
 ### Method
 
 1. Analyse the structure of the text: How does it support the intention?
-2. Analyse the modes of appeal used in the text:
+2. Analyse the [modes of appeal](modes-of-appeal.md) (ethos, pathos and logos) used in the text:
     - How credible is the writer/speaker, and how do they try to strengthen their credibility?
     - Does the writer/speaker try to make the audience be emotionally invested in the topic?
     - Does the writer/speaker try to convince the audience of something through logical arguments?
     - Are the modes of appeal used fitting for the context?
 3. Describe the language of the text:
-    - Are rhetorical devices used, and to what effect?
+    - Are [rhetorical devices](rhetorical-devices.md) used, and to what effect?
     - How is the tone (inclusive, formal, informal, serious, humorous, ironic, sarcastic, optimistic, pessimistic, sympathetic, critical)?
 
 ### Execution
@@ -64,7 +67,7 @@ type: Note
 ## Film and television
 
 1. Go through the steps in fiction or non-fiction above.
-2. Analyse the use of cinematic techniques: How does it support e.g. characterisation, theme or intention?
+2. Analyse the use of [cinematic techniques](cinematic-techniques.md): How do they support e.g. characterisation, theme or intention?
 
 ## Graphic narratives
 
@@ -76,4 +79,4 @@ type: Note
 ## Video games
 
 1. Go through the steps in fiction above.
-2. Analyse the use of cinematic techniques, and the influence of game mechanics: How do they support e.g. characterisation or theme?
+2. Analyse the use of [cinematic techniques](cinematic-techniques.md), and the influence of game mechanics: How do they support e.g. characterisation or theme?
