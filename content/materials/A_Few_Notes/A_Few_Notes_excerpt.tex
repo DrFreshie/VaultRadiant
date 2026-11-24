@@ -1,0 +1,153 @@
+%! TeX program = lualatex
+\documentclass[10pt,a4paper]{article}
+	
+	\usepackage{amsmath,amssymb,amsthm,mathtools,amsfonts}
+	\usepackage{breqn}
+	\usepackage[utf8]{inputenc}
+	\usepackage[english]{babel}
+	\usepackage[T1]{fontenc}
+	\usepackage{graphicx}
+	\graphicspath{{./img/}{../img/}}
+	
+	%\usepackage{ebgaramond}
+	\usepackage{fontspec}
+	\setmainfont[Numbers=OldStyle]{EB Garamond}
+	\newfontfamily\plantinb[Numbers=OldStyle]{Plantin MT Pro Bold Condensed}
+	\newfontfamily\plantin[Numbers=OldStyle]{Plantin MT Pro Semibold}
+	
+	\usepackage[pdfborder={0 0 0}]{hyperref} %% Ingen firkant rundt om referencer
+	\usepackage{multicol}
+	\usepackage{tabularx}
+	\usepackage{enumitem}% better controls with enumerating
+	\usepackage{wrapfig}
+		%\setlength{\wrapoverhang}{\marginparwidth}
+		%\addtolength{\wrapoverhang}{\marginparsep}
+		\setlength{\columnsep}{0pt}
+		\setlength{\intextsep}{-10pt}
+	\usepackage{caption}
+	\usepackage[svgnames]{xcolor}
+	\usepackage{dirtytalk}
+	\usepackage[modulo]{lineno}
+	\usepackage{hyperref}
+	\usepackage{tasks}
+	\newcommand\svar[1]{\newline\textcolor{red}{\textbf{Svar}\\#1}}
+	\newcommand{\qm}[1]{‘‘#1”}
+	\newcommand{\sqm}[1]{‘#1’}
+	
+	\definecolor{hgblue}{RGB}{10, 40, 80}
+	\definecolor{hgred}{RGB}{140, 10, 10}
+	\definecolor{hggrey}{RGB}{215, 215, 210}
+	\definecolor{hggreen}{RGB}{145, 205, 205}
+	
+	\usepackage{titlesec}
+	\titleformat{\subsection}{\color{hgred}\plantin\large}{}{}{}
+\newcommand{\source}[1]{\footnote{Source: \href{#1}{#1}}}
+	\usepackage{lipsum}
+	\usepackage{comment}
+	
+	\usepackage{bigfoot}
+		\DeclareNewFootnote{a}
+			\renewcommand{\thefootnotea}{\fnsymbol{footnotea}}
+				\newcommand{\footnotes}[1]{\footnotea[2]{#1}} % here you can specify what symbol you want in footnotes
+				\newcommand{\footnoted}[1]{\footnotea[3]{#1}} % for a second footnote on a page
+				\MakePerPage{footnotes}
+	
+	%\reversemarginpar
+	\newcommand{\glos}[3]{\dotuline{#1}\marginpar{\scriptsize\textit{#3} #2}}
+
+	\newcommand{\editorsnote}[1]{%
+		\begin{list}{}{%
+			\setlength{\leftmargin}{3em}%
+			\setlength{\rightmargin}{3em}%
+		}%
+		\item\relax\small\plantin\itshape\color{hgblue}#1%
+		\end{list}%
+	}
+
+	\setlength{\parskip}{0.5\baselineskip}
+	\setlength{\parindent}{0cm}
+	\setlist[enumerate]{label=\alph*),left=20pt}
+	%\setlist[enumerate]{leftmargin=\parindent}
+	%\setlist[enumerate]{nosep}
+	
+	%Titling
+	\usepackage{titling}
+	\setlength{\droptitle}{-12ex}
+	\pretitle{\begin{flushleft}\plantinb\huge\color{hgblue}}
+	\posttitle{\par\end{flushleft}}
+	\preauthor{\begin{flushleft}\Large}
+	\postauthor{\end{flushleft}}
+	\predate{\begin{flushleft}}
+	\postdate{\end{flushleft}}
+	
+	\setcounter{secnumdepth}{0}
+	
+	\usepackage{tikz}
+	
+	
+\begin{document}
+%\pagecolor{FloralWhite}
+\title{The Kentucky Derby is Decadent and Depraved}
+%\date{\vspace{-3em}} % I tilfældet ingen dato
+\date{1970}
+\author{Hunter S. Thompson}
+\maketitle
+    
+% \pagestyle{empty}
+\thispagestyle{empty}
+\linenumbers
+\begin{center}
+  \includegraphics[width=0.6\textwidth]{thompson.jpg}
+\end{center}
+
+FIRSTLY, AND MOST IMPORTANTLY: THE CULTURE DOESN'T REALLY EXIST. IT ONLY EXISTS IN MY MIND AND THE MINDS OF THE PEOPLE WHO'VE READ ABOUT IT.
+
+That having been made clear:
+
+The Culture is a group-civilisation formed from seven or eight humanoid species, space-living elements of which established a loose federation approximately nine thousand years ago. The ships and habitats which formed the original alliance required each others' support to pursue and maintain their independence from the political power structures - principally those of mature nation-states and autonomous commercial concerns - they had evolved from.
+
+[...]
+
+The Culture, in its history and its on-going form, is an expression of the idea that the nature of space itself determines the type of civilisations which will thrive there.
+
+[...]
+
+Essentially, the contention is that our currently dominant power systems cannot long survive in space; beyond a certain technological level a degree of anarchy is arguably inevitable and anyway preferable.
+
+To survive in space, ships/habitats must be self-sufficient, or very nearly so; the hold of the state (or the corporation) over them therefore becomes tenuous if the desires of the inhabitants conflict significantly with the requirements of the controlling body. On a planet, enclaves can be surrounded, besieged, attacked; the superior forces of a state or corporation - hereafter referred to as hegemonies - will tend to prevail. In space, a break-away movement will be far more difficult to control, especially if significant parts of it are based on ships or mobile habitats. The hostile nature of the vacuum and the technological complexity of life support mechanisms will make such systems vulnerable to outright attack, but that, of course, would risk the total destruction of the ship/habitat, so denying its future economic contribution to whatever entity was attempting to control it.
+
+[...]
+
+Concomitant with this is the argument that the nature of life in space - that vulnerability, as mentioned above - would mean that while ships and habitats might more easily become independent from each other and from their legally progenitative hegemonies, their crew - or inhabitants - would always be aware of their reliance on each other, and on the technology which allowed them to live in space. The theory here is that the property and social relations of long-term space-dwelling (especially over generations) would be of a fundamentally different type compared to the norm on a planet; the mutuality of dependence involved in an environment which is inherently hostile would necessitate an internal social coherence which would contrast with the external casualness typifying the relations between such ships/habitats. Succinctly; socialism within, anarchy without. This broad result is - in the long run - independent of the initial social and economic conditions which give rise to it.
+
+[...]
+
+The Culture, of course, has gone beyond even that, to an economy so much a part of society it is hardly worthy of a separate definition, and which is limited only by imagination, philosophy (and manners), and the idea of minimally wasteful elegance; a kind of galactic ecological awareness allied to a desire to create beauty and goodness.
+
+[...]
+
+As mentioned above, there is another force at work in the Culture aside from the nature of its human inhabitants and the limitations and opportunities presented by life in space, and that is Artificial Intelligence. This is taken for granted in the Culture stories, and - unlike FTL travel - is not only likely in the future of our own species, but probably inevitable (always assuming homo sapiens avoids destruction).
+
+[...]
+
+Briefly, nothing and nobody in the Culture is exploited. It is essentially an automated civilisation in its manufacturing processes, with human labour restricted to something indistinguishable from play, or a hobby.
+
+No machine is exploited, either; the idea here being that any job can be automated in such a way as to ensure that it can be done by a machine well below the level of potential consciousness; what to us would be a stunningly sophisticated computer running a factory (for example) would be looked on by the Culture's AIs as a glorified calculator, and no more exploited than an insect is exploited when it pollinates a fruit tree a human later eats a fruit from.
+
+Where intelligent supervision of a manufacturing or maintenance operation is required, the intellectual challenge involved (and the relative lightness of the effort required) would make such supervision rewarding and enjoyable, whether for human or machine. The precise degree of supervision required can be adjusted to a level which satisfies the demand for it arising from the nature of the civilisation's members. People - and, I'd argue, the sort of conscious machines which would happily cooperate with them - hate to feel exploited, but they also hate to feel useless. One of the most important tasks in setting up and running a stable and internally content civilisation is finding an acceptable balance between the desire for freedom of choice in one's actions (and the freedom from mortal fear in one's life) and the need to feel that even in a society so self-correctingly Utopian one is still contributing something. Philosophy matters, here, and sound education.
+
+[...]
+
+An understanding of the place the Culture occupies in the history and development of life in the galaxy is what helps drive the civilisation's largely cooperative and - it would claim - fundamentally benign techno-cultural diplomatic policy, but the ideas behind it go deeper. Philosophically, the Culture accepts, generally, that questions such as 'What is the meaning of life?' are themselves meaningless. The question implies - indeed an answer to it would demand - a moral framework beyond the only moral framework we can comprehend without resorting to superstition (and thus abandoning the moral framework informing - and symbiotic with - language itself).
+
+In summary, we make our own meanings, whether we like it or not.
+
+[...]
+
+The Culture doesn't actually have laws; there are, of course, agreed-on forms of behaviour; manners, as mentioned above, but nothing that we would recognise as a legal framework. Not being spoken to, not being invited to parties, finding sarcastic anonymous articles and stories about yourself in the information network; these are the normal forms of manner-enforcement in the Culture. The very worst crime (to use our terminology), of course, is murder (defined as irretrievable brain-death, or total personality loss in the case of an AI). The result - punishment, if you will - is the offer of treatment, and what is known as a slap-drone. All a slap-drone does is follow the murderer around for the rest of their life to make sure they never murder again. There are less severe variations on this theme to deal with people who are simply violent.
+
+In a society where material scarcity is unknown and the only real value is sentimental value, there is little motive or opportunity for the sort of action we would class as a crime against property.
+
+[...]
+
+\end{document}

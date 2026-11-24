@@ -1,0 +1,159 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{essay-layout}[2026/10/23 Magazine essay layout]
+\RequirePackage[margin=11mm,bottom=14mm]{geometry}
+\RequirePackage[english]{babel}
+\RequirePackage{fontspec}
+\setmainfont[Numbers=OldStyle]{EB Garamond}
+\newfontfamily\essaydisplay{TeX Gyre Adventor}
+\RequirePackage{graphicx}
+\RequirePackage{adjustbox}
+\RequirePackage{xcolor}
+\definecolor{essaygreen}{HTML}{087549}
+\RequirePackage{tikz}
+\RequirePackage{flowfram}
+\RequirePackage{lettrine}
+\RequirePackage{microtype}
+\RequirePackage[hidelinks]{hyperref}
+\urlstyle{same}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{4mm}
+\setlength{\emergencystretch}{2em}
+\setlength{\topskip}{9.5pt}
+\raggedbottom
+
+% All body frames and heading spacing share this baseline grid.
+\newlength{\essayleading}
+\setlength{\essayleading}{10.5pt}
+\ExplSyntaxOn
+\NewDocumentCommand{\essaygridsnap}{m}{%
+  \dim_set:Nn #1
+    {\int_div_truncate:nn
+      {\dim_to_decimal_in_sp:n {#1}}
+      {\dim_to_decimal_in_sp:n {\essayleading}}\essayleading}
+}
+\ExplSyntaxOff
+\renewcommand{\subsection}[1]{%
+  \par\addpenalty{\@secpenalty}\addvspace{\essayleading}%
+  \begingroup
+    \essaydisplay\bfseries\fontsize{8}{\essayleading}\selectfont
+    \interlinepenalty=10000
+    \noindent\strut #1\strut\par
+  \endgroup
+  \nobreak\@afterindentfalse\@afterheading
+}
+\newcommand{\editorsnote}[1]{%
+  \par\addvspace{\essayleading}%
+  \begingroup\itshape\noindent #1\par\endgroup
+  \addvspace{\essayleading}\@afterindentfalse\@afterheading
+}
+
+\newlength{\essayimageheight}
+\newlength{\essaypageheight}
+\newlength{\essaycolumnwidth}
+\newlength{\essayfeaturewidth}
+\newlength{\essaylowerheight}
+\newlength{\essayfullheight}
+\newsavebox{\essayfeaturebox}
+
+% Centred cover crop, without distortion. Missing images get a quiet placeholder.
+\newcommand{\essayimage}{%
+  \begin{tikzpicture}
+    \path[use as bounding box] (0,0) rectangle (\linewidth,\essayimageheight);
+    \begin{pgfinterruptboundingbox}
+      \clip (0,0) rectangle (\linewidth,\essayimageheight);
+      \IfFileExists{\essayimagefile}{%
+        \node[inner sep=0pt] at (.5\linewidth,.5\essayimageheight) {%
+          \adjustbox{min size={\linewidth}{\essayimageheight}}{%
+            \includegraphics[width=\linewidth]{\essayimagefile}}};
+      }{%
+        \fill[black!5] (0,0) rectangle (\linewidth,\essayimageheight);
+        \node[font=\essaydisplay\small,text=black!45] at
+          (.5\linewidth,.5\essayimageheight) {ESSAY IMAGE};
+      }%
+    \end{pgfinterruptboundingbox}
+  \end{tikzpicture}%
+}
+
+% Rolled magazine page, with a banner, image panels and printed columns.
+\newcommand{\essayornament}{%
+  \begin{tikzpicture}[x=0.85mm,y=0.85mm,draw=essaygreen,line width=0.3pt,
+      line cap=round,line join=round]
+    \draw (1.8,0)--(6.8,0)--(6.8,0.9);
+    \draw (1.8,9.3)--(8,9.3)--(8,0.9)--(1.8,0.9);
+    \draw (0,0.9)--(0,9.1)
+      .. controls (0,10.3) and (1.8,10.3) .. (1.8,9.1)
+      --(1.8,0.9);
+    \draw (1.8,0.9) .. controls (1.8,2.1) and (0,2.1) .. (0,0.9)
+      .. controls (0,0.3) and (0.5,0) .. (1.1,0)--(1.8,0);
+    \draw[fill=essaygreen!15] (2.7,6.7) rectangle (7.1,8.3);
+    \draw[fill=essaygreen!15] (5.3,4.5) rectangle (7.1,6.1);
+    \draw[fill=essaygreen!15] (2.7,1.8) rectangle (4.5,3.4);
+    \foreach \y in {6.1,5.5,4.9,4.3,3.7}
+      \draw (2.7,\y)--(4.5,\y);
+    \foreach \y in {3.9,3.3,2.7,2.1,1.5}
+      \draw (5.3,\y)--(7.1,\y);
+  \end{tikzpicture}%
+}
+
+% Run in the preamble, after the editable fields in essay.tex.
+\newcommand{\setupessay}{%
+  \setlength{\essaypageheight}{\textheight}% Freeze before flowfram changes it.
+  \setlength{\essaycolumnwidth}{\dimexpr(\textwidth-2\columnsep)/3\relax}
+  \setlength{\essayfeaturewidth}{\dimexpr2\essaycolumnwidth+\columnsep\relax}
+  % Measure the whole feature: title/deck length is accounted for automatically.
+  \sbox{\essayfeaturebox}{%
+    \begin{minipage}{\essayfeaturewidth}
+      \centering
+      {\color{essaygreen}\rule{\linewidth}{0.35pt}\par}
+      \vspace{2mm}
+      \essayornament\par
+      \vspace{4mm}
+      {\essaydisplay\fontsize{23}{25}\selectfont
+        \MakeUppercase{\essaytitle}\par}
+      \vspace{3mm}
+      {\itshape\fontsize{10}{12}\selectfont\essaystandfirst\par}
+      \vspace{3mm}
+      {\essaydisplay\fontsize{9}{11}\selectfont
+        BY \MakeUppercase{\essayauthor}\enspace\textperiodcentered\enspace\essaydate\par}
+      \vspace{5mm}
+      \begin{minipage}{0.84\linewidth}
+        \essayimage\par
+        \ifx\essayimagecredit\@empty\else
+          \vspace{1mm}
+          {\raggedleft\essaydisplay\fontsize{6}{7}\selectfont\essayimagecredit\par}
+        \fi
+      \end{minipage}\par
+    \end{minipage}%
+  }
+  \setlength{\essaylowerheight}{\dimexpr\essaypageheight-
+    \ht\essayfeaturebox-\dp\essayfeaturebox-6mm\relax}
+  \essaygridsnap{\essaylowerheight}
+  \ifdim\essaylowerheight<4\essayleading
+    \PackageError{essay-layout}{Feature panel leaves too little room for text}
+      {Reduce essayimageheight or shorten the title/standfirst.}
+  \fi
+  \setlength{\essayfullheight}{\essaypageheight}
+  \essaygridsnap{\essayfullheight}
+  % Reading order: lower left, lower middle, then the full right-hand column.
+  \newflowframe[1]{\essaycolumnwidth}{\essaylowerheight}{0pt}{0pt}[opening-left]
+  \newflowframe[1]{\essaycolumnwidth}{\essaylowerheight}
+    {\dimexpr\essaycolumnwidth+\columnsep\relax}{0pt}[opening-middle]
+  \newflowframe[1]{\essaycolumnwidth}{\essayfullheight}
+    {\dimexpr2\essaycolumnwidth+2\columnsep\relax}{0pt}[opening-right]
+  \newflowframe[>1]{\essaycolumnwidth}{\essayfullheight}{0pt}{0pt}[continued-left]
+  \newflowframe[>1]{\essaycolumnwidth}{\essayfullheight}
+    {\dimexpr\essaycolumnwidth+\columnsep\relax}{0pt}[continued-middle]
+  \newflowframe[>1]{\essaycolumnwidth}{\essayfullheight}
+    {\dimexpr2\essaycolumnwidth+2\columnsep\relax}{0pt}[continued-right]
+  \newstaticframe[1]{\essayfeaturewidth}
+    {\dimexpr\ht\essayfeaturebox+\dp\essayfeaturebox\relax}
+    {0pt}{\dimexpr\essaypageheight-\ht\essayfeaturebox-\dp\essayfeaturebox\relax}[feature]
+  \setstaticcontents*[valign=t]{feature}{\usebox{\essayfeaturebox}}
+}
+\AtBeginDocument{%
+  \fontsize{9.5}{\essayleading}\selectfont
+  \lineskiplimit=-1000pt
+}
