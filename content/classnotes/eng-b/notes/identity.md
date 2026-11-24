@@ -11,11 +11,11 @@ type: Note
 
 # Identity
 
-This introductory unit explores how identity is shaped by family, memory, possessions, work, and the stories people tell about themselves. Students consider the relationship between public and private identities and examine how personal narratives can offer meaning, but also reinforce fear, isolation, or escapism.
+This introductory unit explores the relationship between public and private identities and asks how family, possessions, role models, memories, and personal stories shape our sense of self. Students move between reflection on their own experiences and analysis of how identity is represented in texts and other media.
 
-The narrative game *What Remains of Edith Finch* provides the central point of reference. Selected family stories are analysed alongside poetry, photography, a short story, podcast material, and television. Students develop a shared analytical vocabulary for characterisation, setting, narrative perspective, structure, and theme, while investigating how language, visual composition, sound, and game mechanics contribute to meaning.
+Selected chapters of *What Remains of Edith Finch* provide the central point of reference. Poetry, photography, podcast material, and a television excerpt offer contrasting perspectives on identity, belonging, fear, and freedom. Students discuss characterisation, setting, narrative perspective, reliability, symbolism, and theme.
 
-Language production moves between creative responses and evidence-based analysis. Short analytical paragraphs introduce topic sentences and the ACE/PEE model, followed by summaries and written discussions. Grammar work focuses on verb phrases and their use in context.
+Spoken English is practised through pair and group discussion, listening activities, and recorded responses. Students create interactive stories in Twine. Short analytical responses use the ACE/PEE model, and students generate and answer questions using Bloom's taxonomy. Grammar work focuses on verb phrases and their use in context.
 
 ## Texts and materials
 
@@ -23,31 +23,14 @@ Language production moves between creative responses and evidence-based analysis
 | --- | --- | --- |
 | What Remains of Edith Finch | Giant Sparrow | Narrative game; selected chapters and ending, studied through shared playthroughs |
 | We Wear the Mask | Paul Laurence Dunbar | Poem |
-| Where Children Sleep | James Mollison | Photographic project; selected images |
 | Golden Calf: “Bowing Before the Famous” | This American Life | Podcast; Act One, on Willie Nelson and his fans |
 | The Two Kinds of Stories We Tell Ourselves | Emily Esfahani Smith | Non-fiction article |
 | The Coronation of Mr. Thomas Shap | Lord Dunsany | Short story |
 | The Fly Nobody Programmed | Silvia de Couët | Non-fiction article |
 | Severance | Television series | Excerpt introducing the severance procedure and divided identities |
-| PostSecret | Frank Warren / contributors | Selected anonymous postcards |
-
-*The Veldt* by Ray Bradbury is also listed as reading material in the lesson of 18 August; the lesson notes do not document subsequent analytical work on it.
 
 ## Key terms
 
 *Public and private identity, narrative identity, memory, inheritance, trauma, escapism, redemption narrative, contamination narrative, characterisation, setting, narrator, reliability, symbolism, theme, game mechanics, cinematic techniques.*
-
-## Working methods and skills
-
-- Shared playthroughs, close reading, read-aloud activities, and role-based group reading.
-- Structured discussions and student-generated questions using Bloom's taxonomy.
-- Comparative analysis across written, visual, interactive, and audiovisual texts.
-- Creative writing in Twine and character-based PostSecret postcards.
-- Summaries, analytical paragraphs with textual evidence, and short written discussions.
-- Grammar: verb tenses, simple and progressive forms, do-support, modal verbs, phrasal verbs, and verb patterns.
-
-## Period and scope
-
-11 August–4 September 2026: 11 dated teaching sessions in the lesson notes. This is a count of sessions, not a confirmed total of teaching hours.
 
 → [[classnotes/eng-b/identity/index|Lessons: Identity]] · [[classnotes/eng-b/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

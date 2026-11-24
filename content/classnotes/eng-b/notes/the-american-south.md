@@ -27,26 +27,9 @@ Extended reading of Carys Davies's *West* broadens the geographical focus to Ame
 | West | Carys Davies | Novel; whole-work reading |
 | Lovecraft Country | Television series | Episode 1 |
 | Donkeys | Lawrence Wright | Interview excerpt on engaging readers through personal stories |
-| Southern American English | Southern Stories for Y'all | Online introduction and quiz on dialect |
-| Narrating Truth | Teaching material | Introduction to journalism and narrative non-fiction |
 
 ## Key terms
 
 *Representation, stereotype, region, narrative non-fiction, gonzo journalism, subjectivity, objectivity, rhetorical situation, exigence, audience, constraints, dialect, irony, characterisation, freedom, frontier, expansion, displacement.*
-
-## Working methods and skills
-
-- Close reading and comparison of representations across genres and media.
-- Podcast listening with attention to narrative and audio techniques.
-- Reading circles with rotating roles for summary, questions, vocabulary, connections, and illustration.
-- Read-aloud practice and recorded imitation to develop pronunciation and awareness of dialect.
-- Creative responses, including letters, diary entries, and alternative perspectives.
-- Analytical paragraphs, funnel introductions, essay outlines, and work towards an analytical essay.
-- Oral-exam-style presentations with a focus on characterisation.
-- Grammar: nouns, subject–verb agreement, and active/passive voice.
-
-## Period and scope
-
-11 September–9 October 2026: 12 dated teaching sessions in the lesson notes, including two lesson plans marked as drafts. This is a count of sessions, not a confirmed total of teaching hours.
 
 → [[classnotes/eng-b/the-american-south/index|Lessons: The American South]] · [[classnotes/eng-b/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

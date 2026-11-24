@@ -15,7 +15,7 @@ This unit explores how imagined futures illuminate the values, anxieties, and po
 
 The opening chapter of Aldous Huxley's *Brave New World* introduces utopia and dystopia, world-building, and the organisation of society through science. Students examine how exposition and scientific language establish a fictional world and compare the chapter with the opening of its television adaptation. T. Coraghessan Boyle's *The Relive Box* and the *Black Mirror* episode “Be Right Back” shift the focus to intimate relationships, escapism, and the ethical implications of technologies that promise to recover the past.
 
-Non-fiction material on human–robot relationships supports discussion of emotional attachment and artificial intelligence. George W. Bush's speech on US space policy connects technological optimism to American history and values, revisiting expansion, Manifest Destiny, and the frontier from the previous unit. Students compare fictional warnings with political visions of progress.
+George W. Bush's speech on US space policy connects technological optimism to American history and values, revisiting expansion, Manifest Destiny, and the frontier from the previous unit. The focus shifts to the role of space in science fiction literature, through the western setting of The Mandalorian, to realistic mars settlements in Settled In, ending with the metaphorical backgrounds of On a Sunbeam.
 
 ## Texts and materials
 
@@ -27,8 +27,6 @@ Non-fiction material on human–robot relationships supports discussion of emoti
 | Be Right Back | Black Mirror | Season 2, Episode 1 |
 | How We Feel About Robots That Feel | Louisa Hall | Non-fiction article |
 | Remarks on US Space Policy | George W. Bush | Political speech, 14 January 2004 |
-| The Future Is Written: A Brief Introduction… | Coursebook material | Introduction to science fiction and its subgenres |
-| Can AI 'cure' grief? | Online video | Supplementary material introducing AI and grief |
 
 ## Key terms
 
