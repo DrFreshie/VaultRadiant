@@ -1,8 +1,8 @@
 ---
 tags:
   - english
-  - 8P87en
-class: 8P87en
+  - 8P87En
+class: 8P87En
 draft: false
 subject: english
 title: Cinematic techniques
