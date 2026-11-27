@@ -29,6 +29,6 @@ Stephen Fry's account of reading Oscar Wilde opens discussion of reading, identi
 
 ## Key terms
 
-*Voice, tone, perspective, explicit and implicit meaning, theme, message, representation, exclusion, rhetorical situation, exigence, audience, constraints, ethos, pathos, logos, metaphor, simile, repetition, anaphora, antithesis, inclusive language, pronunciation, delivery.*
+*Voice, self-expression, identity, representation, belonging, social class, prejudice, social exclusion, the right to be heard, speech impediment, confidence, authority, leadership, responsibility.*
 
 → [[classnotes/eng-c/voice/index|Lessons: Voice]] · [[classnotes/eng-c/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

@@ -37,6 +37,6 @@ The unit then broadens to visions of space exploration. George W. Bush's space-p
 
 ## Key terms
 
-*Science fiction, utopia, dystopia, hard and soft science fiction, world-building, cognitive estrangement, info-dump, conditioning, autonomy, memory, restoration, grief, artificial intelligence, progress, Manifest Destiny, frontier, rhetorical devices, cinematic techniques, register, coherence.*
+*Utopia, dystopia, social conditioning, autonomy, identity, memory, nostalgia, grief, artificial intelligence, human–robot relationships, emotional attachment, technological progress, space exploration, colonisation, Manifest Destiny, frontier.*
 
 → [[classnotes/eng-c/the-future-is-written/index|Lessons: The Future Is Written]] · [[classnotes/eng-c/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

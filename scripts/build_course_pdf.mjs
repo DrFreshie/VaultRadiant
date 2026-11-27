@@ -236,7 +236,18 @@ for(const [chapterIndex,unit] of units.entries()) {
  unitTitle=metadata.title;
  if(courseMode) {
   const {cover,description}=metadata;
+  current=path.resolve('content/classnotes/eng-c/notes',path.basename(unit)+'.md');
+  inMaterials=false;
+  const descriptionSource=fs.readFileSync(current,'utf8')
+   .replace(/^---\n[\s\S]*?\n---\n/,'')
+   .replace(/<!--[\s\S]*?-->/g,'')
+   .replace(/^→.*$/gm,'');
+  const processor=unified().use(remarkParse).use(remarkGfm).use(remarkRehype,{allowDangerousHtml:true}).use(rehypeRaw);
+  const descriptionTree=await processor.run(processor.parse(descriptionSource));
+  const descriptionTex=render(descriptionTree).replace('\\arraystretch}{1.3}','\\arraystretch}{1.15}');
+  const descriptionPage=`\n\\clearpage\\markboth{${unitTitle}}{}\n\\fancyhead[L]{\\small\\color{blue}${unitTitle}}\n{\\color{blue}\\small CHAPTER ${chapterIndex+1} · UNIT DESCRIPTION\\par}\n{\\displayfont\\color{navy}\\fontsize{30}{34}\\selectfont ${unitTitle}\\par}\\medskip\n\\begingroup\\fontsize{9}{11}\\selectfont\\linespread{1.05}\\selectfont\n\\setlength{\\parskip}{.4em}\n${descriptionTex}\\par\\endgroup\\clearpage\n`;
   tex+=`\n\\clearpage\\phantomsection\\addcontentsline{toc}{chapter}{${chapterIndex+1}. ${unitTitle}}\\markboth{${unitTitle}}{}\\thispagestyle{empty}\n\\fancyhead[L]{\\small\\color{blue}${unitTitle}}\n\\vspace*{12mm}\n{\\color{blue}\\large CHAPTER ${chapterIndex+1}\\par}\\vspace{8mm}\n{\\displayfont\\color{navy}\\fontsize{43}{47}\\selectfont ${unitTitle}\\par}\\vspace{12mm}\n\\begin{center}${image(cover,'\\linewidth','.48\\textheight')}\\end{center}\\vfill\n{\\large ${description}\\par}\\clearpage\n`;
+  tex+=descriptionPage;
  }
 const files=fs.readdirSync(unit).filter(f=>/^\d.*\.md$/.test(f)).sort();
 for(let i=0;i<files.length;i++){

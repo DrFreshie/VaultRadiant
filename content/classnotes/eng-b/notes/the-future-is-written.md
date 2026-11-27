@@ -3,7 +3,7 @@ tags:
   - the-future-is-written
   - english
 class: 8P87En
-draft: true
+draft: false
 subject: english
 title: The Future Is Written
 type: Note
@@ -27,23 +27,11 @@ George W. Bush's speech on US space policy connects technological optimism to Am
 | Be Right Back | Black Mirror | Season 2, Episode 1 |
 | How We Feel About Robots That Feel | Louisa Hall | Non-fiction article |
 | Remarks on US Space Policy | George W. Bush | Political speech, 14 January 2004 |
+| The Mandalorian | Jon Favreau | Television series; Season 1, Episode 1 |
+| On a Sunbeam | Tillie Walden | Webcomic; first two or three chapters |
 
 ## Key terms
 
-*Science fiction, utopia, dystopia, hard and soft science fiction, near and far future, world-building, cognitive estrangement, info-dump, conditioning, autonomy, memory, escapism, artificial intelligence, grief, progress, frontier, Manifest Destiny, rhetorical devices, register.*
-
-## Working methods and skills
-
-- Close reading, vocabulary work, and text-based group discussion.
-- Visual world-building supported by quotations from the text.
-- Comparison of prose fiction and television adaptation.
-- Scene analysis using framing, perspective, sound, and lighting; presentation with film stills.
-- Student-generated analytical questions and oral-exam-style speaking notes.
-- Writing for different audiences: formal and informal manuals and a formal argumentative email.
-- Rhetorical analysis of a political speech, with attention to historical references and American values.
-
-## Period and scope
-
-Ongoing unit. The available lesson plans cover 11–20 November 2026: 5 dated teaching sessions. These describe the documented/planned scope, not a final record of completed teaching or a confirmed total of teaching hours.
+*Utopia, dystopia, conditioning, social control, identity, autonomy, memory, escapism, artificial intelligence, grief, technological progress, technological ethics, space exploration, space settlement, frontier, Manifest Destiny.*
 
 → [[classnotes/eng-b/the-future-is-written/index|Lessons: The Future Is Written]] · [[classnotes/eng-b/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

@@ -3,7 +3,7 @@ tags:
   - the-american-south
   - english
 class: 8P87En
-draft: true
+draft: false
 subject: english
 title: The American South
 type: Note
@@ -30,6 +30,6 @@ Extended reading of Carys Davies's *West* broadens the geographical focus to Ame
 
 ## Key terms
 
-*Representation, stereotype, region, narrative non-fiction, gonzo journalism, subjectivity, objectivity, rhetorical situation, exigence, audience, constraints, dialect, irony, characterisation, freedom, frontier, expansion, displacement.*
+*Southern identity, regional stereotypes, Southern American English, race, freedom, frontier, American expansion, ambition, gender, displacement, unequal opportunities.*
 
 → [[classnotes/eng-b/the-american-south/index|Lessons: The American South]] · [[classnotes/eng-b/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

@@ -3,7 +3,7 @@ tags:
   - identity
   - english
 class: 8P87En
-draft: true
+draft: false
 subject: english
 title: Identity
 type: Note
@@ -31,6 +31,6 @@ Spoken English is practised through pair and group discussion, listening activit
 
 ## Key terms
 
-*Public and private identity, narrative identity, memory, inheritance, trauma, escapism, redemption narrative, contamination narrative, characterisation, setting, narrator, reliability, symbolism, theme, game mechanics, cinematic techniques.*
+*Public and private identity, narrative identity, sense of self, belonging, family, inheritance, role models, memory, trauma, escapism, redemption narrative, contamination narrative, fear, freedom.*
 
 → [[classnotes/eng-b/identity/index|Lessons: Identity]] · [[classnotes/eng-b/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

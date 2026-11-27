@@ -29,6 +29,6 @@ Spoken English is practised through pair and group discussion, listening activit
 
 ## Key terms
 
-*Public and private identity, narrative identity, memory, family, inheritance, role model, trauma, isolation, redemption narrative, contamination narrative, characterisation, setting, narrator, reliability, symbolism, theme, cinematic techniques, Bloom's taxonomy*
+*Public and private identity, narrative identity, sense of self, belonging, memory, family, inheritance, role models, trauma, isolation, redemption narrative, contamination narrative.*
 
 → [[classnotes/eng-c/identity/index|Lessons: Identity]] · [[classnotes/eng-c/notes/undervisningsbeskrivelse|Undervisningsbeskrivelse]]

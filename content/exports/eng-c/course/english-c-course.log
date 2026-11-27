@@ -1,0 +1,2173 @@
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026/Arch Linux)  (format=lualatex 2026.10.7)  26 NOV 2026 16:29
+ restricted system commands enabled.
+ file:line:error style messages enabled.
+**english-c-course.tex
+(./english-c-course.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+Lua module: luaotfload 2024-12-03 v3.29 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 v2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 v2.76 ConTeXt Lua libraries -- extended collection.
+luaotfload | conf : Root cache directory is "/home/anders/.texlive/texmf-var/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-12-28.lua" from kpse-resolved path "/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2023-12-28.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.134
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "/home/anders/.texlive/texmf-var/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'. (/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
+\c@part=\count273
+\c@chapter=\count274
+\c@section=\count275
+\c@subsection=\count276
+\c@subsubsection=\count277
+\c@paragraph=\count278
+\c@subparagraph=\count279
+\c@figure=\count280
+\c@table=\count281
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen147
+) (/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen148
+\Gm@wd@mp=\dimen149
+\Gm@odd@mp=\dimen150
+\Gm@even@mp=\dimen151
+\Gm@layoutwidth=\dimen152
+\Gm@layoutheight=\dimen153
+\Gm@layouthoffset=\dimen154
+\Gm@layoutvoffset=\dimen155
+\Gm@dimlist=\toks18
+) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2026-01-19 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
+File: l3backend-luatex.def 2025-10-09 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count285
+Inserting `l3color' in `luaotfload.parse_color'.))
+Package: xparse 2025-10-09 L3 Experimental document command parser
+)
+Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+Lua module: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX (/usr/share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
+Package: fontspec-luatex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count286
+\l__fontspec_language_int=\count287
+\l__fontspec_strnum_int=\count288
+\l__fontspec_tmp_int=\count289
+\l__fontspec_tmpa_int=\count290
+\l__fontspec_tmpb_int=\count291
+\l__fontspec_tmpc_int=\count292
+\l__fontspec_em_int=\count293
+\l__fontspec_emdef_int=\count294
+\l__fontspec_strong_int=\count295
+\l__fontspec_strongdef_int=\count296
+\l__fontspec_tmpa_dim=\dimen156
+\l__fontspec_tmpb_dim=\dimen157
+\l__fontspec_tmpc_dim=\dimen158
+ (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (/usr/share/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+luaotfload | cache : Lookup cache loaded from /home/anders/.texlive/texmf-var/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+
+Package fontspec Info: 
+(fontspec)             Font family 'NotoSans(0)' created for font 'Noto Sans'
+(fontspec)             with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:Noto
+(fontspec)             Sans:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"name:Noto
+(fontspec)             Sans:mode=node;script=latn;language=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"name:Noto
+(fontspec)             Sans/B:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"name:Noto
+(fontspec)             Sans/B:mode=node;script=latn;language=dflt;+tlig;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"name:Noto
+(fontspec)             Sans/I:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"name:Noto
+(fontspec)             Sans/I:mode=node;script=latn;language=dflt;+tlig;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"name:Noto
+(fontspec)             Sans/BI:mode=node;script=latn;language=dflt;+tlig;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"name:Noto
+(fontspec)             Sans/BI:mode=node;script=latn;language=dflt;+tlig;+smcp;"
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "EB Garamond/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "EB Garamond/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'EBGaramond(0)' created for font 'EB
+(fontspec)             Garamond' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"name:EB
+(fontspec)             Garamond:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->"name:EB
+(fontspec)             Garamond:mode=node;script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"name:EB
+(fontspec)             Garamond/I:mode=node;script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"name:EB
+(fontspec)             Garamond/I:mode=node;script=latn;language=dflt;+smcp;"
+
+ (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 274.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2025/09/29 v1.2f Graphics/color driver for luatex
+) (/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 106.
+)
+\Gin@req@height=\dimen159
+\Gin@req@width=\dimen160
+) (/usr/share/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip51
+\enit@outerparindent=\dimen161
+\enit@toks=\toks19
+\enit@inbox=\box53
+\enit@count@id=\count297
+\enitdp@description=\count298
+) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+ (/usr/share/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box54
+\extrarowheight=\dimen163
+\NC@list=\toks20
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box55
+)
+\TX@col@width=\dimen164
+\TX@old@table=\dimen165
+\TX@old@col=\dimen166
+\TX@target=\dimen167
+\TX@delta=\dimen168
+\TX@cols=\count299
+\TX@ftn=\toks21
+) (/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen169
+\lightrulewidth=\dimen170
+\cmidrulewidth=\dimen171
+\belowrulesep=\dimen172
+\belowbottomsep=\dimen173
+\aboverulesep=\dimen174
+\abovetopsep=\dimen175
+\cmidrulesep=\dimen176
+\cmidrulekern=\dimen177
+\defaultaddspace=\dimen178
+\@cmidla=\count300
+\@cmidlb=\count301
+\@aboverulesep=\dimen179
+\@belowrulesep=\dimen180
+\@thisruleclass=\count302
+\@lastruleclass=\count303
+\@thisrulewidth=\dimen181
+) (/usr/share/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2025/01/04 v2.17 Sectioning titles
+\ttl@box=\box56
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen182
+\ttl@minus=\dimen183
+\ttl@toksa=\toks22
+\titlewidth=\dimen184
+\titlewidthlast=\dimen185
+\titlewidthfirst=\dimen186
+) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip56
+\f@nch@offset@elh=\skip57
+\f@nch@offset@erh=\skip58
+\f@nch@offset@olh=\skip59
+\f@nch@offset@orh=\skip60
+\f@nch@offset@elf=\skip61
+\f@nch@offset@erf=\skip62
+\f@nch@offset@olf=\skip63
+\f@nch@offset@orf=\skip64
+\f@nch@height=\skip65
+\f@nch@footalignment=\skip66
+\f@nch@widthL=\skip67
+\f@nch@widthC=\skip68
+\f@nch@widthR=\skip69
+\@temptokenb=\toks23
+) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+ (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count304
+)
+\MT@toks=\toks24
+\MT@tempbox=\box57
+\MT@count=\count305
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks25
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen187
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count306
+ (/usr/share/texmf-dist/tex/latex/microtype/microtype-luatex.def
+File: microtype-luatex.def 2026/03/01 v3.2d Definitions specific to luatex (RS)
+Lua module: microtype 2026/03/01 v3.2d microtype module.
+Module microtype Info: overwriting function `keepligature' on input line 63
+LaTeX Info: Redefining \lsstyle on input line 779.
+LaTeX Info: Redefining \lslig on input line 779.
+\MT@outer@space=\skip70
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/share/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+ (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks26
+\pgfutil@tempdima=\dimen188
+\pgfutil@tempdimb=\dimen189
+)
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box58
+) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+ (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks27
+\pgfkeys@temptoks=\toks28
+ (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks29
+))
+\pgf@x=\dimen190
+\pgf@y=\dimen191
+\pgf@xa=\dimen192
+\pgf@ya=\dimen193
+\pgf@xb=\dimen194
+\pgf@yb=\dimen195
+\pgf@xc=\dimen196
+\pgf@yc=\dimen197
+\pgf@xd=\dimen198
+\pgf@yd=\dimen199
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count307
+\c@pgf@countb=\count308
+\c@pgf@countc=\count309
+\c@pgf@countd=\count310
+\t@pgf@toka=\toks30
+\t@pgf@tokb=\toks31
+\t@pgf@tokc=\toks32
+\pgf@sys@id@count=\count311
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-luatex.def
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-luatex.def
+File: pgfsys-luatex.def 2025-08-29 v3.1.11a (3.1.11a)
+ (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count312
+\pgfsyssoftpath@bigbuffer@items=\count313
+) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+ (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen256
+\pgfmath@count=\count314
+\pgfmath@box=\box59
+\pgfmath@toks=\toks33
+\pgfmath@stack@operand=\toks34
+\pgfmath@stack@operation=\toks35
+) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count315
+))
+(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen257
+\pgf@picmaxx=\dimen258
+\pgf@picminy=\dimen259
+\pgf@picmaxy=\dimen260
+\pgf@pathminx=\dimen261
+\pgf@pathmaxx=\dimen262
+\pgf@pathminy=\dimen263
+\pgf@pathmaxy=\dimen264
+\pgf@xx=\dimen265
+\pgf@xy=\dimen266
+\pgf@yx=\dimen267
+\pgf@yy=\dimen268
+\pgf@zx=\dimen269
+\pgf@zy=\dimen270
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen271
+\pgf@path@lasty=\dimen272
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen273
+\pgf@shorten@start@additional=\dimen274
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box60
+\pgf@hbox=\box61
+\pgf@layerbox@main=\box62
+\pgf@picture@serial@count=\count316
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen275
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen276
+\pgf@pt@y=\dimen277
+\pgf@pt@temp=\dimen278
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen279
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen280
+\pgf@sys@shading@range@num=\count317
+\pgf@shadingcount=\count318
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box63
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box64
+) (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen281
+\pgf@nodesepend=\dimen282
+) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen283
+\pgffor@skip=\dimen284
+\pgffor@stack=\toks36
+\pgffor@toks=\toks37
+)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count319
+\pgfplotmarksize=\dimen285
+)
+\tikz@lastx=\dimen286
+\tikz@lasty=\dimen287
+\tikz@lastxsaved=\dimen288
+\tikz@lastysaved=\dimen289
+\tikz@lastmovetox=\dimen290
+\tikz@lastmovetoy=\dimen291
+\tikzleveldistance=\dimen292
+\tikzsiblingdistance=\dimen293
+\tikz@figbox=\box65
+\tikz@figbox@bg=\box66
+\tikz@tempbox=\box67
+\tikz@tempbox@bg=\box68
+\tikztreelevel=\count320
+\tikznumberofchildren=\count321
+\tikznumberofcurrentchild=\count322
+\tikz@fig@count=\count323
+ (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count324
+\pgfmatrixcurrentcolumn=\count325
+\pgf@matrix@numberofcolumns=\count326
+)
+\tikz@expandcount=\count327
+ (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks38
+\verbatim@line=\toks39
+\verbatim@in@stream=\read3
+) (/usr/share/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks40
+)
+\tcb@titlebox=\box69
+\tcb@upperbox=\box70
+\tcb@lowerbox=\box71
+\tcb@phantombox=\box72
+\c@tcbbreakpart=\count328
+\c@tcblayer=\count329
+\c@tcolorbox@number=\count330
+\l__tcobox_tmpa_box=\box73
+\l__tcobox_tmpa_dim=\dimen294
+\tcb@temp=\box74
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@temp=\box77
+ (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.9.0'
+\c@tcbrastercolumn=\count331
+\c@tcbrasterrow=\count332
+\c@tcbrasternum=\count333
+\c@tcbraster=\count334
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+ (/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+) (/usr/share/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box78
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/pdfcol/pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+))
+Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
+\tcb@testbox=\box79
+\tcb@totalupperbox=\box80
+\tcb@totallowerbox=\box81
+ (/usr/share/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.9.0'
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip71
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks41
+\ex@=\dimen295
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen296
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count335
+LaTeX Info: Redefining \frac on input line 235.
+\uproot@=\count336
+\leftroot@=\count337
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count338
+\DOTSCASE@=\count339
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box82
+\strutbox@=\box83
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen297
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count340
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count341
+\dotsspace@=\muskip17
+\c@parentequation=\count342
+\dspbrk@lvl=\count343
+\tag@help=\toks42
+\row@=\count344
+\column@=\count345
+\maxfields@=\count346
+\andhelp@=\toks43
+\eqnshift@=\dimen298
+\alignsep@=\dimen299
+\tagshift@=\dimen300
+\tagwidth@=\dimen301
+\totwidth@=\dimen302
+\lineht@=\dimen303
+\@envbody=\toks44
+\multlinegap=\skip72
+\multlinetaggap=\skip73
+\mathdisplay@stack=\toks45
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.9.0'
+\tcbfitdim=\dimen304
+\tcb@lowerfitdim=\dimen305
+\tcb@upperfitdim=\dimen306
+\tcb@cur@hbadness=\count347
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count348
+\lst@gtempboxa=\box84
+\lst@token=\toks46
+\lst@length=\count349
+\lst@currlwidth=\dimen307
+\lst@column=\count350
+\lst@pos=\count351
+\lst@lostspace=\dimen308
+\lst@width=\dimen309
+\lst@newlines=\count352
+\lst@lineno=\count353
+\lst@maxwidth=\dimen310
+ (/usr/share/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count354
+\lst@skipnumbers=\count355
+\lst@framebox=\box85
+) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.9.0'
+)
+\c@tcblisting=\count356
+))
+Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. Library `listings` is loaded instead. on input line 29.
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.9.0'
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.9.0'
+) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.9.0'
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '6.9.0'
+)) (/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+ (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count357
+\calc@Bcount=\count358
+\calc@Adimen=\dimen311
+\calc@Bdimen=\dimen312
+\calc@Askip=\skip74
+\calc@Bskip=\skip75
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count359
+\calc@Cskip=\skip76
+) (/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2025/12/10 v3.0d eso-pic (RN)
+\ESO@tempdima=\dimen313
+\ESO@tempdimb=\dimen314
+)
+\AM@pagewidth=\dimen315
+\AM@pageheight=\dimen316
+\AM@fboxrule=\dimen317
+ (/usr/share/texmf-dist/tex/latex/pdfpages/ppluatex.def
+File: ppluatex.def 2025/07/23 v0.6g Pdfpages driver for LuaTeX (AM)
+)
+\pdfpages@includegraphics@status=\count360
+\AM@pagebox=\box86
+\AM@global@opts=\toks47
+\AM@pagecnt=\count361
+\AM@toc@title=\toks48
+\AM@lof@heading=\toks49
+\c@AM@survey=\count362
+\AM@templatesizebox=\box87
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
+ (/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks50
+)) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+ (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count363
+) (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\@linkdim=\dimen318
+\Hy@linkcounter=\count364
+\Hy@pagecounter=\count365
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count366
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4468.
+\c@Hy@tempcnt=\count367
+ (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4807.
+\XeTeXLinkMargin=\dimen319
+ (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count368
+\Field@Width=\dimen320
+\Fld@charsize=\dimen321
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
+\Hy@abspage=\count369
+\c@Item=\count370
+\c@Hfootnote=\count371
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2026-01-29 v7.01p Hyperref driver for luaTeX
+\Fld@listcount=\count372
+\c@bookmark@seq@number=\count373
+ (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+ (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 284.
+)
+\Hy@SectionHShift=\skip77
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+ (./english-c-course.aux)
+\openout1 = english-c-course.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: luatex
+*geometry* verbose mode - [ preamble ] result:
+* driver: luatex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(59.75078pt, 478.00632pt, 59.75078pt)
+* v-part:(T,H,B)=(59.75078pt, 725.54529pt, 59.75078pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=478.00632pt
+* \textheight=725.54529pt
+* \oddsidemargin=-12.51921pt
+* \evensidemargin=-12.51921pt
+* \topmargin=-48.393pt
+* \headheight=16.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=53.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 42.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 42.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 42.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 42.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 42.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 42.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 42.
+LaTeX Font Info:    Redeclaring math accent \check on input line 42.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 42.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 42.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 42.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 42.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 42.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/m/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 42.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/b/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 42.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 42.
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count374
+\scratchdimen=\dimen322
+\scratchbox=\box88
+\nofMPsegments=\count375
+\nofMParguments=\count376
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count377
+\MPscratchDim=\dimen323
+\MPnumerator=\count378
+\makeMPintoPDFobject=\count379
+\everyMPtoPDFconversion=\toks52
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \microtypecontext on input line 42.
+Package microtype Info: Applying patch `item' on input line 42.
+Package microtype Info: Applying patch `toc' on input line 42.
+Package microtype Info: Applying patch `eqnum' on input line 42.
+Package microtype Info: Applying patch `footnote' on input line 42.
+Package microtype Info: Applying patch `verbatim' on input line 42.
+LaTeX Info: Redefining \microtypesetup on input line 42.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `NotoSans' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\c@lstlisting=\count380
+ (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
+ (/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PDF (HO)
+ (/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+Package hyperref Info: Link coloring ON on input line 42.
+ (./english-c-course.out) (./english-c-course.out)
+\@outlinefile=\write4
+
+\openout4 = english-c-course.out
+ (/usr/share/texmf-dist/tex/latex/microtype/mt-EBGaramond.cfg
+File: mt-EBGaramond.cfg 2021/10/25 v2.0 microtype config. file: EB Garamond / Adobe Garamond (RS)
+)
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `/f.long'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `mt-EBGaramond.cfg/962(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `/f.short'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `mt-EBGaramond.cfg/962(protrusion)'.
+
+
+Package microtype Warning: Unknown slot number of character
+(microtype)                `/u.LATmedi'
+(microtype)                in font encoding `TU' in inheritance list
+(microtype)                `mt-EBGaramond.cfg/962(protrusion)'.
+
+[1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./english-c-course.toc (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
+[1
+
+])
+\tf@toc=\write5
+
+\openout5 = english-c-course.toc
+ [2]
+<assets/wroef.jpg, id=247, 1927.2pt x 1084.05pt>
+File: assets/wroef.jpg Graphic file (type jpg)
+<use assets/wroef.jpg>
+Package luatex.def Info: assets/wroef.jpg  used on input line 60.
+(luatex.def)             Requested size: 478.00537pt x 268.878pt.
+ [3
+
+<./assets/wroef.jpg>] [4
+
+
+] [5
+
+
+]
+<assets/1782291276-meme.png, id=262, 602.25pt x 463.7325pt>
+File: assets/1782291276-meme.png Graphic file (type png)
+<use assets/1782291276-meme.png>
+Package luatex.def Info: assets/1782291276-meme.png  used on input line 162.
+(luatex.def)             Requested size: 210.32198pt x 161.94792pt.
+ [6<./assets/1782291276-meme.png>] [7] [8
+
+] [9]
+<assets/where_childre_sleep.png, id=297, 429.605pt x 330.23375pt>
+File: assets/where_childre_sleep.png Graphic file (type png)
+<use assets/where_childre_sleep.png>
+Package luatex.def Info: assets/where_childre_sleep.png  used on input line 327.
+(luatex.def)             Requested size: 405.87398pt x 311.9919pt.
+ [10] [11<./assets/where_childre_sleep.png>]
+<assets/diary.png, id=313, 1642.135pt x 927.465pt>
+File: assets/diary.png Graphic file (type png)
+<use assets/diary.png>
+Package luatex.def Info: assets/diary.png  used on input line 392.
+(luatex.def)             Requested size: 477.986pt x 269.96275pt.
+ [12
+
+<./assets/diary.png>] [13] [14] [15] [16
+
+] [17]
+<assets/finch-family-tree.png, id=360, 1606.0pt x 903.375pt>
+File: assets/finch-family-tree.png Graphic file (type png)
+<use assets/finch-family-tree.png>
+Package luatex.def Info: assets/finch-family-tree.png  used on input line 638.
+(luatex.def)             Requested size: 478.00537pt x 268.878pt.
+ [18
+
+] [19<./assets/finch-family-tree.png>] [20] [21
+
+] [22] [23
+
+] [24] [25]
+File: assets/finch-family-tree.png Graphic file (type png)
+<use assets/finch-family-tree.png>
+Package luatex.def Info: assets/finch-family-tree.png  used on input line 941.
+(luatex.def)             Requested size: 478.00537pt x 268.878pt.
+ [26
+
+]
+<assets/1788265373-bloom.png, id=415, 1541.76pt x 929.4725pt>
+File: assets/1788265373-bloom.png Graphic file (type png)
+<use assets/1788265373-bloom.png>
+Package luatex.def Info: assets/1788265373-bloom.png  used on input line 969.
+(luatex.def)             Requested size: 477.98772pt x 288.16187pt.
+ [27<./assets/1788265373-bloom.png>]
+File: assets/1788265373-bloom.png Graphic file (type png)
+<use assets/1788265373-bloom.png>
+Package luatex.def Info: assets/1788265373-bloom.png  used on input line 1007.
+(luatex.def)             Requested size: 477.98772pt x 288.16187pt.
+ [28] [29]
+<assets/dolls-house-button.png, id=445, 782.925pt x 672.5125pt>
+File: assets/dolls-house-button.png Graphic file (type png)
+<use assets/dolls-house-button.png>
+Package luatex.def Info: assets/dolls-house-button.png  used on input line 1038.
+(luatex.def)             Requested size: 405.4389pt x 348.26161pt.
+ [30
+
+<./assets/dolls-house-button.png>] [31
+
+
+] [32
+
+
+] [33] [34]
+<assets/1789622824-banksy_flower.png, id=469, 475.7775pt x 298.11375pt>
+File: assets/1789622824-banksy_flower.png Graphic file (type png)
+<use assets/1789622824-banksy_flower.png>
+Package luatex.def Info: assets/1789622824-banksy_flower.png  used on input line 1192.
+(luatex.def)             Requested size: 478.02684pt x 299.52316pt.
+ [35
+
+<./assets/1789622824-banksy_flower.png>]
+<assets/1789622678-.png, id=475, 1407.2575pt x 708.6475pt>
+File: assets/1789622678-.png Graphic file (type png)
+<use assets/1789622678-.png>
+Package luatex.def Info: assets/1789622678-.png  used on input line 1228.
+(luatex.def)             Requested size: 477.98882pt x 240.69908pt.
+ [36<./assets/1789622678-.png>] [37] [38
+
+] [39] [40
+
+] [41] [42
+
+] [43] [44] [45]
+<assets/1791190927-suspect.png, id=544, 1003.75pt x 565.11125pt>
+File: assets/1791190927-suspect.png Graphic file (type png)
+<use assets/1791190927-suspect.png>
+Package luatex.def Info: assets/1791190927-suspect.png  used on input line 1509.
+(luatex.def)             Requested size: 210.31892pt x 118.40955pt.
+ [46
+
+<./assets/1791190927-suspect.png>]
+<assets/wordcloud.png, id=552, 5018.75pt x 5018.75pt>
+File: assets/wordcloud.png Graphic file (type png)
+<use assets/wordcloud.png>
+Package luatex.def Info: assets/wordcloud.png  used on input line 1533.
+(luatex.def)             Requested size: 311.90977pt x 311.90977pt.
+ [47
+
+<./assets/wordcloud.png>] [48]
+<assets/Sci-fi-train.png, id=565, 443.6575pt x 650.43pt>
+File: assets/Sci-fi-train.png Graphic file (type png)
+<use assets/Sci-fi-train.png>
+Package luatex.def Info: assets/Sci-fi-train.png  used on input line 1569.
+(luatex.def)             Requested size: 237.55411pt x 348.2694pt.
+ [49
+
+<./assets/Sci-fi-train.png>] [50
+
+
+] [51
+
+
+]
+<assets/1792400829-bnw.png, id=583, 630.355pt x 656.4525pt>
+File: assets/1792400829-bnw.png Graphic file (type png)
+<use assets/1792400829-bnw.png>
+Package luatex.def Info: assets/1792400829-bnw.png  used on input line 1688.
+(luatex.def)             Requested size: 210.3262pt x 219.03398pt.
+ [52] [53<./assets/1792400829-bnw.png>] [54
+
+] [55]
+<assets/1793003299-reading.png, id=621, 423.5825pt x 516.93124pt>
+File: assets/1793003299-reading.png Graphic file (type png)
+<use assets/1793003299-reading.png>
+Package luatex.def Info: assets/1793003299-reading.png  used on input line 1828.
+(luatex.def)             Requested size: 210.32355pt x 256.67447pt.
+ [56
+
+] [57<./assets/1793003299-reading.png>] [58
+
+] [59]
+<assets/berightback.png, id=659, 1852.9225pt x 855.195pt>
+File: assets/berightback.png Graphic file (type png)
+<use assets/berightback.png>
+Package luatex.def Info: assets/berightback.png  used on input line 1950.
+(luatex.def)             Requested size: 477.98814pt x 220.60991pt.
+ [60
+
+] [61<./assets/berightback.png>] [62]
+<assets/1794426155-manifest.png, id=679, 1504.62125pt x 1109.14375pt>
+File: assets/1794426155-manifest.png Graphic file (type png)
+<use assets/1794426155-manifest.png>
+Package luatex.def Info: assets/1794426155-manifest.png  used on input line 2015.
+(luatex.def)             Requested size: 423.2196pt x 311.97977pt.
+ [63
+
+] [64<./assets/1794426155-manifest.png>] [65
+
+] [66]
+<assets/1795013794-sky.png, id=721, 5018.75pt x 3764.0625pt>
+File: assets/1795013794-sky.png Graphic file (type png)
+<use assets/1795013794-sky.png>
+Package luatex.def Info: assets/1795013794-sky.png  used on input line 2150.
+(luatex.def)             Requested size: 415.90523pt x 311.92891pt.
+ [67
+
+]
+<assets/1795014338-sunbeam.png, id=728, 642.4pt x 873.2625pt>
+File: assets/1795014338-sunbeam.png Graphic file (type png)
+<use assets/1795014338-sunbeam.png>
+Package luatex.def Info: assets/1795014338-sunbeam.png  used on input line 2169.
+(luatex.def)             Requested size: 210.32628pt x 285.91228pt.
+ [68<./assets/1795013794-sky.png><./assets/1795014338-sunbeam.png>] [69]
+<assets/1795372840-loneranger.png, id=749, 501.875pt x 625.33624pt>
+File: assets/1795372840-loneranger.png Graphic file (type png)
+<use assets/1795372840-loneranger.png>
+Package luatex.def Info: assets/1795372840-loneranger.png  used on input line 2245.
+(luatex.def)             Requested size: 210.32657pt x 262.06691pt.
+<assets/1795372963-mando.png, id=750, 689.57625pt x 794.97pt>
+File: assets/1795372963-mando.png Graphic file (type png)
+<use assets/1795372963-mando.png>
+Package luatex.def Info: assets/1795372963-mando.png  used on input line 2257.
+(luatex.def)             Requested size: 210.3257pt x 242.47156pt.
+ [70
+
+<./assets/1795372840-loneranger.png>] [71<./assets/1795372963-mando.png>] [72
+
+
+]
+<materials/iThrive_Who-Are-You-Activity.pdf, id=831, 614.295pt x 794.97pt>
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf  used on input line 2298.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/iThrive_Who-Are-You-Activity.pdf, id=833, page=1, 614.295pt x 794.97pt>
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page1 used on input line 2298.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page1 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page1 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page1 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page1 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [73
+
+
+<./materials/iThrive_Who-Are-You-Activity.pdf>]
+<materials/iThrive_Who-Are-You-Activity.pdf, id=854, page=2, 614.295pt x 794.97pt>
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 2>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page2 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 2>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page2 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 2>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page2 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [74
+
+<./materials/iThrive_Who-Are-You-Activity.pdf>]
+<materials/iThrive_Who-Are-You-Activity.pdf, id=866, page=3, 614.295pt x 794.97pt>
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 3>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page3 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 3>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page3 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 3>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page3 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [75
+
+<./materials/iThrive_Who-Are-You-Activity.pdf>]
+<materials/iThrive_Who-Are-You-Activity.pdf, id=871, page=4, 614.295pt x 794.97pt>
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 4>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page4 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 4>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page4 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 4>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page4 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [76
+
+<./materials/iThrive_Who-Are-You-Activity.pdf>]
+<materials/iThrive_Who-Are-You-Activity.pdf, id=876, page=5, 614.295pt x 794.97pt>
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 5>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page5 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 5>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page5 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Who-Are-You-Activity.pdf Graphic file (type pdf)
+<use materials/iThrive_Who-Are-You-Activity.pdf, page 5>
+Package luatex.def Info: materials/iThrive_Who-Are-You-Activity.pdf , page5 used on input line 2298.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [77
+
+<./materials/iThrive_Who-Are-You-Activity.pdf>]
+<materials/iThrive__Identity_in_Context.pdf, id=881, 614.295pt x 794.97pt>
+File: materials/iThrive__Identity_in_Context.pdf Graphic file (type pdf)
+<use materials/iThrive__Identity_in_Context.pdf>
+Package luatex.def Info: materials/iThrive__Identity_in_Context.pdf  used on input line 2301.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/iThrive__Identity_in_Context.pdf, id=883, page=1, 614.295pt x 794.97pt>
+File: materials/iThrive__Identity_in_Context.pdf Graphic file (type pdf)
+<use materials/iThrive__Identity_in_Context.pdf, page 1>
+Package luatex.def Info: materials/iThrive__Identity_in_Context.pdf , page1 used on input line 2301.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/iThrive__Identity_in_Context.pdf Graphic file (type pdf)
+<use materials/iThrive__Identity_in_Context.pdf, page 1>
+Package luatex.def Info: materials/iThrive__Identity_in_Context.pdf , page1 used on input line 2301.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive__Identity_in_Context.pdf Graphic file (type pdf)
+<use materials/iThrive__Identity_in_Context.pdf, page 1>
+Package luatex.def Info: materials/iThrive__Identity_in_Context.pdf , page1 used on input line 2301.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive__Identity_in_Context.pdf Graphic file (type pdf)
+<use materials/iThrive__Identity_in_Context.pdf, page 1>
+Package luatex.def Info: materials/iThrive__Identity_in_Context.pdf , page1 used on input line 2301.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive__Identity_in_Context.pdf Graphic file (type pdf)
+<use materials/iThrive__Identity_in_Context.pdf, page 1>
+Package luatex.def Info: materials/iThrive__Identity_in_Context.pdf , page1 used on input line 2301.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [78
+
+
+<./materials/iThrive__Identity_in_Context.pdf>]
+<materials/2_Molly.pdf, id=904, 614.295pt x 794.97pt>
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf>
+Package luatex.def Info: materials/2_Molly.pdf  used on input line 2304.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/2_Molly.pdf, id=906, page=1, 614.295pt x 794.97pt>
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 1>
+Package luatex.def Info: materials/2_Molly.pdf , page1 used on input line 2304.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 1>
+Package luatex.def Info: materials/2_Molly.pdf , page1 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 1>
+Package luatex.def Info: materials/2_Molly.pdf , page1 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 1>
+Package luatex.def Info: materials/2_Molly.pdf , page1 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 1>
+Package luatex.def Info: materials/2_Molly.pdf , page1 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [79
+
+
+<./materials/2_Molly.pdf>]
+<materials/2_Molly.pdf, id=932, page=2, 614.295pt x 794.97pt>
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 2>
+Package luatex.def Info: materials/2_Molly.pdf , page2 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 2>
+Package luatex.def Info: materials/2_Molly.pdf , page2 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/2_Molly.pdf Graphic file (type pdf)
+<use materials/2_Molly.pdf, page 2>
+Package luatex.def Info: materials/2_Molly.pdf , page2 used on input line 2304.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [80
+
+<./materials/2_Molly.pdf>]
+<materials/iThrive_Molly_Room_Assignment.pdf, id=938, 614.295pt x 794.97pt>
+File: materials/iThrive_Molly_Room_Assignment.pdf Graphic file (type pdf)
+<use materials/iThrive_Molly_Room_Assignment.pdf>
+Package luatex.def Info: materials/iThrive_Molly_Room_Assignment.pdf  used on input line 2307.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/iThrive_Molly_Room_Assignment.pdf, id=940, page=1, 614.295pt x 794.97pt>
+File: materials/iThrive_Molly_Room_Assignment.pdf Graphic file (type pdf)
+<use materials/iThrive_Molly_Room_Assignment.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Molly_Room_Assignment.pdf , page1 used on input line 2307.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/iThrive_Molly_Room_Assignment.pdf Graphic file (type pdf)
+<use materials/iThrive_Molly_Room_Assignment.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Molly_Room_Assignment.pdf , page1 used on input line 2307.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Molly_Room_Assignment.pdf Graphic file (type pdf)
+<use materials/iThrive_Molly_Room_Assignment.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Molly_Room_Assignment.pdf , page1 used on input line 2307.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Molly_Room_Assignment.pdf Graphic file (type pdf)
+<use materials/iThrive_Molly_Room_Assignment.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Molly_Room_Assignment.pdf , page1 used on input line 2307.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/iThrive_Molly_Room_Assignment.pdf Graphic file (type pdf)
+<use materials/iThrive_Molly_Room_Assignment.pdf, page 1>
+Package luatex.def Info: materials/iThrive_Molly_Room_Assignment.pdf , page1 used on input line 2307.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [81
+
+
+<./materials/iThrive_Molly_Room_Assignment.pdf>]
+<materials/Mollys_Diary_Entry.pdf, id=967, 597.50829pt x 845.04709pt>
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf  used on input line 2310.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/Mollys_Diary_Entry.pdf, id=969, page=1, 597.50829pt x 845.04709pt>
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 1>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page1 used on input line 2310.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 1>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page1 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 1>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page1 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 1>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page1 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 1>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page1 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [82
+
+
+<./materials/Mollys_Diary_Entry.pdf>]
+<materials/Mollys_Diary_Entry.pdf, id=999, page=2, 597.50829pt x 845.04709pt>
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 2>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page2 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 2>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page2 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Mollys_Diary_Entry.pdf Graphic file (type pdf)
+<use materials/Mollys_Diary_Entry.pdf, page 2>
+Package luatex.def Info: materials/Mollys_Diary_Entry.pdf , page2 used on input line 2310.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [83
+
+<./materials/Mollys_Diary_Entry.pdf>]
+<materials/4_Odin_and_Calvin.pdf, id=1004, 614.295pt x 794.97pt>
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf  used on input line 2313.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/4_Odin_and_Calvin.pdf, id=1006, page=1, 614.295pt x 794.97pt>
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 1>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page1 used on input line 2313.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 1>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page1 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 1>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page1 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 1>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page1 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 1>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page1 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [84
+
+
+<./materials/4_Odin_and_Calvin.pdf>]
+<materials/4_Odin_and_Calvin.pdf, id=1027, page=2, 614.295pt x 794.97pt>
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 2>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page2 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 2>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page2 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/4_Odin_and_Calvin.pdf Graphic file (type pdf)
+<use materials/4_Odin_and_Calvin.pdf, page 2>
+Package luatex.def Info: materials/4_Odin_and_Calvin.pdf , page2 used on input line 2313.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [85
+
+<./materials/4_Odin_and_Calvin.pdf>]
+<materials/3_Barbara.pdf, id=1032, 614.295pt x 794.97pt>
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf>
+Package luatex.def Info: materials/3_Barbara.pdf  used on input line 2316.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/3_Barbara.pdf, id=1034, page=1, 614.295pt x 794.97pt>
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 1>
+Package luatex.def Info: materials/3_Barbara.pdf , page1 used on input line 2316.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 1>
+Package luatex.def Info: materials/3_Barbara.pdf , page1 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 1>
+Package luatex.def Info: materials/3_Barbara.pdf , page1 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 1>
+Package luatex.def Info: materials/3_Barbara.pdf , page1 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 1>
+Package luatex.def Info: materials/3_Barbara.pdf , page1 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [86
+
+
+<./materials/3_Barbara.pdf>]
+<materials/3_Barbara.pdf, id=1055, page=2, 614.295pt x 794.97pt>
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 2>
+Package luatex.def Info: materials/3_Barbara.pdf , page2 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 2>
+Package luatex.def Info: materials/3_Barbara.pdf , page2 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/3_Barbara.pdf Graphic file (type pdf)
+<use materials/3_Barbara.pdf, page 2>
+Package luatex.def Info: materials/3_Barbara.pdf , page2 used on input line 2316.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [87
+
+<./materials/3_Barbara.pdf>]
+<materials/5_Walter.pdf, id=1060, 614.295pt x 794.97pt>
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf>
+Package luatex.def Info: materials/5_Walter.pdf  used on input line 2319.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/5_Walter.pdf, id=1062, page=1, 614.295pt x 794.97pt>
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 1>
+Package luatex.def Info: materials/5_Walter.pdf , page1 used on input line 2319.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 1>
+Package luatex.def Info: materials/5_Walter.pdf , page1 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 1>
+Package luatex.def Info: materials/5_Walter.pdf , page1 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 1>
+Package luatex.def Info: materials/5_Walter.pdf , page1 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 1>
+Package luatex.def Info: materials/5_Walter.pdf , page1 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [88
+
+
+<./materials/5_Walter.pdf>]
+<materials/5_Walter.pdf, id=1083, page=2, 614.295pt x 794.97pt>
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 2>
+Package luatex.def Info: materials/5_Walter.pdf , page2 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 2>
+Package luatex.def Info: materials/5_Walter.pdf , page2 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/5_Walter.pdf Graphic file (type pdf)
+<use materials/5_Walter.pdf, page 2>
+Package luatex.def Info: materials/5_Walter.pdf , page2 used on input line 2319.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [89
+
+<./materials/5_Walter.pdf>]
+<materials/Clause_Patterns_Worksheet.pdf, id=1088, 597.50829pt x 845.04709pt>
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf  used on input line 2322.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/Clause_Patterns_Worksheet.pdf, id=1090, page=1, 597.50829pt x 845.04709pt>
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page1 used on input line 2322.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page1 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page1 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page1 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page1 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [90
+
+
+<./materials/Clause_Patterns_Worksheet.pdf>]
+<materials/Clause_Patterns_Worksheet.pdf, id=1129, page=2, 597.50829pt x 845.04709pt>
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page2 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page2 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Clause_Patterns_Worksheet.pdf Graphic file (type pdf)
+<use materials/Clause_Patterns_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Clause_Patterns_Worksheet.pdf , page2 used on input line 2322.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [91
+
+<./materials/Clause_Patterns_Worksheet.pdf>]
+<materials/9_Edie.pdf, id=1134, 614.295pt x 794.97pt>
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf>
+Package luatex.def Info: materials/9_Edie.pdf  used on input line 2325.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+<materials/9_Edie.pdf, id=1136, page=1, 614.295pt x 794.97pt>
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 1>
+Package luatex.def Info: materials/9_Edie.pdf , page1 used on input line 2325.
+(luatex.def)             Requested size: 614.29349pt x 794.96806pt.
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 1>
+Package luatex.def Info: materials/9_Edie.pdf , page1 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 1>
+Package luatex.def Info: materials/9_Edie.pdf , page1 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 1>
+Package luatex.def Info: materials/9_Edie.pdf , page1 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 1>
+Package luatex.def Info: materials/9_Edie.pdf , page1 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [92
+
+
+<./materials/9_Edie.pdf>]
+<materials/9_Edie.pdf, id=1158, page=2, 614.295pt x 794.97pt>
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 2>
+Package luatex.def Info: materials/9_Edie.pdf , page2 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 2>
+Package luatex.def Info: materials/9_Edie.pdf , page2 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+File: materials/9_Edie.pdf Graphic file (type pdf)
+<use materials/9_Edie.pdf, page 2>
+Package luatex.def Info: materials/9_Edie.pdf , page2 used on input line 2325.
+(luatex.def)             Requested size: 552.86038pt x 715.4664pt.
+ [93
+
+<./materials/9_Edie.pdf>]
+<materials/Voice_Worksheet.pdf, id=1163, 597.50829pt x 845.04709pt>
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf>
+Package luatex.def Info: materials/Voice_Worksheet.pdf  used on input line 2328.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/Voice_Worksheet.pdf, id=1165, page=1, 597.50829pt x 845.04709pt>
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page1 used on input line 2328.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page1 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page1 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page1 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page1 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [94
+
+
+<./materials/Voice_Worksheet.pdf>]
+<materials/Voice_Worksheet.pdf, id=1218, page=2, 597.50829pt x 845.04709pt>
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page2 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page2 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page2 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [95
+
+<./materials/Voice_Worksheet.pdf>]
+<materials/Voice_Worksheet.pdf, id=1223, page=3, 597.50829pt x 845.04709pt>
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 3>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page3 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 3>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page3 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 3>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page3 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [96
+
+<./materials/Voice_Worksheet.pdf>]
+<materials/Voice_Worksheet.pdf, id=1235, page=4, 597.50829pt x 845.04709pt>
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 4>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page4 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 4>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page4 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Voice_Worksheet.pdf Graphic file (type pdf)
+<use materials/Voice_Worksheet.pdf, page 4>
+Package luatex.def Info: materials/Voice_Worksheet.pdf , page4 used on input line 2328.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [97
+
+<./materials/Voice_Worksheet.pdf>]
+<materials/dolls_house_worksheet.pdf, id=1240, 597.50829pt x 845.04709pt>
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf  used on input line 2331.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/dolls_house_worksheet.pdf, id=1242, page=1, 597.50829pt x 845.04709pt>
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 1>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page1 used on input line 2331.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 1>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page1 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 1>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page1 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 1>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page1 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 1>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page1 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [98
+
+
+<./materials/dolls_house_worksheet.pdf>]
+<materials/dolls_house_worksheet.pdf, id=1291, page=2, 597.50829pt x 845.04709pt>
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 2>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page2 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 2>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page2 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 2>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page2 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [99
+
+<./materials/dolls_house_worksheet.pdf>]
+<materials/dolls_house_worksheet.pdf, id=1296, page=3, 597.50829pt x 845.04709pt>
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 3>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page3 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 3>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page3 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/dolls_house_worksheet.pdf Graphic file (type pdf)
+<use materials/dolls_house_worksheet.pdf, page 3>
+Package luatex.def Info: materials/dolls_house_worksheet.pdf , page3 used on input line 2331.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [100
+
+<./materials/dolls_house_worksheet.pdf>]
+<materials/voice_half_crossword.pdf, id=1309, 597.50829pt x 845.04709pt>
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf>
+Package luatex.def Info: materials/voice_half_crossword.pdf  used on input line 2334.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/voice_half_crossword.pdf, id=1311, page=1, 597.50829pt x 845.04709pt>
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 1>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page1 used on input line 2334.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 1>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page1 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 1>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page1 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 1>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page1 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 1>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page1 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [101
+
+
+<./materials/voice_half_crossword.pdf>]
+<materials/voice_half_crossword.pdf, id=1336, page=2, 597.50829pt x 845.04709pt>
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 2>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page2 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 2>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page2 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 2>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page2 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [102
+
+<./materials/voice_half_crossword.pdf>]
+<materials/voice_half_crossword.pdf, id=1341, page=3, 597.50829pt x 845.04709pt>
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 3>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page3 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 3>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page3 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 3>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page3 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [103
+
+<./materials/voice_half_crossword.pdf>]
+<materials/voice_half_crossword.pdf, id=1346, page=4, 597.50829pt x 845.04709pt>
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 4>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page4 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 4>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page4 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/voice_half_crossword.pdf Graphic file (type pdf)
+<use materials/voice_half_crossword.pdf, page 4>
+Package luatex.def Info: materials/voice_half_crossword.pdf , page4 used on input line 2334.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [104
+
+<./materials/voice_half_crossword.pdf>]
+<materials/The_Kings_Speech_Rhetorical_Situation.pdf, id=1351, 597.50829pt x 845.04709pt>
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf  used on input line 2337.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/The_Kings_Speech_Rhetorical_Situation.pdf, id=1353, page=1, 597.50829pt x 845.04709pt>
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 1>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page1 used on input line 2337.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 1>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page1 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 1>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page1 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 1>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page1 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 1>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page1 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [105
+
+
+<./materials/The_Kings_Speech_Rhetorical_Situation.pdf>]
+<materials/The_Kings_Speech_Rhetorical_Situation.pdf, id=1405, page=2, 597.50829pt x 845.04709pt>
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 2>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page2 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 2>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page2 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 2>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page2 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [106
+
+<./materials/The_Kings_Speech_Rhetorical_Situation.pdf>]
+<materials/The_Kings_Speech_Rhetorical_Situation.pdf, id=1410, page=3, 597.50829pt x 845.04709pt>
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 3>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page3 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 3>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page3 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Kings_Speech_Rhetorical_Situation.pdf Graphic file (type pdf)
+<use materials/The_Kings_Speech_Rhetorical_Situation.pdf, page 3>
+Package luatex.def Info: materials/The_Kings_Speech_Rhetorical_Situation.pdf , page3 used on input line 2337.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [107
+
+<./materials/The_Kings_Speech_Rhetorical_Situation.pdf>]
+<materials/Brave_New_World_Worksheet.pdf, id=1415, 597.50829pt x 845.04709pt>
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf  used on input line 2340.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/Brave_New_World_Worksheet.pdf, id=1417, page=1, 597.50829pt x 845.04709pt>
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page1 used on input line 2340.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page1 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page1 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page1 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page1 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [108
+
+
+<./materials/Brave_New_World_Worksheet.pdf>]
+<materials/Brave_New_World_Worksheet.pdf, id=1462, page=2, 597.50829pt x 845.04709pt>
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page2 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page2 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/Brave_New_World_Worksheet.pdf , page2 used on input line 2340.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [109
+
+<./materials/Brave_New_World_Worksheet.pdf>]
+<materials/Brave_New_World_II_Worksheet.pdf, id=1474, 597.50829pt x 845.04709pt>
+File: materials/Brave_New_World_II_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_II_Worksheet.pdf>
+Package luatex.def Info: materials/Brave_New_World_II_Worksheet.pdf  used on input line 2343.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/Brave_New_World_II_Worksheet.pdf, id=1476, page=1, 597.50829pt x 845.04709pt>
+File: materials/Brave_New_World_II_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_II_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_II_Worksheet.pdf , page1 used on input line 2343.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/Brave_New_World_II_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_II_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_II_Worksheet.pdf , page1 used on input line 2343.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_II_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_II_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_II_Worksheet.pdf , page1 used on input line 2343.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_II_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_II_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_II_Worksheet.pdf , page1 used on input line 2343.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Brave_New_World_II_Worksheet.pdf Graphic file (type pdf)
+<use materials/Brave_New_World_II_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Brave_New_World_II_Worksheet.pdf , page1 used on input line 2343.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [110
+
+
+<./materials/Brave_New_World_II_Worksheet.pdf>]
+<materials/The_Relive_Box_Worksheet.pdf, id=1509, 597.50829pt x 845.04709pt>
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf  used on input line 2346.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/The_Relive_Box_Worksheet.pdf, id=1511, page=1, 597.50829pt x 845.04709pt>
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page1 used on input line 2346.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page1 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page1 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page1 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page1 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [111
+
+
+<./materials/The_Relive_Box_Worksheet.pdf>]
+<materials/The_Relive_Box_Worksheet.pdf, id=1542, page=2, 597.50829pt x 845.04709pt>
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page2 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page2 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/The_Relive_Box_Worksheet.pdf Graphic file (type pdf)
+<use materials/The_Relive_Box_Worksheet.pdf, page 2>
+Package luatex.def Info: materials/The_Relive_Box_Worksheet.pdf , page2 used on input line 2346.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [112
+
+<./materials/The_Relive_Box_Worksheet.pdf>]
+<materials/US_Space_Policy_Worksheet.pdf, id=1547, 597.50829pt x 845.04709pt>
+File: materials/US_Space_Policy_Worksheet.pdf Graphic file (type pdf)
+<use materials/US_Space_Policy_Worksheet.pdf>
+Package luatex.def Info: materials/US_Space_Policy_Worksheet.pdf  used on input line 2349.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/US_Space_Policy_Worksheet.pdf, id=1549, page=1, 597.50829pt x 845.04709pt>
+File: materials/US_Space_Policy_Worksheet.pdf Graphic file (type pdf)
+<use materials/US_Space_Policy_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/US_Space_Policy_Worksheet.pdf , page1 used on input line 2349.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/US_Space_Policy_Worksheet.pdf Graphic file (type pdf)
+<use materials/US_Space_Policy_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/US_Space_Policy_Worksheet.pdf , page1 used on input line 2349.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/US_Space_Policy_Worksheet.pdf Graphic file (type pdf)
+<use materials/US_Space_Policy_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/US_Space_Policy_Worksheet.pdf , page1 used on input line 2349.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/US_Space_Policy_Worksheet.pdf Graphic file (type pdf)
+<use materials/US_Space_Policy_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/US_Space_Policy_Worksheet.pdf , page1 used on input line 2349.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/US_Space_Policy_Worksheet.pdf Graphic file (type pdf)
+<use materials/US_Space_Policy_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/US_Space_Policy_Worksheet.pdf , page1 used on input line 2349.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [113
+
+
+<./materials/US_Space_Policy_Worksheet.pdf>]
+<materials/Settled_In_Worksheet.pdf, id=1580, 597.50829pt x 845.04709pt>
+File: materials/Settled_In_Worksheet.pdf Graphic file (type pdf)
+<use materials/Settled_In_Worksheet.pdf>
+Package luatex.def Info: materials/Settled_In_Worksheet.pdf  used on input line 2352.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+<materials/Settled_In_Worksheet.pdf, id=1582, page=1, 597.50829pt x 845.04709pt>
+File: materials/Settled_In_Worksheet.pdf Graphic file (type pdf)
+<use materials/Settled_In_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Settled_In_Worksheet.pdf , page1 used on input line 2352.
+(luatex.def)             Requested size: 597.50682pt x 845.04503pt.
+File: materials/Settled_In_Worksheet.pdf Graphic file (type pdf)
+<use materials/Settled_In_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Settled_In_Worksheet.pdf , page1 used on input line 2352.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Settled_In_Worksheet.pdf Graphic file (type pdf)
+<use materials/Settled_In_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Settled_In_Worksheet.pdf , page1 used on input line 2352.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Settled_In_Worksheet.pdf Graphic file (type pdf)
+<use materials/Settled_In_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Settled_In_Worksheet.pdf , page1 used on input line 2352.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+File: materials/Settled_In_Worksheet.pdf Graphic file (type pdf)
+<use materials/Settled_In_Worksheet.pdf, page 1>
+Package luatex.def Info: materials/Settled_In_Worksheet.pdf , page1 used on input line 2352.
+(luatex.def)             Requested size: 537.75249pt x 760.53535pt.
+ [114
+
+
+<./materials/Settled_In_Worksheet.pdf>] [115
+
+] [116
+
+] [117] [118
+
+] [119
+
+] [120
+
+] [121
+
+] [122
+
+] [123
+
+] [124
+
+] (./english-c-course.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+Package rerunfilecheck Info: File `english-c-course.out' has not changed.
+(rerunfilecheck)             Checksum: 2E281DC4AEABE91C8DD886B64414EC51;5228.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 35006 strings out of 476076
+ 125240,1373583 words of node,token memory allocated
+ 1374 words of node memory still in use:
+   31 hlist, 2 vlist, 14 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 3 glyph, 82 attribute, 61 glue_spec, 82 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
+   avail lists: 2:1625,3:732,4:371,5:548,6:157,7:5424,8:3,9:886,10:17,11:456
+ 55721 multiletter control sequences out of 65536+600000
+ 80 fonts using 25505535 bytes
+ 98i,18n,104p,1012b,986s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/fonts/noto/NotoSans-Italic.ttf></usr/share/fonts/noto/NotoSans-Bold.ttf></home/anders/.local/share/fonts/EBGaramond-VariableFont_wght.ttf></usr/share/fonts/noto/NotoSans-Regular.ttf>
+Output written on english-c-course.pdf (125 pages, 34226209 bytes).
+
+PDF statistics: 1751 PDF objects out of 2073 (max. 8388607)
+ 1249 compressed objects within 13 object streams
+ 354 named destinations out of 1000 (max. 1048576)
+ 552 words of extra memory for PDF output out of 10000 (max. 100000000)
+

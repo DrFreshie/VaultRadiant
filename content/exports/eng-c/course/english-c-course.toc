@@ -1,0 +1,56 @@
+\contentsline {chapter}{1. Identity}{3}{section*.2}%
+\contentsline {section}{1. Who am I?}{5}{section*.3}%
+\contentsline {section}{2. Masks}{8}{section*.4}%
+\contentsline {section}{3. Identity of things}{12}{section*.5}%
+\contentsline {section}{4. The stories that shape us}{16}{section*.6}%
+\contentsline {section}{5. Influencers}{18}{section*.7}%
+\contentsline {section}{6. Secrets}{21}{section*.8}%
+\contentsline {section}{7. Split in two}{23}{section*.9}%
+\contentsline {section}{8. The curse of stories}{26}{section*.10}%
+\contentsline {chapter}{2. Voice}{30}{section*.11}%
+\contentsline {section}{1. Voice}{32}{section*.12}%
+\contentsline {section}{2. Strange Voices}{35}{section*.13}%
+\contentsline {section}{3. The Doll's House}{38}{section*.14}%
+\contentsline {section}{4. Voice in speech}{40}{section*.15}%
+\contentsline {section}{5. Voice in speech II}{42}{section*.16}%
+\contentsline {section}{6. The King's Speech}{46}{section*.17}%
+\contentsline {section}{7. Voices}{47}{section*.18}%
+\contentsline {chapter}{3. The Future Is Written}{49}{section*.19}%
+\contentsline {section}{1. Brave New World}{51}{section*.20}%
+\contentsline {section}{2. Brave New World II}{54}{section*.21}%
+\contentsline {section}{3. The Relive Box}{56}{section*.22}%
+\contentsline {section}{4. Tell Me an Ending}{58}{section*.23}%
+\contentsline {section}{5. Be Right Back}{60}{section*.24}%
+\contentsline {section}{6. Space Policy}{63}{section*.25}%
+\contentsline {section}{7. Settled In}{65}{section*.26}%
+\contentsline {section}{8. On a Sunbeam}{67}{section*.27}%
+\contentsline {section}{9. Space Westerns}{70}{section*.28}%
+\contentsline {chapter}{Worksheets}{72}{section*.29}%
+\contentsline {subsection}{\numberline {0.0.1}\ignorespaces Who are you?}{73}{subsection.0.0.1}%
+\contentsline {subsection}{\numberline {0.0.2}\ignorespaces Identity in context}{78}{subsection.0.0.2}%
+\contentsline {subsection}{\numberline {0.0.3}\ignorespaces Molly's chapter - pacing questions}{79}{subsection.0.0.3}%
+\contentsline {subsection}{\numberline {0.0.4}\ignorespaces Molly's Room}{81}{subsection.0.0.4}%
+\contentsline {subsection}{\numberline {0.0.5}\ignorespaces Grammatik: Ordklasser}{82}{subsection.0.0.5}%
+\contentsline {subsection}{\numberline {0.0.6}\ignorespaces Calvin and Odin - pacing questions}{84}{subsection.0.0.6}%
+\contentsline {subsection}{\numberline {0.0.7}\ignorespaces Barbara's chapter}{86}{subsection.0.0.7}%
+\contentsline {subsection}{\numberline {0.0.8}\ignorespaces Walter's chapter}{88}{subsection.0.0.8}%
+\contentsline {subsection}{\numberline {0.0.9}\ignorespaces Clause Patterns — Worksheet}{90}{subsection.0.0.9}%
+\contentsline {subsection}{\numberline {0.0.10}\ignorespaces Edith - pacing questions}{92}{subsection.0.0.10}%
+\contentsline {subsection}{\numberline {0.0.11}\ignorespaces Voice — Worksheet}{94}{subsection.0.0.11}%
+\contentsline {subsection}{\numberline {0.0.12}\ignorespaces dolls house — Worksheet}{98}{subsection.0.0.12}%
+\contentsline {subsection}{\numberline {0.0.13}\ignorespaces voice half crossword}{101}{subsection.0.0.13}%
+\contentsline {subsection}{\numberline {0.0.14}\ignorespaces The Kings Speech Rhetorical Situation}{105}{subsection.0.0.14}%
+\contentsline {subsection}{\numberline {0.0.15}\ignorespaces Brave New World — Worksheet}{108}{subsection.0.0.15}%
+\contentsline {subsection}{\numberline {0.0.16}\ignorespaces Brave New World II — Worksheet}{110}{subsection.0.0.16}%
+\contentsline {subsection}{\numberline {0.0.17}\ignorespaces The Relive Box — Worksheet}{111}{subsection.0.0.17}%
+\contentsline {subsection}{\numberline {0.0.18}\ignorespaces US Space Policy — Worksheet}{113}{subsection.0.0.18}%
+\contentsline {subsection}{\numberline {0.0.19}\ignorespaces Settled In — Worksheet}{114}{subsection.0.0.19}%
+\contentsline {chapter}{Notes}{115}{section*.30}%
+\contentsline {section}{How to analyse..}{116}{section*.31}%
+\contentsline {section}{Cinematic techniques}{118}{section*.32}%
+\contentsline {section}{The FLIRT model}{119}{section*.33}%
+\contentsline {section}{The ACE model}{120}{section*.34}%
+\contentsline {section}{Bloom's taxonomy}{121}{section*.35}%
+\contentsline {section}{The rhetorical situation}{122}{section*.36}%
+\contentsline {section}{Rhetorical devices}{123}{section*.37}%
+\contentsline {section}{Modes of appeal}{124}{section*.38}%

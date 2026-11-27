@@ -23,3 +23,7 @@ Vi ses til timerne.
   <a class="unit-button unit-button--future" href="./classnotes/eng-b/the-future-is-written/">The Future Is Written</a>
 </div>
 
+<div class="unit-grid">
+  <a class="unit-button unit-button--south-africa" href="https://app.edaptio.com/groups/857483/courses/62863">South Africa</a>
+</div>
+
