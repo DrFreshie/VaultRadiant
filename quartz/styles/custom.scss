@@ -207,6 +207,17 @@ body[data-slug^="noter/matematik"] .graph {
     background-color 0.28s ease;
 }
 
+// Match the internal-link sizing used by the other unit buttons.
+a.unit-button.external {
+  padding: 0;
+  border-radius: 5px;
+  line-height: 1.4rem;
+}
+
+a.unit-button.external .external-icon {
+  display: none;
+}
+
 .unit-button:hover {
   transform: translateY(-2px) scale(1.015);
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
